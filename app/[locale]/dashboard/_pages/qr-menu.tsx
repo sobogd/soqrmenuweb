@@ -1,14 +1,13 @@
 "use client";
 
-import { useEffect, useState, useRef } from "react";
+import { useEffect, useState, useRef, useMemo } from "react";
 import { QRCodeSVG } from "qrcode.react";
 import { Button } from "@/components/ui/button";
-import { Printer, Download, Link, ChevronDown } from "lucide-react";
+import { Printer, Download, Link, ChevronDown, Copy, Check, Loader2 } from "lucide-react";
 import { toast } from "sonner";
 import { PageHeader } from "../_ui/page-header";
 import { useTranslations } from "next-intl";
 import { useDashboard } from "../_context/dashboard-context";
-import { useRouter } from "@/i18n/routing";
 import { track, DashboardEvent } from "@/lib/dashboard-events";
 import { DashboardContent } from "../_ui/dashboard-content";
 
@@ -35,10 +34,51 @@ interface QrMenuPageProps {
 
 export function QrMenuPage({ initialSlug, tableNumbers }: QrMenuPageProps) {
   const t = useTranslations("qrCode");
+  const tDesign = useTranslations("dashboard.design");
   const { translations } = useDashboard();
-  const router = useRouter();
 
-  const [slug] = useState<string | null>(initialSlug);
+  const [slug, setSlug] = useState<string | null>(initialSlug);
+  const [slugInput, setSlugInput] = useState(initialSlug || "");
+  const [originalSlug] = useState(initialSlug || "");
+  const [slugSaving, setSlugSaving] = useState(false);
+  const [copied, setCopied] = useState(false);
+
+  const slugHasChanges = useMemo(() => slugInput !== originalSlug, [slugInput, originalSlug]);
+
+  function handleSlugChange(value: string) {
+    const cleanSlug = value
+      .toLowerCase()
+      .replace(/[^a-z0-9-]/g, "-")
+      .replace(/-+/g, "-")
+      .replace(/^-|-$/g, "");
+    setSlugInput(cleanSlug);
+  }
+
+  async function handleSlugSave() {
+    if (!slugInput.trim()) {
+      toast.error(tDesign("slugRequired"));
+      return;
+    }
+    setSlugSaving(true);
+    try {
+      const res = await fetch("/api/restaurant", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ slug: slugInput.trim() }),
+      });
+      if (res.ok) {
+        toast.success(tDesign("saved"));
+        setSlug(slugInput.trim());
+      } else {
+        const data = await res.json();
+        toast.error(data.error || tDesign("saveError"));
+      }
+    } catch {
+      toast.error(tDesign("saveError"));
+    } finally {
+      setSlugSaving(false);
+    }
+  }
   const [paperFormat, setPaperFormat] = useState<keyof typeof PAPER_FORMATS>("a4");
   const [qrPerPage, setQrPerPage] = useState<keyof typeof QR_PER_PAGE>("sixteen");
   const [customText, setCustomText] = useState<string>("QR Menu\nScan Me");
@@ -223,27 +263,6 @@ export function QrMenuPage({ initialSlug, tableNumbers }: QrMenuPageProps) {
     img.src = "data:image/svg+xml;base64," + btoa(unescape(encodeURIComponent(svgData)));
   };
 
-  if (!slug) {
-    return (
-      <div className="flex flex-col h-full">
-        <PageHeader title={translations.pages.qrMenu} />
-        <div className="flex-1 flex items-center justify-center px-6 pb-6">
-          <div className="text-center">
-            <p className="text-sm font-medium">{t("noSlug")}</p>
-            <p className="text-xs text-muted-foreground/60 max-w-[270px] mt-2">{t("noSlugDescription")}</p>
-            <button
-              onClick={() => router.push("/dashboard/settings")}
-              className="mt-5 flex items-center gap-2 h-10 px-5 rounded-xl text-white text-sm font-medium shadow-md hover:opacity-90 transition-opacity mx-auto"
-              style={{ background: "linear-gradient(to right, hsl(9,100%,58%), #f59e0b)" }}
-            >
-              {t("goToSettings")}
-            </button>
-          </div>
-        </div>
-      </div>
-    );
-  }
-
   const handleCopyLink = () => {
     const fullUrl = `https://${menuUrl}`;
     navigator.clipboard.writeText(fullUrl);
@@ -253,23 +272,76 @@ export function QrMenuPage({ initialSlug, tableNumbers }: QrMenuPageProps) {
   return (
     <div className="flex flex-col h-full">
       <PageHeader title={translations.pages.qrMenu}>
-        <Button
-          size="sm"
-          onClick={() => { track(DashboardEvent.CLICKED_PRINT_QR); handlePrint(); }}
-        >
-          <Printer className="h-4 w-4 mr-1" />
-          {t("print")}
-        </Button>
+        {slug && (
+          <Button
+            size="sm"
+            onClick={() => { track(DashboardEvent.CLICKED_PRINT_QR); handlePrint(); }}
+          >
+            <Printer className="h-4 w-4 mr-1" />
+            {t("print")}
+          </Button>
+        )}
       </PageHeader>
       <div className="flex-1 overflow-auto px-6 pt-4 pb-6">
         <DashboardContent innerClassName="space-y-6">
-          <div ref={printRef} className="hidden" hidden>
-            <QRCodeSVG
-              value={menuUrl}
-              size={200}
-              level="L"
-            />
+          {slug && (
+            <div ref={printRef} className="hidden" hidden>
+              <QRCodeSVG
+                value={menuUrl}
+                size={200}
+                level="L"
+              />
+            </div>
+          )}
+
+          {/* Slug */}
+          <div>
+            <p className="text-xs uppercase tracking-wider text-muted-foreground px-4 mb-1.5">{tDesign("slug")}</p>
+            <div className="rounded-xl border border-border bg-muted/30 overflow-hidden">
+              <div className="flex items-center h-11 px-4">
+                <span className="text-sm text-muted-foreground shrink-0">{tDesign("slugPrefix")}</span>
+                <input
+                  type="text"
+                  value={slugInput}
+                  onChange={(e) => handleSlugChange(e.target.value)}
+                  onFocus={() => track(DashboardEvent.FOCUSED_RESTAURANT_SLUG)}
+                  placeholder={tDesign("slugPlaceholder")}
+                  className="flex-1 text-sm bg-transparent focus:outline-none placeholder:text-muted-foreground/30 min-w-0"
+                />
+                {slugInput && (
+                  <button
+                    type="button"
+                    className="flex items-center justify-center w-8 h-8 -mr-1 rounded-lg text-primary hover:bg-muted/50 transition-colors"
+                    onClick={() => {
+                      track(DashboardEvent.CLICKED_COPY_URL);
+                      navigator.clipboard.writeText(`https://iq-rest.com/m/${slugInput}`);
+                      setCopied(true);
+                      setTimeout(() => setCopied(false), 2000);
+                    }}
+                  >
+                    {copied ? <Check className="h-4 w-4" /> : <Copy className="h-4 w-4" />}
+                  </button>
+                )}
+              </div>
+              {slugHasChanges && (
+                <>
+                  <div className="border-t border-border mx-4" />
+                  <button
+                    type="button"
+                    onClick={handleSlugSave}
+                    disabled={slugSaving}
+                    className="flex items-center justify-center w-full h-11 text-sm font-medium text-primary hover:bg-muted/50 transition-colors"
+                  >
+                    {slugSaving ? <Loader2 className="h-4 w-4 animate-spin" /> : tDesign("save")}
+                  </button>
+                </>
+              )}
+            </div>
+            <p className="text-xs text-muted-foreground/60 px-4 mt-1.5">{tDesign("slugHint")}</p>
           </div>
+
+          {/* Print settings (only when slug exists) */}
+          {slug && (<>
 
           {/* Print settings */}
           <div>
@@ -395,6 +467,8 @@ export function QrMenuPage({ initialSlug, tableNumbers }: QrMenuPageProps) {
               </button>
             </div>
           </div>
+
+          </>)}
 
         </DashboardContent>
       </div>

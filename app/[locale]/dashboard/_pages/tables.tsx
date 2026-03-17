@@ -1,7 +1,6 @@
 "use client";
 
 import { useState, useEffect, useMemo } from "react";
-import { useBackIntercept } from "../_hooks/use-back-intercept";
 import { ArrowUp, ArrowDown, Plus, Loader2, ArrowUpDown, Check } from "lucide-react";
 import { Switch } from "@/components/ui/switch";
 import { toast } from "sonner";
@@ -27,7 +26,6 @@ interface TablesPageProps {
 }
 
 export function TablesPage({ initialTables }: TablesPageProps) {
-  useBackIntercept("/dashboard");
   const t = useTranslations("reservations");
   const { translations } = useDashboard();
   const router = useRouter();
@@ -134,7 +132,7 @@ export function TablesPage({ initialTables }: TablesPageProps) {
   return (
     <div className="flex flex-col h-full">
       <div className="shrink-0">
-        <PageHeader title={pageTitle} backHref="/dashboard">
+        <PageHeader title={pageTitle}>
           {tables.length > 1 && (
             sortMode ? (
               <button
@@ -162,7 +160,7 @@ export function TablesPage({ initialTables }: TablesPageProps) {
               <p className="text-muted-foreground/60 text-center">{t("noTables")}</p>
               <button
                 onClick={() => { track(DashboardEvent.CLICKED_ADD_TABLE); router.push("/dashboard/tables/add"); }}
-                className="flex items-center gap-2 h-10 px-5 rounded-xl text-white text-sm font-medium shadow-md hover:opacity-90 transition-opacity"
+                className="flex items-center gap-2 h-10 px-5 rounded-xl text-white text-sm font-medium hover:opacity-90 transition-opacity"
                 style={{ background: "linear-gradient(to right, hsl(9,100%,58%), #f59e0b)" }}
               >
                 <Plus className="h-4 w-4" />
@@ -236,7 +234,7 @@ export function TablesPage({ initialTables }: TablesPageProps) {
                 <div className="flex justify-center">
                   <button
                     onClick={() => { track(DashboardEvent.CLICKED_ADD_TABLE); router.push("/dashboard/tables/add"); }}
-                    className="flex items-center gap-2 h-10 px-5 rounded-xl text-white text-sm font-medium shadow-md hover:opacity-90 transition-opacity"
+                    className="flex items-center gap-2 h-10 px-5 rounded-xl text-white text-sm font-medium hover:opacity-90 transition-opacity"
                     style={{ background: "linear-gradient(to right, hsl(9,100%,58%), #f59e0b)" }}
                   >
                     <Plus className="h-4 w-4" />

@@ -317,7 +317,7 @@ export function TableFormPage({ id }: TableFormPageProps) {
   return (
     <div className="flex flex-col h-full">
       <div className="shrink-0">
-        <PageHeader title={isEdit ? t("editTable") : t("newTable")} backHref="/dashboard/tables">
+        <PageHeader title={isEdit ? t("editTable") : t("newTable")}>
           <Button
             type="submit"
             form="table-form"

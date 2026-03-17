@@ -245,7 +245,7 @@ export function ReservationsPage({ initialReservations, reservationsEnabled, has
             <p className="text-muted-foreground/60">{t("reservationsDisabled")}</p>
             <button
               onClick={() => { track(DashboardEvent.CLICKED_RESERVATION_SETTINGS); router.push("/dashboard/reservation-settings"); }}
-              className="flex items-center gap-2 h-10 px-5 rounded-xl text-white text-sm font-medium shadow-md hover:opacity-90 transition-opacity"
+              className="flex items-center gap-2 h-10 px-5 rounded-xl text-white text-sm font-medium hover:opacity-90 transition-opacity"
               style={{ background: "linear-gradient(to right, hsl(9,100%,58%), #f59e0b)" }}
             >
               <Settings className="h-4 w-4" />
@@ -260,7 +260,7 @@ export function ReservationsPage({ initialReservations, reservationsEnabled, has
                 <p className="text-xs text-muted-foreground/60 text-center max-w-xs">{t("noTablesHint")}</p>
                 <button
                   onClick={() => router.push("/dashboard/tables/add")}
-                  className="flex items-center gap-2 h-10 px-5 rounded-xl text-white text-sm font-medium shadow-md hover:opacity-90 transition-opacity"
+                  className="flex items-center gap-2 h-10 px-5 rounded-xl text-white text-sm font-medium hover:opacity-90 transition-opacity"
                   style={{ background: "linear-gradient(to right, hsl(9,100%,58%), #f59e0b)" }}
                 >
                   <Armchair className="h-4 w-4" />

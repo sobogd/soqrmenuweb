@@ -245,7 +245,7 @@ export function AdminAnalyticsPage() {
 
   return (
     <div className="flex flex-col h-full">
-      <PageHeader title="Analytics" backHref="/dashboard/admin">
+      <PageHeader title="Analytics">
         <button
           onClick={fetchData}
           disabled={loading}

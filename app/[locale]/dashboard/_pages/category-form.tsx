@@ -1,7 +1,7 @@
 "use client";
 
-import { useEffect, useState, useMemo } from "react";
-import { Loader2, Trash2, X, Sparkles } from "lucide-react";
+import { useEffect, useState } from "react";
+import { Check, Loader2, Trash2, X, Sparkles } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { toast } from "sonner";
 import {
@@ -62,21 +62,7 @@ export function CategoryFormPage({ id }: CategoryFormPageProps) {
   const [translatingLangs, setTranslatingLangs] = useState<Set<string>>(new Set());
   const [showTranslateLimitDialog, setShowTranslateLimitDialog] = useState(false);
 
-  // Original values for change detection
-  const [originalName, setOriginalName] = useState("");
-  const [originalTranslations, setOriginalTranslations] = useState<Record<string, { name?: string }>>({});
-
   const isEdit = !!id;
-
-  const hasChanges = useMemo(() => {
-    if (!isEdit) {
-      return !!name.trim();
-    }
-    return (
-      name !== originalName ||
-      JSON.stringify(categoryTranslations) !== JSON.stringify(originalTranslations)
-    );
-  }, [isEdit, name, categoryTranslations, originalName, originalTranslations]);
 
   useEffect(() => {
     track(DashboardEvent.SHOWED_CATEGORY_FORM);
@@ -97,9 +83,6 @@ export function CategoryFormPage({ id }: CategoryFormPageProps) {
       setName(catName);
       setIsActive(data.isActive);
       setCategoryTranslations(catTrans);
-
-      setOriginalName(catName);
-      setOriginalTranslations(catTrans);
     } catch (error) {
       console.error("Failed to fetch category:", error);
       track(DashboardEvent.ERROR_FETCH, { page: "category" });
@@ -214,9 +197,11 @@ export function CategoryFormPage({ id }: CategoryFormPageProps) {
       });
 
       if (res.ok) {
+        const data = await res.json();
+        const categoryId = isEdit ? id : data.id;
         track(DashboardEvent.CLICKED_SAVE_CATEGORY);
         toast.success(isEdit ? t.updated : t.created);
-        router.push("/dashboard");
+        router.replace(`/dashboard/menu/${categoryId}`);
       } else {
         const data = await res.json();
         track(DashboardEvent.ERROR_SAVE, { page: "category" });
@@ -237,26 +222,14 @@ export function CategoryFormPage({ id }: CategoryFormPageProps) {
   return (
     <div className="flex flex-col h-full">
       <div className="shrink-0">
-        <PageHeader title={isEdit ? t.editCategory : t.addCategory} backHref="/dashboard">
-          <Button
-            type="submit"
-            form="category-form"
-            disabled={saving || deleting || !hasChanges}
-            variant="default"
-            size="sm"
-            className={!hasChanges ? "opacity-40" : ""}
-          >
-            {saving ? <Loader2 className="h-4 w-4 animate-spin" /> : t.save}
-          </Button>
-        </PageHeader>
+        <PageHeader title={isEdit ? t.editCategory : t.addCategory} />
       </div>
 
       <form id="category-form" onSubmit={handleSubmit} className="flex-1 overflow-y-auto px-6 pt-4 pb-6">
-        <DashboardContent innerClassName="space-y-6">
+        <DashboardContent innerClassName="flex flex-col gap-4">
 
-          {/* General */}
+          {/* Name */}
           <div>
-            <p className="text-xs uppercase tracking-wider text-muted-foreground px-4 mb-1.5">{t.general}</p>
             <div className="rounded-xl border border-border bg-muted/30 overflow-hidden">
               <div className="flex items-center h-11 px-4">
                 <label htmlFor="name" className="text-sm text-muted-foreground shrink-0 mr-3">{t.name}</label>
@@ -310,20 +283,28 @@ export function CategoryFormPage({ id }: CategoryFormPageProps) {
             );
           })}
 
-          {/* Delete */}
-          {isEdit && (
-            <div className="rounded-xl border border-border bg-muted/30 overflow-hidden">
+          {/* Actions */}
+          <div className="flex flex-col gap-4">
+            <button
+              type="submit"
+              disabled={saving || deleting}
+              className="flex items-center justify-center gap-2 w-full h-11 rounded-xl text-white text-sm font-medium hover:opacity-90 transition-opacity disabled:opacity-50"
+              style={{ background: "linear-gradient(to right, hsl(9,100%,58%), #f59e0b)" }}
+            >
+              {saving ? <Loader2 className="h-4 w-4 animate-spin" /> : <><Check className="h-4 w-4" />{t.save}</>}
+            </button>
+            {isEdit && (
               <button
                 type="button"
                 onClick={() => { track(DashboardEvent.CLICKED_DELETE_CATEGORY); setShowDeleteDialog(true); }}
                 disabled={saving || deleting}
-                className="flex items-center gap-3 w-full h-11 px-4 hover:bg-muted/50 transition-colors disabled:opacity-50"
+                className="flex items-center justify-center gap-2 w-full h-11 rounded-xl border border-border bg-muted/30 text-sm font-medium text-destructive hover:bg-muted/50 transition-colors disabled:opacity-50"
               >
-                <Trash2 className="h-4 w-4 text-red-400" />
-                <span className="text-sm font-medium text-red-400">{t.delete}</span>
+                <Trash2 className="h-4 w-4" />
+                {t.delete}
               </button>
-            </div>
-          )}
+            )}
+          </div>
 
         </DashboardContent>
       </form>
@@ -339,12 +320,8 @@ export function CategoryFormPage({ id }: CategoryFormPageProps) {
               <X className="h-4 w-4 mr-2" />
               {t.cancel}
             </Button>
-            <Button variant="destructive" onClick={handleDelete} disabled={deleting}>
-              {deleting ? (
-                <Loader2 className="h-4 w-4 animate-spin mr-2" />
-              ) : (
-                <Trash2 className="h-4 w-4 mr-2" />
-              )}
+            <Button variant="destructive" onClick={handleDelete} loading={deleting}>
+              <Trash2 className="h-4 w-4 mr-2" />
               {t.delete}
             </Button>
           </DialogFooter>

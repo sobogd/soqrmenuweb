@@ -7,6 +7,7 @@ import { Prisma } from "@prisma/client";
 import { locales, Locale } from "@/i18n/routing";
 import { COUNTRY_CENTERS, getCoordinatesByCountry } from "@/lib/country-centers";
 import { generateUniqueSlug } from "@/lib/slug";
+import { seedDemoMenu } from "@/lib/demo-menu";
 
 type TranslationData = {
   name?: string;
@@ -204,6 +205,9 @@ export async function POST(request: NextRequest) {
           startedFromScratch: true,
         },
       });
+
+      // Seed demo menu
+      await seedDemoMenu(companyId, userLocale);
 
       // Mark onboarding complete
       await prisma.company.update({

@@ -8,6 +8,7 @@ import { isAnonymousEmail } from "@/lib/anonymous";
 import { generateUniqueSlug } from "@/lib/slug";
 import { getPublicUrl, s3Key } from "@/lib/s3";
 import { getCoordinatesByCountry, COUNTRY_CENTERS } from "@/lib/country-centers";
+import { seedDemoMenu } from "@/lib/demo-menu";
 import { DashboardShell } from "./_components/shell";
 import { getScanUsage } from "./_lib/queries";
 import type { DashboardTranslations } from "./_context/dashboard-context";
@@ -49,9 +50,6 @@ export default async function DashboardLayout({
     const center = countryCoords || COUNTRY_CENTERS[userLocale];
     const slug = await generateUniqueSlug(Math.random().toString(36).substring(2, 10));
     const initialBackground = getPublicUrl(s3Key("background_initial.webp"));
-    const tMenu = await getTranslations("dashboard.menu");
-    const defaultCategoryName = tMenu("defaultCategoryName");
-
     await prisma.$transaction(async (tx) => {
       await tx.restaurant.create({
         data: {
@@ -68,18 +66,14 @@ export default async function DashboardLayout({
           startedFromScratch: true,
         },
       });
-      await tx.category.create({
-        data: {
-          name: defaultCategoryName,
-          sortOrder: 0,
-          companyId,
-        },
-      });
       await tx.company.update({
         where: { id: companyId },
         data: { onboardingStep: 3 },
       });
     });
+
+    // Seed demo menu after transaction
+    await seedDemoMenu(companyId, userLocale);
   }
 
   // Check if admin is impersonating
@@ -120,6 +114,8 @@ export default async function DashboardLayout({
       items: t("pages.items"),
       settings: t("pages.settings"),
       design: t("pages.design"),
+      appearance: t("pages.appearance"),
+      currency: t("pages.currency"),
       contacts: t("pages.contacts"),
       reservations: t("pages.reservations"),
       tables: t("pages.tables"),
@@ -169,6 +165,7 @@ export default async function DashboardLayout({
       emptySubtitle: t("menu.emptySubtitle"),
       noItems: t("menu.noItems"),
       orDivider: t("menu.orDivider"),
+      sampleBadge: t("menu.sampleBadge"),
       scanButton: t("menu.scanButton"),
       scanDescription: t("menu.scanDescription"),
       defaultCategoryName: t("menu.defaultCategoryName"),
@@ -248,7 +245,13 @@ export default async function DashboardLayout({
       saveSort: t("items.saveSort"),
       sortSaved: t("items.sortSaved"),
       sortError: t("items.sortError"),
+      addDescription: t("items.addDescription"),
+      editDescription: t("items.editDescription"),
+      addImage: t("items.addImage"),
+      editImage: t("items.editImage"),
       allergens: t("items.allergens"),
+      addAllergens: t("items.addAllergens"),
+      editAllergens: t("items.editAllergens"),
       allergensHint: t("items.allergensHint"),
       allergenNames: t.raw("items.allergenNames") as Record<string, string>,
       subscribeForAllergens: t("items.subscribeForAllergens"),

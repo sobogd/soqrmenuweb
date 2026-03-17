@@ -6,7 +6,7 @@ import type { Category as PrismaCategory, Item as PrismaItem } from "@prisma/cli
 // Category types
 export type Category = Pick<
   PrismaCategory,
-  "id" | "name" | "sortOrder" | "isActive"
+  "id" | "name" | "sortOrder" | "isActive" | "isDemo"
 >;
 
 export type CategoryWithTimestamps = PrismaCategory;

@@ -206,6 +206,7 @@ model Category {
   translations Json?    // { "en": { "name": "..." }, "es": {...} }
   sortOrder    Int      @default(0)
   isActive     Boolean  @default(true)
+  isDemo       Boolean  @default(false)
   companyId    String
   createdAt    DateTime @default(now())
   updatedAt    DateTime @updatedAt
@@ -229,6 +230,7 @@ model Item {
   allergens    String[] @default([]) // Array of allergen codes: gluten, dairy, eggs, etc.
   sortOrder    Int      @default(0)
   isActive     Boolean  @default(true)
+  isDemo       Boolean  @default(false)
   categoryId   String
   companyId    String
   createdAt    DateTime @default(now())

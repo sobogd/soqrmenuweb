@@ -348,7 +348,7 @@ export function SessionDetailPage({ sessionId }: { sessionId: string }) {
 
   return (
     <div className="flex flex-col h-full">
-      <PageHeader title="Session" backHref={backHref}>
+      <PageHeader title="Session">
         <Button variant="ghost" size="icon" onClick={fetchData}>
           <RefreshCw className="h-4 w-4" />
         </Button>

@@ -62,7 +62,7 @@ export async function HowToSteps({ noIndex = false }: HowToStepsProps) {
               {displaySteps.map((step, index) => (
                 <div
                   key={index}
-                  className="p-6 border rounded-lg bg-card hover:shadow-lg transition-shadow"
+                  className="p-6 border rounded-lg bg-card transition-colors"
                   data-noindex={noIndex ? "true" : undefined}
                 >
                   <div className="flex items-start gap-4">

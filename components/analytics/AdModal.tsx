@@ -26,7 +26,7 @@ export function AdModal({ onComplete }: AdModalProps) {
 
   return (
     <div className="fixed inset-0 z-50 bg-black/90 flex items-center justify-center p-4">
-      <div className="bg-white rounded-2xl p-8 max-w-sm w-full text-center shadow-2xl">
+      <div className="bg-white rounded-2xl p-8 max-w-sm w-full text-center">
         {/* Logo/Brand */}
         <div className="mb-6">
           <div className="inline-flex items-center justify-center w-16 h-16 bg-red-100 rounded-2xl mb-3">

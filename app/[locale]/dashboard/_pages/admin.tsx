@@ -86,7 +86,7 @@ export function AdminPage() {
 
   return (
     <div className="flex flex-col h-full">
-      <PageHeader title="Companies" backHref="/dashboard">
+      <PageHeader title="Companies">
         <Button variant="ghost" size="icon" onClick={() => {
           const scroll = Math.round(scrollRef.current?.scrollTop || 0);
           const params = new URLSearchParams();

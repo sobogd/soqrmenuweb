@@ -107,7 +107,7 @@ export function SessionsPage() {
 
   return (
     <div className="flex flex-col h-full">
-      <PageHeader title="Sessions" backHref="/dashboard">
+      <PageHeader title="Sessions">
         <Button variant="ghost" size="icon" onClick={() => {
           const scroll = Math.round(scrollRef.current?.scrollTop || 0);
           const params = new URLSearchParams();

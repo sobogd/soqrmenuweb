@@ -228,6 +228,10 @@ Rules:
       );
     }
 
+    // Delete demo categories and items before creating scanned ones
+    await prisma.item.deleteMany({ where: { companyId, isDemo: true } });
+    await prisma.category.deleteMany({ where: { companyId, isDemo: true } });
+
     // Create categories and items
     let categoriesCount = 0;
     let itemsCount = 0;

@@ -1,18 +1,17 @@
 "use client";
 
 import { useEffect } from "react";
-import { useBlockBack } from "../_hooks/use-back-intercept";
 import { useTranslations } from "next-intl";
 import { useDashboard, PAGE_PATHS, type PageKey } from "../_context/dashboard-context";
 import { useRouter } from "@/i18n/routing";
-import { DashboardNavHeader } from "../_components/dashboard-nav";
 import {
-  QrCode,
+  Share2,
   Palette,
   Phone,
   Home,
   UtensilsCrossed,
   Languages,
+  Banknote,
   BarChart3,
   CalendarDays,
   Armchair,
@@ -33,10 +32,11 @@ import { DashboardContent } from "../_ui/dashboard-content";
 
 const allSections: { key: string; page: PageKey; icon: React.ComponentType<{ className?: string }> }[] = [
   { key: "menu", page: "menu", icon: UtensilsCrossed },
-  { key: "design", page: "design", icon: Palette },
+  { key: "appearance", page: "appearance", icon: Palette },
   { key: "contacts", page: "contacts", icon: Phone },
   { key: "settings", page: "settings", icon: Languages },
-  { key: "qrMenu", page: "qrMenu", icon: QrCode },
+  { key: "currency", page: "currency", icon: Banknote },
+  { key: "qrMenu", page: "qrMenu", icon: Share2 },
   { key: "analytics", page: "analytics", icon: BarChart3 },
   { key: "tables", page: "tables", icon: Armchair },
   { key: "reservations", page: "reservations", icon: CalendarDays },
@@ -57,9 +57,10 @@ export function DashboardHome({ isAdmin }: DashboardHomeProps) {
 
   const navEventMap: Record<string, DashboardEvent> = {
     menu: DashboardEvent.CLICKED_NAV_MENU,
+    appearance: DashboardEvent.CLICKED_NAV_DESIGN,
     contacts: DashboardEvent.CLICKED_NAV_CONTACTS,
     settings: DashboardEvent.CLICKED_NAV_SETTINGS,
-    design: DashboardEvent.CLICKED_NAV_DESIGN,
+    currency: DashboardEvent.CLICKED_NAV_DESIGN,
     qrMenu: DashboardEvent.CLICKED_NAV_QR,
     analytics: DashboardEvent.CLICKED_NAV_ANALYTICS,
     tables: DashboardEvent.CLICKED_NAV_TABLES,
@@ -68,21 +69,18 @@ export function DashboardHome({ isAdmin }: DashboardHomeProps) {
     billing: DashboardEvent.CLICKED_NAV_BILLING,
   };
 
-  useBlockBack();
-
   useEffect(() => {
     track(DashboardEvent.SHOWED_HOME);
   }, []);
 
   return (
     <div className="flex flex-col h-full">
-      <header className="shrink-0 border-b border-border px-6 bg-background/80 backdrop-blur-lg">
-        <div className="flex items-center py-3 max-w-lg md:max-w-none md:w-[45rem] mx-auto md:gap-4">
-          <DashboardNavHeader />
-          <div className="flex items-center justify-center h-10 w-10 -ml-2 md:hidden">
+      <header className="shrink-0 border-b border-border px-6 bg-muted/30 backdrop-blur-lg">
+        <div className="flex items-center py-3 max-w-lg mx-auto">
+          <div className="flex items-center justify-center h-10 w-10 -ml-2">
             <Home className="h-5 w-5" />
           </div>
-          <h1 className="text-xl font-semibold flex-1 ml-3 md:ml-0 truncate">{translations.pages.home}</h1>
+          <h1 className="text-xl font-semibold flex-1 ml-3 truncate">{translations.pages.home}</h1>
           <button
             onClick={() => { track(DashboardEvent.CLICKED_HELP); router.push(PAGE_PATHS.support); }}
             className="flex items-center justify-center h-10 w-10 -mr-2"

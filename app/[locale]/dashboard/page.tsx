@@ -1,6 +1,6 @@
 import { requireAuth } from "./_lib/require-auth";
 import { getItems, getCategories, getRestaurant, checkIsAdmin } from "./_lib/queries";
-import { MenuPage } from "./_pages/menu";
+import { HubPage } from "./_pages/hub";
 
 export default async function Page() {
   const companyId = await requireAuth();
@@ -13,7 +13,7 @@ export default async function Page() {
   ]);
 
   return (
-    <MenuPage
+    <HubPage
       initialItems={items}
       initialCategories={categories}
       initialCurrency={restaurant?.currency ?? "EUR"}

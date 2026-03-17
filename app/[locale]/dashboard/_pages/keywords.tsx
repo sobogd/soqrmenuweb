@@ -61,7 +61,7 @@ export function KeywordsPage() {
 
   return (
     <div className="flex flex-col h-full">
-      <PageHeader title="Keywords" backHref="/dashboard" />
+      <PageHeader title="Keywords" />
       <div className="flex-1 overflow-auto px-6 pt-4 pb-6">
         <DashboardContent innerClassName="space-y-4">
           {/* Period tabs */}

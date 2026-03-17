@@ -1,15 +1,12 @@
 "use client";
 
 import { useState, useMemo, useEffect } from "react";
-import { useBlockBack } from "../_hooks/use-back-intercept";
 import { useTranslations } from "next-intl";
-import { ArrowUp, ArrowDown, Plus, ArrowUpDown, Loader2, Check, ChevronRight, Menu as MenuIcon, Eye, Shield, Activity, MousePointerClick, Send, Search, KeyRound, Save, UtensilsCrossed, Wand2 } from "lucide-react";
+import { ArrowUp, ArrowDown, ArrowLeft, Plus, ArrowUpDown, Loader2, Check, ChevronRight, Eye, Shield, Activity, MousePointerClick, Send, Search, KeyRound, Save, UtensilsCrossed, Wand2 } from "lucide-react";
 import { Switch } from "@/components/ui/switch";
-import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover";
 import { MenuPreviewModal } from "@/components/menu-preview-modal";
 import { toast } from "sonner";
 import { useDashboard } from "../_context/dashboard-context";
-import { DashboardNavHeader, DashboardNavSidebar, DashboardNavItems } from "../_components/dashboard-nav";
 import { Link, useRouter } from "@/i18n/routing";
 import type { Category } from "@/types";
 import { formatPrice } from "@/lib/currencies";
@@ -24,6 +21,7 @@ interface ItemWithTranslations {
   allergens: string[];
   sortOrder: number;
   isActive: boolean;
+  isDemo: boolean;
   categoryId: string;
   category: Pick<Category, "id" | "name" | "sortOrder">;
 }
@@ -38,7 +36,6 @@ interface MenuPageProps {
 }
 
 export function MenuPage({ initialItems, initialCategories, initialCurrency, restaurantName, slug, isAdmin }: MenuPageProps) {
-  useBlockBack();
   const { translations, scanUsage, isAnonymous } = useDashboard();
   const tHome = useTranslations("dashboard.home");
   const router = useRouter();
@@ -61,6 +58,8 @@ export function MenuPage({ initialItems, initialCategories, initialCurrency, res
     () => [...categories].sort((a, b) => a.sortOrder - b.sortOrder),
     [categories]
   );
+
+  const hasOnlyDemoItems = items.length === 0 || items.every((i) => i.isDemo);
 
   async function handleToggleItemActive(
     itemId: string,
@@ -206,25 +205,15 @@ export function MenuPage({ initialItems, initialCategories, initialCurrency, res
   return (
     <div className="flex flex-col h-full">
       {/* Custom header */}
-      <header className="shrink-0 border-b border-border px-6 bg-background/80 backdrop-blur-lg">
-        <div className="flex items-center py-3 max-w-lg md:max-w-none md:w-[45rem] mx-auto md:gap-4">
-          <DashboardNavHeader />
-          {/* Mobile: burger menu */}
-          <Popover modal>
-            <PopoverTrigger asChild>
-              <button
-                onClick={() => track(DashboardEvent.CLICKED_HAMBURGER_MENU)}
-                className="flex items-center justify-center h-10 w-10 -ml-2 md:hidden"
-              >
-                <MenuIcon className="h-5 w-5" />
-              </button>
-            </PopoverTrigger>
-            <PopoverContent align="start" className="p-0 w-56 rounded-xl bg-popover overflow-hidden">
-              <DashboardNavItems excludePages={["menu"]} />
-            </PopoverContent>
-          </Popover>
-          {/* Right part: title + sort */}
-          <h1 className="text-xl font-semibold flex-1 ml-3 md:ml-0 truncate">{tMenu.yourMenu}</h1>
+      <header className="shrink-0 border-b border-border px-6 bg-muted/30 backdrop-blur-lg">
+        <div className="flex items-center py-3 max-w-lg mx-auto">
+          <button
+            onClick={() => router.back()}
+            className="flex items-center justify-center h-10 w-10 -ml-2"
+          >
+            <ArrowLeft className="h-5 w-5" />
+          </button>
+          <h1 className="text-xl font-semibold flex-1 ml-3 truncate">{tMenu.yourMenu}</h1>
           {showSortButton && (
             sortMode ? (
               <button
@@ -247,14 +236,14 @@ export function MenuPage({ initialItems, initialCategories, initialCurrency, res
 
       {/* Content */}
       <div className="relative flex-1 overflow-auto px-6 pt-4 pb-6">
-        <div className="max-w-lg md:max-w-none md:w-[45rem] mx-auto md:flex md:gap-4 min-h-full">
-          <DashboardNavSidebar />
-          <div className="flex-1 min-w-0 flex flex-col gap-4 min-h-full">
+        <div className="max-w-lg mx-auto min-h-full">
+          <div className="min-w-0 flex flex-col gap-4 min-h-full">
           {/* View menu */}
           {!sortMode && slug && items.length > 0 && (
             <MenuPreviewModal menuUrl={`/m/${slug}`}>
               <button
-                className="flex items-center justify-center gap-2 w-full h-11 rounded-xl border border-green-500/30 bg-green-500/10 text-green-600 dark:text-green-400 text-sm font-medium hover:bg-green-500/15 transition-colors"
+                className="flex items-center justify-center gap-2 w-full h-11 rounded-xl text-white text-sm font-medium hover:opacity-90 transition-opacity"
+                style={{ background: "linear-gradient(to right, hsl(9,100%,58%), #f59e0b)" }}
                 onClick={() => track(DashboardEvent.CLICKED_VIEW_MENU)}
               >
                 <Eye className="h-4 w-4" />
@@ -267,13 +256,30 @@ export function MenuPage({ initialItems, initialCategories, initialCurrency, res
           {!sortMode && isAnonymous && items.length > 0 && (
             <Link href="/dashboard/save" onClick={() => track(DashboardEvent.CLICKED_SAVE_MENU)}>
               <button
-                className="flex items-center justify-center gap-2 w-full h-11 rounded-xl text-white text-sm font-medium shadow-md hover:opacity-90 transition-opacity"
+                className="flex items-center justify-center gap-2 w-full h-11 rounded-xl text-white text-sm font-medium hover:opacity-90 transition-opacity"
                 style={{ background: "linear-gradient(135deg, #22c55e, #16a34a)" }}
               >
                 <Save className="h-4 w-4" />
                 {tHome("saveMenu")}
               </button>
             </Link>
+          )}
+
+          {/* Scan menu button — only when user has no own items */}
+          {!sortMode && hasOnlyDemoItems && (
+            <button
+              onClick={() => { track(DashboardEvent.CLICKED_SCAN_MENU); router.push("/dashboard/scan"); }}
+              className="flex items-center gap-3 w-full rounded-xl border border-border bg-muted/30 p-4 hover:bg-muted/50 transition-colors cursor-pointer text-left"
+            >
+              <div className="flex items-center justify-center h-10 w-10 rounded-xl shrink-0" style={{ background: "linear-gradient(to bottom right, hsl(9,100%,58%), #f59e0b)" }}>
+                <Wand2 className="h-5 w-5 text-white" />
+              </div>
+              <div className="flex-1 min-w-0">
+                <p className="text-sm font-medium">{tMenu.scanButton}</p>
+                <p className="text-xs text-muted-foreground/60 mt-0.5">{tMenu.scanDescription}</p>
+              </div>
+              <ChevronRight className="h-4 w-4 text-muted-foreground/30 shrink-0" />
+            </button>
           )}
 
           {/* Admin shortcuts */}
@@ -302,44 +308,6 @@ export function MenuPage({ initialItems, initialCategories, initialCurrency, res
             </div>
           )}
 
-        {(categories.length === 0 || (categories.length === 1 && items.length === 0)) ? (
-          <>
-          <div className="rounded-xl border border-border bg-muted/30 overflow-hidden">
-            <div className="flex flex-col items-center text-center px-4 py-6">
-              <div className="flex items-center justify-center h-10 w-10 rounded-xl mb-2" style={{ background: "linear-gradient(to bottom right, hsl(9,100%,58%), #f59e0b)" }}>
-                <UtensilsCrossed className="h-5 w-5 text-white" />
-              </div>
-              <p className="text-sm font-medium mb-0.5">{tMenu.emptyTitle}</p>
-              <p className="text-xs text-muted-foreground/60">{tMenu.emptySubtitle}</p>
-            </div>
-          </div>
-          <button
-            className="flex items-center justify-center gap-2 w-full h-11 rounded-xl text-white text-sm font-medium shadow-md hover:opacity-90 transition-opacity"
-            style={{ background: "linear-gradient(to right, hsl(9,100%,58%), #f59e0b)" }}
-            onClick={() => { track(DashboardEvent.CLICKED_ADD_ITEM); router.push(categories.length > 0 ? `/dashboard/items/add?categoryId=${categories[0].id}` : "/dashboard/items/add"); }}
-          >
-            <Plus className="h-4 w-4" />
-            {tMenu.addItem}
-          </button>
-          <div className="relative flex items-center justify-center">
-            <div className="absolute inset-0 flex items-center"><div className="w-full border-t border-border" /></div>
-            <span className="relative bg-background px-3 text-sm text-muted-foreground">{tMenu.orDivider}</span>
-          </div>
-          <button
-            onClick={() => { track(DashboardEvent.CLICKED_SCAN_MENU); router.push("/dashboard/scan"); }}
-            className="flex items-center gap-3 w-full rounded-xl border border-border bg-muted/30 p-4 hover:bg-muted/50 transition-colors cursor-pointer text-left"
-          >
-            <div className="flex items-center justify-center h-10 w-10 rounded-xl shrink-0" style={{ background: "linear-gradient(to bottom right, hsl(9,100%,58%), #f59e0b)" }}>
-              <Wand2 className="h-5 w-5 text-white" />
-            </div>
-            <div className="flex-1 min-w-0">
-              <p className="text-sm font-medium">{tMenu.scanButton}</p>
-              <p className="text-xs text-muted-foreground/60 mt-0.5">{tMenu.scanDescription}</p>
-            </div>
-            <ChevronRight className="h-4 w-4 text-muted-foreground/30 shrink-0" />
-          </button>
-          </>
-        ) : (
           <div className="flex flex-col gap-4">
             <div className="flex flex-col gap-4">
               {sortedCategories.map((category, catIndex) => {
@@ -383,6 +351,7 @@ export function MenuPage({ initialItems, initialCategories, initialCurrency, res
                         </div>
                       )}
                       <div className={`flex items-center flex-1 min-w-0 ${sortMode ? "ml-2" : ""}`}>
+                        {category.isDemo && <span className="mr-1.5 px-1.5 py-0.5 text-[10px] font-medium rounded bg-muted text-muted-foreground/60 uppercase shrink-0">{tMenu.sampleBadge}</span>}
                         <span className="text-xs font-semibold uppercase tracking-wider text-muted-foreground truncate">{category.name}</span>
                         {!sortMode && <ChevronRight className="h-4 w-4 text-muted-foreground/30 shrink-0 ml-1" />}
                       </div>
@@ -402,24 +371,15 @@ export function MenuPage({ initialItems, initialCategories, initialCurrency, res
                             }`}
                           >
                             <div className="flex items-center gap-3 flex-1 min-w-0">
-                              {!sortMode && (
-                                <div onClick={(e) => e.stopPropagation()} className="flex items-center">
-                                  <Switch
-                                    checked={item.isActive}
-                                    onCheckedChange={() => {
-                                      track(DashboardEvent.TOGGLED_MENU_ITEM_ACTIVE);
-                                      handleToggleItemActive(item.id, item.isActive, item.name);
-                                    }}
-                                  />
-                                </div>
-                              )}
+                              {/* Switch hidden but functionality preserved */}
+                              {item.isDemo && <span className="px-1.5 py-0.5 text-[10px] font-medium rounded bg-muted text-muted-foreground/60 uppercase shrink-0">{tMenu.sampleBadge}</span>}
                               <span className="text-sm font-medium truncate">{item.name}</span>
                             </div>
 
                             {!sortMode && (
-                              <span className="text-sm text-muted-foreground ml-2">
-                                {formatPrice(item.price, currency)}
-                              </span>
+                              item.isDemo
+                                ? <ChevronRight className="h-4 w-4 text-muted-foreground/30 shrink-0 ml-1" />
+                                : <span className="text-sm text-muted-foreground ml-2 shrink-0">{formatPrice(item.price, currency)}</span>
                             )}
                           </div>
 
@@ -469,7 +429,7 @@ export function MenuPage({ initialItems, initialCategories, initialCurrency, res
                       router.push("/dashboard/items/add");
                     }
                   }}
-                  className="flex items-center justify-center gap-2 w-full h-11 rounded-xl text-white text-sm font-medium shadow-md hover:opacity-90 transition-opacity"
+                  className="flex items-center justify-center gap-2 w-full h-11 rounded-xl text-white text-sm font-medium hover:opacity-90 transition-opacity"
                   style={{ background: "linear-gradient(to right, hsl(9,100%,58%), #f59e0b)" }}
                 >
                   <Plus className="h-4 w-4" />
@@ -485,7 +445,6 @@ export function MenuPage({ initialItems, initialCategories, initialCurrency, res
               </>
             )}
           </div>
-        )}
         </div>{/* end Main content column */}
         </div>{/* end flex container */}
       </div>

@@ -1,7 +1,6 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { useBlockBack } from "../_hooks/use-back-intercept";
 import { useTranslations, useLocale } from "next-intl";
 import { useRouter } from "@/i18n/routing";
 import { Button } from "@/components/ui/button";
@@ -71,7 +70,6 @@ export function UpgradePage({ initialSubscription, isAdmin, currency }: UpgradeP
   const locale = useLocale();
   const router = useRouter();
 
-  useBlockBack();
 
   const [selectedPlan, setSelectedPlan] = useState<SelectedPlan>("yearly");
   const [loading, setLoading] = useState(false);
@@ -119,7 +117,7 @@ export function UpgradePage({ initialSubscription, isAdmin, currency }: UpgradeP
         <div className="max-w-md mx-auto px-5 pb-10">
           {/* Hero */}
           <div className="text-center pt-12 pb-8">
-            <div className="w-16 h-16 bg-primary/10 rounded-md flex items-center justify-center mx-auto mb-6 shadow-sm">
+            <div className="w-16 h-16 bg-primary/10 rounded-md flex items-center justify-center mx-auto mb-6">
               <Rocket className="h-7 w-7 text-primary" />
             </div>
             <h1 className="text-2xl font-bold tracking-tight mb-2">{t("trialEndedTitle")}</h1>
@@ -203,7 +201,7 @@ export function UpgradePage({ initialSubscription, isAdmin, currency }: UpgradeP
           <div className="pt-2">
             <Button
               size="lg"
-              className="w-full h-14 text-base font-semibold rounded-md shadow-md"
+              className="w-full h-14 text-base font-semibold rounded-md"
               onClick={handleUpgrade}
               disabled={loading}
             >

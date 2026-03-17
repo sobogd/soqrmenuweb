@@ -197,7 +197,7 @@ export function PricingCards({ hideComparison = false, hideButtons = false, curr
                 <Card
                   className={cn(
                     "relative flex flex-col h-full transition-all duration-300",
-                    plan.popular && "shadow-lg",
+                    plan.popular && "",
                     isActive ? "scale-100 opacity-100" : "md:scale-100 scale-95 opacity-70 md:opacity-100"
                   )}
                 >

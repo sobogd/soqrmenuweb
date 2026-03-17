@@ -97,7 +97,7 @@ export function MapPicker({ lat, lng, onLocationSelect }: MapPickerProps) {
             type="text"
             placeholder="Search location..."
             style={{ color: "#000", backgroundColor: "#fff" }}
-            className="w-full px-3 py-2 border rounded-md shadow-sm text-sm text-black bg-white"
+            className="w-full px-3 py-2 border rounded-md text-sm text-black bg-white"
           />
         </Autocomplete>
       </div>

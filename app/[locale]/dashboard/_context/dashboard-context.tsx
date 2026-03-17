@@ -11,6 +11,8 @@ export type PageKey =
   | "items"
   | "settings"
   | "design"
+  | "appearance"
+  | "currency"
   | "contacts"
   | "reservations"
   | "tables"
@@ -22,13 +24,15 @@ export type PageKey =
 
 export const PAGE_PATHS: Record<PageKey, string> = {
   home: "/dashboard",
-  menu: "/dashboard",
+  menu: "/dashboard/menu",
   categories: "/dashboard/categories",
   items: "/dashboard/items",
   tables: "/dashboard/tables",
   reservations: "/dashboard/reservations",
   orders: "/dashboard/orders",
   design: "/dashboard/design",
+  appearance: "/dashboard/appearance",
+  currency: "/dashboard/currency",
   contacts: "/dashboard/contacts",
   qrMenu: "/dashboard/qr-menu",
   analytics: "/dashboard/analytics",
@@ -51,6 +55,8 @@ const PATH_TO_PAGE_MAP: Record<string, PageKey> = {
   "orders": "orders",
   "order-settings": "orders",
   "design": "design",
+  "appearance": "appearance",
+  "currency": "currency",
   "contacts": "contacts",
   "qr-menu": "qrMenu",
   "analytics": "analytics",
@@ -177,7 +183,13 @@ export interface ItemsTranslations {
   saveSort: string;
   sortSaved: string;
   sortError: string;
+  addDescription: string;
+  editDescription: string;
+  addImage: string;
+  editImage: string;
   allergens: string;
+  addAllergens: string;
+  editAllergens: string;
   allergensHint: string;
   allergenNames: Record<string, string>;
   subscribeForAllergens: string;
@@ -202,6 +214,7 @@ export interface MenuTranslations {
   emptySubtitle: string;
   noItems: string;
   orDivider: string;
+  sampleBadge: string;
   scanButton: string;
   scanDescription: string;
   defaultCategoryName: string;
@@ -242,7 +255,8 @@ export interface DashboardTranslations {
 
 const validPages: PageKey[] = [
   "qrMenu", "home", "analytics", "menu", "categories", "items", "settings", "design",
-  "contacts", "reservations", "tables", "orders", "billing", "support", "admin", "adminAnalytics"
+  "appearance", "currency", "contacts", "reservations", "tables", "orders", "billing",
+  "support", "admin", "adminAnalytics"
 ];
 
 export function isValidPageKey(value: string): value is PageKey {

@@ -340,7 +340,7 @@ export function AdminOnboardingPage() {
 
   return (
     <div className="flex flex-col h-full">
-      <PageHeader title="Onboarding" backHref="/dashboard/admin/analytics">
+      <PageHeader title="Onboarding">
         <button
           onClick={fetchData}
           disabled={loading}

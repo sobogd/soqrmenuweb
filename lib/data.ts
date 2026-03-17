@@ -19,6 +19,7 @@ export async function getCategories(): Promise<Category[]> {
       name: true,
       sortOrder: true,
       isActive: true,
+      isDemo: true,
     },
   });
 
@@ -70,6 +71,7 @@ export async function getCategoryById(id: string): Promise<Category | null> {
       name: true,
       sortOrder: true,
       isActive: true,
+      isDemo: true,
     },
   });
 

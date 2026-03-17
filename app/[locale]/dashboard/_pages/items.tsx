@@ -1,7 +1,6 @@
 "use client";
 
 import { useEffect, useState, useMemo } from "react";
-import { useBackIntercept } from "../_hooks/use-back-intercept";
 import { ArrowUp, ArrowDown, Plus, Loader2, ArrowUpDown, X, ArrowLeft, Check } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Switch } from "@/components/ui/switch";
@@ -13,7 +12,6 @@ import { track, DashboardEvent } from "@/lib/dashboard-events";
 import type { Category } from "@/types";
 import { formatPrice } from "@/lib/currencies";
 import { DashboardContent } from "../_ui/dashboard-content";
-import { DashboardNavHeader } from "../_components/dashboard-nav";
 
 interface ItemWithTranslations {
   id: string;
@@ -29,7 +27,6 @@ interface ItemWithTranslations {
 }
 
 export function ItemsPage() {
-  useBackIntercept("/dashboard");
   const { translations } = useDashboard();
   const router = useRouter();
   const t = translations.items;
@@ -238,9 +235,8 @@ export function ItemsPage() {
   return (
     <div className="flex flex-col h-full">
       {/* Custom header */}
-      <header className="shrink-0 border-b border-border px-6 bg-background/80 backdrop-blur-lg">
-        <div className="flex items-center py-3 max-w-lg md:max-w-none md:w-[45rem] mx-auto md:gap-4">
-          <DashboardNavHeader />
+      <header className="shrink-0 border-b border-border px-6 bg-muted/30 backdrop-blur-lg">
+        <div className="flex items-center py-3 max-w-lg mx-auto">
           {sortMode ? (
             <>
               <button
@@ -250,7 +246,7 @@ export function ItemsPage() {
               >
                 <X className="h-5 w-5" />
               </button>
-              <h1 className="text-xl font-semibold flex-1 ml-3 md:ml-0 truncate">{pageTitle}</h1>
+              <h1 className="text-xl font-semibold flex-1 ml-3 truncate">{pageTitle}</h1>
               <button
                 onClick={handleSaveSortOrder}
                 disabled={savingSort}
@@ -262,12 +258,12 @@ export function ItemsPage() {
           ) : (
             <>
               <button
-                onClick={() => router.push("/dashboard")}
+                onClick={() => router.back()}
                 className="flex items-center justify-center h-10 w-10 -ml-2"
               >
                 <ArrowLeft className="h-5 w-5" />
               </button>
-              <h1 className="text-xl font-semibold flex-1 ml-3 md:ml-0 truncate">{pageTitle}</h1>
+              <h1 className="text-xl font-semibold flex-1 ml-3 truncate">{pageTitle}</h1>
               {items.length > 1 && (
                 <button
                   onClick={handleStartSortMode}

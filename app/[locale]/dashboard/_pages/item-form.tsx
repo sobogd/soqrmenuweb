@@ -1,8 +1,8 @@
 "use client";
 
-import { useEffect, useState, useRef, useMemo } from "react";
+import { useEffect, useState, useRef } from "react";
 import Image from "next/image";
-import { Loader2, X, Trash2, Upload, Sparkles, ChevronDown } from "lucide-react";
+import { Check, Loader2, X, Trash2, Upload, Sparkles, ChevronDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { toast } from "sonner";
 import {
@@ -87,31 +87,7 @@ export function ItemFormPage({ id, initialCategoryId }: ItemFormPageProps) {
   const [showTranslateLimitDialog, setShowTranslateLimitDialog] = useState(false);
   const tAi = useTranslations("dashboard.aiTranslate");
 
-  // Original values for change detection (edit mode)
-  const [originalName, setOriginalName] = useState("");
-  const [originalDescription, setOriginalDescription] = useState("");
-  const [originalPrice, setOriginalPrice] = useState("");
-  const [originalCategoryId, setOriginalCategoryId] = useState(initialCategoryId || "");
-  const [originalImageUrl, setOriginalImageUrl] = useState("");
-  const [originalAllergens, setOriginalAllergens] = useState<string[]>([]);
-  const [originalTranslations, setOriginalTranslations] = useState<Record<string, TranslationData>>({});
-
   const isEdit = !!id;
-
-  const hasChanges = useMemo(() => {
-    if (!isEdit) {
-      return !!(name.trim() || description.trim() || price);
-    }
-    return (
-      name !== originalName ||
-      description !== originalDescription ||
-      price !== originalPrice ||
-      categoryId !== originalCategoryId ||
-      imageUrl !== originalImageUrl ||
-      JSON.stringify(allergens) !== JSON.stringify(originalAllergens) ||
-      JSON.stringify(itemTranslations) !== JSON.stringify(originalTranslations)
-    );
-  }, [isEdit, name, description, price, categoryId, imageUrl, allergens, itemTranslations, originalName, originalDescription, originalPrice, originalCategoryId, originalImageUrl, originalAllergens, originalTranslations]);
 
   useEffect(() => {
     track(DashboardEvent.SHOWED_ITEM_FORM);
@@ -157,14 +133,6 @@ export function ItemFormPage({ id, initialCategoryId }: ItemFormPageProps) {
         setAllergens(itemAllergens);
         setIsActive(item.isActive);
         setItemTranslations(itemTrans);
-
-        setOriginalName(itemName);
-        setOriginalDescription(itemDesc);
-        setOriginalPrice(itemPrice);
-        setOriginalCategoryId(item.categoryId);
-        setOriginalImageUrl(itemImage);
-        setOriginalAllergens(itemAllergens);
-        setOriginalTranslations(itemTrans);
       }
     } catch (error) {
       console.error("Failed to fetch data:", error);
@@ -421,7 +389,7 @@ export function ItemFormPage({ id, initialCategoryId }: ItemFormPageProps) {
       if (res.ok) {
         track(DashboardEvent.CLICKED_SAVE_ITEM);
         toast.success(isEdit ? t.updated : t.created);
-        router.push("/dashboard");
+        router.replace(`/dashboard/menu/${categoryId}`);
       } else {
         const data = await res.json();
         track(DashboardEvent.ERROR_SAVE, { page: "item" });
@@ -450,26 +418,14 @@ export function ItemFormPage({ id, initialCategoryId }: ItemFormPageProps) {
   return (
     <div className="flex flex-col h-full">
       <div className="shrink-0">
-        <PageHeader title={isEdit ? t.editItem : t.addItem} backHref="/dashboard">
-          <Button
-            type="submit"
-            form="item-form"
-            disabled={saving || deleting || uploading || generating || !hasChanges}
-            variant="default"
-            size="sm"
-            className={!hasChanges ? "opacity-40" : ""}
-          >
-            {saving ? <Loader2 className="h-4 w-4 animate-spin" /> : t.save}
-          </Button>
-        </PageHeader>
+        <PageHeader title={isEdit ? t.editItem : t.addItem} />
       </div>
 
       <form id="item-form" onSubmit={handleSubmit} className="flex-1 overflow-y-auto px-6 pt-4 pb-6">
         <DashboardContent innerClassName="space-y-6">
 
-          {/* General */}
+          {/* Main fields */}
           <div>
-            <p className="text-xs uppercase tracking-wider text-muted-foreground px-4 mb-1.5">{t.general}</p>
             <div className="rounded-xl border border-border bg-muted/30 overflow-hidden">
               {/* Category */}
               {categories.length > 1 && (!initialCategoryId || isEdit) && (
@@ -691,20 +647,31 @@ export function ItemFormPage({ id, initialCategoryId }: ItemFormPageProps) {
             );
           })}
 
-          {/* Delete */}
-          {isEdit && (
-            <div className="rounded-xl border border-border bg-muted/30 overflow-hidden">
+          {/* Actions */}
+          <div className="flex items-center justify-between">
+            {isEdit ? (
               <button
                 type="button"
                 onClick={() => { track(DashboardEvent.CLICKED_DELETE_ITEM); setShowDeleteDialog(true); }}
                 disabled={saving || deleting}
-                className="flex items-center gap-3 w-full h-11 px-4 hover:bg-muted/50 transition-colors disabled:opacity-50"
+                className="inline-flex items-center gap-1.5 h-10 px-4 rounded-xl border border-border bg-muted/30 text-sm font-medium text-destructive hover:bg-muted/50 transition-colors disabled:opacity-50"
               >
-                <Trash2 className="h-4 w-4 text-red-400" />
-                <span className="text-sm font-medium text-red-400">{t.delete}</span>
+                <Trash2 className="h-4 w-4 relative -top-[1.5px]" />
+                {t.delete}
               </button>
-            </div>
-          )}
+            ) : <div />}
+            <Button
+              type="submit"
+              loading={saving}
+              disabled={deleting || uploading || generating}
+              variant="default"
+              size="sm"
+              className="h-10 px-4"
+            >
+              <Check className="h-4 w-4 relative -top-px" />
+              {t.save}
+            </Button>
+          </div>
 
         </DashboardContent>
       </form>
@@ -720,12 +687,8 @@ export function ItemFormPage({ id, initialCategoryId }: ItemFormPageProps) {
               <X className="h-4 w-4 mr-2" />
               {t.cancel}
             </Button>
-            <Button variant="destructive" onClick={handleDelete} disabled={deleting}>
-              {deleting ? (
-                <Loader2 className="h-4 w-4 animate-spin mr-2" />
-              ) : (
-                <Trash2 className="h-4 w-4 mr-2" />
-              )}
+            <Button variant="destructive" onClick={handleDelete} loading={deleting}>
+              <Trash2 className="h-4 w-4 mr-2" />
               {t.delete}
             </Button>
           </DialogFooter>

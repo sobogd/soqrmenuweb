@@ -98,7 +98,7 @@ export function ReservationSettingsPage({ initialRestaurant }: ReservationSettin
   return (
     <div className="flex flex-col h-full">
       <div className="shrink-0">
-        <PageHeader title={translations.pages.reservations} backHref="/dashboard/reservations">
+        <PageHeader title={translations.pages.reservations}>
           <Button
             type="button"
             onClick={handleSave}

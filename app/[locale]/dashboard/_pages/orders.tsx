@@ -260,7 +260,7 @@ export function OrdersPage({ initialOrders, ordersEnabled }: OrdersPageProps) {
               <p className="text-muted-foreground/60">{t("ordersDisabled")}</p>
               <button
                 onClick={() => { track(DashboardEvent.CLICKED_ORDER_SETTINGS); router.push("/dashboard/order-settings"); }}
-                className="flex items-center gap-2 h-10 px-5 rounded-xl text-white text-sm font-medium shadow-md hover:opacity-90 transition-opacity"
+                className="flex items-center gap-2 h-10 px-5 rounded-xl text-white text-sm font-medium hover:opacity-90 transition-opacity"
                 style={{ background: "linear-gradient(to right, hsl(9,100%,58%), #f59e0b)" }}
               >
                 <Settings className="h-4 w-4" />

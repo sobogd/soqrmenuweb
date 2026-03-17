@@ -8,7 +8,6 @@ import { Button } from "@/components/ui/button";
 import { toast } from "sonner";
 import { track, DashboardEvent } from "@/lib/dashboard-events";
 import { PageHeader } from "../_ui/page-header";
-import { DashboardNavSidebar } from "../_components/dashboard-nav";
 
 // --- Constants ---
 
@@ -178,12 +177,11 @@ export function ScanPage() {
 
   return (
     <div className="flex flex-col h-full">
-      <PageHeader title={tMenu("scanPoolTitle")} backHref="/dashboard" />
+      <PageHeader title={tMenu("scanPoolTitle")} />
 
       <div className="relative flex-1 overflow-auto px-6 pt-4 pb-6">
-        <div className="max-w-lg md:max-w-none md:w-[45rem] mx-auto md:flex md:gap-4">
-          <DashboardNavSidebar />
-          <div className="flex-1 min-w-0 flex flex-col gap-4">
+        <div className="max-w-lg mx-auto">
+          <div className="min-w-0 flex flex-col gap-4">
           <input
             ref={fileInputRef}
             type="file"

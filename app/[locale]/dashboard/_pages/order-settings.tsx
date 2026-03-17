@@ -96,7 +96,7 @@ export function OrderSettingsPage({ initialRestaurant }: OrderSettingsPageProps)
   return (
     <div className="flex flex-col h-full">
       <div className="shrink-0">
-        <PageHeader title={translations.pages.orders} backHref="/dashboard/orders">
+        <PageHeader title={translations.pages.orders}>
           <Button
             type="button"
             onClick={handleSave}

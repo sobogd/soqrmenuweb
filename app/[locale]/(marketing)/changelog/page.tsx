@@ -215,7 +215,7 @@ export default async function ChangelogPage({
                 href={`/changelog/${entry.id}`}
                 className="block"
               >
-                <Card className="hover:shadow-lg transition-shadow cursor-pointer">
+                <Card className="cursor-pointer">
                   <CardHeader>
                     <div className="flex items-center justify-between">
                       <CardTitle className="text-xl">

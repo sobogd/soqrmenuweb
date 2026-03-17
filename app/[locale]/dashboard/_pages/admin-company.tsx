@@ -317,7 +317,7 @@ export function AdminCompanyPage({ companyId }: AdminCompanyPageProps) {
   if (error || !company) {
     return (
       <div className="flex flex-col h-full">
-        <PageHeader title="Company" backHref={backHref} />
+        <PageHeader title="Company" />
         <div className="flex items-center justify-center h-full">
           <p className="text-muted-foreground">{error || "Not found"}</p>
         </div>
@@ -365,7 +365,7 @@ export function AdminCompanyPage({ companyId }: AdminCompanyPageProps) {
 
   return (
     <div className="flex flex-col h-full">
-      <PageHeader title={title} backHref={backHref}>
+      <PageHeader title={title}>
         <Button variant="ghost" size="icon" onClick={fetchCompany}>
           <RefreshCw className="h-4 w-4" />
         </Button>
