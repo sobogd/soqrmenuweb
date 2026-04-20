@@ -1,8 +1,9 @@
 "use client";
 
-import { useEffect, useState, useRef, useMemo } from "react";
+import { useEffect, useState, useRef, useMemo, useCallback } from "react";
+import { FormFieldUnderline } from "../_ui/form-field-underline";
 import Image from "next/image";
-import { Loader2, X, Trash2, Upload, Sparkles, ChevronDown } from "lucide-react";
+import { Loader2, X, Trash2, Upload, Sparkles, ChevronDown, AlignLeft, ImageIcon, ShieldAlert, LayoutGrid, Check } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { toast } from "sonner";
 import {
@@ -56,15 +57,23 @@ interface ItemWithTranslations {
 interface ItemFormPageProps {
   id?: string;
   initialCategoryId?: string;
+  onClose?: () => void;
+  onSuccess?: () => void;
 }
 
-export function ItemFormPage({ id, initialCategoryId }: ItemFormPageProps) {
+export function ItemFormPage({ id, initialCategoryId, onClose, onSuccess }: ItemFormPageProps) {
   const { translations } = useDashboard();
   const router = useRouter();
   const locale = useLocale();
   const t = translations.items;
   const fileInputRef = useRef<HTMLInputElement>(null);
   const { restaurant, loading: loadingRestaurant, otherLanguages } = useRestaurantLanguages();
+
+  const knownLanguagesRef = useRef<string[]>([]);
+  if (!loadingRestaurant && otherLanguages.length > 0) {
+    knownLanguagesRef.current = otherLanguages;
+  }
+  const knownLanguages = knownLanguagesRef.current;
 
   const [loading, setLoading] = useState(true);
   const [categories, setCategories] = useState<Category[]>([]);
@@ -80,6 +89,22 @@ export function ItemFormPage({ id, initialCategoryId }: ItemFormPageProps) {
   const [generating, setGenerating] = useState(false);
   const [deleting, setDeleting] = useState(false);
   const [showDeleteDialog, setShowDeleteDialog] = useState(false);
+  const [showAllergensDialog, setShowAllergensDialog] = useState(false);
+  const [tempAllergens, setTempAllergens] = useState<string[]>([]);
+  const [showCategoryDialog, setShowCategoryDialog] = useState(false);
+  const [showDescriptionDialog, setShowDescriptionDialog] = useState(false);
+  const [tempDescription, setTempDescription] = useState("");
+  const [showImageDialog, setShowImageDialog] = useState(false);
+  const [tempImageUrl, setTempImageUrl] = useState("");
+
+  const descriptionRef = useCallback((el: HTMLTextAreaElement | null) => {
+    if (el) {
+      el.style.height = "auto";
+      el.style.height = el.scrollHeight + "px";
+      el.focus();
+      el.setSelectionRange(el.value.length, el.value.length);
+    }
+  }, []);
   const [showGenerateLimitDialog, setShowGenerateLimitDialog] = useState(false);
   const [itemTranslations, setItemTranslations] = useState<Record<string, TranslationData>>({});
   const [validationError, setValidationError] = useState<string | null>(null);
@@ -170,7 +195,7 @@ export function ItemFormPage({ id, initialCategoryId }: ItemFormPageProps) {
       console.error("Failed to fetch data:", error);
       track(DashboardEvent.ERROR_FETCH, { page: "item" });
       toast.error(t.fetchError);
-      if (id) router.push("/dashboard");
+      if (id) onClose ? onClose() : router.push("/dashboard");
     } finally {
       setLoading(false);
     }
@@ -279,7 +304,7 @@ export function ItemFormPage({ id, initialCategoryId }: ItemFormPageProps) {
 
       if (res.ok) {
         const data = await res.json();
-        setImageUrl(data.url);
+        showImageDialog ? setTempImageUrl(data.url) : setImageUrl(data.url);
       } else {
         const data = await res.json();
         track(DashboardEvent.ERROR_UPLOAD, { page: "item" });
@@ -318,7 +343,7 @@ export function ItemFormPage({ id, initialCategoryId }: ItemFormPageProps) {
       });
       if (res.ok) {
         const data = await res.json();
-        setImageUrl(data.url);
+        showImageDialog ? setTempImageUrl(data.url) : setImageUrl(data.url);
       } else if (res.status === 403) {
         const data = await res.json().catch(() => ({}));
         if (data.error === "limit_reached") {
@@ -348,7 +373,7 @@ export function ItemFormPage({ id, initialCategoryId }: ItemFormPageProps) {
 
       if (res.ok) {
         toast.success(t.deleted);
-        router.push("/dashboard");
+        onSuccess ? onSuccess() : router.push("/dashboard");
       } else {
         const data = await res.json();
         track(DashboardEvent.ERROR_DELETE, { page: "item" });
@@ -421,7 +446,7 @@ export function ItemFormPage({ id, initialCategoryId }: ItemFormPageProps) {
       if (res.ok) {
         track(DashboardEvent.CLICKED_SAVE_ITEM);
         toast.success(isEdit ? t.updated : t.created);
-        router.push("/dashboard");
+        onSuccess ? onSuccess() : router.push("/dashboard");
       } else {
         const data = await res.json();
         track(DashboardEvent.ERROR_SAVE, { page: "item" });
@@ -441,6 +466,436 @@ export function ItemFormPage({ id, initialCategoryId }: ItemFormPageProps) {
     } else {
       setAllergens([...allergens, code]);
     }
+  }
+
+  const dialogs = (
+    <>
+      <Dialog open={showDeleteDialog} onOpenChange={setShowDeleteDialog}>
+        <DialogContent className="sm:max-w-sm">
+          <DialogTitle className="text-lg font-semibold pr-6">{t.delete}</DialogTitle>
+          <DialogDescription className="text-sm text-muted-foreground">{t.deleteConfirm}</DialogDescription>
+          <div className="flex items-center justify-end gap-6 mt-2">
+            <button type="button" onClick={() => setShowDeleteDialog(false)} className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors">{t.cancel}</button>
+            <button type="button" onClick={handleDelete} disabled={deleting} className="flex items-center gap-1.5 text-sm font-medium text-red-400 hover:text-red-500 transition-colors disabled:opacity-50">
+              {deleting && <Loader2 className="h-4 w-4 animate-spin" />}{t.delete}
+            </button>
+          </div>
+        </DialogContent>
+      </Dialog>
+
+      <AlertDialog open={!!validationError} onOpenChange={() => setValidationError(null)}>
+        <AlertDialogContent>
+          <AlertDialogHeader>
+            <AlertDialogTitle>{validationError}</AlertDialogTitle>
+            <AlertDialogDescription className="sr-only">{validationError}</AlertDialogDescription>
+          </AlertDialogHeader>
+          <AlertDialogFooter>
+            <AlertDialogAction onClick={() => setValidationError(null)}>OK</AlertDialogAction>
+          </AlertDialogFooter>
+        </AlertDialogContent>
+      </AlertDialog>
+
+      <Dialog open={showTranslateLimitDialog} onOpenChange={setShowTranslateLimitDialog}>
+        <DialogContent className="sm:max-w-sm">
+          <DialogTitle className="text-lg font-semibold pr-6">{tAi("limitReached")}</DialogTitle>
+          <DialogDescription className="text-sm text-muted-foreground">{tAi("limitReachedDescription")}</DialogDescription>
+          <div className="flex items-center justify-end gap-6 mt-2">
+            <button type="button" onClick={() => setShowTranslateLimitDialog(false)} className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors">{tAi("cancel")}</button>
+            <button type="button" onClick={() => { track(DashboardEvent.CLICKED_AI_SUBSCRIBE); setShowTranslateLimitDialog(false); router.push("/dashboard/billing"); }} className="text-sm font-medium text-primary hover:text-primary/80 transition-colors">{tAi("upgrade")}</button>
+          </div>
+        </DialogContent>
+      </Dialog>
+
+      <Dialog open={showGenerateLimitDialog} onOpenChange={setShowGenerateLimitDialog}>
+        <DialogContent className="sm:max-w-sm">
+          <DialogTitle className="text-lg font-semibold pr-6">{t.generateLimitReached}</DialogTitle>
+          <DialogDescription className="text-sm text-muted-foreground">{t.generateLimitDescription}</DialogDescription>
+          <div className="flex items-center justify-end gap-6 mt-2">
+            <button type="button" onClick={() => setShowGenerateLimitDialog(false)} className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors">{t.cancel}</button>
+            <button type="button" onClick={() => { track(DashboardEvent.CLICKED_AI_SUBSCRIBE); setShowGenerateLimitDialog(false); router.push("/dashboard/billing"); }} className="text-sm font-medium text-primary hover:text-primary/80 transition-colors">{t.subscribe}</button>
+          </div>
+        </DialogContent>
+      </Dialog>
+
+      <Dialog open={showDescriptionDialog} onOpenChange={setShowDescriptionDialog}>
+        <DialogContent className="sm:max-w-[384px]">
+          <DialogTitle className="text-lg font-semibold pr-6">{t.description}</DialogTitle>
+          <DialogDescription className="sr-only">{t.description}</DialogDescription>
+          <textarea
+            ref={descriptionRef}
+            value={tempDescription}
+            onChange={(e) => {
+              setTempDescription(e.target.value);
+              e.target.style.height = "auto";
+              e.target.style.height = e.target.scrollHeight + "px";
+            }}
+            placeholder={t.descriptionPlaceholder}
+            rows={1}
+            className="w-full mt-2 text-sm bg-transparent outline-none resize-none leading-5 p-0 placeholder:text-muted-foreground/30 border-b-[1.5px] border-border pb-2 overflow-hidden"
+            style={{ minHeight: "1.25rem" }}
+          />
+          <div className="flex items-center justify-between mt-4">
+            <button
+              type="button"
+              onClick={() => setShowDescriptionDialog(false)}
+              className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
+            >
+              {t.cancel}
+            </button>
+            <button
+              type="button"
+              onClick={() => { setDescription(tempDescription); setShowDescriptionDialog(false); }}
+              className="text-sm font-medium text-primary hover:text-primary/80 transition-colors"
+            >
+              {t.save}
+            </button>
+          </div>
+        </DialogContent>
+      </Dialog>
+
+      <Dialog open={showImageDialog} onOpenChange={setShowImageDialog}>
+        <DialogContent className="sm:max-w-[384px]">
+          <DialogTitle className="text-lg font-semibold pr-6">{t.image}</DialogTitle>
+          <DialogDescription className="sr-only">{t.image}</DialogDescription>
+          <div className="mt-2">
+            {tempImageUrl ? (
+              <div className="flex items-center gap-4 mb-2">
+                <div className="relative h-24 w-24 rounded-xl overflow-hidden border border-border shrink-0">
+                  <Image src={tempImageUrl} alt="Item" fill className="object-cover" sizes="96px" />
+                </div>
+                <button
+                  type="button"
+                  onClick={() => setTempImageUrl("")}
+                  className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
+                >
+                  <X className="h-4 w-4" />
+                </button>
+              </div>
+            ) : null}
+            <div className="-mx-6">
+              <button
+                type="button"
+                onClick={() => { track(DashboardEvent.CLICKED_UPLOAD_ITEM_IMAGE); fileInputRef.current?.click(); }}
+                disabled={uploading}
+                className="flex items-center gap-3 px-6 py-3 w-full text-left transition-colors hover:bg-muted/50 disabled:opacity-50"
+              >
+                <Upload className="h-[18px] w-[18px] text-muted-foreground shrink-0" />
+                <span className="text-sm flex-1">{t.uploadImage}</span>
+                {uploading && <Loader2 className="h-4 w-4 animate-spin text-muted-foreground" />}
+              </button>
+              {(!tempImageUrl || !isAiImage(tempImageUrl)) && (
+                <button
+                  type="button"
+                  onClick={() => tempImageUrl ? handleGenerateImage(tempImageUrl) : handleGenerateImage()}
+                  disabled={generating || !name.trim()}
+                  className="flex items-center gap-3 px-6 py-3 w-full text-left transition-colors hover:bg-muted/50 disabled:opacity-50"
+                >
+                  <Sparkles className="h-[18px] w-[18px] text-muted-foreground shrink-0" />
+                  <span className="text-sm flex-1">{tempImageUrl ? t.stylize : t.generateImage}</span>
+                  {generating && <Loader2 className="h-4 w-4 animate-spin text-muted-foreground" />}
+                </button>
+              )}
+            </div>
+          </div>
+          <div className="flex items-center justify-between mt-6">
+            <button
+              type="button"
+              onClick={() => setShowImageDialog(false)}
+              className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
+            >
+              {t.cancel}
+            </button>
+            <button
+              type="button"
+              onClick={() => { setImageUrl(tempImageUrl); setShowImageDialog(false); }}
+              className="text-sm font-medium text-primary hover:text-primary/80 transition-colors"
+            >
+              {t.save}
+            </button>
+          </div>
+        </DialogContent>
+      </Dialog>
+
+      <Dialog open={showCategoryDialog} onOpenChange={setShowCategoryDialog}>
+        <DialogContent className="sm:max-w-[384px]">
+          <DialogTitle className="text-lg font-semibold pr-6">{t.category}</DialogTitle>
+          <DialogDescription className="sr-only">{t.category}</DialogDescription>
+          <div className="-mx-6 mt-2">
+            {categories.map((cat) => (
+              <button
+                key={cat.id}
+                type="button"
+                onClick={() => { track(DashboardEvent.CHANGED_ITEM_CATEGORY); setCategoryId(cat.id); setShowCategoryDialog(false); }}
+                className="flex items-center gap-3 px-6 py-3 w-full text-left transition-colors hover:bg-muted/50"
+              >
+                <span className="text-sm flex-1">{cat.name}</span>
+                {categoryId === cat.id && <Check className="h-4 w-4 text-primary shrink-0" />}
+              </button>
+            ))}
+          </div>
+          <div className="flex items-center justify-start mt-4">
+            <button
+              type="button"
+              onClick={() => setShowCategoryDialog(false)}
+              className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
+            >
+              {t.cancel}
+            </button>
+          </div>
+        </DialogContent>
+      </Dialog>
+
+      <Dialog open={showAllergensDialog} onOpenChange={setShowAllergensDialog}>
+        <DialogContent className="sm:max-w-[384px]">
+          <DialogTitle className="text-lg font-semibold pr-6">{t.allergens}</DialogTitle>
+          <DialogDescription className="sr-only">{t.allergens}</DialogDescription>
+          <div className="flex flex-wrap gap-2 mt-2">
+            {ALLERGENS.map((allergen) => {
+              const isSelected = tempAllergens.includes(allergen.code);
+              return (
+                <button
+                  key={allergen.code}
+                  type="button"
+                  onClick={() => setTempAllergens((prev) =>
+                    isSelected ? prev.filter((c) => c !== allergen.code) : [...prev, allergen.code]
+                  )}
+                  className={`inline-flex items-center gap-1.5 rounded-xl px-3 py-1.5 text-sm border transition-colors ${
+                    isSelected ? "bg-primary text-primary-foreground border-primary" : "bg-muted/30 text-muted-foreground border-border hover:bg-muted/50"
+                  }`}
+                >
+                  <span className="text-base leading-none">{allergen.icon}</span>
+                  <span>{(t.allergenNames as Record<AllergenCode, string>)[allergen.code] || allergen.code}</span>
+                </button>
+              );
+            })}
+          </div>
+          <div className="flex items-center justify-between mt-6">
+            <button
+              type="button"
+              onClick={() => setShowAllergensDialog(false)}
+              className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
+            >
+              {t.cancel}
+            </button>
+            <button
+              type="button"
+              onClick={() => { setAllergens(tempAllergens); setShowAllergensDialog(false); }}
+              className="text-sm font-medium text-primary hover:text-primary/80 transition-colors"
+            >
+              {t.save}
+            </button>
+          </div>
+        </DialogContent>
+      </Dialog>
+    </>
+  );
+
+  if (onClose) {
+    const isLoading = loading || loadingRestaurant;
+
+    return (
+      <>
+        <DialogTitle className="text-lg font-semibold pr-6">
+          {isLoading ? (
+            <span className="inline-block w-36 bg-muted rounded animate-pulse">&nbsp;</span>
+          ) : (
+            isEdit ? t.editItem : t.addItem
+          )}
+        </DialogTitle>
+        <DialogDescription className="sr-only">
+          {isEdit ? t.editItem : t.addItem}
+        </DialogDescription>
+
+        <div className="overflow-y-auto -mx-6 px-6 max-h-[60vh]">
+          <form id="item-form-dialog" onSubmit={handleSubmit} className="space-y-5 mt-2 pb-2">
+
+
+            {/* Name */}
+            <FormFieldUnderline
+              id="name"
+              label={t.name}
+              value={name}
+              onChange={setName}
+              placeholder={t.namePlaceholder}
+              isLoading={isLoading}
+              autoFocus={!isLoading}
+              onFocus={() => track(DashboardEvent.FOCUSED_ITEM_NAME)}
+            />
+
+            {/* Price */}
+            <FormFieldUnderline
+              id="price"
+              label={t.price}
+              value={price}
+              onChange={(v) => {
+                const clean = v.replace(",", ".").replace(/[^0-9.]/g, "").replace(/(\..*)\./g, "$1");
+                setPrice(clean);
+              }}
+              placeholder={t.pricePlaceholder}
+              isLoading={isLoading}
+              inputMode="decimal"
+              onFocus={() => track(DashboardEvent.FOCUSED_ITEM_PRICE)}
+            />
+
+            {/* Category / Description / Image / Allergens */}
+            <div className="-mx-6 -my-2">
+              {(!initialCategoryId || isEdit) && (
+                <button
+                  type="button"
+                  onClick={() => setShowCategoryDialog(true)}
+                  disabled={isLoading}
+                  className={`flex items-center gap-3 px-6 py-3 w-full text-left transition-colors ${isLoading ? "animate-pulse pointer-events-none" : "hover:bg-muted/50"}`}
+                >
+                  <LayoutGrid className="h-[18px] w-[18px] text-muted-foreground shrink-0" />
+                  <span className="text-sm flex-1">{t.category}</span>
+                  {isLoading ? (
+                    <span className="h-4 w-16 bg-muted rounded-sm" />
+                  ) : categoryId ? (
+                    <span className="text-sm text-muted-foreground truncate max-w-[45%]">
+                      {categories.find((c) => c.id === categoryId)?.name}
+                    </span>
+                  ) : (
+                    <span className="text-sm text-primary">{t.add || "Add"}</span>
+                  )}
+                </button>
+              )}
+              <button
+                type="button"
+                onClick={() => { setTempDescription(description); setShowDescriptionDialog(true); }}
+                disabled={isLoading}
+                className={`flex items-center gap-3 px-6 py-3 w-full text-left transition-colors ${isLoading ? "animate-pulse pointer-events-none" : "hover:bg-muted/50"}`}
+              >
+                <AlignLeft className="h-[18px] w-[18px] text-muted-foreground shrink-0" />
+                <span className="text-sm flex-1">{t.description}</span>
+                {isLoading ? (
+                  <span className="h-4 w-16 bg-muted rounded-sm" />
+                ) : description ? (
+                  <span className="text-sm text-muted-foreground truncate max-w-[45%]">{description}</span>
+                ) : (
+                  <span className="text-sm text-primary">{t.add || "Add"}</span>
+                )}
+              </button>
+
+              <button
+                type="button"
+                onClick={() => { setTempImageUrl(imageUrl); setShowImageDialog(true); }}
+                disabled={isLoading}
+                className={`flex items-center gap-3 px-6 py-3 w-full text-left transition-colors ${isLoading ? "animate-pulse pointer-events-none" : "hover:bg-muted/50"}`}
+              >
+                <ImageIcon className="h-[18px] w-[18px] text-muted-foreground shrink-0" />
+                <span className="text-sm flex-1">{t.image}</span>
+                {isLoading ? (
+                  <span className="h-4 w-16 bg-muted rounded-sm" />
+                ) : imageUrl ? (
+                  <div className="relative h-6 w-6 rounded-sm overflow-hidden border border-border shrink-0">
+                    <Image src={imageUrl} alt="Item" fill className="object-cover" sizes="24px" />
+                  </div>
+                ) : (
+                  <span className="text-sm text-primary">{t.add || "Add"}</span>
+                )}
+              </button>
+
+              <button
+                type="button"
+                onClick={() => { setTempAllergens(allergens); setShowAllergensDialog(true); }}
+                disabled={isLoading}
+                className={`flex items-center gap-3 px-6 py-3 w-full text-left transition-colors ${isLoading ? "animate-pulse pointer-events-none" : "hover:bg-muted/50"}`}
+              >
+                <ShieldAlert className="h-[18px] w-[18px] text-muted-foreground shrink-0" />
+                <span className="text-sm flex-1">{t.allergens}</span>
+                {isLoading ? (
+                  <span className="h-4 w-16 bg-muted rounded-sm" />
+                ) : allergens.length > 0 ? (
+                  <span className="flex gap-1">
+                    {allergens.map((code) => {
+                      const a = ALLERGENS.find((x) => x.code === code);
+                      return a ? <span key={code} className="text-base leading-none">{a.icon}</span> : null;
+                    })}
+                  </span>
+                ) : (
+                  <span className="text-sm text-primary">{t.add || "Add"}</span>
+                )}
+              </button>
+            </div>
+
+            {/* Translations */}
+            {knownLanguages.map((lang) => {
+              const isTranslating = translatingLangs.has(lang);
+              return (
+                <div key={lang} className="space-y-4">
+                  <div className="flex items-center justify-between">
+                    <span className="text-xs font-medium text-muted-foreground uppercase tracking-wider">{LANGUAGE_NAMES[lang] || lang}</span>
+                    {!isLoading && (
+                      <button
+                        type="button"
+                        onClick={() => handleTranslateSection(lang)}
+                        disabled={isTranslating || (!name.trim() && !description.trim())}
+                        className="flex items-center gap-1 text-xs text-primary hover:text-primary/80 transition-colors disabled:opacity-50"
+                      >
+                        {isTranslating ? tAi("translating") : tAi("translate")}
+                        {isTranslating ? <Loader2 className="h-3 w-3 animate-spin" /> : <Sparkles className="h-3 w-3" />}
+                      </button>
+                    )}
+                  </div>
+                  <FormFieldUnderline
+                    label={t.name}
+                    value={itemTranslations[lang]?.name || ""}
+                    onChange={(v) => handleTranslationChange(lang, "name", v)}
+                    placeholder={t.namePlaceholder}
+                    isLoading={isLoading}
+                  />
+                  <FormFieldUnderline
+                    label={t.description}
+                    value={itemTranslations[lang]?.description || ""}
+                    onChange={(v) => handleTranslationChange(lang, "description", v)}
+                    placeholder={t.descriptionPlaceholder}
+                    isLoading={isLoading}
+                    multiline
+                    rows={2}
+                  />
+                </div>
+              );
+            })}
+
+          </form>
+        </div>
+
+        <input ref={fileInputRef} type="file" accept="image/jpeg,image/png,image/webp,image/gif" className="hidden" onChange={handleImageUpload} disabled={uploading} />
+
+        <div className="flex items-center justify-between mt-6">
+          {isEdit ? (
+            isLoading ? (
+              <span className="text-sm font-medium inline-block w-14 bg-muted rounded animate-pulse">&nbsp;</span>
+            ) : (
+              <button
+                type="button"
+                onClick={() => { track(DashboardEvent.CLICKED_DELETE_ITEM); setShowDeleteDialog(true); }}
+                disabled={saving || deleting}
+                className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors disabled:opacity-50"
+              >
+                {t.delete}
+              </button>
+            )
+          ) : (
+            <span />
+          )}
+          {isLoading ? (
+            <span className="text-sm font-medium inline-block w-10 bg-muted rounded animate-pulse">&nbsp;</span>
+          ) : (
+            <button
+              type="submit"
+              form="item-form-dialog"
+              disabled={saving || deleting || uploading || generating}
+              className="flex items-center gap-1.5 text-sm font-medium text-primary hover:text-primary/80 transition-colors disabled:opacity-50"
+            >
+              {saving && <Loader2 className="h-4 w-4 animate-spin" />}{t.save}
+            </button>
+          )}
+        </div>
+
+        {!isLoading && dialogs}
+      </>
+    );
   }
 
   if (loading || loadingRestaurant) {

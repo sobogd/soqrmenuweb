@@ -6,6 +6,7 @@ import { useTranslations } from "next-intl";
 import { ArrowUp, ArrowDown, Plus, ArrowUpDown, Loader2, Check, ChevronRight, Menu as MenuIcon, Eye, Shield, Activity, MousePointerClick, Send, Search, KeyRound, Save, UtensilsCrossed, Wand2 } from "lucide-react";
 import { Switch } from "@/components/ui/switch";
 import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover";
+import { Dialog, DialogContent } from "@/components/ui/dialog";
 import { MenuPreviewModal } from "@/components/menu-preview-modal";
 import { toast } from "sonner";
 import { useDashboard } from "../_context/dashboard-context";
@@ -14,6 +15,8 @@ import { Link, useRouter } from "@/i18n/routing";
 import type { Category } from "@/types";
 import { formatPrice } from "@/lib/currencies";
 import { track, DashboardEvent } from "@/lib/dashboard-events";
+import { CategoryFormPage } from "./category-form";
+import { ItemFormPage } from "./item-form";
 
 interface ItemWithTranslations {
   id: string;
@@ -52,6 +55,36 @@ export function MenuPage({ initialItems, initialCategories, initialCurrency, res
   const [currency] = useState(initialCurrency);
   const [sortMode, setSortMode] = useState(false);
   const [moving, setMoving] = useState<{ id: string; direction: "up" | "down" } | null>(null);
+  const [categorySheetOpen, setCategorySheetOpen] = useState(false);
+  const [categorySheetId, setCategorySheetId] = useState<string | undefined>(undefined);
+  const [itemSheetOpen, setItemSheetOpen] = useState(false);
+  const [itemSheetId, setItemSheetId] = useState<string | undefined>(undefined);
+  const [itemSheetCategoryId, setItemSheetCategoryId] = useState<string | undefined>(undefined);
+
+  useEffect(() => {
+    setCategories(initialCategories);
+  }, [initialCategories]);
+
+  function openCategorySheet(id?: string) {
+    setCategorySheetId(id);
+    setCategorySheetOpen(true);
+  }
+
+  function handleCategorySheetSuccess() {
+    setCategorySheetOpen(false);
+    router.refresh();
+  }
+
+  function openItemSheet(id?: string, categoryId?: string) {
+    setItemSheetId(id);
+    setItemSheetCategoryId(categoryId);
+    setItemSheetOpen(true);
+  }
+
+  function handleItemSheetSuccess() {
+    setItemSheetOpen(false);
+    router.refresh();
+  }
 
   useEffect(() => {
     track(DashboardEvent.SHOWED_MENU);
@@ -316,7 +349,7 @@ export function MenuPage({ initialItems, initialCategories, initialCurrency, res
           <button
             className="flex items-center justify-center gap-2 w-full h-11 rounded-xl text-white text-sm font-medium shadow-md hover:opacity-90 transition-opacity"
             style={{ background: "linear-gradient(to right, hsl(9,100%,58%), #f59e0b)" }}
-            onClick={() => { track(DashboardEvent.CLICKED_ADD_ITEM); router.push(categories.length > 0 ? `/dashboard/items/add?categoryId=${categories[0].id}` : "/dashboard/items/add"); }}
+            onClick={() => { track(DashboardEvent.CLICKED_ADD_ITEM); openItemSheet(undefined, categories[0]?.id); }}
           >
             <Plus className="h-4 w-4" />
             {tMenu.addItem}
@@ -351,7 +384,7 @@ export function MenuPage({ initialItems, initialCategories, initialCurrency, res
                   <div key={category.id} className="rounded-xl border border-border bg-muted/30 overflow-hidden">
                     {/* Category header */}
                     <div
-                      onClick={() => { if (!sortMode) { track(DashboardEvent.CLICKED_CATEGORY_ROW); router.push(`/dashboard/categories/${category.id}`); } }}
+                      onClick={() => { if (!sortMode) { track(DashboardEvent.CLICKED_CATEGORY_ROW); openCategorySheet(category.id); } }}
                       className={`flex items-center gap-2 px-4 h-11 transition-colors ${
                         sortMode ? "" : "cursor-pointer hover:bg-muted/50"
                       }`}
@@ -396,7 +429,7 @@ export function MenuPage({ initialItems, initialCategories, initialCurrency, res
                           className="flex items-center gap-2 border-t border-border/50"
                         >
                           <div
-                            onClick={() => { if (!sortMode) { track(DashboardEvent.CLICKED_ITEM_ROW); router.push(`/dashboard/items/${item.id}`); } }}
+                            onClick={() => { if (!sortMode) { track(DashboardEvent.CLICKED_ITEM_ROW); openItemSheet(item.id); } }}
                             className={`flex items-center flex-1 min-w-0 h-11 px-4 transition-colors ${
                               sortMode ? "" : "hover:bg-muted/50 cursor-pointer"
                             }`}
@@ -463,11 +496,7 @@ export function MenuPage({ initialItems, initialCategories, initialCurrency, res
                 <button
                   onClick={() => {
                     track(DashboardEvent.CLICKED_ADD_ITEM);
-                    if (categories.length === 1) {
-                      router.push(`/dashboard/items/add?categoryId=${categories[0].id}`);
-                    } else {
-                      router.push("/dashboard/items/add");
-                    }
+                    openItemSheet(undefined, categories.length === 1 ? categories[0].id : undefined);
                   }}
                   className="flex items-center justify-center gap-2 w-full h-11 rounded-xl text-white text-sm font-medium shadow-md hover:opacity-90 transition-opacity"
                   style={{ background: "linear-gradient(to right, hsl(9,100%,58%), #f59e0b)" }}
@@ -476,7 +505,7 @@ export function MenuPage({ initialItems, initialCategories, initialCurrency, res
                   {tMenu.addItem}
                 </button>
                 <button
-                  onClick={() => { track(DashboardEvent.CLICKED_ADD_CATEGORY); router.push("/dashboard/categories/add"); }}
+                  onClick={() => { track(DashboardEvent.CLICKED_ADD_CATEGORY); openCategorySheet(); }}
                   className="flex items-center justify-center gap-1 w-full h-11 rounded-xl border border-border bg-muted/30 text-sm font-medium hover:bg-muted/50 transition-colors mb-24"
                 >
                   <Plus className="h-3.5 w-3.5" />
@@ -489,6 +518,29 @@ export function MenuPage({ initialItems, initialCategories, initialCurrency, res
         </div>{/* end Main content column */}
         </div>{/* end flex container */}
       </div>
+
+      <Dialog open={categorySheetOpen} onOpenChange={setCategorySheetOpen}>
+        <DialogContent className="sm:max-w-[434px]">
+          <CategoryFormPage
+            key={`${categorySheetOpen}-${categorySheetId}`}
+            id={categorySheetId}
+            onClose={() => setCategorySheetOpen(false)}
+            onSuccess={handleCategorySheetSuccess}
+          />
+        </DialogContent>
+      </Dialog>
+
+      <Dialog open={itemSheetOpen} onOpenChange={setItemSheetOpen}>
+        <DialogContent className="sm:max-w-[434px]">
+          <ItemFormPage
+            key={`${itemSheetOpen}-${itemSheetId}`}
+            id={itemSheetId}
+            initialCategoryId={itemSheetCategoryId}
+            onClose={() => setItemSheetOpen(false)}
+            onSuccess={handleItemSheetSuccess}
+          />
+        </DialogContent>
+      </Dialog>
     </div>
   );
 }

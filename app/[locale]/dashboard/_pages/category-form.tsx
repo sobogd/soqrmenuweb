@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState, useMemo } from "react";
+import { useEffect, useState, useMemo, useRef } from "react";
 import { Loader2, Trash2, X, Sparkles } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { toast } from "sonner";
@@ -24,6 +24,8 @@ import {
 import { useLocale, useTranslations } from "next-intl";
 import { useDashboard } from "../_context/dashboard-context";
 import { PageLoader } from "../_ui/page-loader";
+import { Skeleton } from "@/components/ui/skeleton";
+import { FormFieldUnderline } from "../_ui/form-field-underline";
 import { PageHeader } from "../_ui/page-header";
 import { useRouter } from "@/i18n/routing";
 import { track, DashboardEvent } from "@/lib/dashboard-events";
@@ -38,9 +40,11 @@ interface CategoryWithTranslations extends Category {
 
 interface CategoryFormPageProps {
   id?: string;
+  onClose?: () => void;
+  onSuccess?: () => void;
 }
 
-export function CategoryFormPage({ id }: CategoryFormPageProps) {
+export function CategoryFormPage({ id, onClose, onSuccess }: CategoryFormPageProps) {
   const { translations } = useDashboard();
   const router = useRouter();
   const locale = useLocale();
@@ -68,6 +72,12 @@ export function CategoryFormPage({ id }: CategoryFormPageProps) {
 
   const isEdit = !!id;
 
+  const knownLanguagesRef = useRef<string[]>([]);
+  if (!loadingRestaurant && otherLanguages.length > 0) {
+    knownLanguagesRef.current = otherLanguages;
+  }
+  const knownLanguages = knownLanguagesRef.current;
+
   const hasChanges = useMemo(() => {
     if (!isEdit) {
       return !!name.trim();
@@ -87,7 +97,7 @@ export function CategoryFormPage({ id }: CategoryFormPageProps) {
 
   async function fetchCategory(categoryId: string) {
     try {
-      const response = await fetch(`/api/categories/${categoryId}`);
+const response = await fetch(`/api/categories/${categoryId}`);
       if (!response.ok) throw new Error("Failed to fetch");
       const data: CategoryWithTranslations = await response.json();
       setCategory(data);
@@ -104,7 +114,7 @@ export function CategoryFormPage({ id }: CategoryFormPageProps) {
       console.error("Failed to fetch category:", error);
       track(DashboardEvent.ERROR_FETCH, { page: "category" });
       toast.error(t.fetchError);
-      router.push("/dashboard");
+      onClose ? onClose() : router.push("/dashboard");
     } finally {
       setLoading(false);
     }
@@ -163,7 +173,7 @@ export function CategoryFormPage({ id }: CategoryFormPageProps) {
 
       if (res.ok) {
         toast.success(t.deleted);
-        router.push("/dashboard");
+        onSuccess ? onSuccess() : router.push("/dashboard");
       } else {
         const data = await res.json();
         track(DashboardEvent.ERROR_DELETE, { page: "category" });
@@ -216,7 +226,7 @@ export function CategoryFormPage({ id }: CategoryFormPageProps) {
       if (res.ok) {
         track(DashboardEvent.CLICKED_SAVE_CATEGORY);
         toast.success(isEdit ? t.updated : t.created);
-        router.push("/dashboard");
+        onSuccess ? onSuccess() : router.push("/dashboard");
       } else {
         const data = await res.json();
         track(DashboardEvent.ERROR_SAVE, { page: "category" });
@@ -230,8 +240,224 @@ export function CategoryFormPage({ id }: CategoryFormPageProps) {
     }
   }
 
-  if (loading || loadingRestaurant) {
+  if ((loading || loadingRestaurant) && !onClose) {
     return <PageLoader />;
+  }
+
+  const formContent = (
+    <>
+      {/* Name */}
+      <div className="relative rounded-xl border border-border px-4 pt-4 pb-3">
+        <label htmlFor="name" className="absolute -top-2.5 left-3 px-1 bg-background text-xs text-muted-foreground">
+          {t.name}
+        </label>
+        <input
+          id="name"
+          type="text"
+          value={name}
+          onChange={(e) => setName(e.target.value)}
+          onFocus={() => track(DashboardEvent.FOCUSED_CATEGORY_NAME)}
+          placeholder={t.namePlaceholder}
+          className="w-full text-sm bg-transparent focus:outline-none placeholder:text-muted-foreground/30"
+        />
+      </div>
+
+      {/* Translation sections */}
+      {otherLanguages.map((lang) => {
+        const isTranslating = translatingLangs.has(lang);
+        return (
+          <div key={lang} className="relative rounded-xl border border-border px-4 pt-4 pb-3">
+            <div className="absolute -top-2.5 left-3 right-3 flex items-center justify-between">
+              <span className="px-1 bg-background text-xs text-muted-foreground uppercase tracking-wider">
+                {LANGUAGE_NAMES[lang] || lang}
+              </span>
+              <button
+                type="button"
+                onClick={() => handleTranslateSection(lang)}
+                disabled={isTranslating || !name.trim()}
+                className="px-1 bg-background flex items-center gap-1 text-xs text-primary hover:text-primary/80 transition-colors disabled:opacity-50"
+              >
+                {isTranslating ? tAi("translating") : tAi("translate")}
+                {isTranslating ? <Loader2 className="h-3 w-3 animate-spin" /> : <Sparkles className="h-3 w-3" />}
+              </button>
+            </div>
+            <input
+              type="text"
+              value={categoryTranslations[lang]?.name || ""}
+              onChange={(e) => handleTranslationChange(lang, e.target.value)}
+              placeholder={t.namePlaceholder}
+              className="w-full text-sm bg-transparent focus:outline-none placeholder:text-muted-foreground/30"
+            />
+          </div>
+        );
+      })}
+    </>
+  );
+
+  const pageDeleteButton = isEdit && (
+    <div className="rounded-xl border border-border bg-muted/30 overflow-hidden">
+      <button
+        type="button"
+        onClick={() => { track(DashboardEvent.CLICKED_DELETE_CATEGORY); setShowDeleteDialog(true); }}
+        disabled={saving || deleting}
+        className="flex items-center gap-3 w-full h-11 px-4 hover:bg-muted/50 transition-colors disabled:opacity-50"
+      >
+        <Trash2 className="h-4 w-4 text-red-400" />
+        <span className="text-sm font-medium text-red-400">{t.delete}</span>
+      </button>
+    </div>
+  );
+
+  const dialogs = (
+    <>
+      <Dialog open={showDeleteDialog} onOpenChange={setShowDeleteDialog}>
+        <DialogContent className="sm:max-w-sm">
+          <DialogTitle className="text-lg font-semibold pr-6">{t.delete}</DialogTitle>
+          <DialogDescription className="text-sm text-muted-foreground">{t.deleteConfirm}</DialogDescription>
+          <div className="flex items-center justify-end gap-6 mt-2">
+            <button
+              type="button"
+              onClick={() => setShowDeleteDialog(false)}
+              className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
+            >
+              {t.cancel}
+            </button>
+            <button
+              type="button"
+              onClick={handleDelete}
+              disabled={deleting}
+              className="flex items-center gap-1.5 text-sm font-medium text-red-400 hover:text-red-500 transition-colors disabled:opacity-50"
+            >
+              {deleting && <Loader2 className="h-4 w-4 animate-spin" />}{t.delete}
+            </button>
+          </div>
+        </DialogContent>
+      </Dialog>
+
+      <AlertDialog open={!!validationError} onOpenChange={() => setValidationError(null)}>
+        <AlertDialogContent>
+          <AlertDialogHeader>
+            <AlertDialogTitle>{validationError}</AlertDialogTitle>
+            <AlertDialogDescription className="sr-only">{validationError}</AlertDialogDescription>
+          </AlertDialogHeader>
+          <AlertDialogFooter>
+            <AlertDialogAction onClick={() => setValidationError(null)}>OK</AlertDialogAction>
+          </AlertDialogFooter>
+        </AlertDialogContent>
+      </AlertDialog>
+
+      <Dialog open={showTranslateLimitDialog} onOpenChange={setShowTranslateLimitDialog}>
+        <DialogContent className="sm:max-w-sm">
+          <DialogTitle className="text-lg font-semibold pr-6">{tAi("limitReached")}</DialogTitle>
+          <DialogDescription className="text-sm text-muted-foreground">{tAi("limitReachedDescription")}</DialogDescription>
+          <div className="flex items-center justify-end gap-6 mt-2">
+            <button
+              type="button"
+              onClick={() => setShowTranslateLimitDialog(false)}
+              className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
+            >
+              {tAi("cancel")}
+            </button>
+            <button
+              type="button"
+              onClick={() => { track(DashboardEvent.CLICKED_AI_SUBSCRIBE); setShowTranslateLimitDialog(false); router.push("/dashboard/billing"); }}
+              className="text-sm font-medium text-primary hover:text-primary/80 transition-colors"
+            >
+              {tAi("upgrade")}
+            </button>
+          </div>
+        </DialogContent>
+      </Dialog>
+    </>
+  );
+
+  if (onClose) {
+    const isLoading = loading || loadingRestaurant;
+
+    return (
+      <>
+        <DialogTitle className="text-lg font-semibold pr-6">
+          {isLoading ? (
+            <span className="inline-block w-36 bg-muted rounded animate-pulse">&nbsp;</span>
+          ) : (
+            isEdit ? t.editCategory : t.addCategory
+          )}
+        </DialogTitle>
+        <DialogDescription className="sr-only">
+          {isEdit ? t.editCategory : t.addCategory}
+        </DialogDescription>
+
+        <form id="category-form-dialog" onSubmit={handleSubmit} className="space-y-5 mt-2">
+          <FormFieldUnderline
+            id="name"
+            label={t.name}
+            value={name}
+            onChange={setName}
+            placeholder={t.namePlaceholder}
+            isLoading={isLoading}
+            autoFocus={!isLoading}
+            onFocus={() => track(DashboardEvent.FOCUSED_CATEGORY_NAME)}
+          />
+          {knownLanguages.map((lang) => {
+            const isTranslating = translatingLangs.has(lang);
+            return (
+              <FormFieldUnderline
+                key={lang}
+                label={LANGUAGE_NAMES[lang] || lang}
+                value={categoryTranslations[lang]?.name || ""}
+                onChange={(v) => handleTranslationChange(lang, v)}
+                placeholder={t.namePlaceholder}
+                isLoading={isLoading}
+                rightSlot={
+                  <button
+                    type="button"
+                    onClick={() => handleTranslateSection(lang)}
+                    disabled={isTranslating || !name.trim()}
+                    className="flex items-center gap-1 text-xs text-primary hover:text-primary/80 transition-colors disabled:opacity-50"
+                  >
+                    {isTranslating ? tAi("translating") : tAi("translate")}
+                    {isTranslating ? <Loader2 className="h-3 w-3 animate-spin" /> : <Sparkles className="h-3 w-3" />}
+                  </button>
+                }
+              />
+            );
+          })}
+        </form>
+
+        <div className="flex items-center justify-between mt-6">
+          {isEdit ? (
+            isLoading ? (
+              <span className="text-sm font-medium inline-block w-14 bg-muted rounded animate-pulse">&nbsp;</span>
+            ) : (
+              <button
+                type="button"
+                onClick={() => { track(DashboardEvent.CLICKED_DELETE_CATEGORY); setShowDeleteDialog(true); }}
+                disabled={saving || deleting}
+                className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors disabled:opacity-50"
+              >
+                {t.delete}
+              </button>
+            )
+          ) : (
+            <span />
+          )}
+          {isLoading ? (
+            <span className="text-sm font-medium inline-block w-10 bg-muted rounded animate-pulse">&nbsp;</span>
+          ) : (
+            <button
+              type="submit"
+              form="category-form-dialog"
+              disabled={saving || deleting}
+              className="flex items-center gap-1.5 text-sm font-medium text-primary hover:text-primary/80 transition-colors disabled:opacity-50"
+            >
+              {saving && <Loader2 className="h-4 w-4 animate-spin" />}{t.save}
+            </button>
+          )}
+        </div>
+
+        {!isLoading && dialogs}
+      </>
+    );
   }
 
   return (
@@ -253,132 +479,12 @@ export function CategoryFormPage({ id }: CategoryFormPageProps) {
 
       <form id="category-form" onSubmit={handleSubmit} className="flex-1 overflow-y-auto px-6 pt-4 pb-6">
         <DashboardContent innerClassName="space-y-6">
-
-          {/* General */}
-          <div>
-            <p className="text-xs uppercase tracking-wider text-muted-foreground px-4 mb-1.5">{t.general}</p>
-            <div className="rounded-xl border border-border bg-muted/30 overflow-hidden">
-              <div className="flex items-center h-11 px-4">
-                <label htmlFor="name" className="text-sm text-muted-foreground shrink-0 mr-3">{t.name}</label>
-                <input
-                  id="name"
-                  type="text"
-                  value={name}
-                  onChange={(e) => setName(e.target.value)}
-                  onFocus={() => track(DashboardEvent.FOCUSED_CATEGORY_NAME)}
-                  placeholder={t.namePlaceholder}
-                  className="flex-1 text-sm text-right bg-transparent focus:outline-none placeholder:text-muted-foreground/30 min-w-0"
-                />
-              </div>
-            </div>
-          </div>
-
-          {/* Translation sections */}
-          {otherLanguages.map((lang) => {
-            const isTranslating = translatingLangs.has(lang);
-            return (
-              <div key={lang}>
-                <div className="flex items-center justify-between px-4 mb-1.5">
-                  <p className="text-xs uppercase tracking-wider text-muted-foreground">{LANGUAGE_NAMES[lang] || lang}</p>
-                  <button
-                    type="button"
-                    onClick={() => handleTranslateSection(lang)}
-                    disabled={isTranslating || !name.trim()}
-                    className="flex items-center gap-1 text-xs text-primary hover:text-primary/80 transition-colors disabled:opacity-50"
-                  >
-                    {isTranslating ? tAi("translating") : tAi("translate")}
-                    {isTranslating ? (
-                      <Loader2 className="h-3 w-3 animate-spin" />
-                    ) : (
-                      <Sparkles className="h-3 w-3" />
-                    )}
-                  </button>
-                </div>
-                <div className="rounded-xl border border-border bg-muted/30 overflow-hidden">
-                  <div className="flex items-center h-11 px-4">
-                    <label className="text-sm text-muted-foreground shrink-0 mr-3">{t.name}</label>
-                    <input
-                      type="text"
-                      value={categoryTranslations[lang]?.name || ""}
-                      onChange={(e) => handleTranslationChange(lang, e.target.value)}
-                      placeholder={t.namePlaceholder}
-                      className="flex-1 text-sm text-right bg-transparent focus:outline-none placeholder:text-muted-foreground/30 min-w-0"
-                    />
-                  </div>
-                </div>
-              </div>
-            );
-          })}
-
-          {/* Delete */}
-          {isEdit && (
-            <div className="rounded-xl border border-border bg-muted/30 overflow-hidden">
-              <button
-                type="button"
-                onClick={() => { track(DashboardEvent.CLICKED_DELETE_CATEGORY); setShowDeleteDialog(true); }}
-                disabled={saving || deleting}
-                className="flex items-center gap-3 w-full h-11 px-4 hover:bg-muted/50 transition-colors disabled:opacity-50"
-              >
-                <Trash2 className="h-4 w-4 text-red-400" />
-                <span className="text-sm font-medium text-red-400">{t.delete}</span>
-              </button>
-            </div>
-          )}
-
+          {formContent}
+          {pageDeleteButton}
         </DashboardContent>
       </form>
 
-      <Dialog open={showDeleteDialog} onOpenChange={setShowDeleteDialog}>
-        <DialogContent>
-          <DialogHeader>
-            <DialogTitle>{t.delete}</DialogTitle>
-            <DialogDescription>{t.deleteConfirm}</DialogDescription>
-          </DialogHeader>
-          <DialogFooter>
-            <Button variant="outline" onClick={() => setShowDeleteDialog(false)}>
-              <X className="h-4 w-4 mr-2" />
-              {t.cancel}
-            </Button>
-            <Button variant="destructive" onClick={handleDelete} disabled={deleting}>
-              {deleting ? (
-                <Loader2 className="h-4 w-4 animate-spin mr-2" />
-              ) : (
-                <Trash2 className="h-4 w-4 mr-2" />
-              )}
-              {t.delete}
-            </Button>
-          </DialogFooter>
-        </DialogContent>
-      </Dialog>
-
-      <AlertDialog open={!!validationError} onOpenChange={() => setValidationError(null)}>
-        <AlertDialogContent>
-          <AlertDialogHeader>
-            <AlertDialogTitle>{validationError}</AlertDialogTitle>
-            <AlertDialogDescription className="sr-only">{validationError}</AlertDialogDescription>
-          </AlertDialogHeader>
-          <AlertDialogFooter>
-            <AlertDialogAction onClick={() => setValidationError(null)}>OK</AlertDialogAction>
-          </AlertDialogFooter>
-        </AlertDialogContent>
-      </AlertDialog>
-
-      <Dialog open={showTranslateLimitDialog} onOpenChange={setShowTranslateLimitDialog}>
-        <DialogContent>
-          <DialogHeader>
-            <DialogTitle>{tAi("limitReached")}</DialogTitle>
-            <DialogDescription>{tAi("limitReachedDescription")}</DialogDescription>
-          </DialogHeader>
-          <DialogFooter>
-            <Button variant="outline" onClick={() => setShowTranslateLimitDialog(false)}>
-              {tAi("cancel")}
-            </Button>
-            <Button onClick={() => { track(DashboardEvent.CLICKED_AI_SUBSCRIBE); setShowTranslateLimitDialog(false); router.push("/dashboard/billing"); }}>
-              {tAi("upgrade")}
-            </Button>
-          </DialogFooter>
-        </DialogContent>
-      </Dialog>
+      {dialogs}
     </div>
   );
 }

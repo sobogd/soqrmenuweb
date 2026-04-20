@@ -192,6 +192,7 @@ export interface ItemsTranslations {
   regenerateImage: string;
   generateLimitReached: string;
   generateLimitDescription: string;
+  add?: string;
 }
 
 export interface MenuTranslations {
