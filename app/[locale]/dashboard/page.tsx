@@ -20,6 +20,11 @@ export default async function Page() {
       restaurantName={restaurant?.title ?? ""}
       slug={restaurant?.slug ?? null}
       isAdmin={isAdmin}
+      restaurantLanguages={{
+        languages: restaurant?.languages ?? ["en"],
+        defaultLanguage: restaurant?.defaultLanguage ?? "en",
+        accentColor: restaurant?.accentColor ?? null,
+      }}
     />
   );
 }

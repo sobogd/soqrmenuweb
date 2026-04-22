@@ -19,7 +19,7 @@ export async function GET(
       where: { id, companyId },
       include: {
         category: {
-          select: { id: true, name: true },
+          select: { id: true, name: true, sortOrder: true },
         },
       },
     });
@@ -107,7 +107,7 @@ export async function PUT(
       },
       include: {
         category: {
-          select: { id: true, name: true },
+          select: { id: true, name: true, sortOrder: true },
         },
       },
     });

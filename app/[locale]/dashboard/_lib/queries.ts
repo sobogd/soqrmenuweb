@@ -41,6 +41,7 @@ export async function getCategories(companyId: string) {
   });
   return categories.map((c) => ({
     ...c,
+    translations: c.translations as Record<string, { name?: string }> | null,
     createdAt: c.createdAt.toISOString(),
     updatedAt: c.updatedAt.toISOString(),
   }));
@@ -60,6 +61,7 @@ export async function getItems(companyId: string) {
   return items.map((item) => ({
     ...item,
     price: Number(item.price),
+    translations: item.translations as Record<string, { name?: string; description?: string }> | null,
     createdAt: item.createdAt.toISOString(),
     updatedAt: item.updatedAt.toISOString(),
   }));

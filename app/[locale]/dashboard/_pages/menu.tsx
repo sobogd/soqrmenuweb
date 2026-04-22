@@ -28,19 +28,31 @@ interface ItemWithTranslations {
   sortOrder: number;
   isActive: boolean;
   categoryId: string;
+  translations?: Record<string, { name?: string; description?: string }> | null;
   category: Pick<Category, "id" | "name" | "sortOrder">;
+}
+
+interface CategoryWithTranslations extends Category {
+  translations?: Record<string, { name?: string }> | null;
+}
+
+interface RestaurantLanguages {
+  languages: string[];
+  defaultLanguage: string;
+  accentColor: string | null;
 }
 
 interface MenuPageProps {
   initialItems: ItemWithTranslations[];
-  initialCategories: Category[];
+  initialCategories: CategoryWithTranslations[];
   initialCurrency: string;
   restaurantName: string;
   slug: string | null;
   isAdmin?: boolean;
+  restaurantLanguages: RestaurantLanguages;
 }
 
-export function MenuPage({ initialItems, initialCategories, initialCurrency, restaurantName, slug, isAdmin }: MenuPageProps) {
+export function MenuPage({ initialItems, initialCategories, initialCurrency, restaurantName, slug, isAdmin, restaurantLanguages }: MenuPageProps) {
   useBlockBack();
   const { translations, scanUsage, isAnonymous } = useDashboard();
   const tHome = useTranslations("dashboard.home");
@@ -51,7 +63,7 @@ export function MenuPage({ initialItems, initialCategories, initialCurrency, res
   const pageTitle = translations.pages.menu;
 
   const [items, setItems] = useState<ItemWithTranslations[]>(initialItems);
-  const [categories, setCategories] = useState<Category[]>(initialCategories);
+  const [categories, setCategories] = useState<CategoryWithTranslations[]>(initialCategories);
   const [currency] = useState(initialCurrency);
   const [sortMode, setSortMode] = useState(false);
   const [moving, setMoving] = useState<{ id: string; direction: "up" | "down" } | null>(null);
@@ -70,9 +82,20 @@ export function MenuPage({ initialItems, initialCategories, initialCurrency, res
     setCategorySheetOpen(true);
   }
 
-  function handleCategorySheetSuccess() {
+  function handleCategorySaved(saved: CategoryWithTranslations) {
+    setCategories((prev) => {
+      const exists = prev.some((c) => c.id === saved.id);
+      return exists
+        ? prev.map((c) => (c.id === saved.id ? saved : c))
+        : [...prev, saved];
+    });
     setCategorySheetOpen(false);
-    router.refresh();
+  }
+
+  function handleCategoryDeleted(id: string) {
+    setCategories((prev) => prev.filter((c) => c.id !== id));
+    setItems((prev) => prev.filter((i) => i.categoryId !== id));
+    setCategorySheetOpen(false);
   }
 
   function openItemSheet(id?: string, categoryId?: string) {
@@ -81,9 +104,19 @@ export function MenuPage({ initialItems, initialCategories, initialCurrency, res
     setItemSheetOpen(true);
   }
 
-  function handleItemSheetSuccess() {
+  function handleItemSaved(saved: ItemWithTranslations) {
+    setItems((prev) => {
+      const exists = prev.some((i) => i.id === saved.id);
+      return exists
+        ? prev.map((i) => (i.id === saved.id ? saved : i))
+        : [...prev, saved];
+    });
     setItemSheetOpen(false);
-    router.refresh();
+  }
+
+  function handleItemDeleted(id: string) {
+    setItems((prev) => prev.filter((i) => i.id !== id));
+    setItemSheetOpen(false);
   }
 
   useEffect(() => {
@@ -523,21 +556,24 @@ export function MenuPage({ initialItems, initialCategories, initialCurrency, res
         <DialogContent className="sm:max-w-[434px]">
           <CategoryFormPage
             key={`${categorySheetOpen}-${categorySheetId}`}
-            id={categorySheetId}
-            onClose={() => setCategorySheetOpen(false)}
-            onSuccess={handleCategorySheetSuccess}
+            category={categorySheetId ? categories.find((c) => c.id === categorySheetId) : undefined}
+            restaurant={restaurantLanguages}
+            onSaved={handleCategorySaved}
+            onDeleted={handleCategoryDeleted}
           />
         </DialogContent>
       </Dialog>
 
       <Dialog open={itemSheetOpen} onOpenChange={setItemSheetOpen}>
-        <DialogContent className="sm:max-w-[434px]">
+        <DialogContent className="sm:max-w-[434px]" onOpenAutoFocus={(e) => e.preventDefault()}>
           <ItemFormPage
             key={`${itemSheetOpen}-${itemSheetId}`}
-            id={itemSheetId}
+            item={itemSheetId ? items.find((i) => i.id === itemSheetId) : undefined}
+            categories={categories}
+            restaurant={restaurantLanguages}
             initialCategoryId={itemSheetCategoryId}
-            onClose={() => setItemSheetOpen(false)}
-            onSuccess={handleItemSheetSuccess}
+            onSaved={handleItemSaved}
+            onDeleted={handleItemDeleted}
           />
         </DialogContent>
       </Dialog>

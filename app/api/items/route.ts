@@ -113,7 +113,7 @@ export async function POST(request: NextRequest) {
       },
       include: {
         category: {
-          select: { id: true, name: true },
+          select: { id: true, name: true, sortOrder: true },
         },
       },
     });

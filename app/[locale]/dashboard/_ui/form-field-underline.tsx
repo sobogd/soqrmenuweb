@@ -1,5 +1,6 @@
 "use client";
 
+import { useEffect, useRef } from "react";
 import { cn } from "@/lib/utils";
 
 interface FormFieldUnderlineProps {
@@ -13,6 +14,7 @@ interface FormFieldUnderlineProps {
   onFocus?: () => void;
   rightSlot?: React.ReactNode;
   multiline?: boolean;
+  autoGrow?: boolean;
   rows?: number;
   inputMode?: React.HTMLAttributes<HTMLInputElement>["inputMode"];
 }
@@ -28,9 +30,19 @@ export function FormFieldUnderline({
   onFocus,
   rightSlot,
   multiline,
+  autoGrow,
   rows = 3,
   inputMode,
 }: FormFieldUnderlineProps) {
+  const textareaRef = useRef<HTMLTextAreaElement | null>(null);
+
+  useEffect(() => {
+    if (autoGrow && textareaRef.current) {
+      textareaRef.current.style.height = "auto";
+      textareaRef.current.style.height = textareaRef.current.scrollHeight + "px";
+    }
+  }, [autoGrow, value, multiline]);
+
   return (
     <div className={cn("group/field space-y-1", isLoading && "animate-pulse pointer-events-none")}>
       <div className="flex items-center justify-between relative">
@@ -47,14 +59,19 @@ export function FormFieldUnderline({
         {multiline ? (
           <textarea
             id={id}
+            ref={textareaRef}
             value={isLoading ? "" : value}
             onChange={(e) => onChange(e.target.value)}
             placeholder={isLoading ? "" : placeholder}
-            rows={rows}
+            rows={autoGrow ? 1 : rows}
             autoFocus={!isLoading && autoFocus}
             onFocus={!isLoading ? onFocus : undefined}
             disabled={isLoading}
-            className="w-full text-sm bg-transparent outline-none resize-none leading-5 p-0 placeholder:text-muted-foreground/30"
+            style={autoGrow ? { minHeight: "1.25rem" } : undefined}
+            className={cn(
+              "block w-full text-sm bg-transparent outline-none resize-none leading-5 p-0 placeholder:text-muted-foreground/30",
+              autoGrow && "overflow-hidden"
+            )}
           />
         ) : (
           <input
