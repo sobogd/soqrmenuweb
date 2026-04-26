@@ -1636,7 +1636,11 @@
         "emailInvalid": "Bitte gib eine gültige E-Mail ein."
       },
       "or": "oder",
-      "continueGoogle": "Weiter mit Google"
+      "continueGoogle": "Weiter mit Google",
+      "emailLabel": "E-Mail",
+      "continueEmail": "Mit E-Mail fortfahren",
+      "verifyCodeLabel": "Bestätigungscode",
+      "verifyButton": "Verifizieren und fortfahren"
     },
     "analytics": {
       "monthlyUsage": "Monatliche Nutzung",
@@ -1699,7 +1703,11 @@
       "sort": "Sortieren",
       "saveSort": "Speichern",
       "sortSaved": "Sortierreihenfolge gespeichert",
-      "sortError": "Fehler beim Speichern der Sortierreihenfolge"
+      "sortError": "Fehler beim Speichern der Sortierreihenfolge",
+      "close": "Schließen",
+      "unsavedChanges": "Ungespeicherte Änderungen",
+      "discard": "Verwerfen",
+      "enterName": "Name eingeben"
     },
     "items": {
       "general": "Allgemein",
@@ -1773,7 +1781,16 @@
       "changeBackground": "Hintergrund ändern",
       "regenerateImage": "Neu generieren",
       "generateLimitReached": "Kostenlose KI-Generierungen aufgebraucht",
-      "generateLimitDescription": "Sie haben alle 2 kostenlosen KI-Bildgenerierungen verbraucht. Upgraden Sie auf Growth oder Pro für unbegrenzte Generierungen."
+      "generateLimitDescription": "Sie haben alle 2 kostenlosen KI-Bildgenerierungen verbraucht. Upgraden Sie auf Growth oder Pro für unbegrenzte Generierungen.",
+      "close": "Schließen",
+      "unsavedChanges": "Ungespeicherte Änderungen",
+      "discard": "Verwerfen",
+      "enterName": "Name eingeben",
+      "enterDescription": "Beschreibung eingeben",
+      "enterPrice": "Preis eingeben",
+      "selectCategory": "Kategorie wählen",
+      "addPhoto": "Foto hinzufügen",
+      "selectAllergens": "Auswählen"
     },
     "languages": {
       "translationProgress": "Übersetzungsfortschritt",
@@ -1923,7 +1940,25 @@
       "itemHintBody": "Ein Gericht ist ein bestimmtes Gericht oder Getränk auf der Speisekarte. Zum Beispiel: Caesar-Salat, Pizza Margherita, Espresso, Schokoladenkuchen. Fügen Sie einen Namen, Preis und optional eine Beschreibung und ein Foto hinzu.",
       "noItems": "Noch keine Gerichte",
       "yourMenu": "Ihre Speisekarte",
-      "defaultCategoryName": "Menü"
+      "defaultCategoryName": "Menü",
+      "noItemsInCategory": "Keine Artikel in dieser Kategorie",
+      "onboarding": {
+        "title": "Lass uns deine Speisekarte erstellen",
+        "subtitle": "Folge den Schritten oder scanne eine Papierkarte.",
+        "scanTitle": "Papierkarte scannen",
+        "scanSubtitle": "Lade ein Foto oder PDF hoch — KI erstellt dein Menü",
+        "orStepByStep": "oder Schritt für Schritt",
+        "step1Title": "Kategorie erstellen",
+        "step1Subtitle": "Z. B. Vorspeisen, Hauptgerichte, Getränke",
+        "step2Title": "Dein erstes Gericht hinzufügen",
+        "step2Subtitle": "Name, Preis, Foto (optional)",
+        "step3Title": "Vorschau & teilen",
+        "step3Subtitle": "Zeige den QR-Code deinen Gästen"
+      },
+      "demoSubtitle": "Vorschau mit Beispieldaten — jederzeit änderbar",
+      "demoError": "Demo-Menü konnte nicht erstellt werden",
+      "manualTitle": "Manuelle Einrichtung",
+      "manualSubtitle": "Kategorien und Gerichte selbst erstellen"
     },
     "home": {
       "viewMenu": "So sieht es aus",
@@ -2427,5 +2462,58 @@
     "ownerBody": "Eine neue Reservierung wurde in Ihrem Restaurant vorgenommen.",
     "ownerCta": "Reservierungen ansehen",
     "ownerSignature": "Mit freundlichen Grüßen,<br>IQ Rest Team"
+  },
+  "onboarding": {
+    "step1": {
+      "title": "Welcome!",
+      "subtitle": "Es dauert weniger als 2 Minuten",
+      "nameLabel": "Name",
+      "namePlaceholder": "z.B. La Bella Italia",
+      "nameRequired": "Please enter your restaurant name",
+      "languageLabel": "Language",
+      "autoDetected": "Language & currency filled in automatically. Change if needed.",
+      "next": "Next",
+      "setupText": "Lass uns dein Menü einrichten",
+      "nameHint": "Dies wird oben in deiner digitalen Speisekarte angezeigt."
+    },
+    "step2": {
+      "title": "Füge dein erstes Gericht hinzu",
+      "motivation": "Füge nur ein Gericht hinzu, um zu sehen, wie dein Menü aussehen wird!",
+      "categoryLabel": "Kategoriename",
+      "categoryPlaceholder": "z.B. Hauptmenü, Getränke",
+      "dishNameLabel": "Gerichtsname",
+      "dishNamePlaceholder": "z.B. Margherita Pizza",
+      "nameRequired": "Please enter a dish name",
+      "priceLabel": "Preis",
+      "priceRequired": "Bitte gib einen gültigen Preis ein",
+      "createMenu": "Create My Menu!",
+      "photoLabel": "Foto",
+      "addPhoto": "Foto hinzufügen",
+      "photoHint": "JPG oder PNG, bis zu 5 MB. Du kannst später Fotos hinzufügen."
+    },
+    "saveError": "Etwas ist schiefgelaufen, bitte versuche es erneut",
+    "save": "Save",
+    "cancel": "Cancel",
+    "close": "Close",
+    "step4": {
+      "title": "Dein Menü ist fertig!",
+      "subtitle": "Drucke diesen QR-Code aus und platziere ihn auf deinen Tischen",
+      "viewMenu": "Preview Menu",
+      "goToDashboard": "Zum Dashboard & QR herunterladen",
+      "copy": "Kopieren"
+    },
+    "step3": {
+      "title": "Wähle dein Cover",
+      "subtitle": "Das sehen Gäste, wenn sie den QR-Code scannen.",
+      "pickStyle": "Pick a style",
+      "upload": "Hochladen",
+      "yourPhoto": "Dein Foto",
+      "menuLabel": "Menu",
+      "openNow": "Open now",
+      "oneCategory": "1 category",
+      "changeLater": "Du kannst dies später in den Einstellungen ändern."
+    },
+    "back": "Back",
+    "continue": "Weiter"
   }
 }

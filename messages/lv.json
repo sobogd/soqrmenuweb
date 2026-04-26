@@ -1636,7 +1636,11 @@
         "emailInvalid": "Ievadiet derīgu e-pasta adresi."
       },
       "or": "vai",
-      "continueGoogle": "Turpināt ar Google"
+      "continueGoogle": "Turpināt ar Google",
+      "emailLabel": "E-pasts",
+      "continueEmail": "Turpināt ar e-pastu",
+      "verifyCodeLabel": "Verifikācijas kods",
+      "verifyButton": "Verificēt un turpināt"
     },
     "analytics": {
       "monthlyUsage": "Mēneša lietojums",
@@ -1699,7 +1703,11 @@
       "sort": "Kārtot",
       "saveSort": "Saglabāt",
       "sortSaved": "Kārtības secība saglabāta",
-      "sortError": "Kārtības secības saglabāšana neizdevās"
+      "sortError": "Kārtības secības saglabāšana neizdevās",
+      "close": "Aizvērt",
+      "unsavedChanges": "Nesaglabātas izmaiņas",
+      "discard": "Atmest",
+      "enterName": "Ievadiet nosaukumu"
     },
     "items": {
       "general": "Vispārīgi",
@@ -1773,7 +1781,16 @@
       "changeBackground": "Mainīt fonu",
       "regenerateImage": "Pārģenerēt",
       "generateLimitReached": "Bezmaksas AI ģenerēšanas iztērētas",
-      "generateLimitDescription": "Esat izmantojis 2 bezmaksas AI attēlu ģenerēšanas. Jauniniet uz Growth vai Pro neierobežotām ģenerēšanām."
+      "generateLimitDescription": "Esat izmantojis 2 bezmaksas AI attēlu ģenerēšanas. Jauniniet uz Growth vai Pro neierobežotām ģenerēšanām.",
+      "close": "Aizvērt",
+      "unsavedChanges": "Nesaglabātas izmaiņas",
+      "discard": "Atmest",
+      "enterName": "Ievadiet nosaukumu",
+      "enterDescription": "Ievadiet aprakstu",
+      "enterPrice": "Ievadiet cenu",
+      "selectCategory": "Izvēlēties kategoriju",
+      "addPhoto": "Pievienot foto",
+      "selectAllergens": "Izvēlēties"
     },
     "languages": {
       "translationProgress": "Tulkošanas progress",
@@ -1923,7 +1940,25 @@
       "itemHintBody": "Ēdiens ir konkrēts ēdiens vai dzēriens ēdienkartē. Piemēram: Cēzara salāti, Margherita pica, Espresso, Šokolādes kūka. Pievienojiet nosaukumu, cenu un pēc izvēles aprakstu un fotoattēlu.",
       "noItems": "Vēl nav ēdienu",
       "yourMenu": "Jūsu ēdienkarte",
-      "defaultCategoryName": "Ēdienkarte"
+      "defaultCategoryName": "Ēdienkarte",
+      "noItemsInCategory": "Šajā kategorijā nav vienumu",
+      "onboarding": {
+        "title": "Izveidosim jūsu ēdienkarti",
+        "subtitle": "Sekojiet soļiem vai skenējiet papīra ēdienkarti.",
+        "scanTitle": "Skenēt papīra ēdienkarti",
+        "scanSubtitle": "Augšupielādējiet foto vai PDF — AI izveidos ēdienkarti",
+        "orStepByStep": "vai soli pa solim",
+        "step1Title": "Izveidojiet kategoriju",
+        "step1Subtitle": "Piem. Uzkodas, Pamatēdieni, Dzērieni",
+        "step2Title": "Pievienojiet savu pirmo ēdienu",
+        "step2Subtitle": "Nosaukums, cena, foto (izvēles)",
+        "step3Title": "Priekšskatījums un kopīgošana",
+        "step3Subtitle": "Rādiet QR klientiem"
+      },
+      "demoSubtitle": "Priekšskatījums ar parauga datiem — rediģējams",
+      "demoError": "Neizdevās izveidot demo ēdienkarti",
+      "manualTitle": "Manuāla iestatīšana",
+      "manualSubtitle": "Izveidojiet kategorijas un ēdienus paši"
     },
     "home": {
       "viewMenu": "Skatīt, kā tas izskatās",
@@ -2427,5 +2462,58 @@
     "ownerBody": "Jūsu restorānā ir veikta jauna rezervācija.",
     "ownerCta": "Skatīt rezervācijas",
     "ownerSignature": "Ar cieņu,<br>IQ Rest komanda"
+  },
+  "onboarding": {
+    "step1": {
+      "title": "Welcome!",
+      "subtitle": "Tas aizņem mazāk nekā 2 minūtes",
+      "nameLabel": "Name",
+      "namePlaceholder": "Piemēram: La Bella Italia",
+      "nameRequired": "Please enter your restaurant name",
+      "languageLabel": "Language",
+      "autoDetected": "Language & currency filled in automatically. Change if needed.",
+      "next": "Next",
+      "setupText": "Iestatīsim jūsų izvēlni",
+      "nameHint": "Tas tiks rādīts jūsų digitālās izvēlnes augšpusē."
+    },
+    "step2": {
+      "title": "Pievienojiet pirmo ēdienu",
+      "motivation": "Pievienojiet tikai vienu ēdienu, lai redzētu, kā izskatīsies jūsū izvēlne!",
+      "categoryLabel": "Kategorijas nosaukums",
+      "categoryPlaceholder": "Piemēram: Galvenā izvēlne, Dzērieni",
+      "dishNameLabel": "Ēdiena nosaukums",
+      "dishNamePlaceholder": "Piemēram: Margherita pica",
+      "nameRequired": "Please enter a dish name",
+      "priceLabel": "Cena",
+      "priceRequired": "Lūdzu, ievadiet derīgu cenu",
+      "createMenu": "Create My Menu!",
+      "photoLabel": "Foto",
+      "addPhoto": "Pievienot foto",
+      "photoHint": "JPG vai PNG, līdz 5 MB. Fotogrāfijas var pievienot vēlāk."
+    },
+    "saveError": "Kaut kas nogāja greizi, lūdzu mēģiniet vēlreiz",
+    "save": "Save",
+    "cancel": "Cancel",
+    "close": "Close",
+    "step4": {
+      "title": "Jūsu izvēlne ir gatava!",
+      "subtitle": "Izdrukājiet šo QR kodu un novietojiet to uz galdiņiem",
+      "viewMenu": "Preview Menu",
+      "goToDashboard": "Doties uz vadības paneli un lejupielādēt QR",
+      "copy": "Kopēt"
+    },
+    "step3": {
+      "title": "Izvēlieties vāku",
+      "subtitle": "To viesi redz, skenējot QR kodu.",
+      "pickStyle": "Pick a style",
+      "upload": "Augšupielādēt",
+      "yourPhoto": "Jūsu foto",
+      "menuLabel": "Menu",
+      "openNow": "Open now",
+      "oneCategory": "1 category",
+      "changeLater": "To var mainīt vēlāk iestatījumos."
+    },
+    "back": "Back",
+    "continue": "Turpināt"
   }
 }

@@ -3,10 +3,10 @@
 import { useState, useMemo, useEffect } from "react";
 import { useBlockBack } from "../_hooks/use-back-intercept";
 import { useTranslations } from "next-intl";
-import { ArrowUp, ArrowDown, Plus, ArrowUpDown, Loader2, Check, ChevronRight, Menu as MenuIcon, Eye, Shield, Activity, MousePointerClick, Send, Search, KeyRound, Save, UtensilsCrossed, Wand2 } from "lucide-react";
+import { ArrowUp, ArrowDown, Plus, ArrowUpDown, Loader2, Check, ChevronRight, Menu as MenuIcon, Eye, Shield, Activity, MousePointerClick, Send, Search, KeyRound, Save, Wand2, Sparkles } from "lucide-react";
 import { Switch } from "@/components/ui/switch";
 import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover";
-import { Dialog, DialogContent } from "@/components/ui/dialog";
+import { Dialog, DialogContent, DialogDescription, DialogTitle } from "@/components/ui/dialog";
 import { MenuPreviewModal } from "@/components/menu-preview-modal";
 import { toast } from "sonner";
 import { useDashboard } from "../_context/dashboard-context";
@@ -72,6 +72,28 @@ export function MenuPage({ initialItems, initialCategories, initialCurrency, res
   const [itemSheetOpen, setItemSheetOpen] = useState(false);
   const [itemSheetId, setItemSheetId] = useState<string | undefined>(undefined);
   const [itemSheetCategoryId, setItemSheetCategoryId] = useState<string | undefined>(undefined);
+  const [itemFormDirty, setItemFormDirty] = useState(false);
+  const [showItemCloseConfirm, setShowItemCloseConfirm] = useState(false);
+  const [categoryFormDirty, setCategoryFormDirty] = useState(false);
+  const [showCategoryCloseConfirm, setShowCategoryCloseConfirm] = useState(false);
+  const [fillingDemo, setFillingDemo] = useState(false);
+  const [manualMode, setManualMode] = useState(false);
+
+  async function handleFillDemo() {
+    setFillingDemo(true);
+    try {
+      const res = await fetch("/api/demo-menu", { method: "POST" });
+      if (res.ok) {
+        router.refresh();
+      } else {
+        toast.error(tMenu.demoError);
+        setFillingDemo(false);
+      }
+    } catch {
+      toast.error(tMenu.demoError);
+      setFillingDemo(false);
+    }
+  }
 
   useEffect(() => {
     setCategories(initialCategories);
@@ -317,7 +339,7 @@ export function MenuPage({ initialItems, initialCategories, initialCurrency, res
           <DashboardNavSidebar />
           <div className="flex-1 min-w-0 flex flex-col gap-4 min-h-full">
           {/* View menu */}
-          {!sortMode && slug && items.length > 0 && (
+          {slug && items.length > 0 && (
             <MenuPreviewModal menuUrl={`/m/${slug}`}>
               <button
                 className="flex items-center justify-center gap-2 w-full h-11 rounded-xl border border-green-500/30 bg-green-500/10 text-green-600 dark:text-green-400 text-sm font-medium hover:bg-green-500/15 transition-colors"
@@ -368,45 +390,108 @@ export function MenuPage({ initialItems, initialCategories, initialCurrency, res
             </div>
           )}
 
-        {(categories.length === 0 || (categories.length === 1 && items.length === 0)) ? (
-          <>
-          <div className="rounded-xl border border-border bg-muted/30 overflow-hidden">
-            <div className="flex flex-col items-center text-center px-4 py-6">
-              <div className="flex items-center justify-center h-10 w-10 rounded-xl mb-2" style={{ background: "linear-gradient(to bottom right, hsl(9,100%,58%), #f59e0b)" }}>
-                <UtensilsCrossed className="h-5 w-5 text-white" />
-              </div>
-              <p className="text-sm font-medium mb-0.5">{tMenu.emptyTitle}</p>
-              <p className="text-xs text-muted-foreground/60">{tMenu.emptySubtitle}</p>
-            </div>
-          </div>
-          <button
-            className="flex items-center justify-center gap-2 w-full h-11 rounded-xl text-white text-sm font-medium shadow-md hover:opacity-90 transition-opacity"
-            style={{ background: "linear-gradient(to right, hsl(9,100%,58%), #f59e0b)" }}
-            onClick={() => { track(DashboardEvent.CLICKED_ADD_ITEM); openItemSheet(undefined, categories[0]?.id); }}
-          >
-            <Plus className="h-4 w-4" />
-            {tMenu.addItem}
-          </button>
-          <div className="relative flex items-center justify-center">
-            <div className="absolute inset-0 flex items-center"><div className="w-full border-t border-border" /></div>
-            <span className="relative bg-background px-3 text-sm text-muted-foreground">{tMenu.orDivider}</span>
-          </div>
-          <button
-            onClick={() => { track(DashboardEvent.CLICKED_SCAN_MENU); router.push("/dashboard/scan"); }}
-            className="flex items-center gap-3 w-full rounded-xl border border-border bg-muted/30 p-4 hover:bg-muted/50 transition-colors cursor-pointer text-left"
-          >
-            <div className="flex items-center justify-center h-10 w-10 rounded-xl shrink-0" style={{ background: "linear-gradient(to bottom right, hsl(9,100%,58%), #f59e0b)" }}>
-              <Wand2 className="h-5 w-5 text-white" />
-            </div>
-            <div className="flex-1 min-w-0">
-              <p className="text-sm font-medium">{tMenu.scanButton}</p>
-              <p className="text-xs text-muted-foreground/60 mt-0.5">{tMenu.scanDescription}</p>
-            </div>
-            <ChevronRight className="h-4 w-4 text-muted-foreground/30 shrink-0" />
-          </button>
-          </>
-        ) : (
+        {(
           <div className="flex flex-col gap-4">
+            {items.length === 0 && !sortMode && (
+              <>
+                <div className="rounded-xl border border-border bg-muted/30 overflow-hidden">
+                  <button
+                    onClick={() => { track(DashboardEvent.CLICKED_SCAN_MENU); router.push("/dashboard/scan"); }}
+                    className="flex items-center gap-3 w-full px-4 py-4 hover:bg-muted/50 transition-colors text-left"
+                  >
+                    <div className="flex items-center justify-center h-10 w-10 rounded-xl shrink-0" style={{ background: "linear-gradient(to bottom right, hsl(9,100%,58%), #f59e0b)" }}>
+                      <Wand2 className="h-5 w-5 text-white" />
+                    </div>
+                    <div className="flex-1 min-w-0">
+                      <p className="text-sm font-medium">{tMenu.onboarding.scanTitle}</p>
+                      <p className="text-xs text-muted-foreground/70 mt-0.5">{tMenu.onboarding.scanSubtitle}</p>
+                    </div>
+                    <ChevronRight className="h-4 w-4 text-muted-foreground/30 shrink-0" />
+                  </button>
+                  <button
+                    onClick={handleFillDemo}
+                    disabled={fillingDemo}
+                    className="flex items-center gap-3 w-full px-4 py-4 border-t border-border/50 hover:bg-muted/50 transition-colors text-left disabled:opacity-50"
+                  >
+                    <div className="flex items-center justify-center h-10 w-10 rounded-xl shrink-0" style={{ background: "linear-gradient(to bottom right, #6366f1, #a855f7)" }}>
+                      <Sparkles className="h-5 w-5 text-white" />
+                    </div>
+                    <div className="flex-1 min-w-0">
+                      <p className="text-sm font-medium">{tMenu.demoButton}</p>
+                      <p className="text-xs text-muted-foreground/70 mt-0.5">{tMenu.demoSubtitle}</p>
+                    </div>
+                    {fillingDemo ? (
+                      <Loader2 className="h-4 w-4 animate-spin text-muted-foreground shrink-0" />
+                    ) : (
+                      <ChevronRight className="h-4 w-4 text-muted-foreground/30 shrink-0" />
+                    )}
+                  </button>
+                  <button
+                    onClick={() => setManualMode(true)}
+                    className="flex items-center gap-3 w-full px-4 py-4 border-t border-border/50 hover:bg-muted/50 transition-colors text-left"
+                  >
+                    <div className="flex items-center justify-center h-10 w-10 rounded-xl shrink-0" style={{ background: "linear-gradient(to bottom right, #10b981, #059669)" }}>
+                      <Plus className="h-5 w-5 text-white" />
+                    </div>
+                    <div className="flex-1 min-w-0">
+                      <p className="text-sm font-medium">{tMenu.manualTitle}</p>
+                      <p className="text-xs text-muted-foreground/70 mt-0.5">{tMenu.manualSubtitle}</p>
+                    </div>
+                    {manualMode ? (
+                      <Check className="h-4 w-4 text-green-600 shrink-0" />
+                    ) : (
+                      <ChevronRight className="h-4 w-4 text-muted-foreground/30 shrink-0" />
+                    )}
+                  </button>
+                </div>
+
+                {manualMode && (() => {
+                  const step1Done = categories.length >= 1;
+                  const step2Done = items.length > 0;
+                  const step2Active = step1Done && !step2Done;
+                  return (
+                    <div className="rounded-xl border border-border bg-muted/30 overflow-hidden">
+                      <button
+                        onClick={() => { track(DashboardEvent.CLICKED_ADD_CATEGORY); openCategorySheet(); }}
+                        disabled={step1Done}
+                        className="flex items-center gap-3 w-full px-4 py-3 hover:bg-muted/50 transition-colors text-left disabled:opacity-60 disabled:cursor-default disabled:hover:bg-transparent"
+                      >
+                        <div className={`flex items-center justify-center h-7 w-7 rounded-full shrink-0 text-xs font-semibold ${step1Done ? "bg-green-500/20 text-green-600 dark:text-green-400" : "bg-primary text-primary-foreground"}`}>
+                          {step1Done ? <Check className="h-4 w-4" /> : "1"}
+                        </div>
+                        <div className="flex-1 min-w-0">
+                          <p className="text-sm font-medium">{tMenu.onboarding.step1Title}</p>
+                          <p className="text-xs text-muted-foreground/70 mt-0.5">{tMenu.onboarding.step1Subtitle}</p>
+                        </div>
+                        {!step1Done && <ChevronRight className="h-4 w-4 text-primary shrink-0" />}
+                      </button>
+                      <button
+                        onClick={() => { if (!step2Active) return; track(DashboardEvent.CLICKED_ADD_ITEM); openItemSheet(undefined, categories[0]?.id); }}
+                        disabled={!step2Active}
+                        className="flex items-center gap-3 w-full px-4 py-3 border-t border-border/50 hover:bg-muted/50 transition-colors text-left disabled:opacity-50 disabled:cursor-default disabled:hover:bg-transparent"
+                      >
+                        <div className={`flex items-center justify-center h-7 w-7 rounded-full shrink-0 text-xs font-semibold ${step2Active ? "bg-primary text-primary-foreground" : "bg-muted text-muted-foreground"}`}>
+                          2
+                        </div>
+                        <div className="flex-1 min-w-0">
+                          <p className="text-sm font-medium">{tMenu.onboarding.step2Title}</p>
+                          <p className="text-xs text-muted-foreground/70 mt-0.5">{tMenu.onboarding.step2Subtitle}</p>
+                        </div>
+                        {step2Active && <ChevronRight className="h-4 w-4 text-primary shrink-0" />}
+                      </button>
+                      <div className="flex items-center gap-3 w-full px-4 py-3 border-t border-border/50 opacity-50">
+                        <div className="flex items-center justify-center h-7 w-7 rounded-full shrink-0 text-xs font-semibold bg-muted text-muted-foreground">3</div>
+                        <div className="flex-1 min-w-0">
+                          <p className="text-sm font-medium">{tMenu.onboarding.step3Title}</p>
+                          <p className="text-xs text-muted-foreground/70 mt-0.5">{tMenu.onboarding.step3Subtitle}</p>
+                        </div>
+                      </div>
+                    </div>
+                  );
+                })()}
+              </>
+            )}
+            {items.length > 0 && (
             <div className="flex flex-col gap-4">
               {sortedCategories.map((category, catIndex) => {
                 const categoryItems = items
@@ -418,8 +503,8 @@ export function MenuPage({ initialItems, initialCategories, initialCurrency, res
                     {/* Category header */}
                     <div
                       onClick={() => { if (!sortMode) { track(DashboardEvent.CLICKED_CATEGORY_ROW); openCategorySheet(category.id); } }}
-                      className={`flex items-center gap-2 px-4 h-11 transition-colors ${
-                        sortMode ? "" : "cursor-pointer hover:bg-muted/50"
+                      className={`flex items-center gap-2 px-4 h-11 bg-muted/50 transition-colors ${
+                        sortMode ? "" : "cursor-pointer hover:bg-muted/70"
                       }`}
                     >
                       {sortMode && (
@@ -449,17 +534,26 @@ export function MenuPage({ initialItems, initialCategories, initialCurrency, res
                         </div>
                       )}
                       <div className={`flex items-center flex-1 min-w-0 ${sortMode ? "ml-2" : ""}`}>
-                        <span className="text-xs font-semibold uppercase tracking-wider text-muted-foreground truncate">{category.name}</span>
-                        {!sortMode && <ChevronRight className="h-4 w-4 text-muted-foreground/30 shrink-0 ml-1" />}
+                        <span className="flex-1 text-[0.8125rem] font-semibold uppercase tracking-wider text-muted-foreground truncate">{category.name}</span>
+                        {!sortMode && <ChevronRight className="h-4 w-4 text-muted-foreground/30 shrink-0 -mr-2" />}
                       </div>
                     </div>
 
                     {/* Items */}
                     <div>
+                      {categoryItems.length === 0 && !sortMode && (
+                        <div className="py-1.5">
+                          <div className="flex items-center justify-center w-full h-11 px-4 text-center">
+                            <p className="text-sm font-medium text-muted-foreground/80">{tMenu.noItemsInCategory}</p>
+                          </div>
+                        </div>
+                      )}
+                      {categoryItems.length > 0 && (
+                      <div className="py-1.5">
                       {categoryItems.map((item, index) => (
                         <div
                           key={item.id}
-                          className="flex items-center gap-2 border-t border-border/50"
+                          className="flex items-center gap-2 border-t border-border/50 first:border-t-0"
                         >
                           <div
                             onClick={() => { if (!sortMode) { track(DashboardEvent.CLICKED_ITEM_ROW); openItemSheet(item.id); } }}
@@ -483,9 +577,12 @@ export function MenuPage({ initialItems, initialCategories, initialCurrency, res
                             </div>
 
                             {!sortMode && (
-                              <span className="text-sm text-muted-foreground ml-2">
-                                {formatPrice(item.price, currency)}
-                              </span>
+                              <div className="flex items-center gap-2 ml-2 -mr-2">
+                                <span className="text-sm text-muted-foreground">
+                                  {formatPrice(item.price, currency)}
+                                </span>
+                                <ChevronRight className="h-4 w-4 text-muted-foreground/30 shrink-0" />
+                              </div>
                             )}
                           </div>
 
@@ -517,34 +614,32 @@ export function MenuPage({ initialItems, initialCategories, initialCurrency, res
                           )}
                         </div>
                       ))}
+                      </div>
+                      )}
+                      {!sortMode && (
+                        <button
+                          onClick={() => { track(DashboardEvent.CLICKED_ADD_ITEM); openItemSheet(undefined, category.id); }}
+                          className="flex items-center justify-center gap-2 w-full h-11 px-4 border-t border-border/50 bg-muted/50 text-sm font-medium text-primary hover:bg-muted/70 transition-colors"
+                        >
+                          <Plus className="h-4 w-4" />
+                          {tMenu.addItem}
+                        </button>
+                      )}
                     </div>
                   </div>
                 );
               })}
             </div>
+            )}
 
-            {/* Add dish + add category */}
-            {!sortMode && (
-              <>
-                <button
-                  onClick={() => {
-                    track(DashboardEvent.CLICKED_ADD_ITEM);
-                    openItemSheet(undefined, categories.length === 1 ? categories[0].id : undefined);
-                  }}
-                  className="flex items-center justify-center gap-2 w-full h-11 rounded-xl text-white text-sm font-medium shadow-md hover:opacity-90 transition-opacity"
-                  style={{ background: "linear-gradient(to right, hsl(9,100%,58%), #f59e0b)" }}
-                >
-                  <Plus className="h-4 w-4" />
-                  {tMenu.addItem}
-                </button>
-                <button
-                  onClick={() => { track(DashboardEvent.CLICKED_ADD_CATEGORY); openCategorySheet(); }}
-                  className="flex items-center justify-center gap-1 w-full h-11 rounded-xl border border-border bg-muted/30 text-sm font-medium hover:bg-muted/50 transition-colors mb-24"
-                >
-                  <Plus className="h-3.5 w-3.5" />
-                  {tMenu.addCategory}
-                </button>
-              </>
+            {items.length > 0 && !sortMode && (
+              <button
+                onClick={() => { track(DashboardEvent.CLICKED_ADD_CATEGORY); openCategorySheet(); }}
+                className="flex items-center justify-center gap-1 w-full h-11 -mt-2 text-primary text-sm font-medium hover:text-primary/80 transition-colors mb-24"
+              >
+                <Plus className="h-3.5 w-3.5" />
+                {tMenu.addCategory}
+              </button>
             )}
           </div>
         )}
@@ -552,20 +647,65 @@ export function MenuPage({ initialItems, initialCategories, initialCurrency, res
         </div>{/* end flex container */}
       </div>
 
-      <Dialog open={categorySheetOpen} onOpenChange={setCategorySheetOpen}>
-        <DialogContent className="sm:max-w-[434px]">
+      <Dialog
+        open={categorySheetOpen}
+        onOpenChange={(open) => {
+          if (open) { setCategorySheetOpen(true); return; }
+          if (categoryFormDirty) { setShowCategoryCloseConfirm(true); return; }
+          setCategorySheetOpen(false);
+        }}
+      >
+        <DialogContent className="sm:max-w-[434px]" onOpenAutoFocus={(e) => e.preventDefault()}>
           <CategoryFormPage
             key={`${categorySheetOpen}-${categorySheetId}`}
             category={categorySheetId ? categories.find((c) => c.id === categorySheetId) : undefined}
             restaurant={restaurantLanguages}
             onSaved={handleCategorySaved}
             onDeleted={handleCategoryDeleted}
+            onDirtyChange={setCategoryFormDirty}
           />
         </DialogContent>
       </Dialog>
 
-      <Dialog open={itemSheetOpen} onOpenChange={setItemSheetOpen}>
-        <DialogContent className="sm:max-w-[434px]" onOpenAutoFocus={(e) => e.preventDefault()}>
+      <Dialog open={showCategoryCloseConfirm} onOpenChange={setShowCategoryCloseConfirm}>
+        <DialogContent className="sm:max-w-sm">
+          <DialogTitle className="text-lg font-semibold pr-6">{tCategories.unsavedChanges}</DialogTitle>
+          <DialogDescription className="sr-only">{tCategories.unsavedChanges}</DialogDescription>
+          <div className="flex items-center justify-end gap-6 mt-4">
+            <button
+              type="button"
+              onClick={() => { setShowCategoryCloseConfirm(false); setCategoryFormDirty(false); setCategorySheetOpen(false); }}
+              className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
+            >
+              {tCategories.discard}
+            </button>
+            <button
+              type="button"
+              onClick={() => {
+                setShowCategoryCloseConfirm(false);
+                const formEl = document.getElementById("category-form-dialog") as HTMLFormElement | null;
+                formEl?.requestSubmit();
+              }}
+              className="text-sm font-medium text-primary hover:text-primary/80 transition-colors"
+            >
+              {tCategories.save}
+            </button>
+          </div>
+        </DialogContent>
+      </Dialog>
+
+      <Dialog
+        open={itemSheetOpen}
+        onOpenChange={(open) => {
+          if (open) { setItemSheetOpen(true); return; }
+          if (itemFormDirty) { setShowItemCloseConfirm(true); return; }
+          setItemSheetOpen(false);
+        }}
+      >
+        <DialogContent
+          className="sm:max-w-[434px]"
+          onOpenAutoFocus={(e) => e.preventDefault()}
+        >
           <ItemFormPage
             key={`${itemSheetOpen}-${itemSheetId}`}
             item={itemSheetId ? items.find((i) => i.id === itemSheetId) : undefined}
@@ -574,7 +714,35 @@ export function MenuPage({ initialItems, initialCategories, initialCurrency, res
             initialCategoryId={itemSheetCategoryId}
             onSaved={handleItemSaved}
             onDeleted={handleItemDeleted}
+            onDirtyChange={setItemFormDirty}
           />
+        </DialogContent>
+      </Dialog>
+
+      <Dialog open={showItemCloseConfirm} onOpenChange={setShowItemCloseConfirm}>
+        <DialogContent className="sm:max-w-sm">
+          <DialogTitle className="text-lg font-semibold pr-6">{tItems.unsavedChanges}</DialogTitle>
+          <DialogDescription className="sr-only">{tItems.unsavedChanges}</DialogDescription>
+          <div className="flex items-center justify-end gap-6 mt-4">
+            <button
+              type="button"
+              onClick={() => { setShowItemCloseConfirm(false); setItemFormDirty(false); setItemSheetOpen(false); }}
+              className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
+            >
+              {tItems.discard}
+            </button>
+            <button
+              type="button"
+              onClick={() => {
+                setShowItemCloseConfirm(false);
+                const formEl = document.getElementById("item-form-dialog") as HTMLFormElement | null;
+                formEl?.requestSubmit();
+              }}
+              className="text-sm font-medium text-primary hover:text-primary/80 transition-colors"
+            >
+              {tItems.save}
+            </button>
+          </div>
         </DialogContent>
       </Dialog>
     </div>

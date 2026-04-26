@@ -1636,7 +1636,11 @@
         "emailInvalid": "Voer een geldig e-mailadres in."
       },
       "or": "of",
-      "continueGoogle": "Doorgaan met Google"
+      "continueGoogle": "Doorgaan met Google",
+      "emailLabel": "E-mail",
+      "continueEmail": "Doorgaan met e-mail",
+      "verifyCodeLabel": "Verificatiecode",
+      "verifyButton": "Verifiëren en doorgaan"
     },
     "analytics": {
       "monthlyUsage": "Maandelijks Gebruik",
@@ -1699,7 +1703,11 @@
       "sort": "Sorteren",
       "saveSort": "Opslaan",
       "sortSaved": "Sorteervolgorde opgeslagen",
-      "sortError": "Opslaan van sorteervolgorde is mislukt"
+      "sortError": "Opslaan van sorteervolgorde is mislukt",
+      "close": "Sluiten",
+      "unsavedChanges": "Niet-opgeslagen wijzigingen",
+      "discard": "Verwerpen",
+      "enterName": "Voer naam in"
     },
     "items": {
       "general": "Algemeen",
@@ -1773,7 +1781,16 @@
       "changeBackground": "Achtergrond wijzigen",
       "regenerateImage": "Opnieuw genereren",
       "generateLimitReached": "Gratis AI-generaties opgebruikt",
-      "generateLimitDescription": "Je hebt alle 2 gratis AI-beeldgeneraties gebruikt. Upgrade naar Growth of Pro voor onbeperkte generaties."
+      "generateLimitDescription": "Je hebt alle 2 gratis AI-beeldgeneraties gebruikt. Upgrade naar Growth of Pro voor onbeperkte generaties.",
+      "close": "Sluiten",
+      "unsavedChanges": "Niet-opgeslagen wijzigingen",
+      "discard": "Verwerpen",
+      "enterName": "Voer naam in",
+      "enterDescription": "Voer beschrijving in",
+      "enterPrice": "Voer prijs in",
+      "selectCategory": "Kies categorie",
+      "addPhoto": "Foto toevoegen",
+      "selectAllergens": "Kies"
     },
     "languages": {
       "translationProgress": "Vertaalvoortgang",
@@ -1923,7 +1940,25 @@
       "itemHintBody": "Een gerecht is een specifiek gerecht of drankje op de menukaart. Bijvoorbeeld: Caesar Salade, Pizza Margherita, Espresso, Chocoladetaart. Voeg een naam, prijs en optioneel een beschrijving en foto toe.",
       "noItems": "Nog geen gerechten",
       "yourMenu": "Jouw menu",
-      "defaultCategoryName": "Menu"
+      "defaultCategoryName": "Menu",
+      "noItemsInCategory": "Geen items in deze categorie",
+      "onboarding": {
+        "title": "Laten we je menu bouwen",
+        "subtitle": "Volg de stappen of scan een papieren menu.",
+        "scanTitle": "Papieren menu scannen",
+        "scanSubtitle": "Upload een foto of PDF — AI bouwt je menu",
+        "orStepByStep": "of stap voor stap",
+        "step1Title": "Categorie aanmaken",
+        "step1Subtitle": "Bv. Voorgerechten, Hoofdgerechten, Dranken",
+        "step2Title": "Voeg je eerste gerecht toe",
+        "step2Subtitle": "Naam, prijs, foto (optioneel)",
+        "step3Title": "Preview & delen",
+        "step3Subtitle": "Toon de QR aan klanten"
+      },
+      "demoSubtitle": "Voorbeeld met voorbeelddata — altijd bewerkbaar",
+      "demoError": "Voorbeeldmenu aanmaken mislukt",
+      "manualTitle": "Handmatige instelling",
+      "manualSubtitle": "Maak categorieën en gerechten zelf"
     },
     "home": {
       "viewMenu": "Bekijk het resultaat",
@@ -2427,5 +2462,58 @@
     "ownerBody": "Er is een nieuwe reservering gemaakt in uw restaurant.",
     "ownerCta": "Reserveringen bekijken",
     "ownerSignature": "Met vriendelijke groet,<br>IQ Rest Team"
+  },
+  "onboarding": {
+    "step1": {
+      "title": "Welcome!",
+      "subtitle": "Het duurt minder dan 2 minuten",
+      "nameLabel": "Name",
+      "namePlaceholder": "Bijv. La Bella Italia",
+      "nameRequired": "Please enter your restaurant name",
+      "languageLabel": "Language",
+      "autoDetected": "Language & currency filled in automatically. Change if needed.",
+      "next": "Next",
+      "setupText": "Laten we je menu instellen",
+      "nameHint": "Dit verschijnt bovenaan je digitale menu."
+    },
+    "step2": {
+      "title": "Voeg je eerste gerecht toe",
+      "motivation": "Voeg slechts één gerecht toe om te zien hoe je menu eruit zal zien!",
+      "categoryLabel": "Categorienaam",
+      "categoryPlaceholder": "Bijv. Hoofdmenu, Dranken",
+      "dishNameLabel": "Naam gerecht",
+      "dishNamePlaceholder": "Bijv. Margherita pizza",
+      "nameRequired": "Please enter a dish name",
+      "priceLabel": "Prijs",
+      "priceRequired": "Voer een geldige prijs in",
+      "createMenu": "Create My Menu!",
+      "photoLabel": "Foto",
+      "addPhoto": "Foto toevoegen",
+      "photoHint": "JPG of PNG, tot 5 MB. Je kunt later foto's toevoegen."
+    },
+    "saveError": "Er is iets misgegaan, probeer het opnieuw",
+    "save": "Save",
+    "cancel": "Cancel",
+    "close": "Close",
+    "step4": {
+      "title": "Je menu is klaar!",
+      "subtitle": "Print deze QR-code en plaats hem op je tafels",
+      "viewMenu": "Preview Menu",
+      "goToDashboard": "Ga naar dashboard en download QR",
+      "copy": "Kopiëren"
+    },
+    "step3": {
+      "title": "Kies je omslag",
+      "subtitle": "Dit zien gasten wanneer ze de QR-code scannen.",
+      "pickStyle": "Pick a style",
+      "upload": "Uploaden",
+      "yourPhoto": "Jouw foto",
+      "menuLabel": "Menu",
+      "openNow": "Open now",
+      "oneCategory": "1 category",
+      "changeLater": "Je kunt dit later wijzigen in de instellingen."
+    },
+    "back": "Back",
+    "continue": "Doorgaan"
   }
 }

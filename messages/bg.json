@@ -1636,7 +1636,11 @@
         "emailInvalid": "Въведете валиден имейл."
       },
       "or": "или",
-      "continueGoogle": "Продължи с Google"
+      "continueGoogle": "Продължи с Google",
+      "emailLabel": "Имейл",
+      "continueEmail": "Продължи с имейл",
+      "verifyCodeLabel": "Код за верификация",
+      "verifyButton": "Потвърди и продължи"
     },
     "analytics": {
       "monthlyUsage": "Месечно ползване",
@@ -1699,7 +1703,11 @@
       "sort": "Сортиране",
       "saveSort": "Запази",
       "sortSaved": "Редът на сортиране е запазен",
-      "sortError": "Неуспешно запазване на реда на сортиране"
+      "sortError": "Неуспешно запазване на реда на сортиране",
+      "close": "Затвори",
+      "unsavedChanges": "Незапазени промени",
+      "discard": "Отхвърли",
+      "enterName": "Въведете име"
     },
     "items": {
       "general": "Общо",
@@ -1773,7 +1781,16 @@
       "changeBackground": "Промяна на фона",
       "regenerateImage": "Регенериране",
       "generateLimitReached": "Безплатните AI генерации са изчерпани",
-      "generateLimitDescription": "Използвахте 2-те безплатни AI генерации на изображения. Преминете на Growth или Pro за неограничени генерации."
+      "generateLimitDescription": "Използвахте 2-те безплатни AI генерации на изображения. Преминете на Growth или Pro за неограничени генерации.",
+      "close": "Затвори",
+      "unsavedChanges": "Незапазени промени",
+      "discard": "Отхвърли",
+      "enterName": "Въведете име",
+      "enterDescription": "Въведете описание",
+      "enterPrice": "Въведете цена",
+      "selectCategory": "Избери категория",
+      "addPhoto": "Добави снимка",
+      "selectAllergens": "Избери"
     },
     "languages": {
       "translationProgress": "Напредък на превода",
@@ -1923,7 +1940,25 @@
       "itemHintBody": "Ястие е конкретно ястие или напитка от менюто. Например: Салата Цезар, Пица Маргарита, Еспресо, Шоколадова торта. Добавете име, цена и по желание описание и снимка.",
       "noItems": "Все още няма ястия",
       "yourMenu": "Вашето меню",
-      "defaultCategoryName": "Меню"
+      "defaultCategoryName": "Меню",
+      "noItemsInCategory": "Няма артикули в тази категория",
+      "onboarding": {
+        "title": "Нека създадем менюто ви",
+        "subtitle": "Следвайте стъпките или сканирайте хартиено меню.",
+        "scanTitle": "Сканирай хартиено меню",
+        "scanSubtitle": "Качете снимка или PDF — AI създава менюто",
+        "orStepByStep": "или стъпка по стъпка",
+        "step1Title": "Създайте категория",
+        "step1Subtitle": "Напр. Предястия, Основни, Напитки",
+        "step2Title": "Добавете първото ястие",
+        "step2Subtitle": "Име, цена, снимка (по избор)",
+        "step3Title": "Преглед и споделяне",
+        "step3Subtitle": "Покажете QR на клиентите"
+      },
+      "demoSubtitle": "Преглед с примерни данни — редактирайте по всяко време",
+      "demoError": "Неуспешно създаване на демо меню",
+      "manualTitle": "Ръчна настройка",
+      "manualSubtitle": "Създайте категории и ястия сами"
     },
     "home": {
       "viewMenu": "Вижте как изглежда",
@@ -2427,5 +2462,58 @@
     "ownerBody": "Нова резервация беше направена във вашия ресторант.",
     "ownerCta": "Преглед на резервациите",
     "ownerSignature": "С уважение,<br>Екип IQ Rest"
+  },
+  "onboarding": {
+    "step1": {
+      "title": "Welcome!",
+      "subtitle": "Отнема по-малко от 2 минути",
+      "nameLabel": "Name",
+      "namePlaceholder": "напр. Ла Бела Италия",
+      "nameRequired": "Please enter your restaurant name",
+      "languageLabel": "Language",
+      "autoDetected": "Language & currency filled in automatically. Change if needed.",
+      "next": "Next",
+      "setupText": "Нека настроим менюто ви",
+      "nameHint": "Това ще се показва в горната част на вашето дигитално меню."
+    },
+    "step2": {
+      "title": "Добавете първото си ястие",
+      "motivation": "Добавете само едно ястие, за да видите как ще изглежда менюто ви!",
+      "categoryLabel": "Наименование на категория",
+      "categoryPlaceholder": "напр. Основно меню, Напитки",
+      "dishNameLabel": "Наименование на ястие",
+      "dishNamePlaceholder": "напр. Пица Маргарита",
+      "nameRequired": "Please enter a dish name",
+      "priceLabel": "Цена",
+      "priceRequired": "Моля, въведете валидна цена",
+      "createMenu": "Create My Menu!",
+      "photoLabel": "Снимка",
+      "addPhoto": "Добавете снимка",
+      "photoHint": "JPG или PNG, до 5 MB. Можете да добавите снимки по-късно."
+    },
+    "saveError": "Нещо се обърка, моля опитайте отново",
+    "save": "Save",
+    "cancel": "Cancel",
+    "close": "Close",
+    "step4": {
+      "title": "Менюто ви е готово!",
+      "subtitle": "Разпечатайте QR кода и го поставете на масите",
+      "viewMenu": "Preview Menu",
+      "goToDashboard": "Към таблото и изтегляне на QR",
+      "copy": "Копиране"
+    },
+    "step3": {
+      "title": "Изберете корица",
+      "subtitle": "Това виждат гостите при сканиране на QR кода.",
+      "pickStyle": "Pick a style",
+      "upload": "Качване",
+      "yourPhoto": "Вашата снимка",
+      "menuLabel": "Menu",
+      "openNow": "Open now",
+      "oneCategory": "1 category",
+      "changeLater": "Можете да промените това по-късно в настройките."
+    },
+    "back": "Back",
+    "continue": "Продължи"
   }
 }

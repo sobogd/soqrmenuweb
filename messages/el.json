@@ -1636,7 +1636,11 @@
         "emailInvalid": "Εισάγετε ένα έγκυρο email."
       },
       "or": "ή",
-      "continueGoogle": "Συνέχεια με Google"
+      "continueGoogle": "Συνέχεια με Google",
+      "emailLabel": "Email",
+      "continueEmail": "Συνέχεια με email",
+      "verifyCodeLabel": "Κωδικός επαλήθευσης",
+      "verifyButton": "Επαλήθευση και συνέχεια"
     },
     "analytics": {
       "monthlyUsage": "Μηνιαία Χρήση",
@@ -1699,7 +1703,11 @@
       "sort": "Ταξινόμηση",
       "saveSort": "Αποθήκευση",
       "sortSaved": "Η σειρά ταξινόμησης αποθηκεύτηκε",
-      "sortError": "Αποτυχία αποθήκευσης σειράς ταξινόμησης"
+      "sortError": "Αποτυχία αποθήκευσης σειράς ταξινόμησης",
+      "close": "Κλείσιμο",
+      "unsavedChanges": "Μη αποθηκευμένες αλλαγές",
+      "discard": "Απόρριψη",
+      "enterName": "Εισάγετε όνομα"
     },
     "items": {
       "general": "Γενικά",
@@ -1773,7 +1781,16 @@
       "changeBackground": "Αλλαγή φόντου",
       "regenerateImage": "Αναδημιουργία",
       "generateLimitReached": "Δωρεάν δημιουργίες AI εξαντλήθηκαν",
-      "generateLimitDescription": "Χρησιμοποιήσατε και τις 2 δωρεάν δημιουργίες εικόνων AI. Αναβαθμίστε σε Growth ή Pro για απεριόριστες δημιουργίες."
+      "generateLimitDescription": "Χρησιμοποιήσατε και τις 2 δωρεάν δημιουργίες εικόνων AI. Αναβαθμίστε σε Growth ή Pro για απεριόριστες δημιουργίες.",
+      "close": "Κλείσιμο",
+      "unsavedChanges": "Μη αποθηκευμένες αλλαγές",
+      "discard": "Απόρριψη",
+      "enterName": "Εισάγετε όνομα",
+      "enterDescription": "Εισάγετε περιγραφή",
+      "enterPrice": "Εισάγετε τιμή",
+      "selectCategory": "Επιλέξτε κατηγορία",
+      "addPhoto": "Προσθήκη φωτο",
+      "selectAllergens": "Επιλογή"
     },
     "languages": {
       "translationProgress": "Πρόοδος Μετάφρασης",
@@ -1923,7 +1940,25 @@
       "itemHintBody": "Ένα πιάτο είναι ένα συγκεκριμένο φαγητό ή ποτό στο μενού. Για παράδειγμα: Σαλάτα Σίζαρ, Πίτσα Μαργαρίτα, Εσπρέσο, Κέικ Σοκολάτας. Προσθέστε όνομα, τιμή και προαιρετικά περιγραφή και φωτογραφία.",
       "noItems": "Δεν υπάρχουν πιάτα ακόμα",
       "yourMenu": "Το μενού σας",
-      "defaultCategoryName": "Μενού"
+      "defaultCategoryName": "Μενού",
+      "noItemsInCategory": "Δεν υπάρχουν στοιχεία σε αυτήν την κατηγορία",
+      "onboarding": {
+        "title": "Ας φτιάξουμε το μενού σας",
+        "subtitle": "Ακολουθήστε τα βήματα ή σαρώστε ένα χάρτινο μενού.",
+        "scanTitle": "Σάρωση χάρτινου μενού",
+        "scanSubtitle": "Ανεβάστε φωτογραφία ή PDF — η AI φτιάχνει το μενού",
+        "orStepByStep": "ή βήμα-βήμα",
+        "step1Title": "Δημιουργήστε κατηγορία",
+        "step1Subtitle": "Π.χ. Ορεκτικά, Κυρίως, Ποτά",
+        "step2Title": "Προσθέστε το πρώτο πιάτο",
+        "step2Subtitle": "Όνομα, τιμή, φωτογραφία (προαιρετικό)",
+        "step3Title": "Προεπισκόπηση & κοινή χρήση",
+        "step3Subtitle": "Δείξτε το QR στους πελάτες"
+      },
+      "demoSubtitle": "Προεπισκόπηση με δείγμα — επεξεργάσιμο",
+      "demoError": "Αποτυχία δημιουργίας δοκιμαστικού μενού",
+      "manualTitle": "Χειροκίνητη ρύθμιση",
+      "manualSubtitle": "Δημιουργήστε κατηγορίες και πιάτα μόνοι"
     },
     "home": {
       "viewMenu": "Δείτε πώς φαίνεται",
@@ -2427,5 +2462,58 @@
     "ownerBody": "Μια νέα κράτηση πραγματοποιήθηκε στο εστιατόριό σας.",
     "ownerCta": "Προβολή κρατήσεων",
     "ownerSignature": "Με εκτίμηση,<br>Ομάδα IQ Rest"
+  },
+  "onboarding": {
+    "step1": {
+      "title": "Welcome!",
+      "subtitle": "Διαρκεί λιγότερο από 2 λεπτά",
+      "nameLabel": "Name",
+      "namePlaceholder": "π.χ. La Bella Italia",
+      "nameRequired": "Please enter your restaurant name",
+      "languageLabel": "Language",
+      "autoDetected": "Language & currency filled in automatically. Change if needed.",
+      "next": "Next",
+      "setupText": "Ας ρυθμίσουμε το μενού σας",
+      "nameHint": "Αυτό θα εμφανίζεται στην κορυφή του ψηφιακού σας μενού."
+    },
+    "step2": {
+      "title": "Προσθέστε το πρώτο σας πιάτο",
+      "motivation": "Προσθέστε ένα μόνο πιάτο για να δείτε πώς θα φαίνεται το μενού σας!",
+      "categoryLabel": "Όνομα κατηγορίας",
+      "categoryPlaceholder": "π.χ. Κύριο μενού, Ποτά",
+      "dishNameLabel": "Όνομα πιάτου",
+      "dishNamePlaceholder": "π.χ. Πίτσα Μαργαρίτα",
+      "nameRequired": "Please enter a dish name",
+      "priceLabel": "Τιμή",
+      "priceRequired": "Εισαγάγετε μια έγκυρη τιμή",
+      "createMenu": "Create My Menu!",
+      "photoLabel": "Φωτογραφία",
+      "addPhoto": "Προσθήκη φωτογραφίας",
+      "photoHint": "JPG ή PNG, έως 5 MB. Μπορείτε να προσθέσετε φωτογραφίες αργότερα."
+    },
+    "saveError": "Κάτι πήγε στραβά, παρακαλώ δοκιμάστε ξανά",
+    "save": "Save",
+    "cancel": "Cancel",
+    "close": "Close",
+    "step4": {
+      "title": "Το μενού σας είναι έτοιμο!",
+      "subtitle": "Εκτυπώστε αυτόν τον κωδικό QR και τοποθετήστε τον στα τραπέζια σας",
+      "viewMenu": "Preview Menu",
+      "goToDashboard": "Μετάβαση στον πίνακα ελέγχου και λήψη QR",
+      "copy": "Αντιγραφή"
+    },
+    "step3": {
+      "title": "Επιλέξτε το εξώφυλλό σας",
+      "subtitle": "Αυτό βλέπουν οι πελάτες όταν σαρώνουν το QR.",
+      "pickStyle": "Pick a style",
+      "upload": "Ανέβασμα",
+      "yourPhoto": "Η φωτογραφία σας",
+      "menuLabel": "Menu",
+      "openNow": "Open now",
+      "oneCategory": "1 category",
+      "changeLater": "Μπορείτε να το αλλάξετε αργότερα στις ρυθμίσεις."
+    },
+    "back": "Back",
+    "continue": "Συνέχεια"
   }
 }

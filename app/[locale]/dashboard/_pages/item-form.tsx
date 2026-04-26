@@ -11,15 +11,6 @@ import {
   DialogDescription,
   DialogTitle,
 } from "@/components/ui/dialog";
-import {
-  AlertDialog,
-  AlertDialogAction,
-  AlertDialogContent,
-  AlertDialogDescription,
-  AlertDialogFooter,
-  AlertDialogHeader,
-  AlertDialogTitle,
-} from "@/components/ui/alert-dialog";
 import { useTranslations } from "next-intl";
 import { useDashboard } from "../_context/dashboard-context";
 import { useRouter } from "@/i18n/routing";
@@ -60,9 +51,10 @@ interface ItemFormPageProps {
   initialCategoryId?: string;
   onSaved: (item: ItemWithTranslations) => void;
   onDeleted: (id: string) => void;
+  onDirtyChange?: (dirty: boolean) => void;
 }
 
-export function ItemFormPage({ item, categories, restaurant, initialCategoryId, onSaved, onDeleted }: ItemFormPageProps) {
+export function ItemFormPage({ item, categories, restaurant, initialCategoryId, onSaved, onDeleted, onDirtyChange }: ItemFormPageProps) {
   const { translations } = useDashboard();
   const router = useRouter();
   const t = translations.items;
@@ -129,9 +121,6 @@ export function ItemFormPage({ item, categories, restaurant, initialCategoryId, 
   const [tempPrice, setTempPrice] = useState("");
 
   const hasChanges = useMemo(() => {
-    if (!isEdit) {
-      return !!(name.trim() || description.trim() || price);
-    }
     return (
       name !== initialName ||
       description !== initialDescription ||
@@ -141,7 +130,11 @@ export function ItemFormPage({ item, categories, restaurant, initialCategoryId, 
       JSON.stringify(allergens) !== JSON.stringify(initialAllergens) ||
       JSON.stringify(itemTranslations) !== JSON.stringify(initialItemTranslations)
     );
-  }, [isEdit, name, description, price, categoryId, imageUrl, allergens, itemTranslations, initialName, initialDescription, initialPrice, initialCategoryIdValue, initialImageUrl, initialAllergens, initialItemTranslations]);
+  }, [name, description, price, categoryId, imageUrl, allergens, itemTranslations, initialName, initialDescription, initialPrice, initialCategoryIdValue, initialImageUrl, initialAllergens, initialItemTranslations]);
+
+  useEffect(() => {
+    onDirtyChange?.(hasChanges);
+  }, [hasChanges, onDirtyChange]);
 
   useEffect(() => {
     track(DashboardEvent.SHOWED_ITEM_FORM);
@@ -433,17 +426,21 @@ export function ItemFormPage({ item, categories, restaurant, initialCategoryId, 
         </DialogContent>
       </Dialog>
 
-      <AlertDialog open={!!validationError} onOpenChange={() => setValidationError(null)}>
-        <AlertDialogContent>
-          <AlertDialogHeader>
-            <AlertDialogTitle>{validationError}</AlertDialogTitle>
-            <AlertDialogDescription className="sr-only">{validationError}</AlertDialogDescription>
-          </AlertDialogHeader>
-          <AlertDialogFooter>
-            <AlertDialogAction onClick={() => setValidationError(null)}>OK</AlertDialogAction>
-          </AlertDialogFooter>
-        </AlertDialogContent>
-      </AlertDialog>
+      <Dialog open={!!validationError} onOpenChange={(open) => { if (!open) setValidationError(null); }}>
+        <DialogContent className="sm:max-w-[384px] [&>button]:hidden">
+          <DialogTitle className="text-lg font-semibold pr-6">{validationError}</DialogTitle>
+          <DialogDescription className="sr-only">{validationError}</DialogDescription>
+          <div className="flex items-center justify-end mt-4">
+            <button
+              type="button"
+              onClick={() => setValidationError(null)}
+              className="text-sm font-medium text-primary hover:text-primary/80 transition-colors"
+            >
+              {t.close}
+            </button>
+          </div>
+        </DialogContent>
+      </Dialog>
 
       <Dialog open={showTranslateLimitDialog} onOpenChange={setShowTranslateLimitDialog}>
         <DialogContent className="sm:max-w-sm">
@@ -468,19 +465,31 @@ export function ItemFormPage({ item, categories, restaurant, initialCategoryId, 
       </Dialog>
 
       <Dialog open={showNameDialog} onOpenChange={setShowNameDialog}>
-        <DialogContent className="sm:max-w-[384px]">
+        <DialogContent
+          className="sm:max-w-[384px]"
+          onOpenAutoFocus={(e) => {
+            const root = e.currentTarget as HTMLElement;
+            const el = root.querySelector("input, textarea") as HTMLInputElement | HTMLTextAreaElement | null;
+            if (el) {
+              e.preventDefault();
+              el.focus();
+              const len = el.value.length;
+              if ("setSelectionRange" in el) el.setSelectionRange(len, len);
+            }
+          }}
+        >
           <DialogTitle className="text-lg font-semibold pr-6">{t.name}</DialogTitle>
           <DialogDescription className="sr-only">{t.name}</DialogDescription>
           <input
             type="text"
-            autoFocus
             value={tempName}
             onChange={(e) => setTempName(e.target.value)}
             onFocus={() => track(DashboardEvent.FOCUSED_ITEM_NAME)}
+            onKeyDown={(e) => { if (e.key === "Enter") { e.preventDefault(); setName(tempName); setShowNameDialog(false); } }}
             placeholder={t.namePlaceholder}
             className="w-full mt-2 text-sm bg-transparent outline-none leading-5 p-0 placeholder:text-muted-foreground/30 border-b-[1.5px] border-border pb-2"
           />
-          <div className="flex items-center justify-between mt-4">
+          <div className="flex items-center justify-end gap-6 mt-4">
             <button
               type="button"
               onClick={() => setShowNameDialog(false)}
@@ -500,23 +509,35 @@ export function ItemFormPage({ item, categories, restaurant, initialCategoryId, 
       </Dialog>
 
       <Dialog open={showPriceDialog} onOpenChange={setShowPriceDialog}>
-        <DialogContent className="sm:max-w-[384px]">
+        <DialogContent
+          className="sm:max-w-[384px]"
+          onOpenAutoFocus={(e) => {
+            const root = e.currentTarget as HTMLElement;
+            const el = root.querySelector("input, textarea") as HTMLInputElement | HTMLTextAreaElement | null;
+            if (el) {
+              e.preventDefault();
+              el.focus();
+              const len = el.value.length;
+              if ("setSelectionRange" in el) el.setSelectionRange(len, len);
+            }
+          }}
+        >
           <DialogTitle className="text-lg font-semibold pr-6">{t.price}</DialogTitle>
           <DialogDescription className="sr-only">{t.price}</DialogDescription>
           <input
             type="text"
             inputMode="decimal"
-            autoFocus
             value={tempPrice}
             onChange={(e) => {
               const clean = e.target.value.replace(",", ".").replace(/[^0-9.]/g, "").replace(/(\..*)\./g, "$1");
               setTempPrice(clean);
             }}
             onFocus={() => track(DashboardEvent.FOCUSED_ITEM_PRICE)}
+            onKeyDown={(e) => { if (e.key === "Enter") { e.preventDefault(); setPrice(tempPrice); setShowPriceDialog(false); } }}
             placeholder={t.pricePlaceholder}
             className="w-full mt-2 text-sm bg-transparent outline-none leading-5 p-0 placeholder:text-muted-foreground/30 border-b-[1.5px] border-border pb-2"
           />
-          <div className="flex items-center justify-between mt-4">
+          <div className="flex items-center justify-end gap-6 mt-4">
             <button
               type="button"
               onClick={() => setShowPriceDialog(false)}
@@ -547,12 +568,13 @@ export function ItemFormPage({ item, categories, restaurant, initialCategoryId, 
               e.target.style.height = "auto";
               e.target.style.height = e.target.scrollHeight + "px";
             }}
+            onKeyDown={(e) => { if (e.key === "Enter" && !e.shiftKey) { e.preventDefault(); setDescription(tempDescription); setShowDescriptionDialog(false); } }}
             placeholder={t.descriptionPlaceholder}
             rows={1}
             className="w-full mt-2 text-sm bg-transparent outline-none resize-none leading-5 p-0 placeholder:text-muted-foreground/30 border-b-[1.5px] border-border pb-2 overflow-hidden"
             style={{ minHeight: "1.25rem" }}
           />
-          <div className="flex items-center justify-between mt-4">
+          <div className="flex items-center justify-end gap-6 mt-4">
             <button
               type="button"
               onClick={() => setShowDescriptionDialog(false)}
@@ -625,7 +647,7 @@ export function ItemFormPage({ item, categories, restaurant, initialCategoryId, 
               )}
             </div>
           </div>
-          <div className="flex items-center justify-between mt-6">
+          <div className="flex items-center justify-end gap-6 mt-6">
             <button
               type="button"
               onClick={() => setShowImageDialog(false)}
@@ -661,20 +683,23 @@ export function ItemFormPage({ item, categories, restaurant, initialCategoryId, 
               </button>
             ))}
           </div>
-          <div className="flex items-center justify-start mt-4">
-            <button
-              type="button"
-              onClick={() => setShowCategoryDialog(false)}
-              className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
-            >
-              {t.cancel}
-            </button>
-          </div>
         </DialogContent>
       </Dialog>
 
       <Dialog open={showTranslationDialog} onOpenChange={setShowTranslationDialog}>
-        <DialogContent className="sm:max-w-[384px]">
+        <DialogContent
+          className="sm:max-w-[384px]"
+          onOpenAutoFocus={(e) => {
+            const root = e.currentTarget as HTMLElement;
+            const el = root.querySelector("input, textarea") as HTMLInputElement | HTMLTextAreaElement | null;
+            if (el) {
+              e.preventDefault();
+              el.focus();
+              const len = el.value.length;
+              if ("setSelectionRange" in el) el.setSelectionRange(len, len);
+            }
+          }}
+        >
           <DialogTitle className="text-lg font-semibold pr-6">{LANGUAGE_NAMES[translationDialogLang] || translationDialogLang}</DialogTitle>
           <DialogDescription className="sr-only">{LANGUAGE_NAMES[translationDialogLang] || translationDialogLang}</DialogDescription>
           <div className="mt-2 space-y-5">
@@ -710,7 +735,7 @@ export function ItemFormPage({ item, categories, restaurant, initialCategoryId, 
               </div>
             );
           })()}
-          <div className="flex items-center justify-between mt-6">
+          <div className="flex items-center justify-end gap-6 mt-6">
             <button
               type="button"
               onClick={() => setShowTranslationDialog(false)}
@@ -753,7 +778,7 @@ export function ItemFormPage({ item, categories, restaurant, initialCategoryId, 
               );
             })}
           </div>
-          <div className="flex items-center justify-between mt-6">
+          <div className="flex items-center justify-end gap-6 mt-6">
             <button
               type="button"
               onClick={() => setShowAllergensDialog(false)}
@@ -786,24 +811,6 @@ export function ItemFormPage({ item, categories, restaurant, initialCategoryId, 
       <div className="overflow-y-auto -mx-6 px-6 max-h-[60vh]">
         <form id="item-form-dialog" onSubmit={handleSubmit} className="space-y-5 mt-2 pb-2">
           <div className="-mx-6 -my-2">
-            {(!initialCategoryId || isEdit) && (
-              <button
-                type="button"
-                onClick={() => setShowCategoryDialog(true)}
-                className="flex items-center gap-3 px-6 py-3 w-full text-left transition-colors hover:bg-muted/50"
-              >
-                <LayoutGrid className="h-[18px] w-[18px] text-muted-foreground shrink-0" />
-                <span className="text-sm flex-1">{t.category}</span>
-                {categoryId ? (
-                  <span className="text-sm text-muted-foreground truncate max-w-[45%]">
-                    {categories.find((c) => c.id === categoryId)?.name}
-                  </span>
-                ) : (
-                  <span className="text-sm text-primary">{t.add || "Add"}</span>
-                )}
-              </button>
-            )}
-
             <button
               type="button"
               onClick={() => { setTempName(name); setShowNameDialog(true); }}
@@ -814,21 +821,7 @@ export function ItemFormPage({ item, categories, restaurant, initialCategoryId, 
               {name ? (
                 <span className="text-sm text-muted-foreground truncate max-w-[45%]">{name}</span>
               ) : (
-                <span className="text-sm text-primary">{t.add || "Add"}</span>
-              )}
-            </button>
-
-            <button
-              type="button"
-              onClick={() => { setTempDescription(description); setShowDescriptionDialog(true); }}
-              className="flex items-center gap-3 px-6 py-3 w-full text-left transition-colors hover:bg-muted/50"
-            >
-              <AlignLeft className="h-[18px] w-[18px] text-muted-foreground shrink-0" />
-              <span className="text-sm flex-1">{t.description}</span>
-              {description ? (
-                <span className="text-sm text-muted-foreground truncate max-w-[45%]">{description}</span>
-              ) : (
-                <span className="text-sm text-primary">{t.add || "Add"}</span>
+                <span className="text-sm text-primary">{t.enterName}</span>
               )}
             </button>
 
@@ -842,9 +835,41 @@ export function ItemFormPage({ item, categories, restaurant, initialCategoryId, 
               {price ? (
                 <span className="text-sm text-muted-foreground truncate max-w-[45%]">{price}</span>
               ) : (
-                <span className="text-sm text-primary">{t.add || "Add"}</span>
+                <span className="text-sm text-primary">{t.enterPrice}</span>
               )}
             </button>
+
+            <button
+              type="button"
+              onClick={() => { setTempDescription(description); setShowDescriptionDialog(true); }}
+              className="flex items-center gap-3 px-6 py-3 w-full text-left transition-colors hover:bg-muted/50"
+            >
+              <AlignLeft className="h-[18px] w-[18px] text-muted-foreground shrink-0" />
+              <span className="text-sm flex-1">{t.description}</span>
+              {description ? (
+                <span className="text-sm text-muted-foreground truncate max-w-[45%]">{description}</span>
+              ) : (
+                <span className="text-sm text-primary">{t.enterDescription}</span>
+              )}
+            </button>
+
+            {(!initialCategoryId || isEdit) && (
+              <button
+                type="button"
+                onClick={() => setShowCategoryDialog(true)}
+                className="flex items-center gap-3 px-6 py-3 w-full text-left transition-colors hover:bg-muted/50"
+              >
+                <LayoutGrid className="h-[18px] w-[18px] text-muted-foreground shrink-0" />
+                <span className="text-sm flex-1">{t.category}</span>
+                {categoryId ? (
+                  <span className="text-sm text-muted-foreground truncate max-w-[45%]">
+                    {categories.find((c) => c.id === categoryId)?.name}
+                  </span>
+                ) : (
+                  <span className="text-sm text-primary">{t.selectCategory}</span>
+                )}
+              </button>
+            )}
 
             <button
               type="button"
@@ -858,7 +883,7 @@ export function ItemFormPage({ item, categories, restaurant, initialCategoryId, 
                   <Image src={imageUrl} alt="Item" fill className="object-cover" sizes="24px" />
                 </div>
               ) : (
-                <span className="text-sm text-primary">{t.add || "Add"}</span>
+                <span className="text-sm text-primary">{t.addPhoto}</span>
               )}
             </button>
 
@@ -877,7 +902,7 @@ export function ItemFormPage({ item, categories, restaurant, initialCategoryId, 
                   })}
                 </span>
               ) : (
-                <span className="text-sm text-primary">{t.add || "Add"}</span>
+                <span className="text-sm text-primary">{t.selectAllergens}</span>
               )}
             </button>
 
@@ -896,7 +921,7 @@ export function ItemFormPage({ item, categories, restaurant, initialCategoryId, 
                   {summary ? (
                     <span className="text-sm text-muted-foreground truncate max-w-[45%]">{summary}</span>
                   ) : (
-                    <span className="text-sm text-primary">{t.add || "Add"}</span>
+                    <span className="text-sm text-primary">{tAi("translate")}</span>
                   )}
                 </button>
               );
@@ -908,8 +933,8 @@ export function ItemFormPage({ item, categories, restaurant, initialCategoryId, 
 
       <input ref={fileInputRef} type="file" accept="image/jpeg,image/png,image/webp,image/gif" className="hidden" onChange={handleImageUpload} disabled={uploading} />
 
-      <div className="flex items-center justify-between mt-2">
-        {isEdit ? (
+      <div className="flex items-center justify-end gap-6 mt-2">
+        {isEdit && (
           <button
             type="button"
             onClick={() => { track(DashboardEvent.CLICKED_DELETE_ITEM); setShowDeleteDialog(true); }}
@@ -918,13 +943,11 @@ export function ItemFormPage({ item, categories, restaurant, initialCategoryId, 
           >
             {t.delete}
           </button>
-        ) : (
-          <span />
         )}
         <button
           type="submit"
           form="item-form-dialog"
-          disabled={saving || deleting || uploading || generating || !hasChanges}
+          disabled={saving}
           className="flex items-center gap-1.5 text-sm font-medium text-primary hover:text-primary/80 transition-colors disabled:opacity-50"
         >
           {saving && <Loader2 className="h-4 w-4 animate-spin" />}{t.save}

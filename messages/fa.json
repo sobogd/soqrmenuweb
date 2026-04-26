@@ -1636,7 +1636,11 @@
         "emailInvalid": "لطفاً یک ایمیل معتبر وارد کنید."
       },
       "or": "یا",
-      "continueGoogle": "ادامه با Google"
+      "continueGoogle": "ادامه با Google",
+      "emailLabel": "ایمیل",
+      "continueEmail": "ادامه با ایمیل",
+      "verifyCodeLabel": "کد تأیید",
+      "verifyButton": "تأیید و ادامه"
     },
     "analytics": {
       "monthlyUsage": "مصرف ماهانه",
@@ -1699,7 +1703,11 @@
       "sort": "مرتب‌سازی",
       "saveSort": "ذخیره",
       "sortSaved": "ترتیب مرتب‌سازی ذخیره شد",
-      "sortError": "ذخیره ترتیب مرتب‌سازی ناموفق بود"
+      "sortError": "ذخیره ترتیب مرتب‌سازی ناموفق بود",
+      "close": "بستن",
+      "unsavedChanges": "تغییرات ذخیره‌نشده",
+      "discard": "لغو",
+      "enterName": "نام را وارد کنید"
     },
     "items": {
       "general": "عمومی",
@@ -1773,7 +1781,16 @@
       "changeBackground": "تغییر پس‌زمینه",
       "regenerateImage": "تولید مجدد",
       "generateLimitReached": "تولیدات رایگان هوش مصنوعی تمام شد",
-      "generateLimitDescription": "شما از ۲ تولید رایگان تصویر هوش مصنوعی استفاده کرده‌اید. برای تولید نامحدود به Growth یا Pro ارتقا دهید."
+      "generateLimitDescription": "شما از ۲ تولید رایگان تصویر هوش مصنوعی استفاده کرده‌اید. برای تولید نامحدود به Growth یا Pro ارتقا دهید.",
+      "close": "بستن",
+      "unsavedChanges": "تغییرات ذخیره‌نشده",
+      "discard": "لغو",
+      "enterName": "نام را وارد کنید",
+      "enterDescription": "توضیحات را وارد کنید",
+      "enterPrice": "قیمت را وارد کنید",
+      "selectCategory": "انتخاب دسته",
+      "addPhoto": "افزودن عکس",
+      "selectAllergens": "انتخاب"
     },
     "languages": {
       "translationProgress": "پیشرفت ترجمه",
@@ -1923,7 +1940,25 @@
       "itemHintBody": "غذا یک خوراک یا نوشیدنی خاص در منو است. مثلاً: سالاد سزار، پیتزا مارگاریتا، اسپرسو، کیک شکلاتی. نام، قیمت و اختیاری توضیحات و عکس اضافه کنید.",
       "noItems": "هنوز غذایی وجود ندارد",
       "yourMenu": "منوی شما",
-      "defaultCategoryName": "منو"
+      "defaultCategoryName": "منو",
+      "noItemsInCategory": "هیچ موردی در این دسته وجود ندارد",
+      "onboarding": {
+        "title": "بیایید منوی شما را بسازیم",
+        "subtitle": "مراحل را دنبال کنید یا منوی کاغذی را اسکن کنید.",
+        "scanTitle": "اسکن منوی کاغذی",
+        "scanSubtitle": "عکس یا PDF آپلود کنید — AI منو را می‌سازد",
+        "orStepByStep": "یا مرحله به مرحله",
+        "step1Title": "یک دسته بسازید",
+        "step1Subtitle": "مثل پیش‌غذا، غذای اصلی، نوشیدنی",
+        "step2Title": "اولین غذای خود را اضافه کنید",
+        "step2Subtitle": "نام، قیمت، عکس (اختیاری)",
+        "step3Title": "پیش‌نمایش و اشتراک",
+        "step3Subtitle": "QR را به مشتریان نشان دهید"
+      },
+      "demoSubtitle": "پیش‌نمایش با داده نمونه — قابل ویرایش",
+      "demoError": "ایجاد منوی نمونه ناموفق بود",
+      "manualTitle": "راه‌اندازی دستی",
+      "manualSubtitle": "دسته‌ها و غذاها را خودتان بسازید"
     },
     "home": {
       "viewMenu": "ببینید چطور به نظر می‌رسد",
@@ -2427,5 +2462,58 @@
     "ownerBody": "رزرو جدیدی در رستوران شما انجام شده است.",
     "ownerCta": "مشاهده رزروها",
     "ownerSignature": "با احترام،<br>تیم IQ Rest"
+  },
+  "onboarding": {
+    "step1": {
+      "title": "Welcome!",
+      "subtitle": "کمتر از ۲ دقیقه طول می‌کشد",
+      "nameLabel": "Name",
+      "namePlaceholder": "مثال: لا بلا ایتالیا",
+      "nameRequired": "Please enter your restaurant name",
+      "languageLabel": "Language",
+      "autoDetected": "Language & currency filled in automatically. Change if needed.",
+      "next": "Next",
+      "setupText": "بیایید منوی شما را راه‌اندازی کنیم",
+      "nameHint": "این در بالای منوی دیجیتال شما نمایش داده می‌شود."
+    },
+    "step2": {
+      "title": "اولین غذای خود را اضافه کنید",
+      "motivation": "فقط یک غذا اضافه کنید تا ببینید منوی شما چگونه به نظر می‌رسد!",
+      "categoryLabel": "نام دسته‌بندی",
+      "categoryPlaceholder": "مثال: منوی اصلی، نوشیدنی‌ها",
+      "dishNameLabel": "نام غذا",
+      "dishNamePlaceholder": "مثال: پیتزا مارگاریتا",
+      "nameRequired": "Please enter a dish name",
+      "priceLabel": "قیمت",
+      "priceRequired": "لطفاً یک قیمت معتبر وارد کنید",
+      "createMenu": "Create My Menu!",
+      "photoLabel": "عکس",
+      "addPhoto": "افزودن عکس",
+      "photoHint": "JPG یا PNG، تا ۵ مگابایت. می‌توانید بعداً عکس اضافه کنید."
+    },
+    "saveError": "مشکلی پیش آمد، لطفاً دوباره امتحان کنید",
+    "save": "Save",
+    "cancel": "Cancel",
+    "close": "Close",
+    "step4": {
+      "title": "منوی شما آماده است!",
+      "subtitle": "این کد QR را چاپ کنید و روی میزهای خود قرار دهید",
+      "viewMenu": "Preview Menu",
+      "goToDashboard": "برو به داشبورد و QR را دانلود کن",
+      "copy": "کپی"
+    },
+    "step3": {
+      "title": "پوشش خود را انتخاب کنید",
+      "subtitle": "این چیزی است که مهمانان هنگام اسکن QR می‌بینند.",
+      "pickStyle": "Pick a style",
+      "upload": "بارگذاری",
+      "yourPhoto": "عکس شما",
+      "menuLabel": "Menu",
+      "openNow": "Open now",
+      "oneCategory": "1 category",
+      "changeLater": "می‌توانید این را بعداً در تنظیمات تغییر دهید."
+    },
+    "back": "Back",
+    "continue": "ادامه"
   }
 }

@@ -1,7 +1,7 @@
 import { guardAuthPage } from "../_lib/onboarding-guard";
-import { LoginPage } from "../_components/login-page";
+import { AuthPage } from "../_components/auth-page";
 
 export default async function Page() {
   await guardAuthPage();
-  return <LoginPage />;
+  return <AuthPage />;
 }

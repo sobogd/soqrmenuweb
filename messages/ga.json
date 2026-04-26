@@ -1636,7 +1636,11 @@
         "emailInvalid": "Cuir isteach ríomhphost bailí."
       },
       "or": "nó",
-      "continueGoogle": "Lean ar aghaidh le Google"
+      "continueGoogle": "Lean ar aghaidh le Google",
+      "emailLabel": "Ríomhphost",
+      "continueEmail": "Lean ar aghaidh le ríomhphost",
+      "verifyCodeLabel": "Cód fíoraithe",
+      "verifyButton": "Fíoraigh agus lean ar aghaidh"
     },
     "analytics": {
       "monthlyUsage": "Úsáid Mhíosúil",
@@ -1699,7 +1703,11 @@
       "sort": "Sórtáil",
       "saveSort": "Sábháil",
       "sortSaved": "Ord sórtála sábháilte",
-      "sortError": "Theip ar ord sórtála a shábháil"
+      "sortError": "Theip ar ord sórtála a shábháil",
+      "close": "Dún",
+      "unsavedChanges": "Athruithe gan sábháil",
+      "discard": "Cuir ar leataobh",
+      "enterName": "Cuir isteach ainm"
     },
     "items": {
       "general": "Ginearálta",
@@ -1773,7 +1781,16 @@
       "changeBackground": "Athraigh cúlra",
       "regenerateImage": "Athghin",
       "generateLimitReached": "Giniúintí AI saor in aisce úsáidte",
-      "generateLimitDescription": "D'úsáid tú na 2 ghiniúint íomhá AI saor in aisce. Uasghrádaigh go Growth nó Pro le haghaidh giniúintí gan teorainn."
+      "generateLimitDescription": "D'úsáid tú na 2 ghiniúint íomhá AI saor in aisce. Uasghrádaigh go Growth nó Pro le haghaidh giniúintí gan teorainn.",
+      "close": "Dún",
+      "unsavedChanges": "Athruithe gan sábháil",
+      "discard": "Cuir ar leataobh",
+      "enterName": "Cuir isteach ainm",
+      "enterDescription": "Cuir isteach cur síos",
+      "enterPrice": "Cuir isteach praghas",
+      "selectCategory": "Roghnaigh catagóir",
+      "addPhoto": "Cuir grianghraf leis",
+      "selectAllergens": "Roghnaigh"
     },
     "languages": {
       "translationProgress": "Dul chun cinn aistriúcháin",
@@ -1923,7 +1940,25 @@
       "itemHintBody": "Is mias é bia nó deoch ar leith ar an mbiachlár. Mar shampla: Sailéad Caesar, Pizza Margherita, Espresso, Cáca Seacláide. Cuir ainm, praghas agus go roghnach cur síos agus grianghraf leis.",
       "noItems": "Níl aon mhiasa fós",
       "yourMenu": "Do bhiachlár",
-      "defaultCategoryName": "Biachlár"
+      "defaultCategoryName": "Biachlár",
+      "noItemsInCategory": "Gan earraí sa chatagóir seo",
+      "onboarding": {
+        "title": "Déanaimis do bhiachlár",
+        "subtitle": "Lean na céimeanna nó scan biachlár páipéir.",
+        "scanTitle": "Scan biachlár páipéir",
+        "scanSubtitle": "Uaslódáil grianghraf nó PDF — cruthaíonn AI do bhiachlár",
+        "orStepByStep": "nó céim ar chéim",
+        "step1Title": "Cruthaigh catagóir",
+        "step1Subtitle": "m.sh. Blaistí, Príomhchúrsaí, Deochanna",
+        "step2Title": "Cuir do chéad mhias leis",
+        "step2Subtitle": "Ainm, praghas, grianghraf (roghnach)",
+        "step3Title": "Réamhamharc & roinn",
+        "step3Subtitle": "Taispeáin QR do chustaiméirí"
+      },
+      "demoSubtitle": "Réamhamharc le sonraí samplacha — inathraithe",
+      "demoError": "Theip ar chruthú biachláir taispeána",
+      "manualTitle": "Socrú láimhe",
+      "manualSubtitle": "Cruthaigh catagóirí agus miasa tú féin"
     },
     "home": {
       "viewMenu": "Féach conas a fhéachann sé",
@@ -2427,5 +2462,58 @@
     "ownerBody": "Rinneadh áirithint nua i do bhialann.",
     "ownerCta": "Féach ar áirithintí",
     "ownerSignature": "Le meas,<br>Foireann IQ Rest"
+  },
+  "onboarding": {
+    "step1": {
+      "title": "Welcome!",
+      "subtitle": "Ní thógann sé ach 2 nóiméad",
+      "nameLabel": "Name",
+      "namePlaceholder": "M.sh. La Bella Italia",
+      "nameRequired": "Please enter your restaurant name",
+      "languageLabel": "Language",
+      "autoDetected": "Language & currency filled in automatically. Change if needed.",
+      "next": "Next",
+      "setupText": "Socróimid do bhiachlár",
+      "nameHint": "Feicfear é seo ag barr do bhiachlár digiteach."
+    },
+    "step2": {
+      "title": "Cuir do chéad mhias leis",
+      "motivation": "Cuir mias amháin leis le feiceáil cén chuma a bheidh ar do bhiachlár!",
+      "categoryLabel": "Ainm catagóire",
+      "categoryPlaceholder": "M.sh. Príomh-Bhiachlár, Deochanna",
+      "dishNameLabel": "Ainm an mhiasa",
+      "dishNamePlaceholder": "M.sh. Pizza Margherita",
+      "nameRequired": "Please enter a dish name",
+      "priceLabel": "Praghas",
+      "priceRequired": "Cuir isteach praghas bailí",
+      "createMenu": "Create My Menu!",
+      "photoLabel": "Grianghraf",
+      "addPhoto": "Cuir grianghraf leis",
+      "photoHint": "JPG nó PNG, suas le 5 MB. Is féidir grianghraif a chur leis níos déanaí."
+    },
+    "saveError": "Chuaigh rud éigin mícheart, bain triail eile as",
+    "save": "Save",
+    "cancel": "Cancel",
+    "close": "Close",
+    "step4": {
+      "title": "Tá do bhiachlár réidh!",
+      "subtitle": "Priontáil an cód QR seo agus cuir ar do táblaí é",
+      "viewMenu": "Preview Menu",
+      "goToDashboard": "Téigh go dtí an deais agus íoslódáil QR",
+      "copy": "Cóipeáil"
+    },
+    "step3": {
+      "title": "Roghnaigh do chlúdach",
+      "subtitle": "Sin a fheiceann aíonna nuair a scanann siad an QR.",
+      "pickStyle": "Pick a style",
+      "upload": "Uaslódáil",
+      "yourPhoto": "Do ghrianghraf",
+      "menuLabel": "Menu",
+      "openNow": "Open now",
+      "oneCategory": "1 category",
+      "changeLater": "Is féidir leat é seo a athrú níos déanaí sna socruithe."
+    },
+    "back": "Back",
+    "continue": "Lean ar aghaidh"
   }
 }

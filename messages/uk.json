@@ -1636,7 +1636,11 @@
         "emailInvalid": "Введіть коректний email."
       },
       "or": "або",
-      "continueGoogle": "Продовжити через Google"
+      "continueGoogle": "Продовжити через Google",
+      "emailLabel": "Email",
+      "continueEmail": "Продовжити з Email",
+      "verifyCodeLabel": "Код підтвердження",
+      "verifyButton": "Підтвердити та продовжити"
     },
     "analytics": {
       "monthlyUsage": "Щомісячне використання",
@@ -1699,7 +1703,11 @@
       "sort": "Сортувати",
       "saveSort": "Зберегти",
       "sortSaved": "Порядок сорту збережено",
-      "sortError": "Не вдалося зберегти порядок сорту"
+      "sortError": "Не вдалося зберегти порядок сорту",
+      "close": "Закрити",
+      "unsavedChanges": "Незбережені зміни",
+      "discard": "Відхилити",
+      "enterName": "Введіть назву"
     },
     "items": {
       "general": "Основне",
@@ -1773,7 +1781,16 @@
       "changeBackground": "Змінити фон",
       "regenerateImage": "Згенерувати заново",
       "generateLimitReached": "Безкоштовні генерації вичерпано",
-      "generateLimitDescription": "Ви використали 2 безкоштовні генерації зображень ШІ. Перейдіть на Growth або Pro для безлімітних генерацій."
+      "generateLimitDescription": "Ви використали 2 безкоштовні генерації зображень ШІ. Перейдіть на Growth або Pro для безлімітних генерацій.",
+      "close": "Закрити",
+      "unsavedChanges": "Незбережені зміни",
+      "discard": "Відхилити",
+      "enterName": "Введіть назву",
+      "enterDescription": "Введіть опис",
+      "enterPrice": "Введіть ціну",
+      "selectCategory": "Оберіть категорію",
+      "addPhoto": "Додати фото",
+      "selectAllergens": "Обрати"
     },
     "languages": {
       "translationProgress": "Прогрес перекладу",
@@ -1923,7 +1940,25 @@
       "itemHintBody": "Страва — це конкретна страва або напій у меню. Наприклад: Салат Цезар, Піца Маргарита, Еспресо, Шоколадний торт. Додайте назву, ціну та за бажанням опис і фото.",
       "noItems": "Страв поки немає",
       "yourMenu": "Ваше меню",
-      "defaultCategoryName": "Меню"
+      "defaultCategoryName": "Меню",
+      "noItemsInCategory": "У категорії немає товарів",
+      "onboarding": {
+        "title": "Створимо ваше меню",
+        "subtitle": "Виконайте кроки або відскануйте паперове меню.",
+        "scanTitle": "Відсканувати паперове меню",
+        "scanSubtitle": "Завантажте фото або PDF — AI створить меню",
+        "orStepByStep": "або крок за кроком",
+        "step1Title": "Створіть категорію",
+        "step1Subtitle": "Наприклад: Закуски, Основні, Напої",
+        "step2Title": "Додайте першу страву",
+        "step2Subtitle": "Назва, ціна, фото (необов’язково)",
+        "step3Title": "Попередній перегляд і поділитися",
+        "step3Subtitle": "Покажіть QR клієнтам"
+      },
+      "demoSubtitle": "Перегляд зі зразком — редагується будь-коли",
+      "demoError": "Не вдалося створити демо-меню",
+      "manualTitle": "Ручне налаштування",
+      "manualSubtitle": "Створіть категорії та страви самостійно"
     },
     "home": {
       "viewMenu": "Подивитися, як виглядає",
@@ -2427,5 +2462,58 @@
     "ownerBody": "У вашому ресторані зроблено нове бронювання.",
     "ownerCta": "Переглянути бронювання",
     "ownerSignature": "З повагою,<br>Команда IQ Rest"
+  },
+  "onboarding": {
+    "step1": {
+      "title": "Ласкаво просимо!",
+      "subtitle": "Займе менше 2 хвилин",
+      "nameLabel": "Назва ресторану",
+      "namePlaceholder": "Напр.: Ла Белла Італія",
+      "nameRequired": "Введіть назву ресторану",
+      "languageLabel": "Мова",
+      "autoDetected": "Мова та валюта визначені автоматично",
+      "next": "Далі",
+      "setupText": "Налаштуємо ваше меню",
+      "nameHint": "Це з'явиться у верхній частині вашого цифрового меню."
+    },
+    "step2": {
+      "title": "Додайте перше блюдо",
+      "motivation": "Додайте одне блюдо, щоб побачити, як виглядатиме ваше меню!",
+      "categoryLabel": "Назва категорії",
+      "categoryPlaceholder": "Напр.: Основне меню, Напої",
+      "dishNameLabel": "Назва блюда",
+      "dishNamePlaceholder": "Напр.: Піца Маргарита",
+      "nameRequired": "Введіть назву страви",
+      "priceLabel": "Ціна",
+      "priceRequired": "Введіть коректну ціну",
+      "createMenu": "Створити меню!",
+      "photoLabel": "Фото",
+      "addPhoto": "Додати фото",
+      "photoHint": "JPG або PNG, до 5 МБ. Ви можете додати фото пізніше."
+    },
+    "saveError": "Щось пішло не так, будь ласка, спробуйте знову",
+    "save": "Зберегти",
+    "cancel": "Скасувати",
+    "close": "Закрити",
+    "step4": {
+      "title": "Ваше меню готове!",
+      "subtitle": "Роздрукуйте цей QR-код і розмістіть його на столах",
+      "viewMenu": "Попередній перегляд меню",
+      "goToDashboard": "Перейти до панелі та завантажити QR",
+      "copy": "Копіювати"
+    },
+    "step3": {
+      "title": "Виберіть обкладинку",
+      "subtitle": "Це бачать гості при скануванні QR-коду.",
+      "pickStyle": "Pick a style",
+      "upload": "Завантажити",
+      "yourPhoto": "Ваше фото",
+      "menuLabel": "Menu",
+      "openNow": "Open now",
+      "oneCategory": "1 category",
+      "changeLater": "Ви можете змінити це пізніше в налаштуваннях."
+    },
+    "back": "Back",
+    "continue": "Продовжити"
   }
 }

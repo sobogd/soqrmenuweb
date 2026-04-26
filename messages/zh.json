@@ -1636,7 +1636,11 @@
         "emailInvalid": "请输入有效的邮箱。"
       },
       "or": "或者",
-      "continueGoogle": "通过Google继续"
+      "continueGoogle": "通过Google继续",
+      "emailLabel": "电子邮件",
+      "continueEmail": "使用电子邮件继续",
+      "verifyCodeLabel": "验证码",
+      "verifyButton": "验证并继续"
     },
     "analytics": {
       "monthlyUsage": "每月使用量",
@@ -1699,7 +1703,11 @@
       "sort": "排序",
       "saveSort": "保存",
       "sortSaved": "排序顺序已保存",
-      "sortError": "保存排序顺序失败"
+      "sortError": "保存排序顺序失败",
+      "close": "关闭",
+      "unsavedChanges": "未保存的更改",
+      "discard": "放弃",
+      "enterName": "输入名称"
     },
     "items": {
       "general": "一般",
@@ -1773,7 +1781,16 @@
       "changeBackground": "更换背景",
       "regenerateImage": "重新生成",
       "generateLimitReached": "免费AI生成次数已用完",
-      "generateLimitDescription": "您已使用完2次免费AI图片生成。升级到Growth或Pro享受无限生成。"
+      "generateLimitDescription": "您已使用完2次免费AI图片生成。升级到Growth或Pro享受无限生成。",
+      "close": "关闭",
+      "unsavedChanges": "未保存的更改",
+      "discard": "放弃",
+      "enterName": "输入名称",
+      "enterDescription": "输入描述",
+      "enterPrice": "输入价格",
+      "selectCategory": "选择分类",
+      "addPhoto": "添加照片",
+      "selectAllergens": "选择"
     },
     "languages": {
       "translationProgress": "翻译进度",
@@ -1923,7 +1940,25 @@
       "itemHintBody": "菜品是菜单上的特定菜肴或饮品。例如：凯撒沙拉、玛格丽特披萨、浓缩咖啡、巧克力蛋糕。添加名称、价格，以及可选的描述和照片。",
       "noItems": "暂无菜品",
       "yourMenu": "您的菜单",
-      "defaultCategoryName": "菜单"
+      "defaultCategoryName": "菜单",
+      "noItemsInCategory": "此类别中没有项目",
+      "onboarding": {
+        "title": "让我们创建您的菜单",
+        "subtitle": "按照步骤操作或扫描纸质菜单。",
+        "scanTitle": "扫描纸质菜单",
+        "scanSubtitle": "上传照片或PDF — AI构建菜单",
+        "orStepByStep": "或逐步操作",
+        "step1Title": "创建分类",
+        "step1Subtitle": "例如: 前菜、主菜、饮品",
+        "step2Title": "添加第一道菜",
+        "step2Subtitle": "名称、价格、照片(可选)",
+        "step3Title": "预览并分享",
+        "step3Subtitle": "向顾客展示二维码"
+      },
+      "demoSubtitle": "使用示例数据预览 — 随时编辑",
+      "demoError": "创建演示菜单失败",
+      "manualTitle": "手动设置",
+      "manualSubtitle": "自己创建分类和菜品"
     },
     "home": {
       "viewMenu": "看看效果如何",
@@ -2427,5 +2462,58 @@
     "ownerBody": "您的餐厅收到了一个新预约。",
     "ownerCta": "查看预约",
     "ownerSignature": "此致敬礼，<br>IQ Rest 团队"
+  },
+  "onboarding": {
+    "step1": {
+      "title": "Welcome!",
+      "subtitle": "不到2分钟即可完成",
+      "nameLabel": "Name",
+      "namePlaceholder": "例：La Bella Italia",
+      "nameRequired": "Please enter your restaurant name",
+      "languageLabel": "Language",
+      "autoDetected": "Language & currency filled in automatically. Change if needed.",
+      "next": "Next",
+      "setupText": "让我们设置您的菜单",
+      "nameHint": "这将显示在您的数字菜单顶部。"
+    },
+    "step2": {
+      "title": "添加您的第一道菜",
+      "motivation": "只需添加一道菜，即可看到您的菜单效果！",
+      "categoryLabel": "类别名称",
+      "categoryPlaceholder": "例：主菜单、饮料",
+      "dishNameLabel": "菜品名称",
+      "dishNamePlaceholder": "例：玛格丽特披萨",
+      "nameRequired": "Please enter a dish name",
+      "priceLabel": "价格",
+      "priceRequired": "请输入有效价格",
+      "createMenu": "Create My Menu!",
+      "photoLabel": "照片",
+      "addPhoto": "添加照片",
+      "photoHint": "JPG或PNG，最大5MB。您可以稍后添加照片。"
+    },
+    "saveError": "出现错误，请重试",
+    "save": "Save",
+    "cancel": "Cancel",
+    "close": "Close",
+    "step4": {
+      "title": "您的菜单已准备好！",
+      "subtitle": "打印此二维码并放在桌上",
+      "viewMenu": "Preview Menu",
+      "goToDashboard": "前往控制台并下载二维码",
+      "copy": "复制"
+    },
+    "step3": {
+      "title": "选择封面",
+      "subtitle": "这是顾客扫描二维码时看到的内容。",
+      "pickStyle": "Pick a style",
+      "upload": "上传",
+      "yourPhoto": "您的照片",
+      "menuLabel": "Menu",
+      "openNow": "Open now",
+      "oneCategory": "1 category",
+      "changeLater": "您可以稍后在设置中更改。"
+    },
+    "back": "Back",
+    "continue": "继续"
   }
 }

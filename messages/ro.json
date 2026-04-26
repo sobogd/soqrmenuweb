@@ -1636,7 +1636,11 @@
         "emailInvalid": "Introduceți o adresă de email validă."
       },
       "or": "sau",
-      "continueGoogle": "Continuă cu Google"
+      "continueGoogle": "Continuă cu Google",
+      "emailLabel": "Email",
+      "continueEmail": "Continuați cu email",
+      "verifyCodeLabel": "Cod de verificare",
+      "verifyButton": "Verificați și continuați"
     },
     "analytics": {
       "monthlyUsage": "Utilizare lunar",
@@ -1699,7 +1703,11 @@
       "sort": "Sortează",
       "saveSort": "Salvează",
       "sortSaved": "Ordinea de sortare salvată",
-      "sortError": "Nu s-a reușit salvarea ordinii de sortare"
+      "sortError": "Nu s-a reușit salvarea ordinii de sortare",
+      "close": "Închide",
+      "unsavedChanges": "Modificări nesalvate",
+      "discard": "Renunță",
+      "enterName": "Introduceți numele"
     },
     "items": {
       "general": "General",
@@ -1773,7 +1781,16 @@
       "changeBackground": "Schimbă fundalul",
       "regenerateImage": "Regenerează",
       "generateLimitReached": "Generări AI gratuite epuizate",
-      "generateLimitDescription": "Ați folosit toate cele 2 generări gratuite de imagini AI. Treceți la Growth sau Pro pentru generări nelimitate."
+      "generateLimitDescription": "Ați folosit toate cele 2 generări gratuite de imagini AI. Treceți la Growth sau Pro pentru generări nelimitate.",
+      "close": "Închide",
+      "unsavedChanges": "Modificări nesalvate",
+      "discard": "Renunță",
+      "enterName": "Introduceți numele",
+      "enterDescription": "Introduceți descrierea",
+      "enterPrice": "Introduceți prețul",
+      "selectCategory": "Alegeți categoria",
+      "addPhoto": "Adaugă foto",
+      "selectAllergens": "Alegeți"
     },
     "languages": {
       "translationProgress": "Progresul traducerii",
@@ -1923,7 +1940,25 @@
       "itemHintBody": "Un preparat este un fel de mâncare sau băutură specifică din meniu. De exemplu: Salată Caesar, Pizza Margherita, Espresso, Tort de ciocolată. Adaugă un nume, preț și opțional o descriere și o fotografie.",
       "noItems": "Încă nu sunt preparate",
       "yourMenu": "Meniul tău",
-      "defaultCategoryName": "Meniu"
+      "defaultCategoryName": "Meniu",
+      "noItemsInCategory": "Nu există articole în această categorie",
+      "onboarding": {
+        "title": "Să îți construim meniul",
+        "subtitle": "Urmează pașii sau scanează un meniu pe hârtie.",
+        "scanTitle": "Scanează meniul pe hârtie",
+        "scanSubtitle": "Încarcă foto sau PDF — AI construiește meniul",
+        "orStepByStep": "sau pas cu pas",
+        "step1Title": "Creează o categorie",
+        "step1Subtitle": "De ex. Aperitive, Feluri principale, Băuturi",
+        "step2Title": "Adaugă primul preparat",
+        "step2Subtitle": "Nume, preț, foto (opțional)",
+        "step3Title": "Previzualizare și partajare",
+        "step3Subtitle": "Arată QR clienților"
+      },
+      "demoSubtitle": "Previzualizare cu date exemplu — editabil",
+      "demoError": "Eroare la crearea meniului demo",
+      "manualTitle": "Configurare manuală",
+      "manualSubtitle": "Creează categorii și feluri singur"
     },
     "home": {
       "viewMenu": "Vezi cum arată",
@@ -2427,5 +2462,58 @@
     "ownerBody": "O nouă rezervare a fost făcută la restaurantul dumneavoastră.",
     "ownerCta": "Vezi rezervările",
     "ownerSignature": "Cu stimă,<br>Echipa IQ Rest"
+  },
+  "onboarding": {
+    "step1": {
+      "title": "Welcome!",
+      "subtitle": "Durează mai puțin de 2 minute",
+      "nameLabel": "Name",
+      "namePlaceholder": "Ex.: La Bella Italia",
+      "nameRequired": "Please enter your restaurant name",
+      "languageLabel": "Language",
+      "autoDetected": "Language & currency filled in automatically. Change if needed.",
+      "next": "Next",
+      "setupText": "Să configurăm meniul dvs.",
+      "nameHint": "Acesta va apărea în partea de sus a meniului digital."
+    },
+    "step2": {
+      "title": "Adăugați primul preparat",
+      "motivation": "Adăugați doar un preparat pentru a vedea cum va arăta meniul!",
+      "categoryLabel": "Numele categoriei",
+      "categoryPlaceholder": "Ex.: Meniu principal, Băuturi",
+      "dishNameLabel": "Numele preparatului",
+      "dishNamePlaceholder": "Ex.: Pizza Margherita",
+      "nameRequired": "Please enter a dish name",
+      "priceLabel": "Preț",
+      "priceRequired": "Introduceți un preț valid",
+      "createMenu": "Create My Menu!",
+      "photoLabel": "Fotografie",
+      "addPhoto": "Adăugați fotografie",
+      "photoHint": "JPG sau PNG, până la 5 MB. Puteți adăuga fotografii mai târziu."
+    },
+    "saveError": "Ceva a mers prost, vă rugăm să încercați din nou",
+    "save": "Save",
+    "cancel": "Cancel",
+    "close": "Close",
+    "step4": {
+      "title": "Meniul dvs. este gata!",
+      "subtitle": "Tipăriți acest cod QR și puneți-l pe mese",
+      "viewMenu": "Preview Menu",
+      "goToDashboard": "Mergeți la panou și descărcați QR",
+      "copy": "Copiați"
+    },
+    "step3": {
+      "title": "Alegeți coperta",
+      "subtitle": "Acesta este ceea ce văd oaspeții când scanează QR-ul.",
+      "pickStyle": "Pick a style",
+      "upload": "Încărcați",
+      "yourPhoto": "Fotografia dvs.",
+      "menuLabel": "Menu",
+      "openNow": "Open now",
+      "oneCategory": "1 category",
+      "changeLater": "Puteți schimba aceasta mai târziu în setări."
+    },
+    "back": "Back",
+    "continue": "Continuați"
   }
 }

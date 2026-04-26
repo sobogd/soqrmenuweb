@@ -1636,7 +1636,11 @@
         "emailInvalid": "Įveskite galiojantį el. paštą."
       },
       "or": "arba",
-      "continueGoogle": "Tęsti su Google"
+      "continueGoogle": "Tęsti su Google",
+      "emailLabel": "El. paštas",
+      "continueEmail": "Tęsti su el. paštu",
+      "verifyCodeLabel": "Patvirtinimo kodas",
+      "verifyButton": "Patvirtinti ir tęsti"
     },
     "analytics": {
       "monthlyUsage": "Mėnesio naudojimas",
@@ -1699,7 +1703,11 @@
       "sort": "Rūšiuoti",
       "saveSort": "Išsaugoti",
       "sortSaved": "Rūšiavimo tvarka išsaugota",
-      "sortError": "Nepavyko išsaugoti rūšiavimo tvarkos"
+      "sortError": "Nepavyko išsaugoti rūšiavimo tvarkos",
+      "close": "Uždaryti",
+      "unsavedChanges": "Neišsaugoti pakeitimai",
+      "discard": "Atmesti",
+      "enterName": "Įveskite pavadinimą"
     },
     "items": {
       "general": "Bendra",
@@ -1773,7 +1781,16 @@
       "changeBackground": "Keisti foną",
       "regenerateImage": "Pergeneruoti",
       "generateLimitReached": "Nemokamos AI generacijos išnaudotos",
-      "generateLimitDescription": "Išnaudojote 2 nemokamas AI vaizdų generacijas. Atnaujinkite iki Growth arba Pro neribotoms generacijoms."
+      "generateLimitDescription": "Išnaudojote 2 nemokamas AI vaizdų generacijas. Atnaujinkite iki Growth arba Pro neribotoms generacijoms.",
+      "close": "Uždaryti",
+      "unsavedChanges": "Neišsaugoti pakeitimai",
+      "discard": "Atmesti",
+      "enterName": "Įveskite pavadinimą",
+      "enterDescription": "Įveskite aprašymą",
+      "enterPrice": "Įveskite kainą",
+      "selectCategory": "Pasirinkite kategoriją",
+      "addPhoto": "Pridėti nuotrauką",
+      "selectAllergens": "Pasirinkti"
     },
     "languages": {
       "translationProgress": "Vertimo pažanga",
@@ -1923,7 +1940,25 @@
       "itemHintBody": "Patiekalas — tai konkretus patiekalas ar gėrimas meniu. Pavyzdžiui: Cezario salotos, Margherita pica, Espresso, Šokoladinis tortas. Pridėkite pavadinimą, kainą ir pasirinktinai aprašymą bei nuotrauką.",
       "noItems": "Dar nėra patiekalų",
       "yourMenu": "Jūsų meniu",
-      "defaultCategoryName": "Meniu"
+      "defaultCategoryName": "Meniu",
+      "noItemsInCategory": "Šioje kategorijoje nėra prekių",
+      "onboarding": {
+        "title": "Sukurkime jūsų meniu",
+        "subtitle": "Sekite žingsnius arba nuskaitykite popierinį meniu.",
+        "scanTitle": "Nuskaityti popierinį meniu",
+        "scanSubtitle": "Įkelkite nuotrauką ar PDF — AI sukurs meniu",
+        "orStepByStep": "arba žingsnis po žingsnio",
+        "step1Title": "Sukurkite kategoriją",
+        "step1Subtitle": "Pvz. Užkandžiai, Pagrindiniai, Gėrimai",
+        "step2Title": "Pridėkite pirmąjį patiekalą",
+        "step2Subtitle": "Pavadinimas, kaina, nuotrauka (pasirinktinai)",
+        "step3Title": "Peržiūra ir dalijimasis",
+        "step3Subtitle": "Rodykite QR klientams"
+      },
+      "demoSubtitle": "Peržiūra su pavyzdiniais duomenimis — redaguojama",
+      "demoError": "Nepavyko sukurti demonstracinio meniu",
+      "manualTitle": "Rankinis nustatymas",
+      "manualSubtitle": "Sukurkite kategorijas ir patiekalus patys"
     },
     "home": {
       "viewMenu": "Pažiūrėkite, kaip tai atrodo",
@@ -2427,5 +2462,58 @@
     "ownerBody": "Jūsų restorane atlikta nauja rezervacija.",
     "ownerCta": "Peržiūrėti rezervacijas",
     "ownerSignature": "Pagarbiai,<br>IQ Rest komanda"
+  },
+  "onboarding": {
+    "step1": {
+      "title": "Welcome!",
+      "subtitle": "Tai užtrunka mažiau nei 2 minutes",
+      "nameLabel": "Name",
+      "namePlaceholder": "Pvz.: La Bella Italia",
+      "nameRequired": "Please enter your restaurant name",
+      "languageLabel": "Language",
+      "autoDetected": "Language & currency filled in automatically. Change if needed.",
+      "next": "Next",
+      "setupText": "Nustatykime jūsų meniu",
+      "nameHint": "Tai bus rodoma jūsų skaitmeninio meniu viršuje."
+    },
+    "step2": {
+      "title": "Pridėkite pirmą patiekalą",
+      "motivation": "Pridėkite vieną patiekalą ir pamatykite, kaip atrodys jūsų meniu!",
+      "categoryLabel": "Kategorijos pavadinimas",
+      "categoryPlaceholder": "Pvz.: Pagrindinis meniu, Gėrimai",
+      "dishNameLabel": "Patiekalo pavadinimas",
+      "dishNamePlaceholder": "Pvz.: Margherita pica",
+      "nameRequired": "Please enter a dish name",
+      "priceLabel": "Kaina",
+      "priceRequired": "Įveskite tinkamą kainą",
+      "createMenu": "Create My Menu!",
+      "photoLabel": "Nuotrauka",
+      "addPhoto": "Pridėti nuotrauką",
+      "photoHint": "JPG arba PNG, iki 5 MB. Nuotraukas galite pridėti vėliau."
+    },
+    "saveError": "Kažkas nutiko ne taip, bandykite dar kartą",
+    "save": "Save",
+    "cancel": "Cancel",
+    "close": "Close",
+    "step4": {
+      "title": "Jūsų meniu paruoštas!",
+      "subtitle": "Atspausdinkite šį QR kodą ir padėkite ant stalų",
+      "viewMenu": "Preview Menu",
+      "goToDashboard": "Eiti į valdymo skydelį ir atsisiųsti QR",
+      "copy": "Kopijuoti"
+    },
+    "step3": {
+      "title": "Pasirinkite viršelį",
+      "subtitle": "Tai svečiai mato nuskaitę QR kodą.",
+      "pickStyle": "Pick a style",
+      "upload": "Įkelti",
+      "yourPhoto": "Jūsų nuotrauka",
+      "menuLabel": "Menu",
+      "openNow": "Open now",
+      "oneCategory": "1 category",
+      "changeLater": "Galite tai pakeisti vėliau nustatymuose."
+    },
+    "back": "Back",
+    "continue": "Tęsti"
   }
 }

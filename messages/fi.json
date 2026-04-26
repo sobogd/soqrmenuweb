@@ -1636,7 +1636,11 @@
         "emailInvalid": "Syötä kelvollinen sähköpostiosoite."
       },
       "or": "tai",
-      "continueGoogle": "Jatka Googlella"
+      "continueGoogle": "Jatka Googlella",
+      "emailLabel": "Sähköposti",
+      "continueEmail": "Jatka sähköpostilla",
+      "verifyCodeLabel": "Vahvistuskoodi",
+      "verifyButton": "Vahvista ja jatka"
     },
     "analytics": {
       "monthlyUsage": "Kuukausittainen käyttö",
@@ -1699,7 +1703,11 @@
       "sort": "Lajittele",
       "saveSort": "Tallenna",
       "sortSaved": "Lajittelujärjestys tallennettu",
-      "sortError": "Lajittelujärjestyksen tallentaminen epäonnistui"
+      "sortError": "Lajittelujärjestyksen tallentaminen epäonnistui",
+      "close": "Sulje",
+      "unsavedChanges": "Tallentamattomia muutoksia",
+      "discard": "Hylkää",
+      "enterName": "Anna nimi"
     },
     "items": {
       "general": "Yleistä",
@@ -1773,7 +1781,16 @@
       "changeBackground": "Vaihda tausta",
       "regenerateImage": "Luo uudelleen",
       "generateLimitReached": "Ilmaiset AI-generoinnit käytetty",
-      "generateLimitDescription": "Olet käyttänyt kaikki 2 ilmaista AI-kuvagenerointia. Päivitä Growth- tai Pro-tilaukseen rajattomia generointeja varten."
+      "generateLimitDescription": "Olet käyttänyt kaikki 2 ilmaista AI-kuvagenerointia. Päivitä Growth- tai Pro-tilaukseen rajattomia generointeja varten.",
+      "close": "Sulje",
+      "unsavedChanges": "Tallentamattomia muutoksia",
+      "discard": "Hylkää",
+      "enterName": "Anna nimi",
+      "enterDescription": "Anna kuvaus",
+      "enterPrice": "Anna hinta",
+      "selectCategory": "Valitse kategoria",
+      "addPhoto": "Lisää kuva",
+      "selectAllergens": "Valitse"
     },
     "languages": {
       "translationProgress": "Käännösprosessin edistyminen",
@@ -1923,7 +1940,25 @@
       "itemHintBody": "Annos on tietty ruokalaji tai juoma ruokalistalla. Esimerkiksi: Caesar-salaatti, Margherita-pizza, Espresso, Suklaakakku. Lisää nimi, hinta ja halutessasi kuvaus ja kuva.",
       "noItems": "Ei vielä annoksia",
       "yourMenu": "Ruokalistasi",
-      "defaultCategoryName": "Menu"
+      "defaultCategoryName": "Menu",
+      "noItemsInCategory": "Ei tuotteita tässä kategoriassa",
+      "onboarding": {
+        "title": "Tehdään ruokalistasi",
+        "subtitle": "Seuraa vaiheita tai skannaa paperiruokalista.",
+        "scanTitle": "Skannaa paperiruokalista",
+        "scanSubtitle": "Lataa kuva tai PDF — tekoäly luo ruokalistan",
+        "orStepByStep": "tai askel askeleelta",
+        "step1Title": "Luo kategoria",
+        "step1Subtitle": "Esim. Alkuruoat, Pääruoat, Juomat",
+        "step2Title": "Lisää ensimmäinen annos",
+        "step2Subtitle": "Nimi, hinta, kuva (valinnainen)",
+        "step3Title": "Esikatselu ja jakaminen",
+        "step3Subtitle": "Näytä QR asiakkaille"
+      },
+      "demoSubtitle": "Esikatselu esimerkkidatalla — muokattavissa",
+      "demoError": "Demo-ruokalistan luominen epäonnistui",
+      "manualTitle": "Manuaalinen asetus",
+      "manualSubtitle": "Luo kategoriat ja ruoat itse"
     },
     "home": {
       "viewMenu": "Katso miltä se näyttää",
@@ -2427,5 +2462,58 @@
     "ownerBody": "Ravintolaasi on tehty uusi varaus.",
     "ownerCta": "Näytä varaukset",
     "ownerSignature": "Ystävällisin terveisin,<br>IQ Rest Team"
+  },
+  "onboarding": {
+    "step1": {
+      "title": "Welcome!",
+      "subtitle": "Kestää alle 2 minuuttia",
+      "nameLabel": "Name",
+      "namePlaceholder": "Esim. La Bella Italia",
+      "nameRequired": "Please enter your restaurant name",
+      "languageLabel": "Language",
+      "autoDetected": "Language & currency filled in automatically. Change if needed.",
+      "next": "Next",
+      "setupText": "Asetetaan ruokalistasi",
+      "nameHint": "Tämä näkyy digitaalisen ruokalistasi yläosassa."
+    },
+    "step2": {
+      "title": "Lisää ensimmäinen ruokalajisi",
+      "motivation": "Lisää vain yksi ruokalaji nähdäksesi, miltä ruokalistasi näyttää!",
+      "categoryLabel": "Kategorian nimi",
+      "categoryPlaceholder": "Esim. Pääruokalista, Juomat",
+      "dishNameLabel": "Ruokalajin nimi",
+      "dishNamePlaceholder": "Esim. Margherita-pizza",
+      "nameRequired": "Please enter a dish name",
+      "priceLabel": "Hinta",
+      "priceRequired": "Anna kelvollinen hinta",
+      "createMenu": "Create My Menu!",
+      "photoLabel": "Kuva",
+      "addPhoto": "Lisää kuva",
+      "photoHint": "JPG tai PNG, enintään 5 Mt. Voit lisätä kuvia myöhemmin."
+    },
+    "saveError": "Jotain meni pieleen, yritä uudelleen",
+    "save": "Save",
+    "cancel": "Cancel",
+    "close": "Close",
+    "step4": {
+      "title": "Ruokalistasi on valmis!",
+      "subtitle": "Tulosta tämä QR-koodi ja aseta se pöydillesi",
+      "viewMenu": "Preview Menu",
+      "goToDashboard": "Siirry hallintapaneeliin ja lataa QR",
+      "copy": "Kopioi"
+    },
+    "step3": {
+      "title": "Valitse kansi",
+      "subtitle": "Tämän vieraat näkevät skannatessaan QR-koodin.",
+      "pickStyle": "Pick a style",
+      "upload": "Lataa",
+      "yourPhoto": "Oma kuva",
+      "menuLabel": "Menu",
+      "openNow": "Open now",
+      "oneCategory": "1 category",
+      "changeLater": "Voit muuttaa tämän myöhemmin asetuksissa."
+    },
+    "back": "Back",
+    "continue": "Jatka"
   }
 }

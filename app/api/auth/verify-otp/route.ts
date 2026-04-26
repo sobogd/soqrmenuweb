@@ -125,11 +125,25 @@ export async function POST(request: NextRequest) {
     cookieStore.set("user_email", normalizedEmail, AUTH_COOKIE_OPTIONS);
     cookieStore.set("user_id", user.id, AUTH_COOKIE_OPTIONS);
 
-    // Get onboarding step for redirect hint
-    const userCompany = await prisma.userCompany.findFirst({
+    // Get or create company, return onboarding step
+    let userCompany = await prisma.userCompany.findFirst({
       where: { userId: user.id },
       include: { company: { select: { onboardingStep: true } } },
     });
+
+    if (!userCompany) {
+      const company = await prisma.company.create({
+        data: {
+          name: normalizedEmail.split("@")[0],
+          onboardingStep: 0,
+          trialEndsAt: new Date(Date.now() + 14 * 24 * 60 * 60 * 1000),
+        },
+      });
+      await prisma.userCompany.create({
+        data: { userId: user.id, companyId: company.id, role: "owner" },
+      });
+      userCompany = { company: { onboardingStep: 0 } } as NonNullable<typeof userCompany>;
+    }
 
     const onboardingStep = userCompany?.company.onboardingStep ?? 0;
 

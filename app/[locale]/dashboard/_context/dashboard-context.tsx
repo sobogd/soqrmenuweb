@@ -132,6 +132,10 @@ export interface CategoriesTranslations {
   saveSort: string;
   sortSaved: string;
   sortError: string;
+  close: string;
+  unsavedChanges: string;
+  discard: string;
+  enterName: string;
 }
 
 export interface ItemsTranslations {
@@ -193,6 +197,15 @@ export interface ItemsTranslations {
   generateLimitReached: string;
   generateLimitDescription: string;
   add?: string;
+  close: string;
+  unsavedChanges: string;
+  discard: string;
+  enterName: string;
+  enterDescription: string;
+  enterPrice: string;
+  selectCategory: string;
+  addPhoto: string;
+  selectAllergens: string;
 }
 
 export interface MenuTranslations {
@@ -206,6 +219,25 @@ export interface MenuTranslations {
   scanButton: string;
   scanDescription: string;
   defaultCategoryName: string;
+  noItemsInCategory: string;
+  demoButton: string;
+  demoSubtitle: string;
+  demoError: string;
+  manualTitle: string;
+  manualSubtitle: string;
+  onboarding: {
+    title: string;
+    subtitle: string;
+    scanTitle: string;
+    scanSubtitle: string;
+    orStepByStep: string;
+    step1Title: string;
+    step1Subtitle: string;
+    step2Title: string;
+    step2Subtitle: string;
+    step3Title: string;
+    step3Subtitle: string;
+  };
 }
 
 export interface SettingsTranslations {

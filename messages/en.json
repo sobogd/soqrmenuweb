@@ -1616,15 +1616,15 @@
         "and": "and",
         "privacy": "Privacy Policy"
       },
-      "emailPlaceholder": "your@email.com",
+      "emailPlaceholder": "you@restaurant.com",
       "continue": "Continue",
       "or": "or",
       "continueGoogle": "Continue with Google",
       "verifyTitle": "Check your email",
-      "verifySubtitle": "We sent a code to {email}",
-      "checkSpam": "Can't find it? Check your spam folder",
+      "verifySubtitle": "We sent a 6-digit code to {email}. Enter it below to continue.",
+      "checkSpam": "Didn't get it? Check your spam folder.",
       "verify": "Verify",
-      "changeEmail": "Use a different email",
+      "changeEmail": "Change email",
       "resendCode": "Resend code",
       "resendSent": "Code sent!",
       "errors": {
@@ -1636,7 +1636,11 @@
         "tooManyAttempts": "Too many attempts. Please request a new code.",
         "emailRequired": "Please enter your email.",
         "emailInvalid": "Please enter a valid email."
-      }
+      },
+      "emailLabel": "Email",
+      "continueEmail": "Continue with email",
+      "verifyCodeLabel": "Verification code",
+      "verifyButton": "Verify and continue"
     },
     "claim": {
       "title": "Save your menu",
@@ -1709,7 +1713,11 @@
       "sort": "Sort",
       "saveSort": "Save",
       "sortSaved": "Sort order saved",
-      "sortError": "Failed to save sort order"
+      "sortError": "Failed to save sort order",
+      "close": "Close",
+      "unsavedChanges": "Unsaved changes",
+      "discard": "Discard",
+      "enterName": "Enter name"
     },
     "items": {
       "general": "General",
@@ -1783,7 +1791,16 @@
       "changeBackground": "Change background",
       "regenerateImage": "Regenerate",
       "generateLimitReached": "Free AI generations used up",
-      "generateLimitDescription": "You've used all 2 free AI image generations. Upgrade to Growth or Pro for unlimited generations."
+      "generateLimitDescription": "You've used all 2 free AI image generations. Upgrade to Growth or Pro for unlimited generations.",
+      "close": "Close",
+      "unsavedChanges": "Unsaved changes",
+      "discard": "Discard",
+      "enterName": "Enter name",
+      "enterDescription": "Enter description",
+      "enterPrice": "Enter price",
+      "selectCategory": "Select category",
+      "addPhoto": "Add photo",
+      "selectAllergens": "Select"
     },
     "menu": {
       "yourMenu": "Your Menu",
@@ -1813,7 +1830,25 @@
       "hintBody": "A category is a section of your menu. For example: Starters, Main Dishes, Desserts, Drinks, Lunch Specials.",
       "hintNoCategories": "Don't have categories? No problem — create one called \"Menu\" or \"Our Dishes\" and add everything there.",
       "itemHintTitle": "What is a dish?",
-      "itemHintBody": "A dish is a specific dish or drink on your menu. For example: Caesar Salad, Margherita Pizza, Espresso, Chocolate Cake. Add a name, price, and optionally a description and photo."
+      "itemHintBody": "A dish is a specific dish or drink on your menu. For example: Caesar Salad, Margherita Pizza, Espresso, Chocolate Cake. Add a name, price, and optionally a description and photo.",
+      "noItemsInCategory": "No items in this category",
+      "onboarding": {
+        "title": "Let's build your menu",
+        "subtitle": "Follow the steps below or scan a paper menu.",
+        "scanTitle": "Scan paper menu",
+        "scanSubtitle": "Upload a photo or PDF — AI builds your menu",
+        "orStepByStep": "or step by step",
+        "step1Title": "Create a category",
+        "step1Subtitle": "E.g. Starters, Mains, Drinks",
+        "step2Title": "Add your first dish",
+        "step2Subtitle": "Name, price, photo (optional)",
+        "step3Title": "Preview & share",
+        "step3Subtitle": "Show QR to customers"
+      },
+      "demoSubtitle": "Preview with sample data — edit anytime",
+      "demoError": "Failed to create demo menu",
+      "manualTitle": "Manual setup",
+      "manualSubtitle": "Create categories and dishes yourself"
     },
     "languages": {
       "translationProgress": "Translation Progress",
@@ -2418,5 +2453,58 @@
     "ownerBody": "A new reservation has been made at your restaurant.",
     "ownerCta": "View Reservations",
     "ownerSignature": "Best regards,<br>IQ Rest Team"
+  },
+  "onboarding": {
+    "step1": {
+      "title": "Welcome!",
+      "subtitle": "It takes less than 2 minutes",
+      "nameLabel": "Restaurant name",
+      "namePlaceholder": "E.g. La Bella Italia",
+      "nameRequired": "Please enter your restaurant name",
+      "languageLabel": "Language",
+      "autoDetected": "Language & currency filled in automatically. Change if needed.",
+      "next": "Next",
+      "setupText": "Let's set up your menu",
+      "nameHint": "This will appear at the top of your digital menu."
+    },
+    "step2": {
+      "title": "Add your first dish",
+      "motivation": "Add just one dish to see how your menu will look!",
+      "categoryLabel": "Category name",
+      "categoryPlaceholder": "E.g. Main Menu, Drinks",
+      "dishNameLabel": "Dish name",
+      "dishNamePlaceholder": "E.g. Margherita Pizza",
+      "nameRequired": "Please enter a dish name",
+      "priceLabel": "Price",
+      "priceRequired": "Please enter a valid price",
+      "createMenu": "Create My Menu!",
+      "photoLabel": "Photo",
+      "addPhoto": "Add photo",
+      "photoHint": "JPG or PNG, up to 5 MB. You can add photos later."
+    },
+    "saveError": "Something went wrong, please try again",
+    "save": "Save",
+    "cancel": "Cancel",
+    "close": "Close",
+    "step4": {
+      "title": "Your menu is ready!",
+      "subtitle": "Print this QR code and put it on your tables",
+      "viewMenu": "Preview Menu",
+      "goToDashboard": "Go to Dashboard & Download QR",
+      "copy": "Copy"
+    },
+    "step3": {
+      "title": "Choose your cover",
+      "subtitle": "This is what guests see when they scan the QR.",
+      "pickStyle": "Pick a style",
+      "upload": "Upload",
+      "yourPhoto": "Your photo",
+      "menuLabel": "Menu",
+      "openNow": "Open now",
+      "oneCategory": "1 category",
+      "changeLater": "You can change this later in settings."
+    },
+    "back": "Back",
+    "continue": "Continue"
   }
 }

@@ -41,6 +41,16 @@ export default async function DashboardLayout({
 
   if (!restaurant) {
     const cookieStore2 = await cookies();
+    const currentEmailForCheck = cookieStore2.get("user_email")?.value;
+    const isAnonCheck = currentEmailForCheck ? isAnonymousEmail(currentEmailForCheck) : false;
+
+    // User hasn't completed onboarding — send them through the onboarding flow
+    if (!isAnonCheck && company && company.onboardingStep < 3) {
+      const locale = await getLocale();
+      redirect(`/${locale}/onboarding`);
+    }
+
+    // Completed user with no restaurant (edge case: restaurant deleted) — auto-create
     const userLocale = (await getLocale()) as Locale;
     const currency = cookieStore2.get("currency")?.value || "EUR";
     const geoCountry = cookieStore2.get("geo_country")?.value || null;
@@ -73,10 +83,6 @@ export default async function DashboardLayout({
           sortOrder: 0,
           companyId,
         },
-      });
-      await tx.company.update({
-        where: { id: companyId },
-        data: { onboardingStep: 3 },
       });
     });
   }
@@ -157,6 +163,25 @@ export default async function DashboardLayout({
       scanButton: t("menu.scanButton"),
       scanDescription: t("menu.scanDescription"),
       defaultCategoryName: t("menu.defaultCategoryName"),
+      noItemsInCategory: t("menu.noItemsInCategory"),
+      demoButton: t("menu.demoButton"),
+      demoSubtitle: t("menu.demoSubtitle"),
+      demoError: t("menu.demoError"),
+      manualTitle: t("menu.manualTitle"),
+      manualSubtitle: t("menu.manualSubtitle"),
+      onboarding: {
+        title: t("menu.onboarding.title"),
+        subtitle: t("menu.onboarding.subtitle"),
+        scanTitle: t("menu.onboarding.scanTitle"),
+        scanSubtitle: t("menu.onboarding.scanSubtitle"),
+        orStepByStep: t("menu.onboarding.orStepByStep"),
+        step1Title: t("menu.onboarding.step1Title"),
+        step1Subtitle: t("menu.onboarding.step1Subtitle"),
+        step2Title: t("menu.onboarding.step2Title"),
+        step2Subtitle: t("menu.onboarding.step2Subtitle"),
+        step3Title: t("menu.onboarding.step3Title"),
+        step3Subtitle: t("menu.onboarding.step3Subtitle"),
+      },
     },
     categories: {
       general: t("categories.general"),
@@ -189,6 +214,10 @@ export default async function DashboardLayout({
       saveSort: t("categories.saveSort"),
       sortSaved: t("categories.sortSaved"),
       sortError: t("categories.sortError"),
+      close: t("categories.close"),
+      unsavedChanges: t("categories.unsavedChanges"),
+      discard: t("categories.discard"),
+      enterName: t("categories.enterName"),
     },
     items: {
       general: t("items.general"),
@@ -248,6 +277,15 @@ export default async function DashboardLayout({
       regenerateImage: t("items.regenerateImage"),
       generateLimitReached: t("items.generateLimitReached"),
       generateLimitDescription: t("items.generateLimitDescription"),
+      close: t("items.close"),
+      unsavedChanges: t("items.unsavedChanges"),
+      discard: t("items.discard"),
+      enterName: t("items.enterName"),
+      enterDescription: t("items.enterDescription"),
+      enterPrice: t("items.enterPrice"),
+      selectCategory: t("items.selectCategory"),
+      addPhoto: t("items.addPhoto"),
+      selectAllergens: t("items.selectAllergens"),
     },
     settings: {
       name: "",

@@ -1636,7 +1636,11 @@
         "emailInvalid": "Ange en giltig e-post."
       },
       "or": "eller",
-      "continueGoogle": "Fortsätt med Google"
+      "continueGoogle": "Fortsätt med Google",
+      "emailLabel": "E-post",
+      "continueEmail": "Fortsätt med e-post",
+      "verifyCodeLabel": "Verifieringskod",
+      "verifyButton": "Verifiera och fortsätt"
     },
     "analytics": {
       "monthlyUsage": "Månatlig användning",
@@ -1699,7 +1703,11 @@
       "sort": "Sortera",
       "saveSort": "Spara",
       "sortSaved": "Sorteringsordning sparad",
-      "sortError": "Misslyckades med att spara sorteringsordning"
+      "sortError": "Misslyckades med att spara sorteringsordning",
+      "close": "Stäng",
+      "unsavedChanges": "Osparade ändringar",
+      "discard": "Kasta",
+      "enterName": "Ange namn"
     },
     "items": {
       "general": "Allmänt",
@@ -1773,7 +1781,16 @@
       "changeBackground": "Ändra bakgrund",
       "regenerateImage": "Generera om",
       "generateLimitReached": "Gratis AI-genereringar slut",
-      "generateLimitDescription": "Du har använt alla 2 gratis AI-bildgenereringar. Uppgradera till Growth eller Pro för obegränsade genereringar."
+      "generateLimitDescription": "Du har använt alla 2 gratis AI-bildgenereringar. Uppgradera till Growth eller Pro för obegränsade genereringar.",
+      "close": "Stäng",
+      "unsavedChanges": "Osparade ändringar",
+      "discard": "Kasta",
+      "enterName": "Ange namn",
+      "enterDescription": "Ange beskrivning",
+      "enterPrice": "Ange pris",
+      "selectCategory": "Välj kategori",
+      "addPhoto": "Lägg till foto",
+      "selectAllergens": "Välj"
     },
     "languages": {
       "translationProgress": "Översättningsframsteg",
@@ -1923,7 +1940,25 @@
       "itemHintBody": "En rätt är en specifik maträtt eller dryck på menyn. Till exempel: Caesarsallad, Margheritapizza, Espresso, Chokladkaka. Lägg till namn, pris och valfritt beskrivning och foto.",
       "noItems": "Inga rätter ännu",
       "yourMenu": "Din meny",
-      "defaultCategoryName": "Meny"
+      "defaultCategoryName": "Meny",
+      "noItemsInCategory": "Inga varor i denna kategori",
+      "onboarding": {
+        "title": "Låt oss bygga din meny",
+        "subtitle": "Följ stegen eller skanna en pappersmeny.",
+        "scanTitle": "Skanna pappersmeny",
+        "scanSubtitle": "Ladda upp bild eller PDF — AI bygger menyn",
+        "orStepByStep": "eller steg för steg",
+        "step1Title": "Skapa en kategori",
+        "step1Subtitle": "T.ex. Förrätter, Huvudrätter, Drycker",
+        "step2Title": "Lägg till din första rätt",
+        "step2Subtitle": "Namn, pris, foto (valfritt)",
+        "step3Title": "Förhandsgranska och dela",
+        "step3Subtitle": "Visa QR till kunder"
+      },
+      "demoSubtitle": "Förhandsgranskning med exempeldata — redigerbar",
+      "demoError": "Kunde inte skapa demomeny",
+      "manualTitle": "Manuell inställning",
+      "manualSubtitle": "Skapa kategorier och rätter själv"
     },
     "home": {
       "viewMenu": "Se hur det ser ut",
@@ -2427,5 +2462,58 @@
     "ownerBody": "En ny bokning har gjorts på din restaurang.",
     "ownerCta": "Visa bokningar",
     "ownerSignature": "Med vänliga hälsningar,<br>IQ Rest Team"
+  },
+  "onboarding": {
+    "step1": {
+      "title": "Welcome!",
+      "subtitle": "Det tar under 2 minuter",
+      "nameLabel": "Name",
+      "namePlaceholder": "T.ex. La Bella Italia",
+      "nameRequired": "Please enter your restaurant name",
+      "languageLabel": "Language",
+      "autoDetected": "Language & currency filled in automatically. Change if needed.",
+      "next": "Next",
+      "setupText": "Låt oss ställa in din meny",
+      "nameHint": "Detta visas högst upp på din digitala meny."
+    },
+    "step2": {
+      "title": "Lägg till din första rätt",
+      "motivation": "Lägg till bara en rätt för att se hur din meny kommer att se ut!",
+      "categoryLabel": "Kategorinamn",
+      "categoryPlaceholder": "T.ex. Huvudmeny, Drycker",
+      "dishNameLabel": "Rättens namn",
+      "dishNamePlaceholder": "T.ex. Margherita pizza",
+      "nameRequired": "Please enter a dish name",
+      "priceLabel": "Pris",
+      "priceRequired": "Ange ett giltigt pris",
+      "createMenu": "Create My Menu!",
+      "photoLabel": "Foto",
+      "addPhoto": "Lägg till foto",
+      "photoHint": "JPG eller PNG, upp till 5 MB. Du kan lägga till foton senare."
+    },
+    "saveError": "Något gick fel, försök igen",
+    "save": "Save",
+    "cancel": "Cancel",
+    "close": "Close",
+    "step4": {
+      "title": "Din meny är klar!",
+      "subtitle": "Skriv ut den här QR-koden och placera den på dina bord",
+      "viewMenu": "Preview Menu",
+      "goToDashboard": "Gå till instrumentpanelen och ladda ner QR",
+      "copy": "Kopiera"
+    },
+    "step3": {
+      "title": "Välj ditt omslag",
+      "subtitle": "Det här är vad gästerna ser när de skannar QR-koden.",
+      "pickStyle": "Pick a style",
+      "upload": "Ladda upp",
+      "yourPhoto": "Ditt foto",
+      "menuLabel": "Menu",
+      "openNow": "Open now",
+      "oneCategory": "1 category",
+      "changeLater": "Du kan ändra detta senare i inställningarna."
+    },
+    "back": "Back",
+    "continue": "Fortsätt"
   }
 }

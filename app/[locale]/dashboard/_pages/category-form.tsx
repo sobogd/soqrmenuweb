@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useState, useMemo } from "react";
-import { Loader2, Sparkles, Languages } from "lucide-react";
+import { Loader2, Sparkles, Type } from "lucide-react";
 import { toast } from "sonner";
 import {
   Dialog,
@@ -9,18 +9,8 @@ import {
   DialogDescription,
   DialogTitle,
 } from "@/components/ui/dialog";
-import {
-  AlertDialog,
-  AlertDialogAction,
-  AlertDialogContent,
-  AlertDialogDescription,
-  AlertDialogFooter,
-  AlertDialogHeader,
-  AlertDialogTitle,
-} from "@/components/ui/alert-dialog";
 import { useTranslations } from "next-intl";
 import { useDashboard } from "../_context/dashboard-context";
-import { FormFieldUnderline } from "../_ui/form-field-underline";
 import { useRouter } from "@/i18n/routing";
 import { track, DashboardEvent } from "@/lib/dashboard-events";
 import { LANGUAGE_NAMES } from "../_lib/constants";
@@ -40,9 +30,10 @@ interface CategoryFormPageProps {
   restaurant: RestaurantLanguages;
   onSaved: (category: CategoryWithTranslations) => void;
   onDeleted: (id: string) => void;
+  onDirtyChange?: (dirty: boolean) => void;
 }
 
-export function CategoryFormPage({ category, restaurant, onSaved, onDeleted }: CategoryFormPageProps) {
+export function CategoryFormPage({ category, restaurant, onSaved, onDeleted, onDirtyChange }: CategoryFormPageProps) {
   const { translations } = useDashboard();
   const router = useRouter();
   const t = translations.categories;
@@ -69,31 +60,50 @@ export function CategoryFormPage({ category, restaurant, onSaved, onDeleted }: C
   const [validationError, setValidationError] = useState<string | null>(null);
   const [translatingLangs, setTranslatingLangs] = useState<Set<string>>(new Set());
   const [showTranslateLimitDialog, setShowTranslateLimitDialog] = useState(false);
-  const [showTranslationDialog, setShowTranslationDialog] = useState(false);
-  const [translationDialogLang, setTranslationDialogLang] = useState<string>("");
-  const [tempTranslationName, setTempTranslationName] = useState("");
+  const [showNameDialog, setShowNameDialog] = useState(false);
+  const [tempNames, setTempNames] = useState<Record<string, string>>({});
+  const [activeNameTab, setActiveNameTab] = useState<string>(restaurant.defaultLanguage);
 
   const hasChanges = useMemo(() => {
-    if (!isEdit) return !!name.trim();
     return (
       name !== initialName ||
       JSON.stringify(categoryTranslations) !== JSON.stringify(initialTranslations)
     );
-  }, [isEdit, name, categoryTranslations, initialName, initialTranslations]);
+  }, [name, categoryTranslations, initialName, initialTranslations]);
+
+  useEffect(() => {
+    onDirtyChange?.(hasChanges);
+  }, [hasChanges, onDirtyChange]);
 
   useEffect(() => {
     track(DashboardEvent.SHOWED_CATEGORY_FORM);
   }, []);
 
-  function openTranslationDialog(lang: string) {
-    setTranslationDialogLang(lang);
-    setTempTranslationName(categoryTranslations[lang]?.name || "");
-    setShowTranslationDialog(true);
+  function openNameDialog() {
+    const init: Record<string, string> = { [restaurant.defaultLanguage]: name };
+    for (const lang of otherLanguages) {
+      init[lang] = categoryTranslations[lang]?.name || "";
+    }
+    setTempNames(init);
+    setActiveNameTab(restaurant.defaultLanguage);
+    setShowNameDialog(true);
   }
 
-  async function handleTranslateTemp(lang: string) {
+  function saveNameDialog() {
+    setName(tempNames[restaurant.defaultLanguage] || "");
+    const next: Record<string, { name?: string }> = {};
+    for (const lang of otherLanguages) {
+      const v = (tempNames[lang] || "").trim();
+      if (v) next[lang] = { name: v };
+    }
+    setCategoryTranslations(next);
+    setShowNameDialog(false);
+  }
+
+  async function handleTranslateTempName(lang: string) {
     const srcLang = restaurant.defaultLanguage;
-    if (!name.trim()) return;
+    const src = (tempNames[srcLang] || "").trim();
+    if (!src) return;
 
     track(DashboardEvent.CLICKED_AI_TRANSLATE);
     setTranslatingLangs((prev) => new Set(prev).add(lang));
@@ -102,12 +112,12 @@ export function CategoryFormPage({ category, restaurant, onSaved, onDeleted }: C
       const res = await fetch("/api/translate", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ text: name.trim(), targetLanguage: lang, sourceLanguage: srcLang }),
+        body: JSON.stringify({ text: src, targetLanguage: lang, sourceLanguage: srcLang }),
       });
 
       if (res.ok) {
         const data = await res.json();
-        setTempTranslationName(data.translatedText);
+        setTempNames((prev) => ({ ...prev, [lang]: data.translatedText }));
       } else if (res.status === 403) {
         const data = await res.json().catch(() => ({}));
         if (data.error === "limit_reached") setShowTranslateLimitDialog(true);
@@ -124,17 +134,6 @@ export function CategoryFormPage({ category, restaurant, onSaved, onDeleted }: C
         return next;
       });
     }
-  }
-
-  function saveTranslation() {
-    const lang = translationDialogLang;
-    if (!lang) return;
-    const trimmed = tempTranslationName.trim();
-    setCategoryTranslations((prev) => ({
-      ...prev,
-      [lang]: trimmed ? { name: trimmed } : {},
-    }));
-    setShowTranslationDialog(false);
   }
 
   async function handleDelete() {
@@ -240,39 +239,60 @@ export function CategoryFormPage({ category, restaurant, onSaved, onDeleted }: C
         </DialogContent>
       </Dialog>
 
-      <AlertDialog open={!!validationError} onOpenChange={() => setValidationError(null)}>
-        <AlertDialogContent>
-          <AlertDialogHeader>
-            <AlertDialogTitle>{validationError}</AlertDialogTitle>
-            <AlertDialogDescription className="sr-only">{validationError}</AlertDialogDescription>
-          </AlertDialogHeader>
-          <AlertDialogFooter>
-            <AlertDialogAction onClick={() => setValidationError(null)}>OK</AlertDialogAction>
-          </AlertDialogFooter>
-        </AlertDialogContent>
-      </AlertDialog>
-
-      <Dialog open={showTranslationDialog} onOpenChange={setShowTranslationDialog}>
-        <DialogContent className="sm:max-w-[384px]">
-          <DialogTitle className="text-lg font-semibold pr-6">{LANGUAGE_NAMES[translationDialogLang] || translationDialogLang}</DialogTitle>
-          <DialogDescription className="sr-only">{LANGUAGE_NAMES[translationDialogLang] || translationDialogLang}</DialogDescription>
-          <div className="mt-2">
-            <FormFieldUnderline
-              label={t.name}
-              value={tempTranslationName}
-              onChange={setTempTranslationName}
-              placeholder={t.namePlaceholder}
-            />
-          </div>
-          {(() => {
-            const isTranslating = translatingLangs.has(translationDialogLang);
+      <Dialog open={showNameDialog} onOpenChange={setShowNameDialog}>
+        <DialogContent
+          className="sm:max-w-[384px]"
+          onOpenAutoFocus={(e) => {
+            const root = e.currentTarget as HTMLElement;
+            const el = root.querySelector("input, textarea") as HTMLInputElement | HTMLTextAreaElement | null;
+            if (el) {
+              e.preventDefault();
+              el.focus();
+              const len = el.value.length;
+              if ("setSelectionRange" in el) el.setSelectionRange(len, len);
+            }
+          }}
+        >
+          <DialogTitle className="text-lg font-semibold pr-6">{t.name}</DialogTitle>
+          <DialogDescription className="sr-only">{t.name}</DialogDescription>
+          {restaurant.languages.length > 1 && (
+            <div className="-mx-6 mt-1 flex items-center gap-1 px-6 overflow-x-auto">
+              {restaurant.languages.map((lang) => (
+                <button
+                  key={lang}
+                  type="button"
+                  onClick={() => setActiveNameTab(lang)}
+                  className={`px-3 py-1.5 rounded-md text-xs font-medium whitespace-nowrap transition-colors ${
+                    activeNameTab === lang
+                      ? "bg-primary text-primary-foreground"
+                      : "text-muted-foreground hover:bg-muted/50"
+                  }`}
+                >
+                  {LANGUAGE_NAMES[lang] || lang}
+                </button>
+              ))}
+            </div>
+          )}
+          <input
+            key={activeNameTab}
+            type="text"
+            value={tempNames[activeNameTab] || ""}
+            onChange={(e) => setTempNames((prev) => ({ ...prev, [activeNameTab]: e.target.value }))}
+            onFocus={() => track(DashboardEvent.FOCUSED_CATEGORY_NAME)}
+            onKeyDown={(e) => { if (e.key === "Enter") { e.preventDefault(); saveNameDialog(); } }}
+            placeholder={t.namePlaceholder}
+            className="w-full mt-3 text-sm bg-transparent outline-none leading-5 p-0 placeholder:text-muted-foreground/30 border-b-[1.5px] border-border pb-2"
+          />
+          {activeNameTab !== restaurant.defaultLanguage && (() => {
+            const isTranslating = translatingLangs.has(activeNameTab);
+            const srcEmpty = !(tempNames[restaurant.defaultLanguage] || "").trim();
             return (
-              <div className="-mx-6 mt-4">
+              <div className="-mx-6 mt-1">
                 <button
                   type="button"
-                  onClick={() => handleTranslateTemp(translationDialogLang)}
-                  disabled={isTranslating || !name.trim()}
-                  className="flex items-center gap-3 px-6 py-3 w-full text-left transition-colors hover:bg-muted/50 disabled:opacity-50"
+                  onClick={() => handleTranslateTempName(activeNameTab)}
+                  disabled={isTranslating || srcEmpty}
+                  className="flex items-center gap-3 px-6 py-2 w-full text-left transition-colors hover:bg-muted/50 disabled:opacity-50"
                 >
                   <Sparkles className="h-[18px] w-[18px] text-muted-foreground shrink-0" />
                   <span className="text-sm flex-1">{isTranslating ? tAi("translating") : tAi("translate")}</span>
@@ -281,17 +301,17 @@ export function CategoryFormPage({ category, restaurant, onSaved, onDeleted }: C
               </div>
             );
           })()}
-          <div className="flex items-center justify-between mt-6">
+          <div className="flex items-center justify-end gap-6 mt-4">
             <button
               type="button"
-              onClick={() => setShowTranslationDialog(false)}
+              onClick={() => setShowNameDialog(false)}
               className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
             >
               {t.cancel}
             </button>
             <button
               type="button"
-              onClick={saveTranslation}
+              onClick={saveNameDialog}
               className="text-sm font-medium text-primary hover:text-primary/80 transition-colors"
             >
               {t.save}
@@ -299,6 +319,23 @@ export function CategoryFormPage({ category, restaurant, onSaved, onDeleted }: C
           </div>
         </DialogContent>
       </Dialog>
+
+      <Dialog open={!!validationError} onOpenChange={(open) => { if (!open) setValidationError(null); }}>
+        <DialogContent className="sm:max-w-[384px] [&>button]:hidden">
+          <DialogTitle className="text-lg font-semibold pr-6">{validationError}</DialogTitle>
+          <DialogDescription className="sr-only">{validationError}</DialogDescription>
+          <div className="flex items-center justify-end mt-4">
+            <button
+              type="button"
+              onClick={() => setValidationError(null)}
+              className="text-sm font-medium text-primary hover:text-primary/80 transition-colors"
+            >
+              {t.close}
+            </button>
+          </div>
+        </DialogContent>
+      </Dialog>
+
 
       <Dialog open={showTranslateLimitDialog} onOpenChange={setShowTranslateLimitDialog}>
         <DialogContent className="sm:max-w-sm">
@@ -335,42 +372,25 @@ export function CategoryFormPage({ category, restaurant, onSaved, onDeleted }: C
       </DialogDescription>
 
       <form id="category-form-dialog" onSubmit={handleSubmit} className="space-y-5 mt-2">
-        <FormFieldUnderline
-          id="name"
-          label={t.name}
-          value={name}
-          onChange={setName}
-          placeholder={t.namePlaceholder}
-          autoFocus
-          onFocus={() => track(DashboardEvent.FOCUSED_CATEGORY_NAME)}
-        />
-        {otherLanguages.length > 0 && (
-          <div className="-mx-6 -my-2">
-            {otherLanguages.map((lang) => {
-              const summary = categoryTranslations[lang]?.name || "";
-              return (
-                <button
-                  key={lang}
-                  type="button"
-                  onClick={() => openTranslationDialog(lang)}
-                  className="flex items-center gap-3 px-6 py-3 w-full text-left transition-colors hover:bg-muted/50"
-                >
-                  <Languages className="h-[18px] w-[18px] text-muted-foreground shrink-0" />
-                  <span className="text-sm flex-1">{LANGUAGE_NAMES[lang] || lang}</span>
-                  {summary ? (
-                    <span className="text-sm text-muted-foreground truncate max-w-[45%]">{summary}</span>
-                  ) : (
-                    <span className="text-sm text-primary">Add</span>
-                  )}
-                </button>
-              );
-            })}
-          </div>
-        )}
+        <div className="-mx-6 -my-2">
+          <button
+            type="button"
+            onClick={openNameDialog}
+            className="flex items-center gap-3 px-6 py-3 w-full text-left transition-colors hover:bg-muted/50"
+          >
+            <Type className="h-[18px] w-[18px] text-muted-foreground shrink-0" />
+            <span className="text-sm flex-1">{t.name}</span>
+            {name ? (
+              <span className="text-sm text-muted-foreground truncate max-w-[45%]">{name}</span>
+            ) : (
+              <span className="text-sm text-primary">{t.enterName}</span>
+            )}
+          </button>
+        </div>
       </form>
 
-      <div className="flex items-center justify-between mt-2">
-        {isEdit ? (
+      <div className="flex items-center justify-end gap-6 mt-2">
+        {isEdit && (
           <button
             type="button"
             onClick={() => { track(DashboardEvent.CLICKED_DELETE_CATEGORY); setShowDeleteDialog(true); }}
@@ -379,13 +399,11 @@ export function CategoryFormPage({ category, restaurant, onSaved, onDeleted }: C
           >
             {t.delete}
           </button>
-        ) : (
-          <span />
         )}
         <button
           type="submit"
           form="category-form-dialog"
-          disabled={saving || deleting || !hasChanges}
+          disabled={saving}
           className="flex items-center gap-1.5 text-sm font-medium text-primary hover:text-primary/80 transition-colors disabled:opacity-50"
         >
           {saving && <Loader2 className="h-4 w-4 animate-spin" />}{t.save}

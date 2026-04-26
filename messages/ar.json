@@ -1636,7 +1636,11 @@
         "emailInvalid": "يرجى إدخال بريد إلكتروني صالح."
       },
       "or": "أو",
-      "continueGoogle": "المتابعة مع Google"
+      "continueGoogle": "المتابعة مع Google",
+      "emailLabel": "البريد الإلكتروني",
+      "continueEmail": "متابعة بالبريد الإلكتروني",
+      "verifyCodeLabel": "رمز التحقق",
+      "verifyButton": "التحقق والمتابعة"
     },
     "analytics": {
       "monthlyUsage": "الاستخدام الشهري",
@@ -1699,7 +1703,11 @@
       "sort": "ترتيب",
       "saveSort": "حفظ",
       "sortSaved": "تم حفظ ترتيب الفرز",
-      "sortError": "فشل حفظ ترتيب الفرز"
+      "sortError": "فشل حفظ ترتيب الفرز",
+      "close": "إغلاق",
+      "unsavedChanges": "تغييرات غير محفوظة",
+      "discard": "تجاهل",
+      "enterName": "أدخل الاسم"
     },
     "items": {
       "general": "عام",
@@ -1773,7 +1781,16 @@
       "changeBackground": "تغيير الخلفية",
       "regenerateImage": "إعادة الإنشاء",
       "generateLimitReached": "نفدت عمليات الإنشاء المجانية بالذكاء الاصطناعي",
-      "generateLimitDescription": "لقد استخدمت عمليتي الإنشاء المجانيتين للصور بالذكاء الاصطناعي. قم بالترقية إلى Growth أو Pro لعمليات إنشاء غير محدودة."
+      "generateLimitDescription": "لقد استخدمت عمليتي الإنشاء المجانيتين للصور بالذكاء الاصطناعي. قم بالترقية إلى Growth أو Pro لعمليات إنشاء غير محدودة.",
+      "close": "إغلاق",
+      "unsavedChanges": "تغييرات غير محفوظة",
+      "discard": "تجاهل",
+      "enterName": "أدخل الاسم",
+      "enterDescription": "أدخل الوصف",
+      "enterPrice": "أدخل السعر",
+      "selectCategory": "اختر الفئة",
+      "addPhoto": "أضف صورة",
+      "selectAllergens": "اختر"
     },
     "languages": {
       "translationProgress": "تقدم الترجمة",
@@ -1923,7 +1940,25 @@
       "itemHintBody": "الطبق هو طعام أو مشروب محدد في قائمتك. مثال: سلطة سيزر، بيتزا مارغريتا، إسبريسو، كعكة شوكولاتة. أضف اسماً وسعراً واختيارياً وصفاً وصورة.",
       "noItems": "لا توجد أطباق بعد",
       "yourMenu": "قائمتك",
-      "defaultCategoryName": "القائمة"
+      "defaultCategoryName": "القائمة",
+      "noItemsInCategory": "لا توجد عناصر في هذه الفئة",
+      "onboarding": {
+        "title": "لنقم ببناء قائمتك",
+        "subtitle": "اتبع الخطوات أو امسح قائمة ورقية.",
+        "scanTitle": "مسح قائمة ورقية",
+        "scanSubtitle": "حمّل صورة أو PDF — يقوم الذكاء الاصطناعي ببناء القائمة",
+        "orStepByStep": "أو خطوة بخطوة",
+        "step1Title": "أنشئ فئة",
+        "step1Subtitle": "مثل: المقبلات، الأطباق الرئيسية، المشروبات",
+        "step2Title": "أضف طبقك الأول",
+        "step2Subtitle": "الاسم، السعر، الصورة (اختياري)",
+        "step3Title": "معاينة ومشاركة",
+        "step3Subtitle": "اعرض رمز QR للعملاء"
+      },
+      "demoSubtitle": "معاينة ببيانات نموذجية — يمكن التعديل",
+      "demoError": "فشل في إنشاء القائمة التجريبية",
+      "manualTitle": "إعداد يدوي",
+      "manualSubtitle": "أنشئ الفئات والأطباق بنفسك"
     },
     "home": {
       "viewMenu": "شاهد كيف يبدو",
@@ -2427,5 +2462,58 @@
     "ownerBody": "تم إجراء حجز جديد في مطعمك.",
     "ownerCta": "عرض الحجوزات",
     "ownerSignature": "مع أطيب التحيات،<br>فريق IQ Rest"
+  },
+  "onboarding": {
+    "step1": {
+      "title": "Welcome!",
+      "subtitle": "يستغرق أقل من دقيقتين",
+      "nameLabel": "Name",
+      "namePlaceholder": "مثال: لا بيلا إيطاليا",
+      "nameRequired": "Please enter your restaurant name",
+      "languageLabel": "Language",
+      "autoDetected": "Language & currency filled in automatically. Change if needed.",
+      "next": "Next",
+      "setupText": "لنقم بإعداد قائمتك",
+      "nameHint": "سيظهر هذا في أعلى قائمتك الرقمية."
+    },
+    "step2": {
+      "title": "أضف أول طبق لك",
+      "motivation": "أضف طبقاً واحداً فقط لترى كيف ستبدو قائمتك!",
+      "categoryLabel": "اسم الفئة",
+      "categoryPlaceholder": "مثال: القائمة الرئيسية، المشروبات",
+      "dishNameLabel": "اسم الطبق",
+      "dishNamePlaceholder": "مثال: بيتزا مارغريتا",
+      "nameRequired": "Please enter a dish name",
+      "priceLabel": "السعر",
+      "priceRequired": "يرجى إدخال سعر صحيح",
+      "createMenu": "Create My Menu!",
+      "photoLabel": "صورة",
+      "addPhoto": "إضافة صورة",
+      "photoHint": "JPG أو PNG، حتى 5 ميغابايت. يمكنك إضافة صور لاحقاً."
+    },
+    "saveError": "حدث خطأ ما، يرجى المحاولة مرة أخرى",
+    "save": "Save",
+    "cancel": "Cancel",
+    "close": "Close",
+    "step4": {
+      "title": "قائمتك جاهزة!",
+      "subtitle": "اطبع رمز QR هذا وضعه على طاولاتك",
+      "viewMenu": "Preview Menu",
+      "goToDashboard": "الذهاب إلى لوحة التحكم وتنزيل QR",
+      "copy": "نسخ"
+    },
+    "step3": {
+      "title": "اختر غلافك",
+      "subtitle": "هذا ما يراه الضيوف عند مسح رمز QR.",
+      "pickStyle": "Pick a style",
+      "upload": "رفع",
+      "yourPhoto": "صورتك",
+      "menuLabel": "Menu",
+      "openNow": "Open now",
+      "oneCategory": "1 category",
+      "changeLater": "يمكنك تغيير هذا لاحقاً في الإعدادات."
+    },
+    "back": "Back",
+    "continue": "متابعة"
   }
 }

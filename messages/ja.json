@@ -1636,7 +1636,11 @@
         "emailInvalid": "有効なメールアドレスを入力してください。"
       },
       "or": "または",
-      "continueGoogle": "Googleで続ける"
+      "continueGoogle": "Googleで続ける",
+      "emailLabel": "メール",
+      "continueEmail": "メールで続ける",
+      "verifyCodeLabel": "確認コード",
+      "verifyButton": "確認して続ける"
     },
     "analytics": {
       "monthlyUsage": "月間使用量",
@@ -1699,7 +1703,11 @@
       "sort": "並べ替え",
       "saveSort": "保存",
       "sortSaved": "並び順が保存されました",
-      "sortError": "並び順の保存に失敗しました"
+      "sortError": "並び順の保存に失敗しました",
+      "close": "閉じる",
+      "unsavedChanges": "未保存の変更",
+      "discard": "破棄",
+      "enterName": "名前を入力"
     },
     "items": {
       "general": "一般",
@@ -1773,7 +1781,16 @@
       "changeBackground": "背景を変更",
       "regenerateImage": "再生成",
       "generateLimitReached": "無料AI生成回数を使い切りました",
-      "generateLimitDescription": "2回の無料AI画像生成をすべて使用しました。GrowthまたはProにアップグレードして無制限に生成しましょう。"
+      "generateLimitDescription": "2回の無料AI画像生成をすべて使用しました。GrowthまたはProにアップグレードして無制限に生成しましょう。",
+      "close": "閉じる",
+      "unsavedChanges": "未保存の変更",
+      "discard": "破棄",
+      "enterName": "名前を入力",
+      "enterDescription": "説明を入力",
+      "enterPrice": "価格を入力",
+      "selectCategory": "カテゴリ選択",
+      "addPhoto": "写真を追加",
+      "selectAllergens": "選択"
     },
     "languages": {
       "translationProgress": "翻訳の進捗",
@@ -1923,7 +1940,25 @@
       "itemHintBody": "料理はメニュー上の特定の食べ物や飲み物です。例：シーザーサラダ、マルゲリータピザ、エスプレッソ、チョコレートケーキ。名前、価格、任意で説明と写真を追加できます。",
       "noItems": "まだ料理がありません",
       "yourMenu": "あなたのメニュー",
-      "defaultCategoryName": "メニュー"
+      "defaultCategoryName": "メニュー",
+      "noItemsInCategory": "このカテゴリにはアイテムがありません",
+      "onboarding": {
+        "title": "メニューを作りましょう",
+        "subtitle": "手順に従うか、紙のメニューをスキャンしてください。",
+        "scanTitle": "紙のメニューをスキャン",
+        "scanSubtitle": "写真やPDFをアップロード — AIがメニューを作成",
+        "orStepByStep": "またはステップごとに",
+        "step1Title": "カテゴリを作成",
+        "step1Subtitle": "例: 前菜、メイン、ドリンク",
+        "step2Title": "最初の料理を追加",
+        "step2Subtitle": "名前、価格、写真（任意）",
+        "step3Title": "プレビューして共有",
+        "step3Subtitle": "お客様にQRを見せる"
+      },
+      "demoSubtitle": "サンプルデータでプレビュー — いつでも編集可",
+      "demoError": "デモメニューの作成に失敗しました",
+      "manualTitle": "手動設定",
+      "manualSubtitle": "カテゴリと料理を自分で作成"
     },
     "home": {
       "viewMenu": "見た目を確認する",
@@ -2427,5 +2462,58 @@
     "ownerBody": "レストランに新しい予約が入りました。",
     "ownerCta": "予約を確認",
     "ownerSignature": "敬具<br>IQ Rest チーム"
+  },
+  "onboarding": {
+    "step1": {
+      "title": "Welcome!",
+      "subtitle": "2分もかかりません",
+      "nameLabel": "Name",
+      "namePlaceholder": "例：ラ・ベラ・イタリア",
+      "nameRequired": "Please enter your restaurant name",
+      "languageLabel": "Language",
+      "autoDetected": "Language & currency filled in automatically. Change if needed.",
+      "next": "Next",
+      "setupText": "メニューを設定しましょう",
+      "nameHint": "これはデジタルメニューの上部に表示されます。"
+    },
+    "step2": {
+      "title": "最初の料理を追加",
+      "motivation": "1品だけ追加して、メニューがどう見えるか確認しましょう！",
+      "categoryLabel": "カテゴリ名",
+      "categoryPlaceholder": "例：メインメニュー、ドリンク",
+      "dishNameLabel": "料理名",
+      "dishNamePlaceholder": "例：マルゲリータピザ",
+      "nameRequired": "Please enter a dish name",
+      "priceLabel": "価格",
+      "priceRequired": "有効な価格を入力してください",
+      "createMenu": "Create My Menu!",
+      "photoLabel": "写真",
+      "addPhoto": "写真を追加",
+      "photoHint": "JPGまたはPNG、最大5MB。後から写真を追加できます。"
+    },
+    "saveError": "エラーが発生しました。もう一度お試しください",
+    "save": "Save",
+    "cancel": "Cancel",
+    "close": "Close",
+    "step4": {
+      "title": "メニューが完成しました！",
+      "subtitle": "このQRコードを印刷してテーブルに置いてください",
+      "viewMenu": "Preview Menu",
+      "goToDashboard": "ダッシュボードへ移動してQRをダウンロード",
+      "copy": "コピー"
+    },
+    "step3": {
+      "title": "カバーを選択",
+      "subtitle": "QRをスキャンしたときにお客様が見る画面です。",
+      "pickStyle": "Pick a style",
+      "upload": "アップロード",
+      "yourPhoto": "あなたの写真",
+      "menuLabel": "Menu",
+      "openNow": "Open now",
+      "oneCategory": "1 category",
+      "changeLater": "これは後で設定から変更できます。"
+    },
+    "back": "Back",
+    "continue": "続ける"
   }
 }

@@ -1636,7 +1636,11 @@
         "emailInvalid": "Sláðu inn gilt netfang."
       },
       "or": "eða",
-      "continueGoogle": "Halda áfram með Google"
+      "continueGoogle": "Halda áfram með Google",
+      "emailLabel": "Netfang",
+      "continueEmail": "Halda áfram með netfang",
+      "verifyCodeLabel": "Staðfestingarkóði",
+      "verifyButton": "Staðfesta og halda áfram"
     },
     "analytics": {
       "monthlyUsage": "Mánaðarleg notkun",
@@ -1699,7 +1703,11 @@
       "sort": "Raða",
       "saveSort": "Vista",
       "sortSaved": "Röðun vistuð",
-      "sortError": "Mistókst að vista röðun"
+      "sortError": "Mistókst að vista röðun",
+      "close": "Loka",
+      "unsavedChanges": "Óvistaðar breytingar",
+      "discard": "Henda",
+      "enterName": "Sláðu inn nafn"
     },
     "items": {
       "general": "Almennt",
@@ -1773,7 +1781,16 @@
       "changeBackground": "Breyta bakGrowthi",
       "regenerateImage": "Endurbúa til",
       "generateLimitReached": "Ókeypis AI-myndir uppurnar",
-      "generateLimitDescription": "Þú hefur notað allar 2 ókeypis AI-myndagerðir. Uppfærðu í Growth eða Pro fyrir ótakmarkaðar myndagerðir."
+      "generateLimitDescription": "Þú hefur notað allar 2 ókeypis AI-myndagerðir. Uppfærðu í Growth eða Pro fyrir ótakmarkaðar myndagerðir.",
+      "close": "Loka",
+      "unsavedChanges": "Óvistaðar breytingar",
+      "discard": "Henda",
+      "enterName": "Sláðu inn nafn",
+      "enterDescription": "Sláðu inn lýsingu",
+      "enterPrice": "Sláðu inn verð",
+      "selectCategory": "Veldu flokk",
+      "addPhoto": "Bæta við mynd",
+      "selectAllergens": "Veldu"
     },
     "languages": {
       "translationProgress": "Þýðingarframvinda",
@@ -1923,7 +1940,25 @@
       "itemHintBody": "Réttur er ákveðinn réttur eða drykkur á matseðlinum. Til dæmis: Caesar salat, Margherita pizza, Espresso, Súkkulaðikaka. Bættu við nafni, verði og valfrjálst lýsingu og mynd.",
       "noItems": "Engir réttir enn",
       "yourMenu": "Matseðillinn þinn",
-      "defaultCategoryName": "Matseðill"
+      "defaultCategoryName": "Matseðill",
+      "noItemsInCategory": "Engir hlutir í þessum flokki",
+      "onboarding": {
+        "title": "Búum til matseðilinn þinn",
+        "subtitle": "Fylgdu skrefunum eða skannaðu pappírsmatseðil.",
+        "scanTitle": "Skanna pappírsmatseðil",
+        "scanSubtitle": "Hladdu upp mynd eða PDF — AI byggir matseðilinn",
+        "orStepByStep": "eða skref fyrir skref",
+        "step1Title": "Búðu til flokk",
+        "step1Subtitle": "T.d. Forréttir, Aðalréttir, Drykkir",
+        "step2Title": "Bættu við fyrsta réttinum",
+        "step2Subtitle": "Nafn, verð, mynd (valfrjálst)",
+        "step3Title": "Forskoðun og deiling",
+        "step3Subtitle": "Sýndu viðskiptavinum QR"
+      },
+      "demoSubtitle": "Forskoðun með sýnisgögnum — breytanleg",
+      "demoError": "Tókst ekki að búa til prufumatseðil",
+      "manualTitle": "Handvirk uppsetning",
+      "manualSubtitle": "Búðu til flokka og rétti sjálfur"
     },
     "home": {
       "viewMenu": "Sjáðu hvernig það lítur út",
@@ -2427,5 +2462,58 @@
     "ownerBody": "Ný bókun hefur verið gerð á veitingastaðnum þínum.",
     "ownerCta": "Skoða bókanir",
     "ownerSignature": "Bestu kveðjur,<br>IQ Rest teymið"
+  },
+  "onboarding": {
+    "step1": {
+      "title": "Welcome!",
+      "subtitle": "Tekur minna en 2 mínútur",
+      "nameLabel": "Name",
+      "namePlaceholder": "Dæmi: La Bella Italia",
+      "nameRequired": "Please enter your restaurant name",
+      "languageLabel": "Language",
+      "autoDetected": "Language & currency filled in automatically. Change if needed.",
+      "next": "Next",
+      "setupText": "Setjum upp matseðilinn þinn",
+      "nameHint": "Þetta mun birtast efst á stafrænum matseðli þínum."
+    },
+    "step2": {
+      "title": "Bættu við fyrsta réttinum þínum",
+      "motivation": "Bættu við einum rétti til að sjá hvernig matseðillinn þinn mun líta út!",
+      "categoryLabel": "Nafn flokks",
+      "categoryPlaceholder": "Dæmi: Aðalmatseðill, Drykkir",
+      "dishNameLabel": "Nafn réttar",
+      "dishNamePlaceholder": "Dæmi: Margherita pizza",
+      "nameRequired": "Please enter a dish name",
+      "priceLabel": "Verð",
+      "priceRequired": "Vinsamlegast sláðu inn gilt verð",
+      "createMenu": "Create My Menu!",
+      "photoLabel": "Mynd",
+      "addPhoto": "Bæta við mynd",
+      "photoHint": "JPG eða PNG, allt að 5 MB. Þú getur bætt við myndum síðar."
+    },
+    "saveError": "Eitthvað fór úrskeiðis, reyndu aftur",
+    "save": "Save",
+    "cancel": "Cancel",
+    "close": "Close",
+    "step4": {
+      "title": "Matseðillinn þinn er tilbúinn!",
+      "subtitle": "Prentaðu þennan QR kóða og settu hann á borðin þín",
+      "viewMenu": "Preview Menu",
+      "goToDashboard": "Fara á mælaborðið og hlaða niður QR",
+      "copy": "Afrita"
+    },
+    "step3": {
+      "title": "Veldu forsíðu þína",
+      "subtitle": "Þetta er það sem gestir sjá þegar þeir skanna QR.",
+      "pickStyle": "Pick a style",
+      "upload": "Hlaða upp",
+      "yourPhoto": "Myndin þín",
+      "menuLabel": "Menu",
+      "openNow": "Open now",
+      "oneCategory": "1 category",
+      "changeLater": "Þú getur breytt þessu síðar í stillingum."
+    },
+    "back": "Back",
+    "continue": "Halda áfram"
   }
 }

@@ -1636,7 +1636,11 @@
         "emailInvalid": "Zadejte platný email."
       },
       "or": "nebo",
-      "continueGoogle": "Pokračovat přes Google"
+      "continueGoogle": "Pokračovat přes Google",
+      "emailLabel": "E-mail",
+      "continueEmail": "Pokračovat s e-mailem",
+      "verifyCodeLabel": "Ověřovací kód",
+      "verifyButton": "Ověřit a pokračovat"
     },
     "analytics": {
       "monthlyUsage": "Měsíční použití",
@@ -1699,7 +1703,11 @@
       "sort": "Třídit",
       "saveSort": "Uložit",
       "sortSaved": "Pořadí uloženo",
-      "sortError": "Nepodařilo se uložit pořadí"
+      "sortError": "Nepodařilo se uložit pořadí",
+      "close": "Zavřít",
+      "unsavedChanges": "Neuložené změny",
+      "discard": "Zahodit",
+      "enterName": "Zadejte název"
     },
     "items": {
       "general": "Obecné",
@@ -1773,7 +1781,16 @@
       "changeBackground": "Změnit pozadí",
       "regenerateImage": "Přegenerovat",
       "generateLimitReached": "Bezplatné AI generace vyčerpány",
-      "generateLimitDescription": "Využili jste 2 bezplatné generace AI obrázků. Přejděte na Growth nebo Pro pro neomezené generace."
+      "generateLimitDescription": "Využili jste 2 bezplatné generace AI obrázků. Přejděte na Growth nebo Pro pro neomezené generace.",
+      "close": "Zavřít",
+      "unsavedChanges": "Neuložené změny",
+      "discard": "Zahodit",
+      "enterName": "Zadejte název",
+      "enterDescription": "Zadejte popis",
+      "enterPrice": "Zadejte cenu",
+      "selectCategory": "Vyberte kategorii",
+      "addPhoto": "Přidat foto",
+      "selectAllergens": "Vybrat"
     },
     "languages": {
       "translationProgress": "Pokrok v překladu",
@@ -1923,7 +1940,25 @@
       "itemHintBody": "Jídlo je konkrétní pokrm nebo nápoj v menu. Například: Caesarův salát, Pizza Margherita, Espresso, Čokoládový dort. Přidejte název, cenu a volitelně popis a fotku.",
       "noItems": "Zatím žádná jídla",
       "yourMenu": "Vaše menu",
-      "defaultCategoryName": "Menu"
+      "defaultCategoryName": "Menu",
+      "noItemsInCategory": "V této kategorii nejsou žádné položky",
+      "onboarding": {
+        "title": "Pojďme vytvořit vaše menu",
+        "subtitle": "Postupujte podle kroků nebo naskenujte papírové menu.",
+        "scanTitle": "Naskenovat papírové menu",
+        "scanSubtitle": "Nahrajte foto nebo PDF — AI vytvoří menu",
+        "orStepByStep": "nebo krok za krokem",
+        "step1Title": "Vytvořte kategorii",
+        "step1Subtitle": "Např. Předkrmy, Hlavní jídla, Nápoje",
+        "step2Title": "Přidejte první jídlo",
+        "step2Subtitle": "Název, cena, foto (volitelné)",
+        "step3Title": "Náhled a sdílení",
+        "step3Subtitle": "Ukažte QR zákazníkům"
+      },
+      "demoSubtitle": "Náhled s ukázkovými daty — lze upravit",
+      "demoError": "Nepodařilo se vytvořit ukázkové menu",
+      "manualTitle": "Ruční nastavení",
+      "manualSubtitle": "Vytvořte kategorie a jídla sami"
     },
     "home": {
       "viewMenu": "Podívejte se, jak to vypadá",
@@ -2427,5 +2462,58 @@
     "ownerBody": "Ve vaší restauraci byla provedena nová rezervace.",
     "ownerCta": "Zobrazit rezervace",
     "ownerSignature": "S pozdravem,<br>Tým IQ Rest"
+  },
+  "onboarding": {
+    "step1": {
+      "title": "Welcome!",
+      "subtitle": "Trvá méně než 2 minuty",
+      "nameLabel": "Name",
+      "namePlaceholder": "Např. La Bella Italia",
+      "nameRequired": "Please enter your restaurant name",
+      "languageLabel": "Language",
+      "autoDetected": "Language & currency filled in automatically. Change if needed.",
+      "next": "Next",
+      "setupText": "Nastavme vaše menu",
+      "nameHint": "Toto se zobrazí v horní části vašeho digitálního menu."
+    },
+    "step2": {
+      "title": "Přidejte svůj první pokrm",
+      "motivation": "Přidejte jen jeden pokrm a uvidíte, jak bude vaše menu vypadat!",
+      "categoryLabel": "Název kategorie",
+      "categoryPlaceholder": "Např. Hlavní menu, Nápoje",
+      "dishNameLabel": "Název pokrmu",
+      "dishNamePlaceholder": "Např. Pizza Margherita",
+      "nameRequired": "Please enter a dish name",
+      "priceLabel": "Cena",
+      "priceRequired": "Zadejte platnou cenu",
+      "createMenu": "Create My Menu!",
+      "photoLabel": "Foto",
+      "addPhoto": "Přidat foto",
+      "photoHint": "JPG nebo PNG, až 5 MB. Fotografie můžete přidat později."
+    },
+    "saveError": "Něco se pokazilo, zkuste to prosím znovu",
+    "save": "Save",
+    "cancel": "Cancel",
+    "close": "Close",
+    "step4": {
+      "title": "Vaše menu je připraveno!",
+      "subtitle": "Vytiskněte tento QR kód a umístěte ho na stoly",
+      "viewMenu": "Preview Menu",
+      "goToDashboard": "Přejít na dashboard a stáhnout QR",
+      "copy": "Kopírovat"
+    },
+    "step3": {
+      "title": "Vyberte obálku",
+      "subtitle": "To vidí hosté při skenování QR kódu.",
+      "pickStyle": "Pick a style",
+      "upload": "Nahrát",
+      "yourPhoto": "Vaše foto",
+      "menuLabel": "Menu",
+      "openNow": "Open now",
+      "oneCategory": "1 category",
+      "changeLater": "Toto můžete změnit později v nastavení."
+    },
+    "back": "Back",
+    "continue": "Pokračovat"
   }
 }

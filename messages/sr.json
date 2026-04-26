@@ -1636,7 +1636,11 @@
         "emailInvalid": "Унесите исправан имејл."
       },
       "or": "ili",
-      "continueGoogle": "Nastavi sa Google-om"
+      "continueGoogle": "Nastavi sa Google-om",
+      "emailLabel": "Email",
+      "continueEmail": "Nastavi sa emailom",
+      "verifyCodeLabel": "Verifikacioni kod",
+      "verifyButton": "Verifikuj i nastavi"
     },
     "analytics": {
       "monthlyUsage": "Mesečna upotreba",
@@ -1699,7 +1703,11 @@
       "sort": "Sortiraj",
       "saveSort": "Sačuvaj",
       "sortSaved": "Redosled sačuvan",
-      "sortError": "Nije uspelo čuvanje redosleda"
+      "sortError": "Nije uspelo čuvanje redosleda",
+      "close": "Затвори",
+      "unsavedChanges": "Несачуване измене",
+      "discard": "Одбаци",
+      "enterName": "Унесите име"
     },
     "items": {
       "general": "Опште",
@@ -1773,7 +1781,16 @@
       "changeBackground": "Промени позадину",
       "regenerateImage": "Регенериши",
       "generateLimitReached": "Бесплатна АИ генерисања потрошена",
-      "generateLimitDescription": "Искористили сте 2 бесплатна АИ генерисања слика. Надоградите на Growth или Pro за неограничена генерисања."
+      "generateLimitDescription": "Искористили сте 2 бесплатна АИ генерисања слика. Надоградите на Growth или Pro за неограничена генерисања.",
+      "close": "Затвори",
+      "unsavedChanges": "Несачуване измене",
+      "discard": "Одбаци",
+      "enterName": "Унесите име",
+      "enterDescription": "Унесите опис",
+      "enterPrice": "Унесите цену",
+      "selectCategory": "Изаберите категорију",
+      "addPhoto": "Додај фотографију",
+      "selectAllergens": "Изабери"
     },
     "languages": {
       "translationProgress": "Napredak prevođenja",
@@ -1923,7 +1940,25 @@
       "itemHintBody": "Jelo je određeno jelo ili piće na meniju. Na primer: Cezar salata, Pizza Margherita, Espreso, Čokoladna torta. Dodajte naziv, cenu i opciono opis i fotografiju.",
       "noItems": "Još nema jela",
       "yourMenu": "Vaš meni",
-      "defaultCategoryName": "Мени"
+      "defaultCategoryName": "Мени",
+      "noItemsInCategory": "Нема ставки у овој категорији",
+      "onboarding": {
+        "title": "Изградимо ваш мени",
+        "subtitle": "Пратите кораке или скенирајте папирни мени.",
+        "scanTitle": "Скенирај папирни мени",
+        "scanSubtitle": "Отпремите фото или PDF — AI гради мени",
+        "orStepByStep": "или корак по корак",
+        "step1Title": "Направи категорију",
+        "step1Subtitle": "Нпр. Предјела, Главна јела, Пића",
+        "step2Title": "Додај прво јело",
+        "step2Subtitle": "Име, цена, слика (опционо)",
+        "step3Title": "Преглед и дели",
+        "step3Subtitle": "Покажи QR гостима"
+      },
+      "demoSubtitle": "Преглед са узорком података — измењиво",
+      "demoError": "Неуспешно креирање демо менија",
+      "manualTitle": "Ручно подешавање",
+      "manualSubtitle": "Сами направите категорије и јела"
     },
     "home": {
       "viewMenu": "Погледајте како изгледа",
@@ -2427,5 +2462,58 @@
     "ownerBody": "Нова резервација је направљена у вашем ресторану.",
     "ownerCta": "Погледај резервације",
     "ownerSignature": "С поштовањем,<br>IQ Rest тим"
+  },
+  "onboarding": {
+    "step1": {
+      "title": "Welcome!",
+      "subtitle": "Traje manje od 2 minuta",
+      "nameLabel": "Name",
+      "namePlaceholder": "npr. La Bella Italia",
+      "nameRequired": "Please enter your restaurant name",
+      "languageLabel": "Language",
+      "autoDetected": "Language & currency filled in automatically. Change if needed.",
+      "next": "Next",
+      "setupText": "Hajde da postavimo vaš meni",
+      "nameHint": "Ovo će biti prikazano na vrhu vašeg digitalnog menija."
+    },
+    "step2": {
+      "title": "Dodajte prvo jelo",
+      "motivation": "Dodajte samo jedno jelo da vidite kako će izgledati vaš meni!",
+      "categoryLabel": "Naziv kategorije",
+      "categoryPlaceholder": "npr. Glavni meni, Pića",
+      "dishNameLabel": "Naziv jela",
+      "dishNamePlaceholder": "npr. Pizza Margherita",
+      "nameRequired": "Please enter a dish name",
+      "priceLabel": "Cena",
+      "priceRequired": "Unesite ispravnu cenu",
+      "createMenu": "Create My Menu!",
+      "photoLabel": "Fotografija",
+      "addPhoto": "Dodaj fotografiju",
+      "photoHint": "JPG ili PNG, do 5 MB. Fotografije možete dodati kasnije."
+    },
+    "saveError": "Nešto je pošlo naopako, pokušajte ponovo",
+    "save": "Save",
+    "cancel": "Cancel",
+    "close": "Close",
+    "step4": {
+      "title": "Vaš meni je spreman!",
+      "subtitle": "Odštampajte ovaj QR kod i postavite ga na stolove",
+      "viewMenu": "Preview Menu",
+      "goToDashboard": "Idi na kontrolnu tablu i preuzmi QR",
+      "copy": "Kopiraj"
+    },
+    "step3": {
+      "title": "Odaberite naslovnu sliku",
+      "subtitle": "Ovo vide gosti kada skeniraju QR kod.",
+      "pickStyle": "Pick a style",
+      "upload": "Otpremi",
+      "yourPhoto": "Vaša fotografija",
+      "menuLabel": "Menu",
+      "openNow": "Open now",
+      "oneCategory": "1 category",
+      "changeLater": "Možete ovo promeniti kasnije u podešavanjima."
+    },
+    "back": "Back",
+    "continue": "Nastavi"
   }
 }

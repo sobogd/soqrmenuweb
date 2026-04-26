@@ -1636,7 +1636,11 @@
         "emailInvalid": "Introduïu un email vàlid."
       },
       "or": "o",
-      "continueGoogle": "Continua amb Google"
+      "continueGoogle": "Continua amb Google",
+      "emailLabel": "Correu electrònic",
+      "continueEmail": "Continuar amb correu electrònic",
+      "verifyCodeLabel": "Codi de verificació",
+      "verifyButton": "Verificar i continuar"
     },
     "analytics": {
       "monthlyUsage": "Ús mensual",
@@ -1699,7 +1703,11 @@
       "sort": "Ordenar",
       "saveSort": "Desar",
       "sortSaved": "Ordre d'ordenació desat",
-      "sortError": "No s'ha pogut desar l'ordre d'ordenació"
+      "sortError": "No s'ha pogut desar l'ordre d'ordenació",
+      "close": "Tanca",
+      "unsavedChanges": "Canvis sense desar",
+      "discard": "Descarta",
+      "enterName": "Introdueix el nom"
     },
     "items": {
       "general": "General",
@@ -1773,7 +1781,16 @@
       "changeBackground": "Canviar fons",
       "regenerateImage": "Regenerar",
       "generateLimitReached": "Generacions AI gratuïtes esgotades",
-      "generateLimitDescription": "Heu utilitzat les 2 generacions d'imatges AI gratuïtes. Actualitzeu a Growth o Pro per a generacions il·limitades."
+      "generateLimitDescription": "Heu utilitzat les 2 generacions d'imatges AI gratuïtes. Actualitzeu a Growth o Pro per a generacions il·limitades.",
+      "close": "Tanca",
+      "unsavedChanges": "Canvis sense desar",
+      "discard": "Descarta",
+      "enterName": "Introdueix el nom",
+      "enterDescription": "Introdueix la descripció",
+      "enterPrice": "Introdueix el preu",
+      "selectCategory": "Tria categoria",
+      "addPhoto": "Afegeix foto",
+      "selectAllergens": "Tria"
     },
     "languages": {
       "translationProgress": "Progrés de la traducció",
@@ -1923,7 +1940,25 @@
       "itemHintBody": "Un plat és un plat o beguda específica del menú. Per exemple: Amanida Cèsar, Pizza Margarita, Espresso, Pastís de xocolata. Afegeix un nom, preu i opcionalment una descripció i foto.",
       "noItems": "Encara no hi ha plats",
       "yourMenu": "El teu menú",
-      "defaultCategoryName": "Menú"
+      "defaultCategoryName": "Menú",
+      "noItemsInCategory": "No hi ha articles en aquesta categoria",
+      "onboarding": {
+        "title": "Creem el teu menú",
+        "subtitle": "Segueix els passos o escaneja un menú de paper.",
+        "scanTitle": "Escaneja menú de paper",
+        "scanSubtitle": "Puja una foto o PDF — la IA crea el menú",
+        "orStepByStep": "o pas a pas",
+        "step1Title": "Crea una categoria",
+        "step1Subtitle": "P. ex. Entrants, Principals, Begudes",
+        "step2Title": "Afegeix el teu primer plat",
+        "step2Subtitle": "Nom, preu, foto (opcional)",
+        "step3Title": "Previsualitza i comparteix",
+        "step3Subtitle": "Mostra el QR als clients"
+      },
+      "demoSubtitle": "Vista prèvia amb dades d'exemple — edita quan vulguis",
+      "demoError": "No s'ha pogut crear el menú d'exemple",
+      "manualTitle": "Configuració manual",
+      "manualSubtitle": "Crea categories i plats tu mateix"
     },
     "home": {
       "viewMenu": "Mira com es veu",
@@ -2427,5 +2462,58 @@
     "ownerBody": "S'ha fet una nova reserva al teu restaurant.",
     "ownerCta": "Veure reserves",
     "ownerSignature": "Salutacions,<br>Equip IQ Rest"
+  },
+  "onboarding": {
+    "step1": {
+      "title": "Welcome!",
+      "subtitle": "Triga menys de 2 minuts",
+      "nameLabel": "Name",
+      "namePlaceholder": "Ex.: La Bella Italia",
+      "nameRequired": "Please enter your restaurant name",
+      "languageLabel": "Language",
+      "autoDetected": "Language & currency filled in automatically. Change if needed.",
+      "next": "Next",
+      "setupText": "Configurem el vostre menú",
+      "nameHint": "Apareixerà a la part superior del vostre menú digital."
+    },
+    "step2": {
+      "title": "Afegiu el primer plat",
+      "motivation": "Afegiu un sol plat per veure com quedarà el vostre menú!",
+      "categoryLabel": "Nom de la categoria",
+      "categoryPlaceholder": "Ex.: Menú principal, Begudes",
+      "dishNameLabel": "Nom del plat",
+      "dishNamePlaceholder": "Ex.: Pizza Margarida",
+      "nameRequired": "Please enter a dish name",
+      "priceLabel": "Preu",
+      "priceRequired": "Introduïu un preu vàlid",
+      "createMenu": "Create My Menu!",
+      "photoLabel": "Foto",
+      "addPhoto": "Afegeix una foto",
+      "photoHint": "JPG o PNG, fins a 5 MB. Podeu afegir fotos més endavant."
+    },
+    "saveError": "Alguna cosa ha anat malament, torneu-ho a intentar",
+    "save": "Save",
+    "cancel": "Cancel",
+    "close": "Close",
+    "step4": {
+      "title": "El vostre menú està llest!",
+      "subtitle": "Imprimiu aquest codi QR i poseu-lo a les taules",
+      "viewMenu": "Preview Menu",
+      "goToDashboard": "Anar al tauler i descarregar QR",
+      "copy": "Copiar"
+    },
+    "step3": {
+      "title": "Trieu la vostra portada",
+      "subtitle": "Això és el que veuen els clients quan escanegen el QR.",
+      "pickStyle": "Pick a style",
+      "upload": "Pujar",
+      "yourPhoto": "La vostra foto",
+      "menuLabel": "Menu",
+      "openNow": "Open now",
+      "oneCategory": "1 category",
+      "changeLater": "Podeu canviar-ho més endavant a la configuració."
+    },
+    "back": "Back",
+    "continue": "Continuar"
   }
 }

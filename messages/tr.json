@@ -1636,7 +1636,11 @@
         "emailInvalid": "Geçerli bir e-posta girin."
       },
       "or": "veya",
-      "continueGoogle": "Google ile devam et"
+      "continueGoogle": "Google ile devam et",
+      "emailLabel": "E-posta",
+      "continueEmail": "E-posta ile devam et",
+      "verifyCodeLabel": "Doğrulama kodu",
+      "verifyButton": "Doğrula ve devam et"
     },
     "analytics": {
       "monthlyUsage": "Aylık Kullanım",
@@ -1699,7 +1703,11 @@
       "sort": "Sırala",
       "saveSort": "Kaydet",
       "sortSaved": "Sıralama kaydedildi",
-      "sortError": "Sıralama kaydetmede başarısız olundu"
+      "sortError": "Sıralama kaydetmede başarısız olundu",
+      "close": "Kapat",
+      "unsavedChanges": "Kaydedilmemiş değişiklikler",
+      "discard": "At",
+      "enterName": "Adı gir"
     },
     "items": {
       "general": "Genel",
@@ -1773,7 +1781,16 @@
       "changeBackground": "Arka planı değiştir",
       "regenerateImage": "Yeniden oluştur",
       "generateLimitReached": "Ücretsiz AI oluşturmalar tükendi",
-      "generateLimitDescription": "2 ücretsiz AI görsel oluşturma hakkınızı kullandınız. Sınırsız oluşturmalar için Growth veya Pro'ya yükseltin."
+      "generateLimitDescription": "2 ücretsiz AI görsel oluşturma hakkınızı kullandınız. Sınırsız oluşturmalar için Growth veya Pro'ya yükseltin.",
+      "close": "Kapat",
+      "unsavedChanges": "Kaydedilmemiş değişiklikler",
+      "discard": "At",
+      "enterName": "Adı gir",
+      "enterDescription": "Açıklama gir",
+      "enterPrice": "Fiyat gir",
+      "selectCategory": "Kategori seç",
+      "addPhoto": "Fotoğraf ekle",
+      "selectAllergens": "Seç"
     },
     "languages": {
       "translationProgress": "Çeviri İlerlemesi",
@@ -1923,7 +1940,25 @@
       "itemHintBody": "Yemek, menüdeki belirli bir yiyecek veya içecektir. Örneğin: Sezar Salata, Margherita Pizza, Espresso, Çikolatalı Kek. İsim, fiyat ve isteğe bağlı açıklama ve fotoğraf ekleyin.",
       "noItems": "Henüz yemek yok",
       "yourMenu": "Menünüz",
-      "defaultCategoryName": "Menü"
+      "defaultCategoryName": "Menü",
+      "noItemsInCategory": "Bu kategoride ürün yok",
+      "onboarding": {
+        "title": "Menünü oluşturalım",
+        "subtitle": "Adımları takip et veya kağıt menüyü tara.",
+        "scanTitle": "Kağıt menüyü tara",
+        "scanSubtitle": "Fotoğraf veya PDF yükle — AI menüyü oluşturur",
+        "orStepByStep": "veya adım adım",
+        "step1Title": "Kategori oluştur",
+        "step1Subtitle": "Örn: Başlangıçlar, Ana Yemekler, İçecekler",
+        "step2Title": "İlk yemeğini ekle",
+        "step2Subtitle": "İsim, fiyat, fotoğraf (opsiyonel)",
+        "step3Title": "Önizleme ve paylaş",
+        "step3Subtitle": "Müşterilere QR göster"
+      },
+      "demoSubtitle": "Örnek verilerle önizleme — istediğin zaman düzenle",
+      "demoError": "Demo menü oluşturulamadı",
+      "manualTitle": "Manuel kurulum",
+      "manualSubtitle": "Kategorileri ve yemekleri kendiniz oluşturun"
     },
     "home": {
       "viewMenu": "Nasıl göründüğünü görün",
@@ -2427,5 +2462,58 @@
     "ownerBody": "Restoranınızda yeni bir rezervasyon yapıldı.",
     "ownerCta": "Rezervasyonları görüntüle",
     "ownerSignature": "Saygılarımızla,<br>IQ Rest Ekibi"
+  },
+  "onboarding": {
+    "step1": {
+      "title": "Welcome!",
+      "subtitle": "2 dakikadan az sürer",
+      "nameLabel": "Name",
+      "namePlaceholder": "Örn. La Bella Italia",
+      "nameRequired": "Please enter your restaurant name",
+      "languageLabel": "Language",
+      "autoDetected": "Language & currency filled in automatically. Change if needed.",
+      "next": "Next",
+      "setupText": "Menünüzü ayarlayalım",
+      "nameHint": "Bu, dijital menünüzün en üstünde görünecektir."
+    },
+    "step2": {
+      "title": "İlk yemeğinizi ekleyin",
+      "motivation": "Menünüzün nasıl görüneceğini görmek için sadece bir yemek ekleyin!",
+      "categoryLabel": "Kategori adı",
+      "categoryPlaceholder": "Örn. Ana Menü, İçecekler",
+      "dishNameLabel": "Yemek adı",
+      "dishNamePlaceholder": "Örn. Margherita Pizza",
+      "nameRequired": "Please enter a dish name",
+      "priceLabel": "Fiyat",
+      "priceRequired": "Lütfen geçerli bir fiyat girin",
+      "createMenu": "Create My Menu!",
+      "photoLabel": "Fotoğraf",
+      "addPhoto": "Fotoğraf ekle",
+      "photoHint": "JPG veya PNG, 5 MB'a kadar. Fotoğrafları daha sonra ekleyebilirsiniz."
+    },
+    "saveError": "Bir şeyler ters gitti, lütfen tekrar deneyin",
+    "save": "Save",
+    "cancel": "Cancel",
+    "close": "Close",
+    "step4": {
+      "title": "Menünüz hazır!",
+      "subtitle": "Bu QR kodunu yazdırın ve masalarınıza koyun",
+      "viewMenu": "Preview Menu",
+      "goToDashboard": "Panele git ve QR'ı indir",
+      "copy": "Kopyala"
+    },
+    "step3": {
+      "title": "Kapağınızı seçin",
+      "subtitle": "Misafirler QR kodu taradığında bunu görür.",
+      "pickStyle": "Pick a style",
+      "upload": "Yükle",
+      "yourPhoto": "Fotoğrafınız",
+      "menuLabel": "Menu",
+      "openNow": "Open now",
+      "oneCategory": "1 category",
+      "changeLater": "Bunu daha sonra ayarlarda değiştirebilirsiniz."
+    },
+    "back": "Back",
+    "continue": "Devam et"
   }
 }

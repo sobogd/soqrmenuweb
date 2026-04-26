@@ -145,6 +145,7 @@ export async function POST(request: NextRequest) {
         company = await prisma.company.create({
           data: {
             name: companyName,
+            onboardingStep: 0,
             trialEndsAt: new Date(Date.now() + 14 * 24 * 60 * 60 * 1000),
           },
         });

@@ -1636,7 +1636,11 @@
         "emailInvalid": "Sisestage kehtiv e-posti aadress."
       },
       "or": "või",
-      "continueGoogle": "Jätka Google'iga"
+      "continueGoogle": "Jätka Google'iga",
+      "emailLabel": "E-post",
+      "continueEmail": "Jätka e-postiga",
+      "verifyCodeLabel": "Kinnituskood",
+      "verifyButton": "Kinnita ja jätka"
     },
     "analytics": {
       "monthlyUsage": "Kuu kasutus",
@@ -1699,7 +1703,11 @@
       "sort": "Sorteeri",
       "saveSort": "Salvesta",
       "sortSaved": "Sorteerimise järjekord salvestatud",
-      "sortError": "Sorteerimise järjekorra salvestamine ebaõnnestus"
+      "sortError": "Sorteerimise järjekorra salvestamine ebaõnnestus",
+      "close": "Sulge",
+      "unsavedChanges": "Salvestamata muudatused",
+      "discard": "Loobu",
+      "enterName": "Sisesta nimi"
     },
     "items": {
       "general": "Üldine",
@@ -1773,7 +1781,16 @@
       "changeBackground": "Muuda tausta",
       "regenerateImage": "Genereeri uuesti",
       "generateLimitReached": "Tasuta AI-genereerimised kasutatud",
-      "generateLimitDescription": "Olete kasutanud kõik 2 tasuta AI-pildi genereerimist. Uuendage Growth- või Pro-paketile piiramatute genereerimiste jaoks."
+      "generateLimitDescription": "Olete kasutanud kõik 2 tasuta AI-pildi genereerimist. Uuendage Growth- või Pro-paketile piiramatute genereerimiste jaoks.",
+      "close": "Sulge",
+      "unsavedChanges": "Salvestamata muudatused",
+      "discard": "Loobu",
+      "enterName": "Sisesta nimi",
+      "enterDescription": "Sisesta kirjeldus",
+      "enterPrice": "Sisesta hind",
+      "selectCategory": "Vali kategooria",
+      "addPhoto": "Lisa foto",
+      "selectAllergens": "Vali"
     },
     "languages": {
       "translationProgress": "Tõlke edenemine",
@@ -1923,7 +1940,25 @@
       "itemHintBody": "Roog on konkreetne toit või jook menüüs. Näiteks: Caesari salat, Margherita pitsa, Espresso, Šokolaadikook. Lisage nimi, hind ning soovi korral kirjeldus ja foto.",
       "noItems": "Roogi pole veel",
       "yourMenu": "Teie menüü",
-      "defaultCategoryName": "Menüü"
+      "defaultCategoryName": "Menüü",
+      "noItemsInCategory": "Selles kategoorias pole tooteid",
+      "onboarding": {
+        "title": "Teeme teie menüü valmis",
+        "subtitle": "Järgige samme või skaneerige paberist menüü.",
+        "scanTitle": "Skaneeri paberist menüü",
+        "scanSubtitle": "Lae üles foto või PDF — AI loob menüü",
+        "orStepByStep": "või samm-sammult",
+        "step1Title": "Loo kategooria",
+        "step1Subtitle": "Nt eelroad, põhiroad, joogid",
+        "step2Title": "Lisa oma esimene roog",
+        "step2Subtitle": "Nimi, hind, foto (valikuline)",
+        "step3Title": "Eelvaade ja jagamine",
+        "step3Subtitle": "Näita QR-koodi klientidele"
+      },
+      "demoSubtitle": "Eelvaade näidisandmetega — saab muuta",
+      "demoError": "Demo menüü loomine ebaõnnestus",
+      "manualTitle": "Käsitsi seadistus",
+      "manualSubtitle": "Loo kategooriad ja road ise"
     },
     "home": {
       "viewMenu": "Vaata, kuidas see välja näeb",
@@ -2427,5 +2462,58 @@
     "ownerBody": "Teie restoranis on tehtud uus broneering.",
     "ownerCta": "Vaata broneeringuid",
     "ownerSignature": "Lugupidamisega,<br>IQ Rest meeskond"
+  },
+  "onboarding": {
+    "step1": {
+      "title": "Welcome!",
+      "subtitle": "See võtab vähem kui 2 minutit",
+      "nameLabel": "Name",
+      "namePlaceholder": "nt La Bella Italia",
+      "nameRequired": "Please enter your restaurant name",
+      "languageLabel": "Language",
+      "autoDetected": "Language & currency filled in automatically. Change if needed.",
+      "next": "Next",
+      "setupText": "Seadistame teie menüü",
+      "nameHint": "See kuvatakse teie digitaalse menüü ülaosas."
+    },
+    "step2": {
+      "title": "Lisa oma esimene roog",
+      "motivation": "Lisa ainult üks roog, et näha, kuidas teie menüü välja näeb!",
+      "categoryLabel": "Kategooria nimi",
+      "categoryPlaceholder": "nt Põhimenüü, Joogid",
+      "dishNameLabel": "Roa nimi",
+      "dishNamePlaceholder": "nt Margherita pitsa",
+      "nameRequired": "Please enter a dish name",
+      "priceLabel": "Hind",
+      "priceRequired": "Sisestage kehtiv hind",
+      "createMenu": "Create My Menu!",
+      "photoLabel": "Foto",
+      "addPhoto": "Lisa foto",
+      "photoHint": "JPG või PNG, kuni 5 MB. Fotosid saab lisada hiljem."
+    },
+    "saveError": "Midagi läks valesti, palun proovige uuesti",
+    "save": "Save",
+    "cancel": "Cancel",
+    "close": "Close",
+    "step4": {
+      "title": "Teie menüü on valmis!",
+      "subtitle": "Printige see QR-kood ja asetage see oma laudadele",
+      "viewMenu": "Preview Menu",
+      "goToDashboard": "Mine armatuurlauale ja laadi QR alla",
+      "copy": "Kopeeri"
+    },
+    "step3": {
+      "title": "Valige oma kaanepilt",
+      "subtitle": "Seda näevad külalised QR-koodi skaneerimisel.",
+      "pickStyle": "Pick a style",
+      "upload": "Laadi üles",
+      "yourPhoto": "Teie foto",
+      "menuLabel": "Menu",
+      "openNow": "Open now",
+      "oneCategory": "1 category",
+      "changeLater": "Seda saate hiljem seadetes muuta."
+    },
+    "back": "Back",
+    "continue": "Jätka"
   }
 }
