@@ -3,6 +3,7 @@
 import { useEffect, useRef, ReactNode } from "react";
 import { usePathname } from "next/navigation";
 import Link from "next/link";
+import { useTranslations } from "next-intl";
 import {
  CalendarIcon,
  ChartIcon,
@@ -26,7 +27,7 @@ const NAV_EVENT: Record<TabId, DashboardEvent> = {
 
 interface NavTab {
  id: TabId;
- label: string;
+ labelKey: "menu" | "reservations" | "orders" | "kitchen" | "analytics" | "settings";
  href: string;
  icon: React.ComponentType<{ size?: number; className?: string }>;
 }
@@ -34,14 +35,14 @@ interface NavTab {
 const KITCHEN_ENABLED = process.env.NEXT_PUBLIC_KITCHEN === "TRUE";
 
 const NAV_TABS: NavTab[] = [
- { id: "menu", label: "Menu", href: "/dashboard", icon: GridIcon },
- { id: "reservations", label: "Bookings", href: "/dashboard/reservations", icon: CalendarIcon },
- { id: "orders", label: "Orders", href: "/dashboard/orders", icon: ReceiptIcon },
+ { id: "menu", labelKey: "menu", href: "/dashboard", icon: GridIcon },
+ { id: "reservations", labelKey: "reservations", href: "/dashboard/reservations", icon: CalendarIcon },
+ { id: "orders", labelKey: "orders", href: "/dashboard/orders", icon: ReceiptIcon },
  ...(KITCHEN_ENABLED
- ? [{ id: "kitchen" as TabId, label: "Kitchen", href: "/dashboard/kitchen", icon: FlameIcon }]
+ ? [{ id: "kitchen" as TabId, labelKey: "kitchen" as const, href: "/dashboard/kitchen", icon: FlameIcon }]
  : []),
- { id: "analytics", label: "Analytics", href: "/dashboard/analytics", icon: ChartIcon },
- { id: "settings", label: "Settings", href: "/dashboard/settings", icon: SettingsIcon },
+ { id: "analytics", labelKey: "analytics", href: "/dashboard/analytics", icon: ChartIcon },
+ { id: "settings", labelKey: "settings", href: "/dashboard/settings", icon: SettingsIcon },
 ];
 
 // Match a pathname (locale-aware: /en/dashboard/...) to a tab id.
@@ -88,6 +89,7 @@ export function DashboardChrome({
 }
 
 function TopBar({ restaurant, activeTab }: { restaurant: Restaurant; activeTab: TabId }) {
+ const t = useTranslations("dashboard.nav");
  const headerRef = useRef<HTMLElement | null>(null);
 
  useEffect(() => {
@@ -119,7 +121,7 @@ function TopBar({ restaurant, activeTab }: { restaurant: Restaurant; activeTab: 
  <div className="max-w-5xl mx-auto px-4 md:px-6">
  <div className="flex items-center justify-between gap-3 py-4">
  <h1 className="min-w-0 text-lg font-medium text-foreground truncate">
- {restaurant.name || "Untitled restaurant"}
+ {restaurant.name || t("untitledRestaurant")}
  </h1>
  <nav className="flex items-center gap-1 shrink-0">
  {NAV_TABS.map((tab) => {
@@ -134,7 +136,7 @@ function TopBar({ restaurant, activeTab }: { restaurant: Restaurant; activeTab: 
  onClick={() => track(NAV_EVENT[tab.id])}
  className={"h-9 px-3 text-sm font-medium rounded-lg transition-colors inline-flex items-center " + cls}
  >
- {tab.label}
+ {t(tab.labelKey)}
  </Link>
  );
  })}
@@ -146,6 +148,7 @@ function TopBar({ restaurant, activeTab }: { restaurant: Restaurant; activeTab: 
 }
 
 function BottomNav({ activeTab }: { activeTab: TabId }) {
+ const t = useTranslations("dashboard.nav");
  return (
  <nav className="md:hidden fixed bottom-0 left-0 right-0 z-20 bg-card/95 backdrop-blur-md border-t border-border">
  <div className="flex items-stretch">
@@ -161,7 +164,7 @@ function BottomNav({ activeTab }: { activeTab: TabId }) {
  className={"flex-1 flex flex-col items-center justify-center gap-0.5 py-2.5 transition-colors " + cls}
  >
  <TabIcon size={20} />
- <span className="text-[10px] font-medium">{tab.label}</span>
+ <span className="text-[10px] font-medium">{t(tab.labelKey)}</span>
  </Link>
  );
  })}

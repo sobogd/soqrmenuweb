@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect, useRef, ReactNode } from "react";
+import { useTranslations } from "next-intl";
 import {
  CheckIcon,
  CloseIcon,
@@ -49,6 +50,7 @@ export function Modal({
  };
  }, [open]);
 
+ const tc = useTranslations("dashboard.common");
  if (!open) return null;
 
  const widthCls =
@@ -70,7 +72,7 @@ export function Modal({
  type="button"
  onClick={onClose}
  className="w-8 h-8 -mr-2 flex items-center justify-center rounded-md text-muted-foreground transition-colors"
- aria-label="Close"
+ aria-label={tc("close")}
  >
  <CloseIcon size={16} />
  </button>
@@ -102,19 +104,20 @@ export function ConfirmDialog({
  confirmStyle?: "danger" | "primary";
  singleButton?: boolean;
 }) {
- const label = confirmLabel || (singleButton ? "OK" : "Delete");
+ const tc = useTranslations("dashboard.common");
+ const label = confirmLabel || (singleButton ? tc("ok") : tc("delete"));
  const isDanger = !singleButton && (!confirmStyle || confirmStyle === "danger");
  const confirmCls = isDanger
  ? "h-10 px-4 text-sm font-medium text-white bg-red-600 rounded-lg transition-colors"
  : "h-10 px-4 text-sm font-medium text-background bg-foreground rounded-lg transition-colors";
 
  return (
- <Modal open={open} onClose={onCancel} title={title || "Confirm"} size="sm">
+ <Modal open={open} onClose={onCancel} title={title || tc("confirm")} size="sm">
  <p className="text-sm text-muted-foreground leading-snug mb-5">{message}</p>
  <div className="flex gap-2.5 justify-end">
  {!singleButton ? (
  <button type="button" onClick={onCancel} className={secondaryBtn}>
- Cancel
+ {tc("cancel")}
  </button>
  ) : null}
  <button
@@ -221,6 +224,8 @@ function AiTranslateButton({
 }) {
  const [translating, setTranslating] = useState(false);
  const [confirmReplace, setConfirmReplace] = useState(false);
+ const tc = useTranslations("dashboard.common");
+ const ta = useTranslations("dashboard.ai");
 
  if (lang === defaultLang) return null;
 
@@ -270,22 +275,22 @@ function AiTranslateButton({
  onClick={handleClick}
  disabled={!canTranslate}
  className={inline ? inlineCls : linkCls}
- aria-label="Translate with AI"
- title={inline && translating ? "Translating..." : (inline ? "Translate with AI" : undefined)}
+ aria-label={tc("translateWithAi")}
+ title={inline && translating ? tc("translating") : (inline ? tc("translateWithAi") : undefined)}
  >
  {translating ? (
  <div className="w-3 h-3 border-2 border-input border-t-neutral-900 rounded-full animate-spin" />
  ) : (
  <SparklesIcon size={inline ? 14 : 11} />
  )}
- {!inline ? (translating ? "Translating..." : "Translate") : null}
+ {!inline ? (translating ? tc("translating") : tc("translate")) : null}
  </button>
 
  <ConfirmDialog
  open={confirmReplace}
- title="Replace existing translation?"
- message="This will overwrite what you've already typed in this field."
- confirmLabel="Replace"
+ title={ta("translateReplaceTitle")}
+ message={ta("translateReplaceMessage")}
+ confirmLabel={tc("replace")}
  confirmStyle="primary"
  onConfirm={() => {
  setConfirmReplace(false);
@@ -332,12 +337,13 @@ export function TranslatedInput({
 
  const showTranslate = translatable && lang !== defaultLang;
 
+ const tc = useTranslations("dashboard.common");
  const inputProps = {
  id,
  value: current,
  onChange: (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) =>
  onChange(setMl(value, lang, e.target.value)),
- placeholder: showFallback ? "Will use: " + fallback : (placeholder || ""),
+ placeholder: showFallback ? tc("willUse") + ": " + fallback : (placeholder || ""),
  className: inputClass,
  };
 
@@ -410,7 +416,8 @@ export function SubscriptionChip({
  sub: { plan: string | null; subscriptionStatus: string | null; trialEndsAt: string | null } | null;
  onClick: () => void;
 }) {
- let label = "Plan";
+ const tsub = useTranslations("dashboard.subscriptionChip");
+ let label = tsub("plan");
  let cls = "bg-secondary text-foreground border-border";
 
  if (sub) {
@@ -424,13 +431,13 @@ export function SubscriptionChip({
  cls = "bg-emerald-50 text-emerald-700 border-emerald-200";
  } else if (trialing && trialEndsAt) {
  const daysLeft = Math.max(1, Math.ceil((trialEndsAt.getTime() - Date.now()) / 86400000));
- label = `Trial · ${daysLeft}d`;
+ label = tsub("trialDays", { days: daysLeft });
  cls = "bg-primary/10 text-primary border-primary/30";
  } else if (trialExpired) {
- label = "Trial expired";
+ label = tsub("trialExpired");
  cls = "bg-red-50 text-red-700 border-red-200";
  } else {
- label = "Free";
+ label = tsub("free");
  cls = "bg-secondary text-muted-foreground border-border";
  }
  }
@@ -511,6 +518,7 @@ export function SubpageStickyBar({
  hideSave?: boolean;
  children?: ReactNode;
 }) {
+ const tc = useTranslations("dashboard.common");
  const [saving, setSaving] = useState(false);
  async function handleSave() {
  if (saving || !onSave) return;
@@ -581,6 +589,7 @@ export function EditPageHeader({
  canSave?: boolean;
  saving?: boolean;
 }) {
+ const tc = useTranslations("dashboard.common");
  return (
  <>
  <div
@@ -630,6 +639,7 @@ export function EditPageHeader({
 // PreviewButton + ShareButton (used on Menu page sticky bar).
 
 export function PreviewButton({ url }: { url: string }) {
+ const t = useTranslations("dashboard.preview");
  const [open, setOpen] = useState(false);
  const fullUrl = url.startsWith("http") ? url : "https://" + url;
  return (
@@ -640,7 +650,7 @@ export function PreviewButton({ url }: { url: string }) {
  className="inline-flex items-center gap-1.5 h-7 px-2.5 text-xs font-medium text-muted-foreground bg-secondary rounded-full transition-colors"
  >
  <EyeIcon size={12} />
- Preview
+ {t("preview")}
  </button>
  <MenuPreviewModal menuUrl={fullUrl} open={open} onOpenChange={setOpen} />
  </>
@@ -648,6 +658,7 @@ export function PreviewButton({ url }: { url: string }) {
 }
 
 export function ShareButton({ onClick }: { onClick: () => void }) {
+ const t = useTranslations("dashboard.preview");
  return (
  <button
  type="button"
@@ -655,7 +666,7 @@ export function ShareButton({ onClick }: { onClick: () => void }) {
  className="inline-flex items-center gap-1.5 h-7 px-2.5 text-xs font-medium text-muted-foreground bg-secondary rounded-full transition-colors"
  >
  <ShareIcon size={12} />
- Share
+ {t("share")}
  </button>
  );
 }
@@ -673,6 +684,8 @@ export function ShareModal({
  url: string;
  restaurantName: string;
 }) {
+ const tc = useTranslations("dashboard.common");
+ const tp = useTranslations("dashboard.preview");
  const [copied, setCopied] = useState(false);
  const fullUrl = url && url.startsWith("http") ? url : "https://" + (url || "");
  const qrSize = 480;
@@ -712,17 +725,17 @@ export function ShareModal({
  }
 
  return (
- <Modal open={open} onClose={onClose} title={"Share " + (restaurantName || "your menu")}>
+ <Modal open={open} onClose={onClose} title={tp("shareTitle", { name: restaurantName || tp("shareYourMenu") })}>
  <div className="flex justify-center">
  <div className="p-3 bg-card border border-border rounded-xl">
- <img src={qrSrc} alt="QR code" width="192" height="192" className="block w-48 h-48" />
+ <img src={qrSrc} alt={tc("qrCode")} width="192" height="192" className="block w-48 h-48" />
  </div>
  </div>
  <p className="text-xs text-muted-foreground text-center mt-3">
- Print and place on tables, or share online.
+ {tp("tip")}
  </p>
  <div className="mt-5">
- <label className={labelClass}>Menu link</label>
+ <label className={labelClass}>{tc("menuLink")}</label>
  <div className="flex gap-2">
  <input
  type="text"
@@ -742,7 +755,7 @@ export function ShareModal({
  }
  >
  {copied ? <CheckIcon size={14} /> : <CopyIcon size={14} />}
- {copied ? "Copied" : "Copy"}
+ {copied ? tc("copied") : tc("copy")}
  </button>
  </div>
  </div>
@@ -753,7 +766,7 @@ export function ShareModal({
  className="h-10 px-3 text-sm font-medium text-foreground bg-card border border-input rounded-lg transition-colors flex items-center justify-center gap-1.5"
  >
  <DownloadIcon size={14} />
- Download QR
+ {tc("downloadQr")}
  </button>
  <button
  type="button"
@@ -761,7 +774,7 @@ export function ShareModal({
  className="h-10 px-3 text-sm font-medium text-foreground bg-card border border-input rounded-lg transition-colors flex items-center justify-center gap-1.5"
  >
  <ExternalLinkIcon size={14} />
- Open menu
+ {tc("openMenu")}
  </button>
  </div>
  </Modal>
@@ -783,6 +796,9 @@ export function TableQrModal({
  tableLabel: string;
  menuUrl: string;
 }) {
+ const tc = useTranslations("dashboard.common");
+ const tp = useTranslations("dashboard.preview");
+ const tt = useTranslations("dashboard.tables");
  const [copied, setCopied] = useState(false);
  if (tableNumber === null) return null;
  const baseUrl = menuUrl && menuUrl.startsWith("http") ? menuUrl : "https://" + (menuUrl || "");
@@ -819,17 +835,17 @@ export function TableQrModal({
  }
 
  return (
- <Modal open={open} onClose={onClose} title={"Table " + tableNumber + (tableLabel ? " · " + tableLabel : "")}>
+ <Modal open={open} onClose={onClose} title={tt("qrModalTitle", { number: tableNumber, label: tableLabel ? " · " + tableLabel : "" })}>
  <div className="flex justify-center">
  <div className="p-3 bg-card border border-border rounded-xl">
- <img src={qrSrc} alt={"QR for table " + tableNumber} width="192" height="192" className="block w-48 h-48" />
+ <img src={qrSrc} alt={tt("qrForTable", { number: tableNumber })} width="192" height="192" className="block w-48 h-48" />
  </div>
  </div>
  <p className="text-xs text-muted-foreground text-center mt-3">
- Print and place on this table. Scanning opens the menu with this table preselected.
+ {tp("tableTip")}
  </p>
  <div className="mt-5">
- <label className={labelClass}>Table link</label>
+ <label className={labelClass}>{tc("tableLink")}</label>
  <div className="flex gap-2">
  <input
  type="text"
@@ -849,7 +865,7 @@ export function TableQrModal({
  }
  >
  {copied ? <CheckIcon size={14} /> : <CopyIcon size={14} />}
- {copied ? "Copied" : "Copy"}
+ {copied ? tc("copied") : tc("copy")}
  </button>
  </div>
  </div>
@@ -860,7 +876,7 @@ export function TableQrModal({
  className={secondaryBtn + " flex-1 inline-flex items-center justify-center gap-1.5"}
  >
  <DownloadIcon size={14} />
- Download
+ {tc("download")}
  </button>
  <button
  type="button"
@@ -868,7 +884,7 @@ export function TableQrModal({
  className={primaryBtn + " flex-1 inline-flex items-center justify-center gap-1.5"}
  >
  <ExternalLinkIcon size={14} />
- Open
+ {tc("open")}
  </button>
  </div>
  </Modal>
@@ -905,6 +921,8 @@ export function PhotoPicker({
  width?: string;
  fileInputRef?: React.RefObject<HTMLInputElement | null>;
 }) {
+ const tph = useTranslations("dashboard.photo");
+ const ta = useTranslations("dashboard.ai");
  const [uploading, setUploading] = useState(false);
  const localRef = useRef<HTMLInputElement | null>(null);
  const ref = fileInputRef ?? localRef;
@@ -966,7 +984,7 @@ export function PhotoPicker({
  remove();
  }}
  className="absolute top-0.5 right-0.5 w-5 h-5 flex items-center justify-center rounded-full bg-black/50 text-white transition-colors z-10"
- aria-label="Remove photo"
+ aria-label={tph("removePhoto")}
  >
  <CloseIcon size={11} />
  </button>
@@ -1017,6 +1035,8 @@ export function AiImageModal({
  aspect?: "square" | "portrait";
  extraBody?: Record<string, unknown>;
 }) {
+ const tc = useTranslations("dashboard.common");
+ const ta = useTranslations("dashboard.ai");
  const [prompt, setPrompt] = useState(defaultPrompt || "");
  const [status, setStatus] = useState<"idle" | "loading" | "done" | "error">("idle");
  const [resultUrl, setResultUrl] = useState<string | null>(null);
@@ -1042,20 +1062,20 @@ export function AiImageModal({
  body: JSON.stringify({ prompt: prompt.trim(), ...(extraBody || {}) }),
  });
  if (!res.ok) {
- setError("Couldn't generate. Try again.");
+ setError(ta("errorGenerate"));
  setStatus("error");
  return;
  }
  const data = await res.json();
  if (!data.url) {
- setError("No image returned.");
+ setError(ta("noImage"));
  setStatus("error");
  return;
  }
  setResultUrl(data.url);
  setStatus("done");
  } catch {
- setError("Couldn't generate. Try again.");
+ setError(ta("errorGenerate"));
  setStatus("error");
  }
  }
@@ -1077,30 +1097,30 @@ export function AiImageModal({
  {isLoading ? (
  <div className="flex flex-col items-center gap-1.5 text-muted-foreground">
  <div className="w-6 h-6 border-2 border-input border-t-foreground rounded-full animate-spin" />
- <div className="text-[11px]">Generating...</div>
+ <div className="text-[11px]">{ta("generating")}</div>
  </div>
  ) : hasResult ? (
- <img src={resultUrl!} alt="Generated" className="w-full h-full object-cover" />
+ <img src={resultUrl!} alt="" className="w-full h-full object-cover" />
  ) : (
  <div className="flex flex-col items-center gap-1.5 text-muted-foreground px-4 text-center">
  <SparklesIcon size={20} />
- <div className="text-[11px]">Describe what you want, then tap Generate.</div>
+ <div className="text-[11px]">{ta("describeTip")}</div>
  </div>
  )}
  </div>
 
- <label htmlFor="ai-prompt" className={labelClass}>Describe</label>
+ <label htmlFor="ai-prompt" className={labelClass}>{ta("describe")}</label>
  <textarea
  id="ai-prompt"
  rows={2}
- placeholder={placeholder || "e.g. Margherita pizza on a wooden board, top-down view"}
+ placeholder={placeholder || ta("promptPlaceholder")}
  value={prompt}
  onChange={(e) => setPrompt(e.target.value)}
  disabled={isLoading}
  className={inputClass + " h-auto py-2 resize-none"}
  />
  <p className="text-[11px] text-muted-foreground mt-1">
- Tip: mention angle, lighting, or background.
+ {ta("promptTip")}
  </p>
 
  {error ? <p className="text-xs text-red-600 mt-3">{error}</p> : null}
@@ -1115,20 +1135,20 @@ export function AiImageModal({
  className={secondaryBtn + " flex-1 inline-flex items-center justify-center gap-1.5"}
  >
  <SparklesIcon size={13} />
- Try again
+ {ta("tryAgain")}
  </button>
  <button
  type="button"
  onClick={useImage}
  className={primaryBtn + " flex-1"}
  >
- Use this photo
+ {ta("useThisPhoto")}
  </button>
  </>
  ) : (
  <>
  <button type="button" onClick={onClose} className={secondaryBtn + " flex-1"}>
- Cancel
+ {tc("cancel")}
  </button>
  <button
  type="button"
@@ -1141,7 +1161,7 @@ export function AiImageModal({
  ) : (
  <SparklesIcon size={13} />
  )}
- {isLoading ? "Generating..." : "Generate"}
+ {isLoading ? ta("generating") : ta("generate")}
  </button>
  </>
  )}

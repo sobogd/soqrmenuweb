@@ -89,9 +89,9 @@ type OnboardingState = {
 };
 
 const inputClass =
-  "w-full h-10 px-3 text-sm text-neutral-900 bg-white border border-neutral-300 rounded-lg placeholder:text-neutral-400 focus:outline-none focus:border-neutral-900 focus:ring-2 focus:ring-neutral-900/5 transition-colors";
+  "w-full h-10 px-3 text-sm text-foreground bg-card border border-input rounded-lg placeholder:text-muted-foreground focus:outline-none focus:border-foreground focus:ring-2 focus:ring-foreground/5 transition-colors";
 
-const labelClass = "block text-xs font-medium text-neutral-900 mb-1.5 tracking-tight";
+const labelClass = "block text-xs font-medium text-foreground mb-1.5 tracking-tight";
 
 function ProgressBar({ step }: { step: number }) {
   return (
@@ -100,11 +100,11 @@ function ProgressBar({ step }: { step: number }) {
         <div
           key={i}
           className={`h-1 flex-1 min-w-0 rounded-full transition-colors duration-300 ${
-            i < step ? "bg-neutral-900" : "bg-neutral-200"
+            i < step ? "bg-foreground" : "bg-border"
           }`}
         />
       ))}
-      <span className="text-[11px] text-neutral-400 ml-2 tabular-nums whitespace-nowrap">
+      <span className="text-[11px] text-muted-foreground ml-2 tabular-nums whitespace-nowrap">
         {step} / {TOTAL_STEPS}
       </span>
     </div>
@@ -114,8 +114,8 @@ function ProgressBar({ step }: { step: number }) {
 function Header({ title, subtitle }: { title: string; subtitle: string }) {
   return (
     <>
-      <h1 className="text-xl font-medium text-neutral-900 tracking-tight mb-1.5">{title}</h1>
-      <p className="text-[13px] text-neutral-500 leading-snug mb-5">{subtitle}</p>
+      <h1 className="text-xl font-medium text-foreground tracking-tight mb-1.5">{title}</h1>
+      <p className="text-[13px] text-muted-foreground leading-snug mb-5">{subtitle}</p>
     </>
   );
 }
@@ -139,7 +139,7 @@ function Actions({
         <button
           type="button"
           onClick={onBack}
-          className="w-20 h-10 text-sm font-medium text-neutral-900 bg-transparent border border-neutral-300 rounded-lg hover:border-neutral-900 transition-colors tracking-tight"
+          className="w-20 h-10 text-sm font-medium text-foreground bg-transparent border border-input rounded-lg hover:border-foreground transition-colors tracking-tight"
         >
           Back
         </button>
@@ -148,7 +148,7 @@ function Actions({
         type="button"
         onClick={onContinue}
         disabled={!canContinue || loading}
-        className="flex-1 h-10 text-sm font-medium text-white bg-neutral-900 rounded-lg hover:bg-neutral-800 active:scale-[0.99] transition-all tracking-tight disabled:bg-neutral-300 disabled:text-neutral-500 disabled:cursor-not-allowed disabled:active:scale-100 flex items-center justify-center gap-2"
+        className="flex-1 h-10 text-sm font-medium text-background bg-foreground rounded-lg hover:bg-foreground/90 active:scale-[0.99] transition-all tracking-tight disabled:bg-input disabled:text-muted-foreground disabled:cursor-not-allowed disabled:active:scale-100 flex items-center justify-center gap-2"
       >
         {loading && <Loader2 className="h-3.5 w-3.5 animate-spin" />}
         {continueLabel}
@@ -190,7 +190,7 @@ function Step1({
         }}
         className={inputClass}
       />
-      <p className="text-xs text-neutral-400 mt-2">{t("step1.nameHint")}</p>
+      <p className="text-xs text-muted-foreground mt-2">{t("step1.nameHint")}</p>
 
       <Actions
         onContinue={onContinue}
@@ -253,7 +253,7 @@ function Step2({
         className={`${inputClass} mb-5`}
       />
 
-      <div className="border-t border-neutral-200 -mx-1 my-1 mb-5" />
+      <div className="border-t border-border -mx-1 my-1 mb-5" />
 
       <label htmlFor="dish-name" className={labelClass}>
         {t("step2.dishNameLabel")}
@@ -275,7 +275,7 @@ function Step2({
             {t("step2.priceLabel")}
           </label>
           <div className="relative">
-            <span className="absolute left-3 top-1/2 -translate-y-1/2 text-sm text-neutral-400 pointer-events-none">
+            <span className="absolute left-3 top-1/2 -translate-y-1/2 text-sm text-muted-foreground pointer-events-none">
               €
             </span>
             <input
@@ -296,10 +296,10 @@ function Step2({
           <label className={labelClass}>{t("step2.photoLabel")}</label>
           <label
             htmlFor="dish-photo"
-            className={`flex items-center justify-center gap-1.5 h-10 px-3 border border-dashed rounded-lg cursor-pointer transition-all overflow-hidden ${
+            className={`relative flex items-center justify-center gap-1.5 h-10 px-3 border border-dashed rounded-lg cursor-pointer transition-all overflow-hidden ${
               state.dish.photoPreview
-                ? "border-neutral-900 p-0 aspect-square"
-                : "border-neutral-300 bg-neutral-50 text-neutral-500 hover:border-neutral-900 hover:text-neutral-900 hover:bg-white whitespace-nowrap"
+                ? "border-foreground p-0 aspect-square"
+                : "border-input bg-secondary text-muted-foreground hover:border-foreground hover:text-foreground hover:bg-card"
             }`}
           >
             {state.dish.photoPreview ? (
@@ -307,7 +307,7 @@ function Step2({
               <img
                 src={state.dish.photoPreview}
                 alt=""
-                className="w-full h-full object-cover"
+                className="absolute inset-0 w-full h-full object-cover"
               />
             ) : (
               <>
@@ -340,7 +340,7 @@ function Step2({
           </label>
         </div>
       </div>
-      <p className="text-xs text-neutral-400 mt-3">{t("step2.photoHint")}</p>
+      <p className="text-xs text-muted-foreground mt-3">{t("step2.photoHint")}</p>
 
       <Actions
         onBack={onBack}
@@ -407,7 +407,7 @@ function Step3({
               type="button"
               onClick={() => handleSelect(i)}
               className={`relative aspect-square rounded-[10px] overflow-hidden cursor-pointer transition-transform duration-150 hover:-translate-y-0.5 ${
-                isActive ? "outline outline-2 outline-neutral-900 outline-offset-2" : ""
+                isActive ? "outline outline-2 outline-foreground outline-offset-2" : ""
               }`}
               style={{
                 background: `linear-gradient(${preset.overlay}), ${preset.bg}`,
@@ -416,9 +416,9 @@ function Step3({
               }}
             >
               {isActive ? (
-                <span className="absolute top-1.5 right-1.5 w-4 h-4 rounded-full bg-white flex items-center justify-center">
+                <span className="absolute top-1.5 right-1.5 w-4 h-4 rounded-full bg-card text-foreground flex items-center justify-center">
                   <svg width="9" height="9" viewBox="0 0 12 12" fill="none">
-                    <polyline points="2,6 5,9 10,3" stroke="#000" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                    <polyline points="2,6 5,9 10,3" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
                   </svg>
                 </span>
               ) : (
@@ -427,7 +427,7 @@ function Step3({
                   style={{ backgroundColor: preset.accentColor }}
                 />
               )}
-              <span className="absolute bottom-1.5 left-2 right-2 text-[10px] font-medium text-white tracking-tight text-left [text-shadow:0_1px_4px_rgba(0,0,0,0.7)]">
+              <span className="absolute bottom-1.5 left-2 right-2 text-[10px] font-medium text-background tracking-tight text-left [text-shadow:0_1px_4px_rgba(0,0,0,0.7)]">
                 {preset.label}
               </span>
             </button>
@@ -439,8 +439,8 @@ function Step3({
           htmlFor="cover-upload"
           className={`relative aspect-square rounded-[10px] border border-dashed cursor-pointer transition-all overflow-hidden flex flex-col items-center justify-center gap-1 ${
             uploadActive
-              ? "border-neutral-900 outline outline-2 outline-neutral-900 outline-offset-2"
-              : "border-neutral-300 bg-neutral-50 text-neutral-500 hover:border-neutral-900 hover:text-neutral-900 hover:bg-white"
+              ? "border-foreground outline outline-2 outline-foreground outline-offset-2"
+              : "border-input bg-secondary text-muted-foreground hover:border-foreground hover:text-foreground hover:bg-card"
           }`}
           style={
             uploadActive
@@ -450,12 +450,12 @@ function Step3({
         >
           {uploadActive ? (
             <>
-              <span className="absolute top-1.5 right-1.5 w-4 h-4 rounded-full bg-white flex items-center justify-center">
+              <span className="absolute top-1.5 right-1.5 w-4 h-4 rounded-full bg-card text-foreground flex items-center justify-center">
                 <svg width="9" height="9" viewBox="0 0 12 12" fill="none">
-                  <polyline points="2,6 5,9 10,3" stroke="#000" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                  <polyline points="2,6 5,9 10,3" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
                 </svg>
               </span>
-              <span className="absolute bottom-1.5 left-2 right-2 text-[10px] font-medium text-white tracking-tight text-left [text-shadow:0_1px_4px_rgba(0,0,0,0.7)]">
+              <span className="absolute bottom-1.5 left-2 right-2 text-[10px] font-medium text-background tracking-tight text-left [text-shadow:0_1px_4px_rgba(0,0,0,0.7)]">
                 {t("step3.yourPhoto")}
               </span>
             </>
@@ -473,7 +473,7 @@ function Step3({
         </label>
       </div>
 
-      <p className="text-xs text-neutral-400 mt-3">
+      <p className="text-xs text-muted-foreground mt-3">
         {t("step3.changeLater")}
       </p>
 
@@ -521,7 +521,7 @@ function Step4({
 
       {menuUrl && (
         <div className="flex justify-center mb-6">
-          <div className="w-[160px] h-[160px] bg-white rounded-2xl p-3 shadow-[0_8px_24px_rgba(0,0,0,0.12)]">
+          <div className="w-[160px] h-[160px] bg-card rounded-2xl p-3 shadow-[0_8px_24px_rgba(0,0,0,0.12)]">
             <QRCodeSVG
               value={menuUrl}
               size={136}
@@ -534,12 +534,12 @@ function Step4({
       )}
 
       {menuUrl && (
-        <div className="flex items-center justify-between gap-2 p-3 bg-neutral-50 border border-neutral-200 rounded-lg">
-          <span className="text-xs text-neutral-400 truncate">{displayUrl}</span>
+        <div className="flex items-center justify-between gap-2 p-3 bg-secondary border border-border rounded-lg">
+          <span className="text-xs text-muted-foreground truncate">{displayUrl}</span>
           <button
             type="button"
             onClick={handleCopy}
-            className="text-xs font-medium text-neutral-900 hover:text-neutral-600 transition-colors flex items-center gap-1 flex-shrink-0"
+            className="text-xs font-medium text-foreground hover:text-foreground/70 transition-colors flex items-center gap-1 flex-shrink-0"
           >
             <svg
               width="12"
@@ -670,8 +670,8 @@ export function OnboardingClient() {
   };
 
   return (
-    <div className="min-h-screen bg-neutral-100 flex items-center justify-center px-4 py-8 antialiased tracking-tight">
-      <div className="w-[360px] max-w-full bg-white border border-neutral-200 rounded-2xl p-6 pb-7">
+    <div className="min-h-[100dvh] bg-secondary flex items-center justify-center px-4 py-4 antialiased tracking-tight">
+      <div className="w-[360px] max-w-full bg-card border border-border rounded-2xl p-6 pb-7">
         {step === 1 && (
           <Step1 state={state} setState={setState} onContinue={next} t={t} />
         )}

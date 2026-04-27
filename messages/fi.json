@@ -2515,5 +2515,895 @@
     },
     "back": "Back",
     "continue": "Jatka"
+  },
+  "onlineOrders": {
+    "seo": {
+      "title": "Nettitilaukset ravintoloille — QR-menu | IQ Rest",
+      "description": "Anna asiakkaiden tilata suoraan QR-menustasi. Ei provisioita, reaaliaikaiset hinnat ja välitön tilausten hallinta hallintapaneelissasi."
+    },
+    "hero": {
+      "badge": "Nettitilaukset",
+      "title": "Muuta QR-menusi nettitilausjärjestelmäksi",
+      "subtitle": "Asiakkaat skannaavat, selaavat menua ja tekevät tilauksensa sekunneissa. Ei sovelluslatauksia, ei provisioita, ei monimutkaisuutta.",
+      "cta": "Luo menusi",
+      "ctaDemo": "Katso demo",
+      "noCreditCard": "Luottokorttia ei tarvita. Ilmainen paketti saatavilla."
+    },
+    "benefits": {
+      "title": "Miksi ravintolat valitsevat QR-menutilaukset",
+      "subtitle": "Suora tilauskanava, joka pitää asiat yksinkertaisina sinulle ja vieraillesi.",
+      "items": [
+        {
+          "title": "Ei sovellusta tarvita",
+          "description": "Vieraat vain skannaavat QR-koodin — ei latauksia, ei rekisteröitymistä. Toimii välittömästi missä tahansa puhelimen selaimessa."
+        },
+        {
+          "title": "Reaaliaikaiset hinnat",
+          "description": "Päivitä hinnat ja saatavuus välittömästi. Muutokset näkyvät heti QR-menussasi."
+        },
+        {
+          "title": "Tilaaminen pöydässä",
+          "description": "Jokaisella pöydällä on oma QR-koodinsa. Vieraat skannaavat, tilaavat ja sinä näet pöytänumeron hallintapaneelissasi."
+        },
+        {
+          "title": "Mukautettu ulkoasu",
+          "description": "Sovita menusi brändiisi omilla väreillä, taustoilla ja logolla."
+        }
+      ]
+    },
+    "features": {
+      "title": "Miten nettitilaaminen toimii",
+      "subtitle": "Kaksi yksinkertaista askelta yhdistää menusi keittiöösi.",
+      "items": [
+        {
+          "title": "Vieraat selaavat ja valitsevat annoksia",
+          "description": "Asiakkaat skannaavat QR-koodisi ja näkevät koko menun valokuvineen, kuvauksineen ja hintoineen. He lisäävät annoksia tilaukseensa yhdellä napautuksella — rekisteröitymistä ei tarvita."
+        },
+        {
+          "title": "Tilaukset näkyvät hallintapaneelissasi",
+          "description": "Kun vieraat ovat valmiita, he napauttavat tilausnappia. Tilaus ilmestyy välittömästi hallintapaneeliisi tuotetiedoilla, pöytänumerolla ja mahdollisilla huomautuksilla. Hyväksy, aloita valmistus ja merkitse valmiiksi."
+        }
+      ]
+    },
+    "faq": {
+      "title": "Usein kysytyt kysymykset",
+      "subtitle": "Kaikki mitä sinun tarvitsee tietää nettitilaamisesta.",
+      "items": [
+        {
+          "question": "Tarvitsenko ylimääräisiä laitteita tai sovelluksia?",
+          "answer": "Ei. Kaikki toimii selaimen kautta. Vieraat skannaavat QR-koodin puhelimen kameralla, ja sinä hallitset tilauksia IQ Rest -hallintapaneelista millä tahansa laitteella."
+        },
+        {
+          "question": "Onko provisioita tai tilauskohtaisia maksuja?",
+          "answer": "Ei lainkaan. IQ Rest ei koskaan veloita provisioita tilauksistasi. Maksat vain tilaussuunnitelmasi, ja kaikki tilaustulot jäävät sinulle."
+        },
+        {
+          "question": "Voivatko asiakkaat muokata tilaustaan tai lisätä huomautuksia?",
+          "answer": "Kyllä. Vieraat voivat valita annoksia, määrittää määriä ja lisätä erikoistoiveita tai huomautuksia. Voit myös vaatia asiakkaan nimen, puhelinnumeron tai toimitusosoitteen."
+        },
+        {
+          "question": "Toimiiko se paikan päällä syömiseen, noutoihin ja toimituksiin?",
+          "answer": "Kyllä. Paikan päällä vieraat skannaavat QR-koodin pöydässään. Noutoihin tai toimituksiin jaat suoran linkin menuusi. Voit ottaa käyttöön nimi-, puhelin- ja osoitekentät tarpeen mukaan."
+        }
+      ]
+    },
+    "howItWorks": {
+      "title": "Kuinka se toimii",
+      "subtitle": "Asennuksesta ensimmäisen tilauksen vastaanottamiseen viidessä yksinkertaisessa vaiheessa.",
+      "steps": [
+        {
+          "title": "Ota verkkotilaus käyttöön",
+          "description": "Ota tilaukset käyttöön Design-asetuksissasi. Valitse haluamasi tilaustila: tilaukset näkyvät hallintapaneelissasi, lähetetään WhatsAppiin tai molemmat samanaikaisesti."
+        },
+        {
+          "title": "Määritä tilauslomake",
+          "description": "Valitse, mitkä kentät asiakkaiden on täytettävä tilauksen tekemisen yhteydessä. Nimi on aina pakollinen, ja voit halutessasi kysyä puhelinnumeroa ja toimitusosoitetta."
+        },
+        {
+          "title": "Tulosta QR-koodit pöydille",
+          "description": "Jokaiselle pöydälle ravintolassasi annetaan oma ainutlaatuinen QR-koodi. Kun vieraat skannaavat sen, heidän tilauksensa saapuu automaattisesti oikean pöydän numeron kanssa."
+        },
+        {
+          "title": "Asiakkaat tekevät tilauksia",
+          "description": "Vieraat skannaavat QR-koodin, selaavat valikkoasi kuvien ja hintojen kanssa, valitsevat tuotteita, lisäävät huomautuksia ja lähettävät tilauksensa. Sovelluksen lataamista tai tilin luomista ei tarvita."
+        },
+        {
+          "title": "Hallinnoi tilauksia hallintapaneelissasi",
+          "description": "Tilaukset näkyvät heti hallintapaneelissasi. Päivitä jokaisen tilauksen tila uudesta meneillään olevaan ja valmiiseen. Säilytät 100 % tuloista — nollakomissioita."
+        }
+      ]
+    }
+  },
+  "reservationsPage": {
+    "seo": {
+      "title": "Poytavarausjarjestelma ravintoloille — Varaukset verkossa | IQ Rest",
+      "description": "Anna vieraiden varata poytia suoraan verkkosivultasi. Automaattinen tai manuaalinen vahvistus, sahkopostivahvistukset ja taysimaarainen kalenterinhallinta — kaikki mukana."
+    },
+    "hero": {
+      "badge": "Poytavaraukset",
+      "title": "Vastaanota poytavarauksia ympaari vuorokauden verkkosivultasi",
+      "subtitle": "Vieraat valitsevat paivamaaran, ajan ja seurueen koon — ja varaavat heti. Hallitset kaiken hallintapaneelista, puheluita ei tarvita.",
+      "cta": "Luo ruokalista",
+      "ctaDemo": "Katso demo",
+      "noCreditCard": "Luottokorttia ei tarvita. Ilmainen paketti saatavilla."
+    },
+    "features": {
+      "title": "Miten poytavaraukset toimivat",
+      "subtitle": "Kaksi askelta vieraan pyynnosta vahvistettuun varaukseen.",
+      "items": [
+        {
+          "title": "Vieraat varaavat verkkosivultasi",
+          "description": "Asiakkaat vierailevat ravintolasi sivulla, napauttavat 'Varaa poyta', valitsevat paivamaaran ja ajan, syottavat tietonsa ja lahettavat. Sovellusta ei tarvita — toimii kaikissa selaimissa kaikilla laitteilla."
+        },
+        {
+          "title": "Hallitset varauksia hallintapaneelissa",
+          "description": "Jokainen varaus nakyy hallintapaneelissa vieraan nimen, puhelinnumeron, seurueen koon, paivamaaran ja muistiinpanojen kanssa. Vahvista tai hylkaa yhdella napautuksella. Aseta automaattinen vahvistus tai tarkista jokainen varaus manuaalisesti."
+        }
+      ]
+    },
+    "faq": {
+      "title": "Usein kysytyt kysymykset",
+      "subtitle": "Kaikki mita sinun taytyy tietaa poytavarauksista.",
+      "items": [
+        {
+          "question": "Tarvitsevatko asiakkaat tilin varatakseen?",
+          "answer": "Eivat. Vieraat tayttavat yksinkertaisesti nimenssa, puhelinnumeronsa, seurueen koon ja toivotun ajankohdan. Tilia tai sovelluksen latausta ei tarvita."
+        },
+        {
+          "question": "Voinko asettaa saatavilla olevat ajat ja kapasiteetin?",
+          "answer": "Kylla. Maarita aukioloajat, varausaikavalien kesto ja poytakapasiteetti. Jarjestelma nayttaa vieraille vain saatavilla olevat ajat."
+        },
+        {
+          "question": "Saanko ilmoituksen kun joku varaa?",
+          "answer": "Kylla. Saat sahkopostin jokaisesta uudesta varauksesta. Vieraat saavat myos vahvistussahkopostin kun hyvaksyt varauksen."
+        },
+        {
+          "question": "Voinko kayttaa seka automaattista etta manuaalista vahvistusta?",
+          "answer": "Kylla. Valitse automaattinen tila vahvistaaksesi varaukset heti saatavuuden perusteella, tai manuaalinen tila tarkastaaksesi ja hyvaksyaksesi jokaisen pyynno itse."
+        }
+      ]
+    },
+    "howItWorks": {
+      "title": "Kuinka se toimii",
+      "subtitle": "Aseta verkkovaraukset ja ala hyväksyä varauksia viidessä vaiheessa.",
+      "steps": [
+        {
+          "title": "Ota Varaukset Käyttöön",
+          "description": "Ota varaukset käyttöön ravintolan asetuksissa. Valitse automaattisen vahvistuksen ja manuaalisen tilan välillä, jossa tarkistat jokaisen pyynnön."
+        },
+        {
+          "title": "Lisää Pöydät",
+          "description": "Luo pöytiä kapasiteetti- ja alue-tietojen kanssa — esimerkiksi 'Pöytä 5, 4 vierasta, Terassi'. Jokaisesta pöydästä tulee varattavissa oleva, ja järjestelmä estää automaattisesti päällekkäiset varaukset."
+        },
+        {
+          "title": "Määritä Aukioloajat",
+          "description": "Määritä saatavilla olevat tunnit varauksille ja valitse aikavälin kesto — 15 minuutista 8 tuntiin. Vain työaikasi sisällä olevat aikavälin näkyvät asiakkaille."
+        },
+        {
+          "title": "Asiakkaat Varaavat Verkkosivustolla",
+          "description": "Asiakkaat vierailevat ravintolasivullasi, valitsevat päivämäärän, kellonajan ja seurueen koon, syöttävät nimensä ja puhelinnumeronsa ja lähettävät varauksen. Ei vaadi tiliä tai sovelluksen lataamista — toimii kaikissa selaimissa."
+        },
+        {
+          "title": "Hallitse Varauksia Hallintapaneelissasi",
+          "description": "Näe kaikki varaukset hallintapaneelissasi. Vahvista, peruuta tai merkitse varaukset suoritetuiksi. Sekä sinä että asiakas saatte sähköpostiviestit jokaisesta varauksen päivityksestä."
+        }
+      ]
+    }
+  },
+  "colorSchemePage": {
+    "seo": {
+      "title": "Mukautettu QR-ruokalistasuunnittelu ja brandivarit — Ravintolan brandi | IQ Rest",
+      "description": "Sovita QR-ruokalistasi ravintolasi brandiin. Valitse korostusvarit ja luo yhtenaainen ulkoasu koko digitaaliseen ruokalistaasi."
+    },
+    "hero": {
+      "badge": "Mukautettu design",
+      "title": "Sovita QR-ruokalistasi ravintolasi brandiin",
+      "subtitle": "Valitse brandivari, ja koko ruokalista — painikkeet, korostukset, linkit — paivittyy heti.",
+      "cta": "Luo ruokalista",
+      "ctaDemo": "Katso demo",
+      "noCreditCard": "Luottokorttia ei tarvita. Ilmainen paketti saatavilla."
+    },
+    "features": {
+      "title": "Miten mukautettu brandi toimii",
+      "subtitle": "Sinun ruokalistasi, sinun varisi — yhtenainen jokaisella sivulla.",
+      "items": [
+        {
+          "title": "Valitse korostusvari",
+          "description": "Valitse 12 valmiista esiasetuksesta tai syota tarkka brandivari heksakoodilla. Jokainen painike, linkki ja korostus ruokalistassa mukautuu heti — suunnittelutaitoja ei tarvita."
+        }
+      ]
+    },
+    "faq": {
+      "title": "Usein kysytyt kysymykset",
+      "subtitle": "Kaikki mita sinun taytyy tietaa ruokalistan mukauttamisesta.",
+      "items": [
+        {
+          "question": "Voinko kayttaa tarkkaa brandivaria?",
+          "answer": "Kylla. Syota mika tahansa heksavaarikoodi tai valitse 12 huolellisesti valitusta esiasetuksesta. Korostusvari kayttoon kaikilla ruokalistan sivuilla."
+        },
+        {
+          "question": "Voinko vaihtaa vareja julkaisun jalkeen?",
+          "answer": "Ehdottomasti. Vaihda korostusvari milloin tahansa hallintapaneelista. Muutokset nakyvan heti aktiivisessa ruokalistassa — uudelleenjulkaisua ei tarvita."
+        },
+        {
+          "question": "Sopiiko QR-koodini myos brandivareihin?",
+          "answer": "QR-koodi luodaan erikseen ja sita voidaan mukauttaa itsenaisesti. Korostusvari koskee digitaalisia ruokalistasivuja, navigointia ja interaktiivisia elementteja."
+        }
+      ]
+    },
+    "howItWorks": {
+      "title": "Kuinka se toimii",
+      "subtitle": "Sovita valikkosi brändiisi kolmessa yksinkertaisessa vaiheessa.",
+      "steps": [
+        {
+          "title": "Avaa Suunnitteluasetukset",
+          "description": "Siirry hallintapaneelisi Suunnittelu-sivulle. Korostusvärin valitsin on keskellä — näet kaikki saatavilla olevat vaihtoehdot heti."
+        },
+        {
+          "title": "Valitse Brändivärisi",
+          "description": "Valitse 12 huolellisesti valittua väriasetusta, jotka on suunniteltu luettavuuden ja saavutettavuuden parantamiseksi, tai syötä tarkka heksakoodi täydellistä brändiyhteensopivuutta varten."
+        },
+        {
+          "title": "Välitön Esikatselu",
+          "description": "Korostusvärisi vaikuttaa painikkeisiin, linkkeihin ja korostuksiin koko valikossa. Se toimii sekä vaaleissa että tummissa teemoissa, ja muutokset näkyvät heti live-valikossasi."
+        }
+      ]
+    }
+  },
+  "easyMenuPage": {
+    "seo": {
+      "title": "Luo QR-ruokalista ravintolallesi — Ilmainen ruokalistatyokalu | IQ Rest",
+      "description": "Rakenna ravintolasi digitaalinen QR-ruokalista muutamassa minuutissa. Lisaa kategoriat, annokset, kuvat, hinnat — ja jaa skannattava QR-koodi. Ilmainen aloitus."
+    },
+    "hero": {
+      "badge": "Ruokalistatyokalu",
+      "title": "Luo digitaalinen QR-ruokalista ravintolallesi muutamassa minuutissa",
+      "subtitle": "Lisaa kategoriat ja annokset, aseta hinnat, lataa kuvat — QR-ruokalistasi on valmis jaettavaksi. Muokkaa milloin tahansa, muutokset nakyvan heti.",
+      "cta": "Luo ruokalista",
+      "ctaDemo": "Katso demo",
+      "noCreditCard": "Luottokorttia ei tarvita. Ilmainen paketti saatavilla."
+    },
+    "features": {
+      "title": "Miten ruokalistaeditori toimii",
+      "subtitle": "Yksinkertaiset tyokalut jotka saavat ruokalistasi verkkoon nopeasti.",
+      "items": [
+        {
+          "title": "Lisaa kategoriat ja annokset",
+          "description": "Luo kategorioita kuten Alkupalat, Paaruoat, Juomat — lisaa sitten annoksia nimilla, kuvauksilla, hinnoilla ja kuvilla. Vedae ja pudota jarjestyksen muuttamiseksi. Kytke kohteita paalle tai pois poistamatta niitae."
+        },
+        {
+          "title": "Muutokset nakyvan heti",
+          "description": "Jokainen muokkaus nakyy aktiivisessa QR-ruokalistassa sekunnissa. Paivita hinta, lisaa paivan erikoisuus tai piilota loppuunmyyty annos — asiakkaasi nakvat aina uusimman version."
+        }
+      ]
+    },
+    "faq": {
+      "title": "Usein kysytyt kysymykset",
+      "subtitle": "Kaikki mita sinun taytyy tietaa QR-ruokalistan luomisesta.",
+      "items": [
+        {
+          "question": "Miten luon QR-ruokalistan ravintolalleni?",
+          "answer": "Rekisteroidy sahkopostilla, anna ravintolallesi nimi ja ala lisata kategorioita ja annoksia. QR-ruokalista luodaan automaattisesti — tulosta QR-koodi ja aseta se poytiin."
+        },
+        {
+          "question": "Voinko lisata kuvia ruokalistakohteisiin?",
+          "answer": "Kylla. Lataa kuvia suoraan puhelimesta tai tietokoneesta. Kuvat optimoidaan automaattisesti nopeaa latausta varten kaikilla laitteilla."
+        },
+        {
+          "question": "Kuinka monta kohdetta voin lisata?",
+          "answer": "Kategorioille tai ruokalistakohteille ei ole rajaa. Lisaa niin monta annosta kuin tarvitset — ruokalista pysyy nopeana ja jarjestetyltynae."
+        },
+        {
+          "question": "Voinko tilapaisesti piilottaa loppuunmyydyn annoksen?",
+          "answer": "Kylla. Kytke mika tahansa kohde pois yhdella napautuksella. Se katoaa julkisesta ruokalistasta mutta pysyy hallintapaneelissa — kytke se takaisin paalle kun olet valmis."
+        }
+      ]
+    },
+    "howItWorks": {
+      "title": "Kuinka se toimii",
+      "subtitle": "Rakenna ja julkaise ravintolasi menu viidessä yksinkertaisessa vaiheessa.",
+      "steps": [
+        {
+          "title": "Luo Kategoriat",
+          "description": "Lisää kategorioita kuten Alkuruoat, Pääruoat, Jälkiruoat ja Juomat järjestääksesi menuasi. Voit luoda niin monta kategoriaa kuin tarvitset ja järjestää niitä uudelleen raahaamalla."
+        },
+        {
+          "title": "Lisää Ruokalajit",
+          "description": "Syötä jokaisen ruokalajin nimi, kuvaus ja hinta. Merkitse allergeenit, jos tarpeen — vieraat näkevät allergeeni-ikonit valikossa automaattisesti."
+        },
+        {
+          "title": "Lataa tai Generoi Valokuvia",
+          "description": "Lataa omia ruokakuviasi puhelimeltasi tai tietokoneeltasi, tai käytä tekoälyä luodaksesi ammattimaisen ruokakuvan ruokalajin nimen perusteella. Kuvia optimoidaan automaattisesti."
+        },
+        {
+          "title": "Järjestä Raahaamalla",
+          "description": "Järjestä kategoriat ja ruokalajit uudelleen raahaamalla ne paikoilleen. Voit kytkeä minkä tahansa kohteen päälle tai pois ilman, että poistat sen — täydellinen päivittäisille erikoistarjouksille tai loppuunmyydyille ruokalajeille."
+        },
+        {
+          "title": "Julkaise Menuasi",
+          "description": "Muutokset näkyvät heti live QR -menussasi. Ei ole 'julkaise' painiketta — jokainen muutos tulee voimaan reaaliajassa. Tulosta QR-koodisi ja aseta se pöydillesi."
+        }
+      ]
+    }
+  },
+  "aiTranslationPage": {
+    "seo": {
+      "title": "AI-ruokalistakaannos ravintoloille — Kaanna QR-ruokalista | IQ Rest",
+      "description": "Kaanna ravintolasi ruokalista yli 25 kielelle yhdella napsautuksella. Tekoaly ymmartaa ruokakontekstin — annosten nimet, kuvaukset ja kategoriat kaannetaan tarkasti."
+    },
+    "hero": {
+      "badge": "AI-kaannos",
+      "title": "Kaanna ruokalistasi yli 25 kielelle yhdella napsautuksella",
+      "subtitle": "Tekoalymme ymmartaa ruokakontekstin — se kaantaa annosten nimet, kuvaukset ja kategoriat luonnollisesti, ei sana sanalta. Tavoita jokainen turisti ja kansainvalinen vieras.",
+      "cta": "Luo ruokalista",
+      "ctaDemo": "Katso demo",
+      "noCreditCard": "Luottokorttia ei tarvita. Ilmainen paketti saatavilla."
+    },
+    "features": {
+      "title": "Miten AI-kaannos toimii",
+      "subtitle": "Omasta kielestasi koko maailmaan sekunneissa.",
+      "items": [
+        {
+          "title": "Kaanna koko ruokalista yhdella napsautuksella",
+          "description": "Valitse kohdekieli, napauta kaanna, ja koko ruokalista — kategoriat, annosten nimet, kuvaukset — kaannetaan heti. Tekoaly sailyttaa kulinaaariset termit ja mukautuu luonnollisesti jokaiselle kielelle."
+        },
+        {
+          "title": "Muokkaa ja hienosaeaedae mitae tahansa kaannosta",
+          "description": "Jokainen AI-kaannos on taysin muokattavissa. Tarkista tulos, saeaedae sanamuotoa ja tallenna. Muutoksesi sailyvat vaikka kaantaisit muita osia ruokalistasta myohemmin."
+        }
+      ]
+    },
+    "faq": {
+      "title": "Usein kysytyt kysymykset",
+      "subtitle": "Kaikki mita sinun taytyy tietaa ruokalistakaannoksesta.",
+      "items": [
+        {
+          "question": "Kuinka tarkka AI-kaannos on ruokalistoille?",
+          "answer": "Tekoalymme on optimoitu ravintolasisallolle. Se ymmartaa, ettei 'Beef Wellington' tai 'Tiramisu' tulisi kaantaa kirjaimellisesti, ja mukauttaa kuvaukset kuulostamaan luonnollisilta jokaisella kielella."
+        },
+        {
+          "question": "Mitka kielet ovat tuettuja?",
+          "answer": "Yli 25 kielta mukaan lukien englanti, espanja, ranska, saksa, italia, portugali, kiina, japani, korea, arabia, venaja ja monia muita eurooppalaisia ja aasialaisia kielia."
+        },
+        {
+          "question": "Voinko kaantaa vain joitakin kohteita, en koko ruokalistaa?",
+          "answer": "Kylla. Voit kaantaa yksittaisia kohteita, kokonaisia kategorioita tai koko ruokalistan kerralla. Sinulla on taysi hallinta siita, mita kaannetaan."
+        },
+        {
+          "question": "Maksaako kaannos ylimaaraaista?",
+          "answer": "AI-kaannos sisaltyy Growth- ja Pro-paketteihin anteliailla kuukausirajoilla. Ei sana- tai kohdekohtaisia maksuja — kaanna niin paljon kuin tarvitset."
+        }
+      ]
+    },
+    "howItWorks": {
+      "title": "Kuinka se toimii",
+      "subtitle": "Käännä koko menu minuutissa, ei tunneissa.",
+      "steps": [
+        {
+          "title": "Lisää kielet menuusi",
+          "description": "Siirry hallintapaneelisi Kielet-sivulle ja valitse, mitä kieliä menuusi tulisi tukea. Valitse 35 saatavilla olevaa kieltä, mukaan lukien kaikki tärkeimmät eurooppalaiset, aasialaiset ja Lähi-idän kielet."
+        },
+        {
+          "title": "Napsauta Käännä",
+          "description": "Yksi painike kääntää kaikki kategoriat, tuotenimet ja kuvaukset kerralla. Koko menu käsitellään sekunneissa, riippumatta siitä, kuinka monta tuotetta sinulla on."
+        },
+        {
+          "title": "AI ymmärtää ruoan kontekstin",
+          "description": "AI tuntee kulinaarisen terminologian eri kulttuureissa. Se säilyttää ruokalajien nimet kuten 'Tiramisu' tai 'Pad Thai' samalla kun se mukauttaa kuvauksia, ainesosaluetteloita ja kategorianimiä luonnollisesti."
+        },
+        {
+          "title": "Tarkista ja muokkaa",
+          "description": "Jokainen käännös on täysin muokattavissa. Säädä sanamuotoja vastaamaan tyyliäsi. Manuaaliset muutoksesi säilyvät, vaikka käännät myöhemmin muita osia menuusta uudelleen."
+        },
+        {
+          "title": "Julkaise monikielinen menusi",
+          "description": "Vierailla on kielivalitsin menuusi ja he voivat selata haluamallaan kielellä. Jokainen kieli voidaan kytkeä päälle tai pois päältä itsenäisesti hallintapaneelistasi."
+        }
+      ]
+    }
+  },
+  "mobileManagementPage": {
+    "seo": {
+      "title": "Hallitse ravintolasi ruokalistaa puhelimesta — Mobiilihallintapaneeli | IQ Rest",
+      "description": "Pyorita ravintolasi QR-ruokalistaa kokonaan puhelimestasi. Lisaa annoksia, paivita hintoja, lataa kuvia, tarkista analytiikkaa — tietokonetta ei tarvita."
+    },
+    "hero": {
+      "badge": "Mobiilihallintapaneeli",
+      "title": "Hallitse koko ravintolasi ruokalistaa puhelimestasi",
+      "subtitle": "Lisaa annoksia, muuta hintoja, lataa kuvia, tarkista tilauksia — kaikki alypuhelimestasi. Hallintapaneeli on rakennettu mobiili ensin, joten et tarvitse koskaan tietokonetta.",
+      "cta": "Luo ruokalista",
+      "ctaDemo": "Katso demo",
+      "noCreditCard": "Luottokorttia ei tarvita. Ilmainen paketti saatavilla."
+    },
+    "features": {
+      "title": "Miten mobiilihallinta toimii",
+      "subtitle": "Ravintolasi hallintapaneeli aina taskussasi.",
+      "items": [
+        {
+          "title": "Taysi hallintapaneeli alypuhelimessasi",
+          "description": "Jokainen ominaisuus toimii taydellisesti puhelimen naytolla — kohteiden lisays, kategorioiden muokkaus, tilausten hallinta, analytiikan tarkistus. Kayttoliittyma on suunniteltu kosketukselle, ei vain pienennetty tyopoydalta."
+        },
+        {
+          "title": "Lataa kuvia suoraan kamerasta",
+          "description": "Ota kuva uudesta annoksesta ja lataa se ruokalistaan sekunneissa. Kuvat optimoidaan automaattisesti. Paivita paivan erikoisuus seistessasi keittiossa."
+        }
+      ]
+    },
+    "faq": {
+      "title": "Usein kysytyt kysymykset",
+      "subtitle": "Kaikki mita sinun taytyy tietaa mobiiliruokalistahallinnasta.",
+      "items": [
+        {
+          "question": "Tarvitseeko minun asentaa sovellus?",
+          "answer": "Ei. Hallintapaneeli toimii puhelimesi verkkoselaimessa — Safari, Chrome tai muussa. Kirjaudu sisaan ja ala hallita ruokalistaasi."
+        },
+        {
+          "question": "Voinko tehda puhelimella kaiken mita tietokoneella?",
+          "answer": "Kylla. Jokainen ominaisuus on kaytettavissa mobiilissa — kohteiden lisays, kuvien lataus, kategorioiden hallinta, analytiikan tarkistus, tilausten ja varausten kasittely."
+        },
+        {
+          "question": "Toimiiko se myos tableteilla?",
+          "answer": "Kylla. Hallintapaneeli mukautuu kaikkiin nayttokokoihin — puhelimet, tabletit ja poytakoneet. Kayta mika tahansa laite on katevin."
+        },
+        {
+          "question": "Voiko useampi henkilo hallita ruokalistaa?",
+          "answer": "Tallae hetkellae yksi tili hallitsee ravintolaa. Voit kirjautua sisaan usealta laitteelta samanaikaisesti — puhelimesta, tabletista tai tietokoneesta."
+        }
+      ]
+    },
+    "howItWorks": {
+      "title": "Kuinka se toimii",
+      "subtitle": "Hallitse ravintolaasi mistä tahansa laitteesta neljässä vaiheessa.",
+      "steps": [
+        {
+          "title": "Avaa hallintapaneeli puhelimessasi",
+          "description": "Siirry osoitteeseen iq-rest.com ja kirjaudu sisään puhelimesi selaimesta. Hallintapaneeli mukautuu automaattisesti näyttökokoosi — ei tarvitse ladata tai asentaa sovellusta."
+        },
+        {
+          "title": "Muokkaa valikkoa missä tahansa",
+          "description": "Lisää uusia tuotteita, päivitä hintoja, muuta kuvastoja ja lataa valokuvia suoraan puhelimesi kamerasta. Kaikki työpöydällä saatavilla olevat ominaisuudet toimivat yhtä hyvin mobiilissa."
+        },
+        {
+          "title": "Tarkista tilaukset ja varaukset",
+          "description": "Näe saapuvat tilaukset, hallitse pöytävarauksia ja vastaa tukiviesteihin — kaikki puhelimestasi. Pysy ajan tasalla ravintolasi kanssa, vaikka olisit poissa."
+        },
+        {
+          "title": "Muutokset tulevat voimaan heti",
+          "description": "Jokainen muokkaus, jonka teet puhelimestasi, näkyy QR-valikossasi reaaliajassa. Ei tarvitse synkronoida, julkaista tai odottaa — vieraasi näkevät aina viimeisimmän version."
+        }
+      ]
+    }
+  },
+  "customDesignPage": {
+    "seo": {
+      "title": "Ravintolan verkkosivusto video- ja kuvataustoilla — Sivustorakentaja | IQ Rest",
+      "description": "Luo upea ravintolan verkkosivusto mukautetuilla video- tai kuvataustoilla. Lataa tunnelmavideo tai ruokakuva — tee vaikutus vieraisiin ensimmaisesta skannauksesta."
+    },
+    "hero": {
+      "badge": "Sivustodesign",
+      "title": "Luo upea ravintolan verkkosivusto videotaustoilla",
+      "subtitle": "Lataa ravintolasi tunnelmavideo tai kaunis ruokakuva taustaksi. Vieraat nakvat ammattimaisen, brandatyn kokemuksen heti QR-koodin skannaamisen jalkeen.",
+      "cta": "Luo ruokalista",
+      "ctaDemo": "Katso demo",
+      "noCreditCard": "Luottokorttia ei tarvita. Ilmainen paketti saatavilla."
+    },
+    "features": {
+      "title": "Miten mukautetut taustat toimivat",
+      "subtitle": "Tee pysyva ensivaikutelma brandiisi sopivilla visuaaleilla.",
+      "items": [
+        {
+          "title": "Lataa video- tai kuvataustat",
+          "description": "Lisaa toistuva video ravintolasi tunnelmasta, timelapse keittiostae tai laadukas ruokakuva. Tausta nakyy etusivullasi — luoden mukaansatempaavan kokemuksen vieraille."
+        },
+        {
+          "title": "Optimoitu nopeutta varten kaikilla laitteilla",
+          "description": "Videot ja kuvat pakataan ja ladataan laiskasti automaattisesti. Verkkosivustosi pysyy nopeana jopa hitailla mobiiliyhteyksilla — ei puskurointia, ei viiveita, vain sulava kokemus."
+        }
+      ]
+    },
+    "faq": {
+      "title": "Usein kysytyt kysymykset",
+      "subtitle": "Kaikki mita sinun taytyy tietaa ravintolan verkkosivustosuunnittelusta.",
+      "items": [
+        {
+          "question": "Mitka videoformaatit ovat tuettuja?",
+          "answer": "MP4- ja WebM-formaatit toimivat parhaiten. Videot pakataan automaattisesti nopeaa latausta varten. Pida videot alle 30 sekunnin parhaan mobiilikokemuksen saamiseksi."
+        },
+        {
+          "question": "Hidastaako videotausta verkkosivustoani?",
+          "answer": "Ei. Videot pakataan, ladataan laiskasti ja optimoidaan automaattisesti. Hitailla yhteyksilla jarjestelma siirtyy staattiseen kuvaan pitaakseen kokemuksen sulavana."
+        },
+        {
+          "question": "Voinko kayttaa kuvaa videon sijaan?",
+          "answer": "Kylla. Lataa mika tahansa kuva — se optimoidaan ja naytettaan koko nayton taustana. Voit vaihtaa videon ja kuvan valilla milloin tahansa."
+        },
+        {
+          "question": "Tarvitsenko suunnittelijaa taman asentamiseen?",
+          "answer": "Et. Lataa vain videosi tai kuvasi hallintapaneelista. Jarjestelma hoitaa koon, pakkauksen ja asettelun automaattisesti. Verkkosivustosi nayttaa ammattimaiselta ilman suunnittelutaitoja."
+        }
+      ]
+    },
+    "howItWorks": {
+      "title": "Kuinka se toimii",
+      "subtitle": "Mukauta ravintolasi visuaalista identiteettiä neljässä vaiheessa.",
+      "steps": [
+        {
+          "title": "Avaa Suunnitteluasetukset",
+          "description": "Siirry hallintapaneelisi Suunnittelu-sivulle. Täällä voit hallita ravintolasi visuaalista ilmettä — taustaa, korostusväriä ja etusivun asettelua."
+        },
+        {
+          "title": "Lataa Tausta",
+          "description": "Valitse video (MP4, WebM) tai kuva ravintolasi etusivun taustaksi. Videot toistuvat automaattisesti, luoden mukaansatempaavan ensivaikutelman jokaiselle kävijälle."
+        },
+        {
+          "title": "AI-taustan Generointi",
+          "description": "Eikö sinulla ole valmista videota tai kuvaa? Anna AI:n luoda taustakuva automaattisesti ruokalistasi kohteista. Se tuottaa ammattimaisen visuaalin, joka vastaa ravintolasi tyyliä."
+        },
+        {
+          "title": "Esikatsele ja Tallenna",
+          "description": "Näe muutoksesi reaaliajassa ennen tallentamista. Videot pakataan automaattisesti ja ladataan laiskasti, mikä takaa nopean suorituskyvyn mobiililaitteilla ilman visuaalisen laadun heikentämistä."
+        }
+      ]
+    }
+  },
+  "multilingualPage": {
+    "seo": {
+      "title": "Monikielinen ravintolan verkkosivusto — Ruokalista yli 25 kielella | IQ Rest",
+      "description": "Ravintolasi verkkosivusto ja QR-ruokalista yli 25 kielella. Vieraat vaihtavat kielta yhdella napautuksella — ruokalista, yhteystiedot ja varaukset mukautuvat heti."
+    },
+    "hero": {
+      "badge": "Monikielinen",
+      "title": "Ravintolasi verkkosivusto yli 25 kielella",
+      "subtitle": "Turistit ja kansainvaliset vieraat nakvat ruokalistasi omalla kielellaan. Yksi napautus vaihtamiseksi — kaikki mukautuu heti: annokset, kuvaukset, yhteystiedot, navigointi.",
+      "cta": "Luo ruokalista",
+      "ctaDemo": "Katso demo",
+      "noCreditCard": "Luottokorttia ei tarvita. Ilmainen paketti saatavilla."
+    },
+    "features": {
+      "title": "Miten monikielituki toimii",
+      "subtitle": "Puhu asiakkaidesi kielta ilman ylimaaraista tyota.",
+      "items": [
+        {
+          "title": "Vieraat valitsevat kielensa",
+          "description": "Ruokalistaan ilmestyy kielivalitsin. Vieraat napauttavat haluamaansa kielta, ja koko sivusto — ruokalista, kuvaukset, yhteystiedot, navigointi — vaihtuu heti. Sivun uudelleenlatausta ei tarvita."
+        },
+        {
+          "title": "Lisaa kielia hallintapaneelista",
+          "description": "Ota uusia kielia kayttoon yhdella napsautuksella. Kayta AI-kaannosta sisallon tayttamiseen tai syota kaannokset manuaalisesti. Jokainen kieli voidaan kytkeae paalle tai pois itsenaisesti."
+        }
+      ]
+    },
+    "faq": {
+      "title": "Usein kysytyt kysymykset",
+      "subtitle": "Kaikki mita sinun taytyy tietaa monikielisista ruokalistoista.",
+      "items": [
+        {
+          "question": "Kuinka monta kielta voin lisata ruokalistaani?",
+          "answer": "Yli 25 kielta mukaan lukien kaikki suuret eurooppalaiset kielet, kiina, japani, korea, arabia, farsi ja muita. Lisaa niin monta kuin vieraasi tarvitsevat."
+        },
+        {
+          "question": "Pitaako minun kaantaa kaikki manuaalisesti?",
+          "answer": "Ei. Kayta sisaanrakennettua AI-kaannosta kaantaaksesi koko ruokalistan yhdella napsautuksella. Voit myos muokata mitae tahansa kaannosta manuaalisesti taytta hallintaa varten."
+        },
+        {
+          "question": "Tallentuuko kieliasetus?",
+          "answer": "Kylla. Kun vieras valitsee kielen, se muistetaan seuraavalle kerralle. Heidaen ei tarvitse valita uudelleen palatessaan."
+        },
+        {
+          "question": "Onko monikielituki saatavilla ilmaisessa paketissa?",
+          "answer": "Ilmainen paketti sisaltaa enintaan 2 kielta. Growth- ja Pro-paketit tarjoavat rajoittamattomasti kielia AI-kaannos mukaan lukien."
+        }
+      ]
+    },
+    "howItWorks": {
+      "title": "Kuinka se toimii",
+      "subtitle": "Saat menuusi saataville useilla kielillä neljässä vaiheessa.",
+      "steps": [
+        {
+          "title": "Siirry kieliasetuksiin",
+          "description": "Avaa Kielisivut hallintapaneelissasi. Näet kaikki saatavilla olevat kielet ja mitkä niistä ovat tällä hetkellä aktiivisia valikossasi."
+        },
+        {
+          "title": "Lisää kieliä",
+          "description": "Valitse 35 saatavilla olevasta kielestä. Ilmainen suunnitelma sisältää enintään 2 kieltä, kun taas Growth- ja Pro-suunnitelmat tarjoavat rajattomasti kieliä valikkoosi."
+        },
+        {
+          "title": "Käännä sisältösi",
+          "description": "Käytä yhdellä napsautuksella tapahtuvaa tekoälykäännöstä kääntääksesi koko valikkosi heti, tai syötä käännökset manuaalisesti täydellisen hallinnan saamiseksi. Voit myös yhdistää molemmat lähestymistavat."
+        },
+        {
+          "title": "Vieraiden kielivalinta",
+          "description": "Kielivalitsin ilmestyy valikkosivullesi. Kun vieraat valitsevat kielensä, koko valikko vaihtuu heti. Heidän mieltymyksensä tallennetaan seuraavia vierailuja varten."
+        }
+      ]
+    }
+  },
+  "instantSetupPage": {
+    "seo": {
+      "title": "Ilmainen ravintolan verkkosivustogeneraattori — Luo 5 minuutissa | IQ Rest",
+      "description": "Saa ammattimainen ravintolan verkkosivusto QR-ruokalistalla, yhteystietosivulla ja kartalla — syota vain sahkopostisi. Valmis 5 minuutissa, teknisia taitoja ei tarvita."
+    },
+    "hero": {
+      "badge": "Ilmainen sivusto",
+      "title": "Saa ammattimainen ravintolan verkkosivusto 5 minuutissa",
+      "subtitle": "Syota sahkopostisi, anna ravintolallesi nimi, ja saat heti tayden verkkosivuston QR-ruokalistalla, yhteystietosivulla karttoineen ja modernilla responsiivisella designilla. Ei koodausta, ei suunnittelijoita.",
+      "cta": "Luo ruokalista",
+      "ctaDemo": "Katso demo",
+      "noCreditCard": "Luottokorttia ei tarvita. Ilmainen paketti saatavilla."
+    },
+    "features": {
+      "title": "Nain se toimii",
+      "subtitle": "Nollasta toimivaan ravintolan verkkosivustoon kolmessa vaiheessa.",
+      "items": [
+        {
+          "title": "Rekisteroidy vain sahkopostilla",
+          "description": "Ei monimutkaisia rekisterointilomakkeita. Syota sahkopostisi, vahvista koodilla, ja hallintapaneelisi on valmis. Anna ravintolallesi nimi, ja verkkosivustosi julkaistaan heti."
+        },
+        {
+          "title": "Kaikki mukana alusta alkaen",
+          "description": "Verkkosivustosi sisaltaa QR-ruokalistan, yhteystietosivun Google Mapsilla, kielituen, mobiilin responsiivisen designin ja oman ainutlaatuisen URL-osoitteen. Lisaa vain annokset ja ala jakaa."
+        }
+      ]
+    },
+    "faq": {
+      "title": "Usein kysytyt kysymykset",
+      "subtitle": "Kaikki mita sinun taytyy tietaa ravintolan verkkosivuston luomisesta.",
+      "items": [
+        {
+          "question": "Miten luon ilmaisen ravintolan verkkosivuston?",
+          "answer": "Syota sahkoposti IQ Restissa, vahvista koodilla, anna ravintolallesi nimi — valmis. Verkkosivustosi QR-ruokalistalla on toiminnassa alle 5 minuutissa. Luottokorttia ei tarvita."
+        },
+        {
+          "question": "Tarvitsenko teknisia taitoja?",
+          "answer": "Et. Kaikki on suunniteltu ravintoloitsijoille, ei kehittajille. Lisaa annoksia, lataa kuvia ja hallitse sivustoasi kokonaan puhelimestasi."
+        },
+        {
+          "question": "Mita ilmaiseen pakettiin kuuluu?",
+          "answer": "Taysi ravintolan verkkosivusto, QR-ruokalista, yhteystietosivu karttoineen, analytiikka, mukautettu varimaailma ja enintaan 2 kielta. Ei koekjaksoa — se on ilmainen ikuisesti."
+        },
+        {
+          "question": "Voinko kayttaa omaa verkkotunnustani?",
+          "answer": "Ilmaisessa ja Growth-paketissa sivustosi on osoitteessa iq-rest.com/m/sinun-nimesi. Pro-paketti tukee omia verkkotunnuksia taysimaaraaista brandihallintaa varten."
+        }
+      ]
+    },
+    "howItWorks": {
+      "title": "Kuinka se toimii",
+      "subtitle": "Nollasta toimivaksi ravintolasivustoksi neljässä vaiheessa.",
+      "steps": [
+        {
+          "title": "Syötä sähköpostiosoitteesi",
+          "description": "Salasanaa ei tarvita. Kirjoita vain sähköpostiosoitteesi ja napsauta Jatka. Pitkiä rekisteröitymislomakkeita ei ole, luottokorttia ei vaadita, eikä sitoumuksia ole."
+        },
+        {
+          "title": "Vahvista koodilla",
+          "description": "Tarkista postilaatikkosi 4-numeroinen vahvistuskoodi. Syötä se kirjautuaksesi turvallisesti. Tämä salasana ilman lähestymistapa tarkoittaa, että yksi asia on vähemmän muistettavana."
+        },
+        {
+          "title": "Nimeä ravintolasi",
+          "description": "Anna ravintolallesi nimi. Siitä tulee verkkosivustosi URL-osoite ja ruokalistan otsikko. Voit aina muuttaa sitä myöhemmin hallintapaneelin asetuksista."
+        },
+        {
+          "title": "Verkkosivustosi on valmis",
+          "description": "Täydellinen ravintolasivusto QR-ruokalistalla, yhteystietosivulla kartan kanssa ja responsiivisella suunnittelulla on heti käytettävissä osoitteessa iq-rest.com/m/your-name. Lisää annoksesi ja ala jakaa."
+        }
+      ]
+    }
+  },
+  "analyticsPage": {
+    "seo": {
+      "title": "Ravintola-analytiikka ja QR-ruokatilastot — Seuraa kavijoeita | IQ Rest",
+      "description": "Seuraa QR-ruokalistan skannauksia, sivunkatseluja, suosittuja kielia ja kavijatrendeja. Reaaliaikainen analytiikkapaneeli ravintolasi verkkosivustolle."
+    },
+    "hero": {
+      "badge": "Analytiikka",
+      "title": "Nae tarkalleen miten vieraat kayttavat QR-ruokalistaasi",
+      "subtitle": "Seuraa paivittaisia skannauksia, sivunkatseluja, suosittuja kielia, laitetilastoja ja trendeja ajan mittaan. Tee datavetoisia paatoksia optimoidaksesi ruokalistasi ja kasvattaaksesi liiketoimintaasi.",
+      "cta": "Luo ruokalista",
+      "ctaDemo": "Katso demo",
+      "noCreditCard": "Luottokorttia ei tarvita. Ilmainen paketti saatavilla."
+    },
+    "features": {
+      "title": "Mita voit seurata",
+      "subtitle": "Reaaliaikaiset nakymaat ravintolasi verkkoolaasnoloon.",
+      "items": [
+        {
+          "title": "Paivittaiset katselut, skannaukset ja kavijatrendit",
+          "description": "Nae kuinka moni skannaa QR-koodisi ja vierailee ruokalistassasi paivittain, viikoittain ja kuukausittain. Seuraa trendeja ajan mittaan ymmartaaksesi kausittaiset mallit ja mitataksesi kampanjoiden vaikutusta."
+        },
+        {
+          "title": "Kieli- ja laitejakauma",
+          "description": "Tieda mitka kielia vieraasi suosivat ja mitka laitteita he kayttavat. Nama tiedot auttavat prioririsoimaan kaannoksia ja varmistamaan, etta ruokalista nayttaa taydelliselta suosituimmilla laitteilla."
+        }
+      ]
+    },
+    "faq": {
+      "title": "Usein kysytyt kysymykset",
+      "subtitle": "Kaikki mita sinun taytyy tietaa ravintola-analytiikasta.",
+      "items": [
+        {
+          "question": "Mitka mittarit voin seurata?",
+          "answer": "Paivittaiset, viikoittaiset ja kuukausittaiset sivunkatselut. Ainutlaatuiset kavijat. Eniten katsotut sivut. Kieliasetukset. Laite- ja selainjakauma. Kaikki paivitettyina reaaliajassa."
+        },
+        {
+          "question": "Sisaltyuko analytiikka ilmaiseen pakettiin?",
+          "answer": "Kylla. Perusanalytiikka on saatavilla kaikissa paketeissa, mukaan lukien ilmainen. Voit nakea katselut, kavijat ja kielitilastot ensimmaisesta paivasta alkaen."
+        },
+        {
+          "question": "Voinko nahda mitka sivut ovat suosituimpia?",
+          "answer": "Kylla. Hallintapaneeli nayttaa katselut sivuittain — etusivu, ruokalista, yhteystiedot, varaukset ja kielivalinta. Nae tarkalleen missa vieraat viettavat aikaansa."
+        },
+        {
+          "question": "Kuinka pitkalta ajalta data on saatavilla?",
+          "answer": "Analytiikkadata tallennetaan ravintolasi luomispaivasta lahtien. Voit tarkastella paivittaisia, viikoittaisia ja kuukausittaisia trendeja koko historialtasi."
+        }
+      ]
+    },
+    "howItWorks": {
+      "title": "Kuinka se toimii",
+      "subtitle": "Aloita ravintolasi suorituskyvyn seuraaminen neljässä vaiheessa.",
+      "steps": [
+        {
+          "title": "Luo Ravintolasi",
+          "description": "Analytiikka alkaa seurata siitä hetkestä, kun valikkosi julkaistaan. Ei tarvitse konfiguroida mitään — jokainen sivunäkymä, QR-skannaus ja vierailija tallennetaan automaattisesti."
+        },
+        {
+          "title": "Jaa QR-koodisi",
+          "description": "Tulosta QR-koodisi ja sijoita se pöytiin, sisäänkäynnille tai mukaanottopakkauksiin. Jokainen skannaus tallennetaan aikaleiman, kielen, laitteen ja vieraillun sivun kanssa."
+        },
+        {
+          "title": "Avaa Analytiikkapaneeli",
+          "description": "Näe päivittäiset, viikoittaiset ja kuukausittaiset tilastot selkeillä kaavioilla. Seuraa kokonaisnäkymiä, ainutlaatuisia vierailijoita ja trendejä ajan myötä yhdeltä paneelinäkymältä."
+        },
+        {
+          "title": "Tutki Yksityiskohtaisia Erityksiä",
+          "description": "Katso tilastoja jaoteltuna sivun (valikko, yhteystiedot, varaukset), suosikkikielen, laitetyypin ja selaimen mukaan. Käytä näitä tietoja optimoidaksesi valikkoasi ja priorisoidaksesi käännöksiä."
+        }
+      ]
+    }
+  },
+  "aiImagesPage": {
+    "seo": {
+      "title": "AI-ruokakuvien generointi ruokalistoille — Ravintolaruokalistakuvat | IQ Rest",
+      "description": "Generoi kauniita ruokakuvia ruokalistaasi tekoalyn avulla. Valokuvaajaa ei tarvita — saa ammattimaiset annoskuvat sekunneissa, optimoituna QR-ruokalistallesi."
+    },
+    "hero": {
+      "badge": "AI-kuvat",
+      "title": "Ammattimaiset ruokalistakuvat ilman valokuvaajaa",
+      "subtitle": "Generoi upeita ruokakuvia annoksillesi tekoalyn avulla. Syota annoksen nimi ja saa kaunis, optimoitu kuva valmiina QR-ruokalistaasi — sekunneissa.",
+      "cta": "Luo ruokalista",
+      "ctaDemo": "Katso demo",
+      "noCreditCard": "Luottokorttia ei tarvita. Ilmainen paketti saatavilla."
+    },
+    "features": {
+      "title": "Miten AI-kuvien generointi toimii",
+      "subtitle": "Annoksen nimesta ammattimaiseen kuvaan yhdella napsautuksella.",
+      "items": [
+        {
+          "title": "Generoi kuvia annosten nimista",
+          "description": "Kirjoita annoksen nimi — 'Grillattu lohi sitruunalla', 'Margherita-pizza', 'Suklaalavakakku' — ja tekoaly generoi ammattimaisen ruokakuvan. Valitse useista tyyleista ja taustoista."
+        },
+        {
+          "title": "Optimoitu nopeaa latausta varten",
+          "description": "Jokainen generoitu kuva pakataan automaattisesti ja muunnetaan moderneihin formaatteihin. Ruokalistasi pysyy salamannopeana kaikilla laitteilla, jopa kuvien kanssa jokaisessa annoksessa."
+        }
+      ]
+    },
+    "faq": {
+      "title": "Usein kysytyt kysymykset",
+      "subtitle": "Kaikki mita sinun taytyy tietaa AI-ruokalistakuvista.",
+      "items": [
+        {
+          "question": "Miten generoin ruokakuvan?",
+          "answer": "Avaa mika tahansa ruokalistakohde hallintapaneelissa, napauta 'Generoi kuva', ja tekoaly luo ammattimaisen ruokakuvan annoksen nimen ja kuvauksen perusteella. Valitse mieleisesi."
+        },
+        {
+          "question": "Voinko kayttaa omia kuviani sen sijaan?",
+          "answer": "Ehdottomasti. Lataa omia kuvia puhelimesta tai tietokoneesta. AI-generointi on valinnaista — kayta sita kun sinulla ei ole kuvaa valmiina."
+        },
+        {
+          "question": "Kuinka monta kuvaa voin generoida?",
+          "answer": "Kuvien generointirajat riippuvat paketistasi. Growth sisaltaa kuukausikiintionsn, ja Pro tarjoaa korkeamman rajan. Voit aina ladata omia kuvia ilman rajoituksia."
+        },
+        {
+          "question": "Ovatko generoidut kuvat ainutlaatuisia ravintolalleni?",
+          "answer": "Kylla. Jokainen kuva generoidaan ainutlaatuisesti juuri sinun annoksellesi. Ei kuvapankkikuvia — jokainen kuva luodaan alusta alkaen ruokalistakohteesi perusteella."
+        }
+      ]
+    },
+    "howItWorks": {
+      "title": "Kuinka se toimii",
+      "subtitle": "Hanki ammattimaisia ruokakuvia valikkoosi neljässä yksinkertaisessa vaiheessa.",
+      "steps": [
+        {
+          "title": "Avaa mikä tahansa valikkokohta",
+          "description": "Siirry hallintapaneelissasi kohtaan, josta haluat kuvan. Voit luoda kuvia uusista ruoista tai korvata olemassa olevia kuvia missä tahansa valikkokohdassa."
+        },
+        {
+          "title": "Napsauta Luo kuva",
+          "description": "AI luo ammattimaisen ruokakuvan ruoan nimen ja kuvauksen perusteella. Mitä enemmän yksityiskohtia annat kuvauksessa, sitä tarkempi tulos on."
+        },
+        {
+          "title": "Tarkista tulos",
+          "description": "Esikatsele luotua kuvaa ennen sen käyttämistä. Jos haluat erilaisen ilmeen, luo kuva uudelleen saadaksesi uuden variaation. Jokainen luonti tuottaa ainutlaatuisen kuvan."
+        },
+        {
+          "title": "Käytä valikossasi",
+          "description": "Kuva optimoidaan automaattisesti, pakataan WebP-muotoon ja näkyy heti live-valikossasi. Vieraasi näkevät ammattimaisia ruokakuvia jokaisesta ruoasta."
+        }
+      ]
+    }
+  },
+  "personalSupportPage": {
+    "seo": {
+      "title": "Henkilokohtainen tuki ravintolasi verkkosivustolle — Aitoa ihmisapua | IQ Rest",
+      "description": "Saa henkilokohtaista apua oikeilta ihmisiltae, ei chatboteilta. Asennusapu, ruokalistan optimointivinkit ja nopeat vastaukset — saatavilla kaikissa paketeissa mukaan lukien ilmainen."
+    },
+    "hero": {
+      "badge": "Henkilokohtainen tuki",
+      "title": "Oikeita ihmisia, oikeaa apua — ei chatbotteja",
+      "subtitle": "Onko sinulla kysymys? Tarvitsetko apua ruokalistan asentamisessa? Haluatko ehdottaa ominaisuutta? Laheta meille viesti suoraan ja saa henkilokohtainen vastaus joltakulta, joka ymmartaa ravintoloita.",
+      "cta": "Luo ruokalista",
+      "ctaDemo": "Katso demo",
+      "noCreditCard": "Luottokorttia ei tarvita. Ilmainen paketti saatavilla."
+    },
+    "features": {
+      "title": "Miten tuki toimii",
+      "subtitle": "Apua kun sita tarvitset, ihmisiltae jotka valittavat.",
+      "items": [
+        {
+          "title": "Laheta meille viesti suoraan hallintapaneelista",
+          "description": "Avaa tukichatti hallintapaneelissa ja kuvaile kysymyksesi. Oikea ihminen lukee viestisi ja vastaa — yleensa muutamassa tunnissa arkipaiviina."
+        },
+        {
+          "title": "Apua asennuksessa, optimoinnissa ja muussa",
+          "description": "Tarvitsetpa apua ensimmaisen annoksen lisaamisessa, neuvoja ruokalistan jarjestamisessa tai haluat ehdottaa uutta ominaisuutta — olemme taalla. Jokainen kysymys on tarkeae, olipa se kuinka pieni tahansa."
+        }
+      ]
+    },
+    "faq": {
+      "title": "Usein kysytyt kysymykset",
+      "subtitle": "Kaikki mita sinun taytyy tietaa tuestamme.",
+      "items": [
+        {
+          "question": "Onko tuki saatavilla ilmaisessa paketissa?",
+          "answer": "Kylla. Henkilokohtainen tuki on saatavilla kaikissa paketeissa, mukaan lukien ilmainen. Uskomme, etta jokainen ravintola ansaitsee oikeaa apua tilauksesta riippumatta."
+        },
+        {
+          "question": "Kuinka nopeasti vastaatte?",
+          "answer": "Yleensa muutamassa tunnissa arkipaiviina. Luemme jokaisen viestin henkilokohtaisesti ja pyrimme ratkaisemaan kysymyksesi yhdella vastauksella."
+        },
+        {
+          "question": "Voitteko auttaa minua ruokalistan asentamisessa?",
+          "answer": "Ehdottomasti. Jos tarvitset apua annosten lisaamisessa, kategorioiden jarjestamisessa, kaannosten asentamisessa tai varausten maarittamisessa — kysy vain. Opastamme sinua mielellaamme."
+        },
+        {
+          "question": "Voinko ehdottaa uusia ominaisuuksia?",
+          "answer": "Kylla, ja rakastamme sita! Monet ominaisuuksistamme saivat alkunsa kayttajaehdotuksista. Laheta meille ideasi, niin harkitsemme sita tulevissa paivityksissa."
+        }
+      ]
+    },
+    "howItWorks": {
+      "title": "Kuinka se toimii",
+      "subtitle": "Saat apua oikealta henkilöltä neljässä yksinkertaisessa vaiheessa.",
+      "steps": [
+        {
+          "title": "Avaa Tuki-chat",
+          "description": "Siirry hallintapaneelisi Tuki-sivulle. Näet yksinkertaisen chat-käyttöliittymän, johon voit kirjoittaa viestisi suoraan — ei lippulomakkeita tai valittavia kategorioita."
+        },
+        {
+          "title": "Kuvaile Kysymyksesi",
+          "description": "Kirjoita viestisi. Kysy asetuksesta, ominaisuuksista, ruokalistan optimoinnista, laskutuksesta tai mistä tahansa muusta. Tyhmiä kysymyksiä ei ole — autamme mielellämme kaikessa."
+        },
+        {
+          "title": "Saat Henkilökohtaisen Vastauksen",
+          "description": "Oikea henkilö (ei chatbot) lukee viestisi ja vastaa muutamassa tunnissa. Ymmärrämme ravintolatyöskentelytavat ja annamme käytännönläheisiä, toteuttamiskelpoisia vastauksia."
+        },
+        {
+          "title": "Jatkuva Apua",
+          "description": "Pyydä ominaisuusvinkkejä, saa ruokalistan optimointivinkkejä tai kysy asennusapua milloin tahansa. Keskusteluhistoriasi tallennetaan, joten meillä on aina konteksti aiemmista kysymyksistä."
+        }
+      ]
+    }
   }
 }

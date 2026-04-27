@@ -2515,5 +2515,895 @@
     },
     "back": "Back",
     "continue": "Pokračovat"
+  },
+  "onlineOrders": {
+    "seo": {
+      "title": "Online objednávky pro restaurace — QR menu | IQ Rest",
+      "description": "Nechte zákazníky objednávat přímo z vašeho QR menu. Žádné provize, ceny v reálném čase a okamžitá správa objednávek ve vašem panelu."
+    },
+    "hero": {
+      "badge": "Online objednávky",
+      "title": "Proměňte své QR menu v systém online objednávek",
+      "subtitle": "Zákazníci naskenují, prohlédnou si menu a objednají během několika sekund. Žádné stahování aplikací, žádné provize, žádné komplikace.",
+      "cta": "Vytvořte si menu",
+      "ctaDemo": "Zobrazit demo",
+      "noCreditCard": "Kreditní karta není vyžadována. K dispozici je bezplatný plán."
+    },
+    "benefits": {
+      "title": "Proč restaurace volí objednávky přes QR menu",
+      "subtitle": "Přímý objednávkový kanál, který je jednoduchý pro vás i vaše hosty.",
+      "items": [
+        {
+          "title": "Žádná aplikace",
+          "description": "Hosté jen naskenují QR kód — žádné stahování, žádná registrace. Funguje okamžitě v jakémkoli prohlížeči telefonu."
+        },
+        {
+          "title": "Ceny v reálném čase",
+          "description": "Aktualizujte ceny a dostupnost okamžitě. Změny se ihned projeví ve vašem QR menu."
+        },
+        {
+          "title": "Objednávání u stolu",
+          "description": "Každý stůl má svůj vlastní QR kód. Hosté naskenují, objednají a vy vidíte číslo stolu ve svém panelu."
+        },
+        {
+          "title": "Vlastní design",
+          "description": "Přizpůsobte menu své značce pomocí vlastních barev, pozadí a loga."
+        }
+      ]
+    },
+    "features": {
+      "title": "Jak online objednávky fungují",
+      "subtitle": "Dva jednoduché kroky propojí vaše menu s kuchyní.",
+      "items": [
+        {
+          "title": "Hosté si prohlížejí a vybírají položky",
+          "description": "Zákazníci naskenují váš QR kód a uvidí celé menu s fotkami, popisy a cenami. Přidávají položky do objednávky jediným klepnutím — bez registrace."
+        },
+        {
+          "title": "Objednávky se zobrazí ve vašem panelu",
+          "description": "Až budou hosté připraveni, klepnou na tlačítko objednávky. Objednávka se okamžitě zobrazí ve vašem panelu s detaily položek, číslem stolu a případnými poznámkami. Přijměte, začněte připravovat a označte jako hotové."
+        }
+      ]
+    },
+    "faq": {
+      "title": "Často kladené otázky",
+      "subtitle": "Vše, co potřebujete vědět o online objednávkách.",
+      "items": [
+        {
+          "question": "Potřebuji nějaký extra hardware nebo aplikace?",
+          "answer": "Ne. Vše funguje přes webový prohlížeč. Hosté naskenují QR kód fotoaparátem telefonu a vy spravujete objednávky z panelu IQ Rest na jakémkoli zařízení."
+        },
+        {
+          "question": "Jsou nějaké provize nebo poplatky za objednávku?",
+          "answer": "Rozhodně ne. IQ Rest nikdy neúčtuje provize z vašich objednávek. Platíte pouze svůj předplatitelský plán a veškeré příjmy z objednávek zůstávají vám."
+        },
+        {
+          "question": "Mohou zákazníci upravit objednávku nebo přidat poznámky?",
+          "answer": "Ano. Hosté mohou vybírat položky, určovat množství a přidávat speciální poznámky nebo požadavky. Můžete také vyžadovat jméno zákazníka, telefon nebo doručovací adresu."
+        },
+        {
+          "question": "Funguje to pro stravování na místě, s sebou i rozvoz?",
+          "answer": "Ano. Na místě hosté naskenují QR kód u svého stolu. Pro objednávky s sebou nebo rozvoz sdílíte přímý odkaz na své menu. Pole pro jméno, telefon a adresu můžete aktivovat podle potřeby."
+        }
+      ]
+    },
+    "howItWorks": {
+      "title": "Jak to funguje",
+      "subtitle": "Od nastavení po přijetí vaší první objednávky ve pěti jednoduchých krocích.",
+      "steps": [
+        {
+          "title": "Povolte online objednávání",
+          "description": "Přepněte objednávky ve svých nastaveních designu. Vyberte si preferovaný režim: objednávky se zobrazují na vašem panelu, přeposílají se na WhatsApp, nebo obojí současně."
+        },
+        {
+          "title": "Nastavte objednávkový formulář",
+          "description": "Vyberte, které údaje musí zákazníci vyplnit při zadávání objednávky. Jméno je vždy povinné a můžete volitelně požadovat telefonní číslo a adresu doručení."
+        },
+        {
+          "title": "Vytiskněte QR kódy pro stoly",
+          "description": "Každý stůl ve vaší restauraci dostane svůj vlastní unikátní QR kód. Když hosté kód naskenují, jejich objednávka se automaticky doručí s připojeným správným číslem stolu."
+        },
+        {
+          "title": "Zákazníci zadávají objednávky",
+          "description": "Hosté naskenují QR kód, procházejí vaše menu s fotografiemi a cenami, vybírají položky, přidávají poznámky a odesílají svou objednávku. Není potřeba stahovat aplikaci ani vytvářet účet."
+        },
+        {
+          "title": "Spravujte objednávky ve svém panelu",
+          "description": "Objednávky se okamžitě zobrazují na vašem panelu. Aktualizujte stav každé objednávky od nové po probíhající až po dokončenou. Udržujete 100 % příjmů — žádné provize."
+        }
+      ]
+    }
+  },
+  "reservationsPage": {
+    "seo": {
+      "title": "Rezervační systém stolů pro restaurace — Online rezervace | IQ Rest",
+      "description": "Umožněte hostům rezervovat stoly přímo z vašeho webu. Automatické nebo ruční potvrzení, e-mailová upozornění a kompletní správa kalendáře — vše v ceně."
+    },
+    "hero": {
+      "badge": "Rezervace stolů",
+      "title": "Přijímejte rezervace stolů 24/7 z vašeho webu",
+      "subtitle": "Hosté si vyberou datum, čas a počet osob — a okamžitě si zarezervují. Vše spravujete z přehledného panelu, bez telefonátů.",
+      "cta": "Vytvořte si menu",
+      "ctaDemo": "Zobrazit demo",
+      "noCreditCard": "Bez platební karty. K dispozici je bezplatný tarif."
+    },
+    "features": {
+      "title": "Jak rezervace stolů fungují",
+      "subtitle": "Dva kroky od požadavku hosta k potvrzené rezervaci.",
+      "items": [
+        {
+          "title": "Hosté si rezervují přímo z vašeho webu",
+          "description": "Zákazníci navštíví stránku vaší restaurace, klepnou na \\\"Rezervovat stůl\\\", vyberou datum a čas, zadají své údaje a odešlou. Žádná aplikace není potřeba — funguje v jakémkoli prohlížeči na jakémkoli zařízení."
+        },
+        {
+          "title": "Rezervace spravujete v přehledném panelu",
+          "description": "Každá rezervace se zobrazí ve vašem panelu se jménem hosta, telefonem, počtem osob, datem a poznámkami. Potvrďte nebo zamítněte jedním klepnutím. Nastavte automatické potvrzení, nebo kontrolujte každou rezervaci ručně."
+        }
+      ]
+    },
+    "faq": {
+      "title": "Často kladené otázky",
+      "subtitle": "Vše, co potřebujete vědět o rezervacích stolů.",
+      "items": [
+        {
+          "question": "Musí si zákazníci vytvořit účet pro rezervaci?",
+          "answer": "Ne. Hosté jednoduše vyplní jméno, telefonní číslo, počet osob a preferovaný čas. Není nutný žádný účet ani stahování aplikace."
+        },
+        {
+          "question": "Mohu nastavit dostupné časové sloty a kapacitu?",
+          "answer": "Ano. Definujte svou pracovní dobu, délku rezervačního slotu a kapacitu stolů. Systém hostům zobrazí pouze dostupné sloty."
+        },
+        {
+          "question": "Dostanu upozornění, když si někdo zarezervuje?",
+          "answer": "Ano. Za každou novou rezervaci obdržíte e-mail. Hosté také dostanou potvrzovací e-mail, jakmile rezervaci schválíte."
+        },
+        {
+          "question": "Mohu používat automatické i ruční potvrzení?",
+          "answer": "Ano. Zvolte automatický režim pro okamžité potvrzení na základě dostupnosti, nebo ruční režim pro individuální kontrolu a schválení každého požadavku."
+        }
+      ]
+    },
+    "howItWorks": {
+      "title": "Jak to funguje",
+      "subtitle": "Nastavte online rezervace a začněte přijímat objednávky ve pěti krocích.",
+      "steps": [
+        {
+          "title": "Povolit rezervace",
+          "description": "Přepněte rezervace v nastavení vaší restaurace. Zvolte mezi automatickým potvrzením, kde jsou rezervace schváleny okamžitě na základě dostupnosti, nebo manuálním režimem, kde každou žádost přezkoumáváte."
+        },
+        {
+          "title": "Přidejte své stoly",
+          "description": "Vytvořte stoly s informacemi o kapacitě a zóně — například 'Stůl 5, 4 hosté, Terasa'. Každý stůl se stává rezervovatelným a systém automaticky zabraňuje dvojím rezervacím."
+        },
+        {
+          "title": "Nastavte pracovní hodiny",
+          "description": "Definujte své dostupné hodiny pro rezervace a zvolte délku časového slotu — od 15 minut do 8 hodin. Hostům se zobrazují pouze časové sloty v rámci vašich pracovních hodin."
+        },
+        {
+          "title": "Hosté rezervují online",
+          "description": "Zákazníci navštíví stránku vaší restaurace, vyberou si datum, čas a počet osob, zadají své jméno a telefon a odešlou. Není potřeba účet ani stahování aplikace — funguje v jakémkoli prohlížeči."
+        },
+        {
+          "title": "Spravujte rezervace ve svém panelu",
+          "description": "Zobrazte si všechny rezervace ve svém panelu. Potvrďte, zrušte nebo označte rezervace jako dokončené. Jak vy, tak host obdržíte e-mailová oznámení o každé aktualizaci rezervace."
+        }
+      ]
+    }
+  },
+  "colorSchemePage": {
+    "seo": {
+      "title": "Vlastní design QR menu a barvy značky — Branding restaurace | IQ Rest",
+      "description": "Přizpůsobte QR menu své značce. Vyberte si akcentové barvy a vytvořte jednotný vzhled celého digitálního menu."
+    },
+    "hero": {
+      "badge": "Vlastní design",
+      "title": "Slaďte QR menu se značkou vaší restaurace",
+      "subtitle": "Vyberte barvu své značky a celé menu — tlačítka, zvýraznění, odkazy — se okamžitě aktualizuje.",
+      "cta": "Vytvořte si menu",
+      "ctaDemo": "Zobrazit demo",
+      "noCreditCard": "Bez platební karty. K dispozici je bezplatný tarif."
+    },
+    "features": {
+      "title": "Jak funguje vlastní branding",
+      "subtitle": "Vaše menu, vaše barvy — jednotné na každé stránce.",
+      "items": [
+        {
+          "title": "Vyberte si akcentovou barvu",
+          "description": "Vybírejte z 12 předvoleb nebo zadejte přesnou barvu značky pomocí hex kódu. Každé tlačítko, odkaz a zvýraznění na vašem menu se okamžitě přizpůsobí — žádné designérské dovednosti nejsou potřeba."
+        }
+      ]
+    },
+    "faq": {
+      "title": "Často kladené otázky",
+      "subtitle": "Vše, co potřebujete vědět o přizpůsobení menu.",
+      "items": [
+        {
+          "question": "Mohu použít přesnou barvu své značky?",
+          "answer": "Ano. Zadejte libovolný hex kód barvy, nebo vyberte z 12 pečlivě vybraných předvoleb. Akcentová barva se použije na všech stránkách vašeho menu."
+        },
+        {
+          "question": "Mohu změnit barvy po zveřejnění?",
+          "answer": "Samozřejmě. Změňte akcentovou barvu kdykoli z přehledného panelu. Změny se na živém menu projeví okamžitě — bez nutnosti opětovného zveřejnění."
+        },
+        {
+          "question": "Bude QR kód také odpovídat barvám značky?",
+          "answer": "QR kód se generuje samostatně a lze ho upravit nezávisle. Akcentová barva se vztahuje na stránky vašeho digitálního menu, navigaci a interaktivní prvky."
+        }
+      ]
+    },
+    "howItWorks": {
+      "title": "Jak to funguje",
+      "subtitle": "Přizpůsobte své menu své značce ve třech jednoduchých krocích.",
+      "steps": [
+        {
+          "title": "Otevřít nastavení designu",
+          "description": "Přejděte na stránku Design ve svém ovládacím panelu. Výběr akcentové barvy je na prvním místě — všechny dostupné možnosti uvidíte okamžitě."
+        },
+        {
+          "title": "Vyberte barvu své značky",
+          "description": "Vyberte si z 12 pečlivě vybraných barevných předvoleb navržených pro čitelnost a přístupnost, nebo zadejte svůj přesný hex kód pro dokonalé sladění se značkou."
+        },
+        {
+          "title": "Okamžitý náhled",
+          "description": "Vaše akcentová barva se aplikuje na tlačítka, odkazy a zvýraznění v celém menu. Funguje jak v světlém, tak v tmavém režimu a změny se okamžitě zobrazí na vašem živém menu."
+        }
+      ]
+    }
+  },
+  "easyMenuPage": {
+    "seo": {
+      "title": "Vytvořte QR menu pro restauraci — Bezplatný tvůrce menu | IQ Rest",
+      "description": "Vytvořte digitální QR menu pro svou restauraci během několika minut. Přidejte kategorie, jídla, fotky, ceny — a sdílejte naskenovalný QR kód. Zdarma na začátek."
+    },
+    "hero": {
+      "badge": "Tvůrce menu",
+      "title": "Vytvořte digitální QR menu pro restauraci během několika minut",
+      "subtitle": "Přidejte kategorie a jídla, nastavte ceny, nahrajte fotky — vaše QR menu je připraveno ke sdílení. Upravujte kdykoli, změny se projeví okamžitě.",
+      "cta": "Vytvořte si menu",
+      "ctaDemo": "Zobrazit demo",
+      "noCreditCard": "Bez platební karty. K dispozici je bezplatný tarif."
+    },
+    "features": {
+      "title": "Jak editor menu funguje",
+      "subtitle": "Jednoduché nástroje pro rychlé spuštění menu online.",
+      "items": [
+        {
+          "title": "Přidejte kategorie a jídla",
+          "description": "Vytvořte kategorie jako Předkrmy, Hlavní jídla, Nápoje — a přidejte jídla s názvy, popisky, cenami a fotkami. Přetáhněte pro změnu pořadí. Zapínejte a vypínejte položky bez mazání."
+        },
+        {
+          "title": "Změny se projeví okamžitě",
+          "description": "Každá úprava se na živém QR menu projeví během sekund. Aktualizujte cenu, přidejte denní nabídku nebo skryjte vyprodané jídlo — zákazníci vždy vidí nejnovější verzi."
+        }
+      ]
+    },
+    "faq": {
+      "title": "Často kladené otázky",
+      "subtitle": "Vše, co potřebujete vědět o vytváření QR menu.",
+      "items": [
+        {
+          "question": "Jak vytvořím QR menu pro svou restauraci?",
+          "answer": "Zaregistrujte se e-mailem, pojmenujte restauraci a začněte přidávat kategorie a jídla. QR menu se vygeneruje automaticky — vytiskněte QR kód a umístěte ho na stoly."
+        },
+        {
+          "question": "Mohu přidat fotky k položkám menu?",
+          "answer": "Ano. Nahrajte fotky přímo z telefonu nebo počítače. Obrázky se automaticky optimalizují pro rychlé načítání na jakémkoli zařízení."
+        },
+        {
+          "question": "Kolik položek mohu přidat?",
+          "answer": "Počet kategorií ani položek menu není omezen. Přidejte tolik jídel, kolik potřebujete — menu zůstane rychlé a přehledné."
+        },
+        {
+          "question": "Mohu dočasně skrýt jídlo, které je vyprodané?",
+          "answer": "Ano. Jedním klepnutím položku vypněte. Zmizí z veřejného menu, ale zůstane ve vašem panelu — zapněte ji zpět, kdykoli budete chtít."
+        }
+      ]
+    },
+    "howItWorks": {
+      "title": "Jak to funguje",
+      "subtitle": "Vytvořte a publikujte menu vaší restaurace v pěti jednoduchých krocích.",
+      "steps": [
+        {
+          "title": "Vytvořte kategorie",
+          "description": "Přidejte kategorie jako Předkrmy, Hlavní jídla, Dezerty a Nápoje pro uspořádání vašeho menu. Můžete vytvořit tolik kategorií, kolik potřebujete, a přeuspořádat je pomocí přetahování."
+        },
+        {
+          "title": "Přidejte položky menu",
+          "description": "Zadejte název jídla, popis a cenu pro každou položku. Označte alergeny, pokud je to relevantní — hosté uvidí ikony alergenů na menu automaticky."
+        },
+        {
+          "title": "Nahrát nebo vygenerovat fotografie",
+          "description": "Nahrajte své vlastní fotografie jídel z telefonu nebo počítače, nebo použijte AI k vygenerování profesionálního obrázku jídla podle názvu pokrmu. Obrázky jsou automaticky optimalizovány."
+        },
+        {
+          "title": "Uspořádejte pomocí přetahování",
+          "description": "Přeuspořádejte kategorie a položky přetažením na správné místo. Přepněte jakoukoli položku na zapnuto nebo vypnuto, aniž byste ji smazali — ideální pro denní speciality nebo vyprodaná jídla."
+        },
+        {
+          "title": "Publikujte své menu",
+          "description": "Změny se okamžitě zobrazí na vašem živém QR menu. Neexistuje žádné tlačítko 'publikovat' — každá úprava se okamžitě projeví v reálném čase. Vytiskněte svůj QR kód a umístěte ho na stoly."
+        }
+      ]
+    }
+  },
+  "aiTranslationPage": {
+    "seo": {
+      "title": "AI překlad menu pro restaurace — Přeložte QR menu | IQ Rest",
+      "description": "Přeložte menu restaurace do více než 25 jazyků jedním kliknutím. AI rozumí kulinářskému kontextu — názvy jídel, popisy a kategorie jsou přeloženy přesně."
+    },
+    "hero": {
+      "badge": "AI překlad",
+      "title": "Přeložte menu do více než 25 jazyků jedním kliknutím",
+      "subtitle": "Naše AI rozumí gastronomickému kontextu — překládá názvy jídel, popisy a kategorie přirozeně, ne doslova. Oslovte každého turistu a zahraničního hosta.",
+      "cta": "Vytvořte si menu",
+      "ctaDemo": "Zobrazit demo",
+      "noCreditCard": "Bez platební karty. K dispozici je bezplatný tarif."
+    },
+    "features": {
+      "title": "Jak AI překlad funguje",
+      "subtitle": "Z vašeho jazyka do celého světa během sekund.",
+      "items": [
+        {
+          "title": "Překlad celého menu jedním kliknutím",
+          "description": "Vyberte cílový jazyk, klepněte na přeložit a celé menu — kategorie, názvy jídel, popisy — je okamžitě přeloženo. AI zachovává kulinářské výrazy a přizpůsobuje se přirozeně každému jazyku."
+        },
+        {
+          "title": "Upravte a dolaďte jakýkoli překlad",
+          "description": "Každý AI překlad lze plně upravovat. Zkontrolujte výsledek, upravte formulace a uložte. Vaše změny zůstanou zachovány, i když později přeložíte jiné části menu."
+        }
+      ]
+    },
+    "faq": {
+      "title": "Často kladené otázky",
+      "subtitle": "Vše, co potřebujete vědět o překladu menu.",
+      "items": [
+        {
+          "question": "Jak přesný je AI překlad pro jídelní lístky?",
+          "answer": "Naše AI je optimalizována pro obsah restaurací. Rozumí tomu, že \\\"Beef Wellington\\\" nebo \\\"Tiramisu\\\" se nemají překládat doslovně, a přizpůsobuje popisy tak, aby zněly přirozeně v každém jazyce."
+        },
+        {
+          "question": "Které jazyky jsou podporovány?",
+          "answer": "Více než 25 jazyků včetně angličtiny, španělštiny, francouzštiny, němčiny, italštiny, portugalštiny, čínštiny, japonštiny, korejštiny, arabštiny, ruštiny a mnoha dalších evropských a asijských jazyků."
+        },
+        {
+          "question": "Mohu přeložit jen některé položky, ne celé menu?",
+          "answer": "Ano. Můžete přeložit jednotlivé položky, celé kategorie nebo celé menu najednou. Máte plnou kontrolu nad tím, co se překládá."
+        },
+        {
+          "question": "Stojí překlad něco navíc?",
+          "answer": "AI překlad je zahrnut v tarifech Growth a Pro s velkorysými měsíčními limity. Žádné poplatky za slovo nebo položku — překládejte, kolik potřebujete."
+        }
+      ]
+    },
+    "howItWorks": {
+      "title": "Jak to funguje",
+      "subtitle": "Přeložte celé své menu za minuty, ne hodiny.",
+      "steps": [
+        {
+          "title": "Přidejte jazyky do svého menu",
+          "description": "Přejděte na stránku Jazyky ve svém ovládacím panelu a vyberte, které jazyky by mělo vaše menu podporovat. Vyberte si z 35 dostupných jazyků, včetně všech hlavních evropských, asijských a blízkovýchodních jazyků."
+        },
+        {
+          "title": "Klikněte na Přeložit",
+          "description": "Jedno tlačítko přeloží všechny vaše kategorie, názvy položek a popisy najednou. Celé menu je zpracováno během několika sekund, bez ohledu na to, kolik položek máte."
+        },
+        {
+          "title": "AI rozumí kontextu jídla",
+          "description": "AI zná kulinářskou terminologii napříč kulturami. Zachovává názvy jídel jako 'Tiramisu' nebo 'Pad Thai' a přirozeně přizpůsobuje popisy, seznamy ingrediencí a názvy kategorií."
+        },
+        {
+          "title": "Zkontrolujte a upravte",
+          "description": "Každý překlad je plně editovatelný. Upravte jakékoli formulace, aby odpovídaly vašemu stylu. Vaše manuální změny jsou zachovány i při opětovném překladu jiných částí menu později."
+        },
+        {
+          "title": "Publikujte své vícejazyčné menu",
+          "description": "Hosté vidí na vašem menu přepínač jazyků a mohou procházet ve svém preferovaném jazyce. Každý jazyk může být nezávisle zapnut nebo vypnut z vašeho ovládacího panelu."
+        }
+      ]
+    }
+  },
+  "mobileManagementPage": {
+    "seo": {
+      "title": "Správa menu restaurace z telefonu — Mobilní panel | IQ Rest",
+      "description": "Spravujte QR menu restaurace kompletně z telefonu. Přidávejte jídla, aktualizujte ceny, nahrávejte fotky, sledujte analytiku — bez počítače."
+    },
+    "hero": {
+      "badge": "Mobilní panel",
+      "title": "Spravujte celé menu restaurace z telefonu",
+      "subtitle": "Přidávejte jídla, měňte ceny, nahrávejte fotky, kontrolujte objednávky — vše ze svého chytrého telefonu. Panel je navržen primárně pro mobil, takže počítač nikdy nepotřebujete.",
+      "cta": "Vytvořte si menu",
+      "ctaDemo": "Zobrazit demo",
+      "noCreditCard": "Bez platební karty. K dispozici je bezplatný tarif."
+    },
+    "features": {
+      "title": "Jak mobilní správa funguje",
+      "subtitle": "Panel vaší restaurace vždy po ruce.",
+      "items": [
+        {
+          "title": "Kompletní panel na vašem chytrém telefonu",
+          "description": "Každá funkce perfektně funguje na displeji telefonu — přidávání položek, úprava kategorií, správa objednávek, sledování analytiky. Rozhraní je navrženo pro dotyk, ne jen zmenšené z počítače."
+        },
+        {
+          "title": "Nahrávejte fotky přímo z fotoaparátu",
+          "description": "Vyfoťte nové jídlo a nahrajte ho do menu během sekund. Obrázky se optimalizují automaticky. Aktualizujte denní nabídku přímo z kuchyně."
+        }
+      ]
+    },
+    "faq": {
+      "title": "Často kladené otázky",
+      "subtitle": "Vše, co potřebujete vědět o mobilní správě menu.",
+      "items": [
+        {
+          "question": "Musím si instalovat aplikaci?",
+          "answer": "Ne. Panel funguje ve webovém prohlížeči vašeho telefonu — Safari, Chrome nebo jiném. Stačí se přihlásit a začít spravovat menu."
+        },
+        {
+          "question": "Mohu z telefonu dělat vše, co na počítači?",
+          "answer": "Ano. Všechny funkce jsou dostupné na mobilu — přidávání položek, nahrávání fotek, správa kategorií, sledování analytiky, zpracování objednávek a rezervací."
+        },
+        {
+          "question": "Funguje to i na tabletu?",
+          "answer": "Ano. Panel se přizpůsobí jakékoli velikosti obrazovky — telefony, tablety i stolní počítače. Používejte zařízení, které vám nejvíc vyhovuje."
+        },
+        {
+          "question": "Může menu spravovat více lidí?",
+          "answer": "Momentálně restauraci spravuje jeden účet. Můžete se přihlásit z více zařízení současně — telefonu, tabletu nebo počítače."
+        }
+      ]
+    },
+    "howItWorks": {
+      "title": "Jak to funguje",
+      "subtitle": "Spravujte svou restauraci z jakéhokoli zařízení ve čtyřech krocích.",
+      "steps": [
+        {
+          "title": "Otevřete řídicí panel na svém telefonu",
+          "description": "Přejděte na iq-rest.com a přihlaste se z prohlížeče svého telefonu. Řídicí panel se automaticky přizpůsobí velikosti vaší obrazovky — žádná aplikace ke stažení nebo instalaci."
+        },
+        {
+          "title": "Upravte menu kdekoli",
+          "description": "Přidejte nové položky, aktualizujte ceny, změňte popisy a nahrávejte fotografie přímo z fotoaparátu vašeho telefonu. Každá funkce dostupná na desktopu funguje stejně dobře na mobilu."
+        },
+        {
+          "title": "Kontrolujte objednávky a rezervace",
+          "description": "Sledujte příchozí objednávky, spravujte rezervace stolů a odpovídejte na zprávy podpory — vše z vašeho telefonu. Mějte přehled o své restauraci i když jste pryč."
+        },
+        {
+          "title": "Změny se okamžitě projeví",
+          "description": "Každá úprava, kterou provedete ze svého telefonu, se na vašem QR menu zobrazuje v reálném čase. Není potřeba synchronizovat, publikovat nebo čekat — vaši hosté vždy vidí nejnovější verzi."
+        }
+      ]
+    }
+  },
+  "customDesignPage": {
+    "seo": {
+      "title": "Web restaurace s video a foto pozadím — Tvůrce webu | IQ Rest",
+      "description": "Vytvořte ohromující web restaurace s vlastním video nebo foto pozadím. Nahrajte video atmosféry nebo fotografie jídel — zapůsobte na hosty od prvního skenu."
+    },
+    "hero": {
+      "badge": "Design webu",
+      "title": "Vytvořte ohromující web restaurace s video pozadím",
+      "subtitle": "Nahrajte video atmosféry restaurace nebo krásnou fotografii jídla jako pozadí. Hosté uvidí profesionální, značkový zážitek hned při naskenování QR kódu.",
+      "cta": "Vytvořte si menu",
+      "ctaDemo": "Zobrazit demo",
+      "noCreditCard": "Bez platební karty. K dispozici je bezplatný tarif."
+    },
+    "features": {
+      "title": "Jak fungují vlastní pozadí",
+      "subtitle": "Zanechte trvalý první dojem vizuály, které odpovídají vaší značce.",
+      "items": [
+        {
+          "title": "Nahrajte video nebo foto pozadí",
+          "description": "Přidejte smyčkové video atmosféry restaurace, timelapse z kuchyně nebo kvalitní fotografii jídla. Pozadí se zobrazí na vaší úvodní stránce — vytváří pohlcující zážitek pro hosty."
+        },
+        {
+          "title": "Optimalizováno pro rychlost na jakémkoli zařízení",
+          "description": "Videa a obrázky se automaticky komprimují a načítají postupně. Web zůstává rychlý i na pomalém mobilním připojení — žádné ukládání do vyrovnávací paměti, žádné prodlevy, jen plynulý zážitek."
+        }
+      ]
+    },
+    "faq": {
+      "title": "Často kladené otázky",
+      "subtitle": "Vše, co potřebujete vědět o designu webu restaurace.",
+      "items": [
+        {
+          "question": "Jaké formáty videa jsou podporovány?",
+          "answer": "Nejlépe fungují formáty MP4 a WebM. Videa se automaticky komprimují pro rychlé načítání. Udržujte videa pod 30 sekund pro nejlepší mobilní zážitek."
+        },
+        {
+          "question": "Zpomalí video pozadí můj web?",
+          "answer": "Ne. Videa se komprimují, načítají postupně a optimalizují automaticky. Na pomalém připojení systém přepne na statický obrázek, aby zážitek zůstal plynulý."
+        },
+        {
+          "question": "Mohu místo videa použít fotografii?",
+          "answer": "Ano. Nahrajte jakoukoli fotografii — bude optimalizována a zobrazena jako pozadí na celou obrazovku. Mezi videem a fotografií můžete kdykoli přepínat."
+        },
+        {
+          "question": "Potřebuji designéra pro nastavení?",
+          "answer": "Ne. Stačí nahrát video nebo fotografii z panelu. Systém se postará o rozměry, kompresi a rozvržení automaticky. Váš web bude vypadat profesionálně i bez designérských dovedností."
+        }
+      ]
+    },
+    "howItWorks": {
+      "title": "Jak to funguje",
+      "subtitle": "Přizpůsobte vizuální identitu své restaurace ve čtyřech krocích.",
+      "steps": [
+        {
+          "title": "Otevřít nastavení designu",
+          "description": "Přejděte na stránku Design ve svém řídicím panelu. Zde můžete ovládat vizuální vzhled své restaurace — pozadí, akcentní barvu a rozložení domovské stránky."
+        },
+        {
+          "title": "Nahrát pozadí",
+          "description": "Vyberte video (MP4, WebM) nebo fotografii pro pozadí domovské stránky vaší restaurace. Videoklipy se automaticky opakují, což vytváří pohlcující první dojem pro každého návštěvníka."
+        },
+        {
+          "title": "Generování pozadí pomocí AI",
+          "description": "Nemáte připravené video nebo fotografii? Nechte AI automaticky vytvořit pozadí z vašich položek menu. Generuje profesionální vizuál, který odpovídá stylu vaší restaurace."
+        },
+        {
+          "title": "Náhled a uložení",
+          "description": "Zobrazte si své změny v reálném čase před uložením. Videoklipy jsou automaticky komprimovány a načítány na pozadí, což zajišťuje rychlý výkon na mobilních zařízeních bez obětování vizuální kvality."
+        }
+      ]
+    }
+  },
+  "multilingualPage": {
+    "seo": {
+      "title": "Vícejazyčný web restaurace — Menu ve 25+ jazycích | IQ Rest",
+      "description": "Web restaurace a QR menu ve 25+ jazycích. Hosté přepnou jazyk jedním klepnutím — menu, kontakty i rezervace se okamžitě přizpůsobí."
+    },
+    "hero": {
+      "badge": "Vícejazyčnost",
+      "title": "Web vaší restaurace ve 25+ jazycích",
+      "subtitle": "Turisté a zahraniční hosté uvidí vaše menu ve svém jazyce. Jedním klepnutím přepnou — vše se okamžitě přizpůsobí: jídla, popisy, kontakty, navigace.",
+      "cta": "Vytvořte si menu",
+      "ctaDemo": "Zobrazit demo",
+      "noCreditCard": "Bez platební karty. K dispozici je bezplatný tarif."
+    },
+    "features": {
+      "title": "Jak vícejazyčná podpora funguje",
+      "subtitle": "Mluvte jazykem svých zákazníků bez jakékoli práce navíc.",
+      "items": [
+        {
+          "title": "Hosté si vyberou svůj jazyk",
+          "description": "Na vašem menu se zobrazí přepínač jazyků. Hosté klepnou na preferovaný jazyk a celý web — menu, popisy, kontaktní informace, navigace — se okamžitě přepne. Bez nutnosti opětovného načítání stránky."
+        },
+        {
+          "title": "Přidejte jazyky z panelu",
+          "description": "Aktivujte nové jazyky jedním kliknutím. Použijte AI překlad pro vyplnění obsahu, nebo zadejte překlady ručně. Každý jazyk lze zapnout nebo vypnout nezávisle."
+        }
+      ]
+    },
+    "faq": {
+      "title": "Často kladené otázky",
+      "subtitle": "Vše, co potřebujete vědět o vícejazyčných menu.",
+      "items": [
+        {
+          "question": "Kolik jazyků mohu do menu přidat?",
+          "answer": "Až 25+ jazyků včetně všech hlavních evropských jazyků, čínštiny, japonštiny, korejštiny, arabštiny, perštiny a dalších. Přidejte tolik, kolik vaši hosté potřebují."
+        },
+        {
+          "question": "Musím vše překládat ručně?",
+          "answer": "Ne. Použijte vestavěný AI překlad k přeložení celého menu jedním kliknutím. Můžete také libovolný překlad upravit ručně pro plnou kontrolu."
+        },
+        {
+          "question": "Uloží se jazyková preference?",
+          "answer": "Ano. Když si host vybere jazyk, zapamatuje se pro jeho další návštěvu. Nemusí znovu vybírat, když se vrátí."
+        },
+        {
+          "question": "Je vícejazyčná podpora dostupná v bezplatném tarifu?",
+          "answer": "Bezplatný tarif zahrnuje až 2 jazyky. Tarify Growth a Pro nabízejí neomezený počet jazyků s AI překladem v ceně."
+        }
+      ]
+    },
+    "howItWorks": {
+      "title": "Jak to funguje",
+      "subtitle": "Zpřístupněte své menu ve více jazycích ve čtyřech krocích.",
+      "steps": [
+        {
+          "title": "Přejděte na nastavení jazyka",
+          "description": "Otevřete stránku Jazyky ve svém panelu. Uvidíte všechny dostupné jazyky a které z nich jsou aktuálně aktivní ve vašem menu."
+        },
+        {
+          "title": "Přidat jazyky",
+          "description": "Vyberte z 35 dostupných jazyků. Bezplatný plán zahrnuje až 2 jazyky, zatímco plány Growth a Pro nabízejí neomezené jazyky pro vaše menu."
+        },
+        {
+          "title": "Přeložte svůj obsah",
+          "description": "Použijte překlad AI jedním kliknutím k okamžitému překladu celého vašeho menu, nebo zadejte překlady ručně pro plnou kontrolu. Můžete také kombinovat obě metody."
+        },
+        {
+          "title": "Hosté přepínají jazyky",
+          "description": "Na stránce vašeho menu se objeví výběr jazyka. Když si hosté vyberou svůj jazyk, celé menu se okamžitě přepne. Jejich preference se uloží pro další návštěvy."
+        }
+      ]
+    }
+  },
+  "instantSetupPage": {
+    "seo": {
+      "title": "Bezplatný generátor webu pro restauraci — Vytvořte za 5 minut | IQ Rest",
+      "description": "Získejte profesionální web restaurace s QR menu, kontaktní stránkou a mapou — stačí zadat e-mail. Hotovo za 5 minut, žádné technické dovednosti nejsou potřeba."
+    },
+    "hero": {
+      "badge": "Bezplatný web",
+      "title": "Profesionální web restaurace za 5 minut",
+      "subtitle": "Zadejte e-mail, pojmenujte restauraci a okamžitě získáte kompletní web s QR menu, kontaktní stránkou s mapou a moderním responzivním designem. Bez kódování, bez designérů.",
+      "cta": "Vytvořte si menu",
+      "ctaDemo": "Zobrazit demo",
+      "noCreditCard": "Bez platební karty. K dispozici je bezplatný tarif."
+    },
+    "features": {
+      "title": "Jak to funguje",
+      "subtitle": "Od nuly k živému webu restaurace ve třech krocích.",
+      "items": [
+        {
+          "title": "Registrace pouze s e-mailem",
+          "description": "Žádné složité registrační formuláře. Zadejte e-mail, ověřte kódem a panel restaurace je připraven. Pojmenujte restauraci a web je okamžitě online."
+        },
+        {
+          "title": "Vše zahrnuto od začátku",
+          "description": "Váš web obsahuje QR menu, kontaktní stránku s Google Maps, jazykovou podporu, mobilně responzivní design a vlastní unikátní URL. Stačí přidat jídla a začít sdílet."
+        }
+      ]
+    },
+    "faq": {
+      "title": "Často kladené otázky",
+      "subtitle": "Vše, co potřebujete vědět o vytvoření webu restaurace.",
+      "items": [
+        {
+          "question": "Jak vytvořím bezplatný web restaurace?",
+          "answer": "Zadejte e-mail na IQ Rest, ověřte kódem, pojmenujte restauraci — hotovo. Váš web s QR menu je online za méně než 5 minut. Bez platební karty."
+        },
+        {
+          "question": "Potřebuji nějaké technické dovednosti?",
+          "answer": "Ne. Vše je navrženo pro majitele restaurací, ne pro vývojáře. Přidávejte jídla, nahrávejte fotky a spravujte web kompletně z telefonu."
+        },
+        {
+          "question": "Co je zahrnuto v bezplatném tarifu?",
+          "answer": "Kompletní web restaurace, QR menu, kontaktní stránka s mapou, analytika, vlastní barevné schéma a až 2 jazyky. Žádné zkušební období — je to zdarma navždy."
+        },
+        {
+          "question": "Mohu použít vlastní doménové jméno?",
+          "answer": "V bezplatném a Growth tarifu je váš web hostován na iq-rest.com/m/vaše-jméno. Tarif Pro podporuje vlastní doménová jména pro plnou kontrolu nad značkou."
+        }
+      ]
+    },
+    "howItWorks": {
+      "title": "Jak to funguje",
+      "subtitle": "Od nuly k živé webové stránce restaurace ve čtyřech krocích.",
+      "steps": [
+        {
+          "title": "Zadejte svůj e-mail",
+          "description": "Žádné heslo není potřeba. Stačí napsat svou e-mailovou adresu a kliknout na Pokračovat. Žádné zdlouhavé registrační formuláře, žádná kreditní karta není vyžadována a žádné závazky."
+        },
+        {
+          "title": "Ověřte pomocí kódu",
+          "description": "Zkontrolujte svou schránku na 4místný ověřovací kód. Zadejte ho pro bezpečné přihlášení. Tento bezheslový přístup znamená jednu věc méně, na kterou si musíte pamatovat."
+        },
+        {
+          "title": "Pojmenujte svou restauraci",
+          "description": "Dejte své restauraci název. Stane se vaším URL webové stránky a názvem menu. Můžete ho kdykoli později změnit v nastavení vašeho řídicího panelu."
+        },
+        {
+          "title": "Vaše webová stránka je připravena",
+          "description": "Kompletní webová stránka restaurace s QR menu, kontaktní stránkou s mapou a responzivním designem je okamžitě aktivní na iq-rest.com/m/vaše-jméno. Přidejte svá jídla a začněte sdílet."
+        }
+      ]
+    }
+  },
+  "analyticsPage": {
+    "seo": {
+      "title": "Analytika Restaurace a Statistiky QR Menu — Sledujte Návštěvníky | IQ Rest",
+      "description": "Sledujte skenování QR menu, zobrazení stránek, oblíbené jazyky a trendy návštěvníků. Analytický panel v reálném čase pro webové stránky vaší restaurace."
+    },
+    "hero": {
+      "badge": "Analytika",
+      "title": "Podívejte Se, Jak Přesně Hosté Používají Vaše QR Menu",
+      "subtitle": "Sledujte denní skenování, zobrazení stránek, oblíbené jazyky, statistiky zařízení a trendy v čase. Dělejte rozhodnutí založená na datech pro optimalizaci menu a růst vašeho podnikání.",
+      "cta": "Vytvořte Si Menu",
+      "ctaDemo": "Zobrazit Demo",
+      "noCreditCard": "Není vyžadována kreditní karta. K dispozici je bezplatný plán."
+    },
+    "features": {
+      "title": "Co Můžete Sledovat",
+      "subtitle": "Přehledy v reálném čase o online přítomnosti vaší restaurace.",
+      "items": [
+        {
+          "title": "Denní Zobrazení, Skenování a Trendy Návštěvníků",
+          "description": "Podívejte se, kolik lidí skenuje váš QR kód a navštěvuje vaše menu každý den, týden a měsíc. Sledujte trendy v čase, abyste pochopili sezónní vzorce a měřili dopad propagací."
+        },
+        {
+          "title": "Rozdělení podle Jazyka a Zařízení",
+          "description": "Zjistěte, jaké jazyky vaši hosté preferují a jaká zařízení používají. Tyto údaje vám pomohou upřednostnit překlady a zajistit, aby vaše menu vypadalo perfektně na nejoblíbenějších zařízeních."
+        }
+      ]
+    },
+    "faq": {
+      "title": "Často Kladené Otázky",
+      "subtitle": "Vše, co potřebujete vědět o analytice restaurace.",
+      "items": [
+        {
+          "question": "Jaké metriky mohu sledovat?",
+          "answer": "Denní, týdenní a měsíční zobrazení stránek. Unikátní návštěvníci. Nejzobrazovanější stránky. Jazykové preference. Rozdělení podle zařízení a prohlížečů. Vše se aktualizuje v reálném čase."
+        },
+        {
+          "question": "Je analytika zahrnuta v bezplatném plánu?",
+          "answer": "Ano. Základní analytika je k dispozici v každém plánu, včetně bezplatného. Zobrazení, návštěvníky a jazykové statistiky můžete vidět od prvního dne."
+        },
+        {
+          "question": "Mohu vidět, které stránky jsou nejoblíbenější?",
+          "answer": "Ano. Panel zobrazuje zobrazení rozdělená podle stránek — domovská stránka, menu, kontakty, rezervace a výběr jazyka. Podívejte se přesně, kde hosté tráví svůj čas."
+        },
+        {
+          "question": "Jak daleko do minulosti sahají data?",
+          "answer": "Analytická data se uchovávají ode dne, kdy si vytvoříte restauraci. Můžete si prohlížet denní, týdenní a měsíční trendy za celou vaši historii."
+        }
+      ]
+    },
+    "howItWorks": {
+      "title": "Jak to funguje",
+      "subtitle": "Začněte sledovat výkon vaší restaurace ve čtyřech krocích.",
+      "steps": [
+        {
+          "title": "Vytvořte svou restauraci",
+          "description": "Analytika začne sledovat od okamžiku, kdy se vaše menu zveřejní. Není potřeba nic konfigurovat — každé zobrazení stránky, sken QR kódu a návštěvník je automaticky zaznamenán."
+        },
+        {
+          "title": "Sdílejte svůj QR kód",
+          "description": "Vytiskněte svůj QR kód a umístěte ho na stoly, u vchodu nebo na obaly s jídlem. Každé skenování je zaznamenáno s časovým razítkem, jazykem, zařízením a navštívenou stránkou."
+        },
+        {
+          "title": "Otevřete analytický panel",
+          "description": "Zobrazte denní, týdenní a měsíční statistiky s přehlednými grafy. Sledujte celkový počet zobrazení, unikátních návštěvníků a trendy v čase z jediné obrazovky panelu."
+        },
+        {
+          "title": "Prozkoumejte podrobné rozbory",
+          "description": "Zobrazte statistiky rozdělené podle stránky (menu, kontakty, rezervace), preferovaného jazyka, typu zařízení a prohlížeče. Využijte tato data k optimalizaci vašeho menu a prioritizaci překladů."
+        }
+      ]
+    }
+  },
+  "aiImagesPage": {
+    "seo": {
+      "title": "AI Generování Fotografií Jídel pro Jídelní Lístky — Obrázky do Menu Restaurace | IQ Rest",
+      "description": "Generujte krásné fotografie jídel pro vaše menu pomocí AI. Bez fotografa — získejte profesionální obrázky pokrmů za sekundy, optimalizované pro váš QR jídelní lístek."
+    },
+    "hero": {
+      "badge": "AI Obrázky",
+      "title": "Profesionální Fotografie Menu Bez Fotografa",
+      "subtitle": "Generujte úžasné obrázky pokrmů pomocí AI. Stačí zadat název jídla a získáte krásnou, optimalizovanou fotografii připravenou pro váš QR jídelní lístek — za sekundy.",
+      "cta": "Vytvořte Si Menu",
+      "ctaDemo": "Zobrazit Demo",
+      "noCreditCard": "Není vyžadována kreditní karta. K dispozici je bezplatný plán."
+    },
+    "features": {
+      "title": "Jak Funguje AI Generování Obrázků",
+      "subtitle": "Od názvu jídla k profesionální fotografii jedním kliknutím.",
+      "items": [
+        {
+          "title": "Generujte Obrázky z Názvů Jídel",
+          "description": "Zadejte název jídla — 'Grilovaný Losos s Citronem', 'Pizza Margherita', 'Čokoládový Lávový Dort' — a AI vygeneruje profesionální fotografii jídla. Vyberte si z více stylů a pozadí."
+        },
+        {
+          "title": "Optimalizováno pro Rychlé Načítání",
+          "description": "Každý vygenerovaný obrázek je automaticky komprimován a převeden do moderních formátů. Vaše menu zůstává bleskově rychlé na jakémkoli zařízení, i s fotografiemi u každého jídla."
+        }
+      ]
+    },
+    "faq": {
+      "title": "Často Kladené Otázky",
+      "subtitle": "Vše, co potřebujete vědět o AI obrázcích menu.",
+      "items": [
+        {
+          "question": "Jak vygeneruji fotografii jídla?",
+          "answer": "Otevřete jakoukoli položku menu v panelu, klepněte na 'Generovat Obrázek' a AI vytvoří profesionální fotografii jídla na základě názvu a popisu pokrmu. Vyberte si tu, která se vám líbí."
+        },
+        {
+          "question": "Mohu místo toho použít vlastní fotografie?",
+          "answer": "Samozřejmě. Nahrajte vlastní fotografie z telefonu nebo počítače. AI generování je volitelné — použijte ho, když nemáte připravenou fotografii."
+        },
+        {
+          "question": "Kolik obrázků mohu vygenerovat?",
+          "answer": "Limity generování obrázků závisí na vašem plánu. Growth zahrnuje měsíční kvótu a Pro nabízí vyšší limit. Vlastní fotografie můžete vždy nahrávat bez omezení."
+        },
+        {
+          "question": "Jsou generované obrázky jedinečné pro mou restauraci?",
+          "answer": "Ano. Každý obrázek je vygenerován jedinečně pro vaše konkrétní jídlo. Žádné stock fotografie — každý obrázek je vytvořen nově na základě vaší položky menu."
+        }
+      ]
+    },
+    "howItWorks": {
+      "title": "Jak to funguje",
+      "subtitle": "Získejte profesionální fotografie jídel pro vaše menu ve čtyřech jednoduchých krocích.",
+      "steps": [
+        {
+          "title": "Otevřete jakoukoli položku menu",
+          "description": "Přejděte na položku, pro kterou chcete fotografii, ve svém panelu. Můžete generovat obrázky pro nová jídla nebo nahradit stávající fotografie u jakékoli položky menu."
+        },
+        {
+          "title": "Klikněte na Generovat obrázek",
+          "description": "AI vytvoří profesionální fotografii jídla na základě názvu a popisu pokrmu. Čím více detailů poskytnete v popisu, tím přesnější bude výsledek."
+        },
+        {
+          "title": "Zkontrolujte výsledek",
+          "description": "Náhled vygenerovaného obrázku před jeho použitím. Pokud byste chtěli jiný vzhled, regenerujte pro získání nové varianty. Každá generace produkuje unikátní obrázek."
+        },
+        {
+          "title": "Použijte ve svém menu",
+          "description": "Obrázek je automaticky optimalizován, komprimován do formátu WebP a okamžitě se zobrazuje ve vašem živém menu. Hosté vidí profesionální fotografie jídel u každého pokrmu."
+        }
+      ]
+    }
+  },
+  "personalSupportPage": {
+    "seo": {
+      "title": "Osobní podpora pro web vaší restaurace — Skutečná lidská pomoc | IQ Rest",
+      "description": "Získejte osobní pomoc od skutečných lidí, ne chatbotů. Pomoc s nastavením, tipy na optimalizaci menu a rychlé odpovědi — dostupné na každém tarifu včetně bezplatného."
+    },
+    "hero": {
+      "badge": "Osobní podpora",
+      "title": "Skuteční lidé, skutečná pomoc — žádní chatboti",
+      "subtitle": "Máte dotaz? Potřebujete pomoc s nastavením menu? Chcete navrhnout novou funkci? Napište nám přímo a získejte osobní odpověď od někoho, kdo rozumí restauracím.",
+      "cta": "Vytvořte své menu",
+      "ctaDemo": "Zobrazit demo",
+      "noCreditCard": "Kreditní karta není vyžadována. K dispozici je bezplatný tarif."
+    },
+    "features": {
+      "title": "Jak podpora funguje",
+      "subtitle": "Pomoc, když ji potřebujete, od lidí, kterým záleží.",
+      "items": [
+        {
+          "title": "Napište nám přímo z vašeho ovládacího panelu",
+          "description": "Otevřete chat podpory ve svém ovládacím panelu a popište svůj dotaz. Skutečný člověk si přečte vaši zprávu a odpoví — obvykle během několika hodin v pracovních dnech."
+        },
+        {
+          "title": "Pomoc s nastavením, optimalizací a dalším",
+          "description": "Ať už potřebujete pomoc s přidáním prvního jídla, radu ohledně organizace menu, nebo chcete navrhnout novou funkci — jsme tu. Každý dotaz je důležitý, bez ohledu na to, jak malý."
+        }
+      ]
+    },
+    "faq": {
+      "title": "Často kladené otázky",
+      "subtitle": "Vše, co potřebujete vědět o naší podpoře.",
+      "items": [
+        {
+          "question": "Je podpora dostupná na bezplatném tarifu?",
+          "answer": "Ano. Osobní podpora je dostupná pro každý tarif, včetně bezplatného. Věříme, že každá restaurace si zaslouží skutečnou pomoc, bez ohledu na předplatné."
+        },
+        {
+          "question": "Jak rychle odpovídáte?",
+          "answer": "Obvykle během několika hodin v pracovních dnech. Každou zprávu čteme osobně a snažíme se váš dotaz vyřešit jednou odpovědí."
+        },
+        {
+          "question": "Můžete mi pomoci s nastavením menu?",
+          "answer": "Samozřejmě. Pokud potřebujete pomoc s přidáním jídel, organizací kategorií, nastavením překladů nebo konfigurací rezervací — stačí se zeptat. Rádi vás vším provedeme."
+        },
+        {
+          "question": "Mohu navrhnout nové funkce?",
+          "answer": "Ano, a jsme za to rádi! Mnoho našich funkcí vzniklo z návrhů uživatelů. Napište nám svůj nápad a zvážíme ho pro budoucí aktualizace."
+        }
+      ]
+    },
+    "howItWorks": {
+      "title": "Jak to funguje",
+      "subtitle": "Získejte pomoc od skutečné osoby ve čtyřech jednoduchých krocích.",
+      "steps": [
+        {
+          "title": "Otevřít chat s podporou",
+          "description": "Přejděte na stránku podpory ve vašem panelu. Uvidíte jednoduché chatovací rozhraní, kde můžete přímo napsat svou zprávu — žádné formuláře nebo kategorie k výběru."
+        },
+        {
+          "title": "Popište svou otázku",
+          "description": "Napište svou zprávu. Zeptejte se na nastavení, funkce, optimalizaci menu, fakturaci nebo cokoliv jiného. Neexistují žádné hloupé otázky — rádi vám pomůžeme se vším."
+        },
+        {
+          "title": "Získejte osobní odpověď",
+          "description": "Skutečná osoba (ne chatbot) si přečte vaši zprávu a odpoví během několika hodin. Rozumíme pracovním postupům v restauracích a poskytujeme praktické, použitelné odpovědi."
+        },
+        {
+          "title": "Průběžná pomoc",
+          "description": "Požádejte o návrhy funkcí, získejte tipy na optimalizaci menu nebo požádejte o pomoc s nastavením kdykoliv. Vaše historie konverzací je uložena, takže vždy máme kontext z předchozích otázek."
+        }
+      ]
+    }
   }
 }

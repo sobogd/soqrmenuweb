@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { useTranslations } from "next-intl";
 import { MapPinIcon, UsersIcon } from "./icons";
 import { ConfirmDialog, EmptyState, PageHeader } from "./ui";
 import { formatDayLabel, formatTime, isSameDay } from "./helpers";
@@ -8,12 +9,20 @@ import { patchReservation } from "./api";
 import type { Booking, TableEntity } from "./types";
 import { DashboardEvent, track } from "@/lib/dashboard-events";
 
-const BOOKING_STATUSES: Record<Booking["status"], { label: string; cls: string }> = {
- pending: { label: "Pending", cls: "bg-amber-50 text-amber-700 border-amber-200" },
- confirmed: { label: "Confirmed", cls: "bg-emerald-50 text-emerald-700 border-emerald-200" },
- cancelled: { label: "Cancelled", cls: "bg-secondary text-muted-foreground border-border" },
- completed: { label: "Completed", cls: "bg-secondary text-muted-foreground border-border" },
- "no-show": { label: "No-show", cls: "bg-red-50 text-red-700 border-red-200" },
+const BOOKING_STATUS_KEYS: Record<Booking["status"], "statusPending" | "statusConfirmed" | "statusCancelled" | "statusCompleted" | "statusNoShow"> = {
+ pending: "statusPending",
+ confirmed: "statusConfirmed",
+ cancelled: "statusCancelled",
+ completed: "statusCompleted",
+ "no-show": "statusNoShow",
+};
+
+const BOOKING_STATUS_CLS: Record<Booking["status"], string> = {
+ pending: "bg-amber-50 text-amber-700 border-amber-200",
+ confirmed: "bg-emerald-50 text-emerald-700 border-emerald-200",
+ cancelled: "bg-secondary text-muted-foreground border-border",
+ completed: "bg-secondary text-muted-foreground border-border",
+ "no-show": "bg-red-50 text-red-700 border-red-200",
 };
 
 export function ReservationsPage({
@@ -25,6 +34,7 @@ export function ReservationsPage({
  setBookings: React.Dispatch<React.SetStateAction<Booking[]>>;
  tables: TableEntity[];
 }) {
+ const t = useTranslations("dashboard.reservations");
  const [confirmState, setConfirmState] = useState<{
  open: boolean;
  title?: string;
@@ -74,18 +84,20 @@ export function ReservationsPage({
  }
  }
 
+ const upcomingCount = bookings.filter((b) => b.status !== "cancelled").length;
+
  return (
  <>
  <div className="max-w-2xl mx-auto">
  <PageHeader
- title="Bookings"
- subtitle={`You have ${bookings.filter((b) => b.status !== "cancelled").length} upcoming ${bookings.filter((b) => b.status !== "cancelled").length === 1 ? "booking" : "bookings"}.`}
+ title={t("title")}
+ subtitle={upcomingCount === 1 ? t("subtitleOne", { count: upcomingCount }) : t("subtitleOther", { count: upcomingCount })}
  />
 
  {grouped.length === 0 ? (
  <EmptyState
- title="No bookings yet"
- subtitle="Once guests book a table, you'll see them here."
+ title={t("noBookings")}
+ subtitle={t("noBookingsSub")}
  />
  ) : (
  <div className="space-y-6">
@@ -99,9 +111,9 @@ export function ReservationsPage({
  />
  ) : (
  <div>
- <div className="text-sm font-medium text-foreground mb-2">Today</div>
+ <div className="text-sm font-medium text-foreground mb-2">{t("today")}</div>
  <div className="text-xs text-muted-foreground text-center py-6 px-3 bg-card border border-border rounded-xl">
- No bookings for today.
+ {t("noToday")}
  </div>
  </div>
  )}
@@ -143,6 +155,7 @@ function BookingGroup({
  onStatusChange: (id: string, status: Booking["status"]) => void;
  isToday?: boolean;
 }) {
+ const t = useTranslations("dashboard.reservations");
  return (
  <div>
  <div className="flex items-baseline gap-2 mb-2">
@@ -153,7 +166,7 @@ function BookingGroup({
  </div>
  ) : null}
  <div className="ml-auto text-xs text-muted-foreground tabular-nums">
- {items.length} {items.length === 1 ? "booking" : "bookings"}
+ {items.length === 1 ? t("bookingOne", { count: items.length }) : t("bookingOther", { count: items.length })}
  </div>
  </div>
  <div className="space-y-2">
@@ -174,9 +187,11 @@ function BookingCard({
  tables: TableEntity[];
  onStatusChange: (id: string, status: Booking["status"]) => void;
 }) {
- const status = BOOKING_STATUSES[booking.status] || BOOKING_STATUSES.pending;
+ const t = useTranslations("dashboard.reservations");
+ const statusKey = BOOKING_STATUS_KEYS[booking.status] || BOOKING_STATUS_KEYS.pending;
+ const statusCls = BOOKING_STATUS_CLS[booking.status] || BOOKING_STATUS_CLS.pending;
  const time = formatTime(new Date(booking.datetime));
- const table = tables.find((t) => t.id === booking.tableId);
+ const table = tables.find((tbl) => tbl.id === booking.tableId);
 
  return (
  <div className="bg-card border border-border rounded-xl p-3.5">
@@ -186,10 +201,10 @@ function BookingCard({
  <span
  className={
  "inline-flex items-center h-5 px-2 text-[10px] font-medium border rounded-full " +
- status.cls
+ statusCls
  }
  >
- {status.label}
+ {t(statusKey)}
  </span>
  </div>
  <div className="text-sm text-foreground mt-1 truncate">{booking.guestName}</div>
@@ -200,13 +215,13 @@ function BookingCard({
  <div className="inline-flex items-center gap-1">
  <UsersIcon size={12} />
  <span>
- {booking.guests} {booking.guests === 1 ? "guest" : "guests"}
+ {booking.guests === 1 ? t("guestOne", { count: booking.guests }) : t("guestOther", { count: booking.guests })}
  </span>
  </div>
  <div className="inline-flex items-center gap-1">
  <MapPinIcon size={12} />
  <span>
- {table ? "Table " + table.number + (table.name ? " · " + table.name : "") : "Not assigned"}
+ {table ? t("tableLabel", { number: table.number }) + (table.name ? " · " + table.name : "") : t("notAssigned")}
  </span>
  </div>
  </div>
@@ -224,14 +239,14 @@ function BookingCard({
  onClick={() => onStatusChange(booking.id, "cancelled")}
  className="flex-1 h-8 text-xs font-medium text-red-700 bg-red-50 rounded-md transition-colors"
  >
- Reject
+ {t("reject")}
  </button>
  <button
  type="button"
  onClick={() => onStatusChange(booking.id, "confirmed")}
  className="flex-1 h-8 text-xs font-medium text-emerald-700 bg-emerald-50 rounded-md transition-colors"
  >
- Confirm
+ {t("confirm")}
  </button>
  </div>
  ) : null}

@@ -2,6 +2,7 @@
 
 import { useEffect, useState, useCallback, useRef } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
+import { useTranslations } from "next-intl";
 import { SubpageStickyBar } from "../_v2/ui";
 import { countryToFlag, formatDateShort, formatDuration } from "./_admin-helpers";
 
@@ -19,13 +20,9 @@ interface Session {
 type Period = "today" | "yesterday" | "7days";
 
 const PERIODS: Period[] = ["today", "yesterday", "7days"];
-const TABS: { value: Period; label: string }[] = [
-  { value: "today", label: "Today" },
-  { value: "yesterday", label: "Yesterday" },
-  { value: "7days", label: "7 days" },
-];
 
 export function SessionsPage() {
+  const t = useTranslations("dashboard.admin");
   const router = useRouter();
   const searchParams = useSearchParams();
 
@@ -37,6 +34,12 @@ export function SessionsPage() {
   const [sessions, setSessions] = useState<Session[]>([]);
   const [loading, setLoading] = useState(true);
   const [refreshKey, setRefreshKey] = useState(0);
+
+  const TABS: { value: Period; labelKey: "today" | "yesterday" | "sevenDays" }[] = [
+    { value: "today", labelKey: "today" },
+    { value: "yesterday", labelKey: "yesterday" },
+    { value: "7days", labelKey: "sevenDays" },
+  ];
 
   const fetchSessions = useCallback(async (p: Period) => {
     setLoading(true);
@@ -92,13 +95,13 @@ export function SessionsPage() {
           onClick={refresh}
           className="h-8 px-3 text-xs font-medium text-muted-foreground rounded-lg transition-colors"
         >
-          Refresh
+          {t("refresh")}
         </button>
       </SubpageStickyBar>
       <div ref={scrollRef} className="max-w-2xl mx-auto pt-5 md:pt-4">
         <div className="mb-5">
-          <div className="text-xs text-muted-foreground">Settings</div>
-          <h2 className="text-xl font-medium text-foreground mt-1">Sessions</h2>
+          <div className="text-xs text-muted-foreground">{t("settingsBreadcrumb")}</div>
+          <h2 className="text-xl font-medium text-foreground mt-1">{t("sessionsTitle")}</h2>
         </div>
 
       <div className="flex gap-1.5 mb-5">
@@ -112,18 +115,18 @@ export function SessionsPage() {
               (period === tab.value ? "bg-foreground text-background" : "bg-secondary text-foreground")
             }
           >
-            {tab.label}
+            {t(tab.labelKey)}
           </button>
         ))}
       </div>
 
       {loading && sessions.length === 0 ? (
         <div className="bg-card border border-border rounded-2xl p-8 text-center text-sm text-muted-foreground">
-          Loading…
+          {t("loading")}
         </div>
       ) : sessions.length === 0 ? (
         <div className="bg-card border border-border rounded-2xl p-8 text-center text-sm text-muted-foreground">
-          No sessions
+          {t("noSessions")}
         </div>
       ) : (
         <div className="bg-card border border-border rounded-xl overflow-hidden divide-y divide-border">
@@ -153,7 +156,7 @@ export function SessionsPage() {
                 </span>
                 <span className="flex-1" />
                 <span className="text-xs text-muted-foreground tabular-nums shrink-0">
-                  {formatDuration(session.duration)} · {session.eventCount} ev.
+                  {formatDuration(session.duration)} · {t("events", { count: session.eventCount })}
                 </span>
                 {isOnline ? (
                   <span className="h-1.5 w-1.5 rounded-full bg-emerald-500 shrink-0" />

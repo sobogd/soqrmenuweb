@@ -2515,5 +2515,895 @@
     },
     "back": "Back",
     "continue": "Nastavi"
+  },
+  "onlineOrders": {
+    "seo": {
+      "title": "Online Narudžbe za Restorane — QR Jelovnik | IQ Rest",
+      "description": "Omogućite gostima da naručuju izravno iz vašeg QR jelovnika. Nula provizija, cijene u stvarnom vremenu i trenutačno upravljanje narudžbama na kontrolnoj ploči."
+    },
+    "hero": {
+      "badge": "Online Narudžbe",
+      "title": "Pretvorite Svoj QR Jelovnik u Sustav za Online Narudžbe",
+      "subtitle": "Gosti skeniraju, pregledavaju jelovnik i naručuju u nekoliko sekundi. Bez preuzimanja aplikacija, bez provizija, bez komplikacija.",
+      "cta": "Izradite Svoj Jelovnik",
+      "ctaDemo": "Pogledajte Demo",
+      "noCreditCard": "Nije potrebna kreditna kartica. Besplatan plan dostupan."
+    },
+    "benefits": {
+      "title": "Zašto Restorani Biraju Narudžbe putem QR Jelovnika",
+      "subtitle": "Izravan kanal za narudžbe koji održava stvari jednostavnima za vas i vaše goste.",
+      "items": [
+        {
+          "title": "Nije Potrebna Aplikacija",
+          "description": "Gosti samo skeniraju QR kod — bez preuzimanja, bez registracije. Radi odmah u bilo kojem pregledniku na telefonu."
+        },
+        {
+          "title": "Cijene u Stvarnom Vremenu",
+          "description": "Ažurirajte cijene i dostupnost trenutačno. Promjene se odmah odražavaju na vašem QR jelovniku."
+        },
+        {
+          "title": "Narudžbe za Stolom",
+          "description": "Svaki stol dobiva vlastiti QR kod. Gosti skeniraju, naručuju, a vi vidite broj stola na kontrolnoj ploči."
+        },
+        {
+          "title": "Prilagođeni Dizajn",
+          "description": "Uskladite jelovnik sa svojim brendom prilagođenim bojama, pozadinama i logom."
+        }
+      ]
+    },
+    "features": {
+      "title": "Kako Funkcioniraju Online Narudžbe",
+      "subtitle": "Dva jednostavna koraka povezuju vaš jelovnik s kuhinjom.",
+      "items": [
+        {
+          "title": "Gosti Pregledavaju i Biraju Stavke",
+          "description": "Gosti skeniraju QR kod i vide cijeli jelovnik s fotografijama, opisima i cijenama. Jednim dodirom dodaju stavke u narudžbu — bez registracije."
+        },
+        {
+          "title": "Narudžbe Se Pojavljuju na Kontrolnoj Ploči",
+          "description": "Kada su spremni, gosti pritisnu gumb za narudžbu. Narudžba se odmah pojavi na kontrolnoj ploči s detaljima stavki, brojem stola i bilješkama. Prihvatite, počnite pripremati i označite kao dovršeno."
+        }
+      ]
+    },
+    "faq": {
+      "title": "Često Postavljana Pitanja",
+      "subtitle": "Sve što trebate znati o online narudžbama.",
+      "items": [
+        {
+          "question": "Trebam li dodatni hardver ili aplikacije?",
+          "answer": "Ne. Sve radi putem web preglednika. Gosti skeniraju QR kod kamerom telefona, a vi upravljate narudžbama s IQ Rest kontrolne ploče na bilo kojem uređaju."
+        },
+        {
+          "question": "Postoje li provizije ili naknade po narudžbi?",
+          "answer": "Apsolutno ne. IQ Rest nikada ne naplaćuje provizije na vaše narudžbe. Plaćate samo svoj pretplatnički plan, a sav prihod od narudžbi ostaje vama."
+        },
+        {
+          "question": "Mogu li gosti prilagoditi svoju narudžbu ili dodati napomene?",
+          "answer": "Da. Gosti mogu birati stavke, navesti količine i dodati posebne napomene ili zahtjeve. Također možete zahtijevati ime, telefon ili adresu za dostavu gosta."
+        },
+        {
+          "question": "Funkcionira li za konzumaciju u restoranu, za ponijeti i dostavu?",
+          "answer": "Da. Za konzumaciju u restoranu gosti skeniraju QR kod za stolom. Za ponijeti ili dostavu podijelite direktan link na jelovnik. Možete omogućiti polja za ime, telefon i adresu prema potrebi."
+        }
+      ]
+    },
+    "howItWorks": {
+      "title": "Kako to funkcionira",
+      "subtitle": "Od postavljanja do primanja vaše prve narudžbe u pet jednostavnih koraka.",
+      "steps": [
+        {
+          "title": "Omogućite Online Narudžbe",
+          "description": "Uključite narudžbe u svojim postavkama dizajna. Odaberite svoj preferirani način: narudžbe se prikazuju na vašoj nadzornoj ploči, prosljeđuju se na WhatsApp ili oboje istovremeno."
+        },
+        {
+          "title": "Konfigurirajte Obrazac za Narudžbu",
+          "description": "Odaberite koja polja kupci moraju ispuniti prilikom naručivanja. Ime je uvijek obavezno, a opcionalno možete tražiti broj telefona i adresu za dostavu."
+        },
+        {
+          "title": "Ispišite QR Kodove za Stolove",
+          "description": "Svaki stol u vašem restoranu dobiva svoj jedinstveni QR kod. Kada gosti skeniraju kod, njihova narudžba automatski dolazi s pripadajućim brojem stola."
+        },
+        {
+          "title": "Kupci Postavljaju Narudžbe",
+          "description": "Gosti skeniraju QR kod, pregledavaju vaš jelovnik s fotografijama i cijenama, biraju stavke, dodaju napomene i šalju svoju narudžbu. Nema potrebe za preuzimanjem aplikacije ili kreiranjem računa."
+        },
+        {
+          "title": "Upravljajte Narudžbama na Svojoj Nadzornoj Ploči",
+          "description": "Narudžbe se odmah pojavljuju na vašoj nadzornoj ploči. Ažurirajte status svake narudžbe od nove do u tijeku do dovršene. Zadržavate 100% prihoda — nula provizija."
+        }
+      ]
+    }
+  },
+  "reservationsPage": {
+    "seo": {
+      "title": "Sustav Rezervacije Stolova za Restorane — Online Rezervacija | IQ Rest",
+      "description": "Omogućite gostima da rezerviraju stolove izravno s vaše web stranice. Automatska ili ručna potvrda, obavijesti e-poštom i potpuno upravljanje kalendarom — sve uključeno."
+    },
+    "hero": {
+      "badge": "Rezervacije Stolova",
+      "title": "Primajte Rezervacije Stolova 24/7 s Vaše Web Stranice",
+      "subtitle": "Gosti odaberu datum, vrijeme i broj osoba — i rezerviraju odmah. Svime upravljate iz kontrolne ploče, bez telefonskih poziva.",
+      "cta": "Kreirajte Svoj Jelovnik",
+      "ctaDemo": "Pogledajte Demo",
+      "noCreditCard": "Nije potrebna kreditna kartica. Besplatni plan dostupan."
+    },
+    "features": {
+      "title": "Kako Funkcioniraju Rezervacije Stolova",
+      "subtitle": "Dva koraka od zahtjeva gosta do potvrđene rezervacije.",
+      "items": [
+        {
+          "title": "Gosti Rezerviraju s Vaše Web Stranice",
+          "description": "Gosti posjete stranicu vašeg restorana, dodrinu 'Rezerviraj Stol', odaberu datum i vrijeme, unesu svoje podatke i pošalju. Nije potrebna aplikacija — radi u bilo kojem pregledniku na bilo kojem uređaju."
+        },
+        {
+          "title": "Upravljajte Rezervacijama iz Kontrolne Ploče",
+          "description": "Svaka rezervacija pojavljuje se u vašoj kontrolnoj ploči s imenom gosta, telefonom, brojem osoba, datumom i bilješkama. Potvrdite ili odbijte jednim dodirom. Postavite automatsku potvrdu ili pregledajte svaku rezervaciju ručno."
+        }
+      ]
+    },
+    "faq": {
+      "title": "Često Postavljana Pitanja",
+      "subtitle": "Sve što trebate znati o rezervacijama stolova.",
+      "items": [
+        {
+          "question": "Moraju li gosti kreirati račun za rezervaciju?",
+          "answer": "Ne. Gosti jednostavno unesu ime, broj telefona, broj osoba i željeno vrijeme. Nije potreban račun ni preuzimanje aplikacije."
+        },
+        {
+          "question": "Mogu li postaviti dostupne vremenske termine i kapacitet?",
+          "answer": "Da. Definirajte radno vrijeme, trajanje termina za rezervaciju i kapacitet stolova. Sustav gostima prikazuje samo dostupne termine."
+        },
+        {
+          "question": "Hoću li dobiti obavijest kada netko rezervira?",
+          "answer": "Da. Primate e-poštu za svaku novu rezervaciju. Gosti također dobivaju potvrdnu e-poštu nakon što odobrite rezervaciju."
+        },
+        {
+          "question": "Mogu li koristiti automatsku i ručnu potvrdu?",
+          "answer": "Da. Odaberite automatski način za trenutačnu potvrdu rezervacija prema dostupnosti, ili ručni način za pregled i odobravanje svakog zahtjeva osobno."
+        }
+      ]
+    },
+    "howItWorks": {
+      "title": "Kako to funkcionira",
+      "subtitle": "Postavite online rezervacije i počnite prihvaćati rezervacije u pet koraka.",
+      "steps": [
+        {
+          "title": "Omogućite Rezervacije",
+          "description": "Uključite rezervacije u postavkama vašeg restorana. Odaberite između automatske potvrde, gdje se rezervacije odmah odobravaju na temelju dostupnosti, ili ručnog načina gdje pregledavate svaki zahtjev."
+        },
+        {
+          "title": "Dodajte Svoje Stolove",
+          "description": "Kreirajte stolove s informacijama o kapacitetu i zoni — na primjer, 'Stol 5, 4 gosta, Terasa'. Svaki stol postaje rezervabilan, a sustav automatski sprječava dvostruke rezervacije."
+        },
+        {
+          "title": "Postavite Radno Vrijeme",
+          "description": "Definirajte svoje dostupne sate za rezervacije i odaberite trajanje termina — od 15 minuta do 8 sati. Samo vremenski termini unutar vašeg radnog vremena prikazuju se gostima."
+        },
+        {
+          "title": "Gosti Rezerviraju Online",
+          "description": "Kupci posjećuju vašu stranicu restorana, biraju datum, vrijeme i broj osoba, unose svoje ime i telefon, te šalju. Nije potrebna registracija ili preuzimanje aplikacije — radi u bilo kojem pregledniku."
+        },
+        {
+          "title": "Upravljajte Rezervacijama u Vašem Upravljačkom Panelu",
+          "description": "Pogledajte sve rezervacije u vašem upravljačkom panelu. Potvrdite, otkažite ili označite rezervacije kao završene. I vi i gost primate obavijesti putem e-pošte za svaku promjenu rezervacije."
+        }
+      ]
+    }
+  },
+  "colorSchemePage": {
+    "seo": {
+      "title": "Prilagođeni Dizajn QR Jelovnika i Boje Branda — Brendiranje Restorana | IQ Rest",
+      "description": "Uskladite QR jelovnik s brendom svog restorana. Odaberite boje naglaska i stvorite dosljedan izgled na cijelom digitalnom jelovniku."
+    },
+    "hero": {
+      "badge": "Prilagođeni Dizajn",
+      "title": "Uskladite QR Jelovnik s Brendom Svog Restorana",
+      "subtitle": "Odaberite boju branda i cijeli jelovnik — gumbi, naglasci, linkovi — ažurira se odmah.",
+      "cta": "Kreirajte Svoj Jelovnik",
+      "ctaDemo": "Pogledajte Demo",
+      "noCreditCard": "Nije potrebna kreditna kartica. Besplatni plan dostupan."
+    },
+    "features": {
+      "title": "Kako Funkcionira Prilagođeno Brendiranje",
+      "subtitle": "Vaš jelovnik, vaše boje — dosljedno na svakoj stranici.",
+      "items": [
+        {
+          "title": "Odaberite Boju Naglaska",
+          "description": "Odaberite iz 12 pažljivo odabranih postavki ili unesite točnu boju branda hex kodom. Svaki gumb, link i naglasak na jelovniku prilagodi se odmah — bez potrebe za dizajnerskim vještinama."
+        }
+      ]
+    },
+    "faq": {
+      "title": "Često Postavljana Pitanja",
+      "subtitle": "Sve što trebate znati o prilagodbi jelovnika.",
+      "items": [
+        {
+          "question": "Mogu li koristiti točnu boju svog branda?",
+          "answer": "Da. Unesite bilo koji hex kod boje ili odaberite iz 12 pažljivo odabranih postavki. Boja naglaska primjenjuje se na sve stranice jelovnika."
+        },
+        {
+          "question": "Mogu li promijeniti boje nakon objave?",
+          "answer": "Naravno. Promijenite boju naglaska bilo kada iz kontrolne ploče. Ažuriranja se odmah pojavljuju na aktivnom jelovniku — bez potrebe za ponovnom objavom."
+        },
+        {
+          "question": "Hoće li moj QR kod odgovarati bojama branda?",
+          "answer": "QR kod se generira zasebno i može se prilagoditi neovisno. Boja naglaska primjenjuje se na stranice digitalnog jelovnika, navigaciju i interaktivne elemente."
+        }
+      ]
+    },
+    "howItWorks": {
+      "title": "Kako to funkcionira",
+      "subtitle": "Uskladite svoj jelovnik s vašim brendom u tri jednostavna koraka.",
+      "steps": [
+        {
+          "title": "Otvorite postavke dizajna",
+          "description": "Idite na stranicu Dizajn u vašoj nadzornoj ploči. Odabir boje naglaska je na sredini — odmah ćete vidjeti sve dostupne opcije."
+        },
+        {
+          "title": "Odaberite boju svog brenda",
+          "description": "Odaberite između 12 unaprijed odabranih boja dizajniranih za čitljivost i pristupačnost, ili unesite svoj točan hex kod za savršeno usklađivanje s brendom."
+        },
+        {
+          "title": "Trenutni pregled",
+          "description": "Vaša boja naglaska primjenjuje se na gumbe, linkove i istaknute dijelove kroz cijeli jelovnik. Funkcionira u svijetlim i tamnim temama, a promjene se odmah pojavljuju na vašem aktivnom jelovniku."
+        }
+      ]
+    }
+  },
+  "easyMenuPage": {
+    "seo": {
+      "title": "Kreirajte QR Jelovnik za Svoj Restoran — Besplatni Kreator Jelovnika | IQ Rest",
+      "description": "Izradite digitalni QR jelovnik svog restorana za nekoliko minuta. Dodajte kategorije, jela, fotografije, cijene — i podijelite QR kod za skeniranje. Besplatno za početak."
+    },
+    "hero": {
+      "badge": "Kreator Jelovnika",
+      "title": "Kreirajte Digitalni QR Jelovnik za Restoran u Nekoliko Minuta",
+      "subtitle": "Dodajte kategorije i jela, postavite cijene, učitajte fotografije — vaš QR jelovnik je spreman za dijeljenje. Uređujte bilo kada, promjene se pojavljuju odmah.",
+      "cta": "Kreirajte Svoj Jelovnik",
+      "ctaDemo": "Pogledajte Demo",
+      "noCreditCard": "Nije potrebna kreditna kartica. Besplatni plan dostupan."
+    },
+    "features": {
+      "title": "Kako Funkcionira Uređivač Jelovnika",
+      "subtitle": "Jednostavni alati koji brzo stavljaju jelovnik online.",
+      "items": [
+        {
+          "title": "Dodajte Kategorije i Jela",
+          "description": "Kreirajte kategorije poput Predjela, Glavna Jela, Pića — zatim dodajte jela s nazivima, opisima, cijenama i fotografijama. Povucite i ispustite za promjenu redoslijeda. Uključite ili isključite stavke bez brisanja."
+        },
+        {
+          "title": "Promjene Su Odmah Aktivne",
+          "description": "Svaka izmjena koju napravite pojavljuje se na aktivnom QR jelovniku u sekundama. Ažurirajte cijenu, dodajte dnevnu ponudu ili sakrijte rasprodano jelo — vaši gosti uvijek vide najnoviju verziju."
+        }
+      ]
+    },
+    "faq": {
+      "title": "Često Postavljana Pitanja",
+      "subtitle": "Sve što trebate znati o kreiranju QR jelovnika.",
+      "items": [
+        {
+          "question": "Kako kreirati QR jelovnik za svoj restoran?",
+          "answer": "Registrirajte se s e-poštom, imenujte restoran i počnite dodavati kategorije i jela. QR jelovnik se generira automatski — ispišite QR kod i postavite ga na stolove."
+        },
+        {
+          "question": "Mogu li dodati fotografije stavkama jelovnika?",
+          "answer": "Da. Učitajte fotografije izravno s telefona ili računala. Slike se automatski optimiziraju za brzo učitavanje na bilo kojem uređaju."
+        },
+        {
+          "question": "Koliko stavki mogu dodati?",
+          "answer": "Nema ograničenja za kategorije ili stavke jelovnika. Dodajte koliko god jela trebate — jelovnik ostaje brz i organiziran."
+        },
+        {
+          "question": "Mogu li privremeno sakriti rasprodano jelo?",
+          "answer": "Da. Isključite bilo koju stavku jednim dodirom. Nestaje s javnog jelovnika, ali ostaje u kontrolnoj ploči — uključite je kad god ste spremni."
+        }
+      ]
+    },
+    "howItWorks": {
+      "title": "Kako to funkcionira",
+      "subtitle": "Izradite i objavite jelovnik vašeg restorana u pet jednostavnih koraka.",
+      "steps": [
+        {
+          "title": "Kreirajte Kategorije",
+          "description": "Dodajte kategorije poput Predjela, Glavnih jela, Deserta i Pića kako biste organizirali svoj jelovnik. Možete kreirati onoliko kategorija koliko vam je potrebno i promijeniti njihov redoslijed povlačenjem."
+        },
+        {
+          "title": "Dodajte Stavke Jelovnika",
+          "description": "Unesite naziv jela, opis i cijenu za svaku stavku. Označite alergene ako je primjenjivo — gosti će automatski vidjeti ikone alergena na jelovniku."
+        },
+        {
+          "title": "Učitajte ili Generirajte Fotografije",
+          "description": "Učitajte vlastite fotografije hrane s telefona ili računala, ili upotrijebite AI za generiranje profesionalne slike hrane prema nazivu jela. Slike se automatski optimiziraju."
+        },
+        {
+          "title": "Organizirajte Povlačenjem",
+          "description": "Promijenite redoslijed kategorija i stavki povlačenjem na željeno mjesto. Prebacite bilo koju stavku on ili off bez brisanja — savršeno za dnevne specijalitete ili jela koja su rasprodana."
+        },
+        {
+          "title": "Objavite Svoj Jelovnik",
+          "description": "Promjene se odmah pojavljuju na vašem aktivnom QR jelovniku. Nema gumba 'objavi' — svaka izmjena postaje aktivna u stvarnom vremenu. Ispišite svoj QR kod i stavite ga na stolove."
+        }
+      ]
+    }
+  },
+  "aiTranslationPage": {
+    "seo": {
+      "title": "AI Prijevod Jelovnika za Restorane — Prijevod QR Jelovnika | IQ Rest",
+      "description": "Prevedite jelovnik svog restorana na 25+ jezika jednim klikom. AI razumije kulinarski kontekst — nazivi jela, opisi i kategorije prevedeni su točno."
+    },
+    "hero": {
+      "badge": "AI Prijevod",
+      "title": "Prevedite Svoj Jelovnik na 25+ Jezika Jednim Klikom",
+      "subtitle": "Naš AI razumije kontekst hrane — prevodi nazive jela, opise i kategorije prirodno, a ne riječ po riječ. Dosegnite svakog turista i međunarodnog gosta.",
+      "cta": "Kreirajte Svoj Jelovnik",
+      "ctaDemo": "Pogledajte Demo",
+      "noCreditCard": "Nije potrebna kreditna kartica. Besplatni plan dostupan."
+    },
+    "features": {
+      "title": "Kako Funkcionira AI Prijevod",
+      "subtitle": "Od vašeg jezika do cijelog svijeta u sekundama.",
+      "items": [
+        {
+          "title": "Prijevod Jednim Klikom za Cijeli Jelovnik",
+          "description": "Odaberite ciljni jezik, dodirnite prevedi i cijeli jelovnik — kategorije, nazivi jela, opisi — preveden je odmah. AI čuva kulinarske termine i prilagođava se prirodno za svaki jezik."
+        },
+        {
+          "title": "Uredite i Prilagodite Svaki Prijevod",
+          "description": "Svaki AI prijevod je u potpunosti uređivačiv. Pregledajte rezultat, prilagodite bilo koji izraz i spremite. Vaše izmjene su sačuvane čak i ako kasnije ponovno prevedete druge dijelove jelovnika."
+        }
+      ]
+    },
+    "faq": {
+      "title": "Često Postavljana Pitanja",
+      "subtitle": "Sve što trebate znati o prijevodu jelovnika.",
+      "items": [
+        {
+          "question": "Koliko je točan AI prijevod za jelovnike restorana?",
+          "answer": "Naš AI je optimiziran za sadržaj restorana. Razumije da se 'Beef Wellington' ili 'Tiramisu' ne smiju prevoditi doslovno i prilagođava opise da zvuče prirodno na svakom jeziku."
+        },
+        {
+          "question": "Koji jezici su podržani?",
+          "answer": "25+ jezika uključujući engleski, španjolski, francuski, njemački, talijanski, portugalski, kineski, japanski, korejski, arapski, ruski i mnoge druge europske i azijske jezike."
+        },
+        {
+          "question": "Mogu li prevesti samo neke stavke, a ne cijeli jelovnik?",
+          "answer": "Da. Možete prevoditi pojedinačne stavke, cijele kategorije ili cijeli jelovnik odjednom. Imate potpunu kontrolu nad time što se prevodi."
+        },
+        {
+          "question": "Košta li dodatno po prijevodu?",
+          "answer": "AI prijevod je uključen u Growth i Pro planove s izdašnim mjesečnim limitima. Bez naknada po riječi ili po stavci — prevodite koliko god trebate."
+        }
+      ]
+    },
+    "howItWorks": {
+      "title": "Kako to funkcionira",
+      "subtitle": "Prevedite cijeli svoj meni u minutama, ne satima.",
+      "steps": [
+        {
+          "title": "Dodajte jezike u svoj meni",
+          "description": "Idite na stranicu Jezici u svom nadzornoj ploči i odaberite koje jezike vaš meni treba podržavati. Birajte između 35 dostupnih jezika, uključujući sve glavne europske, azijske i bliskoistočne jezike."
+        },
+        {
+          "title": "Kliknite na Prevedi",
+          "description": "Jedan gumb prevodi sve vaše kategorije, nazive jela i opise odjednom. Cijeli meni se obrađuje u sekundama, bez obzira na to koliko stavki imate."
+        },
+        {
+          "title": "AI razumije kontekst hrane",
+          "description": "AI poznaje kulinarsku terminologiju kroz kulture. Održava nazive jela poput 'Tiramisu' ili 'Pad Thai' dok prirodno prilagođava opise, popise sastojaka i nazive kategorija."
+        },
+        {
+          "title": "Pregledajte i uredite",
+          "description": "Svaki prijevod je potpuno uređiv. Prilagodite bilo koju formulaciju kako bi odgovarala vašem stilu. Vaše ručne promjene se čuvaju čak i kada kasnije ponovno prevedete druge dijelove menija."
+        },
+        {
+          "title": "Objavite svoj višejezični meni",
+          "description": "Gosti vide prekidač jezika na vašem meniju i mogu pregledavati na svom preferiranom jeziku. Svaki jezik se može neovisno uključiti ili isključiti iz vaše nadzorne ploče."
+        }
+      ]
+    }
+  },
+  "mobileManagementPage": {
+    "seo": {
+      "title": "Upravljajte Jelovnikom Restorana s Telefona — Mobilna Kontrolna Ploča | IQ Rest",
+      "description": "Upravljajte QR jelovnikom restorana u potpunosti s telefona. Dodajte jela, ažurirajte cijene, učitajte fotografije, provjerite analitiku — računalo nije potrebno."
+    },
+    "hero": {
+      "badge": "Mobilna Kontrolna Ploča",
+      "title": "Upravljajte Cijelim Jelovnikom Restorana s Telefona",
+      "subtitle": "Dodajte jela, mijenjajte cijene, učitajte fotografije, provjerite narudžbe — sve sa svog pametnog telefona. Kontrolna ploča je izrađena za mobilne uređaje, nikada vam ne treba računalo.",
+      "cta": "Kreirajte Svoj Jelovnik",
+      "ctaDemo": "Pogledajte Demo",
+      "noCreditCard": "Nije potrebna kreditna kartica. Besplatni plan dostupan."
+    },
+    "features": {
+      "title": "Kako Funkcionira Mobilno Upravljanje",
+      "subtitle": "Kontrolna ploča vašeg restorana, uvijek u džepu.",
+      "items": [
+        {
+          "title": "Potpuna Kontrolna Ploča na Pametnom Telefonu",
+          "description": "Svaka funkcija savršeno radi na zaslonu telefona — dodavanje stavki, uređivanje kategorija, upravljanje narudžbama, provjera analitike. Sučelje je dizajnirano za dodir, ne samo smanjeno s desktopa."
+        },
+        {
+          "title": "Učitajte Fotografije Izravno s Kamere",
+          "description": "Fotografirajte novo jelo i učitajte ga u jelovnik u sekundama. Slike se automatski optimiziraju. Ažurirajte dnevnu ponudu dok stojite u kuhinji."
+        }
+      ]
+    },
+    "faq": {
+      "title": "Često Postavljana Pitanja",
+      "subtitle": "Sve što trebate znati o mobilnom upravljanju jelovnikom.",
+      "items": [
+        {
+          "question": "Trebam li instalirati aplikaciju?",
+          "answer": "Ne. Kontrolna ploča radi u web pregledniku telefona — Safari, Chrome ili bilo kojem drugom. Samo se prijavite i počnite upravljati jelovnikom."
+        },
+        {
+          "question": "Mogu li s telefona raditi sve što mogu na računalu?",
+          "answer": "Da. Svaka funkcija dostupna je na mobitelu — dodavanje stavki, učitavanje fotografija, upravljanje kategorijama, provjera analitike, upravljanje narudžbama i rezervacijama."
+        },
+        {
+          "question": "Radi li i na tabletu?",
+          "answer": "Da. Kontrolna ploča prilagođava se svakoj veličini zaslona — telefoni, tableti i stolna računala. Koristite koji god uređaj vam je najpraktičniji."
+        },
+        {
+          "question": "Mogu li više osoba upravljati jelovnikom?",
+          "answer": "Trenutačno jedan račun upravlja restoranom. Možete se prijaviti s više uređaja istovremeno — telefon, tablet ili računalo."
+        }
+      ]
+    },
+    "howItWorks": {
+      "title": "Kako to funkcionira",
+      "subtitle": "Upravljajte svojim restoranom s bilo kojeg uređaja u četiri koraka.",
+      "steps": [
+        {
+          "title": "Otvorite nadzornu ploču na svom telefonu",
+          "description": "Idite na iq-rest.com i prijavite se putem preglednika na svom telefonu. Nadzorna ploča se automatski prilagođava veličini vašeg ekrana — nema aplikacije za preuzimanje ili instalaciju."
+        },
+        {
+          "title": "Uredite izbornik bilo gdje",
+          "description": "Dodajte nove stavke, ažurirajte cijene, promijenite opise i učitajte fotografije izravno s kamere svog telefona. Sve funkcije dostupne na računalu rade jednako dobro i na mobilnom uređaju."
+        },
+        {
+          "title": "Provjerite narudžbe i rezervacije",
+          "description": "Pogledajte dolazne narudžbe, upravljajte rezervacijama stolova i odgovarajte na poruke podrške — sve s vašeg telefona. Budite u toku s vašim restoranom čak i kada niste prisutni."
+        },
+        {
+          "title": "Promjene se odmah aktiviraju",
+          "description": "Svaka izmjena koju napravite s vašeg telefona pojavljuje se na vašem QR izborniku u stvarnom vremenu. Nema potrebe za sinkronizacijom, objavljivanjem ili čekanjem — vaši gosti uvijek vide najnoviju verziju."
+        }
+      ]
+    }
+  },
+  "customDesignPage": {
+    "seo": {
+      "title": "Web Stranica Restorana s Video i Foto Pozadinom — Kreator Web Stranica | IQ Rest",
+      "description": "Kreirajte zadivljujuću web stranicu restorana s prilagođenim video ili foto pozadinama. Učitajte video ambijenta ili kulinarsku fotografiju — impresionirajte goste od prvog skeniranja."
+    },
+    "hero": {
+      "badge": "Dizajn Web Stranice",
+      "title": "Kreirajte Zadivljujuću Web Stranicu Restorana s Video Pozadinama",
+      "subtitle": "Učitajte video ambijenta restorana ili prekrasnu kulinarsku fotografiju kao pozadinu. Gosti vide profesionalno, brendirano iskustvo čim skeniraju QR kod.",
+      "cta": "Kreirajte Svoj Jelovnik",
+      "ctaDemo": "Pogledajte Demo",
+      "noCreditCard": "Nije potrebna kreditna kartica. Besplatni plan dostupan."
+    },
+    "features": {
+      "title": "Kako Funkcioniraju Prilagođene Pozadine",
+      "subtitle": "Ostavite trajan prvi dojam vizualima koji odgovaraju vašem brendu.",
+      "items": [
+        {
+          "title": "Učitajte Video ili Foto Pozadine",
+          "description": "Dodajte video u petlji ambijenta restorana, time-lapse kuhinje ili visokokvalitetnu kulinarsku fotografiju. Pozadina se pojavljuje na naslovnoj stranici — stvarajući upečatljivo iskustvo za goste."
+        },
+        {
+          "title": "Optimizirano za Brzinu na Svakom Uređaju",
+          "description": "Videozapisi i slike automatski se komprimiraju i učitavaju s odgodom. Web stranica ostaje brza čak i na sporim mobilnim vezama — bez zastajkivanja, bez kašnjenja, samo glatko iskustvo."
+        }
+      ]
+    },
+    "faq": {
+      "title": "Često Postavljana Pitanja",
+      "subtitle": "Sve što trebate znati o dizajnu web stranice restorana.",
+      "items": [
+        {
+          "question": "Koji video formati su podržani?",
+          "answer": "MP4 i WebM formati najbolje rade. Videozapisi se automatski komprimiraju za brzo učitavanje. Držite videozapise ispod 30 sekundi za najbolje mobilno iskustvo."
+        },
+        {
+          "question": "Hoće li video pozadina usporiti moju web stranicu?",
+          "answer": "Ne. Videozapisi su komprimirani, učitavaju se s odgodom i automatski su optimizirani. Na sporim vezama sustav prelazi na statičnu sliku kako bi iskustvo ostalo glatko."
+        },
+        {
+          "question": "Mogu li koristiti fotografiju umjesto videa?",
+          "answer": "Da. Učitajte bilo koju fotografiju — bit će optimizirana i prikazana kao pozadina na cijelom zaslonu. Možete prebacivati između videa i fotografije bilo kada."
+        },
+        {
+          "question": "Trebam li dizajnera za postavljanje?",
+          "answer": "Ne. Samo učitajte video ili fotografiju iz kontrolne ploče. Sustav automatski upravlja veličinom, kompresijom i rasporedom. Vaša web stranica izgleda profesionalno bez ikakvih dizajnerskih vještina."
+        }
+      ]
+    },
+    "howItWorks": {
+      "title": "Kako to funkcionira",
+      "subtitle": "Prilagodite vizualni identitet svog restorana u četiri koraka.",
+      "steps": [
+        {
+          "title": "Otvorite postavke dizajna",
+          "description": "Idite na stranicu dizajna u svom nadzornoj ploči. Ovdje možete kontrolirati vizualni izgled svog restorana — pozadinu, akcentnu boju i raspored početne stranice."
+        },
+        {
+          "title": "Otpremite pozadinu",
+          "description": "Odaberite video (MP4, WebM) ili fotografiju za pozadinu početne stranice vašeg restorana. Videozapisi se automatski ponavljaju, stvarajući impresivan prvi dojam za svakog posjetitelja."
+        },
+        {
+          "title": "Generiranje pozadine pomoću AI",
+          "description": "Nemate spreman video ili fotografiju? Neka AI automatski stvori pozadinsku sliku iz vaših stavki iz jelovnika. Generira profesionalni vizual koji odgovara stilu vašeg restorana."
+        },
+        {
+          "title": "Pregled i spremi",
+          "description": "Pogledajte svoje promjene u stvarnom vremenu prije spremanja. Videozapisi se automatski komprimiraju i učitavaju na zahtjev, osiguravajući brzu izvedbu na mobilnim uređajima bez žrtvovanja vizualne kvalitete."
+        }
+      ]
+    }
+  },
+  "multilingualPage": {
+    "seo": {
+      "title": "Višejezična Web Stranica Restorana — Jelovnik na 25+ Jezika | IQ Rest",
+      "description": "Web stranica restorana i QR jelovnik na 25+ jezika. Gosti mijenjaju jezik jednim dodirom — jelovnik, kontakti i rezervacije prilagođavaju se odmah."
+    },
+    "hero": {
+      "badge": "Višejezično",
+      "title": "Web Stranica Vašeg Restorana na 25+ Jezika",
+      "subtitle": "Turisti i međunarodni gosti vide jelovnik na svom jeziku. Jedan dodir za prebacivanje — sve se prilagođava odmah: jela, opisi, kontakti, navigacija.",
+      "cta": "Kreirajte Svoj Jelovnik",
+      "ctaDemo": "Pogledajte Demo",
+      "noCreditCard": "Nije potrebna kreditna kartica. Besplatni plan dostupan."
+    },
+    "features": {
+      "title": "Kako Funkcionira Višejezična Podrška",
+      "subtitle": "Govorite jezik svojih gostiju bez dodatnog posla.",
+      "items": [
+        {
+          "title": "Gosti Biraju Svoj Jezik",
+          "description": "Na jelovniku se pojavljuje birač jezika. Gosti dodirnu željeni jezik i cijela web stranica — jelovnik, opisi, kontakt podaci, navigacija — prebacuje se odmah. Nije potrebno ponovno učitavanje stranice."
+        },
+        {
+          "title": "Dodajte Jezike iz Kontrolne Ploče",
+          "description": "Omogućite nove jezike jednim klikom. Koristite AI prijevod za popunjavanje sadržaja ili unesite prijevode ručno. Svaki jezik može se uključiti ili isključiti neovisno."
+        }
+      ]
+    },
+    "faq": {
+      "title": "Često Postavljana Pitanja",
+      "subtitle": "Sve što trebate znati o višejezičnim jelovnicima.",
+      "items": [
+        {
+          "question": "Koliko jezika mogu dodati svom jelovniku?",
+          "answer": "Do 25+ jezika uključujući sve glavne europske jezike, kineski, japanski, korejski, arapski, farsi i više. Dodajte koliko god vaši gosti trebaju."
+        },
+        {
+          "question": "Moram li sve prevoditi ručno?",
+          "answer": "Ne. Koristite ugrađeni AI prijevod za prijevod cijelog jelovnika jednim klikom. Također možete ručno urediti bilo koji prijevod za potpunu kontrolu."
+        },
+        {
+          "question": "Sprema li se jezična preferencija?",
+          "answer": "Da. Kada gost odabere jezik, pamti se za sljedeći posjet. Ne moraju ponovno birati kada se vrate."
+        },
+        {
+          "question": "Je li višejezična podrška dostupna na besplatnom planu?",
+          "answer": "Besplatni plan uključuje do 2 jezika. Growth i Pro planovi nude neograničen broj jezika s uključenim AI prijevodom."
+        }
+      ]
+    },
+    "howItWorks": {
+      "title": "Kako to funkcionira",
+      "subtitle": "Učinite svoj jelovnik dostupnim na više jezika u četiri koraka.",
+      "steps": [
+        {
+          "title": "Idite na Postavke jezika",
+          "description": "Otvorite stranicu Jezici na svom nadzornoj ploči. Vidjet ćete sve dostupne jezike i koji su trenutno aktivni na vašem jelovniku."
+        },
+        {
+          "title": "Dodajte jezike",
+          "description": "Odaberite između 35 dostupnih jezika. Besplatni plan uključuje do 2 jezika, dok Growth i Pro planovi nude neograničene jezike za vaš jelovnik."
+        },
+        {
+          "title": "Prevedite svoj sadržaj",
+          "description": "Koristite AI prijevod jednim klikom za trenutni prijevod cijelog jelovnika, ili unesite prijevode ručno za potpunu kontrolu. Također možete kombinirati oba pristupa."
+        },
+        {
+          "title": "Gosti mijenjaju jezike",
+          "description": "Odabir jezika pojavljuje se na vašoj stranici jelovnika. Kada gosti odaberu svoj jezik, cijeli jelovnik se odmah mijenja. Njihova preferencija se sprema za povratne posjete."
+        }
+      ]
+    }
+  },
+  "instantSetupPage": {
+    "seo": {
+      "title": "Besplatni Generator Web Stranice Restorana — Kreirajte za 5 Minuta | IQ Rest",
+      "description": "Dobijte profesionalnu web stranicu restorana s QR jelovnikom, stranicom za kontakt i kartom — samo unesite e-poštu. Gotovo za 5 minuta, bez tehničkih vještina."
+    },
+    "hero": {
+      "badge": "Besplatna Web Stranica",
+      "title": "Dobijte Profesionalnu Web Stranicu Restorana za 5 Minuta",
+      "subtitle": "Unesite e-poštu, imenujte restoran i odmah dobivate kompletnu web stranicu s QR jelovnikom, stranicom za kontakt s kartom i modernim prilagodljivim dizajnom. Bez kodiranja, bez dizajnera.",
+      "cta": "Kreirajte Svoj Jelovnik",
+      "ctaDemo": "Pogledajte Demo",
+      "noCreditCard": "Nije potrebna kreditna kartica. Besplatni plan dostupan."
+    },
+    "features": {
+      "title": "Kako Funkcionira",
+      "subtitle": "Od nule do aktivne web stranice restorana u tri koraka.",
+      "items": [
+        {
+          "title": "Registrirajte Se Samo s E-poštom",
+          "description": "Bez složenih obrazaca za registraciju. Unesite e-poštu, potvrdite kodom i kontrolna ploča restorana je spremna. Imenujte restoran i web stranica odmah postaje aktivna."
+        },
+        {
+          "title": "Sve Uključeno od Početka",
+          "description": "Vaša web stranica dolazi s QR jelovnikom, stranicom za kontakt s Google kartama, jezičnom podrškom, prilagodljivim mobilnim dizajnom i vašim jedinstvenim URL-om. Samo dodajte jela i počnite dijeliti."
+        }
+      ]
+    },
+    "faq": {
+      "title": "Često Postavljana Pitanja",
+      "subtitle": "Sve što trebate znati o kreiranju web stranice restorana.",
+      "items": [
+        {
+          "question": "Kako kreirati besplatnu web stranicu restorana?",
+          "answer": "Unesite e-poštu na IQ Rest, potvrdite kodom, imenujte restoran — gotovo. Web stranica s QR jelovnikom aktivna je za manje od 5 minuta. Kreditna kartica nije potrebna."
+        },
+        {
+          "question": "Trebam li tehničke vještine?",
+          "answer": "Ne. Sve je dizajnirano za vlasnike restorana, ne za programere. Dodajte jela, učitajte fotografije i upravljajte stranicom u potpunosti s telefona."
+        },
+        {
+          "question": "Što uključuje besplatni plan?",
+          "answer": "Kompletna web stranica restorana, QR jelovnik, stranica za kontakt s kartom, analitika, prilagođena shema boja i do 2 jezika. Bez probnog razdoblja — besplatno zauvijek."
+        },
+        {
+          "question": "Mogu li koristiti vlastitu domenu?",
+          "answer": "Na besplatnom i Growth planu vaša stranica je na adresi iq-rest.com/m/vaše-ime. Pro plan podržava prilagođene domene za potpunu kontrolu brenda."
+        }
+      ]
+    },
+    "howItWorks": {
+      "title": "Kako to funkcionira",
+      "subtitle": "Od nule do aktivne web stranice restorana u četiri koraka.",
+      "steps": [
+        {
+          "title": "Unesite svoju e-poštu",
+          "description": "Nema potrebe za lozinkom. Samo upišite svoju adresu e-pošte i kliknite Nastavi. Nema dugih obrazaca za registraciju, nema potrebe za kreditnom karticom i nema obaveza."
+        },
+        {
+          "title": "Verificirajte s kodom",
+          "description": "Provjerite svoju pristiglu poštu za 4-znamenkasti verifikacijski kod. Unesite ga kako biste se sigurno prijavili. Ovaj pristup bez lozinke znači da imate jednu stvar manje za zapamtiti."
+        },
+        {
+          "title": "Imenujte svoj restoran",
+          "description": "Dajte svom restoranu ime. To postaje vaša URL adresa web stranice i naslov jelovnika. Uvijek ga možete promijeniti kasnije iz postavki nadzorne ploče."
+        },
+        {
+          "title": "Vaša web stranica je spremna",
+          "description": "Potpuna web stranica restorana s QR jelovnikom, kontakt stranicom s kartom i responzivnim dizajnom odmah je aktivna na iq-rest.com/m/vaše-ime. Dodajte svoja jela i počnite dijeliti."
+        }
+      ]
+    }
+  },
+  "analyticsPage": {
+    "seo": {
+      "title": "Analitika Restorana i Statistike QR Izbornika — Pratite Posjetitelje | IQ Rest",
+      "description": "Pratite skeniranja QR izbornika, preglede stranica, popularne jezike i trendove posjetitelja. Nadzorna ploča za analitiku u stvarnom vremenu za web stranicu vašeg restorana."
+    },
+    "hero": {
+      "badge": "Analitika",
+      "title": "Vidite Točno Kako Gosti Koriste Vaš QR Izbornik",
+      "subtitle": "Pratite dnevna skeniranja, preglede stranica, popularne jezike, statistike uređaja i trendove tijekom vremena. Donosite odluke temeljene na podacima za optimizaciju izbornika i rast vašeg poslovanja.",
+      "cta": "Izradite Svoj Izbornik",
+      "ctaDemo": "Pogledajte Demo",
+      "noCreditCard": "Nije potrebna kreditna kartica. Besplatan plan je dostupan."
+    },
+    "features": {
+      "title": "Što Možete Pratiti",
+      "subtitle": "Uvidi u stvarnom vremenu o online prisutnosti vašeg restorana.",
+      "items": [
+        {
+          "title": "Dnevni Pregledi, Skeniranja i Trendovi Posjetitelja",
+          "description": "Pogledajte koliko ljudi skenira vaš QR kod i posjećuje vaš izbornik svaki dan, tjedan i mjesec. Pratite trendove tijekom vremena kako biste razumjeli sezonske obrasce i izmjerili učinak promocija."
+        },
+        {
+          "title": "Raščlamba po Jeziku i Uređaju",
+          "description": "Saznajte koje jezike vaši gosti preferiraju i koje uređaje koriste. Ovi podaci vam pomažu prioritizirati prijevode i osigurati da vaš izbornik izgleda savršeno na najpopularnijim uređajima."
+        }
+      ]
+    },
+    "faq": {
+      "title": "Često Postavljana Pitanja",
+      "subtitle": "Sve što trebate znati o analitici restorana.",
+      "items": [
+        {
+          "question": "Koje metrike mogu pratiti?",
+          "answer": "Dnevne, tjedne i mjesečne preglede stranica. Jedinstvene posjetitelje. Najgledanije stranice. Jezične preferencije. Raščlambu po uređajima i preglednicima. Sve se ažurira u stvarnom vremenu."
+        },
+        {
+          "question": "Je li analitika uključena u besplatan plan?",
+          "answer": "Da. Osnovna analitika dostupna je na svakom planu, uključujući besplatan. Možete vidjeti preglede, posjetitelje i jezične statistike od prvog dana."
+        },
+        {
+          "question": "Mogu li vidjeti koje su stranice najpopularnije?",
+          "answer": "Da. Nadzorna ploča prikazuje preglede raščlanjene po stranicama — početna, izbornik, kontakti, rezervacije i odabir jezika. Vidite točno gdje gosti provode svoje vrijeme."
+        },
+        {
+          "question": "Koliko daleko u prošlost sežu podaci?",
+          "answer": "Podaci analitike pohranjuju se od dana kada izradite svoj restoran. Možete pregledavati dnevne, tjedne i mjesečne trendove za cijelu svoju povijest."
+        }
+      ]
+    },
+    "howItWorks": {
+      "title": "Kako to funkcionira",
+      "subtitle": "Započnite praćenje performansi vašeg restorana u četiri koraka.",
+      "steps": [
+        {
+          "title": "Kreirajte svoj restoran",
+          "description": "Analitika počinje pratiti od trenutka kada vaš jelovnik postane aktivan. Nema potrebe za konfiguracijom — svaki pregled stranice, QR skeniranje i posjetitelj se automatski bilježe."
+        },
+        {
+          "title": "Podijelite svoj QR kod",
+          "description": "Ispišite svoj QR kod i postavite ga na stolove, na ulazu ili na ambalažu za ponijeti. Svako skeniranje se bilježi s vremenskom oznakom, jezikom, uređajem i posjećenom stranicom."
+        },
+        {
+          "title": "Otvorite analitičku nadzornu ploču",
+          "description": "Pogledajte dnevne, tjedne i mjesečne statistike s jasnim grafikonima. Pratite ukupne preglede, jedinstvene posjetitelje i trendove tijekom vremena s jedne nadzorne ploče."
+        },
+        {
+          "title": "Istražite detaljne analize",
+          "description": "Pogledajte statistiku razdijeljenu po stranicama (jelovnik, kontakti, rezervacije), preferiranom jeziku, vrsti uređaja i pregledniku. Iskoristite ove podatke za optimizaciju vašeg jelovnika i prioritizaciju prijevoda."
+        }
+      ]
+    }
+  },
+  "aiImagesPage": {
+    "seo": {
+      "title": "AI Generiranje Fotografija Hrane za Jelovnike — Slike Jelovnika Restorana | IQ Rest",
+      "description": "Generirajte prekrasne fotografije hrane za svoj jelovnik pomoću AI-ja. Nije potreban fotograf — dobijte profesionalne slike jela u sekundama, optimizirane za vaš QR jelovnik."
+    },
+    "hero": {
+      "badge": "AI Slike",
+      "title": "Profesionalne Fotografije Jelovnika Bez Fotografa",
+      "subtitle": "Generirajte zapanjujuće slike jela pomoću AI-ja. Samo unesite naziv jela i dobijte prekrasnu, optimiziranu fotografiju spremnu za vaš QR jelovnik — u sekundama.",
+      "cta": "Izradite Svoj Jelovnik",
+      "ctaDemo": "Pogledajte Demo",
+      "noCreditCard": "Nije potrebna kreditna kartica. Besplatan plan je dostupan."
+    },
+    "features": {
+      "title": "Kako Funkcionira AI Generiranje Slika",
+      "subtitle": "Od naziva jela do profesionalne fotografije jednim klikom.",
+      "items": [
+        {
+          "title": "Generirajte Slike iz Naziva Jela",
+          "description": "Upišite naziv jela — 'Losos na Žaru s Limunom', 'Pizza Margherita', 'Čokoladni Lava Kolač' — i AI generira profesionalnu fotografiju hrane. Birajte između više stilova i pozadina."
+        },
+        {
+          "title": "Optimizirano za Brzo Učitavanje",
+          "description": "Svaka generirana slika automatski se komprimira i pretvara u moderne formate. Vaš jelovnik ostaje munjevito brz na svakom uređaju, čak i s fotografijama na svakom jelu."
+        }
+      ]
+    },
+    "faq": {
+      "title": "Često Postavljana Pitanja",
+      "subtitle": "Sve što trebate znati o AI slikama jelovnika.",
+      "items": [
+        {
+          "question": "Kako generiram fotografiju hrane?",
+          "answer": "Otvorite bilo koju stavku jelovnika na nadzornoj ploči, dodirnite 'Generiraj Sliku' i AI stvara profesionalnu fotografiju hrane na temelju naziva i opisa jela. Odaberite onu koja vam se sviđa."
+        },
+        {
+          "question": "Mogu li umjesto toga koristiti vlastite fotografije?",
+          "answer": "Naravno. Prenesite vlastite fotografije s telefona ili računala. AI generiranje je neobavezno — koristite ga kad nemate spremnu fotografiju."
+        },
+        {
+          "question": "Koliko slika mogu generirati?",
+          "answer": "Ograničenja generiranja slika ovise o vašem planu. Growth uključuje mjesečnu kvotu, a Pro nudi viši limit. Vlastite fotografije uvijek možete prenositi bez ograničenja."
+        },
+        {
+          "question": "Jesu li generirane slike jedinstvene za moj restoran?",
+          "answer": "Da. Svaka slika generira se jedinstveno za vaše specifično jelo. Nema stock fotografija — svaka slika stvara se iznova na temelju vaše stavke jelovnika."
+        }
+      ]
+    },
+    "howItWorks": {
+      "title": "Kako to funkcionira",
+      "subtitle": "Dobijte profesionalne fotografije hrane za svoj jelovnik u četiri jednostavna koraka.",
+      "steps": [
+        {
+          "title": "Otvorite bilo koju stavku jelovnika",
+          "description": "Navigirajte do stavke za koju želite fotografiju na svom nadzornoj ploči. Možete generirati slike za nova jela ili zamijeniti postojeće fotografije na bilo kojoj stavci jelovnika."
+        },
+        {
+          "title": "Kliknite na Generiraj sliku",
+          "description": "AI stvara profesionalnu fotografiju hrane na temelju imena jela i opisa. Što više detalja pružite u opisu, to će rezultat biti točniji."
+        },
+        {
+          "title": "Pregledajte rezultat",
+          "description": "Pregledajte generiranu sliku prije nego što je primijenite. Ako želite drugačiji izgled, regenerirajte da dobijete novu varijaciju. Svaka generacija proizvodi jedinstvenu sliku."
+        },
+        {
+          "title": "Koristite u svom jelovniku",
+          "description": "Slika je automatski optimizirana, komprimirana u WebP format i odmah se pojavljuje na vašem aktivnom jelovniku. Gosti vide profesionalne fotografije hrane za svako jelo."
+        }
+      ]
+    }
+  },
+  "personalSupportPage": {
+    "seo": {
+      "title": "Osobna podrška za web stranicu vašeg restorana — Prava ljudska pomoć | IQ Rest",
+      "description": "Dobijte osobnu pomoć od pravih ljudi, ne chatbotova. Pomoć pri postavljanju, savjeti za optimizaciju jelovnika i brzi odgovori — dostupno na svakom planu, uključujući besplatni."
+    },
+    "hero": {
+      "badge": "Osobna podrška",
+      "title": "Pravi ljudi, prava pomoć — Nisu chatbotovi",
+      "subtitle": "Imate pitanje? Trebate pomoć pri postavljanju jelovnika? Želite predložiti novu značajku? Javite nam se izravno i dobijte osoban odgovor od nekoga tko razumije restorane.",
+      "cta": "Kreirajte svoj jelovnik",
+      "ctaDemo": "Pogledajte demo",
+      "noCreditCard": "Kreditna kartica nije potrebna. Dostupan besplatni plan."
+    },
+    "features": {
+      "title": "Kako podrška funkcionira",
+      "subtitle": "Pomoć kad vam treba, od ljudi kojima je stalo.",
+      "items": [
+        {
+          "title": "Javite nam se izravno s vaše nadzorne ploče",
+          "description": "Otvorite chat za podršku na svojoj nadzornoj ploči i opišite svoje pitanje. Prava osoba čita vašu poruku i odgovara — obično unutar nekoliko sati radnim danima."
+        },
+        {
+          "title": "Pomoć pri postavljanju, optimizaciji i više",
+          "description": "Trebate li pomoć pri dodavanju prvog jela, savjet o organizaciji jelovnika ili želite predložiti novu značajku — tu smo. Svako pitanje je važno, koliko god malo bilo."
+        }
+      ]
+    },
+    "faq": {
+      "title": "Često postavljana pitanja",
+      "subtitle": "Sve što trebate znati o našoj podršci.",
+      "items": [
+        {
+          "question": "Je li podrška dostupna na besplatnom planu?",
+          "answer": "Da. Osobna podrška dostupna je za svaki plan, uključujući besplatni. Vjerujemo da svaki restoran zaslužuje pravu pomoć, bez obzira na pretplatu."
+        },
+        {
+          "question": "Koliko brzo odgovarate?",
+          "answer": "Obično unutar nekoliko sati radnim danima. Svaku poruku čitamo osobno i nastojimo riješiti vaše pitanje u jednom odgovoru."
+        },
+        {
+          "question": "Možete li mi pomoći postaviti jelovnik?",
+          "answer": "Naravno. Ako trebate pomoć pri dodavanju jela, organizaciji kategorija, postavljanju prijevoda ili konfiguraciji rezervacija — samo pitajte. Rado ćemo vas provesti kroz sve."
+        },
+        {
+          "question": "Mogu li predložiti nove značajke?",
+          "answer": "Da, i to volimo! Mnoge naše značajke nastale su iz korisničkih prijedloga. Pošaljite nam svoju ideju i razmotrit ćemo je za buduća ažuriranja."
+        }
+      ]
+    },
+    "howItWorks": {
+      "title": "Kako to funkcionira",
+      "subtitle": "Dobijte pomoć od stvarne osobe u četiri jednostavna koraka.",
+      "steps": [
+        {
+          "title": "Otvorite podršku za chat",
+          "description": "Idite na stranicu podrške u vašem nadzornom panelu. Vidjet ćete jednostavno sučelje za chat gdje možete izravno napisati svoju poruku — bez obrazaca za ulaznice ili kategorija za odabir."
+        },
+        {
+          "title": "Opišite svoje pitanje",
+          "description": "Napišite svoju poruku. Pitajte o postavljanju, značajkama, optimizaciji jelovnika, naplatama ili bilo čemu drugome. Nema glupih pitanja — rado ćemo pomoći u svemu."
+        },
+        {
+          "title": "Dobijte osobni odgovor",
+          "description": "Stvarna osoba (ne chatbot) čita vašu poruku i odgovara unutar nekoliko sati. Razumijemo radne procese u restoranima i dajemo praktične, konkretne odgovore."
+        },
+        {
+          "title": "Kontinuirana pomoć",
+          "description": "Zatražite prijedloge za značajke, dobijte savjete za optimizaciju jelovnika ili zatražite pomoć pri postavljanju u bilo kojem trenutku. Vaša povijest razgovora se sprema, tako da uvijek imamo kontekst iz prethodnih pitanja."
+        }
+      ]
+    }
   }
 }

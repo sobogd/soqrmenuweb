@@ -2515,5 +2515,895 @@
     },
     "back": "Back",
     "continue": "Continuar"
+  },
+  "onlineOrders": {
+    "seo": {
+      "title": "Comandes en línia per a restaurants — Menú QR | IQ Rest",
+      "description": "Permet als clients fer comandes directament des del teu menú QR. Sense comissions, preus en temps real i gestió instantània de comandes al teu panell de control."
+    },
+    "hero": {
+      "badge": "Comandes en Línia",
+      "title": "Converteix el teu menú QR en un sistema de comandes en línia",
+      "subtitle": "Els clients escanegen, naveguen pel menú i fan la seva comanda en segons. Sense descarregar aplicacions, sense comissions, sense complicacions.",
+      "cta": "Crea el teu menú",
+      "ctaDemo": "Veure demostració",
+      "noCreditCard": "No cal targeta de crèdit. Pla gratuït disponible."
+    },
+    "benefits": {
+      "title": "Per què els restaurants trien les comandes per menú QR",
+      "subtitle": "Un canal de comandes directe que simplifica les coses per a tu i els teus clients.",
+      "items": [
+        {
+          "title": "Sense aplicació",
+          "description": "Els clients simplement escanegen el codi QR — sense descàrregues, sense registres. Funciona a l'instant en qualsevol navegador del telèfon."
+        },
+        {
+          "title": "Preus en temps real",
+          "description": "Actualitza preus i disponibilitat a l'instant. Els canvis es reflecteixen immediatament al teu menú QR."
+        },
+        {
+          "title": "Comandes des de la taula",
+          "description": "Cada taula rep el seu propi codi QR. Els clients escanegen, comanen i tu veus el número de taula al teu panell de control."
+        },
+        {
+          "title": "Disseny personalitzat",
+          "description": "Adapta el teu menú a la teva marca amb colors, fons i logotip personalitzats."
+        }
+      ]
+    },
+    "features": {
+      "title": "Com funcionen les comandes en línia",
+      "subtitle": "Dos passos senzills connecten el teu menú amb la cuina.",
+      "items": [
+        {
+          "title": "Els clients naveguen i trien plats",
+          "description": "Els clients escanegen el teu codi QR i veuen el menú complet amb fotos, descripcions i preus. Afegeixen plats a la comanda amb un sol toc — sense registre."
+        },
+        {
+          "title": "Les comandes apareixen al teu panell de control",
+          "description": "Quan estan preparats, els clients toquen el botó de comanda. La comanda apareix a l'instant al teu panell amb els detalls dels plats, el número de taula i les notes. Accepta, comença a preparar i marca com a completada."
+        }
+      ]
+    },
+    "faq": {
+      "title": "Preguntes freqüents",
+      "subtitle": "Tot el que necessites saber sobre les comandes en línia.",
+      "items": [
+        {
+          "question": "Necessito algun maquinari o aplicació addicional?",
+          "answer": "No. Tot funciona a través del navegador web. Els clients escanegen el codi QR amb la càmera del telèfon i tu gestiones les comandes des del panell d'IQ Rest en qualsevol dispositiu."
+        },
+        {
+          "question": "Hi ha comissions o tarifes per comanda?",
+          "answer": "En absolut. IQ Rest mai cobra comissions sobre les teves comandes. Només pagues el teu pla de subscripció i tots els ingressos de les comandes es queden amb tu."
+        },
+        {
+          "question": "Els clients poden personalitzar la seva comanda o afegir notes?",
+          "answer": "Sí. Els clients poden seleccionar plats, especificar quantitats i afegir notes o sol·licituds especials. També pots requerir el nom, telèfon o adreça de lliurament del client."
+        },
+        {
+          "question": "Funciona per menjar al local, per emportar i per a lliurament?",
+          "answer": "Sí. Per menjar al local, els clients escanegen el codi QR a la seva taula. Per emportar o per a lliurament, comparteix un enllaç directe al teu menú. Pots activar els camps de nom, telèfon i adreça segons sigui necessari."
+        }
+      ]
+    },
+    "howItWorks": {
+      "title": "Com Funciona",
+      "subtitle": "Des de la configuració fins a rebre la vostra primera comanda en cinc passos senzills.",
+      "steps": [
+        {
+          "title": "Habilita la Comanda en Línia",
+          "description": "Activa les comandes a la configuració de Disseny. Tria el teu mode preferit: les comandes apareixen al teu tauler, es reenvien a WhatsApp, o ambdós simultàniament."
+        },
+        {
+          "title": "Configura el Formulari de Comanda",
+          "description": "Selecciona quins camps han de completar els clients quan fan una comanda. El nom sempre és obligatori, i opcionalment pots demanar el número de telèfon i l'adreça de lliurament."
+        },
+        {
+          "title": "Imprimeix Codis QR per a les Taules",
+          "description": "Cada taula del teu restaurant té el seu propi codi QR únic. Quan els convidats el scanegen, la seva comanda arriba automàticament amb el número de taula correcte adjunt."
+        },
+        {
+          "title": "Els Clients Fan Comandes",
+          "description": "Els convidats scanegen el codi QR, naveguen pel teu menú amb fotos i preus, seleccionen articles, afegeixen notes i envien la seva comanda. No cal descarregar cap aplicació ni crear un compte."
+        },
+        {
+          "title": "Gestiona les Comandes al Teu Tauler",
+          "description": "Les comandes apareixen instantàniament al teu tauler. Actualitza l'estat de cada comanda de nova a en curs i completada. Tu mantens el 100% dels ingressos — zero comissions."
+        }
+      ]
+    }
+  },
+  "reservationsPage": {
+    "seo": {
+      "title": "Sistema de reserva de taules per a restaurants — Reserva en línia | IQ Rest",
+      "description": "Permet que els clients reservin taula directament des del teu web. Confirmació automàtica o manual, notificacions per correu i gestió completa del calendari — tot inclòs."
+    },
+    "hero": {
+      "badge": "Reserves de taules",
+      "title": "Accepta reserves de taules 24/7 des del teu web",
+      "subtitle": "Els clients trien data, hora i nombre de comensals — i reserven a l'instant. Tu ho gestiones tot des del teu panell, sense trucades telefòniques.",
+      "cta": "Crea el teu menú",
+      "ctaDemo": "Veure demo",
+      "noCreditCard": "No cal targeta de crèdit. Pla gratuït disponible."
+    },
+    "features": {
+      "title": "Com funcionen les reserves de taules",
+      "subtitle": "Dos passos des de la sol·licitud del client fins a la reserva confirmada.",
+      "items": [
+        {
+          "title": "Els clients reserven des del teu web",
+          "description": "Els clients visiten la pàgina del teu restaurant, toquen \"Reservar taula\", trien data i hora, introdueixen les seves dades i envien. No cal cap aplicació — funciona a qualsevol navegador i dispositiu."
+        },
+        {
+          "title": "Gestiona les reserves des del teu panell",
+          "description": "Cada reserva apareix al teu panell amb el nom del client, telèfon, nombre de comensals, data i notes. Confirma o rebutja amb un sol toc. Configura la confirmació automàtica o revisa cada reserva manualment."
+        }
+      ]
+    },
+    "faq": {
+      "title": "Preguntes freqüents",
+      "subtitle": "Tot el que necessites saber sobre les reserves de taules.",
+      "items": [
+        {
+          "question": "Els clients han de crear un compte per reservar?",
+          "answer": "No. Els clients simplement omplen el nom, número de telèfon, nombre de comensals i hora preferida. No cal cap compte ni descarregar cap aplicació."
+        },
+        {
+          "question": "Puc definir franges horàries i capacitat disponibles?",
+          "answer": "Sí. Defineix el teu horari de treball, la durada de les franges de reserva i la capacitat de les taules. El sistema només mostra les franges disponibles als clients."
+        },
+        {
+          "question": "Rebré una notificació quan algú reservi?",
+          "answer": "Sí. Reps un correu electrònic per cada nova reserva. Els clients també reben un correu de confirmació quan aproves la reserva."
+        },
+        {
+          "question": "Puc utilitzar confirmació automàtica i manual alhora?",
+          "answer": "Sí. Tria el mode automàtic per confirmar reserves al moment segons la disponibilitat, o el mode manual per revisar i aprovar cada sol·licitud personalment."
+        }
+      ]
+    },
+    "howItWorks": {
+      "title": "Com Funciona",
+      "subtitle": "Configura reserves en línia i comença a acceptar reserves en cinc passos.",
+      "steps": [
+        {
+          "title": "Habilita les Reserves",
+          "description": "Activa les reserves a la configuració del teu restaurant. Tria entre confirmació automàtica, on les reserves s'aproven instantàniament segons la disponibilitat, o mode manual on revises cada sol·licitud."
+        },
+        {
+          "title": "Afegeix les Teves Taules",
+          "description": "Crea taules amb informació de capacitat i zona — per exemple, 'Taula 5, 4 convidats, Terrassa'. Cada taula esdevé reservable, i el sistema evita automàticament les dobles reserves."
+        },
+        {
+          "title": "Defineix les Teves Horàries",
+          "description": "Defineix les teves hores disponibles per a reserves i tria la durada del temps — de 15 minuts a 8 hores. Només es mostren als convidats els horaris dins de les teves hores laborals."
+        },
+        {
+          "title": "Els Convidats Reserven en Línia",
+          "description": "Els clients visiten la pàgina del teu restaurant, escullen la seva data, hora i nombre de persones, introdueixen el seu nom i telèfon, i envien. No es requereix cap compte ni descàrrega d'aplicació — funciona en qualsevol navegador."
+        },
+        {
+          "title": "Gestiona les Reserves al Teu Tauler de Control",
+          "description": "Veu totes les reserves al teu tauler de control. Confirma, cancel·la o marca les reserves com a completades. Tant tu com el convidat rebeu notificacions per correu electrònic per a cada actualització de reserva."
+        }
+      ]
+    }
+  },
+  "colorSchemePage": {
+    "seo": {
+      "title": "Disseny personalitzat de menú QR i colors de marca — Branding de restaurant | IQ Rest",
+      "description": "Adapta el teu menú QR a la marca del teu restaurant. Tria colors d'accent i crea un aspecte coherent a tot el teu menú digital."
+    },
+    "hero": {
+      "badge": "Disseny personalitzat",
+      "title": "Fes que el teu menú QR reflecteixi la marca del teu restaurant",
+      "subtitle": "Tria el color de la teva marca i tot el menú — botons, ressaltats, enllaços — s'actualitza a l'instant.",
+      "cta": "Crea el teu menú",
+      "ctaDemo": "Veure demo",
+      "noCreditCard": "No cal targeta de crèdit. Pla gratuït disponible."
+    },
+    "features": {
+      "title": "Com funciona el branding personalitzat",
+      "subtitle": "El teu menú, els teus colors — coherents a cada pàgina.",
+      "items": [
+        {
+          "title": "Tria el teu color d'accent",
+          "description": "Selecciona entre 12 presets o introdueix el color exacte de la teva marca amb un codi hex. Cada botó, enllaç i ressaltat del teu menú s'adapta a l'instant — no calen habilitats de disseny."
+        }
+      ]
+    },
+    "faq": {
+      "title": "Preguntes freqüents",
+      "subtitle": "Tot el que necessites saber sobre la personalització del menú.",
+      "items": [
+        {
+          "question": "Puc utilitzar el color exacte de la meva marca?",
+          "answer": "Sí. Introdueix qualsevol codi de color hex o tria entre 12 presets seleccionats amb cura. El color d'accent s'aplica a totes les pàgines del teu menú."
+        },
+        {
+          "question": "Puc canviar els colors després de publicar?",
+          "answer": "Per descomptat. Canvia el color d'accent en qualsevol moment des del panell. Les actualitzacions apareixen a l'instant al teu menú en viu — no cal tornar a publicar."
+        },
+        {
+          "question": "El codi QR també coincidirà amb els colors de la marca?",
+          "answer": "El codi QR es genera per separat i es pot personalitzar de manera independent. El color d'accent s'aplica a les pàgines del teu menú digital, la navegació i els elements interactius."
+        }
+      ]
+    },
+    "howItWorks": {
+      "title": "Com Funciona",
+      "subtitle": "Adapta el teu menú a la teva marca en tres passos senzills.",
+      "steps": [
+        {
+          "title": "Obre la Configuració de Disseny",
+          "description": "Navega a la pàgina de Disseny al teu tauler de control. El selector de color d'accent està al centre — veuràs totes les opcions disponibles immediatament."
+        },
+        {
+          "title": "Tria el Color de la Teva Marca",
+          "description": "Tria entre 12 presets de color seleccionats dissenyats per a la llegibilitat i l'accessibilitat, o introdueix el teu codi hex exacte per a una coincidència perfecta amb la teva marca."
+        },
+        {
+          "title": "Previsualització Instantània",
+          "description": "El teu color d'accent s'aplica a botons, enllaços i destacats a tot el menú. Funciona tant en temes clars com foscos, i els canvis apareixen instantàniament al teu menú en viu."
+        }
+      ]
+    }
+  },
+  "easyMenuPage": {
+    "seo": {
+      "title": "Crea un menú QR per al teu restaurant — Creador de menú gratuït | IQ Rest",
+      "description": "Crea el menú QR digital del teu restaurant en minuts. Afegeix categories, plats, fotos, preus — i comparteix un codi QR escanejable. Gratuït per començar."
+    },
+    "hero": {
+      "badge": "Creador de menú",
+      "title": "Crea un menú QR digital per al teu restaurant en minuts",
+      "subtitle": "Afegeix les teves categories i plats, estableix preus, puja fotos — el teu menú QR està llest per compartir. Edita en qualsevol moment, els canvis apareixen a l'instant.",
+      "cta": "Crea el teu menú",
+      "ctaDemo": "Veure demo",
+      "noCreditCard": "No cal targeta de crèdit. Pla gratuït disponible."
+    },
+    "features": {
+      "title": "Com funciona l'editor de menú",
+      "subtitle": "Eines senzilles per posar el teu menú en línia ràpidament.",
+      "items": [
+        {
+          "title": "Afegeix categories i plats",
+          "description": "Crea categories com Entrants, Principals, Begudes — i afegeix plats amb noms, descripcions, preus i fotos. Arrossega i deixa anar per reordenar. Activa o desactiva elements sense eliminar-los."
+        },
+        {
+          "title": "Els canvis es publiquen a l'instant",
+          "description": "Cada edició que fas apareix al teu menú QR en viu en segons. Actualitza un preu, afegeix una oferta del dia o amaga un plat esgotat — els teus clients sempre veuen la versió més recent."
+        }
+      ]
+    },
+    "faq": {
+      "title": "Preguntes freqüents",
+      "subtitle": "Tot el que necessites saber sobre la creació del teu menú QR.",
+      "items": [
+        {
+          "question": "Com creo un menú QR per al meu restaurant?",
+          "answer": "Registra't amb el teu correu electrònic, posa nom al teu restaurant i comença a afegir categories i plats. El menú QR es genera automàticament — imprimeix el codi QR i col·loca'l a les taules."
+        },
+        {
+          "question": "Puc afegir fotos als elements del menú?",
+          "answer": "Sí. Puja fotos directament des del teu mòbil o ordinador. Les imatges s'optimitzen automàticament per a una càrrega ràpida en qualsevol dispositiu."
+        },
+        {
+          "question": "Quants elements puc afegir?",
+          "answer": "No hi ha límit de categories ni d'elements del menú. Afegeix tants plats com necessitis — el teu menú es manté ràpid i organitzat."
+        },
+        {
+          "question": "Puc amagar temporalment un plat esgotat?",
+          "answer": "Sí. Desactiva qualsevol element amb un sol toc. Desapareix del menú públic però es manté al teu panell — torna a activar-lo quan vulguis."
+        }
+      ]
+    },
+    "howItWorks": {
+      "title": "Com Funciona",
+      "subtitle": "Crea i publica el menú del teu restaurant en cinc passos senzills.",
+      "steps": [
+        {
+          "title": "Crea Categories",
+          "description": "Afegeix categories com Entrants, Plats Principals, Postres i Begudes per organitzar el teu menú. Pots crear tantes categories com necessitis i reorganitzar-les amb arrossegar i deixar anar."
+        },
+        {
+          "title": "Afegeix Articles al Menú",
+          "description": "Introdueix el nom del plat, la descripció i el preu per a cada article. Marca els al·lergògens si escau — els convidats veuran icones d'al·lergògens al menú automàticament."
+        },
+        {
+          "title": "Puja o Genera Fotos",
+          "description": "Puja les teves pròpies fotos de menjar des del teu telèfon o ordinador, o utilitza la IA per generar una imatge professional del plat a partir del nom del plat. Les imatges s'optimitzen automàticament."
+        },
+        {
+          "title": "Organitza amb Arrossegar i Deixar Anar",
+          "description": "Reorganitza categories i articles arrossegant-los al seu lloc. Activa o desactiva qualsevol article sense esborrar-lo — perfecte per a ofertes diàries o plats exhaurits."
+        },
+        {
+          "title": "Publica el Teu Menú",
+          "description": "Els canvis apareixen instantàniament al teu menú QR en directe. No hi ha cap botó de 'publicar' — cada edició es fa en temps real. Imprimeix el teu codi QR i col·loca'l a les teves taules."
+        }
+      ]
+    }
+  },
+  "aiTranslationPage": {
+    "seo": {
+      "title": "Traducció IA del menú per a restaurants — Tradueix el menú QR | IQ Rest",
+      "description": "Tradueix el menú del teu restaurant a més de 25 idiomes amb un sol clic. La IA entén el context culinari — noms de plats, descripcions i categories traduïts amb precisió."
+    },
+    "hero": {
+      "badge": "Traducció IA",
+      "title": "Tradueix el teu menú a més de 25 idiomes amb un sol clic",
+      "subtitle": "La nostra IA entén el context gastronòmic — tradueix noms de plats, descripcions i categories de manera natural, no paraula per paraula. Arriba a cada turista i client internacional.",
+      "cta": "Crea el teu menú",
+      "ctaDemo": "Veure demo",
+      "noCreditCard": "No cal targeta de crèdit. Pla gratuït disponible."
+    },
+    "features": {
+      "title": "Com funciona la traducció IA",
+      "subtitle": "Del teu idioma al món sencer en segons.",
+      "items": [
+        {
+          "title": "Traducció de tot el menú amb un sol clic",
+          "description": "Selecciona un idioma de destí, toca traduir i tot el menú — categories, noms de plats, descripcions — es tradueix a l'instant. La IA conserva els termes culinaris i s'adapta de manera natural a cada idioma."
+        },
+        {
+          "title": "Edita i ajusta qualsevol traducció",
+          "description": "Cada traducció IA és totalment editable. Revisa el resultat, ajusta la redacció i desa. Els teus canvis es conserven encara que més tard tornis a traduir altres parts del menú."
+        }
+      ]
+    },
+    "faq": {
+      "title": "Preguntes freqüents",
+      "subtitle": "Tot el que necessites saber sobre la traducció del menú.",
+      "items": [
+        {
+          "question": "Com de precisa és la traducció IA per a menús de restaurants?",
+          "answer": "La nostra IA està optimitzada per a contingut de restauració. Entén que \"Beef Wellington\" o \"Tiramisu\" no s'han de traduir literalment, i adapta les descripcions perquè sonin naturals en cada idioma."
+        },
+        {
+          "question": "Quins idiomes estan disponibles?",
+          "answer": "Més de 25 idiomes incloent anglès, castellà, francès, alemany, italià, portuguès, xinès, japonès, coreà, àrab, rus i molts més idiomes europeus i asiàtics."
+        },
+        {
+          "question": "Puc traduir només alguns elements i no tot el menú?",
+          "answer": "Sí. Pots traduir elements individuals, categories senceres o tot el menú alhora. Tens control total sobre què es tradueix."
+        },
+        {
+          "question": "Té un cost addicional per traducció?",
+          "answer": "La traducció IA està inclosa als plans Growth i Pro amb generosos límits mensuals. Sense càrrecs per paraula ni per element — tradueix tant com necessitis."
+        }
+      ]
+    },
+    "howItWorks": {
+      "title": "Com Funciona",
+      "subtitle": "Traduïu tot el vostre menú en minuts, no en hores.",
+      "steps": [
+        {
+          "title": "Afegiu Idiomes al vostre Menú",
+          "description": "Vés a la pàgina d'Idiomes al teu tauler de control i selecciona quins idiomes ha de suportar el teu menú. Tria entre 35 idiomes disponibles, incloent tots els principals idiomes europeus, asiàtics i del Pròxim Orient."
+        },
+        {
+          "title": "Feu clic a Traduir",
+          "description": "Un botó tradueix totes les teves categories, noms d'articles i descripcions alhora. Tot el menú es processa en segons, independentment de quants articles tinguis."
+        },
+        {
+          "title": "L'IA Entén el Context Culinari",
+          "description": "L'IA coneix la terminologia culinària a través de les cultures. Preserva noms de plats com 'Tiramisu' o 'Pad Thai' mentre adapta naturalment les descripcions, llistes d'ingredients i noms de categories."
+        },
+        {
+          "title": "Revisar i Editar",
+          "description": "Cada traducció és completament editable. Ajusta qualsevol redacció per coincidir amb el teu estil. Els teus canvis manuals es conserven fins i tot quan tornis a traduir altres parts del menú més tard."
+        },
+        {
+          "title": "Publica el Teu Menú Multilingüe",
+          "description": "Els convidats veuen un commutador d'idioma al teu menú i poden navegar en el seu idioma preferit. Cada idioma es pot activar o desactivar de manera independent des del teu tauler de control."
+        }
+      ]
+    }
+  },
+  "mobileManagementPage": {
+    "seo": {
+      "title": "Gestiona el menú del restaurant des del mòbil — Panell mòbil | IQ Rest",
+      "description": "Gestiona el menú QR del teu restaurant completament des del mòbil. Afegeix plats, actualitza preus, puja fotos, consulta analítiques — sense ordinador."
+    },
+    "hero": {
+      "badge": "Panell mòbil",
+      "title": "Gestiona tot el menú del teu restaurant des del mòbil",
+      "subtitle": "Afegeix plats, canvia preus, puja fotos, consulta comandes — tot des del teu smartphone. El panell està dissenyat primer per a mòbil, així que mai necessites un ordinador.",
+      "cta": "Crea el teu menú",
+      "ctaDemo": "Veure demo",
+      "noCreditCard": "No cal targeta de crèdit. Pla gratuït disponible."
+    },
+    "features": {
+      "title": "Com funciona la gestió mòbil",
+      "subtitle": "El panell del teu restaurant, sempre a la butxaca.",
+      "items": [
+        {
+          "title": "Panell complet al teu smartphone",
+          "description": "Totes les funcions funcionen perfectament a la pantalla del mòbil — afegir elements, editar categories, gestionar comandes, consultar analítiques. La interfície està dissenyada per al tacte, no simplement reduïda des de l'escriptori."
+        },
+        {
+          "title": "Puja fotos directament des de la càmera",
+          "description": "Fes una foto d'un plat nou i puja-la al menú en segons. Les imatges s'optimitzen automàticament. Actualitza l'oferta del dia des de la cuina mateixa."
+        }
+      ]
+    },
+    "faq": {
+      "title": "Preguntes freqüents",
+      "subtitle": "Tot el que necessites saber sobre la gestió mòbil del menú.",
+      "items": [
+        {
+          "question": "He d'instal·lar una aplicació?",
+          "answer": "No. El panell funciona al navegador web del teu mòbil — Safari, Chrome o qualsevol altre. Només cal iniciar sessió i començar a gestionar el menú."
+        },
+        {
+          "question": "Puc fer des del mòbil tot el que faig des d'un ordinador?",
+          "answer": "Sí. Totes les funcions estan disponibles al mòbil — afegir elements, pujar fotos, gestionar categories, consultar analítiques, gestionar comandes i reserves."
+        },
+        {
+          "question": "Funciona també en tauletes?",
+          "answer": "Sí. El panell s'adapta a qualsevol mida de pantalla — mòbils, tauletes i ordinadors d'escriptori. Utilitza el dispositiu que et resulti més còmode."
+        },
+        {
+          "question": "Poden gestionar el menú diverses persones?",
+          "answer": "Actualment, un compte gestiona el restaurant. Pots iniciar sessió des de diversos dispositius simultàniament — mòbil, tauleta o ordinador."
+        }
+      ]
+    },
+    "howItWorks": {
+      "title": "Com Funciona",
+      "subtitle": "Gestiona el teu restaurant des de qualsevol dispositiu en quatre passos.",
+      "steps": [
+        {
+          "title": "Obre el Tauler al Teu Telèfon",
+          "description": "Vés a iq-rest.com i inicia sessió des del navegador del teu telèfon. El tauler s'adapta automàticament a la mida de la teva pantalla — no cal descarregar ni instal·lar cap aplicació."
+        },
+        {
+          "title": "Edita el Menú Des de Qualsevol Lloc",
+          "description": "Afegeix nous articles, actualitza preus, canvia descripcions i puja fotos directament des de la càmera del teu telèfon. Cada funció disponible a l'escriptori funciona igual de bé en mòbil."
+        },
+        {
+          "title": "Comprova Comandes i Reserves",
+          "description": "Veu les comandes entrants, gestiona les reserves de taules i respon a missatges de suport — tot des del teu telèfon. Mantingues el control del teu restaurant fins i tot quan estàs lluny."
+        },
+        {
+          "title": "Els Canvis Es Fan Efectius Instantàniament",
+          "description": "Cada edició que facis des del teu telèfon apareix al teu menú QR en temps real. No cal sincronitzar, publicar ni esperar — els teus convidats sempre veuen l'última versió."
+        }
+      ]
+    }
+  },
+  "customDesignPage": {
+    "seo": {
+      "title": "Web de restaurant amb vídeo i foto de fons — Creador de webs | IQ Rest",
+      "description": "Crea un web de restaurant impressionant amb vídeo o foto de fons personalitzats. Puja el vídeo de l'ambient o fotografies gastronòmiques — impressiona els clients des del primer escaneig."
+    },
+    "hero": {
+      "badge": "Disseny web",
+      "title": "Crea un web de restaurant impressionant amb fons de vídeo",
+      "subtitle": "Puja un vídeo de l'ambient del teu restaurant o una foto gastronòmica com a fons. Els clients veuran una experiència professional i de marca en el moment d'escanejar el codi QR.",
+      "cta": "Crea el teu menú",
+      "ctaDemo": "Veure demo",
+      "noCreditCard": "No cal targeta de crèdit. Pla gratuït disponible."
+    },
+    "features": {
+      "title": "Com funcionen els fons personalitzats",
+      "subtitle": "Causa una primera impressió duradora amb visuals que representen la teva marca.",
+      "items": [
+        {
+          "title": "Puja fons de vídeo o foto",
+          "description": "Afegeix un vídeo en bucle de l'ambient del restaurant, un time-lapse de la cuina o una foto gastronòmica d'alta qualitat. El fons apareix a la pàgina principal — creant una experiència immersiva per als clients."
+        },
+        {
+          "title": "Optimitzat per a la velocitat en qualsevol dispositiu",
+          "description": "Els vídeos i les imatges es comprimeixen i carreguen progressivament de manera automàtica. El teu web es manté ràpid fins i tot amb connexions mòbils lentes — sense buffering, sense retards, només una experiència fluida."
+        }
+      ]
+    },
+    "faq": {
+      "title": "Preguntes freqüents",
+      "subtitle": "Tot el que necessites saber sobre el disseny web de restaurants.",
+      "items": [
+        {
+          "question": "Quins formats de vídeo s'admeten?",
+          "answer": "Els formats MP4 i WebM funcionen millor. Els vídeos es comprimeixen automàticament per a una càrrega ràpida. Mantingues els vídeos per sota de 30 segons per a la millor experiència mòbil."
+        },
+        {
+          "question": "El fons de vídeo alentirà el meu web?",
+          "answer": "No. Els vídeos es comprimeixen, es carreguen progressivament i s'optimitzen automàticament. En connexions lentes, el sistema canvia a una imatge estàtica per mantenir l'experiència fluida."
+        },
+        {
+          "question": "Puc utilitzar una foto en lloc de vídeo?",
+          "answer": "Sí. Puja qualsevol foto — s'optimitzarà i es mostrarà com a fons a pantalla completa. Pots alternar entre vídeo i foto en qualsevol moment."
+        },
+        {
+          "question": "Necessito un dissenyador per configurar-ho?",
+          "answer": "No. Només cal pujar el vídeo o la foto des del panell. El sistema gestiona les dimensions, la compressió i la disposició automàticament. El teu web tindrà un aspecte professional sense necessitat de cap habilitat de disseny."
+        }
+      ]
+    },
+    "howItWorks": {
+      "title": "Com Funciona",
+      "subtitle": "Personalitza la identitat visual del teu restaurant en quatre passos.",
+      "steps": [
+        {
+          "title": "Obre la Configuració de Disseny",
+          "description": "Navega a la pàgina de Disseny al teu tauler de control. Aquí pots controlar l'aparença visual del teu restaurant: fons, color d'accent i disseny de la pàgina d'inici."
+        },
+        {
+          "title": "Puja un Fons",
+          "description": "Tria un vídeo (MP4, WebM) o una foto per al fons de la pàgina d'inici del teu restaurant. Els vídeos es reprodueixen automàticament, creant una impressió inicial immersiva per a cada visitant."
+        },
+        {
+          "title": "Generació de Fons amb IA",
+          "description": "No tens un vídeo o una foto preparats? Deixa que la IA creï automàticament una imatge de fons a partir dels teus articles del menú. Genera una imatge professional que s'adapta a l'estil del teu restaurant."
+        },
+        {
+          "title": "Previsualitza i Desa",
+          "description": "Veu els teus canvis en temps real abans de desar. Els vídeos es comprimeixen automàticament i es carreguen de manera lazy, assegurant un rendiment ràpid en dispositius mòbils sense sacrificar la qualitat visual."
+        }
+      ]
+    }
+  },
+  "multilingualPage": {
+    "seo": {
+      "title": "Web de restaurant multilingüe — Menú en 25+ idiomes | IQ Rest",
+      "description": "El web del teu restaurant i el menú QR en 25+ idiomes. Els clients canvien d'idioma amb un toc — menú, contactes i reserves s'adapten a l'instant."
+    },
+    "hero": {
+      "badge": "Multilingüe",
+      "title": "El web del teu restaurant en 25+ idiomes",
+      "subtitle": "Turistes i clients internacionals veuen el teu menú en el seu propi idioma. Un toc per canviar — tot s'adapta a l'instant: plats, descripcions, contactes, navegació.",
+      "cta": "Crea el teu menú",
+      "ctaDemo": "Veure demo",
+      "noCreditCard": "No cal targeta de crèdit. Pla gratuït disponible."
+    },
+    "features": {
+      "title": "Com funciona el suport multilingüe",
+      "subtitle": "Parla l'idioma dels teus clients sense cap esforç addicional.",
+      "items": [
+        {
+          "title": "Els clients trien el seu idioma",
+          "description": "Un selector d'idioma apareix al teu menú. Els clients toquen l'idioma preferit i tot el web — menú, descripcions, informació de contacte, navegació — canvia a l'instant. Sense necessitat de recarregar la pàgina."
+        },
+        {
+          "title": "Afegeix idiomes des del teu panell",
+          "description": "Activa nous idiomes amb un sol clic. Utilitza la traducció IA per omplir el contingut o introdueix les traduccions manualment. Cada idioma es pot activar o desactivar de manera independent."
+        }
+      ]
+    },
+    "faq": {
+      "title": "Preguntes freqüents",
+      "subtitle": "Tot el que necessites saber sobre els menús multilingües.",
+      "items": [
+        {
+          "question": "Quants idiomes puc afegir al meu menú?",
+          "answer": "Fins a 25+ idiomes incloent tots els principals idiomes europeus, xinès, japonès, coreà, àrab, persa i més. Afegeix tants com els teus clients necessiten."
+        },
+        {
+          "question": "He de traduir-ho tot manualment?",
+          "answer": "No. Utilitza la traducció IA integrada per traduir tot el menú amb un sol clic. També pots editar qualsevol traducció manualment per tenir control total."
+        },
+        {
+          "question": "Es guarda la preferència d'idioma?",
+          "answer": "Sí. Quan un client selecciona un idioma, es recorda per a la seva pròxima visita. No caldrà que torni a triar quan torni."
+        },
+        {
+          "question": "El suport multilingüe està disponible al pla gratuït?",
+          "answer": "El pla gratuït inclou fins a 2 idiomes. Els plans Growth i Pro ofereixen idiomes il·limitats amb traducció IA inclosa."
+        }
+      ]
+    },
+    "howItWorks": {
+      "title": "Com Funciona",
+      "subtitle": "Fes que el teu menú estigui disponible en múltiples idiomes en quatre passos.",
+      "steps": [
+        {
+          "title": "Vés a Configuració d'Idiomes",
+          "description": "Obre la pàgina d'Idiomes al teu tauler de control. Veureu tots els idiomes disponibles i quins són actualment actius al vostre menú."
+        },
+        {
+          "title": "Afegeix Idiomes",
+          "description": "Selecciona entre 35 idiomes disponibles. El pla gratuït inclou fins a 2 idiomes, mentre que els plans Growth i Pro ofereixen idiomes il·limitats per al teu menú."
+        },
+        {
+          "title": "Traduïu el vostre Contingut",
+          "description": "Utilitza la traducció AI amb un clic per traduir tot el teu menú instantàniament, o introdueix les traduccions manualment per tenir un control total. També pots combinar ambdues aproximacions."
+        },
+        {
+          "title": "Els Clients Canvien d'Idioma",
+          "description": "Un selector d'idioma apareix a la pàgina del teu menú. Quan els clients escullen el seu idioma, tot el menú canvia instantàniament. La seva preferència es guarda per a futures visites."
+        }
+      ]
+    }
+  },
+  "instantSetupPage": {
+    "seo": {
+      "title": "Generador gratuït de web per a restaurants — Crea en 5 minuts | IQ Rest",
+      "description": "Obtingues un web professional per al teu restaurant amb menú QR, pàgina de contacte i mapa — només cal el teu correu. Llest en 5 minuts, sense coneixements tècnics."
+    },
+    "hero": {
+      "badge": "Web gratuït",
+      "title": "Obtingues un web professional per al teu restaurant en 5 minuts",
+      "subtitle": "Introdueix el teu correu, posa nom al restaurant i obtindràs a l'instant un web complet amb menú QR, pàgina de contacte amb mapa i disseny responsiu modern. Sense programació, sense dissenyadors.",
+      "cta": "Crea el teu menú",
+      "ctaDemo": "Veure demo",
+      "noCreditCard": "No cal targeta de crèdit. Pla gratuït disponible."
+    },
+    "features": {
+      "title": "Com funciona",
+      "subtitle": "De zero a un web de restaurant en viu en tres passos.",
+      "items": [
+        {
+          "title": "Registra't només amb el correu electrònic",
+          "description": "Sense formularis de registre complicats. Introdueix el teu correu, verifica amb un codi i el panell del teu restaurant està llest. Posa nom al restaurant i el web es publica immediatament."
+        },
+        {
+          "title": "Tot inclòs des del primer moment",
+          "description": "El teu web inclou menú QR, pàgina de contacte amb Google Maps, suport d'idiomes, disseny responsiu per a mòbils i la teva pròpia URL única. Només afegeix els plats i comença a compartir."
+        }
+      ]
+    },
+    "faq": {
+      "title": "Preguntes freqüents",
+      "subtitle": "Tot el que necessites saber sobre la creació del web del teu restaurant.",
+      "items": [
+        {
+          "question": "Com creo un web gratuït per al meu restaurant?",
+          "answer": "Introdueix el teu correu a IQ Rest, verifica amb un codi, posa nom al restaurant — fet. El teu web amb menú QR és en línia en menys de 5 minuts. Sense targeta de crèdit."
+        },
+        {
+          "question": "Necessito coneixements tècnics?",
+          "answer": "No. Tot està dissenyat per a propietaris de restaurants, no per a desenvolupadors. Afegeix plats, puja fotos i gestiona el teu web completament des del mòbil."
+        },
+        {
+          "question": "Què inclou el pla gratuït?",
+          "answer": "Un web de restaurant complet, menú QR, pàgina de contacte amb mapa, analítiques, esquema de colors personalitzat i fins a 2 idiomes. Sense període de prova — és gratuït per sempre."
+        },
+        {
+          "question": "Puc utilitzar el meu propi nom de domini?",
+          "answer": "Amb els plans gratuït i Growth, el teu web s'allotja a iq-rest.com/m/el-teu-nom. El pla Pro admet noms de domini personalitzats per a un control total de la marca."
+        }
+      ]
+    },
+    "howItWorks": {
+      "title": "Com Funciona",
+      "subtitle": "De zero a un lloc web de restaurant en viu en quatre passos.",
+      "steps": [
+        {
+          "title": "Introdueix el Teu Correu Electrònic",
+          "description": "No es necessita contrasenya. Només escriu la teva adreça de correu electrònic i fes clic a Continuar. No hi ha formularis de registre llargs, no es requereix targeta de crèdit i no hi ha compromisos."
+        },
+        {
+          "title": "Verifica amb un Codi",
+          "description": "Comprova la teva safata d'entrada per un codi de verificació de 4 dígits. Introdueix-lo per iniciar sessió de manera segura. Aquest enfocament sense contrasenya significa una cosa menys a recordar."
+        },
+        {
+          "title": "Dóna Nom al Teu Restaurant",
+          "description": "Dóna un nom al teu restaurant. Es convertirà en la teva URL del lloc web i el títol del menú. Sempre pots canviar-lo més tard des de la configuració del teu tauler de control."
+        },
+        {
+          "title": "El Teu Lloc Web Està Lliure",
+          "description": "Un lloc web de restaurant complet amb menú QR, pàgina de contacte amb mapa i disseny adaptable està en línia instantàniament a iq-rest.com/m/your-name. Afegeix els teus plats i comença a compartir."
+        }
+      ]
+    }
+  },
+  "analyticsPage": {
+    "seo": {
+      "title": "Analítica de Restaurant i Estadístiques del Menú QR — Feu Seguiment dels Visitants | IQ Rest",
+      "description": "Feu seguiment dels escaneigs del menú QR, visualitzacions de pàgines, idiomes populars i tendències de visitants. Tauler d'analítica en temps real per al lloc web del vostre restaurant."
+    },
+    "hero": {
+      "badge": "Analítica",
+      "title": "Veieu Exactament Com els Clients Utilitzen el Vostre Menú QR",
+      "subtitle": "Feu seguiment dels escaneigs diaris, visualitzacions de pàgines, idiomes populars, estadístiques de dispositius i tendències al llarg del temps. Preneu decisions basades en dades per optimitzar el vostre menú i fer créixer el vostre negoci.",
+      "cta": "Creeu el Vostre Menú",
+      "ctaDemo": "Veure Demo",
+      "noCreditCard": "No cal targeta de crèdit. Pla gratuït disponible."
+    },
+    "features": {
+      "title": "Què Podeu Fer Seguiment",
+      "subtitle": "Informació en temps real sobre la presència en línia del vostre restaurant.",
+      "items": [
+        {
+          "title": "Visualitzacions Diàries, Escaneigs i Tendències de Visitants",
+          "description": "Veieu quantes persones escanegen el vostre codi QR i visiten el vostre menú cada dia, setmana i mes. Feu seguiment de les tendències al llarg del temps per entendre els patrons estacionals i mesurar l'impacte de les promocions."
+        },
+        {
+          "title": "Desglossament per Idioma i Dispositiu",
+          "description": "Sabeu quins idiomes prefereixen els vostres clients i quins dispositius utilitzen. Aquestes dades us ajuden a prioritzar les traduccions i assegurar-vos que el vostre menú es veu perfecte als dispositius més populars."
+        }
+      ]
+    },
+    "faq": {
+      "title": "Preguntes Freqüents",
+      "subtitle": "Tot el que necessiteu saber sobre l'analítica de restaurants.",
+      "items": [
+        {
+          "question": "Quines mètriques puc fer seguiment?",
+          "answer": "Visualitzacions de pàgines diàries, setmanals i mensuals. Visitants únics. Pàgines més visualitzades. Preferències d'idioma. Desglossament per dispositius i navegadors. Tot actualitzat en temps real."
+        },
+        {
+          "question": "L'analítica està inclosa al pla gratuït?",
+          "answer": "Sí. L'analítica bàsica està disponible a tots els plans, inclòs el gratuït. Podeu veure visualitzacions, visitants i estadístiques d'idiomes des del primer dia."
+        },
+        {
+          "question": "Puc veure quines pàgines són més populars?",
+          "answer": "Sí. El tauler mostra les visualitzacions desglossades per pàgina — inici, menú, contactes, reserves i selecció d'idioma. Veieu exactament on els clients passen el seu temps."
+        },
+        {
+          "question": "Fins quan enrere arriben les dades?",
+          "answer": "Les dades d'analítica s'emmagatzemen des del dia que creeu el vostre restaurant. Podeu veure tendències diàries, setmanals i mensuals per a tot el vostre historial."
+        }
+      ]
+    },
+    "howItWorks": {
+      "title": "Com Funciona",
+      "subtitle": "Comença a fer un seguiment del rendiment del teu restaurant en quatre passos.",
+      "steps": [
+        {
+          "title": "Crea el Teu Restaurant",
+          "description": "L'analítica comença a fer seguiment des del moment en què el teu menú es fa públic. No hi ha res a configurar: cada visualització de pàgina, escaneig de QR i visitant es registra automàticament."
+        },
+        {
+          "title": "Comparteix el Teu Codi QR",
+          "description": "Imprimeix el teu codi QR i col·loca'l a les taules, a l'entrada o en l'embalatge per emportar. Cada escaneig es registra amb la data i hora, idioma, dispositiu i pàgina visitada."
+        },
+        {
+          "title": "Obre el Tauler d'Analítica",
+          "description": "Veu estadístiques diàries, setmanals i mensuals amb gràfics clars. Fes un seguiment de les visualitzacions totals, visitants únics i tendències al llarg del temps des d'una sola pantalla del tauler."
+        },
+        {
+          "title": "Explora Desglossaments Detallats",
+          "description": "Veu les estadístiques desglossades per pàgina (menú, contactes, reserves), idioma preferit, tipus de dispositiu i navegador. Utilitza aquestes dades per optimitzar el teu menú i prioritzar traduccions."
+        }
+      ]
+    }
+  },
+  "aiImagesPage": {
+    "seo": {
+      "title": "Generació de Fotografies de Menjar amb IA per a Menús — Imatges de Menú de Restaurant | IQ Rest",
+      "description": "Genereu fotografies de menjar precioses per al vostre menú amb IA. Sense fotògraf — obteniu imatges professionals de plats en segons, optimitzades per al vostre menú QR."
+    },
+    "hero": {
+      "badge": "Imatges IA",
+      "title": "Fotografies Professionals de Menú Sense Fotògraf",
+      "subtitle": "Genereu imatges impressionants dels vostres plats amb IA. Introduïu el nom del plat i obteniu una fotografia bonica i optimitzada preparada per al vostre menú QR — en segons.",
+      "cta": "Creeu el Vostre Menú",
+      "ctaDemo": "Veure Demo",
+      "noCreditCard": "No cal targeta de crèdit. Pla gratuït disponible."
+    },
+    "features": {
+      "title": "Com Funciona la Generació d'Imatges amb IA",
+      "subtitle": "Del nom del plat a la fotografia professional amb un sol clic.",
+      "items": [
+        {
+          "title": "Genereu Imatges a partir de Noms de Plats",
+          "description": "Escriviu el nom del plat — 'Salmó a la Graella amb Llimona', 'Pizza Margherita', 'Pastís de Lava de Xocolata' — i la IA genera una fotografia professional de menjar. Trieu entre diversos estils i fons."
+        },
+        {
+          "title": "Optimitzades per a una Càrrega Ràpida",
+          "description": "Cada imatge generada es comprimeix automàticament i es converteix a formats moderns. El vostre menú es manté ultraràpid en qualsevol dispositiu, fins i tot amb fotografies a cada plat."
+        }
+      ]
+    },
+    "faq": {
+      "title": "Preguntes Freqüents",
+      "subtitle": "Tot el que necessiteu saber sobre les imatges de menú amb IA.",
+      "items": [
+        {
+          "question": "Com genero una fotografia de menjar?",
+          "answer": "Obriu qualsevol element del menú al tauler, toqueu 'Generar Imatge' i la IA crea una fotografia professional de menjar basada en el nom i la descripció del plat. Trieu la que us agradi."
+        },
+        {
+          "question": "Puc fer servir les meves pròpies fotografies?",
+          "answer": "Per descomptat. Pugeu les vostres pròpies fotografies des del telèfon o l'ordinador. La generació amb IA és opcional — feu-la servir quan no tingueu una fotografia preparada."
+        },
+        {
+          "question": "Quantes imatges puc generar?",
+          "answer": "Els límits de generació d'imatges depenen del vostre pla. Growth inclou una quota mensual i Pro ofereix un límit més alt. Sempre podeu pujar les vostres pròpies fotografies sense límits."
+        },
+        {
+          "question": "Les imatges generades són úniques per al meu restaurant?",
+          "answer": "Sí. Cada imatge es genera de manera única per al vostre plat específic. Sense fotografies d'estoc — cada imatge es crea de nou basant-se en l'element del vostre menú."
+        }
+      ]
+    },
+    "howItWorks": {
+      "title": "Com Funciona",
+      "subtitle": "Obteniu fotos professionals de menjar per al vostre menú en quatre passos senzills.",
+      "steps": [
+        {
+          "title": "Obriu qualsevol element del menú",
+          "description": "Navegueu fins a l'element per al qual voleu una foto al vostre tauler de control. Podeu generar imatges per a nous plats o substituir fotos existents de qualsevol element del menú."
+        },
+        {
+          "title": "Feu clic a Generar Imatge",
+          "description": "La IA crea una foto professional de menjar basada en el nom i la descripció del plat. Com més detalls proporcioneu a la descripció, més precisa serà la imatge."
+        },
+        {
+          "title": "Revisar el resultat",
+          "description": "Previsualitzeu la imatge generada abans d'aplicar-la. Si voleu un aspecte diferent, regenereu per obtenir una nova variació. Cada generació produeix una imatge única."
+        },
+        {
+          "title": "Utilitzeu al vostre menú",
+          "description": "La imatge es optimitza automàticament, es comprimeix en format WebP i apareix al vostre menú en directe immediatament. Els convidats veuen fotos professionals de menjar en cada plat."
+        }
+      ]
+    }
+  },
+  "personalSupportPage": {
+    "seo": {
+      "title": "Suport Personal per al Lloc Web del Teu Restaurant — Ajuda Humana Real | IQ Rest",
+      "description": "Obtén ajuda personal de persones reals, no de chatbots. Assistència en la configuració, consells d'optimització del menú i respostes ràpides — disponible a tots els plans, inclòs el gratuït."
+    },
+    "hero": {
+      "badge": "Suport Personal",
+      "title": "Persones reals, ajuda real — No chatbots",
+      "subtitle": "Tens una pregunta? Necessites ajuda per configurar el teu menú? Vols suggerir una funcionalitat? Escriu-nos directament i obtén una resposta personal d'algú que entén els restaurants.",
+      "cta": "Crea el teu menú",
+      "ctaDemo": "Veure demo",
+      "noCreditCard": "No cal targeta de crèdit. Pla gratuït disponible."
+    },
+    "features": {
+      "title": "Com funciona el suport",
+      "subtitle": "Ajuda quan la necessites, de persones que s'hi preocupen.",
+      "items": [
+        {
+          "title": "Escriu-nos directament des del teu tauler de control",
+          "description": "Obre el xat de suport al teu tauler de control i descriu la teva pregunta. Una persona real llegeix el teu missatge i respon — normalment en unes quantes hores en dies laborables."
+        },
+        {
+          "title": "Ajuda amb la configuració, l'optimització i molt més",
+          "description": "Tant si necessites ajuda per afegir el teu primer plat, consells sobre l'organització del menú, o vols suggerir una nova funcionalitat — som aquí. Cada pregunta compta, per petita que sigui."
+        }
+      ]
+    },
+    "faq": {
+      "title": "Preguntes Freqüents",
+      "subtitle": "Tot el que necessites saber sobre el nostre suport.",
+      "items": [
+        {
+          "question": "El suport està disponible al pla gratuït?",
+          "answer": "Sí. El suport personal està disponible per a tots els plans, inclòs el gratuït. Creiem que cada restaurant mereix ajuda real, independentment de la seva subscripció."
+        },
+        {
+          "question": "Quant de ràpid responeu?",
+          "answer": "Normalment en unes quantes hores en dies laborables. Llegim cada missatge personalment i intentem resoldre la teva pregunta en una sola resposta."
+        },
+        {
+          "question": "Podeu ajudar-me a configurar el meu menú?",
+          "answer": "Per descomptat. Si necessites ajuda per afegir plats, organitzar categories, configurar traduccions o establir reserves — només pregunta. Estarem encantats de guiar-te pas a pas."
+        },
+        {
+          "question": "Puc suggerir noves funcionalitats?",
+          "answer": "Sí, i ens encanta! Moltes de les nostres funcionalitats van començar com a suggeriments d'usuaris. Envia'ns la teva idea i la considerarem per a futures actualitzacions."
+        }
+      ]
+    },
+    "howItWorks": {
+      "title": "Com Funciona",
+      "subtitle": "Obten ajuda d'una persona real en quatre passos senzills.",
+      "steps": [
+        {
+          "title": "Obre el Xat d'Assistència",
+          "description": "Vés a la pàgina d'Assistència al teu tauler de control. Veuràs una interfície de xat senzilla on pots escriure el teu missatge directament — sense formularis de tiquet ni categories a triar."
+        },
+        {
+          "title": "Descriu la Teva Pregunta",
+          "description": "Escriu el teu missatge. Pregunta sobre la configuració, les funcions, l'optimització del menú, la facturació o qualsevol altra cosa. No hi ha preguntes estúpides — estem encantats d'ajudar amb tot."
+        },
+        {
+          "title": "Obté una Resposta Personalitzada",
+          "description": "Una persona real (no un chatbot) llegeix el teu missatge i respon en hores. Entenem els fluxos de treball dels restaurants i donem respostes pràctiques i aplicables."
+        },
+        {
+          "title": "Ajuda Continuada",
+          "description": "Demana suggeriments de funcions, obtén consells per a l'optimització del menú o demana ajuda per a la configuració en qualsevol moment. El teu historial de converses es guarda, així que sempre tenim context de preguntes anteriors."
+        }
+      ]
+    }
   }
 }

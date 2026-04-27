@@ -2515,5 +2515,895 @@
     },
     "back": "Back",
     "continue": "Lean ar aghaidh"
+  },
+  "onlineOrders": {
+    "seo": {
+      "title": "Orduithe Ar Líne do Bhialanna — Roghchlár QR | IQ Rest",
+      "description": "Lig do chustaiméirí orduithe a chur isteach go díreach ó do roghchlár QR. Gan coimisiúin, praghsanna fíor-ama agus bainistíocht orduithe láithreach ar do phainéal rialaithe."
+    },
+    "hero": {
+      "badge": "Orduithe Ar Líne",
+      "title": "Athraigh do Roghchlár QR ina Chóras Ordaithe Ar Líne",
+      "subtitle": "Scannaíonn custaiméirí, brabhsáileann siad an roghchlár agus cuireann siad a n-ordú isteach i soicindí. Gan aipeanna a íoslódáil, gan coimisiúin, gan castacht.",
+      "cta": "Cruthaigh do Roghchlár",
+      "ctaDemo": "Féach ar an taispeántas",
+      "noCreditCard": "Níl cárta creidmheasa ag teastáil. Plean saor in aisce ar fáil."
+    },
+    "benefits": {
+      "title": "Cén fáth a roghnaíonn bialanna orduithe trí roghchlár QR",
+      "subtitle": "Cainéal ordaithe díreach a choimeádann rudaí simplí duit féin agus do d'aíonna.",
+      "items": [
+        {
+          "title": "Gan aip ag teastáil",
+          "description": "Ní gá d'aíonna ach an cód QR a scanadh — gan íoslódálacha, gan clárú. Oibríonn sé láithreach in aon bhrabhsálaí fóin."
+        },
+        {
+          "title": "Praghsanna fíor-ama",
+          "description": "Nuashonraigh praghsanna agus infhaighteacht láithreach. Léirítear athruithe ar an bpointe ar do roghchlár QR."
+        },
+        {
+          "title": "Ordú ag an mbord",
+          "description": "Faigheann gach bord a chód QR féin. Scannaíonn aíonna, ordaíonn siad, agus feiceann tú uimhir an bhoird ar do phainéal rialaithe."
+        },
+        {
+          "title": "Dearadh saincheaptha",
+          "description": "Cuir do roghchlár in oiriúint do do bhranda le dathanna, cúlraí agus lógó saincheaptha."
+        }
+      ]
+    },
+    "features": {
+      "title": "Conas a oibríonn ordú ar líne",
+      "subtitle": "Dhá chéim shimplí a nascann do roghchlár le do chistin.",
+      "items": [
+        {
+          "title": "Brabhsáileann aíonna agus roghnaíonn siad miasa",
+          "description": "Scannaíonn custaiméirí do chód QR agus feiceann siad an roghchlár iomlán le grianghraif, cur síos agus praghsanna. Cuireann siad miasa lena n-ordú le tapáil amháin — gan clárú ag teastáil."
+        },
+        {
+          "title": "Feictear orduithe ar do phainéal rialaithe",
+          "description": "Nuair atá aíonna réidh, tapálann siad an cnaipe ordaithe. Feictear an t-ordú láithreach ar do phainéal rialaithe le sonraí na mias, uimhir an bhoird agus nótaí. Glac leis, tosaigh ag ullmhú agus marcáil mar chríochnaithe."
+        }
+      ]
+    },
+    "faq": {
+      "title": "Ceisteanna Coitianta",
+      "subtitle": "Gach rud a theastaíonn uait a fháil amach faoi ordú ar líne.",
+      "items": [
+        {
+          "question": "An bhfuil crua-earraí nó aipeanna breise ag teastáil uaim?",
+          "answer": "Níl. Oibríonn gach rud trí bhrabhsálaí gréasáin. Scannaíonn aíonna an cód QR le ceamara a bhfón agus bainistíonn tú orduithe ó phainéal rialaithe IQ Rest ar aon ghléas."
+        },
+        {
+          "question": "An bhfuil coimisiúin nó táillí in aghaidh an ordaithe ann?",
+          "answer": "Ar chor ar bith. Ní ghearrann IQ Rest coimisiúin riamh ar d'orduithe. Ní íocann tú ach do phlean síntiúis agus fanann an t-ioncam go léir ó orduithe leat féin."
+        },
+        {
+          "question": "An féidir le custaiméirí a n-ordú a shaincheapadh nó nótaí a chur leis?",
+          "answer": "Is féidir. Is féidir le haíonna miasa a roghnú, méideanna a shonrú agus nótaí nó iarratais speisialta a chur leis. Is féidir leat ainm, fón nó seoladh seachadta an chustaiméara a éileamh freisin."
+        },
+        {
+          "question": "An n-oibríonn sé do dhinnéar istigh, beir leat agus seachadadh?",
+          "answer": "Oibríonn. Le haghaidh dinnéar istigh, scannaíonn aíonna an cód QR ag a mbord. Le haghaidh beir leat nó seachadadh, roinn nasc díreach chuig do roghchlár. Is féidir leat réimsí ainm, fón agus seolaidh a chumasú de réir mar is gá."
+        }
+      ]
+    },
+    "howItWorks": {
+      "title": "Conas a Oibríonn sé",
+      "subtitle": "Ó shocrú go dtí go bhfaighidh tú do chéad ordú i cúig céim shimplí.",
+      "steps": [
+        {
+          "title": "Cuir Ordú Ar Líne Ar Siúl",
+          "description": "Cuir ordú ar siúl i do shocruithe Dearaidh. Roghnaigh do mhód is fearr: taispeánann ordú i do dhashboard, seoltar chuig WhatsApp, nó araon ag an am céanna."
+        },
+        {
+          "title": "Configuraigh an Foirm Ordaithe",
+          "description": "Roghnaigh na réimsí a chaithfidh custaiméirí a líonadh nuair a chuirtear ordú. Tá ainm riachtanach i gcónaí, agus is féidir leat uimhir gutháin agus seoladh seachadta a iarraidh go roghnach."
+        },
+        {
+          "title": "Clóigh Códanna QR do Táblaí",
+          "description": "Faigheann gach tábla i do bhialann a chód QR uathúil féin. Nuair a scannaíonn aíonna é, tagann a n-ordú go huathoibríoch le huimhir an tábla ceart ceangailte."
+        },
+        {
+          "title": "Cuireann Custaiméirí Ordú",
+          "description": "Scannaíonn aíonna an cód QR, brabhsáil a gcuid roghchlár le grianghraif agus praghsanna, roghnaigh earraí, cuir nótaí leis, agus seol a n-ordú. Ní gá aon aip a íoslódáil ná cuntas a chruthú."
+        },
+        {
+          "title": "Bain Ordú i do Dhashboard",
+          "description": "Taispeántar ordú go huathoibríoch i do dhashboard. Nuashonraigh stádas gach ordú ó nua go bhfuil sé ar siúl go críochnaithe. Coinníonn tú 100% den ioncam — gan coimisiúin."
+        }
+      ]
+    }
+  },
+  "reservationsPage": {
+    "seo": {
+      "title": "Córas áirithinte bord do bhialanna — Áirithint ar líne | IQ Rest",
+      "description": "Lig d'aíonna bord a chur in áirithe go díreach ó do shuíomh gréasáin. Deimhniú uathoibríoch nó láimhe, fógraí ríomhphoist, agus bainistíocht iomlán féilire — gach rud san áireamh."
+    },
+    "hero": {
+      "badge": "Áirithintí bord",
+      "title": "Glac le háirithintí bord 24/7 ó do shuíomh gréasáin",
+      "subtitle": "Roghnaíonn aíonna dáta, am agus líon na ndaoine — agus cuireann siad in áirithe láithreach. Bainistíonn tú gach rud ó do phainéal rialaithe, gan glaonna gutháin.",
+      "cta": "Cruthaigh do bhiachlár",
+      "ctaDemo": "Féach ar an demo",
+      "noCreditCard": "Níl cárta creidmheasa ag teastáil. Plean saor in aisce ar fáil."
+    },
+    "features": {
+      "title": "Conas a oibríonn áirithintí bord",
+      "subtitle": "Dhá chéim ó iarratas an aoi go háirithint dheimhnithe.",
+      "items": [
+        {
+          "title": "Cuireann aíonna in áirithe ó do shuíomh gréasáin",
+          "description": "Tugann custaiméirí cuairt ar leathanach do bhialainne, brúnn siad 'Cuir bord in áirithe', roghnaíonn siad dáta agus am, cuireann siad a gcuid sonraí isteach agus seolann siad. Níl aip ag teastáil — oibríonn sé in aon bhrabhsálaí ar aon ghléas."
+        },
+        {
+          "title": "Bainistigh áirithintí i do phainéal rialaithe",
+          "description": "Taispeántar gach áirithint i do phainéal rialaithe le hainm an aoi, fón, líon na ndaoine, dáta agus nótaí. Deimhnigh nó diúltaigh le brú amháin. Socraigh deimhniú uathoibríoch nó athbhreithnigh gach áirithint de láimh."
+        }
+      ]
+    },
+    "faq": {
+      "title": "Ceisteanna coitianta",
+      "subtitle": "Gach rud atá le fios agat faoi áirithintí bord.",
+      "items": [
+        {
+          "question": "An gá do chustaiméirí cuntas a chruthú chun áirithint a dhéanamh?",
+          "answer": "Ní gá. Líonann aíonna isteach a n-ainm, uimhir ghutháin, líon na ndaoine agus an t-am is fearr leo. Níl cuntas ná íoslódáil aipe ag teastáil."
+        },
+        {
+          "question": "An féidir liom sliotáin ama agus toilleadh a shocrú?",
+          "answer": "Is féidir. Sainmhínigh d'uaireanta oibre, fad sliotán áirithinte agus toilleadh na mbord. Ní thaispeánann an córas ach na sliotáin atá ar fáil do na haíonna."
+        },
+        {
+          "question": "An bhfaighidh mé fógra nuair a chuireann duine in áirithe?",
+          "answer": "Gheobhaidh. Faigheann tú ríomhphost do gach áirithint nua. Faigheann aíonna ríomhphost deimhnithe freisin nuair a cheadaíonn tú an áirithint."
+        },
+        {
+          "question": "An féidir liom deimhniú uathoibríoch agus láimhe a úsáid?",
+          "answer": "Is féidir. Roghnaigh an mód uathoibríoch chun áirithintí a dheimhniú láithreach bunaithe ar infhaighteacht, nó an mód láimhe chun gach iarratas a athbhreithniú agus a cheadú tú féin."
+        }
+      ]
+    },
+    "howItWorks": {
+      "title": "Conas a Oibríonn sé",
+      "subtitle": "Socraigh áirithintí ar líne agus tús a chur le h-áirithintí i gcuig céim.",
+      "steps": [
+        {
+          "title": "Cuir Áirithintí Ar Siúl",
+          "description": "Cuir áirithintí ar siúl i do shocruithe bialainne. Roghnaigh idir deimhnithe uathoibríocha, áit a ndéantar áirithintí a cheadú go huathoibríoch bunaithe ar infhaighteacht, nó modh láimhe áit a bhreathnaíonn tú ar gach iarratas."
+        },
+        {
+          "title": "Cuir do Táblaí Le Chéile",
+          "description": "Cruthaigh táblaí le faisnéis faoi chumas agus limistéar — mar shampla, 'Tábla 5, 4 aoibhinn, Teach Tábhairne'. Éiríonn gach tábla le h-áirithint, agus cuireann an córas cosc ar dhúbailt áirithintí go huathoibríoch."
+        },
+        {
+          "title": "Socraigh Uaireanta Oibre",
+          "description": "Sainigh do chuid uaireanta atá ar fáil do na h-áirithintí agus roghnaigh an fad ama — ó 15 nóiméad go 8 uair an chloig. Ní thaispeántar ach na slotanna ama laistigh de do chuid uaireanta oibre do na haíonna."
+        },
+        {
+          "title": "Áirithintí Ar Líne ag Aíonna",
+          "description": "Téann custaiméirí chuig do leathanach bialainne, roghnaíonn a dáta, a am, agus méid an ghrúpa, cuireann siad a n-ainm agus a guthán isteach, agus seolann siad. Ní gá cuntas nó íoslódáil aipe — oibríonn sé i ngach brabhsálaí."
+        },
+        {
+          "title": "Bain Sceideal na hÁirithintí i do Dhasboard",
+          "description": "Féach ar gach áirithint i do dhasboard. Deimhnigh, cealaigh, nó marcáil áirithintí mar críochnaithe. Faigheann tú féin agus an t-aoi rabhadh ríomhphoist do gach nuashonrú áirithint."
+        }
+      ]
+    }
+  },
+  "colorSchemePage": {
+    "seo": {
+      "title": "Dearadh saincheaptha roghchlár QR & dathanna branda — Brandáil bialainne | IQ Rest",
+      "description": "Cuir do roghchlár QR in oiriúint do bhranda na bialainne. Roghnaigh dathanna béime agus cruthaigh cuma chomhsheasmhach ar fud do roghchlár digiteach ar fad."
+    },
+    "hero": {
+      "badge": "Dearadh saincheaptha",
+      "title": "Cuir do roghchlár QR ag teacht le branda do bhialainne",
+      "subtitle": "Roghnaigh dath do bhranda, agus nuashonraítear do roghchlár ar fad — cnaipí, buaicphointí, naisc — láithreach.",
+      "cta": "Cruthaigh do bhiachlár",
+      "ctaDemo": "Féach ar an demo",
+      "noCreditCard": "Níl cárta creidmheasa ag teastáil. Plean saor in aisce ar fáil."
+    },
+    "features": {
+      "title": "Conas a oibríonn brandáil shaincheaptha",
+      "subtitle": "Do roghchlár, do dhathanna — comhsheasmhach ar gach leathanach.",
+      "items": [
+        {
+          "title": "Roghnaigh do dhath béime",
+          "description": "Roghnaigh ó 12 réamhshocrú nó cuir isteach dath beacht do bhranda le cód hex. Oiriúnaítear gach cnaipe, nasc agus buaicphointe ar do roghchlár láithreach — ní theastaíonn scileanna deartha."
+        }
+      ]
+    },
+    "faq": {
+      "title": "Ceisteanna coitianta",
+      "subtitle": "Gach rud atá le fios agat faoi shaincheapadh roghchláir.",
+      "items": [
+        {
+          "question": "An féidir liom dath beacht mo bhranda a úsáid?",
+          "answer": "Is féidir. Cuir isteach aon chód datha hex, nó roghnaigh ó 12 réamhshocrú roghnaithe go cúramach. Cuirtear do dhath béime i bhfeidhm ar gach leathanach de do roghchlár."
+        },
+        {
+          "question": "An féidir liom dathanna a athrú tar éis foilsithe?",
+          "answer": "Cinnte. Athraigh do dhath béime am ar bith ó do phainéal rialaithe. Bíonn nuashonruithe le feiceáil láithreach ar do roghchlár beo — ní gá athfhoilsiú."
+        },
+        {
+          "question": "An mbeidh mo chód QR ag teacht le dathanna an bhranda freisin?",
+          "answer": "Gintear do chód QR ar leithligh agus is féidir é a shaincheapadh go neamhspleách. Baineann an dath béime le leathanaigh do roghchláir dhigitigh, nascleanúint agus gnéithe idirghníomhacha."
+        }
+      ]
+    },
+    "howItWorks": {
+      "title": "Conas a Oibríonn sé",
+      "subtitle": "Comhoiriúnigh do mhenu le do bhrandáil i dtrí chéim shimplí.",
+      "steps": [
+        {
+          "title": "Oscail Socruithe Dearaidh",
+          "description": "Téigh chuig leathanach Dearaidh i do dhíseán. Tá an rogha dath accent os comhair agus i lár — feicfidh tú na roghanna ar fad ar fáil láithreach."
+        },
+        {
+          "title": "Roghnaigh Do Dath Branda",
+          "description": "Roghnaigh ó 12 réamhshocraithe dathanna a dearadh le haghaidh léitheachta agus inrochtana, nó cuir isteach do chód hex cruinn le haghaidh comhoiriúnachta foirfe le do bhrand."
+        },
+        {
+          "title": "Réamhamharc Láithreach",
+          "description": "Téann do dhath accent i bhfeidhm ar na cnaipí, na naisc, agus na gcuimhneacháin ar fud an mhéara. Oibríonn sé i dteimpléid éadroma agus dorcha, agus feictear na hathruithe láithreach ar do mhéara beo."
+        }
+      ]
+    }
+  },
+  "easyMenuPage": {
+    "seo": {
+      "title": "Cruthaigh roghchlár QR do do bhialann — Cruthaitheoir roghchláir saor in aisce | IQ Rest",
+      "description": "Tóg roghchlár QR digiteach do bhialainne i nóiméid. Cuir catagóirí, miasa, grianghraif, praghsanna leis — agus roinn cód QR inscanta. Saor in aisce le tosú."
+    },
+    "hero": {
+      "badge": "Cruthaitheoir roghchláir",
+      "title": "Cruthaigh roghchlár QR digiteach do do bhialann i nóiméid",
+      "subtitle": "Cuir do chuid catagóirí agus miasa leis, socraigh praghsanna, uaslódáil grianghraif — tá do roghchlár QR réidh le roinnt. Cuir in eagar am ar bith, bíonn athruithe le feiceáil láithreach.",
+      "cta": "Cruthaigh do bhiachlár",
+      "ctaDemo": "Féach ar an demo",
+      "noCreditCard": "Níl cárta creidmheasa ag teastáil. Plean saor in aisce ar fáil."
+    },
+    "features": {
+      "title": "Conas a oibríonn an t-eagarthóir roghchláir",
+      "subtitle": "Uirlisí simplí a chuireann do roghchlár ar líne go tapa.",
+      "items": [
+        {
+          "title": "Cuir catagóirí agus miasa leis",
+          "description": "Cruthaigh catagóirí mar Tosaitheoirí, Príomhmhiasa, Deochanna — ansin cuir miasa leis le hainmneacha, cur síos, praghsanna agus grianghraif. Tarraing agus scaoil chun athordú. Cas míreanna air nó as gan iad a scriosadh."
+        },
+        {
+          "title": "Bíonn athruithe beo láithreach",
+          "description": "Bíonn gach eagarthóireacht le feiceáil ar do roghchlár QR beo laistigh de shoicindí. Nuashonraigh praghas, cuir speisialtacht laethúil leis, nó folaigh mias atá díolta amach — feiceann do chustaiméirí an leagan is deireanaí i gcónaí."
+        }
+      ]
+    },
+    "faq": {
+      "title": "Ceisteanna coitianta",
+      "subtitle": "Gach rud atá le fios agat faoi do roghchlár QR a chruthú.",
+      "items": [
+        {
+          "question": "Conas a chruthaím roghchlár QR do mo bhialann?",
+          "answer": "Cláraigh le do ríomhphost, ainmnigh do bhialann agus tosaigh ag cur catagóirí agus miasa leis. Gintear do roghchlár QR go huathoibríoch — priontáil an cód QR agus cuir ar do bhoird é."
+        },
+        {
+          "question": "An féidir liom grianghraif a chur le míreanna an roghchláir?",
+          "answer": "Is féidir. Uaslódáil grianghraif go díreach ó do ghuthán nó ríomhaire. Déantar íomhánna a bharrfheabhsú go huathoibríoch le haghaidh luchtú tapa ar aon ghléas."
+        },
+        {
+          "question": "Cé mhéad míre is féidir liom a chur leis?",
+          "answer": "Níl aon teorainn ar chatagóirí ná ar mhíreanna roghchláir. Cuir oiread miasa leis agus atá uait — fanann do roghchlár tapa agus eagraithe."
+        },
+        {
+          "question": "An féidir liom mias atá díolta amach a cheilt go sealadach?",
+          "answer": "Is féidir. Cas aon mhír as le brú amháin. Imíonn sé den roghchlár poiblí ach fanann sé i do phainéal rialaithe — cas ar ais é nuair atá tú réidh."
+        }
+      ]
+    },
+    "howItWorks": {
+      "title": "Conas a Oibríonn sé",
+      "subtitle": "Tóg agus foilsiú do mhenu bialainne i cúig chéim shimplí.",
+      "steps": [
+        {
+          "title": "Cruthaigh Catagóirí",
+          "description": "Cuir catagóirí cosúil le Toirtíní, Príomhchúrsaí, Milseoga, agus Deochanna le chéile chun do mhenu a eagrú. Is féidir leat a lán catagóirí a chruthú de réir mar is gá duit agus iad a athordú le tarraingt agus a thógáil."
+        },
+        {
+          "title": "Cuir Míreanna Mena",
+          "description": "Iontráil ainm an miasa, cur síos, agus praghas do gach mír. Marcáil allrgaí más cuí — feicfidh aíonna íconna allrgaí ar an mhenú go huathoibríoch."
+        },
+        {
+          "title": "Uaslódáil nó Gineadóirí Grianghraif",
+          "description": "Uaslódáil do chuid grianghraf bia ó do guthán nó ríomhaire, nó bain úsáid as AI chun íomhá bia gairmiúil a ghiniúint ó ainm an miasa. Déantar íomhánna a bharrfheabhsú go huathoibríoch."
+        },
+        {
+          "title": "Eagraigh le Tarraingt agus Tógáil",
+          "description": "Athordú catagóirí agus míreanna trí iad a tharraingt isteach san áit. Athraigh aon mhír ar nó as gan í a scriosadh — foirfe do speisialtachtaí laethúla nó do miasa atá díolta amach."
+        },
+        {
+          "title": "Foilsigh Do Mhenú",
+          "description": "Téann na hathruithe i bhfeidhm láithreach ar do mhenu QR beo. Níl aon 'cnaipe foilsithe' ann — téann gach eagarthóireacht beo i ndáiríre. Priontáil do chód QR agus cuir é ar do táblaí."
+        }
+      ]
+    }
+  },
+  "aiTranslationPage": {
+    "seo": {
+      "title": "Aistriúchán AI roghchláir do bhialanna — Aistrigh do roghchlár QR | IQ Rest",
+      "description": "Aistrigh roghchlár do bhialainne go 25+ teanga le clic amháin. Tuigeann an AI comhthéacs cócaireachta — ainmneacha mias, cur síos agus catagóirí aistrithe go cruinn."
+    },
+    "hero": {
+      "badge": "Aistriúchán AI",
+      "title": "Aistrigh do roghchlár go 25+ teanga le clic amháin",
+      "subtitle": "Tuigeann ár AI comhthéacs bia — aistrítear ainmneacha mias, cur síos agus catagóirí go nádúrtha, ní focal ar fhocal. Sroich gach turasóir agus aoi idirnáisiúnta.",
+      "cta": "Cruthaigh do bhiachlár",
+      "ctaDemo": "Féach ar an demo",
+      "noCreditCard": "Níl cárta creidmheasa ag teastáil. Plean saor in aisce ar fáil."
+    },
+    "features": {
+      "title": "Conas a oibríonn aistriúchán AI",
+      "subtitle": "Ó do theanga féin go dtí an domhan i soicindí.",
+      "items": [
+        {
+          "title": "Aistriúchán an roghchláir iomláin le clic amháin",
+          "description": "Roghnaigh sprioctheanga, brúigh aistrigh, agus aistrítear do roghchlár ar fad — catagóirí, ainmneacha mias, cur síos — láithreach. Caomhnaíonn an AI téarmaí cócaireachta agus oiriúnaíonn sé go nádúrtha do gach teanga."
+        },
+        {
+          "title": "Cuir in eagar agus mínchóirigh aon aistriúchán",
+          "description": "Is féidir gach aistriúchán AI a chur in eagar go hiomlán. Athbhreithnigh an toradh, coigeartaigh aon fhoclaíocht, agus sábháil. Caomhnaítear d'athruithe fiú má aistrítear codanna eile den roghchlár níos déanaí."
+        }
+      ]
+    },
+    "faq": {
+      "title": "Ceisteanna coitianta",
+      "subtitle": "Gach rud atá le fios agat faoi aistriúchán roghchláir.",
+      "items": [
+        {
+          "question": "Cé chomh cruinn is atá an t-aistriúchán AI do roghchláir bhia?",
+          "answer": "Tá ár AI optamaithe d'ábhar bialainne. Tuigeann sé nach ceart 'Beef Wellington' nó 'Tiramisu' a aistriú go litriúil, agus oiriúnaíonn sé cur síos le go mbeidh siad nádúrtha i ngach teanga."
+        },
+        {
+          "question": "Cé na teangacha a dtacaítear leo?",
+          "answer": "25+ teanga lena n-áirítear Béarla, Spáinnis, Fraincis, Gearmáinis, Iodáilis, Portaingéilis, Sínis, Seapáinis, Cóiréis, Araibis, Rúisis agus go leor teangacha Eorpacha agus Áiseacha eile."
+        },
+        {
+          "question": "An féidir liom roinnt míreanna amháin a aistriú, ní an roghchlár ar fad?",
+          "answer": "Is féidir. Is féidir leat míreanna aonair, catagóirí iomlána nó an roghchlár ar fad a aistriú ag an am céanna. Tá smacht iomlán agat ar cad a aistrítear."
+        },
+        {
+          "question": "An gcosnaíonn sé breise in aghaidh an aistriúcháin?",
+          "answer": "Tá aistriúchán AI san áireamh i bpleananna Growth agus Pro le teorainneacha flaithiúla míosúla. Gan táillí in aghaidh an fhocail ná in aghaidh na míre — aistrigh oiread agus atá uait."
+        }
+      ]
+    },
+    "howItWorks": {
+      "title": "Conas a Oibríonn sé",
+      "subtitle": "Aistrigh do mhenu iomlán i nóiméid, ní i n-uaireanta.",
+      "steps": [
+        {
+          "title": "Cuir Teangacha le do Mhenú",
+          "description": "Téigh chuig leathanach na dTeangacha i do dhianchláir agus roghnaigh na teangacha a chaithfidh do mhenu a thacaigh. Roghnaigh ó 35 teanga atá ar fáil, lena n-áirítear na teangacha móra Eorpacha, Áiseacha, agus na Meán-Oirthearacha."
+        },
+        {
+          "title": "Cliceáil Aistrigh",
+          "description": "Cliceáil ar an gcnaipe a aistríonn do chatagóirí, ainmneacha earraí, agus tuairiscí go léir ag an am céanna. Déantar an mhenú iomlán a phróiseáil i soicind, beag beann ar an líon earraí atá agat."
+        },
+        {
+          "title": "Tuigeann an tAI Conradh Bia",
+          "description": "Tuigeann an tAI téarmaíocht chulinártha trasna cultúir. Coimeádann sé ainmneacha miasa cosúil le 'Tiramisu' nó 'Pad Thai' agus oireann sé go nádúrtha tuairiscí, liostaí comhábhar, agus ainmneacha catagóire."
+        },
+        {
+          "title": "Athbhreithniú agus Eagarthóireacht",
+          "description": "Tá gach aistriúchán inathraithe go hiomlán. Déan aon athrú ar fhocail chun freastal ar do stíl. Coinnítear do chuid athruithe láimhe fiú nuair a aistríonn tú codanna eile den mhenu níos déanaí."
+        },
+        {
+          "title": "Foilsigh do Mhenú Ilteangach",
+          "description": "Feiceann aíonna comhoiriúnóir teanga ar do mhenu agus is féidir leo brabhsáil i dteanga a rogha. Is féidir gach teanga a chasadh ar nó as go neamhspleách ó do dhianchláir."
+        }
+      ]
+    }
+  },
+  "mobileManagementPage": {
+    "seo": {
+      "title": "Bainistigh roghchlár do bhialainne ó do ghuthán — Painéal soghluaiste | IQ Rest",
+      "description": "Bainistigh roghchlár QR do bhialainne go hiomlán ó do ghuthán. Cuir miasa leis, nuashonraigh praghsanna, uaslódáil grianghraif, seiceáil anailísíocht — gan ríomhaire."
+    },
+    "hero": {
+      "badge": "Painéal soghluaiste",
+      "title": "Bainistigh roghchlár iomlán do bhialainne ó do ghuthán",
+      "subtitle": "Cuir miasa leis, athraigh praghsanna, uaslódáil grianghraif, seiceáil orduithe — gach rud ó do ghuthán cliste. Tá an painéal tógtha le soghluaisteacht ar dtús, mar sin ní bheidh ríomhaire ag teastáil uait riamh.",
+      "cta": "Cruthaigh do bhiachlár",
+      "ctaDemo": "Féach ar an demo",
+      "noCreditCard": "Níl cárta creidmheasa ag teastáil. Plean saor in aisce ar fáil."
+    },
+    "features": {
+      "title": "Conas a oibríonn bainistíocht shoghluaiste",
+      "subtitle": "Painéal do bhialainne, i gcónaí i do phóca.",
+      "items": [
+        {
+          "title": "Painéal iomlán ar do ghuthán cliste",
+          "description": "Oibríonn gach gné go foirfe ar scáileán do ghutháin — míreanna a chur leis, catagóirí a chur in eagar, orduithe a bhainistiú, anailísíocht a sheiceáil. Tá an comhéadan deartha do thadhall, ní díreach athraithe méide ón deasc."
+        },
+        {
+          "title": "Uaslódáil grianghraif go díreach ón gceamara",
+          "description": "Tóg grianghraf de mhias nua agus uaslódáil chuig do roghchlár é i soicindí. Déantar íomhánna a bharrfheabhsú go huathoibríoch. Nuashonraigh do speisialtacht laethúil agus tú i do sheasamh sa chistin."
+        }
+      ]
+    },
+    "faq": {
+      "title": "Ceisteanna coitianta",
+      "subtitle": "Gach rud atá le fios agat faoi bhainistíocht roghchláir ar ghuthán.",
+      "items": [
+        {
+          "question": "An gá dom aip a shuiteáil?",
+          "answer": "Ní gá. Oibríonn an painéal i mbrabhsálaí gréasáin do ghutháin — Safari, Chrome nó aon cheann eile. Logáil isteach agus tosaigh ag bainistiú do roghchláir."
+        },
+        {
+          "question": "An féidir liom gach rud a dhéanamh ó mo ghuthán a dhéanfainn ar ríomhaire?",
+          "answer": "Is féidir. Tá gach gné ar fáil ar ghuthán — míreanna a chur leis, grianghraif a uaslódáil, catagóirí a bhainistiú, anailísíocht a sheiceáil, orduithe agus áirithintí a láimhseáil."
+        },
+        {
+          "question": "An n-oibríonn sé ar tháibléid freisin?",
+          "answer": "Oibríonn. Oiriúnaíonn an painéal d'aon mhéid scáileáin — gutháin, táibléid agus ríomhairí deisce. Úsáid cibé gléas is áisiúla duit."
+        },
+        {
+          "question": "An féidir le daoine iolracha an roghchlár a bhainistiú?",
+          "answer": "Faoi láthair bainistíonn cuntas amháin an bhialann. Is féidir leat logáil isteach ó ghléasanna iolracha ag an am céanna — do ghuthán, táibléad nó ríomhaire."
+        }
+      ]
+    },
+    "howItWorks": {
+      "title": "Conas a Oibríonn sé",
+      "subtitle": "Bainistigh do bialann ó aon ghléas i gceithre chéim.",
+      "steps": [
+        {
+          "title": "Oscail an Painéal ar do gCéad",
+          "description": "Téigh go iq-rest.com agus sínigh isteach ó bhrabhsálaí do gCéad. Oireann an painéal go huathoibríoch do mhéid do scáileáin — níl aon aip le híoslódáil nó a shuiteáil."
+        },
+        {
+          "title": "Cuir Menú in Athbhreithniú áit ar bith",
+          "description": "Cuir earraí nua leis, nuashonraigh praghsanna, athraigh cur síos, agus uaslódáil grianghraif go díreach ó cheamara do gCéad. Oibríonn gach gné atá ar fáil ar an deasc go hiontach ar ghléasanna soghluaiste freisin."
+        },
+        {
+          "title": "Seiceáil Orduithe agus Áirithintí",
+          "description": "Féach ar orduithe atá ag teacht isteach, bainistigh áirithintí tábla, agus freagair teachtaireachtaí tacaíochta — go léir ó do gCéad. Fan ar bharr do bialainne fiú nuair a bhíonn tú i bhfad uait."
+        },
+        {
+          "title": "Téann na hAthruithe i gCónaí i gCónaí",
+          "description": "Taispeánann gach eagarthóireacht a dhéanann tú ó do gCéad ar do QR menu i bhfíor-am. Níl gá le comhoiriúnú, foilsiú, nó fanacht — feiceann do chuairteoirí an leagan is déanaí i gcónaí."
+        }
+      ]
+    }
+  },
+  "customDesignPage": {
+    "seo": {
+      "title": "Suíomh gréasáin bialainne le físeán & grianghraf cúlra — Tógálaí suíomh gréasáin | IQ Rest",
+      "description": "Cruthaigh suíomh gréasáin bialainne den scoth le cúlraí físeáin nó grianghraif saincheaptha. Uaslódáil d'fhíseán atmaisféir nó do ghrianghrafadóireacht bia — déan iontas d'aíonna ón gcéad scanadh."
+    },
+    "hero": {
+      "badge": "Dearadh suímh gréasáin",
+      "title": "Cruthaigh suíomh gréasáin bialainne den scoth le cúlraí físeáin",
+      "subtitle": "Uaslódáil físeán d'atmaisféar bialainne nó grianghraf bia álainn mar chúlra. Feiceann aíonna taithí ghairmiúil, brandáilte an nóiméad a scanann siad do chód QR.",
+      "cta": "Cruthaigh do bhiachlár",
+      "ctaDemo": "Féach ar an demo",
+      "noCreditCard": "Níl cárta creidmheasa ag teastáil. Plean saor in aisce ar fáil."
+    },
+    "features": {
+      "title": "Conas a oibríonn cúlraí saincheaptha",
+      "subtitle": "Déan céad-iarracht bhuan le hamhairc a mheaitseálann do bhranda.",
+      "items": [
+        {
+          "title": "Uaslódáil cúlraí físeáin nó grianghraif",
+          "description": "Cuir físeán lúbtha d'atmaisféar na bialainne, am-lapse de do chistin, nó grianghraf bia ardchaighdeáin leis. Taispeántar an cúlra ar do leathanach baile — ag cruthú taithí tumtha d'aíonna."
+        },
+        {
+          "title": "Optamaithe le haghaidh luais ar aon ghléas",
+          "description": "Déantar físeáin agus íomhánna a chomhbhrú agus a luchtú go huathoibríoch de réir a chéile. Fanann do shuíomh gréasáin tapa fiú ar naisc shoghluaiste mhalla — gan maolánú, gan moilleanna, taithí réidh amháin."
+        }
+      ]
+    },
+    "faq": {
+      "title": "Ceisteanna coitianta",
+      "subtitle": "Gach rud atá le fios agat faoi dhearadh suímh gréasáin bialainne.",
+      "items": [
+        {
+          "question": "Cé na formáidí físeáin a dtacaítear leo?",
+          "answer": "Oibríonn formáidí MP4 agus WebM is fearr. Déantar físeáin a chomhbhrú go huathoibríoch le haghaidh luchtú tapa. Coinnigh físeáin faoi 30 soicind don taithí soghluaiste is fearr."
+        },
+        {
+          "question": "An moilleoidh cúlra físeáin mo shuíomh gréasáin?",
+          "answer": "Ní mhoilleoidh. Déantar físeáin a chomhbhrú, a luchtú de réir a chéile agus a bharrfheabhsú go huathoibríoch. Ar naisc mhalla, athraíonn an córas go híomhá stataiceach chun an taithí a choinneáil réidh."
+        },
+        {
+          "question": "An féidir liom grianghraf a úsáid in ionad físeáin?",
+          "answer": "Is féidir. Uaslódáil aon ghrianghraf — déanfar é a bharrfheabhsú agus a thaispeáint mar chúlra lánscáileáin. Is féidir leat athrú idir físeán agus grianghraf am ar bith."
+        },
+        {
+          "question": "An dteastaíonn dearthóir uaim chun é seo a shocrú?",
+          "answer": "Ní theastaíonn. Uaslódáil do fhíseán nó do ghrianghraf ón bpainéal rialaithe. Láimhseálann an córas méid, comhbhrú agus leagan amach go huathoibríoch. Beidh cuma ghairmiúil ar do shuíomh gréasáin gan aon scileanna deartha."
+        }
+      ]
+    },
+    "howItWorks": {
+      "title": "Conas a Oibríonn sé",
+      "subtitle": "Saincheap do shainmhíniú amhairc bialainne i gceithre chéim.",
+      "steps": [
+        {
+          "title": "Oscail Socruithe Dearaidh",
+          "description": "Téigh chuig an leathanach Dearaidh i do dhíseán. Anseo is féidir leat smacht a fháil ar chuma amhairc do bhialann — cúlra, dath béim, agus leagan amach an leathanach baile."
+        },
+        {
+          "title": "Uaslódáil Cúlra",
+          "description": "Roghnaigh físeán (MP4, WebM) nó grianghraf do chúlra leathanach baile do bhialann. Casann físeáin go huathoibríoch, ag cruthú tuairim chéad imprisean do gach cuairteoir."
+        },
+        {
+          "title": "Giniúint Cúlra AI",
+          "description": "Níl físeán nó grianghraf agat réidh? Lig do AI íomhá cúlra a chruthú go huathoibríoch ó do chuid míreanna gasta. Cruthaíonn sé amhairc ghairmiúil a comhoibríonn le stíl do bhialann."
+        },
+        {
+          "title": "Réamhamharc agus Sábháil",
+          "description": "Féach ar do chuid athruithe i bhfíor-am sula sábhálann tú. Comhoibríonn físeáin go huathoibríoch agus luchtú le moill, ag cinntiú go bhfuil feidhmíocht tapa ar ghléasanna soghluaiste gan cáilíocht amhairc a chailleadh."
+        }
+      ]
+    }
+  },
+  "multilingualPage": {
+    "seo": {
+      "title": "Suíomh gréasáin ilteangach bialainne — Roghchlár i 25+ teanga | IQ Rest",
+      "description": "Suíomh gréasáin do bhialainne agus roghchlár QR i 25+ teanga. Athraíonn aíonna teanga le brú amháin — oiriúnaíonn roghchlár, teagmhálaithe agus áirithintí láithreach."
+    },
+    "hero": {
+      "badge": "Ilteangach",
+      "title": "Suíomh gréasáin do bhialainne i 25+ teanga",
+      "subtitle": "Feiceann turasóirí agus aíonna idirnáisiúnta do roghchlár ina dteanga féin. Brú amháin le hathrú — oiriúnaíonn gach rud láithreach: miasa, cur síos, teagmhálaithe, nascleanúint.",
+      "cta": "Cruthaigh do bhiachlár",
+      "ctaDemo": "Féach ar an demo",
+      "noCreditCard": "Níl cárta creidmheasa ag teastáil. Plean saor in aisce ar fáil."
+    },
+    "features": {
+      "title": "Conas a oibríonn tacaíocht ilteangach",
+      "subtitle": "Labhair teanga do chustaiméara gan aon obair bhreise.",
+      "items": [
+        {
+          "title": "Roghnaíonn aíonna a dteanga féin",
+          "description": "Taispeántar roghnóir teanga ar do roghchlár. Brúnn aíonna ar an teanga is fearr leo, agus athraíonn an suíomh gréasáin ar fad — roghchlár, cur síos, eolas teagmhála, nascleanúint — láithreach. Gan gá an leathanach a athlódáil."
+        },
+        {
+          "title": "Cuir teangacha leis ó do phainéal rialaithe",
+          "description": "Cumasaigh teangacha nua le clic amháin. Úsáid aistriúchán AI chun an t-ábhar a líonadh isteach, nó cuir aistriúcháin isteach de láimh. Is féidir gach teanga a chasadh air nó as go neamhspleách."
+        }
+      ]
+    },
+    "faq": {
+      "title": "Ceisteanna coitianta",
+      "subtitle": "Gach rud atá le fios agat faoi roghchláir ilteangacha.",
+      "items": [
+        {
+          "question": "Cé mhéad teanga is féidir liom a chur le mo roghchlár?",
+          "answer": "Suas le 25+ teanga lena n-áirítear gach mórtheanga Eorpach, Sínis, Seapáinis, Cóiréis, Araibis, Peirsis agus tuilleadh. Cuir oiread leis agus a theastaíonn ó d'aíonna."
+        },
+        {
+          "question": "An gá dom gach rud a aistriú de láimh?",
+          "answer": "Ní gá. Úsáid an t-aistriúchán AI ionsuite chun do roghchlár ar fad a aistriú le clic amháin. Is féidir leat freisin aon aistriúchán a chur in eagar de láimh le haghaidh smachta iomláin."
+        },
+        {
+          "question": "An sábháiltear an rogha teanga?",
+          "answer": "Sábháiltear. Nuair a roghnaíonn aoi teanga, cuimhnítear uirthi dá chéad chuairt eile. Ní gá dóibh roghnú arís nuair a fhilleann siad."
+        },
+        {
+          "question": "An bhfuil tacaíocht ilteangach ar fáil ar an bplean saor in aisce?",
+          "answer": "Áiríonn an plean saor in aisce suas le 2 theanga. Tairgeann pleananna Growth agus Pro teangacha gan teorainn le haistriúchán AI san áireamh."
+        }
+      ]
+    },
+    "howItWorks": {
+      "title": "Conas a Oibríonn sé",
+      "subtitle": "Déanaigh do mhenu ar fáil i mionteangacha i gceithre chéim.",
+      "steps": [
+        {
+          "title": "Téigh chuig Socruithe Teanga",
+          "description": "Oscail leathanach na dTeangacha i do dhianchláir. Feicfidh tú na teangacha ar fad atá ar fáil agus cé na teangacha atá gníomhach ar do mhenu faoi láthair."
+        },
+        {
+          "title": "Cuir Teangacha leis",
+          "description": "Roghnaigh ó 35 teanga atá ar fáil. Cuimsíonn an plean saor in aisce suas le 2 theanga, agus tairgeann pleananna Bunúsach agus Pro teangacha neamhtheoranta do do mhenu."
+        },
+        {
+          "title": "Aistrigh Do Chomhoibrithe",
+          "description": "Úsáid aistriúchán AI le cliceáil amháin chun do mhenu iomlán a aistriú go tobann, nó cuir aistriúcháin isteach go láimhe le haghaidh rialú iomlán. Is féidir leat freisin an dá chur chuige a chomhcheangal."
+        },
+        {
+          "title": "Athraíonn Aoicháirithe Teangacha",
+          "description": "Taispeántar rogha teanga ar do leathanach mhenú. Nuair a roghnaíonn aoicháirithe a dteanga, athraíonn an mhenú iomlán go tobann. Sábhálfar a rogha do chuairteanna ar ais."
+        }
+      ]
+    }
+  },
+  "instantSetupPage": {
+    "seo": {
+      "title": "Gineadóir suímh gréasáin bialainne saor in aisce — Cruthaigh i 5 nóiméad | IQ Rest",
+      "description": "Faigh suíomh gréasáin gairmiúil bialainne le roghchlár QR, leathanach teagmhála agus léarscáil — díreach cuir isteach do ríomhphost. Réidh i 5 nóiméad, gan scileanna teicniúla."
+    },
+    "hero": {
+      "badge": "Suíomh gréasáin saor in aisce",
+      "title": "Faigh suíomh gréasáin gairmiúil bialainne i 5 nóiméad",
+      "subtitle": "Cuir isteach do ríomhphost, ainmnigh do bhialann, agus faigheann tú láithreach suíomh gréasáin iomlán le roghchlár QR, leathanach teagmhála le léarscáil, agus dearadh freagrach nua-aimseartha. Gan códú, gan dearthóirí.",
+      "cta": "Cruthaigh do bhiachlár",
+      "ctaDemo": "Féach ar an demo",
+      "noCreditCard": "Níl cárta creidmheasa ag teastáil. Plean saor in aisce ar fáil."
+    },
+    "features": {
+      "title": "Conas a oibríonn sé",
+      "subtitle": "Ó neamhní go suíomh gréasáin bialainne beo i dtrí chéim.",
+      "items": [
+        {
+          "title": "Cláraigh le do ríomhphost amháin",
+          "description": "Gan fhoirmeacha clárúcháin casta. Cuir isteach do ríomhphost, deimhnigh le cód, agus tá painéal do bhialainne réidh. Ainmnigh do bhialann agus téann do shuíomh gréasáin beo láithreach."
+        },
+        {
+          "title": "Gach rud san áireamh ón tús",
+          "description": "Tagann do shuíomh gréasáin le roghchlár QR, leathanach teagmhála le Google Maps, tacaíocht teanga, dearadh freagrach do ghutháin, agus do URL uathúil féin. Díreach cuir do mhiasa leis agus tosaigh ag roinnt."
+        }
+      ]
+    },
+    "faq": {
+      "title": "Ceisteanna coitianta",
+      "subtitle": "Gach rud atá le fios agat faoi shuíomh gréasáin do bhialainne a chruthú.",
+      "items": [
+        {
+          "question": "Conas a chruthaím suíomh gréasáin bialainne saor in aisce?",
+          "answer": "Cuir isteach do ríomhphost ar IQ Rest, deimhnigh le cód, ainmnigh do bhialann — déanta. Tá do shuíomh gréasáin le roghchlár QR beo i níos lú ná 5 nóiméad. Níl cárta creidmheasa ag teastáil."
+        },
+        {
+          "question": "An dteastaíonn scileanna teicniúla uaim?",
+          "answer": "Ní theastaíonn. Tá gach rud deartha d'úinéirí bialainne, ní d'fhorbróirí. Cuir miasa leis, uaslódáil grianghraif, agus bainistigh do shuíomh go hiomlán ó do ghuthán."
+        },
+        {
+          "question": "Cad atá san áireamh sa phlean saor in aisce?",
+          "answer": "Suíomh gréasáin bialainne iomlán, roghchlár QR, leathanach teagmhála le léarscáil, anailísíocht, scéim dathanna saincheaptha, agus suas le 2 theanga. Gan tréimhse trialach — tá sé saor in aisce go deo."
+        },
+        {
+          "question": "An féidir liom m'ainm fearainn féin a úsáid?",
+          "answer": "Ar na pleananna saor in aisce agus Growth, tá do shuíomh á óstáil ag iq-rest.com/m/d'ainm. Tacaíonn an plean Pro le hainmneacha fearainn saincheaptha le haghaidh smachta iomláin ar an mbranda."
+        }
+      ]
+    },
+    "howItWorks": {
+      "title": "Conas a Oibríonn sé",
+      "subtitle": "Ó nialas go suíomh gréasáin bialainne beo i gceithre chéim.",
+      "steps": [
+        {
+          "title": "Cuir do Ríomhphost isteach",
+          "description": "Níl pasfhocal ag teastáil. Scríobh do sheoladh ríomhphoist agus cliceáil ar Lean ar aghaidh. Níl foirmeacha clárúcháin fada, níl cárta creidmheasa ag teastáil, agus níl aon gheallúintí."
+        },
+        {
+          "title": "Deimhnigh le Cód",
+          "description": "Seiceáil do bhosca isteach le haghaidh cód deimhniúcháin 4 dhigit. Cuir isteach é chun logáil isteach go sábháilte. Ciallaíonn an cur chuige gan phasfhocal go bhfuil rud amháin níos lú le cuimhneamh."
+        },
+        {
+          "title": "Ainmnigh do Bialann",
+          "description": "Tabhair ainm do do bialann. Éiríonn sé mar do URL suíomh gréasáin agus teideal an mhéara. Is féidir leat é a athrú níos déanaí ó do shocruithe painéil ghréasáin."
+        },
+        {
+          "title": "Tá do Shuíomh Gréasáin Réidh",
+          "description": "Tá suíomh gréasáin bialainne iomlán le méara QR, leathanach teagmhála le mapa, agus dearadh freagartha beo láithreach ag iq-rest.com/m/do-ainm. Cuir do mhiasa leis agus tús a chur le roinnt."
+        }
+      ]
+    }
+  },
+  "analyticsPage": {
+    "seo": {
+      "title": "Anailísíocht Bhialainne & Staitisticí Roghchlár QR — Rianaigh Cuairteoirí | IQ Rest",
+      "description": "Rianaigh scanadh do roghchlár QR, amhairc leathanaigh, teangacha coitianta agus treochtaí cuairteoirí. Painéal anailísíochta fíor-ama do shuíomh gréasáin do bhialainne."
+    },
+    "hero": {
+      "badge": "Anailísíocht",
+      "title": "Féach Go Díreach Conas a Úsáideann Aíonna Do Roghchlár QR",
+      "subtitle": "Rianaigh scanadh laethúil, amhairc leathanaigh, teangacha coitianta, staitisticí gléasanna agus treochtaí le himeacht ama. Déan cinntí bunaithe ar shonraí chun do roghchlár a bharrfheabhsú agus do ghnó a fhás.",
+      "cta": "Cruthaigh Do Roghchlár",
+      "ctaDemo": "Féach ar an Taispeántas",
+      "noCreditCard": "Ní theastaíonn cárta creidmheasa. Plean saor in aisce ar fáil."
+    },
+    "features": {
+      "title": "Cad Is Féidir Leat a Rianú",
+      "subtitle": "Léargais fíor-ama faoi láithreacht ar líne do bhialainne.",
+      "items": [
+        {
+          "title": "Amhairc Laethúla, Scanadh agus Treochtaí Cuairteoirí",
+          "description": "Féach cé mhéad duine a scanann do chód QR agus a thugann cuairt ar do roghchlár gach lá, seachtain agus mí. Rianaigh treochtaí le himeacht ama chun patrúin shéasúracha a thuiscint agus tionchar promóisean a thomhas."
+        },
+        {
+          "title": "Miondealú Teanga agus Gléis",
+          "description": "Bíodh a fhios agat cé na teangacha is fearr le d'aíonna agus cé na gléasanna a úsáideann siad. Cabhraíonn na sonraí seo leat tosaíocht a thabhairt d'aistriúcháin agus a chinntiú go bhfuil cuma foirfe ar do roghchlár ar na gléasanna is coitianta."
+        }
+      ]
+    },
+    "faq": {
+      "title": "Ceisteanna Coitianta",
+      "subtitle": "Gach rud a theastaíonn uait a fháil amach faoi anailísíocht bhialainne.",
+      "items": [
+        {
+          "question": "Cé na méadráchtaí is féidir liom a rianú?",
+          "answer": "Amhairc leathanaigh laethúla, seachtainiúla agus míosúla. Cuairteoirí uathúla. Na leathanaigh is mó a bhfuil féachaint orthu. Roghanna teanga. Miondealú gléasanna agus brabhsálaithe. Nuashonraithe go léir i bhfíor-am."
+        },
+        {
+          "question": "An bhfuil anailísíocht san áireamh sa phlean saor in aisce?",
+          "answer": "Tá. Tá anailísíocht bhunúsach ar fáil ar gach plean, an plean saor in aisce san áireamh. Is féidir leat amhairc, cuairteoirí agus staitisticí teanga a fheiceáil ón gcéad lá."
+        },
+        {
+          "question": "An féidir liom féachaint cé na leathanaigh is coitianta?",
+          "answer": "Is féidir. Taispeánann an painéal amhairc miondealaithe de réir leathanaigh — baile, roghchlár, teagmhálacha, áirithintí agus roghnú teanga. Féach go díreach cá gcaitheann aíonna a gcuid ama."
+        },
+        {
+          "question": "Cé chomh fada siar a théann na sonraí?",
+          "answer": "Stóráiltear sonraí anailísíochta ón lá a chruthaíonn tú do bhialann. Is féidir leat treochtaí laethúla, seachtainiúla agus míosúla a fheiceáil do do stair iomlán."
+        }
+      ]
+    },
+    "howItWorks": {
+      "title": "Conas a Oibríonn sé",
+      "subtitle": "Tosaigh ag rianú feidhmíocht do bhialann i gceithre chéim.",
+      "steps": [
+        {
+          "title": "Cruthaigh Do Bhialann",
+          "description": "Tosaíonn anailís ag rianú ón nóiméad a théann do mhenu beo. Níl aon rud le cumrú — taifeadtar gach amharc ar leathanach, scan QR, agus cuairteoir go huathoibríoch."
+        },
+        {
+          "title": "Comhoibrigh Do Chód QR",
+          "description": "Priontáil do chód QR agus cuir é ar na táblaí, ag an doras, nó ar phacáistí le haghaidh leasa. Taifeadtar gach scan le huair, teanga, gléas, agus leathanach a cuireadh cuairt air."
+        },
+        {
+          "title": "Oscail an Painéal Anailíse",
+          "description": "Féach ar staitisticí laethúla, seachtainiúla, agus míosúla le graif shoiléire. Rianaigh amharcanna iomlána, cuairteoirí uathúla, agus treochtaí thar am ó scáileán amháin den phainéal."
+        },
+        {
+          "title": "Féach ar Dhícheangail Mionsonraithe",
+          "description": "Féach ar staitisticí briste síos de réir leathanach (menu, teagmhálacha, áirithintí), teanga is fearr leat, cineál gléas, agus brabhsálaí. Úsáid an t-eolas seo chun do mhenu a bharrfheabhsú agus chun aistriúcháin a chur ar thús cadhnaíochta."
+        }
+      ]
+    }
+  },
+  "aiImagesPage": {
+    "seo": {
+      "title": "Giniúint Grianghraf Bia le HI do Bhiachláir — Íomhánna Roghchlár Bialainne | IQ Rest",
+      "description": "Gin grianghraif bhia áille do do roghchlár le HI. Gan grianghrafadóir — faigh íomhánna gairmiúla de mhiasa i soicindí, optamaithe do do roghchlár QR."
+    },
+    "hero": {
+      "badge": "Íomhánna HI",
+      "title": "Grianghraif Ghairmiúla Roghchláir Gan Grianghrafadóir",
+      "subtitle": "Gin íomhánna iontacha de do mhiasa le HI. Cuir isteach ainm an mhia agus faigh grianghraf álainn, optamaithe atá réidh do do roghchlár QR — i soicindí.",
+      "cta": "Cruthaigh Do Roghchlár",
+      "ctaDemo": "Féach ar an Taispeántas",
+      "noCreditCard": "Ní theastaíonn cárta creidmheasa. Plean saor in aisce ar fáil."
+    },
+    "features": {
+      "title": "Conas a Oibríonn Giniúint Íomhánna le HI",
+      "subtitle": "Ó ainm an mhia go grianghraf gairmiúil le clic amháin.",
+      "items": [
+        {
+          "title": "Gin Íomhánna ó Ainmneacha Miasa",
+          "description": "Clóscríobh ainm an mhia — 'Bradán Grianaithe le Líomóid', 'Píotsa Margherita', 'Cáca Laibhe Seacláide' — agus gineann HI grianghraf gairmiúil bia. Roghnaigh ó stíleanna agus cúlraí éagsúla."
+        },
+        {
+          "title": "Optamaithe le haghaidh Lódáil Tapa",
+          "description": "Comhbhrúitear gach íomhá ghinte go huathoibríoch agus tiontaítear í go formáidí nua-aimseartha. Fanann do roghchlár tintreach-thapa ar aon ghléas, fiú le grianghraif ar gach mias."
+        }
+      ]
+    },
+    "faq": {
+      "title": "Ceisteanna Coitianta",
+      "subtitle": "Gach rud a theastaíonn uait a fháil amach faoi íomhánna roghchláir HI.",
+      "items": [
+        {
+          "question": "Conas a ghiniúnaím grianghraf bia?",
+          "answer": "Oscail aon mhír roghchláir ar do phainéal, tapáil 'Gin Íomhá' agus cruthaíonn HI grianghraf gairmiúil bia bunaithe ar ainm agus cur síos an mhia. Roghnaigh an ceann is maith leat."
+        },
+        {
+          "question": "An féidir liom mo ghrianghraif féin a úsáid ina ionad?",
+          "answer": "Cinnte. Uaslódáil do ghrianghraif féin ó do ghuthán nó ríomhaire. Tá giniúint HI roghnach — úsáid é nuair nach bhfuil grianghraf réidh agat."
+        },
+        {
+          "question": "Cé mhéad íomhá is féidir liom a ghiniúint?",
+          "answer": "Braitheann teorainneacha giniúna íomhánna ar do phlean. Áirítear cuóta míosúil le Growth, agus cuireann Pro teorainn níos airde ar fáil. Is féidir leat do ghrianghraif féin a uaslódáil i gcónaí gan teorainneacha."
+        },
+        {
+          "question": "An bhfuil na híomhánna ginte uathúil do mo bhialann?",
+          "answer": "Tá. Gintear gach íomhá go uathúil do do mhias ar leith. Gan grianghraif stoc — cruthaítear gach íomhá úr bunaithe ar mhír do roghchláir."
+        }
+      ]
+    },
+    "howItWorks": {
+      "title": "Conas a Oibríonn sé",
+      "subtitle": "Faigh grianghraif ghrád proifisiúnta de do bhéile i gceithre chéime shimplí.",
+      "steps": [
+        {
+          "title": "Oscail Aon Mír Mhéala",
+          "description": "Déan nascleanúint chuig an mír ar mhaith leat grianghraf a fháil di i do dhashboard. Is féidir leat íomhánna a ghiniúint do bhéilí nua nó grianghraif atá ann a athsholáthar ar aon mhír mhéala."
+        },
+        {
+          "title": "Cliceáil Ar Ghiniúint Íomhá",
+          "description": "Cruthaíonn AI grianghraf ghrád proifisiúnta bunaithe ar ainm agus cur síos an bhéile. An níos mó sonraí a sholáthraíonn tú sa chur síos, is mó a bheidh an toradh cruinn."
+        },
+        {
+          "title": "Athbhreithnigh An Toradh",
+          "description": "Déanaigh réamhamharc ar an íomhá ghinte sula gcuirfidh tú i bhfeidhm í. Má tá tú ag iarraidh cuma difriúil, athghin í chun leagan nua a fháil. Gineann gach giniúint íomhá uathúil."
+        },
+        {
+          "title": "Úsáid I Do Mhenu",
+          "description": "Tá an íomhá optamaithe go huathoibríoch, comhoibrithe go formáid WebP, agus tagann sí ar do mhenu beo láithreach. Feiceann aíonna grianghraif ghrád proifisiúnta ar gach béile."
+        }
+      ]
+    }
+  },
+  "personalSupportPage": {
+    "seo": {
+      "title": "Tacaíocht Phearsanta do Shuíomh Gréasáin do Bhialainne — Cabhair Dháiríre ó Dhaoine | IQ Rest",
+      "description": "Faigh cabhair phearsanta ó dhaoine fíora, ní ó chatbots. Cúnamh le socrú, leideanna optamaithe biachláir agus freagraí tapa — ar fáil ar gach plean lena n-áirítear saor in aisce."
+    },
+    "hero": {
+      "badge": "Tacaíocht Phearsanta",
+      "title": "Daoine fíora, cabhair fhíor — Ní chatbots",
+      "subtitle": "An bhfuil ceist agat? An dteastaíonn cabhair uait le do bhiachlár a shocrú? Ar mhaith leat gné a mholadh? Seol teachtaireacht chugainn go díreach agus faigh freagra pearsanta ó dhuine a thuigeann bialanna.",
+      "cta": "Cruthaigh do bhiachlár",
+      "ctaDemo": "Féach ar an taispeántas",
+      "noCreditCard": "Níl cárta creidmheasa ag teastáil. Plean saor in aisce ar fáil."
+    },
+    "features": {
+      "title": "Conas a oibríonn an tacaíocht",
+      "subtitle": "Cabhair nuair a theastaíonn sí uait, ó dhaoine a bhfuil cás acu.",
+      "items": [
+        {
+          "title": "Seol teachtaireacht chugainn go díreach ó do phainéal rialaithe",
+          "description": "Oscail an comhrá tacaíochta ar do phainéal rialaithe agus déan cur síos ar do cheist. Léann duine fíor do theachtaireacht agus freagraíonn — de ghnáth laistigh de chúpla uair an chloig ar laethanta gnó."
+        },
+        {
+          "title": "Cabhair le socrú, optamú agus níos mó",
+          "description": "Cibé an dteastaíonn cabhair uait le do chéad mhias a chur leis, comhairle faoi do bhiachlár a eagrú, nó gné nua a mholadh — táimid anseo. Tá gach ceist tábhachtach, beag nó mór."
+        }
+      ]
+    },
+    "faq": {
+      "title": "Ceisteanna Coitianta",
+      "subtitle": "Gach rud atá le fios agat faoinár dtacaíocht.",
+      "items": [
+        {
+          "question": "An bhfuil tacaíocht ar fáil ar an bplean saor in aisce?",
+          "answer": "Tá. Tá tacaíocht phearsanta ar fáil do gach plean, lena n-áirítear saor in aisce. Creidimid go bhfuil gach bialann tuillte cabhair fhíor, beag beann ar a síntiús."
+        },
+        {
+          "question": "Cé chomh tapa a fhreagraíonn sibh?",
+          "answer": "De ghnáth laistigh de chúpla uair an chloig ar laethanta gnó. Léimid gach teachtaireacht go pearsanta agus déanaimid iarracht do cheist a réiteach le freagra amháin."
+        },
+        {
+          "question": "An féidir libh cabhrú liom mo bhiachlár a shocrú?",
+          "answer": "Cinnte. Má theastaíonn cabhair uait le miasa a chur leis, catagóirí a eagrú, aistriúcháin a shocrú nó áirithintí a chumrú — ní gá ach fiafraí. Beidh áthas orainn tú a threorú tríd."
+        },
+        {
+          "question": "An féidir liom gnéithe nua a mholadh?",
+          "answer": "Is féidir, agus is breá linn é! Thosaigh go leor dár ngnéithe mar mholtaí ó úsáideoirí. Seol chugainn do smaoineamh agus breathnóimid air le haghaidh nuashonruithe amach anseo."
+        }
+      ]
+    },
+    "howItWorks": {
+      "title": "Conas a Oibríonn sé",
+      "subtitle": "Faigh cabhair ó dhuine fíor i gceithre chéim shimplí.",
+      "steps": [
+        {
+          "title": "Oscail Comhoibriú Tacaíochta",
+          "description": "Téigh chuig an leathanach Tacaíochta i do dhíseán. Feicfidh tú comhoibriú comhrá simplí áit ar féidir leat do theachtaireacht a scríobh go díreach — níl aon fhoirm ticéid nó catagóirí le roghnú."
+        },
+        {
+          "title": "Cur Síos ar do Cheist",
+          "description": "Scríobh do theachtaireacht. Iarr ar mhionsonraí, gnéithe, optamú ar an mbiachlár, billeáil, nó aon rud eile. Níl aon cheisteanna amaideach — tá áthas orainn cabhrú le gach rud."
+        },
+        {
+          "title": "Faigh Freagra Pearsanta",
+          "description": "Léann duine fíor (ní chatbot) do theachtaireacht agus freagraíonn sé laistigh de chúpla uair an chloig. Tuigimid sreafaí oibre na bialann agus tugaimid freagraí praiticiúla, inúsáidte."
+        },
+        {
+          "title": "Cabhair Leanúnach",
+          "description": "Iarr ar mholtaí gné, faigh leideanna maidir le hoiriúnú an bhiachlair, nó iarr ar chabhair le socrú am ar bith. Sábhálfar do stair comhrá, mar sin tá comhoiriúnacht againn i gcónaí ó cheisteanna roimhe seo."
+        }
+      ]
+    }
   }
 }

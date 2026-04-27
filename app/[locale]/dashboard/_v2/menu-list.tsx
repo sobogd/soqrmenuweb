@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
+import { useTranslations } from "next-intl";
 import {
  ArrowDownIcon,
  ArrowUpIcon,
@@ -23,7 +24,14 @@ import { useRestaurant } from "./restaurant-context";
 import type { Category, Dish } from "./types";
 import { DashboardEvent, track } from "@/lib/dashboard-events";
 
-export function MenuList({ initialCategories }: { initialCategories: Category[] }) {
+interface SubData {
+ plan: string | null;
+ subscriptionStatus: string | null;
+ trialEndsAt: string | null;
+}
+
+export function MenuList({ initialCategories, initialSub = null }: { initialCategories: Category[]; initialSub?: SubData | null }) {
+ const t = useTranslations("dashboard.menu");
  const restaurant = useRestaurant();
  const router = useRouter();
  const { defaultLang, currency, menuUrl } = restaurant;
@@ -38,18 +46,16 @@ export function MenuList({ initialCategories }: { initialCategories: Category[] 
  return map;
  });
  const [shareOpen, setShareOpen] = useState(false);
- const [sub, setSub] = useState<{
- plan: string | null;
- subscriptionStatus: string | null;
- trialEndsAt: string | null;
- } | null>(null);
+ const [sub, setSub] = useState<SubData | null>(initialSub);
 
  useEffect(() => {
  track(DashboardEvent.SHOWED_MENU);
+ if (!initialSub) {
  fetchSubscriptionStatus().then((s) => {
  if (s) setSub({ plan: s.plan, subscriptionStatus: s.subscriptionStatus, trialEndsAt: s.trialEndsAt });
  });
- }, []);
+ }
+ }, [initialSub]);
 
  useEffect(() => {
  setCategories(initialCategories);
@@ -178,7 +184,7 @@ export function MenuList({ initialCategories }: { initialCategories: Category[] 
  className="inline-flex items-center gap-1.5 h-8 px-2.5 text-xs font-medium text-muted-foreground rounded-lg transition-colors shrink-0"
  >
  {allOpen ? <CollapseIcon size={14} /> : <ExpandIcon size={14} />}
- {allOpen ? "Collapse" : "Expand"}
+ {allOpen ? t("collapse") : t("expand")}
  </button>
  ) : null}
  </div>
@@ -186,8 +192,8 @@ export function MenuList({ initialCategories }: { initialCategories: Category[] 
 
  <div className="max-w-2xl mx-auto pt-5 md:pt-4">
  <PageHeader
- title="Menu"
- subtitle="Manage your categories and dishes."
+ title={t("title")}
+ subtitle={t("subtitle")}
  action={
  <SubscriptionChip
  sub={sub}
@@ -201,15 +207,15 @@ export function MenuList({ initialCategories }: { initialCategories: Category[] 
 
  {categories.length === 0 ? (
  <EmptyState
- title="No categories yet"
- subtitle="Add your first category to start building the menu."
+ title={t("noCategories")}
+ subtitle={t("noCategoriesSub")}
  action={
  <Link
  href="/dashboard/categories/new"
  onClick={() => track(DashboardEvent.CLICKED_ADD_CATEGORY)}
  className={primaryBtn + " w-full inline-flex items-center justify-center"}
  >
- Add category
+ {t("addCategory")}
  </Link>
  }
  />
@@ -240,7 +246,7 @@ export function MenuList({ initialCategories }: { initialCategories: Category[] 
  className="w-full mt-2.5 h-11 text-sm font-medium text-muted-foreground border border-dashed border-input rounded-xl flex items-center justify-center gap-2 transition-colors"
  >
  <PlusIcon size={14} />
- Add category
+ {t("addCategory")}
  </Link>
  </div>
  )}
@@ -281,6 +287,7 @@ function CategoryAccordion({
  onMoveDish: (categoryId: string, idx: number, dir: number) => void;
  onToggleDishVisible: (categoryId: string, dishId: string) => void;
 }) {
+ const t = useTranslations("dashboard.menu");
  return (
  <div className="bg-card border border-border rounded-xl overflow-hidden">
  <div className="flex items-center gap-1 px-3 py-2.5">
@@ -289,7 +296,7 @@ function CategoryAccordion({
  onClick={onToggle}
  className="w-8 h-8 flex items-center justify-center rounded-md text-muted-foreground transition-colors shrink-0"
  aria-expanded={isOpen}
- aria-label={isOpen ? "Collapse category" : "Expand category"}
+ aria-label={isOpen ? t("collapseCategory") : t("expandCategory")}
  >
  <span
  className="transition-transform duration-150 inline-flex"
@@ -309,17 +316,17 @@ function CategoryAccordion({
  </Link>
 
  <div className="flex items-center gap-0.5 shrink-0">
- <button type="button" onClick={onMoveUp} disabled={isFirst} className={iconBtn} aria-label="Move category up">
+ <button type="button" onClick={onMoveUp} disabled={isFirst} className={iconBtn} aria-label={t("moveCategoryUp")}>
  <ArrowUpIcon size={14} />
  </button>
- <button type="button" onClick={onMoveDown} disabled={isLast} className={iconBtn} aria-label="Move category down">
+ <button type="button" onClick={onMoveDown} disabled={isLast} className={iconBtn} aria-label={t("moveCategoryDown")}>
  <ArrowDownIcon size={14} />
  </button>
  <Link
  href={`/dashboard/categories/${category.id}`}
  onClick={() => track(DashboardEvent.CLICKED_CATEGORY_ROW)}
  className={iconBtn}
- aria-label="Edit category"
+ aria-label={t("editCategory")}
  >
  <EditIcon size={14} />
  </Link>
@@ -330,7 +337,7 @@ function CategoryAccordion({
  <div className="border-t border-border">
  {category.dishes.length === 0 ? (
  <p className="text-sm text-muted-foreground h-12 flex items-center justify-center">
- No dishes yet.
+ {t("noDishes")}
  </p>
  ) : (
  <div className="divide-y divide-border">
@@ -358,7 +365,7 @@ function CategoryAccordion({
  <span className="w-8 h-8 flex items-center justify-center shrink-0">
  <PlusIcon size={14} />
  </span>
- Add dish
+ {t("addDish")}
  </Link>
  </div>
  ) : null}
@@ -385,16 +392,18 @@ function DishRow({
  onMoveDown: () => void;
  onToggleVisible: () => void;
 }) {
+ const t = useTranslations("dashboard.menu");
+ const tc = useTranslations("dashboard.common");
  const rowCls =
  "flex items-center gap-2 px-3 py-2 transition-colors " +
  (dish.visible ? "" : "opacity-50");
  return (
  <div className={rowCls}>
  <div className="flex items-center gap-0.5 shrink-0">
- <button type="button" onClick={onMoveUp} disabled={isFirst} className={iconBtn} aria-label="Move up">
+ <button type="button" onClick={onMoveUp} disabled={isFirst} className={iconBtn} aria-label={tc("moveUp")}>
  <ArrowUpIcon size={14} />
  </button>
- <button type="button" onClick={onMoveDown} disabled={isLast} className={iconBtn} aria-label="Move down">
+ <button type="button" onClick={onMoveDown} disabled={isLast} className={iconBtn} aria-label={tc("moveDown")}>
  <ArrowDownIcon size={14} />
  </button>
  </div>
@@ -417,7 +426,7 @@ function DishRow({
  type="button"
  onClick={onToggleVisible}
  className={iconBtn}
- aria-label={dish.visible ? "Hide dish" : "Show dish"}
+ aria-label={dish.visible ? t("hideDish") : t("showDish")}
  >
  {dish.visible ? <EyeIcon size={14} /> : <EyeOffIcon size={14} />}
  </button>
@@ -425,7 +434,7 @@ function DishRow({
  href={`/dashboard/items/${dish.id}`}
  onClick={() => track(DashboardEvent.CLICKED_ITEM_ROW)}
  className={iconBtn}
- aria-label="Edit dish"
+ aria-label={t("editDish")}
  >
  <EditIcon size={14} />
  </Link>

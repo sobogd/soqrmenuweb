@@ -2515,5 +2515,911 @@
     },
     "back": "Back",
     "continue": "Continua"
+  },
+  "onlineOrders": {
+    "seo": {
+      "title": "Ordini Online per Ristoranti — Menu QR | IQ Rest",
+      "description": "Permetti ai clienti di ordinare direttamente dal tuo menu QR. Zero commissioni, prezzi in tempo reale e gestione istantanea degli ordini nella tua dashboard."
+    },
+    "hero": {
+      "badge": "Ordini Online",
+      "title": "Trasforma il tuo Menu QR in un Sistema di Ordini Online",
+      "subtitle": "I clienti scansionano, esplorano il menu e ordinano in pochi secondi. Nessuna app da scaricare, nessuna commissione, nessuna complicazione.",
+      "cta": "Crea il tuo Menu",
+      "ctaDemo": "Guarda la Demo",
+      "noCreditCard": "Nessuna carta di credito richiesta. Piano gratuito disponibile."
+    },
+    "benefits": {
+      "title": "Perché i ristoranti scelgono gli ordini dal menu QR",
+      "subtitle": "Un canale di ordinazione diretto che semplifica tutto per te e i tuoi ospiti.",
+      "items": [
+        {
+          "title": "Nessuna App Necessaria",
+          "description": "Gli ospiti scansionano semplicemente un codice QR — nessun download, nessuna registrazione. Funziona subito in qualsiasi browser del telefono."
+        },
+        {
+          "title": "Prezzi in Tempo Reale",
+          "description": "Aggiorna prezzi e disponibilità istantaneamente. Le modifiche si riflettono subito sul tuo menu QR."
+        },
+        {
+          "title": "Ordini al Tavolo",
+          "description": "Ogni tavolo ha il suo codice QR. Gli ospiti scansionano, ordinano e tu vedi il numero del tavolo nella tua dashboard."
+        },
+        {
+          "title": "Design Personalizzato",
+          "description": "Adatta il menu al tuo brand con colori, sfondi e logo personalizzati."
+        }
+      ]
+    },
+    "features": {
+      "title": "Come Funzionano gli Ordini Online",
+      "subtitle": "Due semplici passaggi collegano il tuo menu alla tua cucina.",
+      "items": [
+        {
+          "title": "Gli ospiti sfogliano e selezionano i piatti",
+          "description": "I clienti scansionano il codice QR e vedono il menu completo con foto, descrizioni e prezzi. Aggiungono piatti all'ordine con un solo tocco — senza registrazione."
+        },
+        {
+          "title": "Gli ordini appaiono nella tua dashboard",
+          "description": "Quando sono pronti, gli ospiti toccano il pulsante per ordinare. L'ordine appare istantaneamente nella tua dashboard con dettagli dei piatti, numero del tavolo e note. Accetta, inizia la preparazione e segna come completato."
+        }
+      ]
+    },
+    "faq": {
+      "title": "Domande Frequenti",
+      "subtitle": "Tutto quello che devi sapere sugli ordini online.",
+      "items": [
+        {
+          "question": "Serve hardware o app aggiuntivi?",
+          "answer": "No. Tutto funziona tramite il browser web. Gli ospiti scansionano il codice QR con la fotocamera del telefono, e tu gestisci gli ordini dalla dashboard IQ Rest su qualsiasi dispositivo."
+        },
+        {
+          "question": "Ci sono commissioni o costi per ordine?",
+          "answer": "Assolutamente no. IQ Rest non applica mai commissioni sui tuoi ordini. Paghi solo il tuo piano di abbonamento, e tutti i ricavi degli ordini restano a te."
+        },
+        {
+          "question": "I clienti possono personalizzare l'ordine o aggiungere note?",
+          "answer": "Sì. Gli ospiti possono selezionare piatti, specificare quantità e aggiungere note o richieste speciali. Puoi anche richiedere nome, telefono o indirizzo di consegna."
+        },
+        {
+          "question": "Funziona per il servizio al tavolo, asporto e consegna?",
+          "answer": "Sì. Per il servizio al tavolo, gli ospiti scansionano il codice QR al loro tavolo. Per asporto o consegna, condividi un link diretto al tuo menu. Puoi attivare i campi nome, telefono e indirizzo in base alle necessità."
+        }
+      ]
+    },
+    "howItWorks": {
+      "title": "Come Funziona",
+      "subtitle": "Dall'impostazione alla ricezione del tuo primo ordine in cinque semplici passaggi.",
+      "steps": [
+        {
+          "title": "Abilita gli Ordini Online",
+          "description": "Attiva gli ordini nelle tue impostazioni di Design. Scegli la modalità preferita: gli ordini appaiono nel tuo dashboard, vengono inoltrati a WhatsApp, o entrambi contemporaneamente."
+        },
+        {
+          "title": "Configura il Modulo d'Ordine",
+          "description": "Seleziona quali campi i clienti devono compilare quando effettuano un ordine. Il nome è sempre richiesto e puoi opzionalmente richiedere il numero di telefono e l'indirizzo di consegna."
+        },
+        {
+          "title": "Stampa i Codici QR per i Tavoli",
+          "description": "Ogni tavolo nel tuo ristorante riceve il proprio codice QR unico. Quando gli ospiti lo scansionano, il loro ordine arriva automaticamente con il numero del tavolo corretto allegato."
+        },
+        {
+          "title": "I Clienti Effettuano Ordini",
+          "description": "Gli ospiti scansionano il codice QR, sfogliano il tuo menu con foto e prezzi, selezionano gli articoli, aggiungono note e inviano il loro ordine. Non è necessaria alcuna app da scaricare o creazione di un account."
+        },
+        {
+          "title": "Gestisci gli Ordini nel Tuo Dashboard",
+          "description": "Gli ordini appaiono istantaneamente nel tuo dashboard. Aggiorna lo stato di ogni ordine da nuovo a in corso a completato. Tieni il 100% delle entrate — zero commissioni."
+        }
+      ]
+    }
+  },
+  "reservationsPage": {
+    "seo": {
+      "title": "Sistema di Prenotazione Tavoli per Ristoranti — Software Gestione Prenotazioni Online | IQ Rest",
+      "description": "Gestionale prenotazioni ristoranti con sistema di prenotazione online, conferma automatica o manuale, notifiche via email e software gestione tavoli. Digitalizza il tuo ristorante con IQ Rest."
+    },
+    "hero": {
+      "badge": "Prenotazione Tavoli",
+      "title": "Software Gestione Ristorante — Prenotazione Tavoli Online 24/7",
+      "subtitle": "Un sistema di prenotazione tavoli che permette ai clienti di prenotare direttamente dal tuo sito web. Niente telefonate, niente app di terze parti — un programma per prenotazioni tavoli integrato nel tuo menu QR digitale.",
+      "cta": "Crea il tuo menu",
+      "ctaDemo": "Vedi demo",
+      "noCreditCard": "Nessuna carta di credito richiesta. Piano gratuito disponibile."
+    },
+    "features": {
+      "title": "Come Funziona il Software Gestione Tavoli",
+      "subtitle": "Due passaggi dalla richiesta del cliente alla prenotazione confermata — con il sistema di prenotazione online ristoranti.",
+      "items": [
+        {
+          "title": "I Clienti Prenotano dal Tuo Sito Web",
+          "description": "I clienti visitano la pagina del tuo ristorante, toccano «Prenota un tavolo», scelgono data e ora, inseriscono i loro dati e inviano la richiesta. Nessuna app necessaria — il sistema di prenotazione online funziona in qualsiasi browser su qualsiasi dispositivo."
+        },
+        {
+          "title": "Gestisci le Prenotazioni dalla Tua Dashboard",
+          "description": "Ogni prenotazione appare nel gestionale con nome del cliente, telefono, numero di persone, data e note. Conferma o rifiuta con un tocco. Imposta la conferma automatica o esamina ogni prenotazione manualmente — il software gestione ristorante completo a portata di mano."
+        }
+      ]
+    },
+    "howItWorks": {
+      "title": "Come Funziona",
+      "subtitle": "Configura il sistema di prenotazione online e inizia ad accettare prenotazioni in cinque passaggi. Digitalizza il tuo ristorante oggi.",
+      "steps": [
+        {
+          "title": "Abilita le Prenotazioni",
+          "description": "Attiva le prenotazioni nelle impostazioni del tuo ristorante. Scegli tra conferma automatica, dove le prenotazioni vengono approvate istantaneamente in base alla disponibilità, o modalità manuale in cui rivedi ogni richiesta."
+        },
+        {
+          "title": "Aggiungi i Tuoi Tavoli",
+          "description": "Crea tavoli con informazioni sulla capacità e sulla zona — ad esempio, 'Tavolo 5, 4 ospiti, Terrazza'. Ogni tavolo diventa prenotabile e il software gestione tavoli previene automaticamente le doppie prenotazioni."
+        },
+        {
+          "title": "Imposta gli Orari di Lavoro",
+          "description": "Definisci le ore disponibili per le prenotazioni e scegli la durata dei slot — da 15 minuti a 8 ore. Solo gli slot di tempo all'interno dei tuoi orari di lavoro vengono mostrati ai clienti nel programma per prenotazioni tavoli."
+        },
+        {
+          "title": "I Clienti Prenotano Online",
+          "description": "I clienti visitano la pagina del tuo ristorante, scelgono la data, l'ora e la dimensione del gruppo, inseriscono il loro nome e numero di telefono, e inviano. Non è necessario alcun account o download dell'app — il sistema di prenotazione online ristoranti funziona in qualsiasi browser."
+        },
+        {
+          "title": "Gestisci le Prenotazioni nel Tuo Dashboard",
+          "description": "Visualizza tutte le prenotazioni nel tuo dashboard. Conferma, annulla o segna le prenotazioni come completate. Sia tu che il cliente ricevete notifiche via email per ogni aggiornamento della prenotazione."
+        }
+      ]
+    },
+    "faq": {
+      "title": "Domande Frequenti",
+      "subtitle": "Tutto ciò che devi sapere sul sistema di prenotazione tavoli per ristoranti.",
+      "items": [
+        {
+          "question": "I clienti devono creare un account per prenotare?",
+          "answer": "No. I clienti inseriscono semplicemente il nome, il numero di telefono, il numero di persone e l'orario preferito. Non è necessario un account né scaricare un'app."
+        },
+        {
+          "question": "Posso impostare le fasce orarie e la capacità dei tavoli?",
+          "answer": "Sì. Definisci i tuoi orari di apertura, la durata degli slot di prenotazione e la capienza dei tavoli. Il software gestione tavoli mostra ai clienti solo gli slot disponibili."
+        },
+        {
+          "question": "Riceverò una notifica quando qualcuno prenota?",
+          "answer": "Sì. Ricevi un'email per ogni nuova prenotazione. Anche i clienti ricevono un'email di conferma una volta che approvi la prenotazione tramite il gestionale."
+        },
+        {
+          "question": "Posso usare sia la conferma automatica che manuale?",
+          "answer": "Sì. Scegli la modalità automatica per confermare le prenotazioni istantaneamente in base alla disponibilità, o la modalità manuale per esaminare e approvare ogni richiesta personalmente."
+        },
+        {
+          "question": "Come previene il sistema le doppie prenotazioni?",
+          "answer": "Ogni tavolo ha una capacità definita e slot temporali. Una volta che un tavolo è prenotato per un orario specifico, non viene più mostrato come disponibile. Il gestionale prenotazioni ristoranti gestisce automaticamente il rilevamento dei conflitti."
+        },
+        {
+          "question": "I clienti possono aggiungere richieste speciali o note?",
+          "answer": "Sì. Il modulo di prenotazione include un campo note dove i clienti possono indicare esigenze alimentari, celebrazioni, preferenze di posto o qualsiasi altra richiesta."
+        },
+        {
+          "question": "Il sistema di prenotazione è disponibile nel piano gratuito?",
+          "answer": "Le prenotazioni dei tavoli sono disponibili nei piani Growth e Pro. Il piano gratuito include il menu QR completo, la pagina contatti e le analisi — passa a un piano superiore in qualsiasi momento per digitalizzare il tuo ristorante con le prenotazioni online."
+        },
+        {
+          "question": "Posso vedere lo storico delle prenotazioni?",
+          "answer": "Sì. Tutte le prenotazioni — passate e future — sono archiviate nel tuo dashboard. Puoi filtrare per data, stato e tavolo per consultare lo storico delle prenotazioni in qualsiasi momento."
+        }
+      ]
+    }
+  },
+  "colorSchemePage": {
+    "seo": {
+      "title": "Design personalizzato del menu QR e colori del brand — Branding ristorante | IQ Rest",
+      "description": "Adatta il tuo menu QR al brand del tuo ristorante. Scegli i colori di accento e crea un aspetto coerente in tutto il tuo menu digitale."
+    },
+    "hero": {
+      "badge": "Design personalizzato",
+      "title": "Fai corrispondere il tuo menu QR al brand del ristorante",
+      "subtitle": "Scegli il tuo colore di brand — e l'intero menu — pulsanti, evidenziazioni, link — si aggiorna all'istante.",
+      "cta": "Crea il tuo menu",
+      "ctaDemo": "Vedi demo",
+      "noCreditCard": "Nessuna carta di credito richiesta. Piano gratuito disponibile."
+    },
+    "features": {
+      "title": "Come funziona il branding personalizzato",
+      "subtitle": "Il tuo menu, i tuoi colori — coerente su ogni pagina.",
+      "items": [
+        {
+          "title": "Scegli il tuo colore di accento",
+          "description": "Seleziona tra 12 preset curati o inserisci il colore esatto del tuo brand con un codice esadecimale. Ogni pulsante, link ed evidenziazione del tuo menu si adatta istantaneamente — nessuna competenza di design necessaria."
+        }
+      ]
+    },
+    "faq": {
+      "title": "Domande frequenti",
+      "subtitle": "Tutto ciò che devi sapere sulla personalizzazione del menu.",
+      "items": [
+        {
+          "question": "Posso usare il colore esatto del mio brand?",
+          "answer": "Sì. Inserisci qualsiasi codice colore esadecimale, o scegli tra 12 preset accuratamente selezionati. Il tuo colore di accento si applica a tutte le pagine del menu."
+        },
+        {
+          "question": "Posso cambiare i colori dopo la pubblicazione?",
+          "answer": "Assolutamente. Cambia il tuo colore di accento in qualsiasi momento dalla dashboard. Le modifiche appaiono istantaneamente nel menu pubblicato — nessuna ripubblicazione necessaria."
+        },
+        {
+          "question": "Il mio QR code avrà i colori del brand?",
+          "answer": "Il tuo QR code viene generato separatamente e può essere personalizzato in modo indipendente. Il colore di accento si applica alle pagine del menu digitale, alla navigazione e agli elementi interattivi."
+        }
+      ]
+    },
+    "howItWorks": {
+      "title": "Come Funziona",
+      "subtitle": "Abbina il tuo menu al tuo marchio in tre semplici passaggi.",
+      "steps": [
+        {
+          "title": "Apri le Impostazioni di Design",
+          "description": "Naviga alla pagina Design nel tuo dashboard. Il selettore del colore di accento è al centro — vedrai immediatamente tutte le opzioni disponibili."
+        },
+        {
+          "title": "Scegli il Colore del Tuo Marchio",
+          "description": "Scegli tra 12 preset di colori curati progettati per leggibilità e accessibilità, oppure inserisci il tuo codice esadecimale esatto per una corrispondenza perfetta con il tuo marchio."
+        },
+        {
+          "title": "Anteprima Istantanea",
+          "description": "Il tuo colore di accento si applica a pulsanti, link e evidenziazioni in tutto il menu. Funziona sia con temi chiari che scuri, e le modifiche appaiono istantaneamente nel tuo menu live."
+        }
+      ]
+    }
+  },
+  "easyMenuPage": {
+    "seo": {
+      "title": "Crea un menu QR per il tuo ristorante — Creatore di menu gratuito | IQ Rest",
+      "description": "Crea il menu QR digitale del tuo ristorante in pochi minuti. Aggiungi categorie, piatti, foto, prezzi — e condividi un codice QR scansionabile. Inizia gratis."
+    },
+    "hero": {
+      "badge": "Creatore di menu",
+      "title": "Crea un menu QR digitale per il tuo ristorante in pochi minuti",
+      "subtitle": "Aggiungi le tue categorie e i piatti, imposta i prezzi, carica le foto — il tuo menu QR è pronto per essere condiviso. Modifica in qualsiasi momento, le modifiche appaiono all'istante.",
+      "cta": "Crea il tuo menu",
+      "ctaDemo": "Vedi demo",
+      "noCreditCard": "Nessuna carta di credito richiesta. Piano gratuito disponibile."
+    },
+    "features": {
+      "title": "Come funziona l'editor del menu",
+      "subtitle": "Strumenti semplici per pubblicare il tuo menu velocemente.",
+      "items": [
+        {
+          "title": "Aggiungi categorie e piatti",
+          "description": "Crea categorie come Antipasti, Primi, Bevande — poi aggiungi piatti con nomi, descrizioni, prezzi e foto. Trascina e rilascia per riordinare. Attiva o disattiva i piatti senza eliminarli."
+        },
+        {
+          "title": "Le modifiche sono pubblicate all'istante",
+          "description": "Ogni modifica appare nel tuo menu QR in pochi secondi. Aggiorna un prezzo, aggiungi il piatto del giorno o nascondi un piatto esaurito — i tuoi clienti vedono sempre l'ultima versione."
+        }
+      ]
+    },
+    "faq": {
+      "title": "Domande frequenti",
+      "subtitle": "Tutto ciò che devi sapere sulla creazione del tuo menu QR.",
+      "items": [
+        {
+          "question": "Come creo un menu QR per il mio ristorante?",
+          "answer": "Registrati con la tua email, dai un nome al tuo ristorante e inizia ad aggiungere categorie e piatti. Il tuo menu QR viene generato automaticamente — stampa il codice QR e posizionalo sui tavoli."
+        },
+        {
+          "question": "Posso aggiungere foto ai piatti?",
+          "answer": "Sì. Carica foto direttamente dal tuo telefono o computer. Le immagini vengono automaticamente ottimizzate per un caricamento veloce su qualsiasi dispositivo."
+        },
+        {
+          "question": "Quanti piatti posso aggiungere?",
+          "answer": "Non c'è limite al numero di categorie o piatti. Aggiungi tutti i piatti che vuoi — il tuo menu resta veloce e ben organizzato."
+        },
+        {
+          "question": "Posso nascondere temporaneamente un piatto esaurito?",
+          "answer": "Sì. Disattiva qualsiasi piatto con un tocco. Scompare dal menu pubblico ma resta nella tua dashboard — riattivalo quando sei pronto."
+        }
+      ]
+    },
+    "howItWorks": {
+      "title": "Come Funziona",
+      "subtitle": "Crea e pubblica il menu del tuo ristorante in cinque semplici passaggi.",
+      "steps": [
+        {
+          "title": "Crea Categorie",
+          "description": "Aggiungi categorie come Antipasti, Piatti Principali, Dessert e Bevande per organizzare il tuo menu. Puoi creare quante più categorie hai bisogno e riordinarle con il drag and drop."
+        },
+        {
+          "title": "Aggiungi Elementi al Menu",
+          "description": "Inserisci il nome del piatto, la descrizione e il prezzo per ciascun elemento. Segnala gli allergeni se applicabile — gli ospiti vedranno automaticamente le icone degli allergeni nel menu."
+        },
+        {
+          "title": "Carica o Genera Foto",
+          "description": "Carica le tue foto di cibo dal tuo telefono o computer, oppure usa l'IA per generare un'immagine professionale del cibo dal nome del piatto. Le immagini vengono ottimizzate automaticamente."
+        },
+        {
+          "title": "Organizza con Drag and Drop",
+          "description": "Riordina categorie ed elementi trascinandoli nel posto giusto. Attiva o disattiva qualsiasi elemento senza eliminarlo — perfetto per i piatti del giorno o quelli esauriti."
+        },
+        {
+          "title": "Pubblica il Tuo Menu",
+          "description": "Le modifiche appaiono istantaneamente sul tuo menu QR live. Non c'è un pulsante 'pubblica' — ogni modifica diventa attiva in tempo reale. Stampa il tuo codice QR e posizionalo sui tuoi tavoli."
+        }
+      ]
+    }
+  },
+  "aiTranslationPage": {
+    "seo": {
+      "title": "Traduzione del menu con IA per ristoranti — Traduci il menu QR | IQ Rest",
+      "description": "Traduci il menu del tuo ristorante in oltre 25 lingue con un clic. L'IA comprende il contesto culinario — nomi dei piatti, descrizioni e categorie tradotti con precisione."
+    },
+    "hero": {
+      "badge": "Traduzione IA",
+      "title": "Traduci il tuo menu in oltre 25 lingue con un clic",
+      "subtitle": "La nostra IA comprende il contesto gastronomico — traduce nomi dei piatti, descrizioni e categorie in modo naturale, non parola per parola. Raggiungi ogni turista e ospite internazionale.",
+      "cta": "Crea il tuo menu",
+      "ctaDemo": "Vedi demo",
+      "noCreditCard": "Nessuna carta di credito richiesta. Piano gratuito disponibile."
+    },
+    "features": {
+      "title": "Come funziona la traduzione con IA",
+      "subtitle": "Dalla tua lingua al mondo intero in pochi secondi.",
+      "items": [
+        {
+          "title": "Traduzione di tutto il menu con un clic",
+          "description": "Seleziona una lingua di destinazione, tocca traduci — e tutto il tuo menu — categorie, nomi dei piatti, descrizioni — viene tradotto istantaneamente. L'IA preserva i termini culinari e adatta naturalmente il contenuto per ogni lingua."
+        },
+        {
+          "title": "Modifica e perfeziona qualsiasi traduzione",
+          "description": "Ogni traduzione IA è completamente modificabile. Controlla il risultato, correggi qualsiasi formulazione e salva. Le tue modifiche vengono conservate anche se ritradurrai altre parti del menu in seguito."
+        }
+      ]
+    },
+    "faq": {
+      "title": "Domande frequenti",
+      "subtitle": "Tutto ciò che devi sapere sulla traduzione del menu.",
+      "items": [
+        {
+          "question": "Quanto è precisa la traduzione IA per i menu dei ristoranti?",
+          "answer": "La nostra IA è ottimizzata per contenuti di ristorazione. Comprende che «Beef Wellington» o «Tiramisù» non vanno tradotti letteralmente, e adatta le descrizioni per farle suonare naturali in ogni lingua."
+        },
+        {
+          "question": "Quali lingue sono supportate?",
+          "answer": "Oltre 25 lingue tra cui inglese, spagnolo, francese, tedesco, italiano, portoghese, cinese, giapponese, coreano, arabo, russo e molte altre lingue europee e asiatiche."
+        },
+        {
+          "question": "Posso tradurre solo alcuni piatti, non tutto il menu?",
+          "answer": "Sì. Puoi tradurre singoli piatti, intere categorie o tutto il menu in una volta. Hai il pieno controllo su ciò che viene tradotto."
+        },
+        {
+          "question": "C'è un costo aggiuntivo per traduzione?",
+          "answer": "La traduzione IA è inclusa nei piani Growth e Pro con generosi limiti mensili. Nessun costo per parola o per piatto — traduci quanto vuoi."
+        }
+      ]
+    },
+    "howItWorks": {
+      "title": "Come Funziona",
+      "subtitle": "Traduci l'intero menu in pochi minuti, non ore.",
+      "steps": [
+        {
+          "title": "Aggiungi Lingue al Tuo Menu",
+          "description": "Vai alla pagina Lingue nel tuo dashboard e seleziona quali lingue il tuo menu dovrebbe supportare. Scegli tra 35 lingue disponibili, comprese tutte le principali lingue europee, asiatiche e del Medio Oriente."
+        },
+        {
+          "title": "Clicca su Traduci",
+          "description": "Un pulsante traduce tutte le tue categorie, nomi degli articoli e descrizioni in una sola volta. L'intero menu viene elaborato in pochi secondi, indipendentemente dal numero di articoli che hai."
+        },
+        {
+          "title": "L'IA Comprende il Contesto Alimentare",
+          "description": "L'IA conosce la terminologia culinaria attraverso le culture. Preserva i nomi dei piatti come 'Tiramisu' o 'Pad Thai' mentre adatta naturalmente le descrizioni, le liste degli ingredienti e i nomi delle categorie."
+        },
+        {
+          "title": "Rivedi e Modifica",
+          "description": "Ogni traduzione è completamente modificabile. Regola qualsiasi formulazione per adattarla al tuo stile. Le tue modifiche manuali vengono conservate anche quando traduci nuovamente altre parti del menu in seguito."
+        },
+        {
+          "title": "Pubblica il Tuo Menu Multilingue",
+          "description": "Gli ospiti vedono un selettore di lingua nel tuo menu e possono navigare nella loro lingua preferita. Ogni lingua può essere attivata o disattivata indipendentemente dal tuo dashboard."
+        }
+      ]
+    }
+  },
+  "mobileManagementPage": {
+    "seo": {
+      "title": "Gestisci il menu del ristorante dal telefono — Dashboard mobile | IQ Rest",
+      "description": "Gestisci il menu QR del tuo ristorante interamente dal telefono. Aggiungi piatti, aggiorna i prezzi, carica foto, controlla le analisi — senza bisogno del computer."
+    },
+    "hero": {
+      "badge": "Dashboard mobile",
+      "title": "Gestisci l'intero menu del ristorante dal tuo telefono",
+      "subtitle": "Aggiungi piatti, cambia i prezzi, carica foto, controlla gli ordini — tutto dal tuo smartphone. La dashboard è progettata mobile-first, non avrai mai bisogno di un computer.",
+      "cta": "Crea il tuo menu",
+      "ctaDemo": "Vedi demo",
+      "noCreditCard": "Nessuna carta di credito richiesta. Piano gratuito disponibile."
+    },
+    "features": {
+      "title": "Come funziona la gestione mobile",
+      "subtitle": "La dashboard del tuo ristorante, sempre in tasca.",
+      "items": [
+        {
+          "title": "Dashboard completa sul tuo smartphone",
+          "description": "Tutte le funzionalità funzionano perfettamente sullo schermo del telefono — aggiungere piatti, modificare categorie, gestire ordini, consultare le analisi. L'interfaccia è progettata per il touch, non semplicemente ridimensionata dal desktop."
+        },
+        {
+          "title": "Carica foto direttamente dalla fotocamera",
+          "description": "Scatta una foto di un nuovo piatto e caricala nel tuo menu in pochi secondi. Le immagini vengono ottimizzate automaticamente. Aggiorna il piatto del giorno dalla cucina."
+        }
+      ]
+    },
+    "faq": {
+      "title": "Domande frequenti",
+      "subtitle": "Tutto ciò che devi sapere sulla gestione mobile del menu.",
+      "items": [
+        {
+          "question": "Devo installare un'app?",
+          "answer": "No. La dashboard funziona nel browser del tuo telefono — Safari, Chrome o qualsiasi altro. Accedi e inizia a gestire il tuo menu."
+        },
+        {
+          "question": "Posso fare dal telefono tutto quello che posso fare dal computer?",
+          "answer": "Sì. Tutte le funzionalità sono disponibili su mobile — aggiungere piatti, caricare foto, gestire categorie, consultare analisi, gestire ordini e prenotazioni."
+        },
+        {
+          "question": "Funziona anche sui tablet?",
+          "answer": "Sì. La dashboard si adatta a qualsiasi dimensione dello schermo — telefoni, tablet e computer desktop. Usa il dispositivo più comodo per te."
+        },
+        {
+          "question": "Più persone possono gestire il menu?",
+          "answer": "Attualmente un account gestisce il ristorante. Puoi accedere da più dispositivi contemporaneamente — telefono, tablet o computer."
+        }
+      ]
+    },
+    "howItWorks": {
+      "title": "Come Funziona",
+      "subtitle": "Gestisci il tuo ristorante da qualsiasi dispositivo in quattro passaggi.",
+      "steps": [
+        {
+          "title": "Apri il Dashboard sul Tuo Telefono",
+          "description": "Vai su iq-rest.com e accedi dal browser del tuo telefono. Il dashboard si adatta automaticamente alla dimensione dello schermo — nessuna app da scaricare o installare."
+        },
+        {
+          "title": "Modifica il Menu Ovunque",
+          "description": "Aggiungi nuovi elementi, aggiorna i prezzi, cambia le descrizioni e carica foto direttamente dalla fotocamera del tuo telefono. Ogni funzione disponibile su desktop funziona altrettanto bene su mobile."
+        },
+        {
+          "title": "Controlla Ordini e Prenotazioni",
+          "description": "Visualizza gli ordini in arrivo, gestisci le prenotazioni dei tavoli e rispondi ai messaggi di supporto — tutto dal tuo telefono. Rimani aggiornato sul tuo ristorante anche quando sei lontano."
+        },
+        {
+          "title": "Le Modifiche Vanno Live Istantaneamente",
+          "description": "Ogni modifica che fai dal tuo telefono appare sul tuo menu QR in tempo reale. Non è necessario sincronizzare, pubblicare o aspettare — i tuoi ospiti vedono sempre l'ultima versione."
+        }
+      ]
+    }
+  },
+  "customDesignPage": {
+    "seo": {
+      "title": "Sito web del ristorante con sfondo video e foto — Creatore di siti web | IQ Rest",
+      "description": "Crea un sito web del ristorante mozzafiato con sfondi video o foto personalizzati. Carica il tuo video di atmosfera o fotografia culinaria — impressiona gli ospiti dal primo scan."
+    },
+    "hero": {
+      "badge": "Design del sito",
+      "title": "Crea un sito web del ristorante mozzafiato con sfondi video",
+      "subtitle": "Carica un video dell'atmosfera del tuo ristorante o una bella foto gastronomica come sfondo. Gli ospiti vedranno un'esperienza professionale e di marca dal momento in cui scannerizzano il tuo QR code.",
+      "cta": "Crea il tuo menu",
+      "ctaDemo": "Vedi demo",
+      "noCreditCard": "Nessuna carta di credito richiesta. Piano gratuito disponibile."
+    },
+    "features": {
+      "title": "Come funzionano gli sfondi personalizzati",
+      "subtitle": "Fai una prima impressione duratura con immagini che rispecchiano il tuo brand.",
+      "items": [
+        {
+          "title": "Carica sfondi video o foto",
+          "description": "Aggiungi un video in loop dell'atmosfera del ristorante, un timelapse della cucina o una foto gastronomica di alta qualità. Lo sfondo appare sulla tua homepage — creando un'esperienza immersiva per gli ospiti."
+        },
+        {
+          "title": "Ottimizzato per la velocità su qualsiasi dispositivo",
+          "description": "Video e immagini vengono automaticamente compressi e caricati in modo lazy. Il tuo sito resta veloce anche con connessioni mobili lente — nessun buffering, nessun ritardo, solo un'esperienza fluida."
+        }
+      ]
+    },
+    "faq": {
+      "title": "Domande frequenti",
+      "subtitle": "Tutto ciò che devi sapere sul design del sito web del ristorante.",
+      "items": [
+        {
+          "question": "Quali formati video sono supportati?",
+          "answer": "I formati MP4 e WebM funzionano meglio. I video vengono compressi automaticamente per un caricamento veloce. Mantieni i video sotto i 30 secondi per la migliore esperienza mobile."
+        },
+        {
+          "question": "Uno sfondo video rallenterà il mio sito?",
+          "answer": "No. I video vengono compressi, caricati in modo lazy e ottimizzati automaticamente. Con connessioni lente, il sistema passa a un'immagine statica per mantenere l'esperienza fluida."
+        },
+        {
+          "question": "Posso usare una foto invece di un video?",
+          "answer": "Sì. Carica qualsiasi foto — verrà ottimizzata e mostrata come sfondo a schermo intero. Puoi alternare tra video e foto in qualsiasi momento."
+        },
+        {
+          "question": "Ho bisogno di un designer per configurare tutto?",
+          "answer": "No. Carica semplicemente il tuo video o foto dalla dashboard. Il sistema gestisce automaticamente dimensioni, compressione e layout. Il tuo sito appare professionale senza competenze di design."
+        }
+      ]
+    },
+    "howItWorks": {
+      "title": "Come Funziona",
+      "subtitle": "Personalizza l'identità visiva del tuo ristorante in quattro passaggi.",
+      "steps": [
+        {
+          "title": "Apri le Impostazioni di Design",
+          "description": "Naviga alla pagina Design nel tuo pannello di controllo. Qui puoi controllare l'aspetto visivo del tuo ristorante: sfondo, colore di accento e layout della homepage."
+        },
+        {
+          "title": "Carica uno Sfondo",
+          "description": "Scegli un video (MP4, WebM) o una foto per lo sfondo della homepage del tuo ristorante. I video si ripetono automaticamente, creando una prima impressione coinvolgente per ogni visitatore."
+        },
+        {
+          "title": "Generazione di Sfondo con AI",
+          "description": "Non hai un video o una foto pronti? Lascia che l'AI crei automaticamente un'immagine di sfondo dai tuoi piatti del menu. Genera un'immagine professionale che si adatta allo stile del tuo ristorante."
+        },
+        {
+          "title": "Anteprima e Salva",
+          "description": "Visualizza le tue modifiche in tempo reale prima di salvare. I video vengono automaticamente compressi e caricati in modo lazy, garantendo prestazioni rapide sui dispositivi mobili senza compromettere la qualità visiva."
+        }
+      ]
+    }
+  },
+  "multilingualPage": {
+    "seo": {
+      "title": "Sito web del ristorante multilingue — Menu in oltre 25 lingue | IQ Rest",
+      "description": "Il sito web del tuo ristorante e il menu QR in oltre 25 lingue. Gli ospiti cambiano lingua con un tocco — menu, contatti e prenotazioni si adattano istantaneamente."
+    },
+    "hero": {
+      "badge": "Multilingue",
+      "title": "Il sito web del tuo ristorante in oltre 25 lingue",
+      "subtitle": "Turisti e ospiti internazionali vedono il menu nella loro lingua. Un tocco per cambiare — tutto si adatta istantaneamente: piatti, descrizioni, contatti, navigazione.",
+      "cta": "Crea il tuo menu",
+      "ctaDemo": "Vedi demo",
+      "noCreditCard": "Nessuna carta di credito richiesta. Piano gratuito disponibile."
+    },
+    "features": {
+      "title": "Come funziona il supporto multilingue",
+      "subtitle": "Parla la lingua dei tuoi clienti senza lavoro extra.",
+      "items": [
+        {
+          "title": "Gli ospiti scelgono la loro lingua",
+          "description": "Un selettore di lingua appare nel tuo menu. Gli ospiti toccano la loro lingua preferita e l'intero sito — menu, descrizioni, informazioni di contatto, navigazione — cambia istantaneamente. Nessun ricaricamento della pagina necessario."
+        },
+        {
+          "title": "Aggiungi lingue dalla tua dashboard",
+          "description": "Attiva nuove lingue con un clic. Usa la traduzione IA per compilare il contenuto, oppure inserisci le traduzioni manualmente. Ogni lingua può essere attivata o disattivata indipendentemente."
+        }
+      ]
+    },
+    "faq": {
+      "title": "Domande frequenti",
+      "subtitle": "Tutto ciò che devi sapere sui menu multilingue.",
+      "items": [
+        {
+          "question": "Quante lingue posso aggiungere al mio menu?",
+          "answer": "Oltre 25 lingue tra cui tutte le principali lingue europee, cinese, giapponese, coreano, arabo, farsi e altre. Aggiungi tutte le lingue di cui hanno bisogno i tuoi ospiti."
+        },
+        {
+          "question": "Devo tradurre tutto manualmente?",
+          "answer": "No. Usa la traduzione IA integrata per tradurre tutto il menu con un clic. Puoi anche modificare qualsiasi traduzione manualmente per un controllo completo."
+        },
+        {
+          "question": "La preferenza di lingua viene salvata?",
+          "answer": "Sì. Quando un ospite seleziona una lingua, viene ricordata per la visita successiva. Non devono scegliere di nuovo quando tornano."
+        },
+        {
+          "question": "Il supporto multilingue è disponibile nel piano gratuito?",
+          "answer": "Il piano gratuito include fino a 2 lingue. I piani Growth e Pro offrono lingue illimitate con traduzione IA inclusa."
+        }
+      ]
+    },
+    "howItWorks": {
+      "title": "Come Funziona",
+      "subtitle": "Rendi il tuo menu disponibile in più lingue in quattro passaggi.",
+      "steps": [
+        {
+          "title": "Vai alle Impostazioni della Lingua",
+          "description": "Apri la pagina Lingue nel tuo pannello di controllo. Vedrai tutte le lingue disponibili e quali sono attualmente attive sul tuo menu."
+        },
+        {
+          "title": "Aggiungi Lingue",
+          "description": "Seleziona tra 35 lingue disponibili. Il piano gratuito include fino a 2 lingue, mentre i piani Growth e Pro offrono lingue illimitate per il tuo menu."
+        },
+        {
+          "title": "Traduci i Tuoi Contenuti",
+          "description": "Utilizza la traduzione AI con un clic per tradurre istantaneamente l'intero menu, oppure inserisci le traduzioni manualmente per avere il pieno controllo. Puoi anche combinare entrambi gli approcci."
+        },
+        {
+          "title": "Gli Ospiti Cambiano Lingua",
+          "description": "Un selettore di lingua appare sulla pagina del tuo menu. Quando gli ospiti scelgono la loro lingua, l'intero menu cambia istantaneamente. La loro preferenza viene salvata per le visite future."
+        }
+      ]
+    }
+  },
+  "instantSetupPage": {
+    "seo": {
+      "title": "Generatore gratuito di siti web per ristoranti — Crea in 5 minuti | IQ Rest",
+      "description": "Ottieni un sito web professionale per il tuo ristorante con menu QR, pagina contatti e mappa — basta inserire la tua email. Pronto in 5 minuti, nessuna competenza tecnica necessaria."
+    },
+    "hero": {
+      "badge": "Sito web gratuito",
+      "title": "Ottieni un sito web professionale per il ristorante in 5 minuti",
+      "subtitle": "Inserisci la tua email, dai un nome al ristorante — e ottieni istantaneamente un sito completo con menu QR, pagina contatti con mappa e design responsive moderno. Senza codice, senza designer.",
+      "cta": "Crea il tuo menu",
+      "ctaDemo": "Vedi demo",
+      "noCreditCard": "Nessuna carta di credito richiesta. Piano gratuito disponibile."
+    },
+    "features": {
+      "title": "Come funziona",
+      "subtitle": "Da zero a un sito web del ristorante online in tre passaggi.",
+      "items": [
+        {
+          "title": "Registrati solo con la tua email",
+          "description": "Nessun modulo di registrazione complicato. Inserisci la tua email, verifica con un codice — e la dashboard del tuo ristorante è pronta. Dai un nome al ristorante e il tuo sito è subito online."
+        },
+        {
+          "title": "Tutto incluso fin dall'inizio",
+          "description": "Il tuo sito include menu QR, pagina contatti con Google Maps, supporto lingue, design responsive per mobile e il tuo URL unico. Aggiungi semplicemente i tuoi piatti e inizia a condividere."
+        }
+      ]
+    },
+    "faq": {
+      "title": "Domande frequenti",
+      "subtitle": "Tutto ciò che devi sapere sulla creazione del sito web del tuo ristorante.",
+      "items": [
+        {
+          "question": "Come creo un sito web gratuito per il mio ristorante?",
+          "answer": "Inserisci la tua email su IQ Rest, verifica con un codice, dai un nome al ristorante — fatto. Il tuo sito con menu QR è online in meno di 5 minuti. Nessuna carta di credito necessaria."
+        },
+        {
+          "question": "Servono competenze tecniche?",
+          "answer": "No. Tutto è progettato per i ristoratori, non per gli sviluppatori. Aggiungi piatti, carica foto e gestisci il tuo sito interamente dal telefono."
+        },
+        {
+          "question": "Cosa include il piano gratuito?",
+          "answer": "Un sito web completo per ristorante, menu QR, pagina contatti con mappa, analisi, schema colori personalizzato e fino a 2 lingue. Nessun periodo di prova — è gratuito per sempre."
+        },
+        {
+          "question": "Posso usare il mio dominio personalizzato?",
+          "answer": "Con i piani gratuito e Growth, il tuo sito è ospitato su iq-rest.com/m/il-tuo-nome. Il piano Pro supporta nomi di dominio personalizzati per il pieno controllo del brand."
+        }
+      ]
+    },
+    "howItWorks": {
+      "title": "Come Funziona",
+      "subtitle": "Da zero a un sito web di ristorante attivo in quattro passaggi.",
+      "steps": [
+        {
+          "title": "Inserisci la Tua Email",
+          "description": "Nessuna password necessaria. Basta digitare il tuo indirizzo email e cliccare su Continua. Non ci sono moduli di registrazione lunghi, nessuna carta di credito richiesta e nessun impegno."
+        },
+        {
+          "title": "Verifica con un Codice",
+          "description": "Controlla la tua casella di posta per un codice di verifica di 4 cifre. Inseriscilo per accedere in modo sicuro. Questo approccio senza password significa una cosa in meno da ricordare."
+        },
+        {
+          "title": "Dai un Nome al Tuo Ristorante",
+          "description": "Dai un nome al tuo ristorante. Diventerà il tuo URL del sito web e il titolo del menu. Puoi sempre cambiarlo in seguito dalle impostazioni della tua dashboard."
+        },
+        {
+          "title": "Il Tuo Sito Web È Pronto",
+          "description": "Un sito web completo per ristorante con menu QR, pagina di contatto con mappa e design reattivo è attivo immediatamente su iq-rest.com/m/tuo-nome. Aggiungi i tuoi piatti e inizia a condividere."
+        }
+      ]
+    }
+  },
+  "analyticsPage": {
+    "seo": {
+      "title": "Analisi del ristorante e statistiche del menu QR — Monitoraggio visitatori | IQ Rest",
+      "description": "Monitora le scansioni del menu QR, le visualizzazioni delle pagine, le lingue più usate e le tendenze dei visitatori. Dashboard di analisi in tempo reale per il sito web del tuo ristorante."
+    },
+    "hero": {
+      "badge": "Analisi",
+      "title": "Scopri come gli ospiti usano il tuo menu QR",
+      "subtitle": "Monitora scansioni giornaliere, visualizzazioni, lingue più usate, statistiche sui dispositivi e tendenze. Prendi decisioni basate sui dati per ottimizzare il menu e far crescere il tuo business.",
+      "cta": "Crea il tuo menu",
+      "ctaDemo": "Vedi demo",
+      "noCreditCard": "Nessuna carta di credito richiesta. Piano gratuito disponibile."
+    },
+    "features": {
+      "title": "Cosa puoi monitorare",
+      "subtitle": "Informazioni in tempo reale sulla presenza online del tuo ristorante.",
+      "items": [
+        {
+          "title": "Visualizzazioni giornaliere, scansioni e tendenze dei visitatori",
+          "description": "Scopri quante persone scansionano il tuo codice QR e visitano il tuo menu ogni giorno, settimana e mese. Segui le tendenze per capire i pattern stagionali e misurare l'impatto delle promozioni."
+        },
+        {
+          "title": "Distribuzione per lingua e dispositivo",
+          "description": "Scopri quali lingue preferiscono i tuoi ospiti e quali dispositivi usano. Questi dati ti aiutano a dare priorità alle traduzioni e assicurarti che il menu sia perfetto sui dispositivi più popolari."
+        }
+      ]
+    },
+    "faq": {
+      "title": "Domande frequenti",
+      "subtitle": "Tutto ciò che devi sapere sulle analisi del ristorante.",
+      "items": [
+        {
+          "question": "Quali metriche posso monitorare?",
+          "answer": "Visualizzazioni giornaliere, settimanali e mensili. Visitatori unici. Pagine più visitate. Preferenze di lingua. Distribuzione per dispositivo e browser. Tutto aggiornato in tempo reale."
+        },
+        {
+          "question": "Le analisi sono incluse nel piano gratuito?",
+          "answer": "Sì. Le analisi di base sono disponibili su tutti i piani, incluso il gratuito. Puoi vedere visualizzazioni, visitatori e statistiche sulle lingue dal primo giorno."
+        },
+        {
+          "question": "Posso vedere quali pagine sono le più popolari?",
+          "answer": "Sì. La dashboard mostra le visualizzazioni suddivise per pagina — home, menu, contatti, prenotazioni e selezione della lingua. Scopri esattamente dove gli ospiti trascorrono il loro tempo."
+        },
+        {
+          "question": "Quanto indietro nel tempo arrivano i dati?",
+          "answer": "I dati delle analisi vengono archiviati dal giorno in cui crei il tuo ristorante. Puoi visualizzare le tendenze giornaliere, settimanali e mensili per tutta la tua cronologia."
+        }
+      ]
+    },
+    "howItWorks": {
+      "title": "Come Funziona",
+      "subtitle": "Inizia a monitorare le performance del tuo ristorante in quattro passaggi.",
+      "steps": [
+        {
+          "title": "Crea Il Tuo Ristorante",
+          "description": "Le analisi iniziano a essere tracciate dal momento in cui il tuo menu è online. Non c'è nulla da configurare: ogni visualizzazione di pagina, scansione QR e visitatore viene registrato automaticamente."
+        },
+        {
+          "title": "Condividi Il Tuo Codice QR",
+          "description": "Stampa il tuo codice QR e posizionalo sui tavoli, all'ingresso o sulle confezioni da asporto. Ogni scansione viene registrata con data e ora, lingua, dispositivo e pagina visitata."
+        },
+        {
+          "title": "Apri Il Dashboard Analitico",
+          "description": "Visualizza statistiche giornaliere, settimanali e mensili con grafici chiari. Monitora le visualizzazioni totali, i visitatori unici e le tendenze nel tempo da un'unica schermata del dashboard."
+        },
+        {
+          "title": "Esplora Analisi Dettagliate",
+          "description": "Visualizza le statistiche suddivise per pagina (menu, contatti, prenotazioni), lingua preferita, tipo di dispositivo e browser. Utilizza questi dati per ottimizzare il tuo menu e dare priorità alle traduzioni."
+        }
+      ]
+    }
+  },
+  "aiImagesPage": {
+    "seo": {
+      "title": "Generazione foto di piatti con IA — Immagini per menu del ristorante | IQ Rest",
+      "description": "Genera bellissime foto di piatti per il tuo menu con l'IA. Senza fotografo — ottieni immagini professionali in pochi secondi, ottimizzate per il tuo menu QR."
+    },
+    "hero": {
+      "badge": "Immagini IA",
+      "title": "Foto professionali per il menu senza fotografo",
+      "subtitle": "Genera straordinarie immagini di piatti con l'IA. Inserisci semplicemente il nome del piatto e ottieni una foto professionale e ottimizzata per il tuo menu QR — in pochi secondi.",
+      "cta": "Crea il tuo menu",
+      "ctaDemo": "Vedi demo",
+      "noCreditCard": "Nessuna carta di credito richiesta. Piano gratuito disponibile."
+    },
+    "features": {
+      "title": "Come funziona la generazione di immagini con IA",
+      "subtitle": "Dal nome del piatto alla foto professionale con un clic.",
+      "items": [
+        {
+          "title": "Genera immagini dai nomi dei piatti",
+          "description": "Digita il nome del piatto — «Salmone alla griglia con limone», «Pizza Margherita», «Tortino al cioccolato» — e l'IA genera una foto gastronomica professionale. Scegli tra diversi stili e sfondi."
+        },
+        {
+          "title": "Ottimizzate per un caricamento veloce",
+          "description": "Ogni immagine generata viene automaticamente compressa e convertita in formati moderni. Il tuo menu resta velocissimo su qualsiasi dispositivo, anche con foto per ogni piatto."
+        }
+      ]
+    },
+    "faq": {
+      "title": "Domande frequenti",
+      "subtitle": "Tutto ciò che devi sapere sulle immagini IA per il menu.",
+      "items": [
+        {
+          "question": "Come genero una foto di un piatto?",
+          "answer": "Apri qualsiasi piatto nella tua dashboard, tocca «Genera immagine» — e l'IA crea una foto gastronomica professionale basata sul nome e la descrizione del piatto. Scegli quella che preferisci."
+        },
+        {
+          "question": "Posso usare le mie foto?",
+          "answer": "Assolutamente. Carica le tue foto dal telefono o dal computer. La generazione con IA è opzionale — usala quando non hai una foto pronta."
+        },
+        {
+          "question": "Quante immagini posso generare?",
+          "answer": "I limiti di generazione dipendono dal tuo piano. Growth include un'allocazione mensile, e Pro offre un limite più alto. Puoi sempre caricare le tue foto senza limiti."
+        },
+        {
+          "question": "Le immagini generate sono uniche per il mio ristorante?",
+          "answer": "Sì. Ogni immagine viene generata in modo unico per il tuo piatto specifico. Nessuna foto stock — ogni immagine viene creata su misura basandosi sul tuo piatto del menu."
+        }
+      ]
+    },
+    "howItWorks": {
+      "title": "Come Funziona",
+      "subtitle": "Ottieni foto professionali dei piatti per il tuo menu in quattro semplici passaggi.",
+      "steps": [
+        {
+          "title": "Apri Qualsiasi Voce di Menu",
+          "description": "Naviga verso l'elemento per cui desideri una foto nel tuo pannello di controllo. Puoi generare immagini per nuovi piatti o sostituire foto esistenti su qualsiasi voce di menu."
+        },
+        {
+          "title": "Clicca su Genera Immagine",
+          "description": "L'IA crea una foto professionale del cibo basata sul nome e sulla descrizione del piatto. Maggiore è il dettaglio fornito nella descrizione, più preciso sarà il risultato."
+        },
+        {
+          "title": "Esamina il Risultato",
+          "description": "Anteprima dell'immagine generata prima di applicarla. Se desideri un aspetto diverso, rigenera per ottenere una nuova variazione. Ogni generazione produce un'immagine unica."
+        },
+        {
+          "title": "Usa nel Tuo Menu",
+          "description": "L'immagine è automaticamente ottimizzata, compressa in formato WebP e appare immediatamente nel tuo menu live. Gli ospiti vedono foto professionali dei piatti su ogni portata."
+        }
+      ]
+    }
+  },
+  "personalSupportPage": {
+    "seo": {
+      "title": "Supporto personale per il sito del tuo ristorante — Aiuto reale da persone vere | IQ Rest",
+      "description": "Ottieni aiuto personale da persone reali, non da chatbot. Assistenza nella configurazione, consigli per ottimizzare il menu e risposte rapide — disponibile su tutti i piani, incluso il gratuito."
+    },
+    "hero": {
+      "badge": "Supporto personale",
+      "title": "Persone reali, aiuto reale — non chatbot",
+      "subtitle": "Hai una domanda? Hai bisogno di aiuto per configurare il menu? Vuoi suggerire una funzionalità? Scrivici direttamente e ricevi una risposta personale da qualcuno che capisce di ristorazione.",
+      "cta": "Crea il tuo menu",
+      "ctaDemo": "Vedi demo",
+      "noCreditCard": "Nessuna carta di credito richiesta. Piano gratuito disponibile."
+    },
+    "features": {
+      "title": "Come funziona il supporto",
+      "subtitle": "Aiuto quando ne hai bisogno, da persone che ci tengono.",
+      "items": [
+        {
+          "title": "Scrivici direttamente dalla tua dashboard",
+          "description": "Apri la chat di supporto nella tua dashboard e descrivi la tua domanda. Una persona reale legge il tuo messaggio e risponde — di solito entro poche ore nei giorni lavorativi."
+        },
+        {
+          "title": "Aiuto con configurazione, ottimizzazione e altro",
+          "description": "Che tu abbia bisogno di aiuto per aggiungere il tuo primo piatto, consigli su come organizzare il menu o voglia suggerire una nuova funzionalità — siamo qui. Ogni domanda conta, per quanto piccola."
+        }
+      ]
+    },
+    "faq": {
+      "title": "Domande frequenti",
+      "subtitle": "Tutto ciò che devi sapere sul nostro supporto.",
+      "items": [
+        {
+          "question": "Il supporto è disponibile nel piano gratuito?",
+          "answer": "Sì. Il supporto personale è disponibile per tutti i piani, incluso il gratuito. Crediamo che ogni ristorante meriti un aiuto reale, indipendentemente dall'abbonamento."
+        },
+        {
+          "question": "Quanto velocemente rispondete?",
+          "answer": "Di solito entro poche ore nei giorni lavorativi. Leggiamo ogni messaggio personalmente e puntiamo a risolvere la tua domanda in una sola risposta."
+        },
+        {
+          "question": "Potete aiutarmi a configurare il mio menu?",
+          "answer": "Assolutamente. Se hai bisogno di aiuto per aggiungere piatti, organizzare categorie, configurare traduzioni o impostare le prenotazioni — basta chiedere. Saremo felici di guidarti."
+        },
+        {
+          "question": "Posso suggerire nuove funzionalità?",
+          "answer": "Sì, e ci fa piacere! Molte delle nostre funzionalità sono nate da suggerimenti degli utenti. Inviaci la tua idea e la considereremo per i prossimi aggiornamenti."
+        }
+      ]
+    },
+    "howItWorks": {
+      "title": "Come Funziona",
+      "subtitle": "Ricevi aiuto da una persona reale in quattro semplici passaggi.",
+      "steps": [
+        {
+          "title": "Apri la Chat di Supporto",
+          "description": "Vai alla pagina di Supporto nel tuo pannello di controllo. Vedrai un'interfaccia di chat semplice dove puoi digitare il tuo messaggio direttamente — niente moduli di ticket o categorie da scegliere."
+        },
+        {
+          "title": "Descrivi la Tua Domanda",
+          "description": "Digita il tuo messaggio. Chiedi informazioni su configurazione, funzionalità, ottimizzazione del menu, fatturazione o qualsiasi altra cosa. Non ci sono domande stupide — siamo felici di aiutarti con tutto."
+        },
+        {
+          "title": "Ricevi una Risposta Personale",
+          "description": "Una persona reale (non un chatbot) legge il tuo messaggio e risponde entro poche ore. Comprendiamo i flussi di lavoro dei ristoranti e forniamo risposte pratiche e attuabili."
+        },
+        {
+          "title": "Aiuto Continuo",
+          "description": "Richiedi suggerimenti per funzionalità, ottieni consigli per l'ottimizzazione del menu o chiedi assistenza per la configurazione in qualsiasi momento. La tua cronologia delle conversazioni è salvata, quindi abbiamo sempre il contesto delle domande precedenti."
+        }
+      ]
+    }
   }
 }

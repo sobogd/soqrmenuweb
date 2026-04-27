@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
+import { useTranslations } from "next-intl";
 import { ChevronLeftIcon, ClockIcon, MessageIcon, PlusIcon, ReceiptIcon, TrashIcon } from "./icons";
 import { ConfirmDialog, EmptyState, PageHeader } from "./ui";
 import { FloorMap } from "./tables";
@@ -22,11 +23,18 @@ import type {
 } from "./types";
 import { DashboardEvent, track } from "@/lib/dashboard-events";
 
-const ITEM_STATUSES: Record<OrderItemStatus, { label: string; cls: string }> = {
- pending: { label: "Pending", cls: "bg-secondary text-muted-foreground border-border" },
- cooking: { label: "Cooking", cls: "bg-amber-50 text-amber-700 border-amber-200" },
- ready: { label: "Ready", cls: "bg-emerald-50 text-emerald-700 border-emerald-200" },
- served: { label: "Served", cls: "bg-secondary text-muted-foreground border-border" },
+const ITEM_STATUS_KEYS: Record<OrderItemStatus, "statusPending" | "statusCooking" | "statusReady" | "statusServed"> = {
+ pending: "statusPending",
+ cooking: "statusCooking",
+ ready: "statusReady",
+ served: "statusServed",
+};
+
+const ITEM_STATUS_CLS: Record<OrderItemStatus, string> = {
+ pending: "bg-secondary text-muted-foreground border-border",
+ cooking: "bg-amber-50 text-amber-700 border-amber-200",
+ ready: "bg-emerald-50 text-emerald-700 border-emerald-200",
+ served: "bg-secondary text-muted-foreground border-border",
 };
 
 function calcItemPrice(item: OrderItem): number {
@@ -64,6 +72,7 @@ export function OrdersPage({
  defaultLang: string;
  currency: string;
 }) {
+ const t = useTranslations("dashboard.orders");
  const router = useRouter();
  const [view, setView] = useState<OrdersView>({ name: "list" });
  const [selectedTableId, setSelectedTableId] = useState<string | null>(null);
@@ -221,8 +230,8 @@ export function OrdersPage({
  return (
  <div className="max-w-2xl mx-auto">
  <PageHeader
- title="Orders"
- subtitle={`You have ${activeOrders.length} active ${activeOrders.length === 1 ? "order" : "orders"}.`}
+ title={t("title")}
+ subtitle={activeOrders.length === 1 ? t("subtitleOne", { count: activeOrders.length }) : t("subtitleOther", { count: activeOrders.length })}
  />
 
  <style>{`
@@ -253,12 +262,12 @@ export function OrdersPage({
  {!selectedTable ? (
  activeOrders.length === 0 ? (
  <EmptyState
- title="No active orders"
- subtitle="Tap a free table on the map to start an order, or wait for guests to place one via the QR menu."
+ title={t("noActive")}
+ subtitle={t("noActiveSub")}
  />
  ) : (
  <div className="text-center py-10 px-4 bg-card border border-border rounded-xl">
- <p className="text-sm text-muted-foreground">Tap a table on the map to see or start an order.</p>
+ <p className="text-sm text-muted-foreground">{t("tapTable")}</p>
  </div>
  )
  ) : (
@@ -266,17 +275,17 @@ export function OrdersPage({
  <div className="flex items-baseline justify-between gap-3 mb-2.5">
  <div>
  <div className="text-sm font-medium text-foreground">
- Table {selectedTable.number}
+ {t("tableLabel", { number: selectedTable.number })}
  {selectedTable.name ? (
  <span className="text-muted-foreground font-normal"> · {selectedTable.name}</span>
  ) : null}
  </div>
  <div className="text-xs text-muted-foreground mt-0.5">
  {selectedTableOrders.length === 0
- ? "No active orders"
- : selectedTableOrders.length +
- " active " +
- (selectedTableOrders.length === 1 ? "order" : "orders")}
+ ? t("noActiveShort")
+ : selectedTableOrders.length === 1
+ ? t("activeOrderOne", { count: selectedTableOrders.length })
+ : t("activeOrderOther", { count: selectedTableOrders.length })}
  </div>
  </div>
  </div>
@@ -309,7 +318,7 @@ export function OrdersPage({
  ) : (
  <PlusIcon size={14} />
  )}
- {selectedTableOrders.length === 0 ? "Start order" : "New order"}
+ {selectedTableOrders.length === 0 ? t("startOrder") : t("newOrder")}
  </button>
  </div>
  )}
@@ -330,6 +339,7 @@ function OrderListCard({
  onClick: () => void;
  hideTable?: boolean;
 }) {
+ const t = useTranslations("dashboard.orders");
  const total = calcOrderTotal(order);
  const itemsCount = order.items.length;
  const allReady =
@@ -347,7 +357,7 @@ function OrderListCard({
  <div className="text-sm font-medium text-foreground truncate">
  {hideTable
  ? formatTimeShort(order.createdAt)
- : "Table " + (order.tableNumber ?? "?")}
+ : t("tableLabel", { number: order.tableNumber ?? "?" })}
  </div>
  {allReady ? (
  <span className="inline-flex items-center h-5 px-2 text-[10px] font-medium border rounded-full bg-emerald-50 text-emerald-700 border-emerald-200">
@@ -373,7 +383,7 @@ function OrderListCard({
  <div className="inline-flex items-center gap-1">
  <ReceiptIcon size={11} />
  <span>
- {itemsCount} {itemsCount === 1 ? "item" : "items"}
+ {itemsCount === 1 ? t("itemOne", { count: itemsCount }) : t("itemOther", { count: itemsCount })}
  </span>
  </div>
  </div>
@@ -404,7 +414,9 @@ function OrderDetailPage({
  onComplete: () => void;
  onDelete: () => void;
 }) {
- const table = tables.find((t) => t.id === order.tableId);
+ const t = useTranslations("dashboard.orders");
+ const tc = useTranslations("dashboard.common");
+ const table = tables.find((tbl) => tbl.id === order.tableId);
  const total = calcOrderTotal(order);
  const allServed = order.items.length > 0 && order.items.every((it) => it.status === "served");
  const [confirmDelete, setConfirmDelete] = useState(false);
@@ -426,7 +438,7 @@ function OrderDetailPage({
  className="inline-flex items-center gap-1 h-8 -ml-1 pl-1 pr-2 text-xs font-medium text-muted-foreground rounded-md transition-colors"
  >
  <ChevronLeftIcon size={14} />
- Back
+ {tc("back")}
  </button>
  <button
  type="button"
@@ -434,16 +446,16 @@ function OrderDetailPage({
  disabled={order.items.length === 0}
  className="h-8 px-3 text-xs font-medium text-primary-foreground bg-primary rounded-lg transition-colors"
  >
- Complete order
+ {t("completeOrder")}
  </button>
  </div>
  </div>
 
  <ConfirmDialog
  open={confirmDelete}
- title="Delete order?"
- message="This will permanently remove the order and all its items. This action cannot be undone."
- confirmLabel="Delete"
+ title={t("deleteOrderTitle")}
+ message={t("deleteOrderMessage")}
+ confirmLabel={tc("delete")}
  onCancel={() => setConfirmDelete(false)}
  onConfirm={() => {
  setConfirmDelete(false);
@@ -453,19 +465,19 @@ function OrderDetailPage({
 
  <div className="max-w-2xl mx-auto pt-7 md:pt-6">
  <div className="mb-5">
- <div className="text-xs text-muted-foreground">Orders</div>
+ <div className="text-xs text-muted-foreground">{t("ordersBreadcrumb")}</div>
  <h2 className="text-xl font-medium text-foreground mt-1">
- Table {table ? table.number : order.tableNumber ?? "?"}
+ {t("tableLabel", { number: table ? table.number : order.tableNumber ?? "?" })}
  {table && table.name ? <span className="text-muted-foreground font-normal"> · {table.name}</span> : null}
  </h2>
  <div className="text-xs text-muted-foreground mt-1">
- Started at {formatTimeShort(order.createdAt)} · {minutesSince(order.createdAt)} min ago
+ {t("startedAt", { time: formatTimeShort(order.createdAt), minutes: minutesSince(order.createdAt) })}
  </div>
  </div>
 
  {order.items.length === 0 ? (
  <div className="text-center py-8 bg-card border border-border rounded-xl mb-3">
- <p className="text-sm text-muted-foreground">No items yet.</p>
+ <p className="text-sm text-muted-foreground">{t("noItems")}</p>
  </div>
  ) : (
  <div className="space-y-2 mb-3">
@@ -488,12 +500,12 @@ function OrderDetailPage({
  className="w-full h-11 text-sm font-medium text-muted-foreground border border-dashed border-input rounded-xl flex items-center justify-center gap-2 transition-colors"
  >
  <PlusIcon size={14} />
- Add item
+ {t("addItem")}
  </button>
 
  {order.items.length > 0 ? (
  <div className="mt-5 pt-4 border-t border-border flex items-center justify-between">
- <div className="text-sm font-medium text-foreground">Total</div>
+ <div className="text-sm font-medium text-foreground">{t("total")}</div>
  <div className="text-lg font-medium text-foreground tabular-nums">
  {formatPrice(total, currencySymbol)}
  </div>
@@ -501,7 +513,7 @@ function OrderDetailPage({
  ) : null}
 
  {allServed ? (
- <p className="text-xs text-emerald-700 text-center mt-4">All items served. Ready to complete.</p>
+ <p className="text-xs text-emerald-700 text-center mt-4">{t("allServed")}</p>
  ) : null}
 
  <div className="mt-6 flex justify-center">
@@ -511,7 +523,7 @@ function OrderDetailPage({
  className="inline-flex items-center gap-1.5 h-9 px-3 text-xs font-medium text-red-600 rounded-lg transition-colors"
  >
  <TrashIcon size={13} />
- Delete order
+ {t("deleteOrder")}
  </button>
  </div>
  </div>
@@ -532,7 +544,9 @@ function OrderItemCard({
  onStatusChange: (status: OrderItemStatus) => void;
  onRemove: () => void;
 }) {
- const status = ITEM_STATUSES[item.status] || ITEM_STATUSES.pending;
+ const t = useTranslations("dashboard.orders");
+ const statusKey = ITEM_STATUS_KEYS[item.status] || ITEM_STATUS_KEYS.pending;
+ const statusCls = ITEM_STATUS_CLS[item.status] || ITEM_STATUS_CLS.pending;
  const price = calcItemPrice(item);
  const nextStatus: Record<OrderItemStatus, OrderItemStatus> = {
  pending: "cooking",
@@ -578,19 +592,19 @@ function OrderItemCard({
  onClick={() => onStatusChange(nextStatus[item.status])}
  className={
  "inline-flex items-center h-7 px-2.5 text-[11px] font-medium border rounded-full transition-opacity " +
- status.cls
+ statusCls
  }
- title="Tap to change status"
+ title={t("tapToChangeStatus")}
  >
- {status.label}
+ {t(statusKey)}
  </button>
  <div className="flex-1" />
  <button
  type="button"
  onClick={onRemove}
  className="w-7 h-7 flex items-center justify-center rounded-md text-muted-foreground transition-colors"
- aria-label="Remove item"
- title="Remove item"
+ aria-label={t("removeItem")}
+ title={t("removeItem")}
  >
  <TrashIcon size={13} />
  </button>
@@ -622,8 +636,10 @@ function AddItemFlow({
  onAdd: (item: OrderItem) => void;
  onCancel: () => void;
 }) {
- const table = tables.find((t) => t.id === order.tableId);
- const tableLabel = "Table " + (table ? table.number : order.tableNumber ?? "?");
+ const t = useTranslations("dashboard.orders");
+ const tc = useTranslations("dashboard.common");
+ const table = tables.find((tbl) => tbl.id === order.tableId);
+ const tableLabel = t("tableLabel", { number: table ? table.number : order.tableNumber ?? "?" });
 
  function goCategory() {
  setView({ name: "addItem", orderId: order.id, step: "category" });
@@ -645,7 +661,7 @@ function AddItemFlow({
  return (
  <DishWizard
  dish={dish}
- baseBreadcrumb={tableLabel + " / Add item"}
+ baseBreadcrumb={tableLabel + " / " + t("addItemBreadcrumb")}
  defaultLang={defaultLang}
  currencySymbol={currencySymbol}
  onBack={() => goDish(view.categoryId)}
@@ -675,12 +691,12 @@ function AddItemFlow({
  return (
  <PickerStep
  title={getMlWithFallback(cat.name, defaultLang, defaultLang)}
- breadcrumb={tableLabel + " / Add item / " + getMlWithFallback(cat.name, defaultLang, defaultLang)}
+ breadcrumb={tableLabel + " / " + t("addItemBreadcrumb") + " / " + getMlWithFallback(cat.name, defaultLang, defaultLang)}
  onBack={goCategory}
  onCancel={onCancel}
  >
  {visibleDishes.length === 0 ? (
- <p className="text-sm text-muted-foreground text-center py-6">No dishes in this category.</p>
+ <p className="text-sm text-muted-foreground text-center py-6">{t("noDishesInCategory")}</p>
  ) : (
  <div className="space-y-1">
  {visibleDishes.map((d) => (
@@ -706,8 +722,8 @@ function AddItemFlow({
 
  return (
  <PickerStep
- title="Add item"
- breadcrumb={tableLabel + " / Add item"}
+ title={t("addItem")}
+ breadcrumb={tableLabel}
  onBack={onCancel}
  onCancel={onCancel}
  hideCancel
@@ -746,6 +762,7 @@ function PickerStep({
  hideCancel?: boolean;
  children: React.ReactNode;
 }) {
+ const tc = useTranslations("dashboard.common");
  useEffect(() => {
  window.scrollTo({ top: 0, behavior: "auto" });
  }, [title]);
@@ -762,7 +779,7 @@ function PickerStep({
  className="inline-flex items-center gap-1 h-8 -ml-1 pl-1 pr-2 text-xs font-medium text-muted-foreground rounded-md transition-colors"
  >
  <ChevronLeftIcon size={14} />
- Back
+ {tc("back")}
  </button>
  </div>
  </div>
@@ -795,6 +812,8 @@ function DishWizard({
  onBack: () => void;
  onAdd: (data: { options: OrderItemOptionSnapshot[]; notes: string }) => void;
 }) {
+ const t = useTranslations("dashboard.orders");
+ const tc = useTranslations("dashboard.common");
  const requiredOpts = (dish.options || []).filter((o) => o.required);
  const extraOpts = (dish.options || []).filter((o) => !o.required);
 
@@ -943,7 +962,7 @@ function DishWizard({
  className="inline-flex items-center gap-1 h-8 -ml-1 pl-1 pr-2 text-xs font-medium text-muted-foreground rounded-md transition-colors"
  >
  <ChevronLeftIcon size={14} />
- Back
+ {tc("back")}
  </button>
  {substep.kind === "required" && currentOpt && currentOpt.type === "multi" ? (
  <button
@@ -955,7 +974,7 @@ function DishWizard({
  }
  className="h-8 px-3 text-xs font-medium text-primary-foreground bg-primary rounded-lg transition-colors"
  >
- Continue
+ {t("continue")}
  </button>
  ) : null}
  {substep.kind === "final" ? (
@@ -964,7 +983,7 @@ function DishWizard({
  onClick={handleAdd}
  className="h-8 px-3 text-xs font-medium text-primary-foreground bg-primary rounded-lg transition-colors"
  >
- Add · {formatPrice(totalPrice, currencySymbol)}
+ {t("addPrice", { price: formatPrice(totalPrice, currencySymbol) })}
  </button>
  ) : null}
  </div>
@@ -976,10 +995,10 @@ function DishWizard({
  <h2 className="text-xl font-medium text-foreground mt-1">
  {substep.kind === "required" && currentOpt
  ? getMlWithFallback(currentOpt.name, defaultLang, defaultLang)
- : "Add extras"}
+ : t("addExtras")}
  </h2>
  {substep.kind === "required" && currentOpt && currentOpt.type === "multi" ? (
- <p className="text-xs text-muted-foreground mt-1">Pick one or more, then Continue.</p>
+ <p className="text-xs text-muted-foreground mt-1">{t("multiPickHint")}</p>
  ) : null}
  </div>
 
@@ -1045,7 +1064,7 @@ function DishWizard({
  </div>
  {delta > 0 ? (
  <div className="text-[11px] text-muted-foreground tabular-nums">
- +{delta.toFixed(2)} each
+ {t("perEach", { amount: delta.toFixed(2) })}
  </div>
  ) : null}
  </div>
@@ -1055,7 +1074,7 @@ function DishWizard({
  onClick={() => setQty(v.id, qty - 1)}
  disabled={qty <= 0}
  className="w-8 h-8 rounded-md border border-border text-foreground transition-colors disabled:opacity-30"
- aria-label="Decrease"
+ aria-label={t("decrease")}
  >
  −
  </button>
@@ -1066,7 +1085,7 @@ function DishWizard({
  type="button"
  onClick={() => setQty(v.id, qty + 1)}
  className="w-8 h-8 rounded-md border border-border text-foreground transition-colors"
- aria-label="Increase"
+ aria-label={t("increase")}
  >
  +
  </button>
@@ -1081,13 +1100,13 @@ function DishWizard({
  ) : null}
 
  <div className="bg-card border border-border rounded-2xl p-5 md:p-6">
- <label htmlFor="item-notes" className="block text-sm font-medium text-foreground mb-1.5">Notes</label>
+ <label htmlFor="item-notes" className="block text-sm font-medium text-foreground mb-1.5">{t("notesLabel")}</label>
  <textarea
  id="item-notes"
  rows={2}
  value={notes}
  onChange={(e) => setNotes(e.target.value)}
- placeholder="e.g. no onions, well done"
+ placeholder={t("notesPlaceholder")}
  className={inputClass + " h-auto py-2 resize-none"}
  />
  </div>
@@ -1113,6 +1132,7 @@ export function KitchenPage({
  categories: Category[];
  defaultLang: string;
 }) {
+ const t = useTranslations("dashboard.orders");
  const [, setTick] = useState(0);
  const [statusFilter, setStatusFilter] = useState<OrderItemStatus[]>([]);
  const [categoryFilter, setCategoryFilter] = useState<string[]>([]);
@@ -1166,10 +1186,10 @@ export function KitchenPage({
  .filter((o) => o._filteredItems.length > 0)
  .sort((a, b) => new Date(a.createdAt).getTime() - new Date(b.createdAt).getTime());
 
- const STATUS_FILTERS: { id: OrderItemStatus; label: string }[] = [
- { id: "pending", label: "Pending" },
- { id: "cooking", label: "Cooking" },
- { id: "ready", label: "Ready" },
+ const STATUS_FILTERS: { id: OrderItemStatus; labelKey: "statusPending" | "statusCooking" | "statusReady" }[] = [
+ { id: "pending", labelKey: "statusPending" },
+ { id: "cooking", labelKey: "statusCooking" },
+ { id: "ready", labelKey: "statusReady" },
  ];
 
  const pillBase = "shrink-0 inline-flex items-center h-7 px-3 rounded-full text-xs font-medium transition-colors";
@@ -1197,7 +1217,7 @@ export function KitchenPage({
  onClick={() => toggleStatus(s.id)}
  className={pillBase + " " + (on ? pillOn : pillOff)}
  >
- {s.label}
+ {t(s.labelKey)}
  </button>
  );
  })}
@@ -1225,8 +1245,8 @@ export function KitchenPage({
  {visibleOrders.length === 0 ? (
  <div className="max-w-2xl mx-auto pt-7 md:pt-6">
  <EmptyState
- title="Kitchen is clear"
- subtitle="Items will appear here as guests place orders."
+ title={t("kitchenClear")}
+ subtitle={t("kitchenClearSub")}
  />
  </div>
  ) : (
@@ -1264,6 +1284,7 @@ function KitchenOrderCard({
  defaultLang: string;
  onItemStatusChange: (itemId: string, status: OrderItemStatus) => void;
 }) {
+ const t = useTranslations("dashboard.orders");
  const items = filteredItems || order.items.filter((it) => it.status !== "served");
  const allReady = items.length > 0 && items.every((it) => it.status === "ready");
  const elapsed = minutesSince(order.createdAt);
@@ -1274,10 +1295,10 @@ function KitchenOrderCard({
  <div className="px-3.5 py-3 border-b border-border/60">
  <div className="flex items-center justify-between gap-2">
  <div className="text-base font-medium text-foreground">
- Table {table ? table.number : order.tableNumber ?? "?"}
+ {t("tableLabel", { number: table ? table.number : order.tableNumber ?? "?" })}
  </div>
  <div className="text-xs text-muted-foreground tabular-nums">
- {formatTimeShort(order.createdAt)} · {elapsed} min
+ {t("elapsed", { time: formatTimeShort(order.createdAt), minutes: elapsed })}
  </div>
  </div>
  {table?.name ? <div className="text-xs text-muted-foreground mt-0.5">{table.name}</div> : null}
@@ -1306,13 +1327,15 @@ function KitchenItem({
  defaultLang: string;
  onStatusChange: (status: OrderItemStatus) => void;
 }) {
+ const t = useTranslations("dashboard.orders");
  const nextStatus: Record<OrderItemStatus, OrderItemStatus> = {
  pending: "cooking",
  cooking: "ready",
  ready: "pending",
  served: "pending",
  };
- const status = ITEM_STATUSES[item.status] || ITEM_STATUSES.pending;
+ const statusKey = ITEM_STATUS_KEYS[item.status] || ITEM_STATUS_KEYS.pending;
+ const statusCls = ITEM_STATUS_CLS[item.status] || ITEM_STATUS_CLS.pending;
 
  return (
  <button
@@ -1327,10 +1350,10 @@ function KitchenItem({
  <span
  className={
  "shrink-0 inline-flex items-center h-5 px-1.5 text-[10px] font-medium border rounded-full " +
- status.cls
+ statusCls
  }
  >
- {status.label}
+ {t(statusKey)}
  </span>
  </div>
 

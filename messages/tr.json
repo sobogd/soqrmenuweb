@@ -2515,5 +2515,895 @@
     },
     "back": "Back",
     "continue": "Devam et"
+  },
+  "onlineOrders": {
+    "seo": {
+      "title": "Restoranlar için Online Sipariş — QR Menü | IQ Rest",
+      "description": "Müşterileriniz QR menünüzden doğrudan sipariş versin. Sıfır komisyon, anlık fiyatlar ve panelinizdeki anında sipariş yönetimi."
+    },
+    "hero": {
+      "badge": "Online Sipariş",
+      "title": "QR Menünüzü Online Sipariş Sistemine Dönüştürün",
+      "subtitle": "Müşteriler tarar, menünüze göz atar ve saniyeler içinde sipariş verir. Uygulama indirme yok, komisyon yok, karmaşıklık yok.",
+      "cta": "Menünüzü Oluşturun",
+      "ctaDemo": "Demoyu Görüntüle",
+      "noCreditCard": "Kredi kartı gerekmez. Ücretsiz plan mevcuttur."
+    },
+    "benefits": {
+      "title": "Restoranlar Neden QR Menü Siparişini Tercih Ediyor",
+      "subtitle": "Siz ve misafirleriniz için işleri basit tutan doğrudan bir sipariş kanalı.",
+      "items": [
+        {
+          "title": "Uygulama Gerekmez",
+          "description": "Misafirler sadece QR kodu tarar — indirme yok, kayıt yok. Herhangi bir telefon tarayıcısında anında çalışır."
+        },
+        {
+          "title": "Anlık Fiyatlar",
+          "description": "Fiyatları ve ürün durumunu anında güncelleyin. Değişiklikler QR menünüze hemen yansır."
+        },
+        {
+          "title": "Masa Başı Sipariş",
+          "description": "Her masa kendi QR koduna sahiptir. Misafirler tarar, sipariş verir ve siz panelinizde masa numarasını görürsünüz."
+        },
+        {
+          "title": "Özel Tasarım",
+          "description": "Özel renkler, arka planlar ve logo ile menünüzü markanıza uyumlu hale getirin."
+        }
+      ]
+    },
+    "features": {
+      "title": "Online Sipariş Nasıl Çalışır",
+      "subtitle": "İki basit adımla menünüz mutfağınıza bağlanır.",
+      "items": [
+        {
+          "title": "Misafirler Ürünlere Göz Atar ve Seçer",
+          "description": "Müşteriler QR kodunuzu tarar ve fotoğraflar, açıklamalar ve fiyatlarla tüm menünüzü görür. Tek dokunuşla sipariş listesine ürün eklerler — kayıt gerekmez."
+        },
+        {
+          "title": "Siparişler Panelinizde Görünür",
+          "description": "Hazır olduğunda misafirler sipariş butonuna dokunur. Sipariş anında panelinizde ürün detayları, masa numarası ve notlarla birlikte görünür. Kabul edin, hazırlamaya başlayın ve tamamlandı olarak işaretleyin."
+        }
+      ]
+    },
+    "faq": {
+      "title": "Sıkça Sorulan Sorular",
+      "subtitle": "Online sipariş hakkında bilmeniz gereken her şey.",
+      "items": [
+        {
+          "question": "Ekstra donanım veya uygulamaya ihtiyacım var mı?",
+          "answer": "Hayır. Her şey web tarayıcısı üzerinden çalışır. Misafirler telefon kameralarıyla QR kodu tarar, siz de herhangi bir cihazdan IQ Rest panelinde siparişleri yönetirsiniz."
+        },
+        {
+          "question": "Komisyon veya sipariş başı ücret var mı?",
+          "answer": "Kesinlikle hayır. IQ Rest siparişlerinizden asla komisyon almaz. Sadece abonelik planınızı ödersiniz ve siparişlerden elde edilen tüm gelir sizde kalır."
+        },
+        {
+          "question": "Müşteriler siparişlerini özelleştirebilir veya not ekleyebilir mi?",
+          "answer": "Evet. Misafirler ürünleri seçebilir, miktarları belirleyebilir ve özel notlar veya istekler ekleyebilir. Ayrıca müşteri adı, telefon veya teslimat adresi gibi bilgileri zorunlu kılabilirsiniz."
+        },
+        {
+          "question": "Restoranda yemek, paket servis ve teslimat için çalışır mı?",
+          "answer": "Evet. Restoranda yemek için misafirler masalarındaki QR kodu tarar. Paket servis veya teslimat için menünüze doğrudan bir bağlantı paylaşın. İhtiyaca göre ad, telefon ve adres alanlarını etkinleştirebilirsiniz."
+        }
+      ]
+    },
+    "howItWorks": {
+      "title": "Nasıl Çalışır",
+      "subtitle": "Kurulumdan ilk siparişinizi almanıza kadar beş basit adımda.",
+      "steps": [
+        {
+          "title": "Çevrimiçi Siparişleri Etkinleştir",
+          "description": "Siparişleri Tasarım ayarlarınızda açın. Tercih ettiğiniz modu seçin: siparişleriniz panonuzda görünebilir, WhatsApp'a yönlendirilebilir veya her ikisi aynı anda yapılabilir."
+        },
+        {
+          "title": "Sipariş Formunu Yapılandır",
+          "description": "Müşterilerin sipariş verirken doldurması gereken alanları seçin. İsim her zaman gereklidir ve isteğe bağlı olarak telefon numarası ve teslimat adresi isteyebilirsiniz."
+        },
+        {
+          "title": "Masalar için QR Kodları Yazdır",
+          "description": "Restoranınızdaki her masa kendine ait benzersiz bir QR kodu alır. Misafirler bunu taradığında, siparişleri otomatik olarak doğru masa numarası ile birlikte gelir."
+        },
+        {
+          "title": "Müşteriler Sipariş Verir",
+          "description": "Misafirler QR kodunu tarar, menünüzü fotoğraflar ve fiyatlarla gözden geçirir, ürünleri seçer, not ekler ve siparişlerini gönderir. Uygulama indirmeye veya hesap oluşturmaya gerek yok."
+        },
+        {
+          "title": "Siparişleri Panonuzda Yönetin",
+          "description": "Siparişler anında panonuzda görünür. Her siparişin durumunu yeni, devam eden veya tamamlanan olarak güncelleyebilirsiniz. Gelirin %100'ünü siz alırsınız — sıfır komisyon."
+        }
+      ]
+    }
+  },
+  "reservationsPage": {
+    "seo": {
+      "title": "Restoranlar için Masa Rezervasyon Sistemi — Online Rezervasyon | IQ Rest",
+      "description": "Misafirlerinizin doğrudan web sitenizden masa ayırtmasını sağlayın. Otomatik veya manuel onay, e-posta bildirimleri ve tam takvim yönetimi — hepsi dahil."
+    },
+    "hero": {
+      "badge": "Masa Rezervasyonu",
+      "title": "Web Sitenizden 7/24 Masa Rezervasyonu Alın",
+      "subtitle": "Misafirler tarih, saat ve kişi sayısı seçerek anında rezervasyon yapar. Her şeyi kontrol panelinizden yönetin, telefon görüşmesine gerek yok.",
+      "cta": "Menünüzü Oluşturun",
+      "ctaDemo": "Demo Görüntüle",
+      "noCreditCard": "Kredi kartı gerekmez. Ücretsiz plan mevcuttur."
+    },
+    "features": {
+      "title": "Masa Rezervasyonu Nasıl Çalışır",
+      "subtitle": "Misafir talebinden onaylı rezervasyona iki adım.",
+      "items": [
+        {
+          "title": "Misafirler Web Sitenizden Rezervasyon Yapar",
+          "description": "Müşteriler restoran sayfanızı ziyaret eder, 'Masa Ayırt' butonuna dokunur, tarih ve saat seçer, bilgilerini girer ve gönderir. Uygulama gerekmez — herhangi bir cihazda herhangi bir tarayıcıda çalışır."
+        },
+        {
+          "title": "Rezervasyonları Kontrol Panelinizden Yönetin",
+          "description": "Her rezervasyon kontrol panelinizde misafir adı, telefonu, kişi sayısı, tarih ve notlarla birlikte görünür. Tek dokunuşla onaylayın veya reddedin. Otomatik onay ayarlayın ya da her rezervasyonu manuel olarak inceleyin."
+        }
+      ]
+    },
+    "faq": {
+      "title": "Sık Sorulan Sorular",
+      "subtitle": "Masa rezervasyonu hakkında bilmeniz gereken her şey.",
+      "items": [
+        {
+          "question": "Müşterilerin rezervasyon için hesap oluşturması gerekiyor mu?",
+          "answer": "Hayır. Misafirler sadece adını, telefon numarasını, kişi sayısını ve tercih ettiği saati doldurur. Hesap veya uygulama indirmesi gerekmez."
+        },
+        {
+          "question": "Mevcut zaman dilimlerini ve kapasiteyi ayarlayabilir miyim?",
+          "answer": "Evet. Çalışma saatlerinizi, rezervasyon aralığı süresini ve masa kapasitesini belirleyin. Sistem misafirlere yalnızca uygun zaman dilimlerini gösterir."
+        },
+        {
+          "question": "Biri rezervasyon yaptığında bildirim alır mıyım?",
+          "answer": "Evet. Her yeni rezervasyon için bir e-posta alırsınız. Rezervasyonu onayladığınızda misafirler de bir onay e-postası alır."
+        },
+        {
+          "question": "Hem otomatik hem de manuel onay kullanabilir miyim?",
+          "answer": "Evet. Rezervasyonları müsaitliğe göre anında onaylamak için otomatik modu seçin veya her talebi kendiniz inceleyip onaylamak için manuel modu tercih edin."
+        }
+      ]
+    },
+    "howItWorks": {
+      "title": "Nasıl Çalışır",
+      "subtitle": "Çevrimiçi rezervasyonları ayarlayın ve beş adımda rezervasyon almaya başlayın.",
+      "steps": [
+        {
+          "title": "Rezervasyonları Aktif Et",
+          "description": "Restoran ayarlarınızda rezervasyonları açın. Anında onaylanan otomatik onay ile her talebi gözden geçirdiğiniz manuel mod arasında seçim yapın."
+        },
+        {
+          "title": "Masalarınızı Ekleyin",
+          "description": "Kapasite ve alan bilgisi ile masalar oluşturun — örneğin, 'Masa 5, 4 misafir, Teras'. Her masa rezerve edilebilir hale gelir ve sistem otomatik olarak çift rezervasyonları engeller."
+        },
+        {
+          "title": "Çalışma Saatlerinizi Belirleyin",
+          "description": "Rezervasyonlar için mevcut saatlerinizi tanımlayın ve zaman dilimi süresini seçin — 15 dakikadan 8 saate kadar. Sadece çalışma saatleriniz içindeki zaman dilimleri misafirlere gösterilir."
+        },
+        {
+          "title": "Misafirler Çevrimiçi Rezervasyon Yapar",
+          "description": "Müşteriler restoran sayfanızı ziyaret eder, tarih, saat ve grup büyüklüğünü seçer, adlarını ve telefon numaralarını girer ve gönderir. Hesap veya uygulama indirme gerektirmez — her tarayıcıda çalışır."
+        },
+        {
+          "title": "Rezervasyonları Kontrol Panelinizde Yönetin",
+          "description": "Tüm rezervasyonları kontrol panelinizde görüntüleyin. Rezervasyonları onaylayın, iptal edin veya tamamlandı olarak işaretleyin. Hem siz hem de misafir her rezervasyon güncellemesi için e-posta bildirimleri alırsınız."
+        }
+      ]
+    }
+  },
+  "colorSchemePage": {
+    "seo": {
+      "title": "Özel QR Menü Tasarımı ve Marka Renkleri — Restoran Markalaşma | IQ Rest",
+      "description": "QR menünüzü restoran markanıza uyarlayın. Vurgu renkleri seçin ve tüm dijital menünüzde tutarlı bir görünüm oluşturun."
+    },
+    "hero": {
+      "badge": "Özel Tasarım",
+      "title": "QR Menünüzü Restoran Markanıza Uyarlayın",
+      "subtitle": "Marka renginizi seçin, tüm menünüz — butonlar, vurgular, bağlantılar — anında güncellenir.",
+      "cta": "Menünüzü Oluşturun",
+      "ctaDemo": "Demo Görüntüle",
+      "noCreditCard": "Kredi kartı gerekmez. Ücretsiz plan mevcuttur."
+    },
+    "features": {
+      "title": "Özel Markalaşma Nasıl Çalışır",
+      "subtitle": "Menünüz, renkleriniz — her sayfada tutarlı.",
+      "items": [
+        {
+          "title": "Vurgu Renginizi Seçin",
+          "description": "12 özenle seçilmiş hazır renk arasından seçim yapın veya hex koduyla tam marka renginizi girin. Menünüzdeki her buton, bağlantı ve vurgu anında uyarlanır — tasarım becerisi gerekmez."
+        }
+      ]
+    },
+    "faq": {
+      "title": "Sık Sorulan Sorular",
+      "subtitle": "Menü özelleştirme hakkında bilmeniz gereken her şey.",
+      "items": [
+        {
+          "question": "Tam marka rengimi kullanabilir miyim?",
+          "answer": "Evet. Herhangi bir hex renk kodu girin veya 12 özenle seçilmiş hazır renkten birini seçin. Vurgu renginiz menünüzün tüm sayfalarına uygulanır."
+        },
+        {
+          "question": "Yayınladıktan sonra renkleri değiştirebilir miyim?",
+          "answer": "Kesinlikle. Kontrol panelinizden istediğiniz zaman vurgu renginizi değiştirin. Güncellemeler canlı menünüzde anında görünür — yeniden yayınlama gerekmez."
+        },
+        {
+          "question": "QR kodum da marka renklerine uyar mı?",
+          "answer": "QR kodunuz ayrı olarak oluşturulur ve bağımsız olarak özelleştirilebilir. Vurgu rengi dijital menü sayfalarınıza, gezintinize ve etkileşimli öğelerinize uygulanır."
+        }
+      ]
+    },
+    "howItWorks": {
+      "title": "Nasıl Çalışır",
+      "subtitle": "Menünüzü markanızla üç basit adımda eşleştirin.",
+      "steps": [
+        {
+          "title": "Tasarım Ayarlarını Açın",
+          "description": "Kontrol panelinizdeki Tasarım sayfasına gidin. Vurgu rengi seçici ön planda — tüm mevcut seçenekleri hemen göreceksiniz."
+        },
+        {
+          "title": "Marka Renginizi Seçin",
+          "description": "Okunabilirlik ve erişilebilirlik için tasarlanmış 12 önceden belirlenmiş renk arasından seçim yapın veya mükemmel bir marka uyumu için tam hex kodunuzu girin."
+        },
+        {
+          "title": "Anlık Önizleme",
+          "description": "Vurgu renginiz, menünün tamamında butonlar, bağlantılar ve vurgular için uygulanır. Hem açık hem de koyu temalarda çalışır ve değişiklikler canlı menünüzde anında görünür."
+        }
+      ]
+    }
+  },
+  "easyMenuPage": {
+    "seo": {
+      "title": "Restoranınız için QR Menü Oluşturun — Ücretsiz Menü Yapıcı | IQ Rest",
+      "description": "Restoranınızın dijital QR menüsünü dakikalar içinde oluşturun. Kategoriler, yemekler, fotoğraflar, fiyatlar ekleyin — ve taranabilir bir QR kod paylaşın. Ücretsiz başlayın."
+    },
+    "hero": {
+      "badge": "Menü Oluşturucu",
+      "title": "Restoranınız için Dakikalar İçinde Dijital QR Menü Oluşturun",
+      "subtitle": "Kategorilerinizi ve yemeklerinizi ekleyin, fiyatları belirleyin, fotoğrafları yükleyin — QR menünüz paylaşıma hazır. İstediğiniz zaman düzenleyin, değişiklikler anında görünür.",
+      "cta": "Menünüzü Oluşturun",
+      "ctaDemo": "Demo Görüntüle",
+      "noCreditCard": "Kredi kartı gerekmez. Ücretsiz plan mevcuttur."
+    },
+    "features": {
+      "title": "Menü Editörü Nasıl Çalışır",
+      "subtitle": "Menünüzü hızla çevrimiçi yapan basit araçlar.",
+      "items": [
+        {
+          "title": "Kategoriler ve Yemekler Ekleyin",
+          "description": "Başlangıçlar, Ana Yemekler, İçecekler gibi kategoriler oluşturun — ardından isimler, açıklamalar, fiyatlar ve fotoğraflarla yemekler ekleyin. Sürükle bırak ile sıralayın. Öğeleri silmeden açıp kapatın."
+        },
+        {
+          "title": "Değişiklikler Anında Yayına Girer",
+          "description": "Yaptığınız her düzenleme, canlı QR menünüzde saniyeler içinde görünür. Bir fiyatı güncelleyin, günlük özel ekleyin veya tükenen bir yemeği gizleyin — müşterileriniz her zaman en güncel versiyonu görür."
+        }
+      ]
+    },
+    "faq": {
+      "title": "Sık Sorulan Sorular",
+      "subtitle": "QR menü oluşturma hakkında bilmeniz gereken her şey.",
+      "items": [
+        {
+          "question": "Restoranım için nasıl QR menü oluştururum?",
+          "answer": "E-postanızla kaydolun, restoranınızı adlandırın ve kategoriler ile yemekler eklemeye başlayın. QR menünüz otomatik olarak oluşturulur — QR kodu yazdırın ve masalarınıza yerleştirin."
+        },
+        {
+          "question": "Menü öğelerime fotoğraf ekleyebilir miyim?",
+          "answer": "Evet. Telefonunuzdan veya bilgisayarınızdan doğrudan fotoğraf yükleyin. Görseller her cihazda hızlı yükleme için otomatik olarak optimize edilir."
+        },
+        {
+          "question": "Kaç öğe ekleyebilirim?",
+          "answer": "Kategori veya menü öğesi sayısında sınır yoktur. İhtiyacınız kadar yemek ekleyin — menünüz hızlı ve düzenli kalır."
+        },
+        {
+          "question": "Tükenen bir yemeği geçici olarak gizleyebilir miyim?",
+          "answer": "Evet. Herhangi bir öğeyi tek dokunuşla kapatın. Herkese açık menüden kaybolur ancak kontrol panelinizde kalır — hazır olduğunuzda tekrar açın."
+        }
+      ]
+    },
+    "howItWorks": {
+      "title": "Nasıl Çalışır",
+      "subtitle": "Restoran menünüzü beş basit adımda oluşturun ve yayınlayın.",
+      "steps": [
+        {
+          "title": "Kategoriler Oluşturun",
+          "description": "Menünüzü düzenlemek için Başlangıçlar, Ana Yemekler, Tatlılar ve İçecekler gibi kategoriler ekleyin. İhtiyacınıza göre istediğiniz kadar kategori oluşturabilir ve sürükleyip bırakarak sıralarını değiştirebilirsiniz."
+        },
+        {
+          "title": "Menü Öğeleri Ekleyin",
+          "description": "Her bir öğe için yemek adını, açıklamasını ve fiyatını girin. Alerjenleri işaretleyin, eğer varsa — misafirler menüde alerjen simgelerini otomatik olarak görecektir."
+        },
+        {
+          "title": "Fotoğrafları Yükleyin veya Oluşturun",
+          "description": "Telefonunuzdan veya bilgisayarınızdan kendi yemek fotoğraflarınızı yükleyin veya yemek adından profesyonel bir yemek görüntüsü oluşturmak için AI kullanın. Görüntüler otomatik olarak optimize edilir."
+        },
+        {
+          "title": "Sürükleyip Bırakarak Düzenleyin",
+          "description": "Kategorileri ve öğeleri yerlerine sürükleyerek yeniden sıralayın. Herhangi bir öğeyi silmeden açıp kapatabilirsiniz — günlük özel menüler veya tükenmiş yemekler için mükemmeldir."
+        },
+        {
+          "title": "Menünüzü Yayınlayın",
+          "description": "Değişiklikler anında canlı QR menünüzde görünür. 'Yayınla' butonu yoktur — her düzenleme gerçek zamanlı olarak yayına alınır. QR kodunuzu yazdırın ve masalarınıza yerleştirin."
+        }
+      ]
+    }
+  },
+  "aiTranslationPage": {
+    "seo": {
+      "title": "Restoranlar için Yapay Zeka Menü Çevirisi — QR Menü Çevirisi | IQ Rest",
+      "description": "Restoran menünüzü tek tıkla 25'ten fazla dile çevirin. Yapay zeka yemek bağlamını anlar — yemek adları, açıklamalar ve kategoriler doğru şekilde çevrilir."
+    },
+    "hero": {
+      "badge": "Yapay Zeka Çevirisi",
+      "title": "Menünüzü Tek Tıkla 25'ten Fazla Dile Çevirin",
+      "subtitle": "Yapay zekamız yemek bağlamını anlar — yemek adlarını, açıklamaları ve kategorileri kelime kelime değil, doğal olarak çevirir. Her turiste ve uluslararası misafire ulaşın.",
+      "cta": "Menünüzü Oluşturun",
+      "ctaDemo": "Demo Görüntüle",
+      "noCreditCard": "Kredi kartı gerekmez. Ücretsiz plan mevcuttur."
+    },
+    "features": {
+      "title": "Yapay Zeka Çevirisi Nasıl Çalışır",
+      "subtitle": "Kendi dilinizden dünyaya saniyeler içinde.",
+      "items": [
+        {
+          "title": "Tüm Menünüz İçin Tek Tıkla Çeviri",
+          "description": "Hedef dili seçin, çevir'e dokunun ve tüm menünüz — kategoriler, yemek adları, açıklamalar — anında çevrilir. Yapay zeka mutfak terimlerini korur ve her dile doğal şekilde uyarlar."
+        },
+        {
+          "title": "Her Çeviriyi Düzenleyin ve İnce Ayar Yapın",
+          "description": "Her yapay zeka çevirisi tamamen düzenlenebilir. Sonucu inceleyin, herhangi bir ifadeyi ayarlayın ve kaydedin. Menünün diğer bölümlerini yeniden çevirseniz bile değişiklikleriniz korunur."
+        }
+      ]
+    },
+    "faq": {
+      "title": "Sık Sorulan Sorular",
+      "subtitle": "Menü çevirisi hakkında bilmeniz gereken her şey.",
+      "items": [
+        {
+          "question": "Yapay zeka çevirisi yemek menüleri için ne kadar doğru?",
+          "answer": "Yapay zekamız restoran içeriği için optimize edilmiştir. 'Beef Wellington' veya 'Tiramisu' gibi isimlerin kelimesi kelimesine çevrilmemesi gerektiğini anlar ve açıklamaları her dilde doğal olacak şekilde uyarlar."
+        },
+        {
+          "question": "Hangi diller destekleniyor?",
+          "answer": "İngilizce, İspanyolca, Fransızca, Almanca, İtalyanca, Portekizce, Çince, Japonca, Korece, Arapça, Rusça ve daha birçok Avrupa ve Asya dili dahil 25'ten fazla dil."
+        },
+        {
+          "question": "Tüm menü yerine sadece bazı öğeleri çevirebilir miyim?",
+          "answer": "Evet. Tek tek öğeleri, tüm kategorileri veya menünün tamamını tek seferde çevirebilirsiniz. Neyin çevrileceği üzerinde tam kontrol sizde."
+        },
+        {
+          "question": "Her çeviri için ek ücret var mı?",
+          "answer": "Yapay zeka çevirisi, cömert aylık limitlerle Growth ve Pro planlara dahildir. Kelime başına veya öğe başına ücret yoktur — ihtiyacınız kadar çevirin."
+        }
+      ]
+    },
+    "howItWorks": {
+      "title": "Nasıl Çalışır",
+      "subtitle": "Menünüzü dakikalar içinde, saatler değil.",
+      "steps": [
+        {
+          "title": "Menünüze Diller Ekleyin",
+          "description": "Kontrol panelinizdeki Diller sayfasına gidin ve menünüzün desteklemesi gereken dilleri seçin. Tüm büyük Avrupa, Asya ve Orta Doğu dilleri dahil olmak üzere 35 mevcut dilden birini seçin."
+        },
+        {
+          "title": "Çevir'e Tıklayın",
+          "description": "Tek bir buton, tüm kategorilerinizi, ürün adlarınızı ve açıklamalarınızı bir anda çevirir. Menünün tamamı, kaç ürününüz olursa olsun, saniyeler içinde işlenir."
+        },
+        {
+          "title": "Yapay Zeka Yiyecek Bağlamını Anlar",
+          "description": "Yapay zeka, kültürler arasında mutfak terminolojisini bilir. 'Tiramisu' veya 'Pad Thai' gibi yemek adlarını korurken, açıklamaları, malzeme listelerini ve kategori adlarını doğal bir şekilde uyumlu hale getirir."
+        },
+        {
+          "title": "Gözden Geçirin ve Düzenleyin",
+          "description": "Her çeviri tamamen düzenlenebilir. Herhangi bir ifadeyi tarzınıza uyacak şekilde ayarlayın. Manuel değişiklikleriniz, menünün diğer kısımlarını daha sonra yeniden çevirdiğinizde bile korunur."
+        },
+        {
+          "title": "Çok Dilli Menünüzü Yayınlayın",
+          "description": "Misafirler menünüzde bir dil değiştirme aracı görür ve tercih ettikleri dilde gezinebilirler. Her dil, kontrol panelinizden bağımsız olarak açılıp kapatılabilir."
+        }
+      ]
+    }
+  },
+  "mobileManagementPage": {
+    "seo": {
+      "title": "Restoran Menünüzü Telefondan Yönetin — Mobil Kontrol Paneli | IQ Rest",
+      "description": "Restoranınızın QR menüsünü tamamen telefonunuzdan yönetin. Yemek ekleyin, fiyatları güncelleyin, fotoğraf yükleyin, analizleri kontrol edin — bilgisayar gerekmez."
+    },
+    "hero": {
+      "badge": "Mobil Kontrol Paneli",
+      "title": "Tüm Restoran Menünüzü Telefonunuzdan Yönetin",
+      "subtitle": "Yemek ekleyin, fiyat değiştirin, fotoğraf yükleyin, siparişleri kontrol edin — hepsi akıllı telefonunuzdan. Kontrol paneli mobil öncelikli tasarlandı, asla bilgisayara ihtiyaç duymazsınız.",
+      "cta": "Menünüzü Oluşturun",
+      "ctaDemo": "Demo Görüntüle",
+      "noCreditCard": "Kredi kartı gerekmez. Ücretsiz plan mevcuttur."
+    },
+    "features": {
+      "title": "Mobil Yönetim Nasıl Çalışır",
+      "subtitle": "Restoran kontrol paneliniz her zaman cebinizde.",
+      "items": [
+        {
+          "title": "Akıllı Telefonunuzda Tam Kontrol Paneli",
+          "description": "Her özellik telefon ekranınızda mükemmel çalışır — öğe ekleyin, kategorileri düzenleyin, siparişleri yönetin, analizleri kontrol edin. Arayüz dokunmatik için tasarlanmıştır, masaüstünden küçültülmüş değildir."
+        },
+        {
+          "title": "Fotoğrafları Doğrudan Kameradan Yükleyin",
+          "description": "Yeni bir yemeğin fotoğrafını çekin ve saniyeler içinde menünüze yükleyin. Görseller otomatik olarak optimize edilir. Mutfakta ayakta günlük özelinizi güncelleyin."
+        }
+      ]
+    },
+    "faq": {
+      "title": "Sık Sorulan Sorular",
+      "subtitle": "Mobil menü yönetimi hakkında bilmeniz gereken her şey.",
+      "items": [
+        {
+          "question": "Bir uygulama yüklemem gerekiyor mu?",
+          "answer": "Hayır. Kontrol paneli telefonunuzun web tarayıcısında çalışır — Safari, Chrome veya diğerleri. Giriş yapın ve menünüzü yönetmeye başlayın."
+        },
+        {
+          "question": "Telefonumdan bilgisayarda yapabildiğim her şeyi yapabilir miyim?",
+          "answer": "Evet. Her özellik mobilde mevcuttur — öğe ekleme, fotoğraf yükleme, kategori yönetimi, analiz kontrolü, sipariş ve rezervasyon yönetimi."
+        },
+        {
+          "question": "Tabletlerde de çalışır mı?",
+          "answer": "Evet. Kontrol paneli her ekran boyutuna uyum sağlar — telefonlar, tabletler ve masaüstü bilgisayarlar. En uygun cihazı kullanın."
+        },
+        {
+          "question": "Birden fazla kişi menüyü yönetebilir mi?",
+          "answer": "Şu anda bir hesap restoranı yönetir. Aynı anda birden fazla cihazdan giriş yapabilirsiniz — telefonunuz, tabletiniz veya bilgisayarınız."
+        }
+      ]
+    },
+    "howItWorks": {
+      "title": "Nasıl Çalışır",
+      "subtitle": "Restoranınızı dört adımda herhangi bir cihazdan yönetin.",
+      "steps": [
+        {
+          "title": "Telefonunuzda Kontrol Panelini Açın",
+          "description": "iq-rest.com adresine gidin ve telefonunuzun tarayıcısından giriş yapın. Kontrol paneli otomatik olarak ekran boyutunuza uyum sağlar — indirilecek veya kurulacak bir uygulama yok."
+        },
+        {
+          "title": "Her Yerden Menü Düzenleyin",
+          "description": "Yeni ürünler ekleyin, fiyatları güncelleyin, açıklamaları değiştirin ve fotoğrafları doğrudan telefon kameranızdan yükleyin. Masaüstünde mevcut olan her özellik mobilde de aynı şekilde çalışır."
+        },
+        {
+          "title": "Siparişleri ve Rezervasyonları Kontrol Edin",
+          "description": "Gelen siparişleri görüntüleyin, masa rezervasyonlarını yönetin ve destek mesajlarına yanıt verin — bunların hepsini telefonunuzdan yapın. Uzakta olsanız bile restoranınızın kontrolünü elinizde tutun."
+        },
+        {
+          "title": "Değişiklikler Anında Yayınlanır",
+          "description": "Telefonunuzdan yaptığınız her düzenleme, QR menünüzde gerçek zamanlı olarak görünür. Senkronize etmenize, yayınlamanıza veya beklemenize gerek yok — misafirleriniz her zaman en son sürümü görür."
+        }
+      ]
+    }
+  },
+  "customDesignPage": {
+    "seo": {
+      "title": "Video ve Fotoğraf Arka Planıyla Restoran Web Sitesi — Web Sitesi Oluşturucu | IQ Rest",
+      "description": "Özel video veya fotoğraf arka planlarıyla etkileyici bir restoran web sitesi oluşturun. Ambiyans videonuzu veya yemek fotoğrafınızı yükleyin — ilk taramadan itibaren misafirlerinizi etkileyin."
+    },
+    "hero": {
+      "badge": "Web Sitesi Tasarımı",
+      "title": "Video Arka Planlarıyla Etkileyici Bir Restoran Web Sitesi Oluşturun",
+      "subtitle": "Restoranınızın ambiyans videosunu veya güzel bir yemek fotoğrafını arka plan olarak yükleyin. Misafirler QR kodunuzu taradığı anda profesyonel, markalı bir deneyim görür.",
+      "cta": "Menünüzü Oluşturun",
+      "ctaDemo": "Demo Görüntüle",
+      "noCreditCard": "Kredi kartı gerekmez. Ücretsiz plan mevcuttur."
+    },
+    "features": {
+      "title": "Özel Arka Planlar Nasıl Çalışır",
+      "subtitle": "Markanıza uygun görsellerle kalıcı bir ilk izlenim bırakın.",
+      "items": [
+        {
+          "title": "Video veya Fotoğraf Arka Planları Yükleyin",
+          "description": "Restoran ambiyansınızın döngülü bir videosunu, mutfağınızın time-lapse'ini veya yüksek kaliteli bir yemek fotoğrafını ekleyin. Arka plan ana sayfanızda görünür — misafirler için sürükleyici bir deneyim yaratır."
+        },
+        {
+          "title": "Her Cihazda Hız İçin Optimize Edilmiş",
+          "description": "Videolar ve görseller otomatik olarak sıkıştırılır ve gecikmeli yüklenir. Web siteniz yavaş mobil bağlantılarda bile hızlı kalır — tamponlama yok, gecikme yok, sadece sorunsuz bir deneyim."
+        }
+      ]
+    },
+    "faq": {
+      "title": "Sık Sorulan Sorular",
+      "subtitle": "Restoran web sitesi tasarımı hakkında bilmeniz gereken her şey.",
+      "items": [
+        {
+          "question": "Hangi video formatları destekleniyor?",
+          "answer": "MP4 ve WebM formatları en iyi sonucu verir. Videolar hızlı yükleme için otomatik olarak sıkıştırılır. En iyi mobil deneyim için videoları 30 saniyenin altında tutun."
+        },
+        {
+          "question": "Video arka planı web sitemi yavaşlatır mı?",
+          "answer": "Hayır. Videolar sıkıştırılır, gecikmeli yüklenir ve otomatik olarak optimize edilir. Yavaş bağlantılarda sistem deneyimi sorunsuz tutmak için statik bir görüntüye geçer."
+        },
+        {
+          "question": "Video yerine fotoğraf kullanabilir miyim?",
+          "answer": "Evet. Herhangi bir fotoğraf yükleyin — optimize edilip tam ekran arka plan olarak görüntülenir. Video ve fotoğraf arasında istediğiniz zaman geçiş yapabilirsiniz."
+        },
+        {
+          "question": "Bunu kurmak için bir tasarımcıya ihtiyacım var mı?",
+          "answer": "Hayır. Kontrol panelinden videonuzu veya fotoğrafınızı yüklemeniz yeterli. Sistem boyutlandırma, sıkıştırma ve düzeni otomatik olarak halleder. Web siteniz sıfır tasarım becerisiyle profesyonel görünür."
+        }
+      ]
+    },
+    "howItWorks": {
+      "title": "Nasıl Çalışır",
+      "subtitle": "Restoranınızın görsel kimliğini dört adımda özelleştirin.",
+      "steps": [
+        {
+          "title": "Tasarım Ayarlarını Aç",
+          "description": "Kontrol panelinizdeki Tasarım sayfasına gidin. Burada restoranınızın görsel görünümünü — arka plan, vurgulu renk ve ana sayfa düzenini kontrol edebilirsiniz."
+        },
+        {
+          "title": "Bir Arka Plan Yükle",
+          "description": "Restoranınızın ana sayfa arka planı için bir video (MP4, WebM) veya fotoğraf seçin. Videolar otomatik olarak döngüye alınır ve her ziyaretçi için etkileyici bir ilk izlenim yaratır."
+        },
+        {
+          "title": "Yapay Zeka Arka Plan Oluşturma",
+          "description": "Hazır bir video veya fotoğrafınız yok mu? Yapay zekanın menü öğelerinizden otomatik olarak bir arka plan resmi oluşturmasına izin verin. Restoranınızın tarzına uygun profesyonel bir görsel üretir."
+        },
+        {
+          "title": "Önizleme ve Kaydet",
+          "description": "Değişikliklerinizi kaydetmeden önce gerçek zamanlı olarak görün. Videolar otomatik olarak sıkıştırılır ve tembel yüklenir, bu da mobil cihazlarda hızlı performans sağlarken görsel kaliteden ödün vermez."
+        }
+      ]
+    }
+  },
+  "multilingualPage": {
+    "seo": {
+      "title": "Çok Dilli Restoran Web Sitesi — 25'ten Fazla Dilde Menü | IQ Rest",
+      "description": "Restoran web siteniz ve QR menünüz 25'ten fazla dilde. Misafirler tek dokunuşla dil değiştirir — menü, iletişim ve rezervasyonlar anında uyarlanır."
+    },
+    "hero": {
+      "badge": "Çok Dilli",
+      "title": "Restoran Web Siteniz 25'ten Fazla Dilde",
+      "subtitle": "Turistler ve uluslararası misafirler menünüzü kendi dillerinde görür. Tek dokunuşla geçiş yapın — her şey anında uyarlanır: yemekler, açıklamalar, iletişim, gezinme.",
+      "cta": "Menünüzü Oluşturun",
+      "ctaDemo": "Demo Görüntüle",
+      "noCreditCard": "Kredi kartı gerekmez. Ücretsiz plan mevcuttur."
+    },
+    "features": {
+      "title": "Çok Dil Desteği Nasıl Çalışır",
+      "subtitle": "Ekstra iş yapmadan müşterinizin dilini konuşun.",
+      "items": [
+        {
+          "title": "Misafirler Dillerini Seçer",
+          "description": "Menünüzde bir dil seçici görünür. Misafirler tercih ettikleri dile dokunur ve tüm web sitesi — menü, açıklamalar, iletişim bilgileri, gezinme — anında değişir. Sayfa yenileme gerekmez."
+        },
+        {
+          "title": "Kontrol Panelinizden Dil Ekleyin",
+          "description": "Tek tıkla yeni dilleri etkinleştirin. İçeriği doldurmak için yapay zeka çevirisini kullanın veya çevirileri manuel girin. Her dil bağımsız olarak açılıp kapatılabilir."
+        }
+      ]
+    },
+    "faq": {
+      "title": "Sık Sorulan Sorular",
+      "subtitle": "Çok dilli menüler hakkında bilmeniz gereken her şey.",
+      "items": [
+        {
+          "question": "Menüme kaç dil ekleyebilirim?",
+          "answer": "Tüm büyük Avrupa dilleri, Çince, Japonca, Korece, Arapça, Farsça ve daha fazlası dahil 25'ten fazla dil. Misafirlerinizin ihtiyaç duyduğu kadar ekleyin."
+        },
+        {
+          "question": "Her şeyi manuel olarak çevirmem mi gerekiyor?",
+          "answer": "Hayır. Yerleşik yapay zeka çevirisini kullanarak tüm menünüzü tek tıkla çevirin. Tam kontrol için herhangi bir çeviriyi manuel olarak da düzenleyebilirsiniz."
+        },
+        {
+          "question": "Dil tercihi kaydedilir mi?",
+          "answer": "Evet. Bir misafir dil seçtiğinde, bir sonraki ziyaretinde hatırlanır. Geri döndüklerinde tekrar seçim yapmaları gerekmez."
+        },
+        {
+          "question": "Çok dil desteği ücretsiz planda mevcut mu?",
+          "answer": "Ücretsiz plan 2 dile kadar içerir. Growth ve Pro planlar, yapay zeka çevirisi dahil sınırsız dil sunar."
+        }
+      ]
+    },
+    "howItWorks": {
+      "title": "Nasıl Çalışır",
+      "subtitle": "Menünüzü dört adımda birden fazla dilde erişilebilir hale getirin.",
+      "steps": [
+        {
+          "title": "Dil Ayarlarına Git",
+          "description": "Gösterge panelinizdeki Diller sayfasını açın. Tüm mevcut dilleri ve hangilerinin menünüzde şu anda aktif olduğunu göreceksiniz."
+        },
+        {
+          "title": "Diller Ekleyin",
+          "description": "Mevcut 35 dilden seçim yapın. Ücretsiz plan, en fazla 2 dili içerirken, Growth ve Pro planları menünüz için sınırsız dil sunar."
+        },
+        {
+          "title": "İçeriğinizi Çevirin",
+          "description": "Tüm menünüzü anında çevirmek için tek tıklamayla AI çevirisini kullanın veya tam kontrol için çevirileri manuel olarak girin. Her iki yaklaşımı da birleştirebilirsiniz."
+        },
+        {
+          "title": "Misafirler Dilleri Değiştirir",
+          "description": "Menü sayfanızda bir dil seçici görünür. Misafirler dillerini seçtiğinde, tüm menü anında değişir. Tercihleri, geri dönüş ziyaretleri için kaydedilir."
+        }
+      ]
+    }
+  },
+  "instantSetupPage": {
+    "seo": {
+      "title": "Ücretsiz Restoran Web Sitesi Oluşturucu — 5 Dakikada Oluşturun | IQ Rest",
+      "description": "QR menü, iletişim sayfası ve harita ile profesyonel bir restoran web sitesi edinin — sadece e-postanızı girin. 5 dakikada hazır, teknik bilgi gerekmez."
+    },
+    "hero": {
+      "badge": "Ücretsiz Web Sitesi",
+      "title": "5 Dakikada Profesyonel Bir Restoran Web Sitesi Edinin",
+      "subtitle": "E-postanızı girin, restoranınızı adlandırın ve anında QR menü, haritalı iletişim sayfası ve modern duyarlı tasarıma sahip eksiksiz bir web sitesi alın. Kodlama yok, tasarımcı yok.",
+      "cta": "Menünüzü Oluşturun",
+      "ctaDemo": "Demo Görüntüle",
+      "noCreditCard": "Kredi kartı gerekmez. Ücretsiz plan mevcuttur."
+    },
+    "features": {
+      "title": "Nasıl Çalışır",
+      "subtitle": "Sıfırdan canlı restoran web sitesine üç adımda.",
+      "items": [
+        {
+          "title": "Sadece E-postanızla Kaydolun",
+          "description": "Karmaşık kayıt formları yok. E-postanızı girin, bir kodla doğrulayın ve restoran kontrol paneliniz hazır. Restoranınızı adlandırın ve web siteniz anında yayına girer."
+        },
+        {
+          "title": "Her Şey Kutudan Çıkar Çıkmaz Dahil",
+          "description": "Web siteniz QR menü, Google Haritalar'lı iletişim sayfası, dil desteği, mobil uyumlu tasarım ve size özel benzersiz URL ile gelir. Sadece yemeklerinizi ekleyin ve paylaşmaya başlayın."
+        }
+      ]
+    },
+    "faq": {
+      "title": "Sık Sorulan Sorular",
+      "subtitle": "Restoran web sitenizi oluşturma hakkında bilmeniz gereken her şey.",
+      "items": [
+        {
+          "question": "Ücretsiz restoran web sitesi nasıl oluştururum?",
+          "answer": "IQ Rest'te e-postanızı girin, bir kodla doğrulayın, restoranınızı adlandırın — bitti. QR menülü web siteniz 5 dakikadan kısa sürede yayında. Kredi kartı gerekmez."
+        },
+        {
+          "question": "Teknik beceriye ihtiyacım var mı?",
+          "answer": "Hayır. Her şey geliştiriciler için değil, restoran sahipleri için tasarlanmıştır. Yemek ekleyin, fotoğraf yükleyin ve sitenizi tamamen telefonunuzdan yönetin."
+        },
+        {
+          "question": "Ücretsiz plana neler dahil?",
+          "answer": "Tam restoran web sitesi, QR menü, haritalı iletişim sayfası, analitik, özel renk şeması ve 2 dile kadar. Deneme süresi yok — sonsuza kadar ücretsiz."
+        },
+        {
+          "question": "Kendi alan adımı kullanabilir miyim?",
+          "answer": "Ücretsiz ve Growth planlarda siteniz iq-rest.com/m/isminiz adresinde barındırılır. Pro plan, tam marka kontrolü için özel alan adlarını destekler."
+        }
+      ]
+    },
+    "howItWorks": {
+      "title": "Nasıl Çalışır",
+      "subtitle": "Sıfırdan canlı bir restoran web sitesine dört adımda.",
+      "steps": [
+        {
+          "title": "E-posta Adresinizi Girin",
+          "description": "Şifreye gerek yok. Sadece e-posta adresinizi yazın ve Devam'a tıklayın. Uzun kayıt formları yok, kredi kartı gerekmiyor ve taahhüt yok."
+        },
+        {
+          "title": "Bir Kod ile Doğrulayın",
+          "description": "Gelen kutunuzu 4 haneli doğrulama kodu için kontrol edin. Güvenli bir şekilde oturum açmak için kodu girin. Bu şifresiz yaklaşım, hatırlamanız gereken bir şeyin daha az olması anlamına geliyor."
+        },
+        {
+          "title": "Restoranınıza Bir İsim Verin",
+          "description": "Restoranınıza bir isim verin. Bu, web sitenizin URL'si ve menü başlığı olacaktır. İsterseniz bunu daha sonra kontrol paneli ayarlarınızdan değiştirebilirsiniz."
+        },
+        {
+          "title": "Web Siteniz Hazır",
+          "description": "QR menü, harita ile iletişim sayfası ve duyarlı tasarım içeren tam bir restoran web sitesi, iq-rest.com/m/your-name adresinde anında yayındadır. Yemeklerinizi ekleyin ve paylaşmaya başlayın."
+        }
+      ]
+    }
+  },
+  "analyticsPage": {
+    "seo": {
+      "title": "Restoran Analitiği ve QR Menü İstatistikleri — Ziyaretçileri Takip Edin | IQ Rest",
+      "description": "QR menü taramalarınızı, sayfa görüntülemelerinizi, popüler dilleri ve ziyaretçi trendlerini takip edin. Restoranınız için gerçek zamanlı analitik paneli."
+    },
+    "hero": {
+      "badge": "Analitik",
+      "title": "Misafirlerin QR Menünüzü Nasıl Kullandığını Görün",
+      "subtitle": "Günlük taramaları, sayfa görüntülemelerini, popüler dilleri, cihaz istatistiklerini ve zaman içindeki trendleri takip edin. Menünüzü optimize etmek ve işinizi büyütmek için veriye dayalı kararlar alın.",
+      "cta": "Menünüzü Oluşturun",
+      "ctaDemo": "Demoyu Görüntüle",
+      "noCreditCard": "Kredi kartı gerekmez. Ücretsiz plan mevcuttur."
+    },
+    "features": {
+      "title": "Neleri Takip Edebilirsiniz",
+      "subtitle": "Restoranınızın çevrimiçi varlığı hakkında gerçek zamanlı bilgiler.",
+      "items": [
+        {
+          "title": "Günlük Görüntülemeler, Taramalar ve Ziyaretçi Trendleri",
+          "description": "Her gün, hafta ve ay kaç kişinin QR kodunuzu taradığını ve menünüzü ziyaret ettiğini görün. Mevsimsel kalıpları anlamak ve promosyonların etkisini ölçmek için zaman içindeki trendleri takip edin."
+        },
+        {
+          "title": "Dil ve Cihaz Dağılımı",
+          "description": "Misafirlerinizin hangi dilleri tercih ettiğini ve hangi cihazları kullandığını bilin. Bu veriler, çevirilere öncelik vermenize ve menünüzün en popüler cihazlarda mükemmel görünmesini sağlamanıza yardımcı olur."
+        }
+      ]
+    },
+    "faq": {
+      "title": "Sıkça Sorulan Sorular",
+      "subtitle": "Restoran analitiği hakkında bilmeniz gereken her şey.",
+      "items": [
+        {
+          "question": "Hangi metrikleri takip edebilirim?",
+          "answer": "Günlük, haftalık ve aylık sayfa görüntülemeleri. Tekil ziyaretçiler. En çok görüntülenen sayfalar. Dil tercihleri. Cihaz ve tarayıcı dağılımı. Tümü gerçek zamanlı olarak güncellenir."
+        },
+        {
+          "question": "Analitik ücretsiz plana dahil mi?",
+          "answer": "Evet. Temel analitik, ücretsiz dahil tüm planlarda mevcuttur. İlk günden itibaren görüntülemeleri, ziyaretçileri ve dil istatistiklerini görebilirsiniz."
+        },
+        {
+          "question": "Hangi sayfaların en popüler olduğunu görebilir miyim?",
+          "answer": "Evet. Panel, görüntülemeleri sayfaya göre gösterir — ana sayfa, menü, iletişim, rezervasyonlar ve dil seçimi. Misafirlerinizin zamanlarını tam olarak nerede geçirdiğini görün."
+        },
+        {
+          "question": "Veriler ne kadar geriye gidiyor?",
+          "answer": "Analitik verileri, restoranınızı oluşturduğunuz günden itibaren saklanır. Tüm geçmişiniz için günlük, haftalık ve aylık trendleri görüntüleyebilirsiniz."
+        }
+      ]
+    },
+    "howItWorks": {
+      "title": "Nasıl Çalışır",
+      "subtitle": "Restoranınızın performansını dört adımda takip etmeye başlayın.",
+      "steps": [
+        {
+          "title": "Restoranınızı Oluşturun",
+          "description": "Analitikler, menünüz yayına girdiği andan itibaren takip etmeye başlar. Yapılandırılacak hiçbir şey yok — her sayfa görüntülemesi, QR taraması ve ziyaretçi otomatik olarak kaydedilir."
+        },
+        {
+          "title": "QR Kodunuzu Paylaşın",
+          "description": "QR kodunuzu yazdırın ve masalara, girişte veya paket servis ambalajlarına yerleştirin. Her tarama, zaman damgası, dil, cihaz ve ziyaret edilen sayfa ile kaydedilir."
+        },
+        {
+          "title": "Analitik Gösterge Tablosunu Açın",
+          "description": "Günlük, haftalık ve aylık istatistikleri net grafiklerle görün. Toplam görüntüleme, benzersiz ziyaretçi ve zaman içindeki trendleri tek bir gösterge tablosu ekranından takip edin."
+        },
+        {
+          "title": "Ayrıntılı Dağılımları Keşfedin",
+          "description": "İstatistikleri sayfa (menü, iletişim, rezervasyonlar), tercih edilen dil, cihaz türü ve tarayıcıya göre ayrıntılı olarak görüntüleyin. Bu verileri menünüzü optimize etmek ve çevirileri önceliklendirmek için kullanın."
+        }
+      ]
+    }
+  },
+  "aiImagesPage": {
+    "seo": {
+      "title": "Menüler İçin Yapay Zeka Yemek Fotoğrafı Oluşturma — Restoran Menü Görselleri | IQ Rest",
+      "description": "Yapay zeka ile menünüz için güzel yemek fotoğrafları oluşturun. Fotoğrafçıya gerek yok — saniyeler içinde QR menünüz için optimize edilmiş profesyonel yemek görselleri elde edin."
+    },
+    "hero": {
+      "badge": "Yapay Zeka Görselleri",
+      "title": "Fotoğrafçı Olmadan Profesyonel Menü Fotoğrafları",
+      "subtitle": "Yapay zeka ile yemekleriniz için etkileyici görseller oluşturun. Yemek adını girin ve QR menünüz için hazır, güzel ve optimize edilmiş bir fotoğraf alın — saniyeler içinde.",
+      "cta": "Menünüzü Oluşturun",
+      "ctaDemo": "Demoyu Görüntüle",
+      "noCreditCard": "Kredi kartı gerekmez. Ücretsiz plan mevcuttur."
+    },
+    "features": {
+      "title": "Yapay Zeka Görsel Oluşturma Nasıl Çalışır",
+      "subtitle": "Yemek adından profesyonel fotoğrafa tek tıkla.",
+      "items": [
+        {
+          "title": "Yemek Adlarından Görseller Oluşturun",
+          "description": "Yemek adını yazın — 'Limonlu Izgara Somon', 'Margherita Pizza', 'Çikolatalı Lav Kek' — ve yapay zeka profesyonel bir yemek fotoğrafı oluşturur. Birden fazla stil ve arka plan arasından seçim yapın."
+        },
+        {
+          "title": "Hızlı Yükleme İçin Optimize Edilmiş",
+          "description": "Oluşturulan her görsel otomatik olarak sıkıştırılır ve modern formatlara dönüştürülür. Her yemekte fotoğraf olsa bile menünüz her cihazda yıldırım hızında kalır."
+        }
+      ]
+    },
+    "faq": {
+      "title": "Sıkça Sorulan Sorular",
+      "subtitle": "Yapay zeka menü görselleri hakkında bilmeniz gereken her şey.",
+      "items": [
+        {
+          "question": "Yemek fotoğrafını nasıl oluştururum?",
+          "answer": "Panelinizdeki herhangi bir menü öğesini açın, 'Görsel Oluştur'a dokunun ve yapay zeka yemek adı ve açıklamasına dayanarak profesyonel bir yemek fotoğrafı oluşturur. Beğendiğinizi seçin."
+        },
+        {
+          "question": "Bunun yerine kendi fotoğraflarımı kullanabilir miyim?",
+          "answer": "Kesinlikle. Telefonunuzdan veya bilgisayarınızdan kendi fotoğraflarınızı yükleyin. Yapay zeka oluşturma isteğe bağlıdır — hazır fotoğrafınız olmadığında kullanın."
+        },
+        {
+          "question": "Kaç görsel oluşturabilirim?",
+          "answer": "Görsel oluşturma limitleri planınıza bağlıdır. Growth aylık bir kota içerir ve Pro daha yüksek bir limit sunar. Kendi fotoğraflarınızı her zaman limitsiz yükleyebilirsiniz."
+        },
+        {
+          "question": "Oluşturulan görseller restoranıma özel mi?",
+          "answer": "Evet. Her görsel, belirli yemeğiniz için benzersiz olarak oluşturulur. Stok fotoğraf yok — her görsel menü öğenize göre sıfırdan oluşturulur."
+        }
+      ]
+    },
+    "howItWorks": {
+      "title": "Nasıl Çalışır",
+      "subtitle": "Menünüz için profesyonel yemek fotoğraflarını dört basit adımda alın.",
+      "steps": [
+        {
+          "title": "Herhangi Bir Menü Öğesini Açın",
+          "description": "Gösterge tablonuzda fotoğrafını almak istediğiniz öğeye gidin. Yeni yemekler için görüntüler oluşturabilir veya mevcut fotoğrafları herhangi bir menü öğesinde değiştirebilirsiniz."
+        },
+        {
+          "title": "Görüntü Oluştur'a Tıklayın",
+          "description": "Yapay zeka, yemek adı ve açıklamasına dayanarak profesyonel bir yemek fotoğrafı oluşturur. Açıklamada verdiğiniz detay ne kadar fazla olursa, sonuç o kadar doğru olur."
+        },
+        {
+          "title": "Sonucu Gözden Geçirin",
+          "description": "Uygulamadan önce oluşturulan görüntüyü önizleyin. Farklı bir görünüm isterseniz, yeni bir varyasyon elde etmek için yeniden oluşturun. Her oluşturma, benzersiz bir görüntü üretir."
+        },
+        {
+          "title": "Menünüzde Kullanın",
+          "description": "Görüntü otomatik olarak optimize edilir, WebP formatına sıkıştırılır ve hemen canlı menünüzde görünür. Misafirler her yemekte profesyonel yemek fotoğraflarını görür."
+        }
+      ]
+    }
+  },
+  "personalSupportPage": {
+    "seo": {
+      "title": "Restoran Web Siteniz İçin Kişisel Destek — Gerçek İnsan Yardımı | IQ Rest",
+      "description": "Chatbot'lardan değil, gerçek insanlardan kişisel yardım alın. Kurulum yardımı, menü optimizasyon ipuçları ve hızlı yanıtlar — ücretsiz dahil her planda mevcuttur."
+    },
+    "hero": {
+      "badge": "Kişisel Destek",
+      "title": "Gerçek insanlar, gerçek yardım — Chatbot'lar değil",
+      "subtitle": "Bir sorunuz mu var? Menünüzü kurmakta yardıma mı ihtiyacınız var? Bir özellik önermek mi istiyorsunuz? Bize doğrudan yazın ve restoranları anlayan birinden kişisel bir yanıt alın.",
+      "cta": "Menünüzü Oluşturun",
+      "ctaDemo": "Demoyu Görüntüle",
+      "noCreditCard": "Kredi kartı gerekmez. Ücretsiz plan mevcuttur."
+    },
+    "features": {
+      "title": "Destek Nasıl Çalışır",
+      "subtitle": "İhtiyacınız olduğunda, önemseyen insanlardan yardım.",
+      "items": [
+        {
+          "title": "Kontrol Panelinizden Bize Doğrudan Yazın",
+          "description": "Kontrol panelinizde destek sohbetini açın ve sorunuzu tanımlayın. Gerçek bir kişi mesajınızı okur ve yanıtlar — genellikle iş günlerinde birkaç saat içinde."
+        },
+        {
+          "title": "Kurulum, Optimizasyon ve Ötesi İçin Yardım",
+          "description": "İlk yemeğinizi ekleme konusunda yardıma mı ihtiyacınız var, menünüzü düzenleme hakkında tavsiye mi istiyorsunuz, yoksa yeni bir özellik mi önermek istiyorsunuz — buradayız. Her soru önemlidir, ne kadar küçük olursa olsun."
+        }
+      ]
+    },
+    "faq": {
+      "title": "Sıkça Sorulan Sorular",
+      "subtitle": "Desteğimiz hakkında bilmeniz gereken her şey.",
+      "items": [
+        {
+          "question": "Destek ücretsiz planda mevcut mu?",
+          "answer": "Evet. Kişisel destek, ücretsiz dahil her plan için mevcuttur. Her restoranın aboneliğinden bağımsız olarak gerçek yardımı hak ettiğine inanıyoruz."
+        },
+        {
+          "question": "Ne kadar hızlı yanıt veriyorsunuz?",
+          "answer": "Genellikle iş günlerinde birkaç saat içinde. Her mesajı kişisel olarak okuyoruz ve sorunuzu tek bir yanıtla çözmeyi hedefliyoruz."
+        },
+        {
+          "question": "Menümü kurmama yardımcı olabilir misiniz?",
+          "answer": "Kesinlikle. Yemek ekleme, kategorileri düzenleme, çevirileri ayarlama veya rezervasyonları yapılandırma konusunda yardıma ihtiyacınız varsa — sadece sorun. Sizi adım adım yönlendirmekten mutluluk duyarız."
+        },
+        {
+          "question": "Yeni özellikler önerebilir miyim?",
+          "answer": "Evet, ve bunu çok seviyoruz! Özelliklerimizin çoğu kullanıcı önerilerinden doğdu. Bize fikrinizi yazın, gelecek güncellemeler için değerlendireceğiz."
+        }
+      ]
+    },
+    "howItWorks": {
+      "title": "Nasıl Çalışır",
+      "subtitle": "Gerçek bir kişiden dört basit adımda yardım alın.",
+      "steps": [
+        {
+          "title": "Destek Sohbetini Aç",
+          "description": "Kontrol panelinizdeki Destek sayfasına gidin. Mesajınızı doğrudan yazabileceğiniz basit bir sohbet arayüzü göreceksiniz - bilet formları veya seçim yapmanız gereken kategoriler yok."
+        },
+        {
+          "title": "Sorunuzu Tanımlayın",
+          "description": "Mesajınızı yazın. Kurulum, özellikler, menü optimizasyonu, faturalama veya başka bir şey hakkında soru sorun. Aptalca soru yoktur - her konuda yardımcı olmaktan mutluluk duyarız."
+        },
+        {
+          "title": "Kişisel Yanıt Alın",
+          "description": "Gerçek bir kişi (chatbot değil) mesajınızı okur ve saatler içinde yanıt verir. Restoran iş akışlarını anlıyoruz ve pratik, uygulanabilir yanıtlar veriyoruz."
+        },
+        {
+          "title": "Sürekli Yardım",
+          "description": "Özellik önerileri isteyin, menü optimizasyon ipuçları alın veya her zaman kurulum yardımı isteyin. Sohbet geçmişiniz kaydedilir, böylece önceki sorulardan her zaman bağlamımız olur."
+        }
+      ]
+    }
   }
 }

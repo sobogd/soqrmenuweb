@@ -2,6 +2,7 @@
 
 import { useEffect, useState, useCallback } from "react";
 import { useRouter } from "next/navigation";
+import { useTranslations } from "next-intl";
 import { SubpageStickyBar } from "../_v2/ui";
 
 interface Company {
@@ -19,13 +20,14 @@ interface Company {
 
 type Filter = "all" | "today_active";
 
-const TABS: { value: Filter; label: string }[] = [
-  { value: "all", label: "All" },
-  { value: "today_active", label: "Active today" },
-];
-
 export function AdminPage() {
+  const t = useTranslations("dashboard.admin");
   const router = useRouter();
+
+  const TABS: { value: Filter; labelKey: "all" | "activeToday" }[] = [
+    { value: "all", labelKey: "all" },
+    { value: "today_active", labelKey: "activeToday" },
+  ];
 
   const [filter, setFilter] = useState<Filter>("all");
   const [companies, setCompanies] = useState<Company[]>([]);
@@ -69,7 +71,7 @@ export function AdminPage() {
                   (isActive ? "bg-card text-foreground shadow-sm" : "text-muted-foreground")
                 }
               >
-                {tab.label}
+                {t(tab.labelKey)}
               </button>
             );
           })}
@@ -77,17 +79,17 @@ export function AdminPage() {
       </SubpageStickyBar>
       <div className="max-w-2xl mx-auto pt-5 md:pt-4">
         <div className="mb-5">
-          <div className="text-xs text-muted-foreground">Settings</div>
-          <h2 className="text-xl font-medium text-foreground mt-1">Companies</h2>
+          <div className="text-xs text-muted-foreground">{t("settingsBreadcrumb")}</div>
+          <h2 className="text-xl font-medium text-foreground mt-1">{t("companiesTitle")}</h2>
         </div>
 
       {loading && companies.length === 0 ? (
         <div className="bg-card border border-border rounded-2xl p-8 text-center text-sm text-muted-foreground">
-          Loading…
+          {t("loading")}
         </div>
       ) : companies.length === 0 ? (
         <div className="bg-card border border-border rounded-2xl p-8 text-center text-sm text-muted-foreground">
-          No companies
+          {t("noCompanies")}
         </div>
       ) : (
         <div className="bg-card border border-border rounded-xl overflow-hidden divide-y divide-border">
@@ -113,7 +115,7 @@ export function AdminPage() {
                     (nameColor || (company.name ? "text-foreground" : "text-muted-foreground italic"))
                   }
                 >
-                  {company.name || "No name"}
+                  {company.name || t("noName")}
                 </span>
                 <div className="flex items-center gap-2 text-xs text-muted-foreground shrink-0 tabular-nums">
                   <span>📁{company.categoriesCount}</span>

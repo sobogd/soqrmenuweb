@@ -1521,454 +1521,525 @@
     "portalError": "Failed to open billing portal. Please try again."
   },
   "dashboard": {
-    "pages": {
-      "home": "Dashboard",
-      "qrMenu": "Print QR",
+    "nav": {
+      "menu": "Menu",
+      "reservations": "Bookings",
+      "orders": "Orders",
+      "kitchen": "Kitchen",
       "analytics": "Analytics",
-      "categories": "Categories",
-      "items": "Dishes",
-      "settings": "Languages",
-      "design": "Settings",
-      "contacts": "Contacts",
-      "languages": "Languages",
-      "reservations": "Reservations",
-      "reservationSettings": "Reservation Settings",
-      "tables": "Tables",
-      "billing": "Billing",
-      "support": "Support",
-      "menu": "Menu",
-      "orders": "Orders"
+      "settings": "Settings",
+      "untitledRestaurant": "Untitled restaurant"
     },
-    "sidebar": {
-      "qrMenu": "Print QR",
-      "menu": "Menu",
-      "settings": "Languages",
-      "reservations": "Reservations",
-      "account": "Account",
-      "reservationSettings": "Configuration"
-    },
-    "home": {
-      "viewMenu": "See How It Looks",
-      "menuReady": "Your menu is ready! Share your QR code with customers.",
-      "scansTitle": "Scans",
-      "scansUsed": "{used} / {limit}",
-      "scansUnlimited": "{used} scans",
-      "myOrders": "My Orders",
-      "saveMenu": "Save your progress"
-    },
-    "logout": "Logout",
-    "upsell": {
-      "title": "Grow Your Restaurant Online",
-      "subtitle": "AI translations, unlimited scans, reservations, and more",
-      "trialEndedTitle": "Your Free Trial Has Ended",
-      "trialEndedSubtitle": "Subscribe to keep all features — AI translations, reservations, and more",
-      "featuresTitle": "Everything you get",
-      "features": {
-        "aiTranslations": {
-          "title": "AI Menu Translations",
-          "description": "Translate your menu to 25+ languages in one click"
-        },
-        "aiImages": {
-          "title": "AI Image Enhancement",
-          "description": "Make your dish photos look professional instantly"
-        },
-        "reservations": {
-          "title": "Table Reservations",
-          "description": "Let customers book tables directly from your menu"
-        },
-        "unlimitedScans": {
-          "title": "Unlimited QR Scans",
-          "description": "No limits on how many customers view your menu"
-        },
-        "noBranding": {
-          "title": "No IQ Rest Branding",
-          "description": "Your menu, your brand — clean and professional"
-        }
-      },
-      "comparePlans": "Compare all plans",
-      "hideComparison": "Hide comparison",
-      "ctaBasic": "Start with Growth",
-      "ctaPro": "Start with Pro",
-      "billedMonthly": "Billed monthly",
-      "ctaSub": "Cancel anytime · No setup fees",
-      "skip": "Continue with Free plan",
-      "guarantee": "Secure payment · 7-day money back guarantee",
-      "checkoutError": "Failed to start checkout. Please try again."
-    },
-    "aiTranslate": {
-      "title": "AI Translation",
-      "description": "AI translation is available with a Growth or Pro subscription. Upgrade your plan to use automatic translations.",
+    "common": {
+      "save": "Save",
+      "saving": "Saving...",
       "cancel": "Cancel",
-      "subscribe": "Subscribe",
+      "delete": "Delete",
+      "deleting": "Deleting...",
+      "close": "Close",
+      "confirm": "Confirm",
+      "back": "Back",
+      "edit": "Edit",
+      "add": "Add",
+      "ok": "OK",
+      "yes": "Yes",
+      "no": "No",
+      "loading": "Loading…",
+      "untitled": "Untitled",
+      "noName": "No name",
+      "moveUp": "Move up",
+      "moveDown": "Move down",
       "translate": "Translate",
       "translating": "Translating...",
-      "limitReached": "Free translations used up",
-      "limitReachedDescription": "You've used all 5 free AI translations. Upgrade to Growth or Pro for unlimited translations.",
-      "upgrade": "Upgrade"
+      "translateWithAi": "Translate with AI",
+      "translateAll": "Translate all",
+      "replace": "Replace",
+      "copy": "Copy",
+      "copied": "Copied",
+      "download": "Download",
+      "open": "Open",
+      "openMenu": "Open menu",
+      "downloadQr": "Download QR",
+      "menuLink": "Menu link",
+      "tableLink": "Table link",
+      "selected": "selected",
+      "qrCode": "QR code",
+      "noResults": "No results",
+      "willUse": "Will use"
+    },
+    "subscriptionChip": {
+      "plan": "Plan",
+      "free": "Free",
+      "trialDays": "Trial · {days}d",
+      "trialExpired": "Trial expired"
+    },
+    "preview": {
+      "preview": "Preview",
+      "share": "Share",
+      "shareTitle": "Share {name}",
+      "shareYourMenu": "your menu",
+      "tip": "Print and place on tables, or share online.",
+      "tableTip": "Print and place on this table. Scanning opens the menu with this table preselected."
+    },
+    "ai": {
+      "translateReplaceTitle": "Replace existing translation?",
+      "translateReplaceMessage": "This will overwrite what you've already typed in this field.",
+      "generate": "Generate",
+      "generating": "Generating...",
+      "tryAgain": "Try again",
+      "useThisPhoto": "Use this photo",
+      "describe": "Describe",
+      "describeTip": "Describe what you want, then tap Generate.",
+      "promptTip": "Tip: mention angle, lighting, or background.",
+      "noImage": "No image returned.",
+      "errorGenerate": "Couldn't generate. Try again.",
+      "promptPlaceholder": "e.g. Margherita pizza on a wooden board, top-down view"
+    },
+    "photo": {
+      "label": "Photo",
+      "addPhoto": "Add photo",
+      "removePhoto": "Remove photo"
+    },
+    "menu": {
+      "title": "Menu",
+      "subtitle": "Manage your categories and dishes.",
+      "expand": "Expand",
+      "collapse": "Collapse",
+      "noCategories": "No categories yet",
+      "noCategoriesSub": "Add your first category to start building the menu.",
+      "addCategory": "Add category",
+      "addDish": "Add dish",
+      "noDishes": "No dishes yet.",
+      "expandCategory": "Expand category",
+      "collapseCategory": "Collapse category",
+      "moveCategoryUp": "Move category up",
+      "moveCategoryDown": "Move category down",
+      "editCategory": "Edit category",
+      "editDish": "Edit dish",
+      "hideDish": "Hide dish",
+      "showDish": "Show dish"
+    },
+    "categoryForm": {
+      "newTitle": "New category",
+      "breadcrumb": "Menu",
+      "nameLabel": "Name",
+      "namePlaceholder": "e.g. Antipasti",
+      "deleteButton": "Delete category",
+      "deleteTitle": "Delete category?",
+      "deleteMessage": "This will also delete all dishes inside it. This cannot be undone.",
+      "nameRequiredTitle": "Name is required",
+      "nameRequiredMessage": "Enter a category name in the default language before saving."
+    },
+    "dishForm": {
+      "newTitle": "New dish",
+      "breadcrumb": "Menu",
+      "nameLabel": "Name",
+      "namePlaceholder": "e.g. Spaghetti carbonara",
+      "descLabel": "Description",
+      "descPlaceholder": "Short description for guests...",
+      "priceLabel": "Price",
+      "pricePlaceholder": "12.50",
+      "allergensLabel": "Allergens",
+      "allergensTip": "Tap to toggle.",
+      "optionsLabel": "Options",
+      "optionsTip": "Variants like sizes, extras, or add-ons.",
+      "addOption": "Add option",
+      "visibleLabel": "Visible to guests",
+      "visibleTip": "Hidden dishes don't appear in the menu.",
+      "deleteButton": "Delete dish",
+      "deleteTitle": "Delete dish?",
+      "deleteMessage": "This dish will be removed from the menu.",
+      "aiTitle": "Generate dish photo",
+      "nameRequiredTitle": "Name is required",
+      "nameRequiredMessage": "Enter a dish name in the default language before saving.",
+      "priceRequiredTitle": "Price is required",
+      "priceRequiredMessage": "Enter a valid price (e.g. 12.50) before saving.",
+      "missingTitle": "Missing fields",
+      "missingMessage": "Enter a name and a valid price before saving."
+    },
+    "optionForm": {
+      "newTitle": "New option",
+      "untitledOption": "Untitled option",
+      "breadcrumb": "Menu",
+      "nameLabel": "Name",
+      "namePlaceholder": "e.g. Size, Toppings, Crust",
+      "multiLabel": "Allow multiple choices",
+      "multiTip": "Off — guest picks one. On — guest picks any number.",
+      "requiredLabel": "Required",
+      "requiredTip": "Guest can't add to cart without choosing.",
+      "variantsLabel": "Variants",
+      "variantsTip": "Each variant has a name and an optional price modifier.",
+      "addVariant": "Add variant",
+      "removeVariant": "Remove variant",
+      "variantNamePlaceholder": "Variant name",
+      "priceModifier": "Price modifier",
+      "deleteButton": "Delete option",
+      "deleteTitle": "Delete option?",
+      "deleteMessage": "This option will be removed from the dish.",
+      "missingTitle": "Missing fields",
+      "missingMessage": "Enter an option name and at least one variant before saving.",
+      "nameRequiredTitle": "Name is required",
+      "nameRequiredMessage": "Enter an option name in the default language before saving.",
+      "variantRequiredTitle": "Variant required",
+      "variantRequiredMessage": "Add at least one variant with a name in the default language before saving.",
+      "typeMulti": "Multiple choice",
+      "typeSingle": "Single choice",
+      "required": "Required",
+      "optional": "Optional",
+      "variantOne": "variant",
+      "variantOther": "variants"
+    },
+    "allergens": {
+      "gluten": "Gluten",
+      "lactose": "Lactose",
+      "eggs": "Eggs",
+      "nuts": "Tree nuts",
+      "peanuts": "Peanuts",
+      "fish": "Fish",
+      "shellfish": "Shellfish",
+      "soy": "Soy",
+      "sesame": "Sesame",
+      "celery": "Celery",
+      "mustard": "Mustard",
+      "sulfites": "Sulfites",
+      "lupin": "Lupin",
+      "molluscs": "Molluscs"
+    },
+    "orders": {
+      "title": "Orders",
+      "subtitleOne": "You have {count} active order.",
+      "subtitleOther": "You have {count} active orders.",
+      "noActive": "No active orders",
+      "noActiveSub": "Tap a free table on the map to start an order, or wait for guests to place one via the QR menu.",
+      "tapTable": "Tap a table on the map to see or start an order.",
+      "tableLabel": "Table {number}",
+      "noActiveShort": "No active orders",
+      "activeOrderOne": "{count} active order",
+      "activeOrderOther": "{count} active orders",
+      "startOrder": "Start order",
+      "newOrder": "New order",
+      "allReady": "All ready",
+      "cooking": "Cooking",
+      "itemOne": "{count} item",
+      "itemOther": "{count} items",
+      "completeOrder": "Complete order",
+      "deleteOrderTitle": "Delete order?",
+      "deleteOrderMessage": "This will permanently remove the order and all its items. This action cannot be undone.",
+      "ordersBreadcrumb": "Orders",
+      "startedAt": "Started at {time} · {minutes} min ago",
+      "noItems": "No items yet.",
+      "addItem": "Add item",
+      "total": "Total",
+      "allServed": "All items served. Ready to complete.",
+      "deleteOrder": "Delete order",
+      "tapToChangeStatus": "Tap to change status",
+      "removeItem": "Remove item",
+      "addItemBreadcrumb": "Add item",
+      "noDishesInCategory": "No dishes in this category.",
+      "continue": "Continue",
+      "addPrice": "Add · {price}",
+      "addExtras": "Add extras",
+      "multiPickHint": "Pick one or more, then Continue.",
+      "decrease": "Decrease",
+      "increase": "Increase",
+      "perEach": "+{amount} each",
+      "notesLabel": "Notes",
+      "notesPlaceholder": "e.g. no onions, well done",
+      "statusPending": "Pending",
+      "statusCooking": "Cooking",
+      "statusReady": "Ready",
+      "statusServed": "Served",
+      "kitchenClear": "Kitchen is clear",
+      "kitchenClearSub": "Items will appear here as guests place orders.",
+      "elapsed": "{time} · {minutes} min"
+    },
+    "reservations": {
+      "title": "Bookings",
+      "subtitleOne": "You have {count} upcoming booking.",
+      "subtitleOther": "You have {count} upcoming bookings.",
+      "noBookings": "No bookings yet",
+      "noBookingsSub": "Once guests book a table, you'll see them here.",
+      "today": "Today",
+      "noToday": "No bookings for today.",
+      "bookingOne": "{count} booking",
+      "bookingOther": "{count} bookings",
+      "guestOne": "{count} guest",
+      "guestOther": "{count} guests",
+      "tableLabel": "Table {number}",
+      "notAssigned": "Not assigned",
+      "reject": "Reject",
+      "confirm": "Confirm",
+      "statusPending": "Pending",
+      "statusConfirmed": "Confirmed",
+      "statusCancelled": "Cancelled",
+      "statusCompleted": "Completed",
+      "statusNoShow": "No-show"
+    },
+    "tables": {
+      "table": "Table",
+      "settingsBreadcrumb": "Settings",
+      "title": "Tables",
+      "showQr": "Show QR code",
+      "deleteTable": "Delete table",
+      "tapTable": "Tap a table on the map to edit it.",
+      "positionX": "Position X",
+      "positionY": "Position Y",
+      "name": "Name",
+      "namePlaceholder": "e.g. Window, Bar, Patio",
+      "number": "Number",
+      "seats": "Seats",
+      "photo": "Photo",
+      "qrModalTitle": "Table {number}{label}",
+      "qrForTable": "QR for table {number}",
+      "tableLabelAria": "Table {number}",
+      "cantDeleteTitle": "Can't delete this table",
+      "cantDeleteMessage": "Table {number} has active orders or upcoming bookings. Resolve them first, then try again.",
+      "deleteTitle": "Delete table?",
+      "deleteMessage": "Table {number}{label} will be removed from the floor plan."
+    },
+    "settings": {
+      "breadcrumb": "Settings",
+      "about": {
+        "title": "About",
+        "titleLabel": "Title",
+        "titlePlaceholder": "Love Eatery",
+        "subtitleLabel": "Subtitle",
+        "subtitlePlaceholder": "Love at the first bite",
+        "showTitleLabel": "Show title on homepage",
+        "showTitleTip": "Displayed on the homepage of your public website."
+      },
+      "contacts": {
+        "title": "Contacts & location",
+        "contactsHeader": "Contacts",
+        "contactsTip": "Shown on the contacts page of your public menu.",
+        "phoneLabel": "Phone",
+        "phonePlaceholder": "+34 612 345 678",
+        "instagramLabel": "Instagram",
+        "instagramPlaceholder": "latrattoria",
+        "whatsappLabel": "WhatsApp",
+        "locationHeader": "Location",
+        "locationTip": "Address and map shown on your public contacts page. Search or tap the map to set the pin."
+      },
+      "branding": {
+        "title": "Branding",
+        "accentLabel": "Accent color",
+        "accentTip": "Main color for buttons and highlights.",
+        "colorAria": "Color {hex}",
+        "customColor": "Custom color",
+        "backgroundLabel": "Background",
+        "generateAi": "Generate with AI",
+        "removeBackground": "Remove background",
+        "video": "VIDEO",
+        "uploadHint": "Upload image or video",
+        "backgroundTip": "Shown as the homepage background of your public website.",
+        "aiTitle": "Generate background",
+        "aiPlaceholder": "e.g. Cozy candlelit table with rustic plates and warm wood"
+      },
+      "general": {
+        "title": "General",
+        "menuLinkLabel": "Menu link",
+        "slugPlaceholder": "your-slug",
+        "copyUrl": "Copy URL",
+        "menuLinkTip": "Your unique URL where customers can view your menu.",
+        "slugError": "Use 2–40 lowercase letters, digits, or hyphens.",
+        "currencyLabel": "Currency",
+        "currencyTip": "Used for prices in your menu."
+      },
+      "orders": {
+        "title": "Orders",
+        "acceptLabel": "Accept orders",
+        "acceptTip": "When off, guests can browse the menu but can't place orders.",
+        "modeLabel": "Order mode",
+        "modeTip": "Internal orders are saved in the dashboard. WhatsApp orders are sent directly to your WhatsApp. You can enable both.",
+        "internal": "Internal",
+        "whatsapp": "WhatsApp",
+        "modeError": "Enable at least one mode.",
+        "requiredFieldsLabel": "Required fields",
+        "requiredFieldsTip": "Enabled fields will be required for the customer to fill in when placing an order.",
+        "fieldName": "Name",
+        "fieldPhone": "Phone",
+        "fieldAddress": "Address"
+      },
+      "bookings": {
+        "title": "Bookings",
+        "enableLabel": "Enable bookings",
+        "enableTip": "When off, guests can browse the menu but can't reserve a table.",
+        "modeLabel": "Confirmation mode",
+        "modeAutoTip": "Reservations are confirmed automatically.",
+        "modeManualTip": "You will need to manually confirm each reservation.",
+        "modeAuto": "Automatic",
+        "modeManual": "Manual",
+        "durationLabel": "Reservation duration",
+        "durationTip": "How long a table is held per booking.",
+        "durationMin": "{min} min",
+        "hoursLabel": "Working hours",
+        "hoursTip": "Reservations can be made within these hours.",
+        "hoursError": "\"From\" must be earlier than \"to\"."
+      },
+      "languages": {
+        "title": "Languages",
+        "availableLabel": "Available languages",
+        "availableTip": "Pick the languages you want for your menu. Tap to add or remove.",
+        "noneError": "Pick at least one language.",
+        "defaultLabel": "Default language",
+        "defaultTip": "The language you write your menu in first. Other languages are translations of this one."
+      },
+      "billing": {
+        "title": "Billing",
+        "menuUnavailable": "Menu unavailable for scanning",
+        "menuUnavailableTip": "Your trial has expired and there is no active subscription. Customers cannot scan and view your menu until you choose a plan.",
+        "trialActive": "Trial active",
+        "trialEnds": "Trial ends on {date}. Choose a plan to keep your menu available.",
+        "active": "Active",
+        "renewsOn": "Renews on {date}",
+        "manage": "Manage",
+        "yearly": "Yearly",
+        "monthly": "Monthly",
+        "billedYearly": "billed yearly",
+        "billedMonthly": "billed monthly",
+        "save30": "Save 30%",
+        "current": "Current",
+        "perMo": "/mo",
+        "currentPlan": "Current plan",
+        "switch": "Switch",
+        "subscribe": "Subscribe",
+        "cancelTip": "Cancel anytime via the customer portal. Yearly plans renew once per year."
+      },
+      "support": {
+        "title": "Support",
+        "noMessages": "No messages yet. Say hi!",
+        "placeholder": "Type a message...",
+        "send": "Send message"
+      }
+    },
+    "settingsHub": {
+      "title": "Settings",
+      "subtitle": "Manage your restaurant, team, and account.",
+      "logout": "Log out",
+      "loggingOut": "Logging out...",
+      "logoutDesc": "Sign out of this account.",
+      "rows": {
+        "about": "About",
+        "aboutDesc": "Title, subtitle, visibility",
+        "contacts": "Contacts & location",
+        "contactsDesc": "Phone, social, address",
+        "branding": "Branding",
+        "brandingDesc": "Background, accent color",
+        "general": "General",
+        "generalDesc": "Menu link, currency",
+        "tables": "Tables",
+        "tablesDesc": "Floor plan and capacity",
+        "orders": "Orders",
+        "ordersDesc": "Accept orders, modes, required fields",
+        "bookings": "Bookings",
+        "bookingsDesc": "Confirmation mode, duration, hours",
+        "languages": "Languages",
+        "languagesDesc": "Menu translation languages",
+        "billing": "Billing",
+        "billingDesc": "Subscription and invoices",
+        "support": "Support",
+        "supportDesc": "Chat with our team",
+        "companies": "Companies",
+        "companiesDesc": "All companies, plans, and chats.",
+        "sessions": "Sessions",
+        "sessionsDesc": "User sessions, events, and conversions."
+      }
+    },
+    "impersonation": {
+      "loggedInAs": "Logged in as {email}",
+      "exit": "Exit",
+      "exiting": "Exiting…"
+    },
+    "analyticsDashboard": {
+      "title": "Analytics",
+      "subtitle": "Menu views and performance.",
+      "loading": "Loading analytics…",
+      "noData": "No data yet",
+      "noDataSub": "Once guests start scanning your menu, you'll see stats here.",
+      "todayLabel": "Today",
+      "dayLabel": "Day",
+      "weekLabel": "Week",
+      "monthLabel": "Month",
+      "totalScans": "Total scans",
+      "uniqueScans": "Unique sessions",
+      "totalViews": "Page views",
+      "avgViews": "Avg pages/scan",
+      "byDay": "By day",
+      "byLanguage": "By language",
+      "byPage": "By page",
+      "noBreakdownData": "No data for this period.",
+      "limit": "Monthly limit",
+      "limitUsed": "{used} of {limit}",
+      "limitOver": "Over limit",
+      "limitInfinite": "Unlimited",
+      "periodToday": "Today",
+      "period7d": "7 days",
+      "period30d": "30 days",
+      "period90d": "90 days",
+      "noDataLong": "Once guests scan your menu, traffic and engagement metrics will appear here.",
+      "scans": "Scans",
+      "pageViews": "Page views",
+      "pagesPerScan": "Pages / scan",
+      "returning": "Returning",
+      "scansPerDay": "Scans per day",
+      "languages": "Languages",
+      "pages": "Pages",
+      "freePlanUsage": "Free plan usage",
+      "scansThisMonth": "Scans this calendar month",
+      "pageHome": "Home",
+      "pageLanguage": "Language picker",
+      "pageContacts": "Contacts",
+      "pageMenu": "Menu",
+      "dayTooltip": "{day} · {scans} scans · {views} views"
     },
     "auth": {
-      "title": "Welcome to",
+      "title": "Sign in to",
       "titleAccent": "IQ Rest",
-      "subtitle": "Enter your email to continue",
+      "subtitle": "Manage your menu, take orders, and grow your business.",
+      "emailLabel": "Email",
+      "emailPlaceholder": "you@restaurant.com",
+      "continueEmail": "Continue with email",
+      "or": "or",
+      "continueGoogle": "Continue with Google",
       "consent": {
-        "text": "By continuing, you agree to our",
+        "text": "By continuing you agree to our",
         "terms": "Terms",
         "and": "and",
         "privacy": "Privacy Policy"
       },
-      "emailPlaceholder": "you@restaurant.com",
-      "continue": "Continue",
-      "or": "or",
-      "continueGoogle": "Continue with Google",
       "verifyTitle": "Check your email",
-      "verifySubtitle": "We sent a 6-digit code to {email}. Enter it below to continue.",
-      "checkSpam": "Didn't get it? Check your spam folder.",
-      "verify": "Verify",
-      "changeEmail": "Change email",
-      "resendCode": "Resend code",
-      "resendSent": "Code sent!",
-      "errors": {
-        "sendFailed": "Failed to send code. Please try again.",
-        "verifyFailed": "Invalid code. Please try again.",
-        "codeExpired": "Code has expired. Please request a new one.",
-        "noCode": "No verification code found. Please request a new one.",
-        "invalidCode": "Invalid code. Please try again.",
-        "tooManyAttempts": "Too many attempts. Please request a new code.",
-        "emailRequired": "Please enter your email.",
-        "emailInvalid": "Please enter a valid email."
-      },
-      "emailLabel": "Email",
-      "continueEmail": "Continue with email",
+      "verifySubtitle": "We sent a 6-digit code to {email}.",
       "verifyCodeLabel": "Verification code",
-      "verifyButton": "Verify and continue"
-    },
-    "claim": {
-      "title": "Save your menu",
-      "subtitle": "Enter your email to keep access to your menu",
-      "emailPlaceholder": "your@email.com",
-      "sendCode": "Send code",
-      "verifyCode": "Verify",
-      "emailTaken": "This email is already in use. Log in or use a different email.",
-      "success": "Email verified! Your menu is saved.",
-      "backToMenu": "Back to menu"
-    },
-    "analytics": {
-      "monthlyUsage": "Monthly Usage",
-      "scansThisMonth": "scans this month",
-      "limitReached": "You've reached your monthly scan limit. Upgrade your plan for unlimited scans.",
-      "todayViews": "Today",
-      "weeklyViews": "This Week",
-      "monthlyViews": "This Month",
-      "uniqueVisitors": "Unique Visitors",
-      "viewsByPage": "Views by Page",
-      "viewsByLanguage": "Views by Language",
-      "dailyViews": "Daily Views",
-      "deviceStats": "Devices & Browsers",
-      "devices": "Devices",
-      "browsers": "Browsers",
-      "os": "OS",
-      "noData": "No data available yet",
-      "pageNames": {
-        "home": "Home",
-        "menu": "Menu",
-        "contacts": "Contacts",
-        "language": "Language",
-        "reserve": "Reserve"
-      },
-      "languageNames": {
-        "en": "English",
-        "es": "Español",
-        "de": "Deutsch",
-        "fr": "Français",
-        "ru": "Русский"
+      "checkSpam": "Don't see it? Check your spam folder.",
+      "verifyButton": "Verify and continue",
+      "resendCode": "Resend code",
+      "resendSent": "Code sent",
+      "changeEmail": "Use a different email",
+      "errors": {
+        "emailInvalid": "Please enter a valid email address.",
+        "sendFailed": "Couldn't send the code. Try again.",
+        "verifyFailed": "Couldn't verify the code. Try again.",
+        "codeExpired": "This code expired. Request a new one.",
+        "noCode": "No code on file. Request a new one.",
+        "invalidCode": "Wrong code. Try again.",
+        "tooManyAttempts": "Too many attempts. Wait and try again later."
       }
     },
-    "categories": {
-      "general": "General",
-      "noCategories": "No categories yet",
-      "addCategory": "Add Category",
-      "editCategory": "Edit Category",
-      "name": "Name",
-      "namePlaceholder": "e.g. Main Dishes",
-      "status": "Status",
-      "active": "Active",
-      "inactive": "Inactive",
-      "save": "Save",
-      "saving": "Saving...",
-      "cancel": "Cancel",
-      "delete": "Delete",
-      "deleteConfirm": "Are you sure you want to delete this category? This action cannot be undone.",
-      "fetchError": "Failed to load categories",
-      "updateError": "Failed to update category",
-      "saveError": "Failed to save category",
-      "deleteError": "Failed to delete category",
-      "translateError": "Translation failed",
-      "nameRequired": "Name is required",
-      "enabled": "enabled",
-      "disabled": "disabled",
-      "created": "Category created",
-      "updated": "Category updated",
-      "deleted": "Category deleted",
-      "validationErrorTitle": "Please fix the following errors",
-      "sort": "Sort",
-      "saveSort": "Save",
-      "sortSaved": "Sort order saved",
-      "sortError": "Failed to save sort order",
-      "close": "Close",
-      "unsavedChanges": "Unsaved changes",
-      "discard": "Discard",
-      "enterName": "Enter name"
-    },
-    "items": {
-      "general": "General",
-      "noItems": "No dishes yet. Create your first dish to get started.",
-      "noCategoriesHint": "Add a category first to create dishes.",
-      "addItem": "Add Dish",
-      "editItem": "Edit Dish",
-      "name": "Name",
-      "namePlaceholder": "e.g. Margherita Pizza",
-      "description": "Description",
-      "descriptionPlaceholder": "Enter dish description",
-      "price": "Price",
-      "pricePlaceholder": "0.00",
-      "category": "Category",
-      "categoryPlaceholder": "Select category",
-      "image": "Image",
-      "uploadImage": "Upload image",
-      "removeImage": "Remove image",
-      "status": "Status",
-      "active": "Active",
-      "inactive": "Inactive",
-      "save": "Save",
-      "saving": "Saving...",
-      "cancel": "Cancel",
-      "delete": "Delete",
-      "deleteConfirm": "Are you sure you want to delete this dish? This action cannot be undone.",
-      "fetchError": "Failed to load dish",
-      "updateError": "Failed to update dish",
-      "saveError": "Failed to save dish",
-      "deleteError": "Failed to delete dish",
-      "translateError": "Translation failed",
-      "nameRequired": "Name is required",
-      "categoryRequired": "Category is required",
-      "priceRequired": "Valid price is required",
-      "enabled": "enabled",
-      "disabled": "disabled",
-      "created": "Dish created",
-      "updated": "Dish updated",
-      "deleted": "Dish deleted",
-      "validationErrorTitle": "Please fix the following errors",
-      "sort": "Sort",
-      "saveSort": "Save",
-      "sortSaved": "Sort order saved",
-      "sortError": "Failed to save sort order",
-      "allergens": "Allergens",
-      "allergensHint": "Select allergens present in this dish",
-      "allergenNames": {
-        "gluten": "Gluten",
-        "crustaceans": "Crustaceans",
-        "eggs": "Eggs",
-        "fish": "Fish",
-        "peanuts": "Peanuts",
-        "soybeans": "Soybeans",
-        "dairy": "Dairy",
-        "nuts": "Tree Nuts",
-        "celery": "Celery",
-        "mustard": "Mustard",
-        "sesame": "Sesame",
-        "sulphites": "Sulphites",
-        "lupin": "Lupin",
-        "molluscs": "Molluscs"
-      },
-      "subscribeForAllergens": "Subscribe to add allergen labels",
-      "subscribe": "Subscribe",
-      "sectionMain": "Main",
-      "moreDetails": "More details",
-      "generateImage": "Generate with AI",
-      "generatingImage": "Generating...",
-      "generateImageError": "Failed to generate image",
-      "stylize": "Stylize",
-      "changeBackground": "Change background",
-      "regenerateImage": "Regenerate",
-      "generateLimitReached": "Free AI generations used up",
-      "generateLimitDescription": "You've used all 2 free AI image generations. Upgrade to Growth or Pro for unlimited generations.",
-      "close": "Close",
-      "unsavedChanges": "Unsaved changes",
-      "discard": "Discard",
-      "enterName": "Enter name",
-      "enterDescription": "Enter description",
-      "enterPrice": "Enter price",
-      "selectCategory": "Select category",
-      "addPhoto": "Add photo",
-      "selectAllergens": "Select"
-    },
-    "menu": {
-      "yourMenu": "Your Menu",
-      "addItem": "Add Dish",
-      "addCategory": "Add Category",
-      "noItems": "No dishes yet",
-      "emptyTitle": "Your menu is empty",
-      "emptySubtitle": "Add your first dish to get started",
-      "orDivider": "or",
-      "scanButton": "Scan Menu from Photo",
-      "scanDescription": "Upload a photo or PDF of your paper menu and AI will create your digital menu automatically",
-      "scanLoading": "Scanning your menu...",
-      "scanLoadingSubtitle": "AI is reading your menu and creating categories",
-      "scanError": "Something went wrong. Please try again.",
-      "scanErrorNotMenu": "This doesn't look like a restaurant menu. Please try another photo.",
-      "scanErrorTooLarge": "Image is too large. Maximum size is 20MB.",
-      "scanErrorTooMany": "Too many images. Maximum is 5 photos.",
-      "scanSuccess": "Menu scanned successfully!",
-      "scanAddMore": "Add files",
-      "scanStart": "Scan",
-      "scanPoolTitle": "Menu pages",
-      "scanPoolSubtitle": "Add photos or PDF files of your paper menu. Up to 5 files.",
-      "defaultCategoryName": "Menu",
-      "demoButton": "Fill with sample menu",
-      "demoDescription": "Not ready yet? Try with a sample menu to see how it works.",
-      "hintTitle": "What is a category?",
-      "hintBody": "A category is a section of your menu. For example: Starters, Main Dishes, Desserts, Drinks, Lunch Specials.",
-      "hintNoCategories": "Don't have categories? No problem — create one called \"Menu\" or \"Our Dishes\" and add everything there.",
-      "itemHintTitle": "What is a dish?",
-      "itemHintBody": "A dish is a specific dish or drink on your menu. For example: Caesar Salad, Margherita Pizza, Espresso, Chocolate Cake. Add a name, price, and optionally a description and photo.",
-      "noItemsInCategory": "No items in this category",
-      "onboarding": {
-        "title": "Let's build your menu",
-        "subtitle": "Follow the steps below or scan a paper menu.",
-        "scanTitle": "Scan paper menu",
-        "scanSubtitle": "Upload a photo or PDF — AI builds your menu",
-        "orStepByStep": "or step by step",
-        "step1Title": "Create a category",
-        "step1Subtitle": "E.g. Starters, Mains, Drinks",
-        "step2Title": "Add your first dish",
-        "step2Subtitle": "Name, price, photo (optional)",
-        "step3Title": "Preview & share",
-        "step3Subtitle": "Show QR to customers"
-      },
-      "demoSubtitle": "Preview with sample data — edit anytime",
-      "demoError": "Failed to create demo menu",
-      "manualTitle": "Manual setup",
-      "manualSubtitle": "Create categories and dishes yourself"
-    },
-    "languages": {
-      "translationProgress": "Translation Progress",
-      "availableLanguages": "Available Languages",
-      "europeanLanguages": "European Languages",
-      "starToSetDefault": "Click star to set as default",
-      "default": "default",
-      "hint": "Enable languages to allow customers to view your menu in multiple languages. The default language is used for the main content.",
-      "fetchError": "Failed to load languages",
-      "enableError": "Failed to enable language",
-      "disableError": "Failed to disable language",
-      "defaultError": "Failed to set default language",
-      "languageEnabled": "{language} enabled",
-      "languageDisabled": "{language} disabled",
-      "defaultSet": "{language} set as default",
-      "cannotDisableDefault": "Cannot disable default language",
-      "atLeastOneRequired": "At least one language is required",
-      "enableFirst": "Enable language first",
-      "deleteConfirm": "Disabling this language will delete all translations for it. This action cannot be undone.",
-      "cancel": "Cancel",
-      "confirm": "Disable",
-      "createRestaurantFirst": "Please fill in your restaurant details first to manage languages.",
-      "goToSettings": "Go to Settings",
-      "limitReached": "You've reached the limit of {limit} languages for your plan.",
-      "upgrade": "Upgrade",
-      "showAll": "Show all languages",
-      "showLess": "Show less"
-    },
-    "contacts": {
-      "phone": "Phone",
-      "phonePlaceholder": "+1 234 567 8900",
-      "phoneHint": "Contact phone number for your customers",
-      "instagram": "Instagram",
-      "instagramPlaceholder": "your_restaurant",
-      "instagramHint": "Your Instagram username (without @)",
-      "whatsapp": "WhatsApp",
-      "whatsappPlaceholder": "+1 234 567 8900",
-      "whatsappHint": "WhatsApp number for customer inquiries",
-      "location": "Location",
-      "locationHint": "Click on the map or search to set your restaurant location",
-      "save": "Save",
-      "fetchError": "Failed to load contact information",
-      "saveError": "Failed to save contact information",
-      "saved": "Contact information saved"
-    },
-    "design": {
-      "sectionContent": "Content",
-      "sectionDesign": "Design",
-      "sectionSettings": "Settings",
-      "name": "Title",
-      "namePlaceholder": "Enter restaurant name",
-      "nameHint": "Displayed on the homepage of your public website",
-      "description": "Subtitle",
-      "descriptionPlaceholder": "Brief description (optional)",
-      "descriptionHint": "Displayed below the title on the homepage",
-      "hideTitleLabel": "Show title on homepage",
-      "hideTitleOn": "Visible",
-      "hideTitleOff": "Hidden",
-      "hideTitleHint": "When off, only the background image or video is shown",
-      "background": "Background",
-      "backgroundHint": "Upload a video or image for your homepage background",
-      "uploadMedia": "Upload video or image",
-      "removeMedia": "Remove",
-      "accentColor": "Accent Color",
-      "accentColorHint": "Main color for buttons and highlights on your website. Use the rainbow button to pick any custom color.",
-      "preview": "Preview",
-      "previewButton": "Book a Table",
-      "slug": "Website Address",
-      "slugPrefix": "iq-rest.com/m/",
-      "slugPlaceholder": "my-restaurant",
-      "currency": "Currency",
-      "currencyPlaceholder": "Select currency",
-      "save": "Save",
-      "fetchError": "Failed to load design settings",
-      "saveError": "Failed to save design settings",
-      "saved": "Settings saved",
-      "uploadError": "Failed to upload file",
-      "invalidFileType": "Invalid file type. Allowed: JPEG, PNG, WebP, GIF, MP4, WebM, MOV",
-      "fileTooLarge": "File is too large. Max size: 50MB for videos, 5MB for images",
-      "subscribeForAccentColor": "Subscribe to customize accent color",
-      "subscribe": "Subscribe",
-      "nameRequired": "Restaurant name is required",
-      "slugRequired": "Website address is required",
-      "validationErrorTitle": "Please fix the following errors",
-      "copyUrl": "Copy URL",
-      "generateBackground": "Generate with AI",
-      "generating": "Generating...",
-      "generateError": "Failed to generate background",
-      "ordersSection": "Orders",
-      "ordersRequireWhatsApp": "Add a WhatsApp number on the Contacts page to enable WhatsApp orders",
-      "orderMode": "Order Mode",
-      "orderModeWhatsapp": "WhatsApp",
-      "orderModeInternal": "Internal",
-      "orderModeBoth": "WhatsApp + Internal",
-      "orderModeWhatsappHint": "Orders are sent directly to WhatsApp",
-      "orderModeInternalHint": "Orders are saved in the dashboard",
-      "orderModeBothHint": "Orders are saved and also sent via WhatsApp",
-      "ordersEnabled": "Enable Orders",
-      "ordersOn": "Accept orders",
-      "ordersOff": "Accept orders",
-      "ordersFieldsHint": "Required fields:",
-      "ordersName": "Name",
-      "ordersNameOn": "Name",
-      "ordersNameOff": "Name",
-      "ordersPhone": "Phone",
-      "ordersPhoneOn": "Phone",
-      "ordersPhoneOff": "Phone",
-      "ordersAddress": "Delivery Address",
-      "ordersAddressOn": "Address",
-      "ordersAddressOff": "Address",
-      "orderModeHint": "Internal orders are saved in the dashboard. WhatsApp orders are sent directly to your WhatsApp. You can enable both at the same time.",
-      "ordersFieldsDescription": "Enabled fields will be required for the customer to fill in when placing an order.",
-      "slugHint": "This is your unique URL address where customers can view your menu. Share this link or use it in your QR code. It will appear as: iq-rest.com/m/your-slug"
-    },
-    "general": {
-      "save": "Save",
-      "fetchError": "Failed to load settings",
-      "saveError": "Failed to save settings",
-      "saved": "Settings saved",
-      "validationErrorTitle": "Please fix the following errors"
+    "admin": {
+      "all": "All",
+      "activeToday": "Active today",
+      "companiesTitle": "Companies",
+      "noCompanies": "No companies",
+      "noName": "No name",
+      "sessionsTitle": "Sessions",
+      "today": "Today",
+      "yesterday": "Yesterday",
+      "sevenDays": "7 days",
+      "refresh": "Refresh",
+      "noSessions": "No sessions",
+      "events": "{count} ev.",
+      "loading": "Loading…",
+      "settingsBreadcrumb": "Settings"
     }
   },
   "reservationSettings": {
@@ -2506,5 +2577,1051 @@
     },
     "back": "Back",
     "continue": "Continue"
+  },
+  "onlineOrders": {
+    "seo": {
+      "title": "Online Ordering for Restaurants — QR Menu | IQ Rest",
+      "description": "Let customers place orders directly from your QR menu. Zero commissions, real-time prices, and instant order management in your dashboard."
+    },
+    "hero": {
+      "badge": "Online Ordering",
+      "title": "Turn Your QR Menu into an Online Ordering System",
+      "subtitle": "Customers scan, browse your menu, and place their order in seconds. No app downloads, no commissions, no complexity.",
+      "cta": "Create Your Menu",
+      "ctaDemo": "View Demo",
+      "noCreditCard": "No credit card required. Free plan available."
+    },
+    "benefits": {
+      "title": "Why Restaurants Choose QR Menu Orders",
+      "subtitle": "A direct ordering channel that keeps things simple for you and your guests.",
+      "items": [
+        {
+          "title": "No App Required",
+          "description": "Guests just scan a QR code — no downloads, no sign-ups. Works instantly in any phone browser."
+        },
+        {
+          "title": "Real-time Prices",
+          "description": "Update prices and availability instantly. Changes reflect immediately on your QR menu."
+        },
+        {
+          "title": "Table-side Ordering",
+          "description": "Each table gets its own QR code. Guests scan, order, and you see the table number in your dashboard."
+        },
+        {
+          "title": "Custom Design",
+          "description": "Match your menu to your brand with custom colors, backgrounds, and logo."
+        }
+      ]
+    },
+    "features": {
+      "title": "How Online Ordering Works",
+      "subtitle": "Two simple steps connect your menu to your kitchen.",
+      "items": [
+        {
+          "title": "Guests Browse & Select Items",
+          "description": "Customers scan your QR code and see your full menu with photos, descriptions, and prices. They add items to their order with a single tap — no sign-up needed."
+        },
+        {
+          "title": "Orders Appear in Your Dashboard",
+          "description": "When ready, guests tap the order button. The order instantly appears in your dashboard with item details, table number, and any notes. Accept, start preparing, and mark as complete."
+        }
+      ]
+    },
+    "howItWorks": {
+      "title": "How It Works",
+      "subtitle": "From setup to receiving your first order in five simple steps.",
+      "steps": [
+        {
+          "title": "Enable Online Ordering",
+          "description": "Toggle orders on in your Design settings. Choose your preferred mode: orders appear in your dashboard, get forwarded to WhatsApp, or both simultaneously."
+        },
+        {
+          "title": "Configure the Order Form",
+          "description": "Select which fields customers must fill in when placing an order. Name is always required, and you can optionally ask for phone number and delivery address."
+        },
+        {
+          "title": "Print QR Codes for Tables",
+          "description": "Each table in your restaurant gets its own unique QR code. When guests scan it, their order automatically arrives with the correct table number attached."
+        },
+        {
+          "title": "Customers Place Orders",
+          "description": "Guests scan the QR code, browse your menu with photos and prices, select items, add notes, and submit their order. No app download or account creation needed."
+        },
+        {
+          "title": "Manage Orders in Your Dashboard",
+          "description": "Orders appear instantly in your dashboard. Update each order's status from new to in progress to completed. You keep 100% of the revenue — zero commissions."
+        }
+      ]
+    },
+    "faq": {
+      "title": "Frequently Asked Questions",
+      "subtitle": "Everything you need to know about online ordering.",
+      "items": [
+        {
+          "question": "Do I need any extra hardware or apps?",
+          "answer": "No. Everything works through a web browser. Guests scan the QR code with their phone camera, and you manage orders from the IQ Rest dashboard on any device."
+        },
+        {
+          "question": "Are there any commissions or per-order fees?",
+          "answer": "Absolutely not. IQ Rest never charges commissions on your orders. You pay only your subscription plan, and all revenue from orders stays with you."
+        },
+        {
+          "question": "Can customers customize their order or add notes?",
+          "answer": "Yes. Guests can select items, specify quantities, and add special notes or requests. You can also require customer name, phone, or delivery address."
+        },
+        {
+          "question": "Does it work for dine-in, takeaway, and delivery?",
+          "answer": "Yes. For dine-in, guests scan the QR code at their table. For takeaway or delivery, share a direct link to your menu. You can enable name, phone, and address fields as needed."
+        },
+        {
+          "question": "Can I send orders to WhatsApp instead of the dashboard?",
+          "answer": "Yes. In your order settings, you can choose WhatsApp mode, dashboard mode, or both. WhatsApp orders are sent directly to your phone with all item details and customer info."
+        },
+        {
+          "question": "Do customers need to create an account to order?",
+          "answer": "No. Guests scan the QR code and order immediately — no account, no app download, no sign-up. It works instantly in any phone browser."
+        },
+        {
+          "question": "Can I see which table placed the order?",
+          "answer": "Yes. Each table has its own QR code, so every order arrives with the table number automatically attached. You always know exactly where the order came from."
+        },
+        {
+          "question": "Is online ordering available on the free plan?",
+          "answer": "Online ordering is available on the Growth and Pro plans. The free plan includes your full QR menu, contact page, and analytics — upgrade anytime to enable orders."
+        }
+      ]
+    }
+  },
+  "reservationsPage": {
+    "seo": {
+      "title": "Restaurant Reservation SaaS — Table Management System & Online Booking | IQ Rest",
+      "description": "Cloud-based restaurant reservation software with table management, automatic or manual confirmation, email notifications, and a booking widget for your website. Free plan available."
+    },
+    "hero": {
+      "badge": "Table Reservations",
+      "title": "Restaurant Reservation SaaS — Accept Table Bookings 24/7",
+      "subtitle": "A cloud-based restaurant reservation software that lets guests book tables directly from your website. No phone calls, no third-party apps — just a white-label restaurant booking system built into your QR menu.",
+      "cta": "Create Your Menu",
+      "ctaDemo": "View Demo",
+      "noCreditCard": "No credit card required. Free plan available."
+    },
+    "features": {
+      "title": "How the Table Management System Works",
+      "subtitle": "Two steps from guest request to confirmed booking — powered by your restaurant booking widget.",
+      "items": [
+        {
+          "title": "Guests Book from Your Website",
+          "description": "Customers visit your restaurant page, tap 'Reserve a Table', choose a date and time, enter their details, and submit. No app download needed — the booking widget works in any browser on any device."
+        },
+        {
+          "title": "You Manage Bookings in Your Dashboard",
+          "description": "Every reservation appears in your cloud-based dashboard with guest name, phone, party size, date, and notes. Confirm or decline with one tap. Set automatic confirmation or review each booking manually — full table management at your fingertips."
+        }
+      ]
+    },
+    "howItWorks": {
+      "title": "How It Works",
+      "subtitle": "Set up your restaurant reservation system and start accepting online bookings in five steps.",
+      "steps": [
+        {
+          "title": "Enable Online Reservations",
+          "description": "Toggle reservations on in your restaurant settings. Choose between automatic confirmation, where bookings are approved instantly based on table availability, or manual mode where you review each request."
+        },
+        {
+          "title": "Add Your Tables",
+          "description": "Create tables with capacity and zone information — for example, 'Table 5, 4 guests, Terrace'. Each table becomes bookable, and the table management system prevents double-bookings automatically."
+        },
+        {
+          "title": "Set Working Hours",
+          "description": "Define your available hours for reservations and choose the slot duration — from 15 minutes to 8 hours. Only time slots within your working hours are shown to guests in the booking widget."
+        },
+        {
+          "title": "Guests Book Online",
+          "description": "Customers visit your restaurant page, pick their date, time, and party size, enter their name and phone, and submit. No account or app download required — the white-label booking system works in any browser."
+        },
+        {
+          "title": "Manage Bookings in Your Dashboard",
+          "description": "View all reservations in your cloud-based dashboard. Confirm, cancel, or mark bookings as completed. Both you and the guest receive email notifications for every booking update."
+        }
+      ]
+    },
+    "faq": {
+      "title": "Frequently Asked Questions",
+      "subtitle": "Everything you need to know about the restaurant reservation system.",
+      "items": [
+        {
+          "question": "Do customers need to create an account to book?",
+          "answer": "No. Guests simply fill in their name, phone number, party size, and preferred time. No account or app download required — the restaurant booking widget is designed for instant access."
+        },
+        {
+          "question": "Can I set available time slots and table capacity?",
+          "answer": "Yes. Define your working hours, reservation slot duration, and table capacity. The table management system only shows available slots to guests."
+        },
+        {
+          "question": "Will I get notified when someone books?",
+          "answer": "Yes. You receive an email for every new reservation. Guests also get a confirmation email once you approve the booking through the dashboard."
+        },
+        {
+          "question": "Can I use both automatic and manual confirmation?",
+          "answer": "Yes. Choose automatic mode to confirm bookings instantly based on availability, or manual mode to review and approve each request yourself — the restaurant reservation software supports both workflows."
+        },
+        {
+          "question": "How does the system prevent double bookings?",
+          "answer": "Each table has a defined capacity and time slots. Once a table is booked for a specific time, it's no longer shown as available. The cloud-based reservation system handles all conflict detection automatically."
+        },
+        {
+          "question": "Can guests add special requests or notes?",
+          "answer": "Yes. The reservation form includes a notes field where guests can mention dietary needs, celebrations, seating preferences, or any other requests."
+        },
+        {
+          "question": "Is the restaurant reservation SaaS available on the free plan?",
+          "answer": "Table reservations are available on the Growth and Pro plans. The free plan includes your full QR menu, contact page, and analytics — upgrade anytime to enable online reservations."
+        },
+        {
+          "question": "Can I see reservation history?",
+          "answer": "Yes. All reservations — past and upcoming — are stored in your dashboard. You can filter by date, status, and table to review your booking history at any time."
+        }
+      ]
+    }
+  },
+  "colorSchemePage": {
+    "seo": {
+      "title": "Custom QR Menu Design & Brand Colors — Restaurant Branding | IQ Rest",
+      "description": "Match your QR menu to your restaurant brand. Choose accent colors and create a consistent look across your entire digital menu."
+    },
+    "hero": {
+      "badge": "Custom Design",
+      "title": "Make Your QR Menu Match Your Restaurant Brand",
+      "subtitle": "Pick your brand color, and your entire menu — buttons, highlights, links — updates instantly.",
+      "cta": "Create Your Menu",
+      "ctaDemo": "View Demo",
+      "noCreditCard": "No credit card required. Free plan available."
+    },
+    "features": {
+      "title": "How Custom Branding Works",
+      "subtitle": "Your menu, your colors — consistent across every page.",
+      "items": [
+        {
+          "title": "Choose Your Accent Color",
+          "description": "Select from 12 curated presets or enter your exact brand color with a hex code. Every button, link, and highlight on your menu adapts instantly — no design skills needed."
+        }
+      ]
+    },
+    "howItWorks": {
+      "title": "How It Works",
+      "subtitle": "Match your menu to your brand in three simple steps.",
+      "steps": [
+        {
+          "title": "Open Design Settings",
+          "description": "Navigate to the Design page in your dashboard. The accent color picker is front and center — you'll see all available options immediately."
+        },
+        {
+          "title": "Pick Your Brand Color",
+          "description": "Choose from 12 curated color presets designed for readability and accessibility, or enter your exact hex code for a perfect brand match."
+        },
+        {
+          "title": "Instant Preview",
+          "description": "Your accent color applies to buttons, links, and highlights across the entire menu. It works in both light and dark themes, and changes appear instantly on your live menu."
+        }
+      ]
+    },
+    "faq": {
+      "title": "Frequently Asked Questions",
+      "subtitle": "Everything you need to know about menu customization.",
+      "items": [
+        {
+          "question": "Can I use my exact brand color?",
+          "answer": "Yes. Enter any hex color code, or choose from 12 carefully selected presets. Your accent color applies across all pages of your menu."
+        },
+        {
+          "question": "Can I change colors after publishing?",
+          "answer": "Absolutely. Change your accent color anytime from the dashboard. Updates appear instantly on your live menu — no republishing needed."
+        },
+        {
+          "question": "Will my QR code match the brand colors too?",
+          "answer": "Your QR code is generated separately and can be customized independently. The accent color applies to your digital menu pages, navigation, and interactive elements."
+        },
+        {
+          "question": "Does the accent color work with dark mode?",
+          "answer": "Yes. Your chosen accent color is applied in both light and dark themes. The system automatically adjusts brightness and contrast to ensure readability in either mode."
+        },
+        {
+          "question": "Is custom color available on the free plan?",
+          "answer": "Yes. The accent color feature is available on every plan, including free. All restaurants can match their menu to their brand at no cost."
+        },
+        {
+          "question": "Which elements use the accent color?",
+          "answer": "The accent color is applied to buttons, links, active states, highlights, and navigation elements across your entire menu — homepage, menu page, contacts, and reservation page."
+        }
+      ]
+    }
+  },
+  "easyMenuPage": {
+    "seo": {
+      "title": "Create a QR Menu for Your Restaurant — Free Menu Maker | IQ Rest",
+      "description": "Build your restaurant's digital QR menu in minutes. Add categories, dishes, photos, prices — and share a scannable QR code. Free to start."
+    },
+    "hero": {
+      "badge": "Menu Creator",
+      "title": "Create a Digital QR Menu for Your Restaurant in Minutes",
+      "subtitle": "Add your categories and dishes, set prices, upload photos — your QR menu is ready to share. Edit anytime, changes appear instantly.",
+      "cta": "Create Your Menu",
+      "ctaDemo": "View Demo",
+      "noCreditCard": "No credit card required. Free plan available."
+    },
+    "features": {
+      "title": "How the Menu Editor Works",
+      "subtitle": "Simple tools that get your menu online fast.",
+      "items": [
+        {
+          "title": "Add Categories & Dishes",
+          "description": "Create categories like Starters, Mains, Drinks — then add dishes with names, descriptions, prices, and photos. Drag and drop to reorder. Toggle items on or off without deleting them."
+        },
+        {
+          "title": "Changes Go Live Instantly",
+          "description": "Every edit you make appears on your live QR menu within seconds. Update a price, add a daily special, or hide a sold-out dish — your customers always see the latest version."
+        }
+      ]
+    },
+    "howItWorks": {
+      "title": "How It Works",
+      "subtitle": "Build and publish your restaurant menu in five simple steps.",
+      "steps": [
+        {
+          "title": "Create Categories",
+          "description": "Add categories like Starters, Mains, Desserts, and Drinks to organize your menu. You can create as many categories as you need and reorder them with drag and drop."
+        },
+        {
+          "title": "Add Menu Items",
+          "description": "Enter the dish name, description, and price for each item. Mark allergens if applicable — guests will see allergen icons on the menu automatically."
+        },
+        {
+          "title": "Upload or Generate Photos",
+          "description": "Upload your own food photos from your phone or computer, or use AI to generate a professional food image from the dish name. Images are optimized automatically."
+        },
+        {
+          "title": "Organize with Drag and Drop",
+          "description": "Reorder categories and items by dragging them into place. Toggle any item on or off without deleting it — perfect for daily specials or sold-out dishes."
+        },
+        {
+          "title": "Publish Your Menu",
+          "description": "Changes appear instantly on your live QR menu. There's no 'publish' button — every edit goes live in real time. Print your QR code and place it on your tables."
+        }
+      ]
+    },
+    "faq": {
+      "title": "Frequently Asked Questions",
+      "subtitle": "Everything you need to know about creating your QR menu.",
+      "items": [
+        {
+          "question": "How do I create a QR menu for my restaurant?",
+          "answer": "Sign up with your email, name your restaurant, and start adding categories and dishes. Your QR menu is generated automatically — print the QR code and place it on your tables."
+        },
+        {
+          "question": "Can I add photos to my menu items?",
+          "answer": "Yes. Upload photos directly from your phone or computer. Images are automatically optimized for fast loading on any device."
+        },
+        {
+          "question": "How many items can I add?",
+          "answer": "There is no limit on categories or menu items. Add as many dishes as you need — your menu stays fast and organized."
+        },
+        {
+          "question": "Can I temporarily hide a dish that's sold out?",
+          "answer": "Yes. Toggle any item off with one tap. It disappears from the public menu but stays in your dashboard — toggle it back on whenever you're ready."
+        },
+        {
+          "question": "Can I add allergen information to dishes?",
+          "answer": "Yes. Each menu item has an allergens field where you can select from common allergens like gluten, nuts, dairy, and more. Allergen icons appear automatically on the public menu."
+        },
+        {
+          "question": "Can I set different prices for different sizes?",
+          "answer": "Each menu item has one price field. For items with size variations, you can create separate items (e.g., 'Pizza Small' and 'Pizza Large') or mention sizes in the description."
+        },
+        {
+          "question": "Do I need to reprint QR codes when I change the menu?",
+          "answer": "No. Your QR code always points to your live menu. Any changes you make — new items, updated prices, hidden dishes — appear instantly without reprinting."
+        },
+        {
+          "question": "Can I organize items into subcategories?",
+          "answer": "The menu uses a flat category structure for simplicity. You can create as many categories as needed — for example, 'Red Wine', 'White Wine', and 'Sparkling' instead of a single 'Wine' category."
+        }
+      ]
+    }
+  },
+  "aiTranslationPage": {
+    "seo": {
+      "title": "AI Menu Translation for Restaurants — Translate QR Menu | IQ Rest",
+      "description": "Translate your restaurant menu into 25+ languages with one click. AI understands culinary context — dish names, descriptions, and categories translated accurately."
+    },
+    "hero": {
+      "badge": "AI Translation",
+      "title": "Translate Your Menu into 25+ Languages with One Click",
+      "subtitle": "Our AI understands food context — it translates dish names, descriptions, and categories naturally, not word-by-word. Reach every tourist and international guest.",
+      "cta": "Create Your Menu",
+      "ctaDemo": "View Demo",
+      "noCreditCard": "No credit card required. Free plan available."
+    },
+    "features": {
+      "title": "How AI Translation Works",
+      "subtitle": "From your language to the world in seconds.",
+      "items": [
+        {
+          "title": "One-Click Translation for Your Entire Menu",
+          "description": "Select a target language, tap translate, and your entire menu — categories, dish names, descriptions — is translated instantly. The AI preserves culinary terms and adapts naturally for each language."
+        },
+        {
+          "title": "Edit and Fine-Tune Any Translation",
+          "description": "Every AI translation is fully editable. Review the result, adjust any wording, and save. Your changes are preserved even if you re-translate other parts of the menu later."
+        }
+      ]
+    },
+    "howItWorks": {
+      "title": "How It Works",
+      "subtitle": "Translate your entire menu in minutes, not hours.",
+      "steps": [
+        {
+          "title": "Add Languages to Your Menu",
+          "description": "Go to the Languages page in your dashboard and select which languages your menu should support. Choose from 35 available languages including all major European, Asian, and Middle Eastern languages."
+        },
+        {
+          "title": "Click Translate",
+          "description": "One button translates all your categories, item names, and descriptions at once. The entire menu is processed in seconds, no matter how many items you have."
+        },
+        {
+          "title": "AI Understands Food Context",
+          "description": "The AI knows culinary terminology across cultures. It preserves dish names like 'Tiramisu' or 'Pad Thai' while naturally adapting descriptions, ingredient lists, and category names."
+        },
+        {
+          "title": "Review and Edit",
+          "description": "Every translation is fully editable. Adjust any wording to match your style. Your manual changes are preserved even when you re-translate other parts of the menu later."
+        },
+        {
+          "title": "Publish Your Multilingual Menu",
+          "description": "Guests see a language switcher on your menu and can browse in their preferred language. Each language can be toggled on or off independently from your dashboard."
+        }
+      ]
+    },
+    "faq": {
+      "title": "Frequently Asked Questions",
+      "subtitle": "Everything you need to know about menu translation.",
+      "items": [
+        {
+          "question": "How accurate is the AI translation for food menus?",
+          "answer": "Our AI is optimized for restaurant content. It understands that 'Beef Wellington' or 'Tiramisu' shouldn't be translated literally, and adapts descriptions to sound natural in each language."
+        },
+        {
+          "question": "Which languages are supported?",
+          "answer": "35 languages including English, Spanish, French, German, Italian, Portuguese, Chinese, Japanese, Korean, Arabic, Russian, and many more European and Asian languages."
+        },
+        {
+          "question": "Can I translate just some items, not the whole menu?",
+          "answer": "Yes. You can translate individual items, entire categories, or the whole menu at once. You have full control over what gets translated."
+        },
+        {
+          "question": "Does it cost extra per translation?",
+          "answer": "AI translation is included in Growth and Pro plans with generous monthly limits. No per-word or per-item charges — translate as much as you need."
+        },
+        {
+          "question": "What happens if I add new menu items after translating?",
+          "answer": "New items are added in your default language. Simply click translate again — only the untranslated items are processed, and your existing translations remain untouched."
+        },
+        {
+          "question": "Can I manually enter translations instead of using AI?",
+          "answer": "Yes. Every translation field is editable. You can type translations manually, use AI as a starting point and refine, or combine both approaches for different items."
+        },
+        {
+          "question": "Does the AI translate category names and descriptions too?",
+          "answer": "Yes. One-click translation covers everything — category names, item names, item descriptions, and table zone names. Your entire menu is translated consistently."
+        }
+      ]
+    }
+  },
+  "mobileManagementPage": {
+    "seo": {
+      "title": "Manage Your Restaurant Menu from Phone — Mobile Dashboard | IQ Rest",
+      "description": "Run your restaurant's QR menu entirely from your phone. Add dishes, update prices, upload photos, check analytics — no computer needed."
+    },
+    "hero": {
+      "badge": "Mobile Dashboard",
+      "title": "Manage Your Entire Restaurant Menu from Your Phone",
+      "subtitle": "Add dishes, change prices, upload photos, check orders — all from your smartphone. The dashboard is built mobile-first, so you never need a computer.",
+      "cta": "Create Your Menu",
+      "ctaDemo": "View Demo",
+      "noCreditCard": "No credit card required. Free plan available."
+    },
+    "features": {
+      "title": "How Mobile Management Works",
+      "subtitle": "Your restaurant dashboard, always in your pocket.",
+      "items": [
+        {
+          "title": "Full Dashboard on Your Smartphone",
+          "description": "Every feature works perfectly on your phone screen — add items, edit categories, manage orders, check analytics. The interface is designed for touch, not just resized from desktop."
+        },
+        {
+          "title": "Upload Photos Directly from Camera",
+          "description": "Take a photo of a new dish and upload it to your menu in seconds. Images are optimized automatically. Update your daily special while standing in the kitchen."
+        }
+      ]
+    },
+    "howItWorks": {
+      "title": "How It Works",
+      "subtitle": "Manage your restaurant from any device in four steps.",
+      "steps": [
+        {
+          "title": "Open Dashboard on Your Phone",
+          "description": "Go to iq-rest.com and sign in from your phone's browser. The dashboard automatically adapts to your screen size — no app to download or install."
+        },
+        {
+          "title": "Edit Menu Anywhere",
+          "description": "Add new items, update prices, change descriptions, and upload photos directly from your phone camera. Every feature available on desktop works just as well on mobile."
+        },
+        {
+          "title": "Check Orders and Reservations",
+          "description": "View incoming orders, manage table bookings, and respond to support messages — all from your phone. Stay on top of your restaurant even when you're away."
+        },
+        {
+          "title": "Changes Go Live Instantly",
+          "description": "Every edit you make from your phone appears on your QR menu in real time. No need to sync, publish, or wait — your guests always see the latest version."
+        }
+      ]
+    },
+    "faq": {
+      "title": "Frequently Asked Questions",
+      "subtitle": "Everything you need to know about mobile menu management.",
+      "items": [
+        {
+          "question": "Do I need to install an app?",
+          "answer": "No. The dashboard works in your phone's web browser — Safari, Chrome, or any other. Just log in and start managing your menu."
+        },
+        {
+          "question": "Can I do everything from my phone that I can on a computer?",
+          "answer": "Yes. Every feature is available on mobile — adding items, uploading photos, managing categories, checking analytics, handling orders and reservations."
+        },
+        {
+          "question": "Does it work on tablets too?",
+          "answer": "Yes. The dashboard adapts to any screen size — phones, tablets, and desktop computers. Use whichever device is most convenient."
+        },
+        {
+          "question": "Can multiple people manage the menu?",
+          "answer": "Currently one account manages the restaurant. You can log in from multiple devices simultaneously — your phone, tablet, or computer."
+        },
+        {
+          "question": "Can I upload photos taken with my phone camera?",
+          "answer": "Yes. Tap the upload button on any menu item and your phone's camera or gallery opens. Take a photo of the dish and it's on your menu in seconds, automatically optimized."
+        },
+        {
+          "question": "Is the mobile dashboard slower than the desktop version?",
+          "answer": "No. The dashboard is built mobile-first, so it's optimized for phone screens and mobile connections. It loads fast and responds instantly to every action."
+        },
+        {
+          "question": "Can I manage analytics from my phone?",
+          "answer": "Yes. The analytics dashboard is fully responsive. View daily views, language breakdowns, page stats, and visitor trends — all formatted for your phone screen."
+        }
+      ]
+    }
+  },
+  "customDesignPage": {
+    "seo": {
+      "title": "Restaurant Website with Video & Photo Background — Website Builder | IQ Rest",
+      "description": "Create a stunning restaurant website with custom video or photo backgrounds. Upload your ambiance video or food photography — impress guests from the first scan."
+    },
+    "hero": {
+      "badge": "Website Design",
+      "title": "Create a Stunning Restaurant Website with Video Backgrounds",
+      "subtitle": "Upload your restaurant's ambiance video or a beautiful food photo as background. Guests see a professional, branded experience the moment they scan your QR code.",
+      "cta": "Create Your Menu",
+      "ctaDemo": "View Demo",
+      "noCreditCard": "No credit card required. Free plan available."
+    },
+    "features": {
+      "title": "How Custom Backgrounds Work",
+      "subtitle": "Make a lasting first impression with visuals that match your brand.",
+      "items": [
+        {
+          "title": "Upload Video or Photo Backgrounds",
+          "description": "Add a looping video of your restaurant ambiance, a time-lapse of your kitchen, or a high-quality food photo. The background appears on your homepage — creating an immersive experience for guests."
+        },
+        {
+          "title": "Optimized for Speed on Any Device",
+          "description": "Videos and images are automatically compressed and lazy-loaded. Your website stays fast even on slow mobile connections — no buffering, no delays, just a smooth experience."
+        }
+      ]
+    },
+    "howItWorks": {
+      "title": "How It Works",
+      "subtitle": "Customize your restaurant's visual identity in four steps.",
+      "steps": [
+        {
+          "title": "Open Design Settings",
+          "description": "Navigate to the Design page in your dashboard. Here you can control your restaurant's visual appearance — background, accent color, and homepage layout."
+        },
+        {
+          "title": "Upload a Background",
+          "description": "Choose a video (MP4, WebM) or photo for your restaurant's homepage background. Videos loop automatically, creating an immersive first impression for every visitor."
+        },
+        {
+          "title": "AI Background Generation",
+          "description": "Don't have a video or photo ready? Let AI create a background image from your menu items automatically. It generates a professional visual that matches your restaurant's style."
+        },
+        {
+          "title": "Preview and Save",
+          "description": "See your changes in real time before saving. Videos are automatically compressed and lazy-loaded, ensuring fast performance on mobile devices without sacrificing visual quality."
+        }
+      ]
+    },
+    "faq": {
+      "title": "Frequently Asked Questions",
+      "subtitle": "Everything you need to know about restaurant website design.",
+      "items": [
+        {
+          "question": "What video formats are supported?",
+          "answer": "MP4 and WebM formats work best. Videos are compressed automatically for fast loading. Keep videos under 30 seconds for the best mobile experience."
+        },
+        {
+          "question": "Will a video background slow down my website?",
+          "answer": "No. Videos are compressed, lazy-loaded, and optimized automatically. On slow connections, the system falls back to a static image to keep the experience smooth."
+        },
+        {
+          "question": "Can I use a photo instead of video?",
+          "answer": "Yes. Upload any photo — it will be optimized and displayed as a full-screen background. You can switch between video and photo anytime."
+        },
+        {
+          "question": "Do I need a designer to set this up?",
+          "answer": "No. Just upload your video or photo from the dashboard. The system handles sizing, compression, and layout automatically. Your website looks professional with zero design skills."
+        },
+        {
+          "question": "Can AI generate a background for me?",
+          "answer": "Yes. If you don't have your own video or photo, AI can generate a background image based on your restaurant's menu and style. It's available directly from the Design settings."
+        },
+        {
+          "question": "Is custom background available on the free plan?",
+          "answer": "Background customization is available on Growth and Pro plans. The free plan includes your accent color and a clean default design."
+        },
+        {
+          "question": "Can I hide the restaurant title on the homepage?",
+          "answer": "Yes. If your background video or photo already shows your restaurant name, you can toggle off the title overlay from the Design settings for a cleaner look."
+        }
+      ]
+    }
+  },
+  "multilingualPage": {
+    "seo": {
+      "title": "Multilingual Restaurant Website — Menu in 25+ Languages | IQ Rest",
+      "description": "Your restaurant website and QR menu in 25+ languages. Guests switch languages with one tap — menu, contacts, and reservations adapt instantly."
+    },
+    "hero": {
+      "badge": "Multilingual",
+      "title": "Your Restaurant Website in 25+ Languages",
+      "subtitle": "Tourists and international guests see your menu in their own language. One tap to switch — everything adapts instantly: dishes, descriptions, contacts, navigation.",
+      "cta": "Create Your Menu",
+      "ctaDemo": "View Demo",
+      "noCreditCard": "No credit card required. Free plan available."
+    },
+    "features": {
+      "title": "How Multilingual Support Works",
+      "subtitle": "Speak your customer's language without any extra work.",
+      "items": [
+        {
+          "title": "Guests Choose Their Language",
+          "description": "A language selector appears on your menu. Guests tap their preferred language, and the entire website — menu, descriptions, contact info, navigation — switches instantly. No page reload needed."
+        },
+        {
+          "title": "Add Languages from Your Dashboard",
+          "description": "Enable new languages with one click. Use AI translation to fill in the content, or enter translations manually. Each language can be toggled on or off independently."
+        }
+      ]
+    },
+    "howItWorks": {
+      "title": "How It Works",
+      "subtitle": "Make your menu available in multiple languages in four steps.",
+      "steps": [
+        {
+          "title": "Go to Language Settings",
+          "description": "Open the Languages page in your dashboard. You'll see all available languages and which ones are currently active on your menu."
+        },
+        {
+          "title": "Add Languages",
+          "description": "Select from 35 available languages. The free plan includes up to 2 languages, while Growth and Pro plans offer unlimited languages for your menu."
+        },
+        {
+          "title": "Translate Your Content",
+          "description": "Use one-click AI translation to translate your entire menu instantly, or enter translations manually for full control. You can also combine both approaches."
+        },
+        {
+          "title": "Guests Switch Languages",
+          "description": "A language selector appears on your menu page. When guests choose their language, the entire menu switches instantly. Their preference is saved for return visits."
+        }
+      ]
+    },
+    "faq": {
+      "title": "Frequently Asked Questions",
+      "subtitle": "Everything you need to know about multilingual menus.",
+      "items": [
+        {
+          "question": "How many languages can I add to my menu?",
+          "answer": "Up to 35 languages including all major European languages, Chinese, Japanese, Korean, Arabic, Farsi, and more. Add as many as your guests need."
+        },
+        {
+          "question": "Do I need to translate everything manually?",
+          "answer": "No. Use the built-in AI translation to translate your entire menu with one click. You can also edit any translation manually for full control."
+        },
+        {
+          "question": "Does the language preference get saved?",
+          "answer": "Yes. When a guest selects a language, it's remembered for their next visit. They don't need to choose again when they return."
+        },
+        {
+          "question": "Is multilingual support available on the free plan?",
+          "answer": "The free plan includes up to 2 languages. Growth and Pro plans offer unlimited languages with AI translation included."
+        },
+        {
+          "question": "Which languages support right-to-left text?",
+          "answer": "Arabic and Farsi are fully supported with right-to-left (RTL) layout. The entire menu — text, navigation, and layout — automatically adjusts for RTL languages."
+        },
+        {
+          "question": "Can I translate table zones and reservation pages too?",
+          "answer": "Yes. Translations apply to your entire restaurant website — menu items, categories, table zone names, and all public-facing pages. Everything your guests see is translatable."
+        },
+        {
+          "question": "How does the language selector work for guests?",
+          "answer": "Guests see a language icon on your menu page. Tapping it shows all available languages. They select one and the entire menu switches immediately — no page reload needed."
+        }
+      ]
+    }
+  },
+  "instantSetupPage": {
+    "seo": {
+      "title": "Free Restaurant Website Generator — Create in 5 Minutes | IQ Rest",
+      "description": "Get a professional restaurant website with QR menu, contact page, and map — just enter your email. Ready in 5 minutes, no technical skills needed."
+    },
+    "hero": {
+      "badge": "Free Website",
+      "title": "Get a Professional Restaurant Website in 5 Minutes",
+      "subtitle": "Enter your email, name your restaurant, and you instantly get a complete website with QR menu, contact page with map, and modern responsive design. No coding, no designers.",
+      "cta": "Create Your Menu",
+      "ctaDemo": "View Demo",
+      "noCreditCard": "No credit card required. Free plan available."
+    },
+    "features": {
+      "title": "How It Works",
+      "subtitle": "From zero to a live restaurant website in three steps.",
+      "items": [
+        {
+          "title": "Sign Up with Just Your Email",
+          "description": "No complex registration forms. Enter your email, verify with a code, and your restaurant dashboard is ready. Name your restaurant and your website goes live immediately."
+        },
+        {
+          "title": "Everything Included Out of the Box",
+          "description": "Your website comes with a QR menu, contact page with Google Maps, language support, mobile-responsive design, and your own unique URL. Just add your dishes and start sharing."
+        }
+      ]
+    },
+    "howItWorks": {
+      "title": "How It Works",
+      "subtitle": "From zero to a live restaurant website in four steps.",
+      "steps": [
+        {
+          "title": "Enter Your Email",
+          "description": "No password needed. Just type your email address and click Continue. There are no lengthy registration forms, no credit card required, and no commitments."
+        },
+        {
+          "title": "Verify with a Code",
+          "description": "Check your inbox for a 4-digit verification code. Enter it to sign in securely. This passwordless approach means one less thing to remember."
+        },
+        {
+          "title": "Name Your Restaurant",
+          "description": "Give your restaurant a name. It becomes your website URL and menu title. You can always change it later from your dashboard settings."
+        },
+        {
+          "title": "Your Website Is Ready",
+          "description": "A complete restaurant website with QR menu, contact page with map, and responsive design is live instantly at iq-rest.com/m/your-name. Add your dishes and start sharing."
+        }
+      ]
+    },
+    "faq": {
+      "title": "Frequently Asked Questions",
+      "subtitle": "Everything you need to know about creating your restaurant website.",
+      "items": [
+        {
+          "question": "How do I create a free restaurant website?",
+          "answer": "Enter your email on IQ Rest, verify with a code, name your restaurant — done. Your website with QR menu is live in under 5 minutes. No credit card required."
+        },
+        {
+          "question": "Do I need any technical skills?",
+          "answer": "No. Everything is designed for restaurant owners, not developers. Add dishes, upload photos, and manage your site entirely from your phone."
+        },
+        {
+          "question": "What's included in the free plan?",
+          "answer": "A full restaurant website, QR menu, contact page with map, analytics, custom color scheme, and up to 2 languages. No trial period — it's free forever."
+        },
+        {
+          "question": "Can I use my own domain name?",
+          "answer": "On the free and Growth plans, your site is hosted at iq-rest.com/m/your-name. The Pro plan supports custom domain names for full brand control."
+        },
+        {
+          "question": "What pages does my website include?",
+          "answer": "Your website comes with a homepage, full QR menu with categories and items, a contact page with Google Maps integration, and optionally a reservation page. All pages are mobile-responsive."
+        },
+        {
+          "question": "Can I change the restaurant name later?",
+          "answer": "Yes. You can update your restaurant name and URL slug anytime from the Settings page. The old URL will stop working, so update your printed QR codes if you change it."
+        },
+        {
+          "question": "Do I need to pay to keep my website?",
+          "answer": "No. The free plan is free forever with no trial period. You only pay if you want premium features like online ordering, reservations, or unlimited languages."
+        }
+      ]
+    }
+  },
+  "analyticsPage": {
+    "seo": {
+      "title": "Restaurant Analytics & QR Menu Statistics — Track Visitors | IQ Rest",
+      "description": "Track your QR menu scans, page views, popular languages, and visitor trends. Real-time analytics dashboard for your restaurant website."
+    },
+    "hero": {
+      "badge": "Analytics",
+      "title": "See Exactly How Guests Use Your QR Menu",
+      "subtitle": "Track daily scans, page views, popular languages, device stats, and trends over time. Make data-driven decisions to optimize your menu and grow your business.",
+      "cta": "Create Your Menu",
+      "ctaDemo": "View Demo",
+      "noCreditCard": "No credit card required. Free plan available."
+    },
+    "features": {
+      "title": "What You Can Track",
+      "subtitle": "Real-time insights about your restaurant's online presence.",
+      "items": [
+        {
+          "title": "Daily Views, Scans & Visitor Trends",
+          "description": "See how many people scan your QR code and visit your menu every day, week, and month. Track trends over time to understand seasonal patterns and measure the impact of promotions."
+        },
+        {
+          "title": "Language & Device Breakdown",
+          "description": "Know which languages your guests prefer and which devices they use. This data helps you prioritize translations and ensure your menu looks perfect on the most popular devices."
+        }
+      ]
+    },
+    "howItWorks": {
+      "title": "How It Works",
+      "subtitle": "Start tracking your restaurant's performance in four steps.",
+      "steps": [
+        {
+          "title": "Create Your Restaurant",
+          "description": "Analytics start tracking from the moment your menu goes live. There's nothing to configure — every page view, QR scan, and visitor is recorded automatically."
+        },
+        {
+          "title": "Share Your QR Code",
+          "description": "Print your QR code and place it on tables, at the entrance, or on takeaway packaging. Every scan is recorded with timestamp, language, device, and page visited."
+        },
+        {
+          "title": "Open the Analytics Dashboard",
+          "description": "See daily, weekly, and monthly statistics with clear charts. Track total views, unique visitors, and trends over time from a single dashboard screen."
+        },
+        {
+          "title": "Explore Detailed Breakdowns",
+          "description": "View stats broken down by page (menu, contacts, reservations), preferred language, device type, and browser. Use this data to optimize your menu and prioritize translations."
+        }
+      ]
+    },
+    "faq": {
+      "title": "Frequently Asked Questions",
+      "subtitle": "Everything you need to know about restaurant analytics.",
+      "items": [
+        {
+          "question": "What metrics can I track?",
+          "answer": "Daily, weekly, and monthly page views. Unique visitors. Most viewed pages. Language preferences. Device and browser breakdown. All updated in real time."
+        },
+        {
+          "question": "Is analytics included in the free plan?",
+          "answer": "Yes. Growth analytics are available on every plan, including free. You can see views, visitors, and language stats from day one."
+        },
+        {
+          "question": "Can I see which pages are most popular?",
+          "answer": "Yes. The dashboard shows views broken down by page — home, menu, contacts, reservations, and language selection. See exactly where guests spend their time."
+        },
+        {
+          "question": "How far back does the data go?",
+          "answer": "Analytics data is stored from the day you create your restaurant. You can view daily, weekly, and monthly trends for your entire history."
+        },
+        {
+          "question": "Do I need to add any tracking code?",
+          "answer": "No. Analytics are built into your restaurant website automatically. Every page view and QR scan is tracked without any setup or code changes on your part."
+        },
+        {
+          "question": "Can I see which languages my guests prefer?",
+          "answer": "Yes. The analytics dashboard shows a breakdown of languages used by your visitors. This helps you decide which translations to prioritize for your menu."
+        },
+        {
+          "question": "Does analytics affect my website's loading speed?",
+          "answer": "No. Analytics tracking is lightweight and runs in the background. It has no noticeable impact on your menu's loading speed or guest experience."
+        }
+      ]
+    }
+  },
+  "aiImagesPage": {
+    "seo": {
+      "title": "AI Food Photo Generation for Menus — Restaurant Menu Images | IQ Rest",
+      "description": "Generate beautiful food photos for your menu with AI. No photographer needed — get professional dish images in seconds, optimized for your QR menu."
+    },
+    "hero": {
+      "badge": "AI Images",
+      "title": "Professional Menu Photos Without a Photographer",
+      "subtitle": "Generate stunning food images for your dishes with AI. Just enter the dish name, and get a beautiful, optimized photo ready for your QR menu — in seconds.",
+      "cta": "Create Your Menu",
+      "ctaDemo": "View Demo",
+      "noCreditCard": "No credit card required. Free plan available."
+    },
+    "features": {
+      "title": "How AI Image Generation Works",
+      "subtitle": "From dish name to professional photo in one click.",
+      "items": [
+        {
+          "title": "Generate Images from Dish Names",
+          "description": "Type your dish name — 'Grilled Salmon with Lemon', 'Margherita Pizza', 'Chocolate Lava Cake' — and AI generates a professional food photo. Choose from multiple styles and backgrounds."
+        },
+        {
+          "title": "Optimized for Fast Loading",
+          "description": "Every generated image is automatically compressed and converted to modern formats. Your menu stays lightning-fast on any device, even with photos on every dish."
+        }
+      ]
+    },
+    "howItWorks": {
+      "title": "How It Works",
+      "subtitle": "Get professional food photos for your menu in four simple steps.",
+      "steps": [
+        {
+          "title": "Open Any Menu Item",
+          "description": "Navigate to the item you want a photo for in your dashboard. You can generate images for new dishes or replace existing photos on any menu item."
+        },
+        {
+          "title": "Click Generate Image",
+          "description": "AI creates a professional food photo based on the dish name and description. The more detail you provide in the description, the more accurate the result."
+        },
+        {
+          "title": "Review the Result",
+          "description": "Preview the generated image before applying it. If you'd like a different look, regenerate to get a new variation. Each generation produces a unique image."
+        },
+        {
+          "title": "Use in Your Menu",
+          "description": "The image is automatically optimized, compressed to WebP format, and appears on your live menu immediately. Guests see professional food photos on every dish."
+        }
+      ]
+    },
+    "faq": {
+      "title": "Frequently Asked Questions",
+      "subtitle": "Everything you need to know about AI menu images.",
+      "items": [
+        {
+          "question": "How do I generate a food photo?",
+          "answer": "Open any menu item in your dashboard, tap 'Generate Image', and AI creates a professional food photo based on the dish name and description. Pick the one you like."
+        },
+        {
+          "question": "Can I use my own photos instead?",
+          "answer": "Absolutely. Upload your own photos from your phone or computer. AI generation is optional — use it when you don't have a photo ready."
+        },
+        {
+          "question": "How many images can I generate?",
+          "answer": "Image generation limits depend on your plan. Growth includes a monthly allowance, and Pro offers a higher limit. You can always upload your own photos without limits."
+        },
+        {
+          "question": "Are generated images unique to my restaurant?",
+          "answer": "Yes. Each image is generated uniquely for your specific dish. No stock photos — every image is created fresh based on your menu item."
+        },
+        {
+          "question": "What image formats are supported for upload?",
+          "answer": "Upload JPG, PNG, or WebP images up to 10MB. All uploaded images are automatically compressed and converted to WebP for optimal loading speed on any device."
+        },
+        {
+          "question": "Can I generate images for all items at once?",
+          "answer": "Images are generated per item to ensure the best quality for each dish. Open any item, click generate, and the photo is ready in seconds."
+        },
+        {
+          "question": "Do AI-generated images look realistic?",
+          "answer": "Yes. The AI produces high-quality, realistic food photography. Results are best when the dish name and description are detailed — for example, 'Grilled salmon fillet with lemon butter sauce and asparagus' produces a more accurate image than just 'salmon'."
+        }
+      ]
+    }
+  },
+  "personalSupportPage": {
+    "seo": {
+      "title": "Personal Support for Your Restaurant Website — Real Human Help | IQ Rest",
+      "description": "Get personal help from real people, not chatbots. Setup assistance, menu optimization tips, and quick responses — available on every plan including free."
+    },
+    "hero": {
+      "badge": "Personal Support",
+      "title": "Real People, Real Help — Not Chatbots",
+      "subtitle": "Have a question? Need help setting up your menu? Want to suggest a feature? Message us directly and get a personal response from someone who understands restaurants.",
+      "cta": "Create Your Menu",
+      "ctaDemo": "View Demo",
+      "noCreditCard": "No credit card required. Free plan available."
+    },
+    "features": {
+      "title": "How Support Works",
+      "subtitle": "Help when you need it, from people who care.",
+      "items": [
+        {
+          "title": "Message Us Directly from Your Dashboard",
+          "description": "Open the support chat in your dashboard and describe your question. A real person reads your message and responds — typically within a few hours on business days."
+        },
+        {
+          "title": "Help with Setup, Optimization & Beyond",
+          "description": "Whether you need help adding your first dish, advice on organizing your menu, or want to suggest a new feature — we're here. Every question matters, no matter how small."
+        }
+      ]
+    },
+    "howItWorks": {
+      "title": "How It Works",
+      "subtitle": "Get help from a real person in four simple steps.",
+      "steps": [
+        {
+          "title": "Open Support Chat",
+          "description": "Go to the Support page in your dashboard. You'll see a simple chat interface where you can type your message directly — no ticket forms or categories to choose from."
+        },
+        {
+          "title": "Describe Your Question",
+          "description": "Type your message. Ask about setup, features, menu optimization, billing, or anything else. There are no stupid questions — we're happy to help with everything."
+        },
+        {
+          "title": "Get a Personal Response",
+          "description": "A real person (not a chatbot) reads your message and responds within hours. We understand restaurant workflows and give practical, actionable answers."
+        },
+        {
+          "title": "Ongoing Help",
+          "description": "Request feature suggestions, get menu optimization tips, or ask for setup assistance anytime. Your conversation history is saved, so we always have context from previous questions."
+        }
+      ]
+    },
+    "faq": {
+      "title": "Frequently Asked Questions",
+      "subtitle": "Everything you need to know about our support.",
+      "items": [
+        {
+          "question": "Is support available on the free plan?",
+          "answer": "Yes. Personal support is available for every plan, including free. We believe every restaurant deserves real help, regardless of their subscription."
+        },
+        {
+          "question": "How fast do you respond?",
+          "answer": "Typically within a few hours during business days. We read every message personally and aim to resolve your question in one reply."
+        },
+        {
+          "question": "Can you help me set up my menu?",
+          "answer": "Absolutely. If you need help adding dishes, organizing categories, setting up translations, or configuring reservations — just ask. We're happy to walk you through it."
+        },
+        {
+          "question": "Can I suggest new features?",
+          "answer": "Yes, and we love it! Many of our features started as user suggestions. Message us with your idea and we'll consider it for future updates."
+        },
+        {
+          "question": "Is support automated or human?",
+          "answer": "100% human. Every message is read and answered by a real person who understands the platform and restaurant industry. No chatbots, no canned responses."
+        },
+        {
+          "question": "Can I contact support by email?",
+          "answer": "Yes. You can message us through the dashboard chat or send an email to support@iq-rest.com. Both channels reach the same team and get the same fast response."
+        },
+        {
+          "question": "What languages does support work in?",
+          "answer": "We primarily respond in English, but we can assist in several other languages. If you write in your language, we'll do our best to respond in the same language."
+        }
+      ]
+    }
   }
 }

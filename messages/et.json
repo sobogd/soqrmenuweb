@@ -2515,5 +2515,895 @@
     },
     "back": "Back",
     "continue": "Jätka"
+  },
+  "onlineOrders": {
+    "seo": {
+      "title": "Veebipõhised tellimused restoranidele — QR Menüü | IQ Rest",
+      "description": "Laske klientidel teha tellimusi otse QR-menüüst. Null komisjonitasu, reaalajas hinnad ja kohene tellimuste haldamine juhtpaneelil."
+    },
+    "hero": {
+      "badge": "Veebipõhised Tellimused",
+      "title": "Muutke QR-menüü veebipõhiseks tellimissüsteemiks",
+      "subtitle": "Kliendid skaneerivad koodi, sirvivad menüüd ja esitavad tellimuse sekunditega. Rakenduste allalaadimist pole vaja, komisjonitasusid pole, keerukust pole.",
+      "cta": "Loo oma menüü",
+      "ctaDemo": "Vaata demot",
+      "noCreditCard": "Krediitkaarti pole vaja. Tasuta plaan saadaval."
+    },
+    "benefits": {
+      "title": "Miks restoranid valivad QR-menüü tellimused",
+      "subtitle": "Otse tellimiskanal, mis hoiab asjad lihtsad teile ja teie külalistele.",
+      "items": [
+        {
+          "title": "Rakendust pole vaja",
+          "description": "Külalised skaneerivad lihtsalt QR-koodi — allalaadimisi ega registreerimisi pole vaja. Töötab koheselt igas telefonibrauseris."
+        },
+        {
+          "title": "Reaalajas hinnad",
+          "description": "Uuendage hindu ja saadavust koheselt. Muudatused kajastuvad kohe teie QR-menüüs."
+        },
+        {
+          "title": "Lauakõrval tellimine",
+          "description": "Iga laud saab oma QR-koodi. Külalised skaneerivad, tellivad ja teie näete laua numbrit juhtpaneelil."
+        },
+        {
+          "title": "Kohandatud disain",
+          "description": "Sobituge oma menüü brändiga kohandatud värvide, taustade ja logoga."
+        }
+      ]
+    },
+    "features": {
+      "title": "Kuidas veebipõhine tellimine töötab",
+      "subtitle": "Kaks lihtsat sammu ühendavad teie menüü köögiga.",
+      "items": [
+        {
+          "title": "Külalised sirvivad ja valivad roogasid",
+          "description": "Kliendid skaneerivad QR-koodi ja näevad täismenüüd fotode, kirjelduste ja hindadega. Nad lisavad roogasid tellimusse ühe puudutusega — registreerimist pole vaja."
+        },
+        {
+          "title": "Tellimused ilmuvad teie juhtpaneelile",
+          "description": "Kui külalised on valmis, puudutavad nad tellimisnuppu. Tellimus ilmub koheselt teie juhtpaneelile koos roa detailide, laua numbri ja märkustega. Võtke vastu, alustage ettevalmistamist ja märkige lõpetatuks."
+        }
+      ]
+    },
+    "faq": {
+      "title": "Korduma kippuvad küsimused",
+      "subtitle": "Kõik, mida peate veebipõhise tellimise kohta teadma.",
+      "items": [
+        {
+          "question": "Kas mul on vaja lisariistvara või rakendusi?",
+          "answer": "Ei. Kõik toimib veebibrauseri kaudu. Külalised skaneerivad QR-koodi telefonikaamraga ja teie haldate tellimusi IQ Rest juhtpaneelilt igal seadmel."
+        },
+        {
+          "question": "Kas on komisjonitasusid või tellimuspõhiseid tasusid?",
+          "answer": "Kindlasti mitte. IQ Rest ei küsi kunagi komisjonitasu teie tellimustelt. Maksate ainult oma tellimusplaani eest ja kogu tellimustulu jääb teile."
+        },
+        {
+          "question": "Kas kliendid saavad oma tellimust kohandada või märkusi lisada?",
+          "answer": "Jah. Külalised saavad valida roogasid, määrata koguseid ja lisada erimärkusi või palveid. Võite ka nõuda kliendi nime, telefoni või tarneaadressi."
+        },
+        {
+          "question": "Kas see töötab kohapeal söömiseks, kaasavõtmiseks ja kohaletoimetamiseks?",
+          "answer": "Jah. Kohapeal söömiseks skaneerivad külalised QR-koodi oma lauas. Kaasavõtmiseks või kohaletoimetamiseks jagage otselinki oma menüüle. Vastavalt vajadusele saate lubada nime, telefoni ja aadressi välju."
+        }
+      ]
+    },
+    "howItWorks": {
+      "title": "Kuidas See Toimib",
+      "subtitle": "Alates seadistamisest kuni oma esimese tellimuse saamiseni viies lihtsas sammus.",
+      "steps": [
+        {
+          "title": "Luba Veebitellimine",
+          "description": "Lülita tellimused sisse oma Disaini seadetes. Vali oma eelistatud režiim: tellimused ilmuvad sinu armatuurlauda, edastatakse WhatsAppi või mõlemad korraga."
+        },
+        {
+          "title": "Konfigureeri Tellimuse Vorm",
+          "description": "Vali, millised väljad peavad kliendid täitma tellimuse esitamisel. Nimi on alati kohustuslik ning võid valikuliselt küsida telefoninumbrit ja kohaletoimetamise aadressi."
+        },
+        {
+          "title": "Prindi Laua QR Koodid",
+          "description": "Igal laual sinu restoranis on oma ainulaadne QR kood. Kui külalised selle skaneerivad, jõuab nende tellimus automaatselt õige lauanumbriga."
+        },
+        {
+          "title": "Kliendid Esitavad Tellimusi",
+          "description": "Külalised skaneerivad QR koodi, sirvivad sinu menüüd koos piltide ja hindadega, valivad tooteid, lisavad märkusi ja esitavad oma tellimuse. Rakenduse allalaadimist või konto loomist ei ole vaja."
+        },
+        {
+          "title": "Halda Tellimusi Oma Armatuurlaud",
+          "description": "Tellimused ilmuvad kohe sinu armatuurlauda. Uuenda iga tellimuse staatust alates uuest kuni töös ja lõpetatud. Sa hoiad 100% tuludest — null komisjonitasud."
+        }
+      ]
+    }
+  },
+  "reservationsPage": {
+    "seo": {
+      "title": "Restorani lauabroneerimissusteem — Veebibroneeerimine | IQ Rest",
+      "description": "Laske külalistel broneerida laudu otse oma veebilehelt. Automaatne või käsitsi kinnitamine, e-posti teavitused ja täielik kalendrihaldus — kõik kaasas."
+    },
+    "hero": {
+      "badge": "Lauabroneeringud",
+      "title": "Võtke vastu lauabroneeringuid 24/7 oma veebilehelt",
+      "subtitle": "Külalised valivad kuupäeva, kellaaja ja seltskonna suuruse — ning broneerivad koheselt. Haldate kõike oma juhtpaneelilt, telefonikõnesid pole vaja.",
+      "cta": "Looge oma menüü",
+      "ctaDemo": "Vaata demo",
+      "noCreditCard": "Krediitkaarti pole vaja. Tasuta plaan saadaval."
+    },
+    "features": {
+      "title": "Kuidas lauabroneeringud toimivad",
+      "subtitle": "Kaks sammu külalise päringust kinnitatud broneeringuni.",
+      "items": [
+        {
+          "title": "Külalised broneerivad teie veebilehelt",
+          "description": "Kliendid külastavad teie restorani lehte, puudutavad 'Broneeri laud', valivad kuupäeva ja kellaaja, sisestavad oma andmed ja saadavad päringu. Rakendust pole vaja — töötab mis tahes brauseris mis tahes seadmes."
+        },
+        {
+          "title": "Haldate broneeringuid oma juhtpaneelilt",
+          "description": "Iga broneering ilmub teie juhtpaneelile koos külalise nime, telefoni, seltskonna suuruse, kuupäeva ja märkmetega. Kinnitage või keelduge ühe puudutusega. Seadistage automaatne kinnitamine või vaadake iga broneeringut käsitsi üle."
+        }
+      ]
+    },
+    "faq": {
+      "title": "Korduma kippuvad küsimused",
+      "subtitle": "Kõik, mida peate teadma lauabroneeringute kohta.",
+      "items": [
+        {
+          "question": "Kas kliendid peavad broneerimiseks konto looma?",
+          "answer": "Ei. Külalised täidavad lihtsalt oma nime, telefoninumbri, seltskonna suuruse ja eelistatud aja. Kontot ega rakenduse allalaadimist pole vaja."
+        },
+        {
+          "question": "Kas ma saan määrata saadaolevaid ajavahemikke ja mahutavust?",
+          "answer": "Jah. Määrake oma tööajad, broneeringu ajavahemiku kestus ja laua mahutavus. Süsteem näitab külalistele ainult saadaolevaid ajavahemikke."
+        },
+        {
+          "question": "Kas ma saan teavituse, kui keegi broneerib?",
+          "answer": "Jah. Saate e-kirja iga uue broneeringu kohta. Külalised saavad samuti kinnituskirja, kui broneering heaks kiidetakse."
+        },
+        {
+          "question": "Kas ma saan kasutada nii automaatset kui ka käsitsi kinnitamist?",
+          "answer": "Jah. Valige automaatne režiim, et kinnitada broneeringud koheselt saadavuse alusel, või käsitsi režiim, et vaadata iga päring üle ja kinnitada ise."
+        }
+      ]
+    },
+    "howItWorks": {
+      "title": "Kuidas see töötab",
+      "subtitle": "Seadistage veebipõhised broneeringud ja alustage broneeringute vastuvõtmist viies sammus.",
+      "steps": [
+        {
+          "title": "Luba Broneeringud",
+          "description": "Lülitage broneeringud sisse oma restorani seadetes. Valige automaatse kinnituse vahel, kus broneeringud kinnitatakse koheselt saadavuse alusel, või käsitsi režiim, kus vaatate iga taotlust üle."
+        },
+        {
+          "title": "Lisage Oma Lauad",
+          "description": "Looge lauad koos mahutavuse ja tsooni teabega — näiteks 'Laud 5, 4 külalist, Terrass'. Iga laud muutub broneeritavaks ja süsteem takistab automaatselt kahekordseid broneeringuid."
+        },
+        {
+          "title": "Seadke Tööaeg",
+          "description": "Määrake oma saadaval olevad tunnid broneeringuteks ja valige ajavahemiku kestus — alates 15 minutist kuni 8 tunnini. Ainult teie tööaegade jooksul olevad ajavahemikud kuvatakse külalistele."
+        },
+        {
+          "title": "Külalised Broneerivad Veebis",
+          "description": "Kliendid külastavad teie restorani lehte, valivad oma kuupäeva, kellaaja ja seltskonna suuruse, sisestavad oma nime ja telefoni ning esitavad. Konto või rakenduse allalaadimist ei nõuta — töötab igas brauseris."
+        },
+        {
+          "title": "Halda Broneeringuid Oma Armatuurlaud",
+          "description": "Vaadake kõiki broneeringuid oma armatuurlaud. Kinnitage, tühistage või märkige broneeringud lõpetatuks. Nii teie kui ka külaline saavad iga broneeringu uuenduse kohta e-kirja teate."
+        }
+      ]
+    }
+  },
+  "colorSchemePage": {
+    "seo": {
+      "title": "Kohandatud QR-menüü disain ja brändivarvid — Restorani bränding | IQ Rest",
+      "description": "Sobituge oma QR-menüü restorani brändiga. Valige aktsentvärve ja looge ühtne välimus kogu digitaalse menüü ulatuses."
+    },
+    "hero": {
+      "badge": "Kohandatud disain",
+      "title": "Sobituge oma QR-menüü restorani brändiga",
+      "subtitle": "Valige oma brändivärv ja kogu menüü — nupud, esiletõstud, lingid — uueneb koheselt.",
+      "cta": "Looge oma menüü",
+      "ctaDemo": "Vaata demo",
+      "noCreditCard": "Krediitkaarti pole vaja. Tasuta plaan saadaval."
+    },
+    "features": {
+      "title": "Kuidas kohandatud bränding toimib",
+      "subtitle": "Teie menüü, teie värvid — ühtlane igal lehel.",
+      "items": [
+        {
+          "title": "Valige oma aktsentvärv",
+          "description": "Valige 12 hoolikalt valitud eelseadistuse hulgast või sisestage oma täpne brändivärv hex-koodiga. Iga nupp, link ja esiletõste teie menüüs kohandub koheselt — disainioskusi pole vaja."
+        }
+      ]
+    },
+    "faq": {
+      "title": "Korduma kippuvad küsimused",
+      "subtitle": "Kõik, mida peate teadma menüü kohandamise kohta.",
+      "items": [
+        {
+          "question": "Kas ma saan kasutada oma täpset brändivärvi?",
+          "answer": "Jah. Sisestage mis tahes hex-värvikood või valige 12 hoolikalt valitud eelseadistuse hulgast. Teie aktsentvärv rakendub kõigil teie menüü lehtedel."
+        },
+        {
+          "question": "Kas ma saan värve pärast avaldamist muuta?",
+          "answer": "Kindlasti. Muutke oma aktsentvärvi igal ajal juhtpaneelilt. Uuendused ilmuvad koheselt teie avalikul menüül — uuesti avaldamist pole vaja."
+        },
+        {
+          "question": "Kas minu QR-kood sobib samuti brändivärvidega?",
+          "answer": "Teie QR-kood genereeritakse eraldi ja seda saab iseseisvalt kohandada. Aktsentvärv rakendub teie digitaalse menüü lehtedele, navigatsioonile ja interaktiivsetele elementidele."
+        }
+      ]
+    },
+    "howItWorks": {
+      "title": "Kuidas see töötab",
+      "subtitle": "Seosta oma menüü oma brändiga kolme lihtsa sammuga.",
+      "steps": [
+        {
+          "title": "Ava Disaini Seaded",
+          "description": "Liigu oma juhtpaneelil Disaini lehele. Aktsentvärvi valija on esiplaanil — näed kõiki saadaval olevaid valikuid kohe."
+        },
+        {
+          "title": "Vali Oma Brändi Värv",
+          "description": "Vali 12 hoolikalt valitud värvi eelmäärangust, mis on loodud loetavuse ja ligipääsetavuse jaoks, või sisesta oma täpne hex-kood, et saavutada ideaalne brändi vastavus."
+        },
+        {
+          "title": "Kohene Eelvaade",
+          "description": "Sinu aktsentvärv rakendub nuppudele, linkidele ja esiletõstmistele kogu menüüs. See töötab nii heledates kui ka tumedates teemades ning muudatused ilmuvad kohe sinu aktiivses menüüs."
+        }
+      ]
+    }
+  },
+  "easyMenuPage": {
+    "seo": {
+      "title": "Looge oma restoran QR-menüü — Tasuta menüülooja | IQ Rest",
+      "description": "Looge oma restorani digitaalne QR-menüü minutitega. Lisage kategooriaid, roogi, fotosid, hindu — ja jagage skannitavat QR-koodi. Alustamine tasuta."
+    },
+    "hero": {
+      "badge": "Menüülooja",
+      "title": "Looge oma restoranile digitaalne QR-menüü minutitega",
+      "subtitle": "Lisage oma kategooriad ja road, määrake hinnad, laadige üles fotod — teie QR-menüü on jagamiseks valmis. Muutke igal ajal, muudatused ilmuvad koheselt.",
+      "cta": "Looge oma menüü",
+      "ctaDemo": "Vaata demo",
+      "noCreditCard": "Krediitkaarti pole vaja. Tasuta plaan saadaval."
+    },
+    "features": {
+      "title": "Kuidas menüüredaktor töötab",
+      "subtitle": "Lihtsad tööriistad, mis viivad teie menüü kiiresti veebi.",
+      "items": [
+        {
+          "title": "Lisage kategooriaid ja roogi",
+          "description": "Looge kategooriaid nagu Eelroad, Põhiroad, Joogid — seejärel lisage road koos nimede, kirjelduste, hindade ja fotodega. Lohistage ümberjärjestamiseks. Lülitage üksusi sisse või välja ilma neid kustutamata."
+        },
+        {
+          "title": "Muudatused jõustuvad koheselt",
+          "description": "Iga tehtud muudatus ilmub teie avalikul QR-menüül mõne sekundi jooksul. Uuendage hinda, lisage päevapakkumine või peitke otsas roog — teie kliendid näevad alati uusimat versiooni."
+        }
+      ]
+    },
+    "faq": {
+      "title": "Korduma kippuvad küsimused",
+      "subtitle": "Kõik, mida peate teadma oma QR-menüü loomise kohta.",
+      "items": [
+        {
+          "question": "Kuidas luua oma restoranile QR-menüü?",
+          "answer": "Registreeruge oma e-postiga, nimetage oma restoran ja hakake lisama kategooriaid ja roogi. Teie QR-menüü genereeritakse automaatselt — printige QR-kood ja asetage see oma laudadele."
+        },
+        {
+          "question": "Kas ma saan lisada fotosid oma menüüelementidele?",
+          "answer": "Jah. Laadige fotod üles otse oma telefonist või arvutist. Pildid optimeeritakse automaatselt kiireks laadimiseks mis tahes seadmes."
+        },
+        {
+          "question": "Mitu üksust saan lisada?",
+          "answer": "Kategooriate ega menüüelementide arv pole piiratud. Lisage nii palju roogi kui vaja — teie menüü jääb kiireks ja korrastatuks."
+        },
+        {
+          "question": "Kas ma saan ajutiselt peita otsas oleva roa?",
+          "answer": "Jah. Lülitage mis tahes üksus ühe puudutusega välja. See kaob avalikust menüüst, kuid jääb teie juhtpaneelile alles — lülitage see tagasi sisse, kui olete valmis."
+        }
+      ]
+    },
+    "howItWorks": {
+      "title": "Kuidas See Toimib",
+      "subtitle": "Koosta ja avalda oma restorani menüü viies lihtsas sammus.",
+      "steps": [
+        {
+          "title": "Loo Kategooriad",
+          "description": "Lisa kategooriad nagu Eelroad, Pearoad, Magustoidud ja Joogid, et korraldada oma menüüd. Sa saad luua nii palju kategooriaid kui vajad ja neid lohistamisega ümber korraldada."
+        },
+        {
+          "title": "Lisa Menüü Tooteid",
+          "description": "Sisesta iga toote nimi, kirjeldus ja hind. Märgi allergeenid, kui need on olemas — külalised näevad menüüs automaatselt allergeeni ikoone."
+        },
+        {
+          "title": "Laadi Üles või Generaadi Fotosid",
+          "description": "Laadi oma toidufotod üles oma telefonist või arvutist, või kasuta AI-d, et genereerida professionaalne toidu pilt toote nimest. Pildid optimeeritakse automaatselt."
+        },
+        {
+          "title": "Korralda Lohistamisega",
+          "description": "Kategooriaid ja tooteid saab ümber korraldada, lohistades neid oma kohale. Lülita ükskõik milline toode sisse või välja ilma seda kustutamata — ideaalne igapäevaste eripakkumiste või välja müüdud roogade jaoks."
+        },
+        {
+          "title": "Avalda Oma Menüü",
+          "description": "Muutused ilmuvad kohe sinu aktiivsele QR menüüle. 'Avalda' nuppu ei ole — iga muudatus läheb reaalajas aktiivseks. Prindi oma QR kood ja pane see oma laudadele."
+        }
+      ]
+    }
+  },
+  "aiTranslationPage": {
+    "seo": {
+      "title": "Tehisintellekti menüütõlge restoranidele — QR-menüü tõlkimine | IQ Rest",
+      "description": "Tõlkige oma restorani menüü 25+ keelde ühe klõpsuga. Tehisintellekt mõistab kulinaariat — roanimed, kirjeldused ja kategooriad tõlgitakse täpselt."
+    },
+    "hero": {
+      "badge": "Tehisintellekti tõlge",
+      "title": "Tõlkige oma menüü 25+ keelde ühe klõpsuga",
+      "subtitle": "Meie tehisintellekt mõistab toidukonteksti — see tõlgib roanimed, kirjeldused ja kategooriad loomulikult, mitte sõna-sõnalt. Jõudke iga turisti ja rahvusvahelise külaliseni.",
+      "cta": "Looge oma menüü",
+      "ctaDemo": "Vaata demo",
+      "noCreditCard": "Krediitkaarti pole vaja. Tasuta plaan saadaval."
+    },
+    "features": {
+      "title": "Kuidas tehisintellekti tõlge töötab",
+      "subtitle": "Teie keelest maailma sekunditega.",
+      "items": [
+        {
+          "title": "Kogu menüü tõlkimine ühe klõpsuga",
+          "description": "Valige sihtkeel, puudutage tõlgi ja kogu teie menüü — kategooriad, roanimed, kirjeldused — tõlgitakse koheselt. Tehisintellekt säilitab kulinaariaterminid ja kohandub loomulikult iga keele jaoks."
+        },
+        {
+          "title": "Muutke ja täpsustage mis tahes tõlget",
+          "description": "Iga tehisintellekti tõlge on täielikult redigeeritav. Vaadake tulemus üle, kohandage sõnastust ja salvestage. Teie muudatused säilivad isegi siis, kui tõlgite hiljem menüü muid osi uuesti."
+        }
+      ]
+    },
+    "faq": {
+      "title": "Korduma kippuvad küsimused",
+      "subtitle": "Kõik, mida peate teadma menüü tõlkimise kohta.",
+      "items": [
+        {
+          "question": "Kui täpne on tehisintellekti tõlge toidumenüüde jaoks?",
+          "answer": "Meie tehisintellekt on optimeeritud restoranide sisu jaoks. See mõistab, et 'Beef Wellington' või 'Tiramisu' ei tohiks sõna-sõnalt tõlkida, ja kohandab kirjeldused igas keeles loomulikult kõlama."
+        },
+        {
+          "question": "Milliseid keeli toetatakse?",
+          "answer": "25+ keelt, sealhulgas inglise, hispaania, prantsuse, saksa, itaalia, portugali, hiina, jaapani, korea, araabia, vene ja palju teisi Euroopa ja Aasia keeli."
+        },
+        {
+          "question": "Kas ma saan tõlkida ainult mõned üksused, mitte kogu menüüd?",
+          "answer": "Jah. Saate tõlkida üksikuid üksusi, terveid kategooriaid või kogu menüüd korraga. Teil on täielik kontroll selle üle, mis tõlgitakse."
+        },
+        {
+          "question": "Kas tõlkimine maksab lisatasu?",
+          "answer": "Tehisintellekti tõlge on kaasatud Growth ja Pro plaanides heldete kuulimiitidega. Pole sõna- ega üksusepõhiseid tasusid — tõlkige nii palju kui vaja."
+        }
+      ]
+    },
+    "howItWorks": {
+      "title": "Kuidas see töötab",
+      "subtitle": "Tõlgi oma kogu menüü minutitega, mitte tundidega.",
+      "steps": [
+        {
+          "title": "Lisa keeled oma menüüsse",
+          "description": "Mine oma armatuurlaual Keeled lehele ja vali, milliseid keeli sinu menüü peaks toetama. Vali 35 saadaval oleva keele hulgast, sealhulgas kõik peamised Euroopa, Aasia ja Lähis-Ida keeled."
+        },
+        {
+          "title": "Kliki Tõlgi",
+          "description": "Üks nupp tõlgib kõik sinu kategooriad, toote nimed ja kirjeldused korraga. Kogu menüü töödeldakse sekunditega, sõltumata sellest, kui palju tooteid sul on."
+        },
+        {
+          "title": "AI mõistab toidu konteksti",
+          "description": "AI tunneb kulinaarse terminoloogia erinevates kultuurides. See säilitab roogade nimed nagu 'Tiramisu' või 'Pad Thai', samal ajal kui see kohandab kirjeldusi, koostisosade loetelusid ja kategooria nimesid loomulikult."
+        },
+        {
+          "title": "Vaata ja muuda",
+          "description": "Iga tõlge on täielikult muudetav. Kohanda igasuguseid sõnastusi, et need sobiksid sinu stiiliga. Sinu käsitsi tehtud muudatused säilivad isegi siis, kui tõlgid hiljem menüü teisi osi."
+        },
+        {
+          "title": "Avalda oma mitmekeelne menüü",
+          "description": "Külastajad näevad sinu menüüs keele vahetajat ja saavad sirvida oma eelistatud keeles. Iga keelt saab sõltumatult sisse ja välja lülitada sinu armatuurlaualt."
+        }
+      ]
+    }
+  },
+  "mobileManagementPage": {
+    "seo": {
+      "title": "Hallake restorani menüüd telefonist — Mobiilne juhtpaneel | IQ Rest",
+      "description": "Juhtige oma restorani QR-menüüd täielikult telefonist. Lisage roogi, uuendage hindu, laadige fotosid, kontrollige analüütikat — arvutit pole vaja."
+    },
+    "hero": {
+      "badge": "Mobiilne juhtpaneel",
+      "title": "Hallake kogu restorani menüüd oma telefonist",
+      "subtitle": "Lisage roogi, muutke hindu, laadige fotosid, kontrollige tellimusi — kõik oma nutitelefonist. Juhtpaneel on loodud mobiilseks, nii et arvutit pole kunagi vaja.",
+      "cta": "Looge oma menüü",
+      "ctaDemo": "Vaata demo",
+      "noCreditCard": "Krediitkaarti pole vaja. Tasuta plaan saadaval."
+    },
+    "features": {
+      "title": "Kuidas mobiilne haldamine töötab",
+      "subtitle": "Teie restorani juhtpaneel alati taskus.",
+      "items": [
+        {
+          "title": "Täielik juhtpaneel nutitelefonis",
+          "description": "Iga funktsioon töötab suurepäraselt teie telefoni ekraanil — lisage üksusi, muutke kategooriaid, hallake tellimusi, kontrollige analüütikat. Liides on loodud puutetundlikuks, mitte lihtsalt töölaualt vähendatud."
+        },
+        {
+          "title": "Laadige fotosid otse kaamerast üles",
+          "description": "Pildistage uut rooga ja laadige see oma menüüsse üles sekunditega. Pildid optimeeritakse automaatselt. Uuendage oma päevapakkumist köögis seistes."
+        }
+      ]
+    },
+    "faq": {
+      "title": "Korduma kippuvad küsimused",
+      "subtitle": "Kõik, mida peate teadma mobiilse menüühalduse kohta.",
+      "items": [
+        {
+          "question": "Kas ma pean rakenduse installima?",
+          "answer": "Ei. Juhtpaneel töötab teie telefoni veebibrauseris — Safari, Chrome või mis tahes muu. Lihtsalt logige sisse ja hakake oma menüüd haldama."
+        },
+        {
+          "question": "Kas ma saan telefonist teha kõike, mida arvutist?",
+          "answer": "Jah. Iga funktsioon on saadaval mobiilis — üksuste lisamine, fotode üleslaadimine, kategooriate haldamine, analüütika kontrollimine, tellimuste ja broneeringute käsitlemine."
+        },
+        {
+          "question": "Kas see töötab ka tahvelarvutites?",
+          "answer": "Jah. Juhtpaneel kohandub mis tahes ekraanisuurusega — telefonid, tahvelarvutid ja lauaarvutid. Kasutage seda seadet, mis on kõige mugavam."
+        },
+        {
+          "question": "Kas mitu inimest saavad menüüd hallata?",
+          "answer": "Praegu haldab üks konto restorani. Saate sisse logida mitmest seadmest korraga — telefonist, tahvelarvutist või arvutist."
+        }
+      ]
+    },
+    "howItWorks": {
+      "title": "Kuidas See Toimib",
+      "subtitle": "Halda oma restorani igast seadmest neljas sammus.",
+      "steps": [
+        {
+          "title": "Ava Armatuurlaud Oma Telefonis",
+          "description": "Mine aadressile iq-rest.com ja logi sisse oma telefoni brauserist. Armatuurlaud kohandub automaatselt sinu ekraani suurusele — ei ole vaja rakendust alla laadida ega installida."
+        },
+        {
+          "title": "Muuda Menüü Igas Kohas",
+          "description": "Lisa uusi tooteid, uuenda hindu, muuda kirjeldusi ja laadi fotosid otse oma telefoni kaamerast. Iga funktsioon, mis on saadaval lauaarvutis, töötab mobiilis sama hästi."
+        },
+        {
+          "title": "Kontrolli Tellimusi ja Broneeringuid",
+          "description": "Vaata saabunud tellimusi, halda laua broneeringuid ja vasta tugiteateid — kõik oma telefonist. Ole oma restorani üle kursis isegi siis, kui oled eemal."
+        },
+        {
+          "title": "Muutused Jõuavad Koheselt Jõusse",
+          "description": "Iga muudatus, mille teed oma telefonist, ilmub sinu QR menüüsse reaalajas. Pole vaja sünkroonida, avaldada ega oodata — sinu külalised näevad alati uusimat versiooni."
+        }
+      ]
+    }
+  },
+  "customDesignPage": {
+    "seo": {
+      "title": "Restorani veebileht video- ja fototaustaga — Veebilehe koostaja | IQ Rest",
+      "description": "Looge vapustav restorani veebileht kohandatud video- või fototaustadega. Laadige üles oma atmosfääri video või toidufoto — avaldage külalistele muljet esimesest skaneerimisest."
+    },
+    "hero": {
+      "badge": "Veebidisain",
+      "title": "Looge vapustav restorani veebileht videotaustadega",
+      "subtitle": "Laadige üles oma restorani atmosfääri video või kaunis toidufoto taustaks. Külalised näevad professionaalset, bränditud kogemust hetkel, kui nad teie QR-koodi skaneerivad.",
+      "cta": "Looge oma menüü",
+      "ctaDemo": "Vaata demo",
+      "noCreditCard": "Krediitkaarti pole vaja. Tasuta plaan saadaval."
+    },
+    "features": {
+      "title": "Kuidas kohandatud taustad töötavad",
+      "subtitle": "Jätke püsiv esmamulje visuaalidega, mis sobivad teie brändiga.",
+      "items": [
+        {
+          "title": "Laadige üles video- või fototaustad",
+          "description": "Lisage korduvalt mängitav video oma restorani atmosfäärist, köögi ajavaheldusfilm või kvaliteetne toidufoto. Taust ilmub teie avalehele — luues külalistele kaasahaarava kogemuse."
+        },
+        {
+          "title": "Optimeeritud kiiruse jaoks mis tahes seadmes",
+          "description": "Videod ja pildid tihendatakse ja laetakse automaatselt laisklaadimisega. Teie veebileht jääb kiireks isegi aeglaste mobiilühenduste puhul — ei puhverdamist, ei viivitusi, ainult sujuv kogemus."
+        }
+      ]
+    },
+    "faq": {
+      "title": "Korduma kippuvad küsimused",
+      "subtitle": "Kõik, mida peate teadma restorani veebidisaini kohta.",
+      "items": [
+        {
+          "question": "Milliseid videovorminguid toetatakse?",
+          "answer": "MP4 ja WebM vormingud töötavad kõige paremini. Videod tihendatakse automaatselt kiireks laadimiseks. Hoidke videod alla 30 sekundi parima mobiilikogemuse jaoks."
+        },
+        {
+          "question": "Kas videotaust aeglustab mu veebilehte?",
+          "answer": "Ei. Videod tihendatakse, laetakse laisklaadimisega ja optimeeritakse automaatselt. Aeglaste ühenduste korral lülitub süsteem staatilisele pildile, et kogemus oleks sujuv."
+        },
+        {
+          "question": "Kas ma saan video asemel kasutada fotot?",
+          "answer": "Jah. Laadige üles mis tahes foto — see optimeeritakse ja kuvatakse täisekraani taustana. Saate igal ajal video ja foto vahel vahetada."
+        },
+        {
+          "question": "Kas mul on vaja disainerit selle seadistamiseks?",
+          "answer": "Ei. Laadige lihtsalt oma video või foto juhtpaneelilt üles. Süsteem käsitleb suuruse muutmist, tihendamist ja paigutust automaatselt. Teie veebileht näeb professionaalne välja ilma disainioskusteta."
+        }
+      ]
+    },
+    "howItWorks": {
+      "title": "Kuidas see toimib",
+      "subtitle": "Kohanda oma restorani visuaalset identiteeti neljas etapis.",
+      "steps": [
+        {
+          "title": "Ava Disaini Seaded",
+          "description": "Liigu oma juhtpaneelil Disaini lehele. Siin saad kontrollida oma restorani visuaalset välimust — taust, aktsentvärv ja avalehe paigutus."
+        },
+        {
+          "title": "Laadi Üles Taust",
+          "description": "Vali video (MP4, WebM) või foto oma restorani avalehe taustaks. Videod korduvad automaatselt, luues igale külastajale kaasahaarava esmamulje."
+        },
+        {
+          "title": "AI Tausta Loomine",
+          "description": "Ei ole videot või fotot valmis? Lase AI-l automaatselt luua taustapilt sinu menüüelementidest. See genereerib professionaalse visuaali, mis sobib sinu restorani stiiliga."
+        },
+        {
+          "title": "Eelvaade ja Salvestamine",
+          "description": "Vaata oma muudatusi reaalajas enne salvestamist. Videod kompressitakse automaatselt ja laaditakse aeglaselt, tagades kiire jõudluse mobiilseadmetes ilma visuaalset kvaliteeti ohverdamata."
+        }
+      ]
+    }
+  },
+  "multilingualPage": {
+    "seo": {
+      "title": "Mitmekeelne restorani veebileht — Menüü 25+ keeles | IQ Rest",
+      "description": "Teie restorani veebileht ja QR-menüü 25+ keeles. Külalised vahetavad keelt ühe puudutusega — menüü, kontaktid ja broneeringud kohanduvad koheselt."
+    },
+    "hero": {
+      "badge": "Mitmekeelne",
+      "title": "Teie restorani veebileht 25+ keeles",
+      "subtitle": "Turistid ja rahvusvahelised külalised näevad teie menüüd oma keeles. Üks puudutus vahetamiseks — kõik kohandub koheselt: road, kirjeldused, kontaktid, navigatsioon.",
+      "cta": "Looge oma menüü",
+      "ctaDemo": "Vaata demo",
+      "noCreditCard": "Krediitkaarti pole vaja. Tasuta plaan saadaval."
+    },
+    "features": {
+      "title": "Kuidas mitmekeelne tugi töötab",
+      "subtitle": "Rääkige oma kliendi keelt ilma lisatööta.",
+      "items": [
+        {
+          "title": "Külalised valivad oma keele",
+          "description": "Teie menüüs kuvatakse keelevalija. Külalised puudutavad oma eelistatud keelt ja kogu veebileht — menüü, kirjeldused, kontaktandmed, navigatsioon — vahetub koheselt. Lehe uuesti laadimist pole vaja."
+        },
+        {
+          "title": "Lisage keeli oma juhtpaneelilt",
+          "description": "Lubage uusi keeli ühe klõpsuga. Kasutage tehisintellekti tõlget sisu täitmiseks või sisestage tõlked käsitsi. Iga keelt saab iseseisvalt sisse või välja lülitada."
+        }
+      ]
+    },
+    "faq": {
+      "title": "Korduma kippuvad küsimused",
+      "subtitle": "Kõik, mida peate teadma mitmekeelsete menüüde kohta.",
+      "items": [
+        {
+          "question": "Mitu keelt saan oma menüüle lisada?",
+          "answer": "Kuni 25+ keelt, sealhulgas kõik peamised Euroopa keeled, hiina, jaapani, korea, araabia, pärsia ja palju muud. Lisage nii palju keeli, kui teie külalised vajavad."
+        },
+        {
+          "question": "Kas pean kõike käsitsi tõlkima?",
+          "answer": "Ei. Kasutage sisseehitatud tehisintellekti tõlget, et tõlkida kogu menüü ühe klõpsuga. Saate ka mis tahes tõlget käsitsi redigeerida täieliku kontrolli jaoks."
+        },
+        {
+          "question": "Kas keele-eelistus salvestatakse?",
+          "answer": "Jah. Kui külaline valib keele, jäetakse see meelde tema järgmiseks külastuseks. Nad ei pea tagasi tulles uuesti valima."
+        },
+        {
+          "question": "Kas mitmekeelne tugi on saadaval tasuta plaanis?",
+          "answer": "Tasuta plaan sisaldab kuni 2 keelt. Growth ja Pro plaanid pakuvad piiramatut arvu keeli koos kaasatud tehisintellekti tõlkega."
+        }
+      ]
+    },
+    "howItWorks": {
+      "title": "Kuidas See Toimib",
+      "subtitle": "Tehke oma menüü kättesaadavaks mitmes keeles neljas sammus.",
+      "steps": [
+        {
+          "title": "Mine Keelesätetesse",
+          "description": "Avage oma juhtpaneelil Keeled leht. Näete kõiki saadaval olevaid keeli ja millised neist on teie menüüs hetkel aktiivsed."
+        },
+        {
+          "title": "Lisa Keeled",
+          "description": "Valige 35 saadaval olevast keelest. Tasuta plaan sisaldab kuni 2 keelt, samas kui Growth ja Pro plaanid pakuvad teie menüü jaoks piiramatult keeli."
+        },
+        {
+          "title": "Tõlgi Oma Sisu",
+          "description": "Kasutage ühe klõpsuga AI tõlget, et tõlkida oma kogu menüü koheselt, või sisestage tõlked käsitsi täieliku kontrolli jaoks. Samuti saate kombineerida mõlemat lähenemist."
+        },
+        {
+          "title": "Külastajad Vahetavad Keeled",
+          "description": "Menüü lehel ilmub keelevalija. Kui külastajad valivad oma keele, vahetub kogu menüü koheselt. Nende eelistus salvestatakse tagasituleku külastuste jaoks."
+        }
+      ]
+    }
+  },
+  "instantSetupPage": {
+    "seo": {
+      "title": "Tasuta restorani veebilehe generaator — Looge 5 minutiga | IQ Rest",
+      "description": "Saage professionaalne restorani veebileht koos QR-menüü, kontaktlehe ja kaardiga — sisestage lihtsalt oma e-post. Valmis 5 minutiga, tehnilisi oskusi pole vaja."
+    },
+    "hero": {
+      "badge": "Tasuta veebileht",
+      "title": "Saage professionaalne restorani veebileht 5 minutiga",
+      "subtitle": "Sisestage oma e-post, nimetage restoran ja saate koheselt täieliku veebilehe koos QR-menüü, kontaktlehe kaardiga ja kaasaegse kohanduva disainiga. Pole kodeerimist ega disainereid.",
+      "cta": "Looge oma menüü",
+      "ctaDemo": "Vaata demo",
+      "noCreditCard": "Krediitkaarti pole vaja. Tasuta plaan saadaval."
+    },
+    "features": {
+      "title": "Kuidas see töötab",
+      "subtitle": "Nullist reaalajas restorani veebileheni kolme sammuga.",
+      "items": [
+        {
+          "title": "Registreeruge ainult oma e-postiga",
+          "description": "Pole keerulisi registreerimisvorme. Sisestage oma e-post, kinnitage koodiga ja teie restorani juhtpaneel on valmis. Nimetage oma restoran ja teie veebileht läheb kohe avalikuks."
+        },
+        {
+          "title": "Kõik kaasas kohe algusest",
+          "description": "Teie veebilehega tuleb kaasa QR-menüü, kontaktleht Google Mapsiga, keeletugi, mobiilile kohanduv disain ja teie oma unikaalne URL. Lisage lihtsalt oma road ja hakake jagama."
+        }
+      ]
+    },
+    "faq": {
+      "title": "Korduma kippuvad küsimused",
+      "subtitle": "Kõik, mida peate teadma oma restorani veebilehe loomise kohta.",
+      "items": [
+        {
+          "question": "Kuidas luua tasuta restorani veebileht?",
+          "answer": "Sisestage oma e-post IQ Restis, kinnitage koodiga, nimetage oma restoran — valmis. Teie veebileht koos QR-menüüga on reaalajas alla 5 minuti. Krediitkaarti pole vaja."
+        },
+        {
+          "question": "Kas mul on vaja tehnilisi oskusi?",
+          "answer": "Ei. Kõik on loodud restoranipidajatele, mitte arendajatele. Lisage roogi, laadige üles fotosid ja hallake oma lehte täielikult telefonist."
+        },
+        {
+          "question": "Mis sisaldub tasuta plaanis?",
+          "answer": "Täielik restorani veebileht, QR-menüü, kontaktleht kaardiga, analüütika, kohandatud värviskeem ja kuni 2 keelt. Pole prooviperioodi — see on igavesti tasuta."
+        },
+        {
+          "question": "Kas ma saan kasutada oma domeeninime?",
+          "answer": "Tasuta ja Growth plaanidel on teie leht majutatud aadressil iq-rest.com/m/teie-nimi. Pro plaan toetab kohandatud domeeninimesid täieliku brändikontrolli jaoks."
+        }
+      ]
+    },
+    "howItWorks": {
+      "title": "Kuidas See Toimib",
+      "subtitle": "Nullist elava restorani veebisaidini neljas sammus.",
+      "steps": [
+        {
+          "title": "Sisesta Oma E-post",
+          "description": "Parooli pole vaja. Lihtsalt kirjuta oma e-posti aadress ja kliki Jätka. Pole pikki registreerimisvorme, krediitkaarti ei nõuta ja pole kohustusi."
+        },
+        {
+          "title": "Kinnita Koodiga",
+          "description": "Kontrolli oma postkasti 4-kohalise kinnituskoodi jaoks. Sisesta see, et sisse logida turvaliselt. See paroolita lähenemine tähendab, et sul on vähem asju meeles pidada."
+        },
+        {
+          "title": "Nimeta Oma Restoran",
+          "description": "Anna oma restoranile nimi. See muutub sinu veebisaidi URL-iks ja menüü pealkirjaks. Sa saad seda alati hiljem oma juhtpaneeli seadetes muuta."
+        },
+        {
+          "title": "Sinu Veebisait On Valmis",
+          "description": "Täielik restoraniveebisait koos QR menüü, kontaktlehe ja kaardiga ning reageeriva disainiga on kohe saadaval aadressil iq-rest.com/m/your-name. Lisa oma toidud ja alusta jagamist."
+        }
+      ]
+    }
+  },
+  "analyticsPage": {
+    "seo": {
+      "title": "Restorani analüütika ja QR-menüü statistika — Jälgige külastajaid | IQ Rest",
+      "description": "Jälgige oma QR-menüü skaneerimisi, lehekülgede vaatamisi, populaarseid keeli ja külastajate trende. Reaalajas analüütika juhtpaneel teie restorani veebilehe jaoks."
+    },
+    "hero": {
+      "badge": "Analüütika",
+      "title": "Vaadake täpselt, kuidas külalised teie QR-menüüd kasutavad",
+      "subtitle": "Jälgige igapäevaseid skaneerimisi, lehekülgede vaatamisi, populaarseid keeli, seadmestatistikat ja trende aja jooksul. Tehke andmepõhiseid otsuseid oma menüü optimeerimiseks ja äri kasvatamiseks.",
+      "cta": "Looge oma menüü",
+      "ctaDemo": "Vaata demo",
+      "noCreditCard": "Krediitkaarti pole vaja. Tasuta plaan saadaval."
+    },
+    "features": {
+      "title": "Mida saate jälgida",
+      "subtitle": "Reaalajas ülevaated teie restorani veebipresentatsiooni kohta.",
+      "items": [
+        {
+          "title": "Igapäevased vaatamised, skaneerimised ja külastajatrendid",
+          "description": "Vaadake, kui palju inimesi skaneerivad teie QR-koodi ja külastavad teie menüüd iga päev, nädal ja kuu. Jälgige trende aja jooksul, et mõista hooajalisi mustreid ja mõõta kampaaniate mõju."
+        },
+        {
+          "title": "Keele- ja seadmejaotus",
+          "description": "Teadke, milliseid keeli teie külalised eelistavad ja milliseid seadmeid kasutavad. Need andmed aitavad teil prioriseerida tõlkeid ja tagada, et teie menüü näeb suurepärane välja kõige populaarsemates seadmetes."
+        }
+      ]
+    },
+    "faq": {
+      "title": "Korduma kippuvad küsimused",
+      "subtitle": "Kõik, mida peate teadma restorani analüütika kohta.",
+      "items": [
+        {
+          "question": "Milliseid mõõdikuid saan jälgida?",
+          "answer": "Igapäevased, iganädalased ja igakuised lehekülgede vaatamised. Unikaalsed külastajad. Enim vaadatud lehed. Keele-eelistused. Seadme ja brauseri jaotus. Kõik uuendatakse reaalajas."
+        },
+        {
+          "question": "Kas analüütika sisaldub tasuta plaanis?",
+          "answer": "Jah. Põhianalüütika on saadaval igas plaanis, kaasa arvatud tasuta. Näete vaatamisi, külastajaid ja keelestatistikat esimesest päevast."
+        },
+        {
+          "question": "Kas ma näen, millised lehed on kõige populaarsemad?",
+          "answer": "Jah. Juhtpaneel näitab vaatamisi lehtede kaupa — avaleht, menüü, kontaktid, broneeringud ja keelevalik. Vaadake täpselt, kus külalised oma aega veedavad."
+        },
+        {
+          "question": "Kui kaugele andmed ulatuvad?",
+          "answer": "Analüütikaandmed salvestatakse alates päevast, mil oma restorani loote. Saate vaadata igapäevaseid, iganädalasi ja igakuiseid trende kogu oma ajaloo ulatuses."
+        }
+      ]
+    },
+    "howItWorks": {
+      "title": "Kuidas See Toimib",
+      "subtitle": "Alustage oma restorani tulemuste jälgimist neljas etapis.",
+      "steps": [
+        {
+          "title": "Looge Oma Restoran",
+          "description": "Analüütika hakkab jälgima alates hetkest, kui teie menüü läheb avalikuks. Konfigureerida ei ole midagi — iga lehe vaatamine, QR skaneerimine ja külastaja registreeritakse automaatselt."
+        },
+        {
+          "title": "Jagage Oma QR Koodi",
+          "description": "Prindige oma QR kood ja asetage see laudadele, sissepääsule või toidupakenditele. Iga skaneerimine registreeritakse koos ajatempli, keele, seadme ja külastatud lehega."
+        },
+        {
+          "title": "Avage Analüütika Armatuurlaud",
+          "description": "Vaadake igapäevaseid, nädalaseid ja kuiseid statistikaid selgete diagrammidega. Jälgige kokkuvaateid, unikaalseid külastajaid ja suundi ajas ühest armatuurlaudade ekraanist."
+        },
+        {
+          "title": "Uurige Üksikasjalikke Jagunemisi",
+          "description": "Vaadake statistikat, mis on jagatud lehe (menüü, kontaktid, broneeringud), eelistatud keele, seadme tüübi ja brauseri järgi. Kasutage neid andmeid oma menüü optimeerimiseks ja tõlgete prioriseerimiseks."
+        }
+      ]
+    }
+  },
+  "aiImagesPage": {
+    "seo": {
+      "title": "Tehisintellekti toidufotode genereerimine menüüdele — Restorani menüüpildid | IQ Rest",
+      "description": "Genereerige tehisintellektiga ilusaid toidufotosid oma menüü jaoks. Fotograafi pole vaja — saage professionaalsed roapildid sekunditega, optimeeritud teie QR-menüü jaoks."
+    },
+    "hero": {
+      "badge": "Tehisintellekti pildid",
+      "title": "Professionaalsed menüüfotod ilma fotograafita",
+      "subtitle": "Genereerige tehisintellektiga vapustavaid toidupilte oma roogade jaoks. Sisestage lihtsalt roa nimi ja saate ilusa, optimeeritud foto, mis on valmis teie QR-menüü jaoks — sekunditega.",
+      "cta": "Looge oma menüü",
+      "ctaDemo": "Vaata demo",
+      "noCreditCard": "Krediitkaarti pole vaja. Tasuta plaan saadaval."
+    },
+    "features": {
+      "title": "Kuidas tehisintellekti piltide genereerimine töötab",
+      "subtitle": "Roa nimest professionaalse fotoni ühe klõpsuga.",
+      "items": [
+        {
+          "title": "Genereerige pilte roanmede põhjal",
+          "description": "Sisestage oma roa nimi — 'Grillitud lõhe sidruniga', 'Margherita pitsa', 'Šokolaadi laavakook' — ja tehisintellekt genereerib professionaalse toidufoto. Valige erinevate stiilide ja taustade vahel."
+        },
+        {
+          "title": "Optimeeritud kiireks laadimiseks",
+          "description": "Iga genereeritud pilt tihendatakse automaatselt ja teisendatakse kaasaegsetesse vormingutesse. Teie menüü jääb välkkiireks mis tahes seadmes, isegi kui igal roal on foto."
+        }
+      ]
+    },
+    "faq": {
+      "title": "Korduma kippuvad küsimused",
+      "subtitle": "Kõik, mida peate teadma tehisintellekti menüüpiltide kohta.",
+      "items": [
+        {
+          "question": "Kuidas genereerida toidufoto?",
+          "answer": "Avage mis tahes menüüelement oma juhtpaneelil, puudutage 'Genereeri pilt' ja tehisintellekt loob professionaalse toidufoto roa nime ja kirjelduse põhjal. Valige endale meelepärane."
+        },
+        {
+          "question": "Kas ma saan selle asemel kasutada oma fotosid?",
+          "answer": "Kindlasti. Laadige oma fotod üles telefonist või arvutist. Tehisintellekti genereerimine on valikuline — kasutage seda, kui teil pole fotot käepärast."
+        },
+        {
+          "question": "Mitu pilti saan genereerida?",
+          "answer": "Piltide genereerimise limiidid sõltuvad teie plaanist. Growth sisaldab igakuist arvu ja Pro pakub kõrgemat limiiti. Oma fotosid saate alati piiramatult üles laadida."
+        },
+        {
+          "question": "Kas genereeritud pildid on minu restoranile ainulaadsed?",
+          "answer": "Jah. Iga pilt genereeritakse unikaalselt teie konkreetse roa jaoks. Pole stockfotosid — iga pilt luuakse värskelt teie menüüelemendi põhjal."
+        }
+      ]
+    },
+    "howItWorks": {
+      "title": "Kuidas See Toimib",
+      "subtitle": "Saage professionaalsed toidufotod oma menüü jaoks neljas lihtsas sammus.",
+      "steps": [
+        {
+          "title": "Avage Iga Menüü Ese",
+          "description": "Liikuge oma juhtpaneelil selle eseme juurde, mille jaoks soovite fotot. Saate genereerida pilte uute roogade jaoks või asendada olemasolevaid fotosid igas menüü esemes."
+        },
+        {
+          "title": "Klõpsake Pildi Genereerimist",
+          "description": "AI loob professionaalse toidufoto rooga nime ja kirjelduse põhjal. Mida rohkem detaile te kirjelduse juurde lisate, seda täpsem on tulemus."
+        },
+        {
+          "title": "Vaadake Tulemusi",
+          "description": "Eelvaadake genereeritud pilti enne selle rakendamist. Kui soovite erinevat välimust, genereerige uuesti, et saada uus variatsioon. Iga genereerimine toodab ainulaadse pildi."
+        },
+        {
+          "title": "Kasutage Oma Menüüdes",
+          "description": "Pilt optimeeritakse automaatselt, kompressitakse WebP formaati ja ilmub teie reaalajas menüüs kohe. Külalised näevad igas roas professionaalseid toidufotosid."
+        }
+      ]
+    }
+  },
+  "personalSupportPage": {
+    "seo": {
+      "title": "Isiklik tugi teie restorani veebilehele — Päris inimeste abi | IQ Rest",
+      "description": "Saage isiklikku abi päris inimestelt, mitte vestlusrobotitelt. Seadistamise abi, menüü optimeerimise nõuanded ja kiired vastused — saadaval igas plaanis, kaasa arvatud tasuta."
+    },
+    "hero": {
+      "badge": "Isiklik tugi",
+      "title": "Päris inimesed, päris abi — mitte vestlusrobotid",
+      "subtitle": "Kas teil on küsimus? Vajate abi menüü seadistamisel? Soovite funktsiooni soovitada? Kirjutage meile otse ja saage isiklik vastus kelleltki, kes mõistab restorane.",
+      "cta": "Looge oma menüü",
+      "ctaDemo": "Vaata demo",
+      "noCreditCard": "Krediitkaarti pole vaja. Tasuta plaan saadaval."
+    },
+    "features": {
+      "title": "Kuidas tugi töötab",
+      "subtitle": "Abi, kui seda vajate, inimestelt, kellele läheb korda.",
+      "items": [
+        {
+          "title": "Kirjutage meile otse oma juhtpaneelilt",
+          "description": "Avage tugivestlus oma juhtpaneelil ja kirjeldage oma küsimust. Päris inimene loeb teie sõnumi ja vastab — tavaliselt mõne tunni jooksul tööpäevadel."
+        },
+        {
+          "title": "Abi seadistamise, optimeerimise ja muuga",
+          "description": "Kas vajate abi esimese roa lisamisel, nõu menüü korraldamisel või soovite uut funktsiooni soovitada — me oleme siin. Iga küsimus on oluline, olenemata selle suurusest."
+        }
+      ]
+    },
+    "faq": {
+      "title": "Korduma kippuvad küsimused",
+      "subtitle": "Kõik, mida peate teadma meie toe kohta.",
+      "items": [
+        {
+          "question": "Kas tugi on saadaval tasuta plaanis?",
+          "answer": "Jah. Isiklik tugi on saadaval igas plaanis, kaasa arvatud tasuta. Usume, et iga restoran väärib päris abi, olenemata nende tellimusest."
+        },
+        {
+          "question": "Kui kiiresti te vastate?",
+          "answer": "Tavaliselt mõne tunni jooksul tööpäevadel. Loeme iga sõnumi isiklikult ja püüame teie küsimuse lahendada ühe vastusega."
+        },
+        {
+          "question": "Kas saate aidata mul menüüd seadistada?",
+          "answer": "Kindlasti. Kui vajate abi roogade lisamisel, kategooriate korraldamisel, tõlgete seadistamisel või broneeringute konfigureerimisrl — lihtsalt küsige. Aitame teid hea meelega samm-sammult."
+        },
+        {
+          "question": "Kas ma saan uusi funktsioone soovitada?",
+          "answer": "Jah, ja me armastame seda! Paljud meie funktsioonid said alguse kasutajate ettepanekutest. Kirjutage meile oma ideega ja me kaalume seda tulevaste uuenduste jaoks."
+        }
+      ]
+    },
+    "howItWorks": {
+      "title": "Kuidas See Toimib",
+      "subtitle": "Saage abi tõeliselt inimeselt neljas lihtsas sammus.",
+      "steps": [
+        {
+          "title": "Avage Tugivestlus",
+          "description": "Minge oma juhtpaneeli tugilehe juurde. Näete lihtsat vestlusliidest, kuhu saate oma sõnumi otse kirjutada — ei mingeid piletivorme ega kategooriaid valida."
+        },
+        {
+          "title": "Kirjeldage Oma Küsimust",
+          "description": "Kirjutage oma sõnum. Küsige seadistamise, funktsioonide, menüü optimeerimise, arveldamise või muu kohta. Ei ole rumalaid küsimusi — me oleme valmis aitama kõiges."
+        },
+        {
+          "title": "Saage Isiklik Vastus",
+          "description": "Tõeline inimene (mitte juturobot) loeb teie sõnumi ja vastab mõne tunni jooksul. Me mõistame restoranide töövooge ja anname praktilisi, teostatavaid vastuseid."
+        },
+        {
+          "title": "Jätkuv Abi",
+          "description": "Küsi funktsioonide soovitusi, saa menüü optimeerimise näpunäiteid või palu seadistamise abi igal ajal. Teie vestlusajalugu salvestatakse, nii et meil on alati kontekst eelmistest küsimustest."
+        }
+      ]
+    }
   }
 }

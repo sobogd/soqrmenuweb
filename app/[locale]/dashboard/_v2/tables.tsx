@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { useTranslations } from "next-intl";
 import { PlusIcon, QrIcon, TrashIcon } from "./icons";
 import {
  ConfirmDialog,
@@ -14,7 +15,6 @@ import { createTable, deleteTable, updateTable } from "./api";
 import type { Booking, Order, TableEntity } from "./types";
 import { DashboardEvent, track } from "@/lib/dashboard-events";
 
-// Floor-map sizing per capacity (px). Linear: 28..56 for 1..10 seats.
 function tableSize(capacity: number): number {
  const c = Math.max(1, Math.min(12, capacity || 2));
  return Math.round(28 + (c - 1) * 3);
@@ -31,6 +31,7 @@ export function FloorMap({
  onSelectTable: (id: string) => void;
  occupiedIds?: Set<string>;
 }) {
+ const tt = useTranslations("dashboard.tables");
  const occupied = occupiedIds || new Set<string>();
  return (
  <>
@@ -85,8 +86,8 @@ export function FloorMap({
  top: "calc(" + y + "% - " + size / 2 + "px)",
  fontSize: size > 44 ? "14px" : "12px",
  }}
- aria-label={"Table " + t.number}
- title={"Table " + t.number + (t.name ? " · " + t.name : "")}
+ aria-label={tt("tableLabelAria", { number: t.number })}
+ title={tt("tableLabelAria", { number: t.number }) + (t.name ? " · " + t.name : "")}
  >
  {t.photoUrl ? (
  <img src={t.photoUrl} alt="" className="absolute inset-0 w-full h-full object-cover" />
@@ -117,6 +118,7 @@ export function TablesPage({
  menuUrl: string;
  onBack: () => void;
 }) {
+ const t = useTranslations("dashboard.tables");
  const [draft, setDraft] = useState<TableEntity[]>(tables);
  const [selectedId, setSelectedId] = useState<string | null>(tables[0]?.id ?? null);
  const [confirmState, setConfirmState] = useState<{
@@ -133,7 +135,7 @@ export function TablesPage({
  window.scrollTo({ top: 0, behavior: "auto" });
  }, []);
 
- const selected = draft.find((t) => t.id === selectedId) || null;
+ const selected = draft.find((tbl) => tbl.id === selectedId) || null;
 
  const usedIds = new Set<string>([
  ...orders.filter((o) => o.status === "active").map((o) => o.tableId).filter((x): x is string => !!x),
@@ -142,48 +144,46 @@ export function TablesPage({
 
  async function save() {
  track(DashboardEvent.CLICKED_SAVE_TABLE);
- // Persist all dirty tables. Compare draft vs initial `tables`.
- const before = new Map(tables.map((t) => [t.id, t]));
+ const before = new Map(tables.map((tbl) => [tbl.id, tbl]));
  const ops: Promise<unknown>[] = [];
- for (const t of draft) {
- const prev = before.get(t.id);
+ for (const tbl of draft) {
+ const prev = before.get(tbl.id);
  const isNew = !prev;
  const changed =
  !prev ||
- prev.number !== t.number ||
- prev.capacity !== t.capacity ||
- prev.name !== t.name ||
- prev.x !== t.x ||
- prev.y !== t.y ||
- prev.photoUrl !== t.photoUrl;
+ prev.number !== tbl.number ||
+ prev.capacity !== tbl.capacity ||
+ prev.name !== tbl.name ||
+ prev.x !== tbl.x ||
+ prev.y !== tbl.y ||
+ prev.photoUrl !== tbl.photoUrl;
  if (isNew) {
  ops.push(
  createTable({
- number: t.number,
- capacity: t.capacity,
- zone: t.name || null,
- imageUrl: t.photoUrl,
- x: t.x,
- y: t.y,
+ number: tbl.number,
+ capacity: tbl.capacity,
+ zone: tbl.name || null,
+ imageUrl: tbl.photoUrl,
+ x: tbl.x,
+ y: tbl.y,
  }),
  );
  } else if (changed) {
  ops.push(
- updateTable(t.id, {
- number: t.number,
- capacity: t.capacity,
- zone: t.name || null,
- imageUrl: t.photoUrl,
- x: t.x,
- y: t.y,
+ updateTable(tbl.id, {
+ number: tbl.number,
+ capacity: tbl.capacity,
+ zone: tbl.name || null,
+ imageUrl: tbl.photoUrl,
+ x: tbl.x,
+ y: tbl.y,
  }),
  );
  }
  }
- // Delete tables removed in draft.
- const draftIds = new Set(draft.map((t) => t.id));
- for (const t of tables) {
- if (!draftIds.has(t.id)) ops.push(deleteTable(t.id));
+ const draftIds = new Set(draft.map((tbl) => tbl.id));
+ for (const tbl of tables) {
+ if (!draftIds.has(tbl.id)) ops.push(deleteTable(tbl.id));
  }
  try {
  await Promise.all(ops);
@@ -195,12 +195,12 @@ export function TablesPage({
  }
 
  function updateTableLocal(id: string, patch: Partial<TableEntity>) {
- setDraft((d) => d.map((t) => (t.id === id ? { ...t, ...patch } : t)));
+ setDraft((d) => d.map((tbl) => (tbl.id === id ? { ...tbl, ...patch } : tbl)));
  }
 
  function addTable() {
  track(DashboardEvent.CLICKED_ADD_TABLE);
- const nextNum = draft.reduce((max, t) => Math.max(max, t.number || 0), 0) + 1;
+ const nextNum = draft.reduce((max, tbl) => Math.max(max, tbl.number || 0), 0) + 1;
  const newTable: TableEntity = {
  id: newId(),
  number: nextNum,
@@ -217,16 +217,13 @@ export function TablesPage({
 
  function removeTable(id: string) {
  track(DashboardEvent.CLICKED_DELETE_TABLE);
- const t = draft.find((x) => x.id === id);
- if (!t) return;
+ const tbl = draft.find((x) => x.id === id);
+ if (!tbl) return;
  if (usedIds.has(id)) {
  setConfirmState({
  open: true,
- title: "Can't delete this table",
- message:
- "Table " +
- t.number +
- " has active orders or upcoming bookings. Resolve them first, then try again.",
+ title: t("cantDeleteTitle"),
+ message: t("cantDeleteMessage", { number: tbl.number }),
  singleButton: true,
  onConfirm: null,
  });
@@ -234,12 +231,8 @@ export function TablesPage({
  }
  setConfirmState({
  open: true,
- title: "Delete table?",
- message:
- "Table " +
- t.number +
- (t.name ? " · " + t.name : "") +
- " will be removed from the floor plan.",
+ title: t("deleteTitle"),
+ message: t("deleteMessage", { number: tbl.number, label: tbl.name ? " · " + tbl.name : "" }),
  onConfirm: () => {
  setDraft((d) => d.filter((x) => x.id !== id));
  if (selectedId === id) setSelectedId(null);
@@ -257,14 +250,14 @@ export function TablesPage({
  className="inline-flex items-center gap-1 h-8 px-2.5 text-xs font-medium text-muted-foreground rounded-md transition-colors"
  >
  <PlusIcon size={13} />
- Table
+ {t("table")}
  </button>
  </SubpageStickyBar>
 
  <div className="max-w-2xl mx-auto pt-5 md:pt-4">
  <div className="mb-5">
- <div className="text-xs text-muted-foreground">Settings</div>
- <h2 className="text-xl font-medium text-foreground mt-1">Tables</h2>
+ <div className="text-xs text-muted-foreground">{t("settingsBreadcrumb")}</div>
+ <h2 className="text-xl font-medium text-foreground mt-1">{t("title")}</h2>
  </div>
 
  <style>{`
@@ -296,7 +289,7 @@ export function TablesPage({
  className="inline-flex items-center gap-1.5 h-9 px-3 text-xs font-medium text-muted-foreground rounded-lg transition-colors"
  >
  <QrIcon size={13} />
- Show QR code
+ {t("showQr")}
  </button>
  <button
  type="button"
@@ -304,12 +297,12 @@ export function TablesPage({
  className="inline-flex items-center gap-1.5 h-9 px-3 text-xs font-medium text-red-600 rounded-lg transition-colors"
  >
  <TrashIcon size={13} />
- Delete table
+ {t("deleteTable")}
  </button>
  </div>
  </>
  ) : (
- <p className="text-xs text-muted-foreground text-center py-4">Tap a table on the map to edit it.</p>
+ <p className="text-xs text-muted-foreground text-center py-4">{t("tapTable")}</p>
  )}
  </div>
  </div>
@@ -342,11 +335,12 @@ function TableSettings({
  table: TableEntity;
  onChange: (patch: Partial<TableEntity>) => void;
 }) {
+ const t = useTranslations("dashboard.tables");
  return (
  <div className="bg-card border border-border rounded-xl p-4 space-y-3">
  <div>
  <div className="flex items-center justify-between gap-2 mb-1.5">
- <label className="block text-sm font-medium text-foreground">Position X</label>
+ <label className="block text-sm font-medium text-foreground">{t("positionX")}</label>
  <span className="text-[11px] text-muted-foreground tabular-nums">{Math.round(table.x ?? 50)}%</span>
  </div>
  <input
@@ -361,7 +355,7 @@ function TableSettings({
  </div>
  <div>
  <div className="flex items-center justify-between gap-2 mb-1.5">
- <label className="block text-sm font-medium text-foreground">Position Y</label>
+ <label className="block text-sm font-medium text-foreground">{t("positionY")}</label>
  <span className="text-[11px] text-muted-foreground tabular-nums">{Math.round(table.y ?? 50)}%</span>
  </div>
  <input
@@ -376,19 +370,19 @@ function TableSettings({
  </div>
 
  <div>
- <label className="block text-sm font-medium text-foreground mb-1.5">Name</label>
+ <label className="block text-sm font-medium text-foreground mb-1.5">{t("name")}</label>
  <input
  type="text"
  value={table.name}
  onChange={(e) => onChange({ name: e.target.value })}
- placeholder="e.g. Window, Bar, Patio"
+ placeholder={t("namePlaceholder")}
  className={inputClass}
  />
  </div>
 
  <div className="flex gap-3">
  <div className="flex-1 min-w-0">
- <label className="block text-sm font-medium text-foreground mb-1.5">Number</label>
+ <label className="block text-sm font-medium text-foreground mb-1.5">{t("number")}</label>
  <input
  type="number"
  min="1"
@@ -398,7 +392,7 @@ function TableSettings({
  />
  </div>
  <div className="flex-1 min-w-0">
- <label className="block text-sm font-medium text-foreground mb-1.5">Seats</label>
+ <label className="block text-sm font-medium text-foreground mb-1.5">{t("seats")}</label>
  <input
  type="number"
  min="1"
@@ -411,7 +405,7 @@ function TableSettings({
  </div>
 
  <div>
- <label className="block text-sm font-medium text-foreground mb-1.5">Photo</label>
+ <label className="block text-sm font-medium text-foreground mb-1.5">{t("photo")}</label>
  <PhotoPicker
  url={table.photoUrl}
  onChange={(url) => onChange({ photoUrl: url })}

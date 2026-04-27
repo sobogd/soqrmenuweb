@@ -2515,5 +2515,895 @@
     },
     "back": "Back",
     "continue": "Continuați"
+  },
+  "onlineOrders": {
+    "seo": {
+      "title": "Comenzi Online pentru Restaurante — Meniu QR | IQ Rest",
+      "description": "Permiteți clienților să plaseze comenzi direct din meniul QR. Zero comisioane, prețuri în timp real și gestionare instantanee a comenzilor din panoul de control."
+    },
+    "hero": {
+      "badge": "Comenzi Online",
+      "title": "Transformați Meniul QR într-un Sistem de Comenzi Online",
+      "subtitle": "Clienții scanează, navighează prin meniu și plasează comanda în câteva secunde. Fără descărcări de aplicații, fără comisioane, fără complicații.",
+      "cta": "Creați Meniul",
+      "ctaDemo": "Vedeți Demo",
+      "noCreditCard": "Nu este necesar cardul de credit. Plan gratuit disponibil."
+    },
+    "benefits": {
+      "title": "De Ce Restaurantele Aleg Comenzile prin Meniu QR",
+      "subtitle": "Un canal direct de comenzi care menține lucrurile simple pentru dumneavoastră și oaspeții dumneavoastră.",
+      "items": [
+        {
+          "title": "Fără Aplicație Necesară",
+          "description": "Oaspeții scanează doar un cod QR — fără descărcări, fără înregistrări. Funcționează instant în orice browser de telefon."
+        },
+        {
+          "title": "Prețuri în Timp Real",
+          "description": "Actualizați prețurile și disponibilitatea instantaneu. Modificările se reflectă imediat în meniul QR."
+        },
+        {
+          "title": "Comenzi la Masă",
+          "description": "Fiecare masă primește propriul cod QR. Oaspeții scanează, comandă, iar dumneavoastră vedeți numărul mesei în panoul de control."
+        },
+        {
+          "title": "Design Personalizat",
+          "description": "Adaptați meniul la brandul dumneavoastră cu culori, fundaluri și logo personalizate."
+        }
+      ]
+    },
+    "features": {
+      "title": "Cum Funcționează Comenzile Online",
+      "subtitle": "Doi pași simpli conectează meniul la bucătăria dumneavoastră.",
+      "items": [
+        {
+          "title": "Oaspeții Navighează și Selectează Produse",
+          "description": "Clienții scanează codul QR și văd meniul complet cu fotografii, descrieri și prețuri. Adaugă produse în comandă cu o singură atingere — fără înregistrare necesară."
+        },
+        {
+          "title": "Comenzile Apar în Panoul de Control",
+          "description": "Când sunt gata, oaspeții apasă butonul de comandă. Comanda apare instantaneu în panoul de control cu detaliile produselor, numărul mesei și eventualele note. Acceptați, începeți prepararea și marcați ca finalizată."
+        }
+      ]
+    },
+    "faq": {
+      "title": "Întrebări Frecvente",
+      "subtitle": "Tot ce trebuie să știți despre comenzile online.",
+      "items": [
+        {
+          "question": "Am nevoie de echipament sau aplicații suplimentare?",
+          "answer": "Nu. Totul funcționează prin browser web. Oaspeții scanează codul QR cu camera telefonului, iar dumneavoastră gestionați comenzile din panoul IQ Rest de pe orice dispozitiv."
+        },
+        {
+          "question": "Există comisioane sau taxe per comandă?",
+          "answer": "Absolut nu. IQ Rest nu percepe niciodată comisioane pentru comenzile dumneavoastră. Plătiți doar planul de abonament, iar toate veniturile din comenzi rămân la dumneavoastră."
+        },
+        {
+          "question": "Pot clienții să-și personalizeze comanda sau să adauge note?",
+          "answer": "Da. Oaspeții pot selecta produse, specifica cantități și adăuga note sau solicitări speciale. Puteți solicita și numele, telefonul sau adresa de livrare ale clientului."
+        },
+        {
+          "question": "Funcționează pentru servire la masă, la pachet și livrare?",
+          "answer": "Da. Pentru servire la masă, oaspeții scanează codul QR de la masă. Pentru comenzi la pachet sau livrare, partajați un link direct către meniu. Puteți activa câmpurile de nume, telefon și adresă după necesitate."
+        }
+      ]
+    },
+    "howItWorks": {
+      "title": "Cum Funcționează",
+      "subtitle": "De la configurare până la primirea primei comenzi în cinci pași simpli.",
+      "steps": [
+        {
+          "title": "Activează Comenzile Online",
+          "description": "Activează comenzile în setările tale de Design. Alege modul preferat: comenzile apar în tabloul tău de bord, sunt trimise pe WhatsApp sau ambele simultan."
+        },
+        {
+          "title": "Configurează Formularul de Comandă",
+          "description": "Selectează ce câmpuri trebuie să completeze clienții atunci când plasează o comandă. Numele este întotdeauna necesar, iar opțional poți solicita numărul de telefon și adresa de livrare."
+        },
+        {
+          "title": "Imprimă Coduri QR pentru Mese",
+          "description": "Fiecare masă din restaurantul tău primește propriul cod QR unic. Când oaspeții îl scanează, comanda lor ajunge automat cu numărul mesei corect atașat."
+        },
+        {
+          "title": "Clienții Plasează Comenzi",
+          "description": "Oaspeții scanează codul QR, răsfoiesc meniul tău cu fotografii și prețuri, selectează articole, adaugă note și trimit comanda. Nu este necesară descărcarea unei aplicații sau crearea unui cont."
+        },
+        {
+          "title": "Gestionează Comenzile în Tabloul Tău de Bord",
+          "description": "Comenzile apar instantaneu în tabloul tău de bord. Actualizează starea fiecărei comenzi de la nouă la în curs de desfășurare până la finalizată. Păstrezi 100% din venit — zero comisioane."
+        }
+      ]
+    }
+  },
+  "reservationsPage": {
+    "seo": {
+      "title": "Sistem de Rezervare Mese pentru Restaurante — Rezervare Online | IQ Rest",
+      "description": "Permiteți oaspeților să rezerve mese direct de pe site-ul dvs. Confirmare automată sau manuală, notificări prin e-mail și gestionare completă a calendarului — totul inclus."
+    },
+    "hero": {
+      "badge": "Rezervări Mese",
+      "title": "Acceptați Rezervări de Mese 24/7 de pe Site-ul Dvs.",
+      "subtitle": "Oaspeții aleg data, ora și numărul de persoane — și rezervă instant. Gestionați totul din panoul de control, fără apeluri telefonice.",
+      "cta": "Creați Meniul",
+      "ctaDemo": "Vezi Demo",
+      "noCreditCard": "Nu este necesar card de credit. Plan gratuit disponibil."
+    },
+    "features": {
+      "title": "Cum Funcționează Rezervările de Mese",
+      "subtitle": "Doi pași de la cererea oaspetelui la rezervarea confirmată.",
+      "items": [
+        {
+          "title": "Oaspeții Rezervă de pe Site-ul Dvs.",
+          "description": "Clienții vizitează pagina restaurantului dvs., apasă 'Rezervă o Masă', aleg data și ora, introduc detaliile lor și trimit. Nu este nevoie de aplicație — funcționează în orice browser pe orice dispozitiv."
+        },
+        {
+          "title": "Gestionați Rezervările din Panoul de Control",
+          "description": "Fiecare rezervare apare în panoul dvs. de control cu numele oaspetelui, telefonul, numărul de persoane, data și notele. Confirmați sau refuzați cu o singură apăsare. Setați confirmarea automată sau revizuiți manual fiecare rezervare."
+        }
+      ]
+    },
+    "faq": {
+      "title": "Întrebări Frecvente",
+      "subtitle": "Tot ce trebuie să știți despre rezervările de mese.",
+      "items": [
+        {
+          "question": "Trebuie clienții să își creeze un cont pentru a rezerva?",
+          "answer": "Nu. Oaspeții completează doar numele, numărul de telefon, numărul de persoane și ora preferată. Nu este necesar cont sau descărcarea unei aplicații."
+        },
+        {
+          "question": "Pot seta intervalele orare și capacitatea disponibilă?",
+          "answer": "Da. Definiți programul de lucru, durata intervalului de rezervare și capacitatea mesei. Sistemul afișează oaspeților doar intervalele disponibile."
+        },
+        {
+          "question": "Voi fi notificat când cineva face o rezervare?",
+          "answer": "Da. Primiți un e-mail pentru fiecare rezervare nouă. Oaspeții primesc, de asemenea, un e-mail de confirmare odată ce aprobați rezervarea."
+        },
+        {
+          "question": "Pot folosi atât confirmarea automată, cât și cea manuală?",
+          "answer": "Da. Alegeți modul automat pentru a confirma rezervările instant în funcție de disponibilitate, sau modul manual pentru a revizui și aproba fiecare cerere personal."
+        }
+      ]
+    },
+    "howItWorks": {
+      "title": "Cum Funcționează",
+      "subtitle": "Configurează rezervările online și începe să accepți rezervări în cinci pași.",
+      "steps": [
+        {
+          "title": "Activează Rezervările",
+          "description": "Activează rezervările în setările restaurantului tău. Alege între confirmarea automată, unde rezervările sunt aprobate instantaneu în funcție de disponibilitate, sau modul manual în care revizuiești fiecare cerere."
+        },
+        {
+          "title": "Adaugă Mesele Tale",
+          "description": "Creează mese cu informații despre capacitate și zonă — de exemplu, 'Masa 5, 4 oaspeți, Terasă'. Fiecare masă devine rezervabilă, iar sistemul previne automat suprapunerile de rezervări."
+        },
+        {
+          "title": "Stabilește Orele de Lucru",
+          "description": "Defineste orele tale disponibile pentru rezervări și alege durata slotului — de la 15 minute la 8 ore. Numai sloturile de timp din orele tale de lucru sunt afișate oaspeților."
+        },
+        {
+          "title": "Oaspeții Rezervă Online",
+          "description": "Clienții vizitează pagina restaurantului tău, aleg data, ora și dimensiunea grupului, introduc numele și numărul de telefon și trimit. Nu este necesar un cont sau descărcarea unei aplicații — funcționează în orice browser."
+        },
+        {
+          "title": "Gestionează Rezervările în Panoul Tău de Control",
+          "description": "Vizualizează toate rezervările în panoul tău de control. Confirmă, anulează sau marchează rezervările ca fiind finalizate. Atât tu, cât și oaspetele primiți notificări prin email pentru fiecare actualizare a rezervării."
+        }
+      ]
+    }
+  },
+  "colorSchemePage": {
+    "seo": {
+      "title": "Design Personalizat Meniu QR și Culori de Brand — Branding Restaurant | IQ Rest",
+      "description": "Potriviți meniul QR cu brandul restaurantului dvs. Alegeți culori de accent și creați un aspect consistent pe întregul meniu digital."
+    },
+    "hero": {
+      "badge": "Design Personalizat",
+      "title": "Faceți Meniul QR să Se Potrivească cu Brandul Restaurantului",
+      "subtitle": "Alegeți culoarea brandului, iar întregul meniu — butoane, evidențieri, linkuri — se actualizează instant.",
+      "cta": "Creați Meniul",
+      "ctaDemo": "Vezi Demo",
+      "noCreditCard": "Nu este necesar card de credit. Plan gratuit disponibil."
+    },
+    "features": {
+      "title": "Cum Funcționează Branding-ul Personalizat",
+      "subtitle": "Meniul dvs., culorile dvs. — consistent pe fiecare pagină.",
+      "items": [
+        {
+          "title": "Alegeți Culoarea de Accent",
+          "description": "Selectați din 12 presetări atent alese sau introduceți culoarea exactă a brandului cu un cod hex. Fiecare buton, link și evidențiere din meniu se adaptează instant — fără abilități de design necesare."
+        }
+      ]
+    },
+    "faq": {
+      "title": "Întrebări Frecvente",
+      "subtitle": "Tot ce trebuie să știți despre personalizarea meniului.",
+      "items": [
+        {
+          "question": "Pot folosi culoarea exactă a brandului meu?",
+          "answer": "Da. Introduceți orice cod de culoare hex sau alegeți din 12 presetări atent selectate. Culoarea de accent se aplică pe toate paginile meniului."
+        },
+        {
+          "question": "Pot schimba culorile după publicare?",
+          "answer": "Absolut. Schimbați culoarea de accent oricând din panoul de control. Actualizările apar instant pe meniul live — fără necesitatea republicării."
+        },
+        {
+          "question": "Codul QR va avea și el culorile brandului?",
+          "answer": "Codul QR este generat separat și poate fi personalizat independent. Culoarea de accent se aplică paginilor meniului digital, navigării și elementelor interactive."
+        }
+      ]
+    },
+    "howItWorks": {
+      "title": "Cum Funcționează",
+      "subtitle": "Potriviți meniul cu marca dvs. în trei pași simpli.",
+      "steps": [
+        {
+          "title": "Deschideți Setările de Design",
+          "description": "Navigați la pagina de Design din tabloul de bord. Selectorul de culoare accent este în centrul atenției — veți vedea toate opțiunile disponibile imediat."
+        },
+        {
+          "title": "Alegeți Culoarea Mărcii Dvs.",
+          "description": "Alegeți din 12 presetări de culoare curate, concepute pentru lizibilitate și accesibilitate, sau introduceți codul hex exact pentru o potrivire perfectă cu marca."
+        },
+        {
+          "title": "Previzualizare Instantanee",
+          "description": "Culoarea dvs. accent se aplică butoanelor, linkurilor și evidențierilor din întregul meniu. Funcționează atât în teme deschise, cât și în teme întunecate, iar modificările apar instantaneu pe meniul dvs. live."
+        }
+      ]
+    }
+  },
+  "easyMenuPage": {
+    "seo": {
+      "title": "Creați un Meniu QR pentru Restaurantul Dvs. — Creator Gratuit de Meniu | IQ Rest",
+      "description": "Construiți meniul QR digital al restaurantului în câteva minute. Adăugați categorii, feluri de mâncare, fotografii, prețuri — și partajați un cod QR scanabil. Gratuit la început."
+    },
+    "hero": {
+      "badge": "Creator de Meniu",
+      "title": "Creați un Meniu QR Digital pentru Restaurant în Câteva Minute",
+      "subtitle": "Adăugați categoriile și felurile de mâncare, setați prețurile, încărcați fotografii — meniul QR este gata de partajat. Editați oricând, modificările apar instant.",
+      "cta": "Creați Meniul",
+      "ctaDemo": "Vezi Demo",
+      "noCreditCard": "Nu este necesar card de credit. Plan gratuit disponibil."
+    },
+    "features": {
+      "title": "Cum Funcționează Editorul de Meniu",
+      "subtitle": "Instrumente simple care vă pun meniul online rapid.",
+      "items": [
+        {
+          "title": "Adăugați Categorii și Feluri de Mâncare",
+          "description": "Creați categorii precum Aperitive, Feluri Principale, Băuturi — apoi adăugați feluri cu nume, descrieri, prețuri și fotografii. Trageți și plasați pentru a reordona. Activați sau dezactivați elementele fără a le șterge."
+        },
+        {
+          "title": "Modificările Devin Active Instant",
+          "description": "Fiecare editare pe care o faceți apare pe meniul QR live în câteva secunde. Actualizați un preț, adăugați un meniu zilnic special sau ascundeți un fel epuizat — clienții dvs. văd mereu versiunea cea mai recentă."
+        }
+      ]
+    },
+    "faq": {
+      "title": "Întrebări Frecvente",
+      "subtitle": "Tot ce trebuie să știți despre crearea meniului QR.",
+      "items": [
+        {
+          "question": "Cum creez un meniu QR pentru restaurantul meu?",
+          "answer": "Înregistrați-vă cu e-mailul, numiți restaurantul și începeți să adăugați categorii și feluri de mâncare. Meniul QR se generează automat — tipăriți codul QR și plasați-l pe mese."
+        },
+        {
+          "question": "Pot adăuga fotografii la elementele meniului?",
+          "answer": "Da. Încărcați fotografii direct de pe telefon sau computer. Imaginile sunt optimizate automat pentru încărcare rapidă pe orice dispozitiv."
+        },
+        {
+          "question": "Câte elemente pot adăuga?",
+          "answer": "Nu există limită de categorii sau elemente de meniu. Adăugați câte feluri aveți nevoie — meniul rămâne rapid și organizat."
+        },
+        {
+          "question": "Pot ascunde temporar un fel care s-a epuizat?",
+          "answer": "Da. Dezactivați orice element cu o singură apăsare. Dispare din meniul public dar rămâne în panoul dvs. de control — reactivați-l oricând sunteți pregătit."
+        }
+      ]
+    },
+    "howItWorks": {
+      "title": "Cum Funcționează",
+      "subtitle": "Construiește și publică meniul restaurantului tău în cinci pași simpli.",
+      "steps": [
+        {
+          "title": "Creează Categorii",
+          "description": "Adaugă categorii precum Aperitive, Feluri principale, Deserturi și Băuturi pentru a organiza meniul tău. Poți crea câte categorii ai nevoie și le poți reordona prin drag and drop."
+        },
+        {
+          "title": "Adaugă Elemente în Meniu",
+          "description": "Introdu numele felului de mâncare, descrierea și prețul pentru fiecare element. Marchează alergenii, dacă este cazul — oaspeții vor vedea automat pictogramele alergenilor pe meniu."
+        },
+        {
+          "title": "Încarcă sau Generează Fotografii",
+          "description": "Încarcă propriile fotografii cu mâncare de pe telefonul sau computerul tău, sau folosește AI pentru a genera o imagine profesională a mâncării din numele felului. Imaginile sunt optimizate automat."
+        },
+        {
+          "title": "Organizează cu Drag and Drop",
+          "description": "Reordonează categoriile și elementele prin tragerea lor în locul dorit. Activează sau dezactivează orice element fără a-l șterge — perfect pentru ofertele zilnice sau felurile de mâncare epuizate."
+        },
+        {
+          "title": "Publică Meniul Tău",
+          "description": "Modificările apar instantaneu pe meniul tău QR live. Nu există un buton 'publicare' — fiecare editare devine activă în timp real. Tipărește codul tău QR și plasează-l pe mesele tale."
+        }
+      ]
+    }
+  },
+  "aiTranslationPage": {
+    "seo": {
+      "title": "Traducere AI a Meniului pentru Restaurante — Traducere Meniu QR | IQ Rest",
+      "description": "Traduceți meniul restaurantului în peste 25 de limbi cu un singur clic. AI-ul înțelege contextul culinar — numele felurilor, descrierile și categoriile sunt traduse cu acuratețe."
+    },
+    "hero": {
+      "badge": "Traducere AI",
+      "title": "Traduceți Meniul în Peste 25 de Limbi cu Un Singur Clic",
+      "subtitle": "AI-ul nostru înțelege contextul culinar — traduce numele felurilor, descrierile și categoriile natural, nu cuvânt cu cuvânt. Ajungeți la fiecare turist și oaspete internațional.",
+      "cta": "Creați Meniul",
+      "ctaDemo": "Vezi Demo",
+      "noCreditCard": "Nu este necesar card de credit. Plan gratuit disponibil."
+    },
+    "features": {
+      "title": "Cum Funcționează Traducerea AI",
+      "subtitle": "Din limba dvs. în lumea întreagă în câteva secunde.",
+      "items": [
+        {
+          "title": "Traducere cu Un Singur Clic pentru Întregul Meniu",
+          "description": "Selectați limba țintă, apăsați traducere, iar întregul meniu — categorii, nume de feluri, descrieri — este tradus instant. AI-ul păstrează termenii culinari și se adaptează natural pentru fiecare limbă."
+        },
+        {
+          "title": "Editați și Ajustați Orice Traducere",
+          "description": "Fiecare traducere AI este complet editabilă. Revizuiți rezultatul, ajustați orice formulare și salvați. Modificările dvs. sunt păstrate chiar dacă retraduceți alte părți ale meniului ulterior."
+        }
+      ]
+    },
+    "faq": {
+      "title": "Întrebări Frecvente",
+      "subtitle": "Tot ce trebuie să știți despre traducerea meniului.",
+      "items": [
+        {
+          "question": "Cât de precisă este traducerea AI pentru meniuri de restaurante?",
+          "answer": "AI-ul nostru este optimizat pentru conținut de restaurant. Înțelege că 'Beef Wellington' sau 'Tiramisu' nu trebuie traduse literal și adaptează descrierile să sune natural în fiecare limbă."
+        },
+        {
+          "question": "Ce limbi sunt acceptate?",
+          "answer": "Peste 25 de limbi, inclusiv engleză, spaniolă, franceză, germană, italiană, portugheză, chineză, japoneză, coreeană, arabă, rusă și multe alte limbi europene și asiatice."
+        },
+        {
+          "question": "Pot traduce doar anumite elemente, nu tot meniul?",
+          "answer": "Da. Puteți traduce elemente individuale, categorii întregi sau tot meniul deodată. Aveți control total asupra a ceea ce se traduce."
+        },
+        {
+          "question": "Costă în plus per traducere?",
+          "answer": "Traducerea AI este inclusă în planurile Growth și Pro cu limite lunare generoase. Fără taxe per cuvânt sau per element — traduceți cât aveți nevoie."
+        }
+      ]
+    },
+    "howItWorks": {
+      "title": "Cum Funcționează",
+      "subtitle": "Traduceti întregul meniu în câteva minute, nu ore.",
+      "steps": [
+        {
+          "title": "Adăugați Limbi la Meniul Dvs.",
+          "description": "Accesați pagina Limbi din tabloul de bord și selectați ce limbi ar trebui să suporte meniul dvs. Alegeți din 35 de limbi disponibile, inclusiv toate limbile majore europene, asiatice și din Orientul Mijlociu."
+        },
+        {
+          "title": "Faceți Clic pe Traducere",
+          "description": "Un singur buton traduce toate categoriile, numele articolelor și descrierile simultan. Întregul meniu este procesat în câteva secunde, indiferent de câte articole aveți."
+        },
+        {
+          "title": "AI Înțelege Contextul Culinar",
+          "description": "AI-ul cunoaște terminologia culinară din diferite culturi. Păstrează numele preparatelor precum 'Tiramisu' sau 'Pad Thai' în timp ce adaptează natural descrierile, listele de ingrediente și numele categoriilor."
+        },
+        {
+          "title": "Revizuiți și Editați",
+          "description": "Fiecare traducere este complet editabilă. Ajustați orice formulare pentru a se potrivi stilului dvs. Modificările manuale sunt păstrate chiar și atunci când retraduceți alte părți ale meniului ulterior."
+        },
+        {
+          "title": "Publicați Meniul Dvs. Multilingv",
+          "description": "Oaspeții văd un comutator de limbă pe meniul dvs. și pot naviga în limba preferată. Fiecare limbă poate fi activată sau dezactivată independent din tabloul de bord."
+        }
+      ]
+    }
+  },
+  "mobileManagementPage": {
+    "seo": {
+      "title": "Gestionați Meniul Restaurantului de pe Telefon — Panou de Control Mobil | IQ Rest",
+      "description": "Administrați meniul QR al restaurantului în întregime de pe telefon. Adăugați feluri, actualizați prețuri, încărcați fotografii, verificați analizele — fără calculator necesar."
+    },
+    "hero": {
+      "badge": "Panou Mobil",
+      "title": "Gestionați Întregul Meniu al Restaurantului de pe Telefon",
+      "subtitle": "Adăugați feluri, schimbați prețuri, încărcați fotografii, verificați comenzile — totul de pe smartphone. Panoul este construit mobile-first, așa că nu aveți niciodată nevoie de computer.",
+      "cta": "Creați Meniul",
+      "ctaDemo": "Vezi Demo",
+      "noCreditCard": "Nu este necesar card de credit. Plan gratuit disponibil."
+    },
+    "features": {
+      "title": "Cum Funcționează Gestionarea Mobilă",
+      "subtitle": "Panoul restaurantului dvs., mereu în buzunar.",
+      "items": [
+        {
+          "title": "Panou Complet pe Smartphone",
+          "description": "Fiecare funcție funcționează perfect pe ecranul telefonului — adăugați elemente, editați categorii, gestionați comenzi, verificați analize. Interfața este proiectată pentru atingere, nu doar redimensionată de pe desktop."
+        },
+        {
+          "title": "Încărcați Fotografii Direct din Cameră",
+          "description": "Fotografiați un fel nou și încărcați-l în meniu în câteva secunde. Imaginile sunt optimizate automat. Actualizați meniul zilei stând în bucătărie."
+        }
+      ]
+    },
+    "faq": {
+      "title": "Întrebări Frecvente",
+      "subtitle": "Tot ce trebuie să știți despre gestionarea mobilă a meniului.",
+      "items": [
+        {
+          "question": "Trebuie să instalez o aplicație?",
+          "answer": "Nu. Panoul funcționează în browserul telefonului — Safari, Chrome sau oricare altul. Conectați-vă și începeți să gestionați meniul."
+        },
+        {
+          "question": "Pot face de pe telefon tot ce pot face pe computer?",
+          "answer": "Da. Fiecare funcție este disponibilă pe mobil — adăugare elemente, încărcare fotografii, gestionare categorii, verificare analize, gestionare comenzi și rezervări."
+        },
+        {
+          "question": "Funcționează și pe tabletă?",
+          "answer": "Da. Panoul se adaptează la orice dimensiune de ecran — telefoane, tablete și computere desktop. Folosiți dispozitivul care vă este cel mai convenabil."
+        },
+        {
+          "question": "Pot mai multe persoane să gestioneze meniul?",
+          "answer": "În prezent, un cont gestionează restaurantul. Vă puteți conecta simultan de pe mai multe dispozitive — telefon, tabletă sau computer."
+        }
+      ]
+    },
+    "howItWorks": {
+      "title": "Cum Funcționează",
+      "subtitle": "Gestionează-ți restaurantul de pe orice dispozitiv în patru pași.",
+      "steps": [
+        {
+          "title": "Deschide Dashboard-ul pe Telefonul Tău",
+          "description": "Accesează iq-rest.com și conectează-te din browserul telefonului tău. Dashboard-ul se adaptează automat la dimensiunea ecranului tău — nu este necesară descărcarea sau instalarea unei aplicații."
+        },
+        {
+          "title": "Editează Meniul De Oriunde",
+          "description": "Adaugă articole noi, actualizează prețuri, schimbă descrieri și încarcă fotografii direct din camera telefonului tău. Fiecare funcție disponibilă pe desktop funcționează la fel de bine și pe mobil."
+        },
+        {
+          "title": "Verifică Comenzile și Rezervările",
+          "description": "Vizualizează comenzile primite, gestionează rezervările de mese și răspunde la mesajele de suport — toate de pe telefonul tău. Fii la curent cu restaurantul tău chiar și atunci când ești departe."
+        },
+        {
+          "title": "Modificările Devind Active Instantaneu",
+          "description": "Fiecare editare pe care o faci de pe telefonul tău apare pe meniul tău QR în timp real. Nu este nevoie să sincronizezi, publici sau aștepți — oaspeții tăi văd întotdeauna cea mai recentă versiune."
+        }
+      ]
+    }
+  },
+  "customDesignPage": {
+    "seo": {
+      "title": "Site Restaurant cu Fundal Video și Foto — Constructor de Site-uri | IQ Rest",
+      "description": "Creați un site de restaurant impresionant cu fundaluri video sau foto personalizate. Încărcați videoclipul cu ambianța sau fotografia culinară — impresionați oaspeții de la prima scanare."
+    },
+    "hero": {
+      "badge": "Design Site",
+      "title": "Creați un Site de Restaurant Impresionant cu Fundaluri Video",
+      "subtitle": "Încărcați videoclipul cu ambianța restaurantului sau o fotografie culinară frumoasă ca fundal. Oaspeții văd o experiență profesională și de brand din momentul scanării codului QR.",
+      "cta": "Creați Meniul",
+      "ctaDemo": "Vezi Demo",
+      "noCreditCard": "Nu este necesar card de credit. Plan gratuit disponibil."
+    },
+    "features": {
+      "title": "Cum Funcționează Fundalurile Personalizate",
+      "subtitle": "Faceți o primă impresie de neuitat cu elemente vizuale potrivite brandului.",
+      "items": [
+        {
+          "title": "Încărcați Fundaluri Video sau Foto",
+          "description": "Adăugați un videoclip în buclă cu ambianța restaurantului, un time-lapse din bucătărie sau o fotografie culinară de înaltă calitate. Fundalul apare pe pagina principală — creând o experiență captivantă pentru oaspeți."
+        },
+        {
+          "title": "Optimizat pentru Viteză pe Orice Dispozitiv",
+          "description": "Videoclipurile și imaginile sunt comprimate automat și încărcate cu întârziere. Site-ul rămâne rapid chiar și pe conexiuni mobile lente — fără buffering, fără întârzieri, doar o experiență fluidă."
+        }
+      ]
+    },
+    "faq": {
+      "title": "Întrebări Frecvente",
+      "subtitle": "Tot ce trebuie să știți despre designul site-ului de restaurant.",
+      "items": [
+        {
+          "question": "Ce formate video sunt acceptate?",
+          "answer": "Formatele MP4 și WebM funcționează cel mai bine. Videoclipurile sunt comprimate automat pentru încărcare rapidă. Mențineți videoclipurile sub 30 de secunde pentru cea mai bună experiență mobilă."
+        },
+        {
+          "question": "Un fundal video va încetini site-ul meu?",
+          "answer": "Nu. Videoclipurile sunt comprimate, încărcate cu întârziere și optimizate automat. Pe conexiuni lente, sistemul trece la o imagine statică pentru a menține experiența fluidă."
+        },
+        {
+          "question": "Pot folosi o fotografie în loc de video?",
+          "answer": "Da. Încărcați orice fotografie — va fi optimizată și afișată ca fundal pe ecran complet. Puteți comuta între video și foto oricând."
+        },
+        {
+          "question": "Am nevoie de un designer pentru configurare?",
+          "answer": "Nu. Încărcați videoclipul sau fotografia din panoul de control. Sistemul gestionează dimensionarea, compresia și aspectul automat. Site-ul arată profesional fără abilități de design."
+        }
+      ]
+    },
+    "howItWorks": {
+      "title": "Cum Funcționează",
+      "subtitle": "Personalizează identitatea vizuală a restaurantului tău în patru pași.",
+      "steps": [
+        {
+          "title": "Deschide Setările de Design",
+          "description": "Navighează la pagina de Design din tabloul de bord. Aici poți controla aspectul vizual al restaurantului tău — fundal, culoare de accent și layout-ul paginii de start."
+        },
+        {
+          "title": "Încarcă un Fundal",
+          "description": "Alege un videoclip (MP4, WebM) sau o fotografie pentru fundalul paginii de start a restaurantului tău. Videoclipurile se redau în buclă automat, creând o impresie inițială captivantă pentru fiecare vizitator."
+        },
+        {
+          "title": "Generare Fundal AI",
+          "description": "Nu ai un videoclip sau o fotografie pregătită? Lasă AI-ul să creeze automat o imagine de fundal din elementele tale de meniu. Acesta generează un vizual profesional care se potrivește stilului restaurantului tău."
+        },
+        {
+          "title": "Previzualizează și Salvează",
+          "description": "Vezi modificările tale în timp real înainte de a salva. Videoclipurile sunt comprimate automat și se încarcă lazy, asigurând o performanță rapidă pe dispozitivele mobile fără a compromite calitatea vizuală."
+        }
+      ]
+    }
+  },
+  "multilingualPage": {
+    "seo": {
+      "title": "Site Restaurant Multilingv — Meniu în 25+ Limbi | IQ Rest",
+      "description": "Site-ul restaurantului și meniul QR în 25+ limbi. Oaspeții schimbă limba cu o singură apăsare — meniul, contactele și rezervările se adaptează instant."
+    },
+    "hero": {
+      "badge": "Multilingv",
+      "title": "Site-ul Restaurantului Dvs. în 25+ Limbi",
+      "subtitle": "Turiștii și oaspeții internaționali văd meniul în propria limbă. O singură apăsare pentru a schimba — totul se adaptează instant: feluri, descrieri, contacte, navigare.",
+      "cta": "Creați Meniul",
+      "ctaDemo": "Vezi Demo",
+      "noCreditCard": "Nu este necesar card de credit. Plan gratuit disponibil."
+    },
+    "features": {
+      "title": "Cum Funcționează Suportul Multilingv",
+      "subtitle": "Vorbiți limba clientului fără efort suplimentar.",
+      "items": [
+        {
+          "title": "Oaspeții Își Aleg Limba",
+          "description": "Un selector de limbă apare pe meniu. Oaspeții apasă limba preferată, iar întregul site — meniu, descrieri, informații de contact, navigare — se schimbă instant. Nu este necesară reîncărcarea paginii."
+        },
+        {
+          "title": "Adăugați Limbi din Panoul de Control",
+          "description": "Activați limbi noi cu un singur clic. Folosiți traducerea AI pentru a completa conținutul sau introduceți traducerile manual. Fiecare limbă poate fi activată sau dezactivată independent."
+        }
+      ]
+    },
+    "faq": {
+      "title": "Întrebări Frecvente",
+      "subtitle": "Tot ce trebuie să știți despre meniurile multilingve.",
+      "items": [
+        {
+          "question": "Câte limbi pot adăuga la meniu?",
+          "answer": "Până la 25+ limbi, inclusiv toate limbile europene principale, chineză, japoneză, coreeană, arabă, persană și multe altele. Adăugați câte au nevoie oaspeții dvs."
+        },
+        {
+          "question": "Trebuie să traduc totul manual?",
+          "answer": "Nu. Folosiți traducerea AI integrată pentru a traduce întregul meniu cu un singur clic. Puteți edita manual orice traducere pentru control complet."
+        },
+        {
+          "question": "Se salvează preferința de limbă?",
+          "answer": "Da. Când un oaspete selectează o limbă, aceasta este memorată pentru vizita următoare. Nu trebuie să aleagă din nou când revin."
+        },
+        {
+          "question": "Suportul multilingv este disponibil pe planul gratuit?",
+          "answer": "Planul gratuit include până la 2 limbi. Planurile Growth și Pro oferă limbi nelimitate cu traducere AI inclusă."
+        }
+      ]
+    },
+    "howItWorks": {
+      "title": "Cum Funcționează",
+      "subtitle": "Fă-ți meniul disponibil în mai multe limbi în patru pași.",
+      "steps": [
+        {
+          "title": "Accesează Setările de Limbă",
+          "description": "Deschide pagina Limbilor în tabloul de bord. Vei vedea toate limbile disponibile și care dintre ele sunt active în prezent pe meniul tău."
+        },
+        {
+          "title": "Adaugă Limbile",
+          "description": "Selectează din 35 de limbi disponibile. Planul gratuit include până la 2 limbi, în timp ce planurile Growth și Pro oferă limbi nelimitate pentru meniul tău."
+        },
+        {
+          "title": "Traducerea Conținutului Tău",
+          "description": "Folosește traducerea AI cu un singur clic pentru a traduce întregul tău meniu instantaneu, sau introdu traducerile manual pentru un control total. Poți combina ambele abordări."
+        },
+        {
+          "title": "Oaspeții Schimbă Limbile",
+          "description": "Un selector de limbă apare pe pagina meniului tău. Când oaspeții aleg limba lor, întregul meniu se schimbă instantaneu. Preferința lor este salvată pentru vizite viitoare."
+        }
+      ]
+    }
+  },
+  "instantSetupPage": {
+    "seo": {
+      "title": "Generator Gratuit de Site Restaurant — Creați în 5 Minute | IQ Rest",
+      "description": "Obțineți un site profesional de restaurant cu meniu QR, pagină de contact și hartă — introduceți doar e-mailul. Gata în 5 minute, fără abilități tehnice necesare."
+    },
+    "hero": {
+      "badge": "Site Gratuit",
+      "title": "Obțineți un Site Profesional de Restaurant în 5 Minute",
+      "subtitle": "Introduceți e-mailul, numiți restaurantul și primiți instant un site complet cu meniu QR, pagină de contact cu hartă și design modern responsive. Fără programare, fără designeri.",
+      "cta": "Creați Meniul",
+      "ctaDemo": "Vezi Demo",
+      "noCreditCard": "Nu este necesar card de credit. Plan gratuit disponibil."
+    },
+    "features": {
+      "title": "Cum Funcționează",
+      "subtitle": "De la zero la un site de restaurant live în trei pași.",
+      "items": [
+        {
+          "title": "Înregistrați-vă Doar cu E-mailul",
+          "description": "Fără formulare de înregistrare complicate. Introduceți e-mailul, verificați cu un cod, iar panoul de control al restaurantului este gata. Numiți restaurantul și site-ul devine live imediat."
+        },
+        {
+          "title": "Totul Inclus din Start",
+          "description": "Site-ul vine cu meniu QR, pagină de contact cu Google Maps, suport lingvistic, design responsive pe mobil și URL-ul dvs. unic. Doar adăugați felurile și începeți să partajați."
+        }
+      ]
+    },
+    "faq": {
+      "title": "Întrebări Frecvente",
+      "subtitle": "Tot ce trebuie să știți despre crearea site-ului de restaurant.",
+      "items": [
+        {
+          "question": "Cum creez un site gratuit de restaurant?",
+          "answer": "Introduceți e-mailul pe IQ Rest, verificați cu un cod, numiți restaurantul — gata. Site-ul cu meniu QR este live în mai puțin de 5 minute. Fără card de credit necesar."
+        },
+        {
+          "question": "Am nevoie de abilități tehnice?",
+          "answer": "Nu. Totul este proiectat pentru proprietarii de restaurante, nu pentru dezvoltatori. Adăugați feluri, încărcați fotografii și gestionați site-ul în întregime de pe telefon."
+        },
+        {
+          "question": "Ce include planul gratuit?",
+          "answer": "Un site complet de restaurant, meniu QR, pagină de contact cu hartă, analize, schemă de culori personalizată și până la 2 limbi. Fără perioadă de probă — este gratuit pentru totdeauna."
+        },
+        {
+          "question": "Pot folosi propriul domeniu?",
+          "answer": "Pe planurile gratuit și Growth, site-ul este găzduit la iq-rest.com/m/numele-dvs. Planul Pro acceptă domenii personalizate pentru control complet al brandului."
+        }
+      ]
+    },
+    "howItWorks": {
+      "title": "Cum Funcționează",
+      "subtitle": "De la zero la un site web de restaurant activ în patru pași.",
+      "steps": [
+        {
+          "title": "Introduceti Email-ul Dvs.",
+          "description": "Nu este nevoie de parolă. Introduceți adresa dvs. de email și faceți clic pe Continuare. Nu există formulare de înregistrare lungi, nu este necesară o carte de credit și nu există angajamente."
+        },
+        {
+          "title": "Verificati cu un Cod",
+          "description": "Verificați-vă inboxul pentru un cod de verificare de 4 cifre. Introduceți-l pentru a vă conecta în siguranță. Această abordare fără parolă înseamnă un lucru mai puțin de reținut."
+        },
+        {
+          "title": "Numește-ți Restaurantul",
+          "description": "Oferiți restaurantului dvs. un nume. Acesta devine URL-ul site-ului dvs. web și titlul meniului. Îl puteți schimba oricând mai târziu din setările tabloului de bord."
+        },
+        {
+          "title": "Site-ul Dvs. Este Gata",
+          "description": "Un site web complet de restaurant cu meniu QR, pagină de contact cu hartă și design responsive este activ instantaneu la iq-rest.com/m/numele-dvs. Adăugați preparatele dvs. și începeți să le împărtășiți."
+        }
+      ]
+    }
+  },
+  "analyticsPage": {
+    "seo": {
+      "title": "Analiză Restaurant și Statistici Meniu QR — Urmăriți Vizitatorii | IQ Rest",
+      "description": "Urmăriți scanările meniului QR, vizualizările paginilor, limbile populare și tendințele vizitatorilor. Panou de analiză în timp real pentru site-ul restaurantului dumneavoastră."
+    },
+    "hero": {
+      "badge": "Analiză",
+      "title": "Vedeți Exact Cum Folosesc Oaspeții Meniul QR",
+      "subtitle": "Urmăriți scanările zilnice, vizualizările paginilor, limbile populare, statisticile dispozitivelor și tendințele în timp. Luați decizii bazate pe date pentru a optimiza meniul și a vă dezvolta afacerea.",
+      "cta": "Creați-vă Meniul",
+      "ctaDemo": "Vedeți Demo",
+      "noCreditCard": "Nu este necesar card de credit. Plan gratuit disponibil."
+    },
+    "features": {
+      "title": "Ce Puteți Urmări",
+      "subtitle": "Informații în timp real despre prezența online a restaurantului dumneavoastră.",
+      "items": [
+        {
+          "title": "Vizualizări Zilnice, Scanări și Tendințe ale Vizitatorilor",
+          "description": "Vedeți câte persoane vă scanează codul QR și vă vizitează meniul în fiecare zi, săptămână și lună. Urmăriți tendințele în timp pentru a înțelege tiparele sezoniere și a măsura impactul promoțiilor."
+        },
+        {
+          "title": "Detalii despre Limbă și Dispozitiv",
+          "description": "Aflați ce limbi preferă oaspeții dumneavoastră și ce dispozitive folosesc. Aceste date vă ajută să prioritizați traducerile și să vă asigurați că meniul arată perfect pe cele mai populare dispozitive."
+        }
+      ]
+    },
+    "faq": {
+      "title": "Întrebări Frecvente",
+      "subtitle": "Tot ce trebuie să știți despre analiza restaurantului.",
+      "items": [
+        {
+          "question": "Ce indicatori pot urmări?",
+          "answer": "Vizualizări zilnice, săptămânale și lunare ale paginilor. Vizitatori unici. Cele mai vizualizate pagini. Preferințe lingvistice. Detalii despre dispozitive și browsere. Toate actualizate în timp real."
+        },
+        {
+          "question": "Analiza este inclusă în planul gratuit?",
+          "answer": "Da. Analiza de bază este disponibilă în toate planurile, inclusiv cel gratuit. Puteți vedea vizualizări, vizitatori și statistici lingvistice din prima zi."
+        },
+        {
+          "question": "Pot vedea care pagini sunt cele mai populare?",
+          "answer": "Da. Panoul de control afișează vizualizările detaliate pe pagină — acasă, meniu, contacte, rezervări și selecția limbii. Vedeți exact unde își petrec oaspeții timpul."
+        },
+        {
+          "question": "Cât de departe în timp merg datele?",
+          "answer": "Datele de analiză sunt stocate din ziua în care vă creați restaurantul. Puteți vizualiza tendințe zilnice, săptămânale și lunare pentru întregul dumneavoastră istoric."
+        }
+      ]
+    },
+    "howItWorks": {
+      "title": "Cum Funcționează",
+      "subtitle": "Începeți să urmăriți performanța restaurantului dvs. în patru pași.",
+      "steps": [
+        {
+          "title": "Creează-ți Restaurantul",
+          "description": "Analizele încep să urmărească din momentul în care meniul tău devine activ. Nu este nimic de configurat — fiecare vizualizare de pagină, scanare QR și vizitator sunt înregistrate automat."
+        },
+        {
+          "title": "Partajează Codul Tău QR",
+          "description": "Tipărește codul tău QR și plasează-l pe mese, la intrare sau pe ambalajele de livrare. Fiecare scanare este înregistrată cu marcaj de timp, limbă, dispozitiv și pagină vizitată."
+        },
+        {
+          "title": "Deschide Panoul de Analiză",
+          "description": "Vezi statistici zilnice, săptămânale și lunare cu grafice clare. Urmărește vizualizările totale, vizitatorii unici și tendințele în timp dintr-un singur ecran al panoului."
+        },
+        {
+          "title": "Explorează Detaliile Statistice",
+          "description": "Vizualizează statistici detaliate pe pagină (meniu, contacte, rezervări), limbă preferată, tip de dispozitiv și browser. Folosește aceste date pentru a-ți optimiza meniul și a prioritiza traducerile."
+        }
+      ]
+    }
+  },
+  "aiImagesPage": {
+    "seo": {
+      "title": "Generare Fotografii Culinare cu IA pentru Meniuri — Imagini Meniu Restaurant | IQ Rest",
+      "description": "Generați fotografii culinare frumoase pentru meniul dumneavoastră cu ajutorul IA. Nu aveți nevoie de fotograf — obțineți imagini profesionale ale preparatelor în câteva secunde, optimizate pentru meniul QR."
+    },
+    "hero": {
+      "badge": "Imagini IA",
+      "title": "Fotografii Profesionale de Meniu Fără Fotograf",
+      "subtitle": "Generați imagini impresionante ale preparatelor cu ajutorul IA. Introduceți doar numele preparatului și obțineți o fotografie frumoasă, optimizată, pregătită pentru meniul QR — în câteva secunde.",
+      "cta": "Creați-vă Meniul",
+      "ctaDemo": "Vedeți Demo",
+      "noCreditCard": "Nu este necesar card de credit. Plan gratuit disponibil."
+    },
+    "features": {
+      "title": "Cum Funcționează Generarea de Imagini cu IA",
+      "subtitle": "De la numele preparatului la fotografia profesională cu un singur clic.",
+      "items": [
+        {
+          "title": "Generați Imagini din Numele Preparatelor",
+          "description": "Tastați numele preparatului — 'Somon la Grătar cu Lămâie', 'Pizza Margherita', 'Tort cu Ciocolată Lichidă' — iar IA generează o fotografie culinară profesională. Alegeți din mai multe stiluri și fundaturi."
+        },
+        {
+          "title": "Optimizate pentru Încărcare Rapidă",
+          "description": "Fiecare imagine generată este comprimată automat și convertită în formate moderne. Meniul dumneavoastră rămâne rapid pe orice dispozitiv, chiar și cu fotografii la fiecare preparat."
+        }
+      ]
+    },
+    "faq": {
+      "title": "Întrebări Frecvente",
+      "subtitle": "Tot ce trebuie să știți despre imaginile de meniu generate cu IA.",
+      "items": [
+        {
+          "question": "Cum generez o fotografie culinară?",
+          "answer": "Deschideți orice element din meniu în panoul de control, atingeți 'Generează Imagine', iar IA creează o fotografie culinară profesională bazată pe numele și descrierea preparatului. Alegeți-o pe cea care vă place."
+        },
+        {
+          "question": "Pot folosi propriile mele fotografii?",
+          "answer": "Absolut. Încărcați propriile fotografii de pe telefon sau computer. Generarea cu IA este opțională — folosiți-o când nu aveți o fotografie pregătită."
+        },
+        {
+          "question": "Câte imagini pot genera?",
+          "answer": "Limitele de generare a imaginilor depind de planul dumneavoastră. Growth include o cotă lunară, iar Pro oferă o limită mai mare. Puteți încărca oricând propriile fotografii fără limite."
+        },
+        {
+          "question": "Imaginile generate sunt unice pentru restaurantul meu?",
+          "answer": "Da. Fiecare imagine este generată în mod unic pentru preparatul dumneavoastră specific. Fără fotografii de stoc — fiecare imagine este creată proaspăt pe baza elementului din meniu."
+        }
+      ]
+    },
+    "howItWorks": {
+      "title": "Cum Funcționează",
+      "subtitle": "Obțineți fotografii profesionale cu mâncare pentru meniul dumneavoastră în patru pași simpli.",
+      "steps": [
+        {
+          "title": "Deschideți Orice Element de Meniu",
+          "description": "Navigați la elementul pentru care doriți o fotografie în tabloul de bord. Puteți genera imagini pentru preparate noi sau înlocui fotografiile existente pentru orice element de meniu."
+        },
+        {
+          "title": "Faceți Clic pe Generați Imagine",
+          "description": "AI creează o fotografie profesională cu mâncare pe baza numelui și descrierii preparatului. Cu cât oferiți mai multe detalii în descriere, cu atât rezultatul va fi mai precis."
+        },
+        {
+          "title": "Revizuiți Rezultatul",
+          "description": "Previzualizați imaginea generată înainte de a o aplica. Dacă doriți un aspect diferit, regenerați pentru a obține o nouă variație. Fiecare generație produce o imagine unică."
+        },
+        {
+          "title": "Utilizați în Meniul Dumneavoastră",
+          "description": "Imaginea este optimizată automat, comprimată în format WebP și apare imediat pe meniul dumneavoastră activ. Oaspeții văd fotografii profesionale cu mâncare pentru fiecare preparat."
+        }
+      ]
+    }
+  },
+  "personalSupportPage": {
+    "seo": {
+      "title": "Suport Personal pentru Site-ul Restaurantului Tău — Ajutor Real de la Oameni Reali | IQ Rest",
+      "description": "Primește ajutor personal de la oameni reali, nu de la chatbot-uri. Asistență la configurare, sfaturi de optimizare a meniului și răspunsuri rapide — disponibile pe fiecare plan, inclusiv cel gratuit."
+    },
+    "hero": {
+      "badge": "Suport Personal",
+      "title": "Oameni reali, ajutor real — Nu chatbot-uri",
+      "subtitle": "Ai o întrebare? Ai nevoie de ajutor cu configurarea meniului? Vrei să sugerezi o funcție? Scrie-ne direct și primește un răspuns personal de la cineva care înțelege restaurantele.",
+      "cta": "Creează-ți meniul",
+      "ctaDemo": "Vezi demo",
+      "noCreditCard": "Nu este necesar card de credit. Plan gratuit disponibil."
+    },
+    "features": {
+      "title": "Cum funcționează suportul",
+      "subtitle": "Ajutor când ai nevoie, de la oameni cărora le pasă.",
+      "items": [
+        {
+          "title": "Scrie-ne direct din panoul tău de control",
+          "description": "Deschide chat-ul de suport din panoul tău de control și descrie întrebarea ta. O persoană reală îți citește mesajul și răspunde — de obicei în câteva ore în zilele lucrătoare."
+        },
+        {
+          "title": "Ajutor cu configurarea, optimizarea și nu numai",
+          "description": "Fie că ai nevoie de ajutor cu adăugarea primului fel de mâncare, sfaturi despre organizarea meniului, sau vrei să sugerezi o funcție nouă — suntem aici. Fiecare întrebare contează, oricât de mică."
+        }
+      ]
+    },
+    "faq": {
+      "title": "Întrebări Frecvente",
+      "subtitle": "Tot ce trebuie să știi despre suportul nostru.",
+      "items": [
+        {
+          "question": "Suportul este disponibil pe planul gratuit?",
+          "answer": "Da. Suportul personal este disponibil pentru fiecare plan, inclusiv cel gratuit. Credem că fiecare restaurant merită ajutor real, indiferent de abonament."
+        },
+        {
+          "question": "Cât de repede răspundeți?",
+          "answer": "De obicei în câteva ore în zilele lucrătoare. Citim fiecare mesaj personal și ne propunem să rezolvăm întrebarea ta dintr-un singur răspuns."
+        },
+        {
+          "question": "Mă puteți ajuta să îmi configurez meniul?",
+          "answer": "Absolut. Dacă ai nevoie de ajutor cu adăugarea felurilor de mâncare, organizarea categoriilor, configurarea traducerilor sau setarea rezervărilor — doar întreabă. Suntem bucuroși să te ghidăm pas cu pas."
+        },
+        {
+          "question": "Pot sugera funcții noi?",
+          "answer": "Da, și ne place asta! Multe dintre funcțiile noastre au început ca sugestii ale utilizatorilor. Trimite-ne ideea ta și o vom lua în considerare pentru actualizările viitoare."
+        }
+      ]
+    },
+    "howItWorks": {
+      "title": "Cum Funcționează",
+      "subtitle": "Obține ajutor de la o persoană reală în patru pași simpli.",
+      "steps": [
+        {
+          "title": "Deschide Chat-ul de Suport",
+          "description": "Accesează pagina de Suport din tabloul de bord. Vei vedea o interfață simplă de chat unde poți scrie mesajul tău direct — fără formulare de ticket sau categorii de ales."
+        },
+        {
+          "title": "Descrie Întrebarea Ta",
+          "description": "Scrie mesajul tău. Întreabă despre configurare, funcționalități, optimizarea meniului, facturare sau orice altceva. Nu există întrebări stupide — suntem bucuroși să te ajutăm cu tot ce ai nevoie."
+        },
+        {
+          "title": "Primește un Răspuns Personalizat",
+          "description": "O persoană reală (nu un chatbot) citește mesajul tău și răspunde în câteva ore. Înțelegem fluxurile de lucru din restaurante și oferim răspunsuri practice și aplicabile."
+        },
+        {
+          "title": "Ajutor Continu",
+          "description": "Solicită sugestii de funcționalități, obține sfaturi pentru optimizarea meniului sau cere asistență pentru configurare oricând. Istoricul conversației tale este salvat, așa că avem întotdeauna context din întrebările anterioare."
+        }
+      ]
+    }
   }
 }

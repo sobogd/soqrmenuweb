@@ -432,12 +432,18 @@ export async function fetchSubscriptionStatus(): Promise<{
 }
 
 export async function createCheckoutSession(plan: "BASIC" | "PRO", cycle: "MONTHLY" | "YEARLY"): Promise<string | null> {
+ const priceLookupKey = cycle === "YEARLY" ? "basic_yearly" : "basic_monthly";
+ const locale = typeof window !== "undefined" ? (window.location.pathname.match(/^\/([a-z]{2})\b/)?.[1] || "en") : "en";
  const res = await fetch("/api/stripe/checkout", {
  method: "POST",
  headers: { "Content-Type": "application/json" },
- body: JSON.stringify({ plan, billingCycle: cycle }),
+ body: JSON.stringify({ priceLookupKey, locale }),
  });
- if (!res.ok) return null;
+ if (!res.ok) {
+ const text = await res.text().catch(() => "");
+ console.error("Checkout error:", res.status, text);
+ return null;
+ }
  const data = await res.json();
  return data.url || null;
 }

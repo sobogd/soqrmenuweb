@@ -2515,5 +2515,911 @@
     },
     "back": "Back",
     "continue": "Weiter"
+  },
+  "onlineOrders": {
+    "seo": {
+      "title": "Online-Bestellungen für Restaurants — QR-Menü | IQ Rest",
+      "description": "Lassen Sie Kunden direkt über Ihr QR-Menü bestellen. Keine Provisionen, Echtzeit-Preise und sofortige Bestellverwaltung in Ihrem Dashboard."
+    },
+    "hero": {
+      "badge": "Online-Bestellungen",
+      "title": "Verwandeln Sie Ihr QR-Menü in ein Online-Bestellsystem",
+      "subtitle": "Gäste scannen, durchstöbern Ihr Menü und bestellen in Sekunden. Kein App-Download, keine Provisionen, kein Aufwand.",
+      "cta": "Menü erstellen",
+      "ctaDemo": "Demo ansehen",
+      "noCreditCard": "Keine Kreditkarte erforderlich. Kostenloser Plan verfügbar."
+    },
+    "benefits": {
+      "title": "Warum Restaurants QR-Menü-Bestellungen wählen",
+      "subtitle": "Ein direkter Bestellkanal, der es für Sie und Ihre Gäste einfach macht.",
+      "items": [
+        {
+          "title": "Keine App erforderlich",
+          "description": "Gäste scannen einfach einen QR-Code — kein Download, keine Registrierung. Funktioniert sofort in jedem Handy-Browser."
+        },
+        {
+          "title": "Echtzeit-Preise",
+          "description": "Aktualisieren Sie Preise und Verfügbarkeit sofort. Änderungen werden umgehend in Ihrem QR-Menü angezeigt."
+        },
+        {
+          "title": "Bestellung am Tisch",
+          "description": "Jeder Tisch bekommt seinen eigenen QR-Code. Gäste scannen, bestellen und Sie sehen die Tischnummer in Ihrem Dashboard."
+        },
+        {
+          "title": "Individuelles Design",
+          "description": "Passen Sie Ihr Menü mit Ihren Markenfarben, Hintergründen und Logo an."
+        }
+      ]
+    },
+    "features": {
+      "title": "So funktionieren Online-Bestellungen",
+      "subtitle": "Zwei einfache Schritte verbinden Ihr Menü mit Ihrer Küche.",
+      "items": [
+        {
+          "title": "Gäste durchstöbern und wählen Gerichte",
+          "description": "Kunden scannen Ihren QR-Code und sehen das vollständige Menü mit Fotos, Beschreibungen und Preisen. Gerichte werden mit einem einzigen Tippen zur Bestellung hinzugefügt — keine Registrierung nötig."
+        },
+        {
+          "title": "Bestellungen erscheinen in Ihrem Dashboard",
+          "description": "Wenn die Gäste bereit sind, tippen sie auf die Bestell-Taste. Die Bestellung erscheint sofort in Ihrem Dashboard mit Gerichtdetails, Tischnummer und Anmerkungen. Annehmen, zubereiten und als erledigt markieren."
+        }
+      ]
+    },
+    "faq": {
+      "title": "Häufig gestellte Fragen",
+      "subtitle": "Alles, was Sie über Online-Bestellungen wissen müssen.",
+      "items": [
+        {
+          "question": "Brauche ich zusätzliche Hardware oder Apps?",
+          "answer": "Nein. Alles funktioniert über den Webbrowser. Gäste scannen den QR-Code mit ihrer Handykamera, und Sie verwalten Bestellungen über das IQ Rest Dashboard auf jedem Gerät."
+        },
+        {
+          "question": "Gibt es Provisionen oder Gebühren pro Bestellung?",
+          "answer": "Nein. IQ Rest erhebt niemals Provisionen auf Ihre Bestellungen. Sie zahlen nur Ihr Abo, und alle Einnahmen aus Bestellungen gehören Ihnen."
+        },
+        {
+          "question": "Können Kunden ihre Bestellung anpassen oder Anmerkungen hinzufügen?",
+          "answer": "Ja. Gäste können Gerichte auswählen, Mengen angeben und besondere Wünsche hinzufügen. Sie können auch Name, Telefon oder Lieferadresse als Pflichtfeld festlegen."
+        },
+        {
+          "question": "Funktioniert es für Vor-Ort-Essen, Abholung und Lieferung?",
+          "answer": "Ja. Für den Verzehr vor Ort scannen Gäste den QR-Code an ihrem Tisch. Für Abholung oder Lieferung teilen Sie einen direkten Link zu Ihrem Menü. Name-, Telefon- und Adressfelder können nach Bedarf aktiviert werden."
+        }
+      ]
+    },
+    "howItWorks": {
+      "title": "So funktioniert es",
+      "subtitle": "Von der Einrichtung bis zum Erhalt Ihrer ersten Bestellung in fünf einfachen Schritten.",
+      "steps": [
+        {
+          "title": "Online-Bestellungen aktivieren",
+          "description": "Aktivieren Sie Bestellungen in Ihren Designeinstellungen. Wählen Sie Ihren bevorzugten Modus: Bestellungen erscheinen in Ihrem Dashboard, werden an WhatsApp weitergeleitet oder beides gleichzeitig."
+        },
+        {
+          "title": "Das Bestellformular konfigurieren",
+          "description": "Wählen Sie aus, welche Felder Kunden beim Aufgeben einer Bestellung ausfüllen müssen. Der Name ist immer erforderlich, und Sie können optional nach der Telefonnummer und der Lieferadresse fragen."
+        },
+        {
+          "title": "QR-Codes für Tische drucken",
+          "description": "Jeder Tisch in Ihrem Restaurant erhält seinen eigenen einzigartigen QR-Code. Wenn Gäste ihn scannen, wird ihre Bestellung automatisch mit der richtigen Tischnummer übermittelt."
+        },
+        {
+          "title": "Kunden geben Bestellungen auf",
+          "description": "Gäste scannen den QR-Code, durchstöbern Ihr Menü mit Fotos und Preisen, wählen Artikel aus, fügen Notizen hinzu und reichen ihre Bestellung ein. Kein Herunterladen einer App oder Erstellen eines Kontos erforderlich."
+        },
+        {
+          "title": "Bestellungen in Ihrem Dashboard verwalten",
+          "description": "Bestellungen erscheinen sofort in Ihrem Dashboard. Aktualisieren Sie den Status jeder Bestellung von neu über in Bearbeitung bis abgeschlossen. Sie behalten 100 % des Umsatzes — null Provisionen."
+        }
+      ]
+    }
+  },
+  "reservationsPage": {
+    "seo": {
+      "title": "Tischreservierungssystem für Restaurants — Reservierung Software & Online-Buchung | IQ Rest",
+      "description": "Digitales Reservierungsbuch mit Tischmanagement Software, automatischer oder manueller Bestätigung und E-Mail-Benachrichtigungen. Online Reservierungssystem Gastronomie von IQ Rest."
+    },
+    "hero": {
+      "badge": "Tischreservierungen",
+      "title": "Restaurant Reservierung Software — Tischbuchungen Online Akzeptieren 24/7",
+      "subtitle": "Ein Tischreservierungssystem, das Gästen ermöglicht, Tische direkt über Ihre Website zu buchen. Keine Telefonanrufe, keine Drittanbieter-Apps — ein digitales Reservierungsbuch, integriert in Ihr QR-Menü.",
+      "cta": "Menü erstellen",
+      "ctaDemo": "Demo ansehen",
+      "noCreditCard": "Keine Kreditkarte erforderlich. Kostenloser Plan verfügbar."
+    },
+    "features": {
+      "title": "So Funktioniert die Tischmanagement Software",
+      "subtitle": "Zwei Schritte von der Gästeanfrage zur bestätigten Buchung — mit dem Online Reservierungssystem Gastronomie.",
+      "items": [
+        {
+          "title": "Gäste Buchen über Ihre Website",
+          "description": "Kunden besuchen Ihre Restaurantseite, tippen auf «Tisch reservieren», wählen Datum und Uhrzeit, geben ihre Daten ein und senden die Anfrage. Keine App nötig — die Software für Gastronomie funktioniert in jedem Browser auf jedem Gerät."
+        },
+        {
+          "title": "Sie Verwalten Buchungen in Ihrem Dashboard",
+          "description": "Jede Reservierung erscheint in Ihrem digitalen Reservierungsbuch mit Gastname, Telefon, Personenanzahl, Datum und Notizen. Bestätigen oder ablehnen mit einem Tippen. Richten Sie automatische Bestätigung ein oder prüfen Sie jede Buchung manuell — vollständige Tischmanagement Software."
+        }
+      ]
+    },
+    "howItWorks": {
+      "title": "So Funktioniert Es",
+      "subtitle": "Richten Sie Ihr Tischreservierungssystem ein und beginnen Sie, Online-Buchungen in fünf Schritten zu akzeptieren.",
+      "steps": [
+        {
+          "title": "Reservierungen Aktivieren",
+          "description": "Aktivieren Sie Reservierungen in Ihren Restaurant-Einstellungen. Wählen Sie zwischen automatischer Bestätigung, bei der Buchungen sofort basierend auf der Verfügbarkeit genehmigt werden, oder dem manuellen Modus, in dem Sie jede Anfrage im Belegungsplan überprüfen."
+        },
+        {
+          "title": "Fügen Sie Ihre Tische Hinzu",
+          "description": "Erstellen Sie Tische mit Kapazitäts- und Zoneninformationen — zum Beispiel 'Tisch 5, 4 Gäste, Terrasse'. Jeder Tisch wird im Reservierungssystem buchbar, und die Software verhindert automatisch Doppelbuchungen."
+        },
+        {
+          "title": "Arbeitszeiten Festlegen",
+          "description": "Definieren Sie Ihre verfügbaren Stunden für Reservierungen und wählen Sie die Dauer der Zeitfenster — von 15 Minuten bis 8 Stunden. Nur Zeitfenster innerhalb Ihrer Arbeitszeiten werden den Gästen im Online Reservierungssystem angezeigt."
+        },
+        {
+          "title": "Gäste Buchen Online",
+          "description": "Kunden besuchen Ihre Restaurantseite, wählen Datum, Uhrzeit und Gruppengröße, geben ihren Namen und ihre Telefonnummer ein und senden ab. Kein Konto oder App-Download erforderlich — die Restaurant Reservierung Software funktioniert in jedem Browser."
+        },
+        {
+          "title": "Buchungen in Ihrem Dashboard Verwalten",
+          "description": "Sehen Sie alle Reservierungen in Ihrem Belegungsplan. Bestätigen, stornieren oder markieren Sie Buchungen als abgeschlossen. Sowohl Sie als auch der Gast erhalten E-Mail-Benachrichtigungen für jedes Update."
+        }
+      ]
+    },
+    "faq": {
+      "title": "Häufig Gestellte Fragen",
+      "subtitle": "Alles, was Sie über das Tischreservierungssystem für Restaurants wissen müssen.",
+      "items": [
+        {
+          "question": "Müssen Kunden ein Konto erstellen, um zu buchen?",
+          "answer": "Nein. Gäste geben einfach ihren Namen, ihre Telefonnummer, die Personenanzahl und die gewünschte Uhrzeit ein. Kein Konto oder App-Download erforderlich."
+        },
+        {
+          "question": "Kann ich verfügbare Zeitfenster und Tischkapazitäten festlegen?",
+          "answer": "Ja. Definieren Sie Ihre Öffnungszeiten, die Dauer der Reservierungszeitfenster und die Tischkapazität. Die Tischmanagement Software zeigt Gästen nur verfügbare Zeitfenster an."
+        },
+        {
+          "question": "Werde ich benachrichtigt, wenn jemand bucht?",
+          "answer": "Ja. Sie erhalten eine E-Mail für jede neue Reservierung. Gäste erhalten ebenfalls eine Bestätigungs-E-Mail, sobald Sie die Buchung im digitalen Reservierungsbuch genehmigen."
+        },
+        {
+          "question": "Kann ich sowohl automatische als auch manuelle Bestätigung nutzen?",
+          "answer": "Ja. Wählen Sie den automatischen Modus, um Buchungen sofort basierend auf Verfügbarkeit zu bestätigen, oder den manuellen Modus, um jede Anfrage selbst zu prüfen und zu genehmigen."
+        },
+        {
+          "question": "Wie verhindert das System Doppelbuchungen?",
+          "answer": "Jeder Tisch hat eine definierte Kapazität und Zeitfenster. Sobald ein Tisch für eine bestimmte Zeit gebucht ist, wird er nicht mehr als verfügbar angezeigt. Das Online Reservierungssystem Gastronomie erkennt Konflikte automatisch."
+        },
+        {
+          "question": "Können Gäste besondere Wünsche oder Notizen hinzufügen?",
+          "answer": "Ja. Das Reservierungsformular enthält ein Notizfeld, in dem Gäste Ernährungsbedürfnisse, Feierlichkeiten, Sitzplatzpräferenzen oder andere Wünsche angeben können."
+        },
+        {
+          "question": "Ist die Restaurant Reservierung Software im kostenlosen Plan verfügbar?",
+          "answer": "Tischreservierungen sind in den Growth- und Pro-Plänen verfügbar. Der kostenlose Plan umfasst Ihr vollständiges QR-Menü, die Kontaktseite und Analysen — führen Sie jederzeit ein Upgrade durch, um die Software für Gastronomie zu nutzen."
+        },
+        {
+          "question": "Kann ich die Reservierungshistorie einsehen?",
+          "answer": "Ja. Alle Reservierungen — vergangene und kommende — sind im Belegungsplan Restaurant Software gespeichert. Sie können nach Datum, Status und Tisch filtern, um Ihre Buchungshistorie jederzeit einzusehen."
+        }
+      ]
+    }
+  },
+  "colorSchemePage": {
+    "seo": {
+      "title": "Individuelles QR-Menü-Design & Markenfarben — Restaurant-Branding | IQ Rest",
+      "description": "Passen Sie Ihr QR-Menü an Ihre Restaurantmarke an. Wählen Sie Akzentfarben und schaffen Sie ein einheitliches Erscheinungsbild für Ihr gesamtes digitales Menü."
+    },
+    "hero": {
+      "badge": "Individuelles Design",
+      "title": "Gestalten Sie Ihr QR-Menü passend zu Ihrer Restaurantmarke",
+      "subtitle": "Wählen Sie Ihre Markenfarbe — und Ihr gesamtes Menü — Buttons, Hervorhebungen, Links — aktualisiert sich sofort.",
+      "cta": "Menü erstellen",
+      "ctaDemo": "Demo ansehen",
+      "noCreditCard": "Keine Kreditkarte erforderlich. Kostenloser Plan verfügbar."
+    },
+    "features": {
+      "title": "So funktioniert individuelles Branding",
+      "subtitle": "Ihr Menü, Ihre Farben — einheitlich auf jeder Seite.",
+      "items": [
+        {
+          "title": "Wählen Sie Ihre Akzentfarbe",
+          "description": "Wählen Sie aus 12 kuratierten Voreinstellungen oder geben Sie Ihre exakte Markenfarbe als Hex-Code ein. Jeder Button, Link und jede Hervorhebung in Ihrem Menü passt sich sofort an — keine Designkenntnisse erforderlich."
+        }
+      ]
+    },
+    "faq": {
+      "title": "Häufig gestellte Fragen",
+      "subtitle": "Alles, was Sie über die Menü-Anpassung wissen müssen.",
+      "items": [
+        {
+          "question": "Kann ich meine exakte Markenfarbe verwenden?",
+          "answer": "Ja. Geben Sie einen beliebigen Hex-Farbcode ein oder wählen Sie aus 12 sorgfältig ausgewählten Voreinstellungen. Ihre Akzentfarbe wird auf alle Seiten Ihres Menüs angewendet."
+        },
+        {
+          "question": "Kann ich die Farben nach der Veröffentlichung ändern?",
+          "answer": "Selbstverständlich. Ändern Sie Ihre Akzentfarbe jederzeit über das Dashboard. Änderungen erscheinen sofort in Ihrem veröffentlichten Menü — keine erneute Veröffentlichung nötig."
+        },
+        {
+          "question": "Wird mein QR-Code auch die Markenfarben haben?",
+          "answer": "Ihr QR-Code wird separat generiert und kann unabhängig angepasst werden. Die Akzentfarbe gilt für Ihre digitalen Menüseiten, Navigation und interaktive Elemente."
+        }
+      ]
+    },
+    "howItWorks": {
+      "title": "So funktioniert es",
+      "subtitle": "Passen Sie Ihr Menü in drei einfachen Schritten an Ihre Marke an.",
+      "steps": [
+        {
+          "title": "Design-Einstellungen öffnen",
+          "description": "Navigieren Sie zur Design-Seite in Ihrem Dashboard. Der Farbwähler für die Akzentfarbe steht im Vordergrund – Sie sehen sofort alle verfügbaren Optionen."
+        },
+        {
+          "title": "Wählen Sie Ihre Markenfarbe",
+          "description": "Wählen Sie aus 12 kuratierten Farb-Presets, die für Lesbarkeit und Zugänglichkeit entworfen wurden, oder geben Sie Ihren genauen Hex-Code ein, um eine perfekte Übereinstimmung mit Ihrer Marke zu erzielen."
+        },
+        {
+          "title": "Sofortige Vorschau",
+          "description": "Ihre Akzentfarbe wird auf Schaltflächen, Links und Hervorhebungen im gesamten Menü angewendet. Sie funktioniert sowohl in hellen als auch in dunklen Themen, und Änderungen erscheinen sofort in Ihrem Live-Menü."
+        }
+      ]
+    }
+  },
+  "easyMenuPage": {
+    "seo": {
+      "title": "QR-Menü für Ihr Restaurant erstellen — Kostenloser Menü-Editor | IQ Rest",
+      "description": "Erstellen Sie das digitale QR-Menü Ihres Restaurants in Minuten. Fügen Sie Kategorien, Gerichte, Fotos und Preise hinzu — und teilen Sie einen scanbaren QR-Code. Kostenlos starten."
+    },
+    "hero": {
+      "badge": "Menü-Editor",
+      "title": "Erstellen Sie ein digitales QR-Menü für Ihr Restaurant in Minuten",
+      "subtitle": "Fügen Sie Kategorien und Gerichte hinzu, legen Sie Preise fest, laden Sie Fotos hoch — Ihr QR-Menü ist bereit zum Teilen. Bearbeiten Sie jederzeit, Änderungen erscheinen sofort.",
+      "cta": "Menü erstellen",
+      "ctaDemo": "Demo ansehen",
+      "noCreditCard": "Keine Kreditkarte erforderlich. Kostenloser Plan verfügbar."
+    },
+    "features": {
+      "title": "So funktioniert der Menü-Editor",
+      "subtitle": "Einfache Werkzeuge, die Ihr Menü schnell online bringen.",
+      "items": [
+        {
+          "title": "Kategorien & Gerichte hinzufügen",
+          "description": "Erstellen Sie Kategorien wie Vorspeisen, Hauptgerichte, Getränke — fügen Sie dann Gerichte mit Namen, Beschreibungen, Preisen und Fotos hinzu. Per Drag & Drop neu anordnen. Gerichte ein- oder ausblenden, ohne sie zu löschen."
+        },
+        {
+          "title": "Änderungen werden sofort veröffentlicht",
+          "description": "Jede Bearbeitung erscheint innerhalb von Sekunden in Ihrem QR-Menü. Aktualisieren Sie einen Preis, fügen Sie ein Tagesgericht hinzu oder blenden Sie ein ausverkauftes Gericht aus — Ihre Kunden sehen immer die neueste Version."
+        }
+      ]
+    },
+    "faq": {
+      "title": "Häufig gestellte Fragen",
+      "subtitle": "Alles, was Sie über die Erstellung Ihres QR-Menüs wissen müssen.",
+      "items": [
+        {
+          "question": "Wie erstelle ich ein QR-Menü für mein Restaurant?",
+          "answer": "Registrieren Sie sich mit Ihrer E-Mail, benennen Sie Ihr Restaurant und beginnen Sie, Kategorien und Gerichte hinzuzufügen. Ihr QR-Menü wird automatisch generiert — drucken Sie den QR-Code aus und platzieren Sie ihn auf Ihren Tischen."
+        },
+        {
+          "question": "Kann ich Fotos zu meinen Gerichten hinzufügen?",
+          "answer": "Ja. Laden Sie Fotos direkt von Ihrem Handy oder Computer hoch. Bilder werden automatisch für schnelles Laden auf jedem Gerät optimiert."
+        },
+        {
+          "question": "Wie viele Gerichte kann ich hinzufügen?",
+          "answer": "Es gibt keine Begrenzung für Kategorien oder Menüpositionen. Fügen Sie so viele Gerichte hinzu, wie Sie benötigen — Ihr Menü bleibt schnell und übersichtlich."
+        },
+        {
+          "question": "Kann ich ein ausverkauftes Gericht vorübergehend ausblenden?",
+          "answer": "Ja. Deaktivieren Sie jedes Gericht mit einem Tippen. Es verschwindet aus dem öffentlichen Menü, bleibt aber in Ihrem Dashboard — aktivieren Sie es wieder, wann immer Sie bereit sind."
+        }
+      ]
+    },
+    "howItWorks": {
+      "title": "So funktioniert es",
+      "subtitle": "Erstellen und veröffentlichen Sie Ihr Restaurantmenü in fünf einfachen Schritten.",
+      "steps": [
+        {
+          "title": "Kategorien erstellen",
+          "description": "Fügen Sie Kategorien wie Vorspeisen, Hauptgerichte, Desserts und Getränke hinzu, um Ihr Menü zu organisieren. Sie können so viele Kategorien erstellen, wie Sie benötigen, und diese per Drag-and-Drop neu anordnen."
+        },
+        {
+          "title": "Menüelemente hinzufügen",
+          "description": "Geben Sie den Namen des Gerichts, die Beschreibung und den Preis für jedes Element ein. Kennzeichnen Sie Allergene, falls zutreffend — die Gäste sehen automatisch Allergensymbole im Menü."
+        },
+        {
+          "title": "Fotos hochladen oder generieren",
+          "description": "Laden Sie Ihre eigenen Lebensmittelbilder von Ihrem Telefon oder Computer hoch oder verwenden Sie KI, um ein professionelles Lebensmittelbild aus dem Gerichtsnamen zu generieren. Bilder werden automatisch optimiert."
+        },
+        {
+          "title": "Organisieren mit Drag-and-Drop",
+          "description": "Ordnen Sie Kategorien und Elemente neu an, indem Sie sie an die gewünschte Stelle ziehen. Schalten Sie jedes Element ein oder aus, ohne es zu löschen — perfekt für Tagesgerichte oder ausverkaufte Gerichte."
+        },
+        {
+          "title": "Veröffentlichen Sie Ihr Menü",
+          "description": "Änderungen erscheinen sofort auf Ihrem aktiven QR-Menü. Es gibt keinen 'Veröffentlichen'-Button — jede Bearbeitung wird in Echtzeit live geschaltet. Drucken Sie Ihren QR-Code aus und platzieren Sie ihn auf Ihren Tischen."
+        }
+      ]
+    }
+  },
+  "aiTranslationPage": {
+    "seo": {
+      "title": "KI-Menüübersetzung für Restaurants — QR-Menü übersetzen | IQ Rest",
+      "description": "Übersetzen Sie Ihr Restaurantmenü in über 25 Sprachen mit einem Klick. Die KI versteht den kulinarischen Kontext — Gerichtnamen, Beschreibungen und Kategorien werden präzise übersetzt."
+    },
+    "hero": {
+      "badge": "KI-Übersetzung",
+      "title": "Übersetzen Sie Ihr Menü in 25+ Sprachen mit einem Klick",
+      "subtitle": "Unsere KI versteht den kulinarischen Kontext — sie übersetzt Gerichtnamen, Beschreibungen und Kategorien natürlich, nicht wörtlich. Erreichen Sie jeden Touristen und internationalen Gast.",
+      "cta": "Menü erstellen",
+      "ctaDemo": "Demo ansehen",
+      "noCreditCard": "Keine Kreditkarte erforderlich. Kostenloser Plan verfügbar."
+    },
+    "features": {
+      "title": "So funktioniert die KI-Übersetzung",
+      "subtitle": "Von Ihrer Sprache in die Welt — in Sekunden.",
+      "items": [
+        {
+          "title": "Übersetzung Ihres gesamten Menüs mit einem Klick",
+          "description": "Wählen Sie eine Zielsprache, tippen Sie auf Übersetzen — und Ihr gesamtes Menü — Kategorien, Gerichtnamen, Beschreibungen — wird sofort übersetzt. Die KI bewahrt kulinarische Begriffe und passt den Text für jede Sprache natürlich an."
+        },
+        {
+          "title": "Jede Übersetzung bearbeiten und anpassen",
+          "description": "Jede KI-Übersetzung ist vollständig bearbeitbar. Überprüfen Sie das Ergebnis, passen Sie Formulierungen an und speichern Sie. Ihre Änderungen bleiben erhalten, auch wenn Sie später andere Teile des Menüs neu übersetzen."
+        }
+      ]
+    },
+    "faq": {
+      "title": "Häufig gestellte Fragen",
+      "subtitle": "Alles, was Sie über die Menüübersetzung wissen müssen.",
+      "items": [
+        {
+          "question": "Wie genau ist die KI-Übersetzung für Speisekarten?",
+          "answer": "Unsere KI ist für Restaurantinhalte optimiert. Sie versteht, dass «Beef Wellington» oder «Tiramisu» nicht wörtlich übersetzt werden sollten, und passt Beschreibungen an, damit sie in jeder Sprache natürlich klingen."
+        },
+        {
+          "question": "Welche Sprachen werden unterstützt?",
+          "answer": "Über 25 Sprachen, darunter Englisch, Spanisch, Französisch, Deutsch, Italienisch, Portugiesisch, Chinesisch, Japanisch, Koreanisch, Arabisch, Russisch und viele weitere europäische und asiatische Sprachen."
+        },
+        {
+          "question": "Kann ich nur einzelne Gerichte übersetzen, nicht das ganze Menü?",
+          "answer": "Ja. Sie können einzelne Gerichte, ganze Kategorien oder das gesamte Menü auf einmal übersetzen. Sie haben die volle Kontrolle darüber, was übersetzt wird."
+        },
+        {
+          "question": "Kostet die Übersetzung extra?",
+          "answer": "Die KI-Übersetzung ist in den Plänen Growth und Pro mit großzügigen monatlichen Kontingenten enthalten. Keine Kosten pro Wort oder pro Gericht — übersetzen Sie so viel Sie möchten."
+        }
+      ]
+    },
+    "howItWorks": {
+      "title": "So funktioniert es",
+      "subtitle": "Übersetzen Sie Ihr gesamtes Menü in Minuten, nicht in Stunden.",
+      "steps": [
+        {
+          "title": "Fügen Sie Sprachen zu Ihrem Menü hinzu",
+          "description": "Gehen Sie zur Seite Sprachen in Ihrem Dashboard und wählen Sie aus, welche Sprachen Ihr Menü unterstützen soll. Wählen Sie aus 35 verfügbaren Sprachen, einschließlich aller wichtigen europäischen, asiatischen und nahöstlichen Sprachen."
+        },
+        {
+          "title": "Klicken Sie auf Übersetzen",
+          "description": "Ein Knopfdruck übersetzt alle Ihre Kategorien, Artikelnamen und Beschreibungen auf einmal. Das gesamte Menü wird in Sekunden verarbeitet, unabhängig davon, wie viele Artikel Sie haben."
+        },
+        {
+          "title": "KI versteht den kulinarischen Kontext",
+          "description": "Die KI kennt die kulinarische Terminologie über Kulturen hinweg. Sie bewahrt Gerichtsnamen wie 'Tiramisu' oder 'Pad Thai', während sie Beschreibungen, Zutatenlisten und Kategorienamen natürlich anpasst."
+        },
+        {
+          "title": "Überprüfen und Bearbeiten",
+          "description": "Jede Übersetzung ist vollständig bearbeitbar. Passen Sie die Formulierungen an Ihren Stil an. Ihre manuellen Änderungen werden auch dann beibehalten, wenn Sie später andere Teile des Menüs erneut übersetzen."
+        },
+        {
+          "title": "Veröffentlichen Sie Ihr mehrsprachiges Menü",
+          "description": "Gäste sehen einen Sprachumschalter in Ihrem Menü und können in ihrer bevorzugten Sprache stöbern. Jede Sprache kann unabhängig von Ihrem Dashboard ein- oder ausgeschaltet werden."
+        }
+      ]
+    }
+  },
+  "mobileManagementPage": {
+    "seo": {
+      "title": "Restaurantmenü vom Handy verwalten — Mobiles Dashboard | IQ Rest",
+      "description": "Verwalten Sie das QR-Menü Ihres Restaurants komplett vom Handy aus. Gerichte hinzufügen, Preise aktualisieren, Fotos hochladen, Analysen prüfen — kein Computer nötig."
+    },
+    "hero": {
+      "badge": "Mobiles Dashboard",
+      "title": "Verwalten Sie Ihr gesamtes Restaurantmenü vom Handy aus",
+      "subtitle": "Gerichte hinzufügen, Preise ändern, Fotos hochladen, Bestellungen prüfen — alles von Ihrem Smartphone. Das Dashboard ist Mobile-First entwickelt, ein Computer ist nie nötig.",
+      "cta": "Menü erstellen",
+      "ctaDemo": "Demo ansehen",
+      "noCreditCard": "Keine Kreditkarte erforderlich. Kostenloser Plan verfügbar."
+    },
+    "features": {
+      "title": "So funktioniert die mobile Verwaltung",
+      "subtitle": "Ihr Restaurant-Dashboard, immer in der Tasche.",
+      "items": [
+        {
+          "title": "Vollständiges Dashboard auf dem Smartphone",
+          "description": "Alle Funktionen funktionieren perfekt auf dem Handybildschirm — Gerichte hinzufügen, Kategorien bearbeiten, Bestellungen verwalten, Analysen prüfen. Die Oberfläche ist für Touch-Bedienung konzipiert, nicht einfach vom Desktop verkleinert."
+        },
+        {
+          "title": "Fotos direkt von der Kamera hochladen",
+          "description": "Fotografieren Sie ein neues Gericht und laden Sie es in Sekunden in Ihr Menü hoch. Bilder werden automatisch optimiert. Aktualisieren Sie Ihr Tagesgericht direkt aus der Küche."
+        }
+      ]
+    },
+    "faq": {
+      "title": "Häufig gestellte Fragen",
+      "subtitle": "Alles, was Sie über die mobile Menüverwaltung wissen müssen.",
+      "items": [
+        {
+          "question": "Muss ich eine App installieren?",
+          "answer": "Nein. Das Dashboard funktioniert im Webbrowser Ihres Handys — Safari, Chrome oder einem anderen. Melden Sie sich einfach an und verwalten Sie Ihr Menü."
+        },
+        {
+          "question": "Kann ich vom Handy aus alles machen, was am Computer geht?",
+          "answer": "Ja. Alle Funktionen sind auf dem Handy verfügbar — Gerichte hinzufügen, Fotos hochladen, Kategorien verwalten, Analysen prüfen, Bestellungen und Reservierungen bearbeiten."
+        },
+        {
+          "question": "Funktioniert es auch auf Tablets?",
+          "answer": "Ja. Das Dashboard passt sich an jede Bildschirmgröße an — Handys, Tablets und Desktop-Computer. Nutzen Sie das Gerät, das am bequemsten ist."
+        },
+        {
+          "question": "Können mehrere Personen das Menü verwalten?",
+          "answer": "Derzeit verwaltet ein Konto das Restaurant. Sie können sich von mehreren Geräten gleichzeitig anmelden — Handy, Tablet oder Computer."
+        }
+      ]
+    },
+    "howItWorks": {
+      "title": "So funktioniert es",
+      "subtitle": "Verwalten Sie Ihr Restaurant von jedem Gerät aus in vier Schritten.",
+      "steps": [
+        {
+          "title": "Dashboard auf Ihrem Telefon öffnen",
+          "description": "Gehen Sie zu iq-rest.com und melden Sie sich über den Browser Ihres Telefons an. Das Dashboard passt sich automatisch an Ihre Bildschirmgröße an — keine App zum Herunterladen oder Installieren."
+        },
+        {
+          "title": "Menü überall bearbeiten",
+          "description": "Fügen Sie neue Artikel hinzu, aktualisieren Sie Preise, ändern Sie Beschreibungen und laden Sie Fotos direkt von der Kamera Ihres Telefons hoch. Jede Funktion, die auf dem Desktop verfügbar ist, funktioniert ebenso gut auf dem Mobilgerät."
+        },
+        {
+          "title": "Bestellungen und Reservierungen überprüfen",
+          "description": "Sehen Sie eingehende Bestellungen, verwalten Sie Tischbuchungen und antworten Sie auf Supportnachrichten — alles von Ihrem Telefon aus. Behalten Sie Ihr Restaurant im Blick, auch wenn Sie nicht vor Ort sind."
+        },
+        {
+          "title": "Änderungen werden sofort live",
+          "description": "Jede Bearbeitung, die Sie von Ihrem Telefon aus vornehmen, erscheint in Echtzeit auf Ihrem QR-Menü. Kein Synchronisieren, Veröffentlichen oder Warten erforderlich — Ihre Gäste sehen immer die neueste Version."
+        }
+      ]
+    }
+  },
+  "customDesignPage": {
+    "seo": {
+      "title": "Restaurant-Website mit Video- & Foto-Hintergrund — Website-Builder | IQ Rest",
+      "description": "Erstellen Sie eine beeindruckende Restaurant-Website mit individuellem Video- oder Foto-Hintergrund. Laden Sie Ihr Ambiente-Video oder Food-Fotografie hoch — beeindrucken Sie Gäste ab dem ersten Scan."
+    },
+    "hero": {
+      "badge": "Website-Design",
+      "title": "Erstellen Sie eine beeindruckende Restaurant-Website mit Video-Hintergründen",
+      "subtitle": "Laden Sie ein Ambiente-Video Ihres Restaurants oder ein schönes Food-Foto als Hintergrund hoch. Gäste erleben ein professionelles, gebrandetes Erlebnis beim Scannen Ihres QR-Codes.",
+      "cta": "Menü erstellen",
+      "ctaDemo": "Demo ansehen",
+      "noCreditCard": "Keine Kreditkarte erforderlich. Kostenloser Plan verfügbar."
+    },
+    "features": {
+      "title": "So funktionieren individuelle Hintergründe",
+      "subtitle": "Hinterlassen Sie einen bleibenden ersten Eindruck mit Bildern, die zu Ihrer Marke passen.",
+      "items": [
+        {
+          "title": "Video- oder Foto-Hintergründe hochladen",
+          "description": "Fügen Sie ein Loop-Video Ihres Restaurant-Ambientes, einen Zeitraffer Ihrer Küche oder ein hochwertiges Food-Foto hinzu. Der Hintergrund erscheint auf Ihrer Startseite — für ein immersives Erlebnis für Gäste."
+        },
+        {
+          "title": "Optimiert für Geschwindigkeit auf jedem Gerät",
+          "description": "Videos und Bilder werden automatisch komprimiert und lazy geladen. Ihre Website bleibt schnell, selbst bei langsamen mobilen Verbindungen — kein Puffern, keine Verzögerungen, nur ein reibungsloses Erlebnis."
+        }
+      ]
+    },
+    "faq": {
+      "title": "Häufig gestellte Fragen",
+      "subtitle": "Alles, was Sie über das Design Ihrer Restaurant-Website wissen müssen.",
+      "items": [
+        {
+          "question": "Welche Videoformate werden unterstützt?",
+          "answer": "MP4- und WebM-Formate funktionieren am besten. Videos werden automatisch für schnelles Laden komprimiert. Halten Sie Videos unter 30 Sekunden für das beste mobile Erlebnis."
+        },
+        {
+          "question": "Wird ein Video-Hintergrund meine Website verlangsamen?",
+          "answer": "Nein. Videos werden komprimiert, lazy geladen und automatisch optimiert. Bei langsamen Verbindungen wechselt das System zu einem statischen Bild, um das Erlebnis flüssig zu halten."
+        },
+        {
+          "question": "Kann ich ein Foto statt eines Videos verwenden?",
+          "answer": "Ja. Laden Sie ein beliebiges Foto hoch — es wird optimiert und als Vollbild-Hintergrund angezeigt. Sie können jederzeit zwischen Video und Foto wechseln."
+        },
+        {
+          "question": "Brauche ich einen Designer für die Einrichtung?",
+          "answer": "Nein. Laden Sie einfach Ihr Video oder Foto über das Dashboard hoch. Das System kümmert sich automatisch um Größe, Komprimierung und Layout. Ihre Website sieht professionell aus — ohne Designkenntnisse."
+        }
+      ]
+    },
+    "howItWorks": {
+      "title": "So funktioniert es",
+      "subtitle": "Passen Sie die visuelle Identität Ihres Restaurants in vier Schritten an.",
+      "steps": [
+        {
+          "title": "Design-Einstellungen öffnen",
+          "description": "Navigieren Sie zur Design-Seite in Ihrem Dashboard. Hier können Sie das visuelle Erscheinungsbild Ihres Restaurants steuern – Hintergrund, Akzentfarbe und Layout der Startseite."
+        },
+        {
+          "title": "Hintergrund hochladen",
+          "description": "Wählen Sie ein Video (MP4, WebM) oder ein Foto für den Hintergrund der Startseite Ihres Restaurants aus. Videos werden automatisch in Schleife abgespielt und schaffen einen eindrucksvollen ersten Eindruck für jeden Besucher."
+        },
+        {
+          "title": "AI-Hintergrundgenerierung",
+          "description": "Haben Sie kein Video oder Foto bereit? Lassen Sie die KI automatisch ein Hintergrundbild aus Ihren Menüelementen erstellen. Es generiert ein professionelles Bild, das zum Stil Ihres Restaurants passt."
+        },
+        {
+          "title": "Vorschau und speichern",
+          "description": "Sehen Sie Ihre Änderungen in Echtzeit, bevor Sie speichern. Videos werden automatisch komprimiert und lazy-loaded, um eine schnelle Leistung auf mobilen Geräten zu gewährleisten, ohne die visuelle Qualität zu beeinträchtigen."
+        }
+      ]
+    }
+  },
+  "multilingualPage": {
+    "seo": {
+      "title": "Mehrsprachige Restaurant-Website — Menü in 25+ Sprachen | IQ Rest",
+      "description": "Ihre Restaurant-Website und Ihr QR-Menü in über 25 Sprachen. Gäste wechseln die Sprache mit einem Tippen — Menü, Kontakte und Reservierungen passen sich sofort an."
+    },
+    "hero": {
+      "badge": "Mehrsprachig",
+      "title": "Ihre Restaurant-Website in über 25 Sprachen",
+      "subtitle": "Touristen und internationale Gäste sehen Ihr Menü in ihrer eigenen Sprache. Ein Tippen zum Wechseln — alles passt sich sofort an: Gerichte, Beschreibungen, Kontakte, Navigation.",
+      "cta": "Menü erstellen",
+      "ctaDemo": "Demo ansehen",
+      "noCreditCard": "Keine Kreditkarte erforderlich. Kostenloser Plan verfügbar."
+    },
+    "features": {
+      "title": "So funktioniert die Mehrsprachigkeit",
+      "subtitle": "Sprechen Sie die Sprache Ihrer Kunden — ohne zusätzlichen Aufwand.",
+      "items": [
+        {
+          "title": "Gäste wählen ihre Sprache",
+          "description": "Ein Sprachauswahl erscheint in Ihrem Menü. Gäste tippen auf ihre bevorzugte Sprache, und die gesamte Website — Menü, Beschreibungen, Kontaktinformationen, Navigation — wechselt sofort. Kein Neuladen der Seite nötig."
+        },
+        {
+          "title": "Sprachen über Ihr Dashboard hinzufügen",
+          "description": "Aktivieren Sie neue Sprachen mit einem Klick. Nutzen Sie die KI-Übersetzung, um den Inhalt zu füllen, oder geben Sie Übersetzungen manuell ein. Jede Sprache kann unabhängig ein- oder ausgeschaltet werden."
+        }
+      ]
+    },
+    "faq": {
+      "title": "Häufig gestellte Fragen",
+      "subtitle": "Alles, was Sie über mehrsprachige Menüs wissen müssen.",
+      "items": [
+        {
+          "question": "Wie viele Sprachen kann ich zu meinem Menü hinzufügen?",
+          "answer": "Über 25 Sprachen, darunter alle wichtigen europäischen Sprachen, Chinesisch, Japanisch, Koreanisch, Arabisch, Farsi und mehr. Fügen Sie so viele hinzu, wie Ihre Gäste brauchen."
+        },
+        {
+          "question": "Muss ich alles manuell übersetzen?",
+          "answer": "Nein. Nutzen Sie die integrierte KI-Übersetzung, um Ihr gesamtes Menü mit einem Klick zu übersetzen. Sie können auch jede Übersetzung manuell bearbeiten, um volle Kontrolle zu behalten."
+        },
+        {
+          "question": "Wird die Sprachpräferenz gespeichert?",
+          "answer": "Ja. Wenn ein Gast eine Sprache auswählt, wird diese für den nächsten Besuch gespeichert. Beim nächsten Mal muss nicht erneut gewählt werden."
+        },
+        {
+          "question": "Ist Mehrsprachigkeit im kostenlosen Plan verfügbar?",
+          "answer": "Der kostenlose Plan umfasst bis zu 2 Sprachen. Die Growth- und Pro-Pläne bieten unbegrenzte Sprachen mit integrierter KI-Übersetzung."
+        }
+      ]
+    },
+    "howItWorks": {
+      "title": "So funktioniert es",
+      "subtitle": "Stellen Sie Ihr Menü in vier Schritten in mehreren Sprachen zur Verfügung.",
+      "steps": [
+        {
+          "title": "Gehen Sie zu den Spracheinstellungen",
+          "description": "Öffnen Sie die Sprachseite in Ihrem Dashboard. Sie sehen alle verfügbaren Sprachen und welche derzeit aktiv in Ihrem Menü sind."
+        },
+        {
+          "title": "Sprachen hinzufügen",
+          "description": "Wählen Sie aus 35 verfügbaren Sprachen. Der kostenlose Plan umfasst bis zu 2 Sprachen, während die Growth- und Pro-Pläne unbegrenzte Sprachen für Ihr Menü bieten."
+        },
+        {
+          "title": "Übersetzen Sie Ihren Inhalt",
+          "description": "Verwenden Sie die KI-Übersetzung mit einem Klick, um Ihr gesamtes Menü sofort zu übersetzen, oder geben Sie die Übersetzungen manuell ein, um die volle Kontrolle zu haben. Sie können auch beide Ansätze kombinieren."
+        },
+        {
+          "title": "Gäste wechseln die Sprache",
+          "description": "Ein Sprachwähler erscheint auf Ihrer Menüseite. Wenn Gäste ihre Sprache auswählen, wechselt das gesamte Menü sofort. Ihre Präferenz wird für zukünftige Besuche gespeichert."
+        }
+      ]
+    }
+  },
+  "instantSetupPage": {
+    "seo": {
+      "title": "Kostenloser Restaurant-Website-Generator — In 5 Minuten erstellen | IQ Rest",
+      "description": "Erhalten Sie eine professionelle Restaurant-Website mit QR-Menü, Kontaktseite und Karte — geben Sie einfach Ihre E-Mail ein. In 5 Minuten fertig, keine technischen Kenntnisse nötig."
+    },
+    "hero": {
+      "badge": "Kostenlose Website",
+      "title": "Erhalten Sie eine professionelle Restaurant-Website in 5 Minuten",
+      "subtitle": "Geben Sie Ihre E-Mail ein, benennen Sie Ihr Restaurant — und Sie erhalten sofort eine komplette Website mit QR-Menü, Kontaktseite mit Karte und modernem responsivem Design. Kein Coding, keine Designer.",
+      "cta": "Menü erstellen",
+      "ctaDemo": "Demo ansehen",
+      "noCreditCard": "Keine Kreditkarte erforderlich. Kostenloser Plan verfügbar."
+    },
+    "features": {
+      "title": "So funktioniert es",
+      "subtitle": "Von null zur fertigen Restaurant-Website in drei Schritten.",
+      "items": [
+        {
+          "title": "Registrierung nur mit E-Mail",
+          "description": "Keine komplizierten Registrierungsformulare. Geben Sie Ihre E-Mail ein, bestätigen Sie mit einem Code — und Ihr Restaurant-Dashboard ist bereit. Benennen Sie Ihr Restaurant und Ihre Website geht sofort online."
+        },
+        {
+          "title": "Alles von Anfang an inklusive",
+          "description": "Ihre Website enthält ein QR-Menü, eine Kontaktseite mit Google Maps, Sprachunterstützung, mobiloptimiertes Design und Ihre eigene einzigartige URL. Fügen Sie einfach Ihre Gerichte hinzu und teilen Sie los."
+        }
+      ]
+    },
+    "faq": {
+      "title": "Häufig gestellte Fragen",
+      "subtitle": "Alles, was Sie über die Erstellung Ihrer Restaurant-Website wissen müssen.",
+      "items": [
+        {
+          "question": "Wie erstelle ich eine kostenlose Restaurant-Website?",
+          "answer": "Geben Sie Ihre E-Mail bei IQ Rest ein, bestätigen Sie mit einem Code, benennen Sie Ihr Restaurant — fertig. Ihre Website mit QR-Menü ist in unter 5 Minuten online. Keine Kreditkarte erforderlich."
+        },
+        {
+          "question": "Brauche ich technische Kenntnisse?",
+          "answer": "Nein. Alles ist für Restaurantbesitzer konzipiert, nicht für Entwickler. Fügen Sie Gerichte hinzu, laden Sie Fotos hoch und verwalten Sie Ihre Website komplett vom Handy aus."
+        },
+        {
+          "question": "Was ist im kostenlosen Plan enthalten?",
+          "answer": "Eine vollständige Restaurant-Website, QR-Menü, Kontaktseite mit Karte, Analysen, individuelles Farbschema und bis zu 2 Sprachen. Kein Testzeitraum — kostenlos für immer."
+        },
+        {
+          "question": "Kann ich meinen eigenen Domainnamen verwenden?",
+          "answer": "Im kostenlosen und Growth-Plan wird Ihre Website unter iq-rest.com/m/ihr-name gehostet. Der Pro-Plan unterstützt eigene Domainnamen für volle Markenkontrolle."
+        }
+      ]
+    },
+    "howItWorks": {
+      "title": "So funktioniert es",
+      "subtitle": "In vier Schritten von null zu einer live Restaurant-Website.",
+      "steps": [
+        {
+          "title": "Geben Sie Ihre E-Mail-Adresse ein",
+          "description": "Kein Passwort erforderlich. Geben Sie einfach Ihre E-Mail-Adresse ein und klicken Sie auf Weiter. Es gibt keine langen Registrierungsformulare, keine Kreditkarte erforderlich und keine Verpflichtungen."
+        },
+        {
+          "title": "Mit einem Code verifizieren",
+          "description": "Überprüfen Sie Ihr Postfach auf einen 4-stelligen Verifizierungscode. Geben Sie ihn ein, um sich sicher anzumelden. Dieser passwortlose Ansatz bedeutet, dass Sie sich an eine Sache weniger erinnern müssen."
+        },
+        {
+          "title": "Benennen Sie Ihr Restaurant",
+          "description": "Geben Sie Ihrem Restaurant einen Namen. Er wird zu Ihrer Website-URL und dem Titel Ihres Menüs. Sie können ihn später jederzeit in den Einstellungen Ihres Dashboards ändern."
+        },
+        {
+          "title": "Ihre Website ist bereit",
+          "description": "Eine vollständige Restaurant-Website mit QR-Menü, Kontaktseite mit Karte und responsivem Design ist sofort unter iq-rest.com/m/your-name live. Fügen Sie Ihre Gerichte hinzu und beginnen Sie zu teilen."
+        }
+      ]
+    }
+  },
+  "analyticsPage": {
+    "seo": {
+      "title": "Restaurant-Analysen & QR-Menü-Statistiken — Besuchertracking | IQ Rest",
+      "description": "Verfolgen Sie QR-Menü-Scans, Seitenaufrufe, beliebte Sprachen und Besuchertrends. Echtzeit-Analyse-Dashboard für Ihre Restaurant-Website."
+    },
+    "hero": {
+      "badge": "Analysen",
+      "title": "Erfahren Sie, wie Gäste Ihr QR-Menü nutzen",
+      "subtitle": "Verfolgen Sie tägliche Scans, Seitenaufrufe, beliebte Sprachen, Gerätestatistiken und Trends. Treffen Sie datenbasierte Entscheidungen zur Optimierung Ihres Menüs und zum Wachstum Ihres Geschäfts.",
+      "cta": "Menü erstellen",
+      "ctaDemo": "Demo ansehen",
+      "noCreditCard": "Keine Kreditkarte erforderlich. Kostenloser Plan verfügbar."
+    },
+    "features": {
+      "title": "Was Sie verfolgen können",
+      "subtitle": "Echtzeit-Einblicke in die Online-Präsenz Ihres Restaurants.",
+      "items": [
+        {
+          "title": "Tägliche Aufrufe, Scans & Besuchertrends",
+          "description": "Sehen Sie, wie viele Personen Ihren QR-Code scannen und Ihr Menü täglich, wöchentlich und monatlich besuchen. Verfolgen Sie Trends, um saisonale Muster zu verstehen und den Erfolg von Aktionen zu messen."
+        },
+        {
+          "title": "Aufschlüsselung nach Sprache & Gerät",
+          "description": "Erfahren Sie, welche Sprachen Ihre Gäste bevorzugen und welche Geräte sie nutzen. Diese Daten helfen Ihnen, Übersetzungen zu priorisieren und sicherzustellen, dass Ihr Menü auf den beliebtesten Geräten perfekt aussieht."
+        }
+      ]
+    },
+    "faq": {
+      "title": "Häufig gestellte Fragen",
+      "subtitle": "Alles, was Sie über Restaurant-Analysen wissen müssen.",
+      "items": [
+        {
+          "question": "Welche Metriken kann ich verfolgen?",
+          "answer": "Tägliche, wöchentliche und monatliche Seitenaufrufe. Einzigartige Besucher. Meistbesuchte Seiten. Sprachpräferenzen. Geräte- und Browser-Aufschlüsselung. Alles in Echtzeit aktualisiert."
+        },
+        {
+          "question": "Sind Analysen im kostenlosen Plan enthalten?",
+          "answer": "Ja. Grundlegende Analysen sind in jedem Plan verfügbar, einschließlich des kostenlosen. Sie können Aufrufe, Besucher und Sprachstatistiken ab dem ersten Tag einsehen."
+        },
+        {
+          "question": "Kann ich sehen, welche Seiten am beliebtesten sind?",
+          "answer": "Ja. Das Dashboard zeigt Aufrufe aufgeschlüsselt nach Seite — Startseite, Menü, Kontakte, Reservierungen und Sprachauswahl. Sehen Sie genau, wo Gäste ihre Zeit verbringen."
+        },
+        {
+          "question": "Wie weit reichen die Daten zurück?",
+          "answer": "Analysedaten werden ab dem Tag gespeichert, an dem Sie Ihr Restaurant erstellen. Sie können tägliche, wöchentliche und monatliche Trends für Ihre gesamte Historie anzeigen."
+        }
+      ]
+    },
+    "howItWorks": {
+      "title": "So funktioniert es",
+      "subtitle": "Beginnen Sie mit der Verfolgung der Leistung Ihres Restaurants in vier Schritten.",
+      "steps": [
+        {
+          "title": "Erstellen Sie Ihr Restaurant",
+          "description": "Die Analysen beginnen mit der Verfolgung, sobald Ihr Menü live geht. Es gibt nichts zu konfigurieren – jede Seitenansicht, jeder QR-Scan und jeder Besucher wird automatisch erfasst."
+        },
+        {
+          "title": "Teilen Sie Ihren QR-Code",
+          "description": "Drucken Sie Ihren QR-Code aus und platzieren Sie ihn auf Tischen, am Eingang oder auf Takeaway-Verpackungen. Jeder Scan wird mit Zeitstempel, Sprache, Gerät und besuchter Seite erfasst."
+        },
+        {
+          "title": "Öffnen Sie das Analyse-Dashboard",
+          "description": "Sehen Sie tägliche, wöchentliche und monatliche Statistiken mit klaren Diagrammen. Verfolgen Sie die Gesamtansichten, einzigartigen Besucher und Trends über die Zeit von einem einzigen Dashboard-Bildschirm."
+        },
+        {
+          "title": "Erforschen Sie detaillierte Aufschlüsselungen",
+          "description": "Sehen Sie Statistiken, aufgeschlüsselt nach Seite (Menü, Kontakte, Reservierungen), bevorzugter Sprache, Gerätetyp und Browser. Nutzen Sie diese Daten, um Ihr Menü zu optimieren und Übersetzungen zu priorisieren."
+        }
+      ]
+    }
+  },
+  "aiImagesPage": {
+    "seo": {
+      "title": "KI-Foodfoto-Generierung für Speisekarten — Restaurant-Menübilder | IQ Rest",
+      "description": "Generieren Sie schöne Food-Fotos für Ihre Speisekarte mit KI. Kein Fotograf nötig — erhalten Sie professionelle Gerichtbilder in Sekunden, optimiert für Ihr QR-Menü."
+    },
+    "hero": {
+      "badge": "KI-Bilder",
+      "title": "Professionelle Menüfotos ohne Fotografen",
+      "subtitle": "Generieren Sie beeindruckende Food-Bilder für Ihre Gerichte mit KI. Geben Sie einfach den Gerichtnamen ein — und erhalten Sie ein schönes, optimiertes Foto für Ihr QR-Menü — in Sekunden.",
+      "cta": "Menü erstellen",
+      "ctaDemo": "Demo ansehen",
+      "noCreditCard": "Keine Kreditkarte erforderlich. Kostenloser Plan verfügbar."
+    },
+    "features": {
+      "title": "So funktioniert die KI-Bildgenerierung",
+      "subtitle": "Vom Gerichtnamen zum professionellen Foto mit einem Klick.",
+      "items": [
+        {
+          "title": "Bilder aus Gerichtnamen generieren",
+          "description": "Geben Sie Ihren Gerichtnamen ein — «Gegrillter Lachs mit Zitrone», «Pizza Margherita», «Schokoladen-Lava-Kuchen» — und die KI erstellt ein professionelles Food-Foto. Wählen Sie aus verschiedenen Stilen und Hintergründen."
+        },
+        {
+          "title": "Optimiert für schnelles Laden",
+          "description": "Jedes generierte Bild wird automatisch komprimiert und in moderne Formate konvertiert. Ihr Menü bleibt blitzschnell auf jedem Gerät, selbst mit Fotos bei jedem Gericht."
+        }
+      ]
+    },
+    "faq": {
+      "title": "Häufig gestellte Fragen",
+      "subtitle": "Alles, was Sie über KI-Menübilder wissen müssen.",
+      "items": [
+        {
+          "question": "Wie generiere ich ein Food-Foto?",
+          "answer": "Öffnen Sie ein beliebiges Gericht in Ihrem Dashboard, tippen Sie auf «Bild generieren» — und die KI erstellt ein professionelles Food-Foto basierend auf dem Gerichtnamen und der Beschreibung. Wählen Sie Ihr Lieblingsbild."
+        },
+        {
+          "question": "Kann ich stattdessen meine eigenen Fotos verwenden?",
+          "answer": "Selbstverständlich. Laden Sie Ihre eigenen Fotos von Handy oder Computer hoch. Die KI-Generierung ist optional — nutzen Sie sie, wenn Sie kein Foto zur Hand haben."
+        },
+        {
+          "question": "Wie viele Bilder kann ich generieren?",
+          "answer": "Die Generierungslimits hängen von Ihrem Plan ab. Growth enthält ein monatliches Kontingent, Pro bietet ein höheres Limit. Sie können immer unbegrenzt eigene Fotos hochladen."
+        },
+        {
+          "question": "Sind die generierten Bilder einzigartig für mein Restaurant?",
+          "answer": "Ja. Jedes Bild wird einzigartig für Ihr spezielles Gericht generiert. Keine Stockfotos — jedes Bild wird frisch basierend auf Ihrem Menüeintrag erstellt."
+        }
+      ]
+    },
+    "howItWorks": {
+      "title": "So funktioniert es",
+      "subtitle": "Erhalten Sie professionelle Food-Fotos für Ihr Menü in vier einfachen Schritten.",
+      "steps": [
+        {
+          "title": "Öffnen Sie ein beliebiges Menüelement",
+          "description": "Navigieren Sie zu dem Element, für das Sie ein Foto in Ihrem Dashboard möchten. Sie können Bilder für neue Gerichte generieren oder vorhandene Fotos für jedes Menüelement ersetzen."
+        },
+        {
+          "title": "Klicken Sie auf Bild generieren",
+          "description": "Die KI erstellt ein professionelles Food-Foto basierend auf dem Gerichtsnamen und der Beschreibung. Je mehr Details Sie in der Beschreibung angeben, desto genauer ist das Ergebnis."
+        },
+        {
+          "title": "Überprüfen Sie das Ergebnis",
+          "description": "Vorschau des generierten Bildes, bevor Sie es anwenden. Wenn Sie einen anderen Look wünschen, regenerieren Sie, um eine neue Variante zu erhalten. Jede Generierung produziert ein einzigartiges Bild."
+        },
+        {
+          "title": "Verwenden Sie es in Ihrem Menü",
+          "description": "Das Bild wird automatisch optimiert, auf WebP-Format komprimiert und erscheint sofort in Ihrem Live-Menü. Gäste sehen professionelle Food-Fotos zu jedem Gericht."
+        }
+      ]
+    }
+  },
+  "personalSupportPage": {
+    "seo": {
+      "title": "Persönlicher Support für Ihre Restaurant-Website — Echte menschliche Hilfe | IQ Rest",
+      "description": "Erhalten Sie persönliche Hilfe von echten Menschen, nicht von Chatbots. Einrichtungshilfe, Tipps zur Menüoptimierung und schnelle Antworten — in jedem Plan verfügbar, auch im kostenlosen."
+    },
+    "hero": {
+      "badge": "Persönlicher Support",
+      "title": "Echte Menschen, echte Hilfe — keine Chatbots",
+      "subtitle": "Haben Sie eine Frage? Brauchen Sie Hilfe bei der Einrichtung Ihres Menüs? Möchten Sie eine Funktion vorschlagen? Schreiben Sie uns direkt und erhalten Sie eine persönliche Antwort von jemandem, der Restaurants versteht.",
+      "cta": "Menü erstellen",
+      "ctaDemo": "Demo ansehen",
+      "noCreditCard": "Keine Kreditkarte erforderlich. Kostenloser Plan verfügbar."
+    },
+    "features": {
+      "title": "So funktioniert der Support",
+      "subtitle": "Hilfe, wenn Sie sie brauchen, von Menschen, denen es wichtig ist.",
+      "items": [
+        {
+          "title": "Schreiben Sie uns direkt aus Ihrem Dashboard",
+          "description": "Öffnen Sie den Support-Chat in Ihrem Dashboard und beschreiben Sie Ihre Frage. Ein echter Mensch liest Ihre Nachricht und antwortet — in der Regel innerhalb weniger Stunden an Werktagen."
+        },
+        {
+          "title": "Hilfe bei Einrichtung, Optimierung & mehr",
+          "description": "Ob Sie Hilfe beim Hinzufügen Ihres ersten Gerichts brauchen, Ratschläge zur Menüorganisation wünschen oder eine neue Funktion vorschlagen möchten — wir sind hier. Jede Frage zählt, egal wie klein."
+        }
+      ]
+    },
+    "faq": {
+      "title": "Häufig gestellte Fragen",
+      "subtitle": "Alles, was Sie über unseren Support wissen müssen.",
+      "items": [
+        {
+          "question": "Ist Support im kostenlosen Plan verfügbar?",
+          "answer": "Ja. Persönlicher Support ist für jeden Plan verfügbar, einschließlich des kostenlosen. Wir glauben, dass jedes Restaurant echte Hilfe verdient, unabhängig vom Abonnement."
+        },
+        {
+          "question": "Wie schnell antworten Sie?",
+          "answer": "In der Regel innerhalb weniger Stunden an Werktagen. Wir lesen jede Nachricht persönlich und versuchen, Ihre Frage in einer Antwort zu klären."
+        },
+        {
+          "question": "Können Sie mir bei der Einrichtung meines Menüs helfen?",
+          "answer": "Selbstverständlich. Wenn Sie Hilfe beim Hinzufügen von Gerichten, Organisieren von Kategorien, Einrichten von Übersetzungen oder Konfigurieren von Reservierungen brauchen — fragen Sie einfach. Wir führen Sie gerne durch alles."
+        },
+        {
+          "question": "Kann ich neue Funktionen vorschlagen?",
+          "answer": "Ja, und wir freuen uns darüber! Viele unserer Funktionen begannen als Vorschläge von Nutzern. Schreiben Sie uns Ihre Idee und wir werden sie für zukünftige Updates berücksichtigen."
+        }
+      ]
+    },
+    "howItWorks": {
+      "title": "So funktioniert es",
+      "subtitle": "Erhalten Sie Hilfe von einer echten Person in vier einfachen Schritten.",
+      "steps": [
+        {
+          "title": "Support-Chat öffnen",
+          "description": "Gehen Sie zur Support-Seite in Ihrem Dashboard. Sie sehen eine einfache Chat-Oberfläche, in der Sie Ihre Nachricht direkt eingeben können – keine Ticketformulare oder Kategorien zur Auswahl."
+        },
+        {
+          "title": "Beschreiben Sie Ihre Frage",
+          "description": "Tippen Sie Ihre Nachricht. Fragen Sie nach Einrichtung, Funktionen, Menüoptimierung, Abrechnung oder allem anderen. Es gibt keine dummen Fragen – wir helfen Ihnen gerne bei allem."
+        },
+        {
+          "title": "Erhalten Sie eine persönliche Antwort",
+          "description": "Eine echte Person (kein Chatbot) liest Ihre Nachricht und antwortet innerhalb von Stunden. Wir verstehen die Arbeitsabläufe in Restaurants und geben praktische, umsetzbare Antworten."
+        },
+        {
+          "title": "Fortlaufende Hilfe",
+          "description": "Fordern Sie Vorschläge für Funktionen an, erhalten Sie Tipps zur Menüoptimierung oder bitten Sie jederzeit um Unterstützung bei der Einrichtung. Ihre Gesprächshistorie wird gespeichert, sodass wir immer den Kontext vorheriger Fragen haben."
+        }
+      ]
+    }
   }
 }

@@ -2515,5 +2515,895 @@
     },
     "back": "Back",
     "continue": "Tęsti"
+  },
+  "onlineOrders": {
+    "seo": {
+      "title": "Internetiniai užsakymai restoranams — QR Meniu | IQ Rest",
+      "description": "Leiskite klientams pateikti užsakymus tiesiai iš QR meniu. Jokių komisinių, kainos realiuoju laiku ir momentinis užsakymų valdymas valdymo skydelyje."
+    },
+    "hero": {
+      "badge": "Internetiniai Užsakymai",
+      "title": "Paverskite QR meniu internetine užsakymų sistema",
+      "subtitle": "Klientai nuskenuoja kodą, naršo meniu ir pateikia užsakymą per kelias sekundes. Nereikia siųstis programėlių, jokių komisinių, jokio sudėtingumo.",
+      "cta": "Sukurkite savo meniu",
+      "ctaDemo": "Žiūrėti demonstraciją",
+      "noCreditCard": "Kredito kortelės nereikia. Galimas nemokamas planas."
+    },
+    "benefits": {
+      "title": "Kodėl restoranai renkasi QR meniu užsakymus",
+      "subtitle": "Tiesioginis užsakymų kanalas, kuris viską supaprastina jums ir jūsų svečiams.",
+      "items": [
+        {
+          "title": "Programėlės nereikia",
+          "description": "Svečiai tiesiog nuskenuoja QR kodą — nereikia nieko siųstis ar registruotis. Veikia iš karto bet kurioje telefono naršyklėje."
+        },
+        {
+          "title": "Kainos realiuoju laiku",
+          "description": "Atnaujinkite kainas ir prieinamumą akimirksniu. Pakeitimai iš karto atsispindi jūsų QR meniu."
+        },
+        {
+          "title": "Užsakymas prie staliuko",
+          "description": "Kiekvienas staliukas gauna savo QR kodą. Svečiai nuskenuoja, užsisako, o jūs matote staliuko numerį savo valdymo skydelyje."
+        },
+        {
+          "title": "Individualus dizainas",
+          "description": "Suderinkite meniu su savo prekės ženklu naudodami pasirinktines spalvas, fonus ir logotipą."
+        }
+      ]
+    },
+    "features": {
+      "title": "Kaip veikia internetiniai užsakymai",
+      "subtitle": "Du paprasti žingsniai sujungia jūsų meniu su virtuve.",
+      "items": [
+        {
+          "title": "Svečiai naršo ir renkasi patiekalus",
+          "description": "Klientai nuskenuoja jūsų QR kodą ir mato visą meniu su nuotraukomis, aprašymais ir kainomis. Jie prideda patiekalus prie užsakymo vienu palietimu — registruotis nereikia."
+        },
+        {
+          "title": "Užsakymai pasirodo jūsų valdymo skydelyje",
+          "description": "Kai svečiai pasiruošę, jie paspaudžia užsakymo mygtuką. Užsakymas akimirksniu pasirodo jūsų valdymo skydelyje su patiekalų detalėmis, staliuko numeriu ir pastabomis. Priimkite, pradėkite ruošti ir pažymėkite kaip baigtą."
+        }
+      ]
+    },
+    "faq": {
+      "title": "Dažnai užduodami klausimai",
+      "subtitle": "Viskas, ką reikia žinoti apie internetinius užsakymus.",
+      "items": [
+        {
+          "question": "Ar man reikia papildomos įrangos ar programėlių?",
+          "answer": "Ne. Viskas veikia per interneto naršyklę. Svečiai nuskenuoja QR kodą savo telefono kamera, o jūs valdote užsakymus iš IQ Rest valdymo skydelio bet kuriame įrenginyje."
+        },
+        {
+          "question": "Ar yra komisiniai mokesčiai ar mokestis už užsakymą?",
+          "answer": "Tikrai ne. IQ Rest niekada neima komisinių nuo jūsų užsakymų. Mokate tik savo prenumeratos planą, o visos pajamos iš užsakymų lieka jums."
+        },
+        {
+          "question": "Ar klientai gali pritaikyti savo užsakymą ar pridėti pastabų?",
+          "answer": "Taip. Svečiai gali pasirinkti patiekalus, nurodyti kiekius ir pridėti specialių pastabų ar pageidavimų. Taip pat galite reikalauti kliento vardo, telefono ar pristatymo adreso."
+        },
+        {
+          "question": "Ar tai veikia valgymui vietoje, išsinešimui ir pristatymui?",
+          "answer": "Taip. Valgymui vietoje svečiai nuskenuoja QR kodą prie savo staliuko. Išsinešimui ar pristatymui pasidalinkite tiesiogine nuoroda į savo meniu. Pagal poreikį galite įjungti vardo, telefono ir adreso laukus."
+        }
+      ]
+    },
+    "howItWorks": {
+      "title": "Kaip tai veikia",
+      "subtitle": "Nuo nustatymo iki pirmo užsakymo gavimo penkiais paprastais žingsniais.",
+      "steps": [
+        {
+          "title": "Įgalinti internetinius užsakymus",
+          "description": "Įjunkite užsakymus savo Dizaino nustatymuose. Pasirinkite pageidaujamą režimą: užsakymai rodomi jūsų valdymo skydelyje, siunčiami į WhatsApp, arba abu tuo pačiu metu."
+        },
+        {
+          "title": "Konfigūruoti užsakymo formą",
+          "description": "Pasirinkite, kuriuos laukus klientai privalo užpildyti pateikdami užsakymą. Vardas visada yra privalomas, o jūs galite pasirinktinai paprašyti telefono numerio ir pristatymo adreso."
+        },
+        {
+          "title": "Atspausdinti QR kodus stalams",
+          "description": "Kiekvienas stalas jūsų restorane gauna savo unikalų QR kodą. Kai svečiai jį nuskenuoja, jų užsakymas automatiškai atkeliauja su teisingu stalo numeriu."
+        },
+        {
+          "title": "Klientai pateikia užsakymus",
+          "description": "Svečiai nuskenuoja QR kodą, naršo jūsų meniu su nuotraukomis ir kainomis, pasirenka prekes, prideda pastabas ir pateikia savo užsakymą. Programėlės atsisiuntimas ar paskyros kūrimas nėra reikalingas."
+        },
+        {
+          "title": "Valdyti užsakymus savo valdymo skydelyje",
+          "description": "Užsakymai iš karto pasirodo jūsų valdymo skydelyje. Atnaujinkite kiekvieno užsakymo būseną nuo naujo iki vykdomo ir baigto. Jūs išlaikote 100% pajamų — nulis komisinių."
+        }
+      ]
+    }
+  },
+  "reservationsPage": {
+    "seo": {
+      "title": "Staliuku rezervacijos sistema restoranams — Rezervavimas internetu | IQ Rest",
+      "description": "Leiskite svečiams rezervuoti stalus tiesiogiai iš jūsų svetainės. Automatinis arba rankinis patvirtinimas, el. pašto pranešimai ir pilnas kalendoriaus valdymas — viskas įtraukta."
+    },
+    "hero": {
+      "badge": "Staliukų rezervacijos",
+      "title": "Priimkite staliukų rezervacijas 24/7 iš savo svetainės",
+      "subtitle": "Svečiai pasirenka datą, laiką ir žmonių skaičių — ir rezervuoja iškart. Viską valdote iš savo valdymo skydelio, telefono skambučių nereikia.",
+      "cta": "Sukurkite savo meniu",
+      "ctaDemo": "Peržiūrėti demo",
+      "noCreditCard": "Kreditinės kortelės nereikia. Nemokamas planas prieinamas."
+    },
+    "features": {
+      "title": "Kaip veikia staliukų rezervacijos",
+      "subtitle": "Du žingsniai nuo svečio užklausos iki patvirtintos rezervacijos.",
+      "items": [
+        {
+          "title": "Svečiai rezervuoja iš jūsų svetainės",
+          "description": "Klientai aplanko jūsų restorano puslapį, paspaudžia 'Rezervuoti stalą', pasirenka datą ir laiką, įveda savo duomenis ir pateikia. Programėlės nereikia — veikia bet kurioje naršyklėje bet kuriame įrenginyje."
+        },
+        {
+          "title": "Valdote rezervacijas savo valdymo skydelyje",
+          "description": "Kiekviena rezervacija rodoma valdymo skydelyje su svečio vardu, telefonu, žmonių skaičiumi, data ir pastabomis. Patvirtinkite arba atmeskite vienu paspaudimu. Nustatykite automatinį patvirtinimą arba peržiūrėkite kiekvieną rezervaciją rankiniu būdu."
+        }
+      ]
+    },
+    "faq": {
+      "title": "Dažnai užduodami klausimai",
+      "subtitle": "Viskas, ką reikia žinoti apie staliukų rezervacijas.",
+      "items": [
+        {
+          "question": "Ar klientams reikia sukurti paskyrą, kad rezervuotų?",
+          "answer": "Ne. Svečiai tiesiog užpildo savo vardą, telefono numerį, žmonių skaičių ir pageidaujamą laiką. Paskyros ar programėlės atsisiuntimo nereikia."
+        },
+        {
+          "question": "Ar galiu nustatyti prieinamus laiko tarpus ir talpą?",
+          "answer": "Taip. Nustatykite savo darbo valandas, rezervacijos laiko tarpo trukmę ir stalo talpą. Sistema svečiams rodo tik prieinamus laiko tarpus."
+        },
+        {
+          "question": "Ar gausiu pranešimą, kai kas nors rezervuoja?",
+          "answer": "Taip. Gausite el. laišką apie kiekvieną naują rezervaciją. Svečiai taip pat gauna patvirtinimo el. laišką, kai patvirtinate rezervaciją."
+        },
+        {
+          "question": "Ar galiu naudoti ir automatinį, ir rankinį patvirtinimą?",
+          "answer": "Taip. Pasirinkite automatinį režimą, kad rezervacijos būtų patvirtintos iškart pagal prieinamumą, arba rankinį režimą, kad peržiūrėtumėte ir patvirtintumėte kiekvieną užklausą patys."
+        }
+      ]
+    },
+    "howItWorks": {
+      "title": "Kaip tai veikia",
+      "subtitle": "Nustatykite internetines rezervacijas ir pradėkite priimti užsakymus penkiais žingsniais.",
+      "steps": [
+        {
+          "title": "Įgalinti rezervacijas",
+          "description": "Įjunkite rezervacijas savo restorano nustatymuose. Pasirinkite tarp automatinio patvirtinimo, kai užsakymai patvirtinami iš karto, atsižvelgiant į prieinamumą, arba rankinio režimo, kuriame peržiūrite kiekvieną užklausą."
+        },
+        {
+          "title": "Pridėti savo stalus",
+          "description": "Sukurkite stalus su talpos ir zonos informacija — pavyzdžiui, 'Stalas 5, 4 svečiai, Terasa'. Kiekvienas stalas tampa rezervuojamas, o sistema automatiškai užkerta kelią dvigubiems užsakymams."
+        },
+        {
+          "title": "Nustatyti darbo valandas",
+          "description": "Apibrėžkite savo prieinamas valandas rezervacijoms ir pasirinkite laiko trukmę — nuo 15 minučių iki 8 valandų. Tik laiko intervalai, esantys jūsų darbo valandomis, rodomi svečiams."
+        },
+        {
+          "title": "Svečiai užsako internetu",
+          "description": "Klientai apsilanko jūsų restorano puslapyje, pasirenka datą, laiką ir svečių skaičių, įveda savo vardą ir telefoną, ir pateikia užsakymą. Nereikia jokios paskyros ar programėlės — veikia bet kuriame naršyklėje."
+        },
+        {
+          "title": "Tvarkykite užsakymus savo valdymo pultelyje",
+          "description": "Peržiūrėkite visas rezervacijas savo valdymo pultelyje. Patvirtinkite, atšaukite arba pažymėkite užsakymus kaip įvykdytus. Ir jūs, ir svečias gausite el. pašto pranešimus apie kiekvieną užsakymo atnaujinimą."
+        }
+      ]
+    }
+  },
+  "colorSchemePage": {
+    "seo": {
+      "title": "Individualus QR meniu dizainas ir prekės ženklo spalvos — Restorano prekės ženklas | IQ Rest",
+      "description": "Pritaikykite savo QR meniu restorano prekės ženklui. Pasirinkite akcentines spalvas ir sukurkite vientisą vaizdą visame skaitmeniniame meniu."
+    },
+    "hero": {
+      "badge": "Individualus dizainas",
+      "title": "Pritaikykite QR meniu savo restorano prekės ženklui",
+      "subtitle": "Pasirinkite savo prekės ženklo spalvą, ir visas meniu — mygtukai, akcentai, nuorodos — atnaujinamas iškart.",
+      "cta": "Sukurkite savo meniu",
+      "ctaDemo": "Peržiūrėti demo",
+      "noCreditCard": "Kreditinės kortelės nereikia. Nemokamas planas prieinamas."
+    },
+    "features": {
+      "title": "Kaip veikia individualus prekės ženklas",
+      "subtitle": "Jūsų meniu, jūsų spalvos — vientisa kiekviename puslapyje.",
+      "items": [
+        {
+          "title": "Pasirinkite savo akcentinę spalvą",
+          "description": "Pasirinkite iš 12 kruopščiai atrinktų nustatymų arba įveskite tikslią prekės ženklo spalvą hex kodu. Kiekvienas mygtukas, nuoroda ir akcentas meniu prisitaiko iškart — dizaino įgūdžių nereikia."
+        }
+      ]
+    },
+    "faq": {
+      "title": "Dažnai užduodami klausimai",
+      "subtitle": "Viskas, ką reikia žinoti apie meniu pritaikymą.",
+      "items": [
+        {
+          "question": "Ar galiu naudoti tikslią savo prekės ženklo spalvą?",
+          "answer": "Taip. Įveskite bet kokį hex spalvos kodą arba pasirinkite iš 12 kruopščiai atrinktų nustatymų. Jūsų akcentinė spalva taikoma visuose meniu puslapiuose."
+        },
+        {
+          "question": "Ar galiu pakeisti spalvas po paskelbimo?",
+          "answer": "Žinoma. Pakeiskite akcentinę spalvą bet kuriuo metu iš valdymo skydelio. Atnaujinimai iškart pasirodo jūsų viešame meniu — pakartotino paskelbimo nereikia."
+        },
+        {
+          "question": "Ar mano QR kodas taip pat atitiks prekės ženklo spalvas?",
+          "answer": "Jūsų QR kodas generuojamas atskirai ir gali būti pritaikytas nepriklausomai. Akcentinė spalva taikoma skaitmeninio meniu puslapiams, navigacijai ir interaktyviems elementams."
+        }
+      ]
+    },
+    "howItWorks": {
+      "title": "Kaip tai veikia",
+      "subtitle": "Suderinkite savo meniu su savo prekės ženklu trimis paprastais žingsniais.",
+      "steps": [
+        {
+          "title": "Atidarykite Dizaino Nustatymus",
+          "description": "Eikite į Dizaino puslapį savo valdymo skydelyje. Akcento spalvos pasirinkimo įrankis yra centre — iškart pamatysite visas galimas parinktis."
+        },
+        {
+          "title": "Pasirinkite Savo Prekės Ženklo Spalvą",
+          "description": "Pasirinkite iš 12 parinktų spalvų presetų, sukurtų skaitymui ir prieinamumui, arba įveskite savo tikslią hex kodą, kad puikiai atitiktų jūsų prekės ženklą."
+        },
+        {
+          "title": "Momentinė Peržiūra",
+          "description": "Jūsų akcento spalva taikoma mygtukams, nuorodoms ir akcentams visame meniu. Ji veikia tiek šviesiame, tiek tamsiame temose, o pakeitimai iškart atsispindi jūsų gyvame meniu."
+        }
+      ]
+    }
+  },
+  "easyMenuPage": {
+    "seo": {
+      "title": "Sukurkite QR meniu savo restoranui — Nemokamas meniu kūrėjas | IQ Rest",
+      "description": "Sukurkite savo restorano skaitmeninį QR meniu per kelias minutes. Pridėkite kategorijas, patiekalus, nuotraukas, kainas — ir dalinkitės nuskaitomu QR kodu. Pradėti nemokamai."
+    },
+    "hero": {
+      "badge": "Meniu kūrėjas",
+      "title": "Sukurkite skaitmeninį QR meniu savo restoranui per kelias minutes",
+      "subtitle": "Pridėkite kategorijas ir patiekalus, nustatykite kainas, įkelkite nuotraukas — jūsų QR meniu paruoštas dalintis. Redaguokite bet kada, pakeitimai rodomi iškart.",
+      "cta": "Sukurkite savo meniu",
+      "ctaDemo": "Peržiūrėti demo",
+      "noCreditCard": "Kreditinės kortelės nereikia. Nemokamas planas prieinamas."
+    },
+    "features": {
+      "title": "Kaip veikia meniu redaktorius",
+      "subtitle": "Paprasti įrankiai, kurie greitai perkelia meniu į internetą.",
+      "items": [
+        {
+          "title": "Pridėkite kategorijas ir patiekalus",
+          "description": "Sukurkite kategorijas kaip Užkandžiai, Pagrindiniai, Gėrimai — tada pridėkite patiekalus su pavadinimais, aprašymais, kainomis ir nuotraukomis. Vilkite ir numeskite, kad pertvarkytumet. Įjunkite arba išjunkite elementus jų netrindami."
+        },
+        {
+          "title": "Pakeitimai įsigalioja iškart",
+          "description": "Kiekvienas pakeitimas pasirodo jūsų viešame QR meniu per kelias sekundes. Atnaujinkite kainą, pridėkite dienos pasiūlymą arba paslėpkite pasibaigusį patiekalą — klientai visada mato naujausią versiją."
+        }
+      ]
+    },
+    "faq": {
+      "title": "Dažnai užduodami klausimai",
+      "subtitle": "Viskas, ką reikia žinoti apie QR meniu kūrimą.",
+      "items": [
+        {
+          "question": "Kaip sukurti QR meniu savo restoranui?",
+          "answer": "Užsiregistruokite su el. paštu, pavadinkite savo restoraną ir pradėkite pridėti kategorijas ir patiekalus. Jūsų QR meniu sugeneruojamas automatiškai — atspausdinkite QR kodą ir padėkite ant stalų."
+        },
+        {
+          "question": "Ar galiu pridėti nuotraukas prie meniu elementų?",
+          "answer": "Taip. Įkelkite nuotraukas tiesiogiai iš telefono ar kompiuterio. Vaizdai automatiškai optimizuojami greitam įkėlimui bet kuriame įrenginyje."
+        },
+        {
+          "question": "Kiek elementų galiu pridėti?",
+          "answer": "Kategorijų ar meniu elementų skaičius neribojamas. Pridėkite tiek patiekalų, kiek reikia — jūsų meniu lieka greitas ir tvarkinga."
+        },
+        {
+          "question": "Ar galiu laikinai paslėpti pasibaigusį patiekalą?",
+          "answer": "Taip. Išjunkite bet kurį elementą vienu paspaudimu. Jis dingsta iš viešo meniu, bet lieka valdymo skydelyje — įjunkite atgal, kai būsite pasiruošę."
+        }
+      ]
+    },
+    "howItWorks": {
+      "title": "Kaip tai veikia",
+      "subtitle": "Sukurkite ir paskelbkite savo restorano meniu penkiais paprastais žingsniais.",
+      "steps": [
+        {
+          "title": "Sukurkite kategorijas",
+          "description": "Pridėkite kategorijas, tokias kaip Užkandžiai, Pagrindiniai patiekalai, Desertai ir Gėrimai, kad organizuotumėte savo meniu. Galite sukurti tiek kategorijų, kiek reikia, ir perkelti jas vilkdami ir mesti."
+        },
+        {
+          "title": "Pridėkite meniu elementus",
+          "description": "Įveskite patiekalo pavadinimą, aprašymą ir kainą kiekvienam elementui. Pažymėkite alergenus, jei taikoma — svečiai automatiškai matys alergenų ikonėles meniu."
+        },
+        {
+          "title": "Įkelkite arba sugeneruokite nuotraukas",
+          "description": "Įkelkite savo maisto nuotraukas iš telefono ar kompiuterio arba naudokite AI, kad sugeneruotumėte profesionalią maisto nuotrauką iš patiekalo pavadinimo. Nuotraukos automatiškai optimizuojamos."
+        },
+        {
+          "title": "Organizuokite vilkdami ir mesti",
+          "description": "Perkelkite kategorijas ir elementus vilkdami juos į vietą. Įjunkite arba išjunkite bet kurį elementą be jo ištrynimo — puikiai tinka kasdieniams pasiūlymams ar išparduotiems patiekalams."
+        },
+        {
+          "title": "Paskelbkite savo meniu",
+          "description": "Pakeitimai iš karto pasirodo jūsų gyvame QR meniu. Nėra 'paskelbimo' mygtuko — kiekvienas redagavimas tampa matomas realiu laiku. Atspausdinkite savo QR kodą ir padėkite jį ant savo stalų."
+        }
+      ]
+    }
+  },
+  "aiTranslationPage": {
+    "seo": {
+      "title": "DI meniu vertimas restoranams — QR meniu vertimas | IQ Rest",
+      "description": "Išverskite savo restorano meniu į 25+ kalbų vienu paspaudimu. DI supranta kulinarijos kontekstą — patiekalų pavadinimai, aprašymai ir kategorijos verčiami tiksliai."
+    },
+    "hero": {
+      "badge": "DI vertimas",
+      "title": "Išverskite savo meniu į 25+ kalbų vienu paspaudimu",
+      "subtitle": "Mūsų DI supranta maisto kontekstą — verčia patiekalų pavadinimus, aprašymus ir kategorijas natūraliai, ne žodis po žodžio. Pasiekite kiekvieną turistą ir tarptautinį svečią.",
+      "cta": "Sukurkite savo meniu",
+      "ctaDemo": "Peržiūrėti demo",
+      "noCreditCard": "Kreditinės kortelės nereikia. Nemokamas planas prieinamas."
+    },
+    "features": {
+      "title": "Kaip veikia DI vertimas",
+      "subtitle": "Nuo jūsų kalbos iki pasaulio per kelias sekundes.",
+      "items": [
+        {
+          "title": "Viso meniu vertimas vienu paspaudimu",
+          "description": "Pasirinkite tikslinę kalbą, paspauskite versti, ir visas meniu — kategorijos, patiekalų pavadinimai, aprašymai — išverčiamas iškart. DI išsaugo kulinarinius terminus ir natūraliai prisitaiko kiekvienai kalbai."
+        },
+        {
+          "title": "Redaguokite ir patikslinkite bet kurį vertimą",
+          "description": "Kiekvienas DI vertimas yra pilnai redaguojamas. Peržiūrėkite rezultatą, pakoreguokite formuluotę ir išsaugokite. Jūsų pakeitimai išsaugomi net jei vėliau iš naujo versite kitas meniu dalis."
+        }
+      ]
+    },
+    "faq": {
+      "title": "Dažnai užduodami klausimai",
+      "subtitle": "Viskas, ką reikia žinoti apie meniu vertimą.",
+      "items": [
+        {
+          "question": "Kiek tikslus DI vertimas maisto meniu?",
+          "answer": "Mūsų DI optimizuotas restoranų turiniui. Jis supranta, kad 'Beef Wellington' ar 'Tiramisu' neturėtų būti verčiami pažodžiui, ir pritaiko aprašymus, kad skambėtų natūraliai kiekvienoje kalboje."
+        },
+        {
+          "question": "Kokios kalbos palaikomos?",
+          "answer": "25+ kalbų, įskaitant anglų, ispanų, prancūzų, vokiečių, italų, portugališkų, kinų, japonų, korėjiečių, arabų, rusų ir daug kitų Europos bei Azijos kalbų."
+        },
+        {
+          "question": "Ar galiu išversti tik kai kuriuos elementus, ne visą meniu?",
+          "answer": "Taip. Galite versti atskirus elementus, ištisas kategorijas arba visą meniu iš karto. Turite visišką kontrolę, kas verčiama."
+        },
+        {
+          "question": "Ar vertimas kainuoja papildomai?",
+          "answer": "DI vertimas įtrauktas į Growth ir Pro planus su dosniais mėnesiniais limitais. Nėra mokesčių už žodį ar elementą — verskite tiek, kiek reikia."
+        }
+      ]
+    },
+    "howItWorks": {
+      "title": "Kaip tai veikia",
+      "subtitle": "Išverskite visą savo meniu per kelias minutes, o ne valandas.",
+      "steps": [
+        {
+          "title": "Pridėti kalbas prie savo meniu",
+          "description": "Eikite į kalbų puslapį savo valdymo skydelyje ir pasirinkite, kurias kalbas turėtų palaikyti jūsų meniu. Pasirinkite iš 35 prieinamų kalbų, įskaitant visas pagrindines Europos, Azijos ir Viduriniųjų Rytų kalbas."
+        },
+        {
+          "title": "Paspauskite Išversti",
+          "description": "Vienas mygtukas išverčia visas jūsų kategorijas, prekių pavadinimus ir aprašymus vienu metu. Visas meniu apdorojamas per kelias sekundes, nesvarbu, kiek prekių turite."
+        },
+        {
+          "title": "AI supranta maisto kontekstą",
+          "description": "AI žino kulinarinę terminologiją įvairiose kultūrose. Ji išsaugo patiekalų pavadinimus, tokius kaip 'Tiramisu' ar 'Pad Thai', tuo pačiu natūraliai pritaikydama aprašymus, ingredientų sąrašus ir kategorijų pavadinimus."
+        },
+        {
+          "title": "Peržiūrėti ir redaguoti",
+          "description": "Kiekvienas vertimas yra visiškai redaguojamas. Pakeiskite bet kokį žodyną, kad atitiktų jūsų stilių. Jūsų rankiniai pakeitimai išlieka net ir tada, kai vėl verčiate kitas meniu dalis vėliau."
+        },
+        {
+          "title": "Paskelbkite savo daugiakalbį meniu",
+          "description": "Svečiams jūsų meniu matomas kalbų keitiklis, leidžiantis naršyti pageidaujama kalba. Kiekvieną kalbą galima įjungti arba išjungti nepriklausomai nuo jūsų valdymo skydelio."
+        }
+      ]
+    }
+  },
+  "mobileManagementPage": {
+    "seo": {
+      "title": "Valdykite restorano meniu iš telefono — Mobilus valdymo skydelis | IQ Rest",
+      "description": "Valdykite savo restorano QR meniu visiškai iš telefono. Pridėkite patiekalus, atnaujinkite kainas, įkelkite nuotraukas, tikrinkite analitiką — kompiuterio nereikia."
+    },
+    "hero": {
+      "badge": "Mobilus valdymo skydelis",
+      "title": "Valdykite visą restorano meniu iš savo telefono",
+      "subtitle": "Pridėkite patiekalus, keiskite kainas, įkelkite nuotraukas, tikrinkite užsakymus — viską iš savo išmaniojo telefono. Valdymo skydelis sukurtas mobiliajam — kompiuterio niekada nereikia.",
+      "cta": "Sukurkite savo meniu",
+      "ctaDemo": "Peržiūrėti demo",
+      "noCreditCard": "Kreditinės kortelės nereikia. Nemokamas planas prieinamas."
+    },
+    "features": {
+      "title": "Kaip veikia mobilus valdymas",
+      "subtitle": "Jūsų restorano valdymo skydelis visada kišenėje.",
+      "items": [
+        {
+          "title": "Pilnas valdymo skydelis jūsų išmaniajame telefone",
+          "description": "Kiekviena funkcija puikiai veikia telefono ekrane — pridėkite elementus, redaguokite kategorijas, valdykite užsakymus, tikrinkite analitiką. Sąsaja sukurta lietimui, o ne tiesiog sumažinta nuo darbalaukio."
+        },
+        {
+          "title": "Įkelkite nuotraukas tiesiai iš kameros",
+          "description": "Nufotografuokite naują patiekalą ir įkelkite jį į meniu per kelias sekundes. Vaizdai optimizuojami automatiškai. Atnaujinkite dienos pasiūlymą stovėdami virtuvėje."
+        }
+      ]
+    },
+    "faq": {
+      "title": "Dažnai užduodami klausimai",
+      "subtitle": "Viskas, ką reikia žinoti apie mobilų meniu valdymą.",
+      "items": [
+        {
+          "question": "Ar man reikia įsidiegti programėlę?",
+          "answer": "Ne. Valdymo skydelis veikia jūsų telefono naršyklėje — Safari, Chrome ar bet kurioje kitoje. Tiesiog prisijunkite ir pradėkite valdyti savo meniu."
+        },
+        {
+          "question": "Ar galiu iš telefono daryti viską, ką galiu iš kompiuterio?",
+          "answer": "Taip. Kiekviena funkcija prieinama mobiliajame — elementų pridėjimas, nuotraukų įkėlimas, kategorijų valdymas, analitikos tikrinimas, užsakymų ir rezervacijų tvarkymas."
+        },
+        {
+          "question": "Ar tai veikia ir planšetėse?",
+          "answer": "Taip. Valdymo skydelis prisitaiko prie bet kokio ekrano dydžio — telefonai, planšetės ir staliniai kompiuteriai. Naudokite tą įrenginį, kuris patogiausias."
+        },
+        {
+          "question": "Ar keli žmonės gali valdyti meniu?",
+          "answer": "Šiuo metu viena paskyra valdo restoraną. Galite prisijungti iš kelių įrenginių vienu metu — telefono, planšetės ar kompiuterio."
+        }
+      ]
+    },
+    "howItWorks": {
+      "title": "Kaip tai veikia",
+      "subtitle": "Valdykite savo restoraną iš bet kurio įrenginio keturiais žingsniais.",
+      "steps": [
+        {
+          "title": "Atidarykite valdymo skydelį savo telefone",
+          "description": "Eikite į iq-rest.com ir prisijunkite per savo telefono naršyklę. Valdymo skydelis automatiškai prisitaiko prie jūsų ekrano dydžio — nereikia nieko atsisiųsti ar įdiegti."
+        },
+        {
+          "title": "Redaguokite meniu bet kur",
+          "description": "Pridėkite naujų patiekalų, atnaujinkite kainas, keiskite aprašymus ir įkelkite nuotraukas tiesiai iš savo telefono kameros. Kiekviena funkcija, kuri yra prieinama kompiuteryje, veikia taip pat gerai ir mobiliajame."
+        },
+        {
+          "title": "Patikrinkite užsakymus ir rezervacijas",
+          "description": "Peržiūrėkite gaunamus užsakymus, valdykite stalų rezervacijas ir atsakykite į palaikymo žinutes — viską iš savo telefono. Būkite informuoti apie savo restoraną net kai esate toli."
+        },
+        {
+          "title": "Pakeitimai įsigalioja iškart",
+          "description": "Kiekvienas redagavimas, kurį atliekate savo telefone, pasirodo jūsų QR meniu realiuoju laiku. Nereikia sinchronizuoti, skelbti ar laukti — jūsų svečiai visada mato naujausią versiją."
+        }
+      ]
+    }
+  },
+  "customDesignPage": {
+    "seo": {
+      "title": "Restorano svetainė su video ir nuotraukos fonu — Svetainių kūrėjas | IQ Rest",
+      "description": "Sukurkite įspūdingą restorano svetainę su individualiu video ar nuotraukos fonu. Įkelkite atmosferos video ar maisto nuotrauką — sužavėkite svečius nuo pirmo nuskaitymo."
+    },
+    "hero": {
+      "badge": "Svetainės dizainas",
+      "title": "Sukurkite įspūdingą restorano svetainę su video fonais",
+      "subtitle": "Įkelkite savo restorano atmosferos video ar gražią maisto nuotrauką kaip foną. Svečiai mato profesionalią, prekės ženklu pažymėtą patirtį tą akimirką, kai nuskenuoja jūsų QR kodą.",
+      "cta": "Sukurkite savo meniu",
+      "ctaDemo": "Peržiūrėti demo",
+      "noCreditCard": "Kreditinės kortelės nereikia. Nemokamas planas prieinamas."
+    },
+    "features": {
+      "title": "Kaip veikia individualūs fonai",
+      "subtitle": "Palikite neišdildomą pirmąjį įspūdį su vaizdiniais elementais, atitinkančiais jūsų prekės ženklą.",
+      "items": [
+        {
+          "title": "Įkelkite video ar nuotraukų fonus",
+          "description": "Pridėkite pasikartojantį video apie restorano atmosferą, virtuvės pagreitintą filmavimą ar aukštos kokybės maisto nuotrauką. Fonas rodomas pagrindiniame puslapyje — sukuriant įtraukiančią patirtį svečiams."
+        },
+        {
+          "title": "Optimizuota greičiui bet kuriame įrenginyje",
+          "description": "Vaizdo įrašai ir nuotraukos automatiškai suglaudinami ir įkeliami atidėtai. Jūsų svetainė lieka greita net su lėtais mobiliais ryšiais — jokio buferinimo, jokių vėlavimų, tik sklandi patirtis."
+        }
+      ]
+    },
+    "faq": {
+      "title": "Dažnai užduodami klausimai",
+      "subtitle": "Viskas, ką reikia žinoti apie restorano svetainės dizainą.",
+      "items": [
+        {
+          "question": "Kokie video formatai palaikomi?",
+          "answer": "MP4 ir WebM formatai veikia geriausiai. Video automatiškai suglaudimi greimam įkėlimui. Laikykite video trumpesnius nei 30 sekundžių geriausiai mobiliai patirčiai."
+        },
+        {
+          "question": "Ar video fonas sulėtins mano svetainę?",
+          "answer": "Ne. Video suglaudinami, įkeliami atidėtai ir automatiškai optimizuojami. Esant lėtam ryšiui, sistema pereina prie statinio vaizdo, kad patirtis būtų sklandi."
+        },
+        {
+          "question": "Ar galiu naudoti nuotrauką vietoj video?",
+          "answer": "Taip. Įkelkite bet kokią nuotrauką — ji bus optimizuota ir rodoma kaip viso ekrano fonas. Bet kada galite perjungti tarp video ir nuotraukos."
+        },
+        {
+          "question": "Ar man reikia dizainerio tai nustatyti?",
+          "answer": "Ne. Tiesiog įkelkite savo video ar nuotrauką iš valdymo skydelio. Sistema automatiškai tvarko dydžio keitimą, glaudinimą ir išdėstymą. Jūsų svetainė atrodo profesionaliai be jokių dizaino įgūdžių."
+        }
+      ]
+    },
+    "howItWorks": {
+      "title": "Kaip tai veikia",
+      "subtitle": "Pritaikykite savo restorano vizualinę tapatybę keturiais žingsniais.",
+      "steps": [
+        {
+          "title": "Atidaryti dizaino nustatymus",
+          "description": "Eikite į dizaino puslapį savo valdymo skydelyje. Čia galite kontroliuoti savo restorano vizualinį vaizdą — foną, akcento spalvą ir pagrindinio puslapio išdėstymą."
+        },
+        {
+          "title": "Įkelti foną",
+          "description": "Pasirinkite vaizdo įrašą (MP4, WebM) arba nuotrauką savo restorano pagrindinio puslapio fonui. Vaizdo įrašai automatiškai kartojasi, sukurdami įtraukiančią pirmąją įspūdį kiekvienam lankytojui."
+        },
+        {
+          "title": "AI fono generavimas",
+          "description": "Neturite paruošto vaizdo įrašo ar nuotraukos? Leiskite AI automatiškai sukurti fono vaizdą iš jūsų meniu elementų. Jis generuoja profesionalų vaizdą, kuris atitinka jūsų restorano stilių."
+        },
+        {
+          "title": "Peržiūrėti ir išsaugoti",
+          "description": "Pamatykite savo pakeitimus realiu laiku prieš išsaugodami. Vaizdo įrašai automatiškai kompresuojami ir įkeliami tingiai, užtikrinant greitą našumą mobiliuosiuose įrenginiuose, neaukodami vizualinės kokybės."
+        }
+      ]
+    }
+  },
+  "multilingualPage": {
+    "seo": {
+      "title": "Daugiakalbė restorano svetainė — Meniu 25+ kalbomis | IQ Rest",
+      "description": "Jūsų restorano svetainė ir QR meniu 25+ kalbomis. Svečiai perjungia kalbą vienu paspaudimu — meniu, kontaktai ir rezervacijos prisitaiko iškart."
+    },
+    "hero": {
+      "badge": "Daugiakalbis",
+      "title": "Jūsų restorano svetainė 25+ kalbomis",
+      "subtitle": "Turistai ir tarptautiniai svečiai mato jūsų meniu savo kalba. Vienas paspaudimas perjungti — viskas prisitaiko iškart: patiekalai, aprašymai, kontaktai, navigacija.",
+      "cta": "Sukurkite savo meniu",
+      "ctaDemo": "Peržiūrėti demo",
+      "noCreditCard": "Kreditinės kortelės nereikia. Nemokamas planas prieinamas."
+    },
+    "features": {
+      "title": "Kaip veikia daugiakalbė palaikymas",
+      "subtitle": "Kalbėkite savo kliento kalba be jokio papildomo darbo.",
+      "items": [
+        {
+          "title": "Svečiai pasirenka savo kalbą",
+          "description": "Jūsų meniu rodomas kalbos parinkiklis. Svečiai paspaudžia pageidaujamą kalbą ir visa svetainė — meniu, aprašymai, kontaktinė informacija, navigacija — perjungiama iškart. Puslapio perkrovimo nereikia."
+        },
+        {
+          "title": "Pridėkite kalbas iš valdymo skydelio",
+          "description": "Įjunkite naujas kalbas vienu paspaudimu. Naudokite DI vertimą turiniui užpildyti arba įveskite vertimus rankiniu būdu. Kiekviena kalba gali būti įjungta ar išjungta nepriklausomai."
+        }
+      ]
+    },
+    "faq": {
+      "title": "Dažnai užduodami klausimai",
+      "subtitle": "Viskas, ką reikia žinoti apie daugiakalbius meniu.",
+      "items": [
+        {
+          "question": "Kiek kalbų galiu pridėti prie meniu?",
+          "answer": "Iki 25+ kalbų, įskaitant visas pagrindines Europos kalbas, kinų, japonų, korėjiečių, arabų, persų ir daugiau. Pridėkite tiek, kiek jūsų svečiams reikia."
+        },
+        {
+          "question": "Ar turiu viską versti rankiniu būdu?",
+          "answer": "Ne. Naudokite integruotą DI vertimą, kad išverstumėte visą meniu vienu paspaudimu. Taip pat galite rankiniu būdu redaguoti bet kurį vertimą pilnai kontrolei."
+        },
+        {
+          "question": "Ar kalbos pasirinkimas išsaugomas?",
+          "answer": "Taip. Kai svečias pasirenka kalbą, ji įsimenama kitam apsilankymui. Grįžtant nereikia rinktis iš naujo."
+        },
+        {
+          "question": "Ar daugiakalbė palaikymas prieinamas nemokamame plane?",
+          "answer": "Nemokamas planas apima iki 2 kalbų. Growth ir Pro planai siūlo neribotą kalbų skaičių su įtrauktu DI vertimu."
+        }
+      ]
+    },
+    "howItWorks": {
+      "title": "Kaip tai veikia",
+      "subtitle": "Padarykite savo meniu prieinamą keliomis kalbomis per keturis žingsnius.",
+      "steps": [
+        {
+          "title": "Eikite į Kalbų nustatymus",
+          "description": "Atidarykite Kalbų puslapį savo valdymo skydelyje. Pamatysite visas prieinamas kalbas ir kurios iš jų šiuo metu aktyvios jūsų meniu."
+        },
+        {
+          "title": "Pridėti kalbas",
+          "description": "Pasirinkite iš 35 prieinamų kalbų. Nemokamas planas apima iki 2 kalbų, o Growth ir Pro planai siūlo neribotą kalbų skaičių jūsų meniu."
+        },
+        {
+          "title": "Išverskite savo turinį",
+          "description": "Naudokite vieno paspaudimo AI vertimą, kad išverstumėte visą savo meniu akimirksniu, arba įveskite vertimus rankiniu būdu, kad turėtumėte visišką kontrolę. Taip pat galite derinti abu metodus."
+        },
+        {
+          "title": "Svečių kalbų pasirinkimas",
+          "description": "Meniu puslapyje pasirodo kalbos pasirinkimo parinktis. Kai svečiai pasirenka savo kalbą, visas meniu akimirksniu pasikeičia. Jų pasirinkimas išsaugomas grįžtant."
+        }
+      ]
+    }
+  },
+  "instantSetupPage": {
+    "seo": {
+      "title": "Nemokamas restorano svetainės generatorius — Sukurkite per 5 minutes | IQ Rest",
+      "description": "Gaukite profesionalią restorano svetainę su QR meniu, kontaktų puslapiu ir žemėlapiu — tiesiog įveskite el. paštą. Paruošta per 5 minutes, techninių įgūdžių nereikia."
+    },
+    "hero": {
+      "badge": "Nemokama svetainė",
+      "title": "Gaukite profesionalią restorano svetainę per 5 minutes",
+      "subtitle": "Įveskite el. paštą, pavadinkite restoraną ir iškart gaukite pilną svetainę su QR meniu, kontaktų puslapiu su žemėlapiu ir moderniu prisitaikančiu dizainu. Jokio kodavimo, jokių dizainerių.",
+      "cta": "Sukurkite savo meniu",
+      "ctaDemo": "Peržiūrėti demo",
+      "noCreditCard": "Kreditinės kortelės nereikia. Nemokamas planas prieinamas."
+    },
+    "features": {
+      "title": "Kaip tai veikia",
+      "subtitle": "Nuo nulio iki veikiančios restorano svetainės trimis žingsniais.",
+      "items": [
+        {
+          "title": "Užsiregistruokite tik su el. paštu",
+          "description": "Jokių sudėtingų registracijos formų. Įveskite el. paštą, patvirtinkite kodu ir jūsų restorano valdymo skydelis paruoštas. Pavadinkite savo restoraną ir svetainė iškart tampa aktyvi."
+        },
+        {
+          "title": "Viskas įtraukta nuo pat pradžių",
+          "description": "Jūsų svetainėje yra QR meniu, kontaktų puslapis su Google Maps, kalbų palaikymas, mobiliajam prisitaikantis dizainas ir jūsų unikalus URL. Tiesiog pridėkite patiekalus ir pradėkite dalintis."
+        }
+      ]
+    },
+    "faq": {
+      "title": "Dažnai užduodami klausimai",
+      "subtitle": "Viskas, ką reikia žinoti apie restorano svetainės kūrimą.",
+      "items": [
+        {
+          "question": "Kaip sukurti nemokamą restorano svetainę?",
+          "answer": "Įveskite el. paštą IQ Rest, patvirtinkite kodu, pavadinkite restoraną — paruošta. Jūsų svetainė su QR meniu veikia per mažiau nei 5 minutes. Kreditinės kortelės nereikia."
+        },
+        {
+          "question": "Ar man reikia techninių įgūdžių?",
+          "answer": "Ne. Viskas sukurta restoranų savininkams, ne programuotojams. Pridėkite patiekalus, įkelkite nuotraukas ir valdykite svetainę visiškai iš telefono."
+        },
+        {
+          "question": "Kas įtraukta į nemokamą planą?",
+          "answer": "Pilna restorano svetainė, QR meniu, kontaktų puslapis su žemėlapiu, analitika, individuali spalvų schema ir iki 2 kalbų. Jokio bandomojo laikotarpio — tai nemokamai amžinai."
+        },
+        {
+          "question": "Ar galiu naudoti savo domeno vardą?",
+          "answer": "Nemokamame ir Growth planuose jūsų svetainė talpinama adresu iq-rest.com/m/jūsų-pavadinimas. Pro planas palaiko individualius domenų vardus pilnai prekės ženklo kontrolei."
+        }
+      ]
+    },
+    "howItWorks": {
+      "title": "Kaip tai veikia",
+      "subtitle": "Nuo nulio iki gyvos restorano svetainės keturiais žingsniais.",
+      "steps": [
+        {
+          "title": "Įveskite savo el. paštą",
+          "description": "Slaptažodis nereikalingas. Tiesiog įrašykite savo el. pašto adresą ir spustelėkite Tęsti. Nėra ilgo registracijos proceso, nereikia kredito kortelės ir jokių įsipareigojimų."
+        },
+        {
+          "title": "Patvirtinkite su kodu",
+          "description": "Patikrinkite savo gautuosius, ar yra 4 skaitmenų patvirtinimo kodas. Įveskite jį, kad saugiai prisijungtumėte. Šis be slaptažodžio metodas reiškia, kad reikia mažiau dalykų atsiminti."
+        },
+        {
+          "title": "Pavadinkite savo restoraną",
+          "description": "Duokite savo restoranui pavadinimą. Jis taps jūsų svetainės URL ir meniu pavadinimu. Visada galite jį pakeisti vėliau savo valdymo skydelyje."
+        },
+        {
+          "title": "Jūsų svetainė paruošta",
+          "description": "Pilna restorano svetainė su QR meniu, kontaktų puslapiu su žemėlapiu ir reaguojančiu dizainu yra gyva iš karto adresu iq-rest.com/m/jūsų-pavadinimas. Pridėkite savo patiekalus ir pradėkite dalintis."
+        }
+      ]
+    }
+  },
+  "analyticsPage": {
+    "seo": {
+      "title": "Restorano analitika ir QR meniu statistika — Sekite lankytojus | IQ Rest",
+      "description": "Sekite QR meniu nuskaitymus, puslapių peržiūras, populiarias kalbas ir lankytojų tendencijas. Realaus laiko analitikos valdymo skydelis jūsų restorano svetainei."
+    },
+    "hero": {
+      "badge": "Analitika",
+      "title": "Matykite tiksliai, kaip svečiai naudoja jūsų QR meniu",
+      "subtitle": "Sekite kasdienius nuskaitymus, puslapių peržiūras, populiarias kalbas, įrenginių statistiką ir tendencijas laikui bėgant. Priimkite duomenimis pagrįstus sprendimus meniu optimizavimui ir verslo augimui.",
+      "cta": "Sukurkite savo meniu",
+      "ctaDemo": "Peržiūrėti demo",
+      "noCreditCard": "Kreditinės kortelės nereikia. Nemokamas planas prieinamas."
+    },
+    "features": {
+      "title": "Ką galite sekti",
+      "subtitle": "Realaus laiko įžvalgos apie jūsų restorano buvimą internete.",
+      "items": [
+        {
+          "title": "Kasdienės peržiūros, nuskaitymai ir lankytojų tendencijos",
+          "description": "Matykite, kiek žmonių nuskenuoja jūsų QR kodą ir aplanko meniu kasdien, kas savaitę ir kas mėnesį. Sekite tendencijas laikui bėgant, kad suprastumėte sezoninius modelius ir įvertintumėte akcijų poveikį."
+        },
+        {
+          "title": "Kalbų ir įrenginių pasiskirstymas",
+          "description": "Žinokite, kurias kalbas jūsų svečiai renkasi ir kokius įrenginius naudoja. Šie duomenys padeda prioritizuoti vertimus ir užtikrinti, kad meniu puikiai atrodo populiariausiuose įrenginiuose."
+        }
+      ]
+    },
+    "faq": {
+      "title": "Dažnai užduodami klausimai",
+      "subtitle": "Viskas, ką reikia žinoti apie restorano analitiką.",
+      "items": [
+        {
+          "question": "Kokius rodiklius galiu sekti?",
+          "answer": "Kasdienes, kassavaitines ir kasmėnesines puslapių peržiūras. Unikalius lankytojus. Dažniausiai peržiūrimus puslapius. Kalbų pasirinkimus. Įrenginių ir naršyklių pasiskirstymą. Viskas atnaujinama realiu laiku."
+        },
+        {
+          "question": "Ar analitika įtraukta į nemokamą planą?",
+          "answer": "Taip. Pagrindinė analitika prieinama kiekviename plane, įskaitant nemokamą. Galite matyti peržiūras, lankytojus ir kalbų statistiką nuo pirmos dienos."
+        },
+        {
+          "question": "Ar galiu matyti, kurie puslapiai populiariausi?",
+          "answer": "Taip. Valdymo skydelis rodo peržiūras pagal puslapius — pagrindinis, meniu, kontaktai, rezervacijos ir kalbos pasirinkimas. Matykite tiksliai, kur svečiai praleidžia laiką."
+        },
+        {
+          "question": "Kiek toli atgal siekia duomenys?",
+          "answer": "Analitikos duomenys saugomi nuo restorano sukūrimo dienos. Galite peržiūrėti kasdienes, kassavaitines ir kasmėnesines tendencijas visoje istorijoje."
+        }
+      ]
+    },
+    "howItWorks": {
+      "title": "Kaip tai veikia",
+      "subtitle": "Pradėkite stebėti savo restorano veiklą keturiais žingsniais.",
+      "steps": [
+        {
+          "title": "Sukurkite savo restoraną",
+          "description": "Analitika pradeda stebėti nuo momento, kai jūsų meniu tampa aktyvus. Nereikia nieko konfigūruoti — kiekvienas puslapio peržiūra, QR nuskaitymas ir lankytojas fiksuojami automatiškai."
+        },
+        {
+          "title": "Pasidalykite savo QR kodu",
+          "description": "Išspausdinkite savo QR kodą ir padėkite jį ant stalų, prie įėjimo arba ant išsinešimo pakuočių. Kiekvienas nuskaitymas fiksuojamas su laiko žyma, kalba, įrenginio tipu ir aplankytu puslapiu."
+        },
+        {
+          "title": "Atidarykite analitikos skydelį",
+          "description": "Peržiūrėkite kasdienes, savaitines ir mėnesines statistiką su aiškiais grafika. Sekite bendrą peržiūrų skaičių, unikalius lankytojus ir tendencijas laikui bėgant iš vieno skydelio ekrano."
+        },
+        {
+          "title": "Išnagrinėkite išsamius duomenis",
+          "description": "Peržiūrėkite statistiką, suskirstytą pagal puslapį (meniu, kontaktai, rezervacijos), pageidaujamą kalbą, įrenginio tipą ir naršyklę. Naudokite šiuos duomenis, kad optimizuotumėte savo meniu ir prioritetizuotumėte vertimus."
+        }
+      ]
+    }
+  },
+  "aiImagesPage": {
+    "seo": {
+      "title": "DI maisto nuotraukų generavimas meniu — Restorano meniu vaizdai | IQ Rest",
+      "description": "Generuokite gražias maisto nuotraukas savo meniu su DI. Fotografo nereikia — gaukite profesionalius patiekalų vaizdus per sekundes, optimizuotus jūsų QR meniu."
+    },
+    "hero": {
+      "badge": "DI vaizdai",
+      "title": "Profesionalios meniu nuotraukos be fotografo",
+      "subtitle": "Generuokite nuostabius maisto vaizdus savo patiekalams su DI. Tiesiog įveskite patiekalo pavadinimą ir gaukite gražią, optimizuotą nuotrauką, paruoštą jūsų QR meniu — per sekundes.",
+      "cta": "Sukurkite savo meniu",
+      "ctaDemo": "Peržiūrėti demo",
+      "noCreditCard": "Kreditinės kortelės nereikia. Nemokamas planas prieinamas."
+    },
+    "features": {
+      "title": "Kaip veikia DI vaizdų generavimas",
+      "subtitle": "Nuo patiekalo pavadinimo iki profesionalios nuotraukos vienu paspaudimu.",
+      "items": [
+        {
+          "title": "Generuokite vaizdus iš patiekalų pavadinimų",
+          "description": "Įveskite patiekalo pavadinimą — 'Keptas lašišas su citrina', 'Margherita pica', 'Šokoladinis lavos pyragas' — ir DI sugeneruoja profesionalią maisto nuotrauką. Rinkitės iš kelių stilių ir fonų."
+        },
+        {
+          "title": "Optimizuota greitam įkėlimui",
+          "description": "Kiekvienas sugeneruotas vaizdas automatiškai suglaudinamas ir konvertuojamas į šiuolaikinius formatus. Jūsų meniu lieka žaibiškai greitas bet kuriame įrenginyje, net su nuotraukomis prie kiekvieno patiekalo."
+        }
+      ]
+    },
+    "faq": {
+      "title": "Dažnai užduodami klausimai",
+      "subtitle": "Viskas, ką reikia žinoti apie DI meniu vaizdus.",
+      "items": [
+        {
+          "question": "Kaip sugeneruoti maisto nuotrauką?",
+          "answer": "Atidarykite bet kurį meniu elementą valdymo skydelyje, paspauskite 'Generuoti vaizdą' ir DI sukuria profesionalią maisto nuotrauką pagal patiekalo pavadinimą ir aprašymą. Pasirinkite tą, kuri patinka."
+        },
+        {
+          "question": "Ar galiu naudoti savo nuotraukas?",
+          "answer": "Žinoma. Įkelkite savo nuotraukas iš telefono ar kompiuterio. DI generavimas yra neprivalomas — naudokite jį, kai nuotraukos neturite po ranka."
+        },
+        {
+          "question": "Kiek vaizdų galiu sugeneruoti?",
+          "answer": "Vaizdų generavimo limitai priklauso nuo jūsų plano. Growth apima mėnesinį kiekį, o Pro siūlo didesnį limitą. Savo nuotraukas visada galite įkelti be apribojimų."
+        },
+        {
+          "question": "Ar sugeneruoti vaizdai yra unikalūs mano restoranui?",
+          "answer": "Taip. Kiekvienas vaizdas generuojamas unikaliai jūsų konkrečiam patiekalui. Jokių sandėlio nuotraukų — kiekvienas vaizdas kuriamas iš naujo pagal jūsų meniu elementą."
+        }
+      ]
+    },
+    "howItWorks": {
+      "title": "Kaip tai veikia",
+      "subtitle": "Gaukite profesionalių maisto nuotraukų savo meniu keturiais paprastais žingsniais.",
+      "steps": [
+        {
+          "title": "Atidarykite bet kurį meniu elementą",
+          "description": "Eikite į elementą, kurio nuotrauką norite gauti savo valdymo skydelyje. Galite generuoti vaizdus naujiems patiekalams arba pakeisti esamas nuotraukas bet kuriame meniu elemente."
+        },
+        {
+          "title": "Paspauskite Generuoti vaizdą",
+          "description": "AI sukuria profesionalią maisto nuotrauką remdamasi patiekalo pavadinimu ir aprašymu. Kuo daugiau detalių pateiksite aprašyme, tuo tikslesnis bus rezultatas."
+        },
+        {
+          "title": "Peržiūrėkite rezultatą",
+          "description": "Peržiūrėkite sugeneruotą vaizdą prieš jį taikydami. Jei norite kitokio vaizdo, regeneruokite, kad gautumėte naują variantą. Kiekviena generacija sukuria unikalų vaizdą."
+        },
+        {
+          "title": "Naudokite savo meniu",
+          "description": "Vaizdas automatiškai optimizuojamas, kompresuojamas į WebP formatą ir iš karto pasirodo jūsų gyvame meniu. Svečiai mato profesionalias maisto nuotraukas kiekvienam patiekalui."
+        }
+      ]
+    }
+  },
+  "personalSupportPage": {
+    "seo": {
+      "title": "Asmeninis palaikymas jūsų restorano svetainei — Tikra žmonių pagalba | IQ Rest",
+      "description": "Gaukite asmeninę pagalbą iš tikrų žmonių, ne pokalbių robotų. Pagalba nustatant, meniu optimizavimo patarimai ir greiti atsakymai — prieinama kiekviename plane, įskaitant nemokamą."
+    },
+    "hero": {
+      "badge": "Asmeninis palaikymas",
+      "title": "Tikri žmonės, tikra pagalba — ne pokalbių robotai",
+      "subtitle": "Turite klausimą? Reikia pagalbos nustatant meniu? Norite pasiūlyti funkciją? Parašykite mums tiesiogiai ir gaukite asmeninį atsakymą nuo žmogaus, kuris supranta restoranus.",
+      "cta": "Sukurkite savo meniu",
+      "ctaDemo": "Peržiūrėti demo",
+      "noCreditCard": "Kreditinės kortelės nereikia. Nemokamas planas prieinamas."
+    },
+    "features": {
+      "title": "Kaip veikia palaikymas",
+      "subtitle": "Pagalba, kai jos reikia, nuo žmonių, kuriems rūpi.",
+      "items": [
+        {
+          "title": "Parašykite mums tiesiogiai iš valdymo skydelio",
+          "description": "Atidarykite palaikymo pokalbį valdymo skydelyje ir aprašykite savo klausimą. Tikras žmogus perskaito jūsų žinutę ir atsako — paprastai per kelias valandas darbo dienomis."
+        },
+        {
+          "title": "Pagalba nustatant, optimizuojant ir ne tik",
+          "description": "Ar reikia pagalbos pridedant pirmą patiekalą, patarimo dėl meniu organizavimo ar norite pasiūlyti naują funkciją — mes čia. Kiekvienas klausimas svarbus, nesvarbu koks mažas."
+        }
+      ]
+    },
+    "faq": {
+      "title": "Dažnai užduodami klausimai",
+      "subtitle": "Viskas, ką reikia žinoti apie mūsų palaikymą.",
+      "items": [
+        {
+          "question": "Ar palaikymas prieinamas nemokamame plane?",
+          "answer": "Taip. Asmeninis palaikymas prieinamas kiekviename plane, įskaitant nemokamą. Tikime, kad kiekvienas restoranas nusipelno tikros pagalbos, nepriklausomai nuo prenumeratos."
+        },
+        {
+          "question": "Kaip greitai atsakote?",
+          "answer": "Paprastai per kelias valandas darbo dienomis. Skaitome kiekvieną žinutę asmeniškai ir siekiame išspręsti klausimą vienu atsakymu."
+        },
+        {
+          "question": "Ar galite padėti man nustatyti meniu?",
+          "answer": "Žinoma. Jei reikia pagalbos pridedant patiekalus, organizuojant kategorijas, nustatant vertimus ar konfigūruojant rezervacijas — tiesiog paklauskite. Mielai padėsime žingsnis po žingsnio."
+        },
+        {
+          "question": "Ar galiu pasiūlyti naujas funkcijas?",
+          "answer": "Taip, ir mes tai mylime! Daugelis mūsų funkcijų prasidėjo kaip vartotojų pasiūlymai. Parašykite mums savo idėją ir mes apsvarstysime ją būsimiems atnaujinimams."
+        }
+      ]
+    },
+    "howItWorks": {
+      "title": "Kaip tai veikia",
+      "subtitle": "Gaukite pagalbą iš tikro žmogaus keturiais paprastais žingsniais.",
+      "steps": [
+        {
+          "title": "Atidarykite pagalbos pokalbį",
+          "description": "Eikite į Pagalbos puslapį savo valdymo skydelyje. Pamatysite paprastą pokalbių sąsają, kur galite tiesiogiai įvesti savo žinutę — jokių bilietų formų ar kategorijų pasirinkimui."
+        },
+        {
+          "title": "Apibūdinkite savo klausimą",
+          "description": "Įveskite savo žinutę. Klauskite apie nustatymus, funkcijas, meniu optimizavimą, apmokėjimą ar bet ką kitą. Nėra kvailų klausimų — mes džiaugiamės galėdami padėti su viskuo."
+        },
+        {
+          "title": "Gaukite asmeninį atsakymą",
+          "description": "Tikras žmogus (ne chatbotas) perskaito jūsų žinutę ir atsako per kelias valandas. Mes suprantame restoranų darbo procesus ir teikiame praktiškus, veiksmingus atsakymus."
+        },
+        {
+          "title": "Nuolatinė pagalba",
+          "description": "Prašykite funkcijų pasiūlymų, gaukite meniu optimizavimo patarimų arba bet kada klauskite pagalbos nustatymuose. Jūsų pokalbių istorija yra išsaugota, todėl visada turime kontekstą iš ankstesnių klausimų."
+        }
+      ]
+    }
   }
 }

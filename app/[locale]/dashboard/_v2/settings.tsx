@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+import { useTranslations } from "next-intl";
 import { ChevronRightIcon, CheckIcon, CopyIcon, SendIcon, SparklesIcon, CloseIcon } from "./icons";
 import {
  AiImageModal,
@@ -84,6 +85,8 @@ export function AboutSettingsPage({
  setRestaurant: React.Dispatch<React.SetStateAction<Restaurant>>;
  onBack: () => void;
 }) {
+ const t = useTranslations("dashboard.settings");
+ const ta = useTranslations("dashboard.settings.about");
  const [draft, setDraft] = useState({
  name: restaurant.name,
  subtitle: restaurant.subtitle,
@@ -124,36 +127,36 @@ export function AboutSettingsPage({
  <SubpageStickyBar onBack={onBack} onSave={save} canSave={canSave} />
  <div className="max-w-2xl mx-auto pt-5 md:pt-4">
  <div className="mb-5">
- <div className="text-xs text-muted-foreground">Settings</div>
- <h2 className="text-xl font-medium text-foreground mt-1">About</h2>
+ <div className="text-xs text-muted-foreground">{t("breadcrumb")}</div>
+ <h2 className="text-xl font-medium text-foreground mt-1">{ta("title")}</h2>
  </div>
  <div className="bg-card border border-border rounded-2xl p-5 md:p-6">
- <label htmlFor="about-title" className="block text-sm font-medium text-foreground mb-1.5">Title</label>
+ <label htmlFor="about-title" className="block text-sm font-medium text-foreground mb-1.5">{ta("titleLabel")}</label>
  <input
  id="about-title"
  type="text"
  value={draft.name}
  onChange={(e) => setDraft((d) => ({ ...d, name: e.target.value }))}
- placeholder="Love Eatery"
+ placeholder={ta("titlePlaceholder")}
  className={inputClass}
  />
  <Divider />
- <label htmlFor="about-subtitle" className="block text-sm font-medium text-foreground mb-1.5">Subtitle</label>
+ <label htmlFor="about-subtitle" className="block text-sm font-medium text-foreground mb-1.5">{ta("subtitleLabel")}</label>
  <input
  id="about-subtitle"
  type="text"
  value={draft.subtitle}
  onChange={(e) => setDraft((d) => ({ ...d, subtitle: e.target.value }))}
- placeholder="Love at the first bite"
+ placeholder={ta("subtitlePlaceholder")}
  className={inputClass}
  />
  </div>
  <div className="bg-card border border-border rounded-2xl p-5 md:p-6 mt-3">
  <label className="flex items-center justify-between gap-3 cursor-pointer select-none">
  <div>
- <div className="text-sm font-medium text-foreground">Show title on homepage</div>
+ <div className="text-sm font-medium text-foreground">{ta("showTitleLabel")}</div>
  <div className="text-xs text-muted-foreground leading-snug mt-0.5">
- Displayed on the homepage of your public website.
+ {ta("showTitleTip")}
  </div>
  </div>
  <ToggleSwitch
@@ -178,6 +181,8 @@ export function ContactsSettingsPage({
  setRestaurant: React.Dispatch<React.SetStateAction<Restaurant>>;
  onBack: () => void;
 }) {
+ const t = useTranslations("dashboard.settings");
+ const tc = useTranslations("dashboard.settings.contacts");
  const [draft, setDraft] = useState({
  contacts: { ...restaurant.contacts },
  location: { ...restaurant.location },
@@ -224,27 +229,26 @@ export function ContactsSettingsPage({
  <SubpageStickyBar onBack={onBack} onSave={save} canSave />
  <div className="max-w-2xl mx-auto pt-5 md:pt-4">
  <div className="mb-5">
- <div className="text-xs text-muted-foreground">Settings</div>
- <h2 className="text-xl font-medium text-foreground mt-1">Contacts & location</h2>
+ <div className="text-xs text-muted-foreground">{t("breadcrumb")}</div>
+ <h2 className="text-xl font-medium text-foreground mt-1">{tc("title")}</h2>
  </div>
- {/* Contacts card */}
  <div className="bg-card border border-border rounded-2xl p-5 md:p-6">
- <div className="text-sm font-medium text-foreground">Contacts</div>
+ <div className="text-sm font-medium text-foreground">{tc("contactsHeader")}</div>
  <p className="text-xs text-muted-foreground mb-4 mt-0.5 leading-snug">
- Shown on the contacts page of your public menu.
+ {tc("contactsTip")}
  </p>
 
- <label htmlFor="con-phone" className="block text-sm font-medium text-foreground mb-1.5">Phone</label>
+ <label htmlFor="con-phone" className="block text-sm font-medium text-foreground mb-1.5">{tc("phoneLabel")}</label>
  <input
  id="con-phone"
  type="tel"
  value={draft.contacts.phone}
  onChange={(e) => setDraft((d) => ({ ...d, contacts: { ...d.contacts, phone: e.target.value } }))}
- placeholder="+34 612 345 678"
+ placeholder={tc("phonePlaceholder")}
  className={inputClass}
  />
 
- <label htmlFor="con-ig" className="block text-sm font-medium text-foreground mb-1.5 mt-3">Instagram</label>
+ <label htmlFor="con-ig" className="block text-sm font-medium text-foreground mb-1.5 mt-3">{tc("instagramLabel")}</label>
  <div className="relative">
  <span className="absolute left-3 top-1/2 -translate-y-1/2 text-sm text-muted-foreground pointer-events-none">@</span>
  <input
@@ -257,27 +261,26 @@ export function ContactsSettingsPage({
  contacts: { ...d.contacts, instagram: e.target.value.replace(/^@/, "") },
  }))
  }
- placeholder="latrattoria"
+ placeholder={tc("instagramPlaceholder")}
  className={inputClass + " pl-7"}
  />
  </div>
 
- <label htmlFor="con-wa" className="block text-sm font-medium text-foreground mb-1.5 mt-3">WhatsApp</label>
+ <label htmlFor="con-wa" className="block text-sm font-medium text-foreground mb-1.5 mt-3">{tc("whatsappLabel")}</label>
  <input
  id="con-wa"
  type="tel"
  value={draft.contacts.whatsapp}
  onChange={(e) => setDraft((d) => ({ ...d, contacts: { ...d.contacts, whatsapp: e.target.value } }))}
- placeholder="+34 612 345 678"
+ placeholder={tc("phonePlaceholder")}
  className={inputClass}
  />
  </div>
 
- {/* Location card */}
  <div className="bg-card border border-border rounded-2xl p-5 md:p-6 mt-3">
- <div className="text-sm font-medium text-foreground">Location</div>
+ <div className="text-sm font-medium text-foreground">{tc("locationHeader")}</div>
  <p className="text-xs text-muted-foreground mb-4 mt-0.5 leading-snug">
- Address and map shown on your public contacts page. Search or tap the map to set the pin.
+ {tc("locationTip")}
  </p>
 
  <div className="rounded-lg overflow-hidden border border-border">
@@ -306,6 +309,8 @@ export function BrandingSettingsPage({
  setRestaurant: React.Dispatch<React.SetStateAction<Restaurant>>;
  onBack: () => void;
 }) {
+ const t = useTranslations("dashboard.settings");
+ const tb = useTranslations("dashboard.settings.branding");
  const [draft, setDraft] = useState({
  backgroundUrl: restaurant.backgroundUrl,
  backgroundType: restaurant.backgroundType,
@@ -371,13 +376,13 @@ export function BrandingSettingsPage({
  <SubpageStickyBar onBack={onBack} onSave={save} canSave />
  <div className="max-w-2xl mx-auto pt-5 md:pt-4">
  <div className="mb-5">
- <div className="text-xs text-muted-foreground">Settings</div>
- <h2 className="text-xl font-medium text-foreground mt-1">Branding</h2>
+ <div className="text-xs text-muted-foreground">{t("breadcrumb")}</div>
+ <h2 className="text-xl font-medium text-foreground mt-1">{tb("title")}</h2>
  </div>
  <div className="bg-card border border-border rounded-2xl p-5 md:p-6">
- <div className="text-sm font-medium text-foreground">Accent color</div>
+ <div className="text-sm font-medium text-foreground">{tb("accentLabel")}</div>
  <p className="text-xs text-muted-foreground mb-3 mt-0.5 leading-snug">
- Main color for buttons and highlights.
+ {tb("accentTip")}
  </p>
  <style>{`
  .accent-grid { display: grid; grid-template-columns: repeat(7, minmax(0, 1fr)); gap: 0.5rem; }
@@ -399,7 +404,7 @@ export function BrandingSettingsPage({
  (isSelected ? "ring-2 ring-offset-2 ring-foreground" : "")
  }
  style={{ backgroundColor: c }}
- aria-label={"Color " + c}
+ aria-label={tb("colorAria", { hex: c })}
  />
  );
  })}
@@ -416,7 +421,7 @@ export function BrandingSettingsPage({
  background:
  "conic-gradient(from 0deg, #ff0000, #ffff00, #00ff00, #00ffff, #0000ff, #ff00ff, #ff0000)",
  }}
- aria-label="Custom color"
+ aria-label={tb("customColor")}
  />
  <input
  ref={colorPickerRef}
@@ -431,14 +436,14 @@ export function BrandingSettingsPage({
  <Divider />
 
  <div className="flex items-center justify-between gap-3 mb-2.5">
- <div className="text-sm font-medium text-foreground">Background</div>
+ <div className="text-sm font-medium text-foreground">{tb("backgroundLabel")}</div>
  <button
  type="button"
  onClick={() => setAiOpen(true)}
  className="inline-flex items-center gap-1 text-[11px] font-medium text-muted-foreground transition-colors"
  >
  <SparklesIcon size={11} />
- Generate with AI
+ {tb("generateAi")}
  </button>
  </div>
  <label
@@ -466,13 +471,13 @@ export function BrandingSettingsPage({
  removeBackground();
  }}
  className="absolute top-1.5 right-1.5 w-6 h-6 flex items-center justify-center rounded-full bg-black/50 text-white transition-colors"
- aria-label="Remove background"
+ aria-label={tb("removeBackground")}
  >
  <CloseIcon size={12} />
  </button>
  {draft.backgroundType === "video" ? (
  <span className="absolute bottom-1.5 left-1.5 inline-flex items-center h-5 px-1.5 text-[10px] font-medium text-white bg-black/50 rounded">
- VIDEO
+ {tb("video")}
  </span>
  ) : null}
  </>
@@ -483,7 +488,7 @@ export function BrandingSettingsPage({
  <circle cx="9" cy="9" r="2" />
  <path d="m21 15-3.086-3.086a2 2 0 0 0-2.828 0L6 21" />
  </svg>
- <span className="text-[11px] font-medium text-center px-2 leading-snug">Upload image or video</span>
+ <span className="text-[11px] font-medium text-center px-2 leading-snug">{tb("uploadHint")}</span>
  </>
  )}
  <input
@@ -496,7 +501,7 @@ export function BrandingSettingsPage({
  />
  </label>
  <p className="text-xs text-muted-foreground mt-2 leading-snug text-center">
- Shown as the homepage background of your public website.
+ {tb("backgroundTip")}
  </p>
  </div>
  </div>
@@ -506,8 +511,8 @@ export function BrandingSettingsPage({
  onClose={() => setAiOpen(false)}
  onUse={(url) => setDraft((d) => ({ ...d, backgroundUrl: url, backgroundType: "image" }))}
  endpoint="/api/restaurant/generate-background"
- title="Generate background"
- placeholder="e.g. Cozy candlelit table with rustic plates and warm wood"
+ title={tb("aiTitle")}
+ placeholder={tb("aiPlaceholder")}
  aspect="portrait"
  />
  </div>
@@ -525,6 +530,8 @@ export function GeneralSettingsPage({
  setRestaurant: React.Dispatch<React.SetStateAction<Restaurant>>;
  onBack: () => void;
 }) {
+ const t = useTranslations("dashboard.settings");
+ const tg = useTranslations("dashboard.settings.general");
  const [draft, setDraft] = useState({
  slug: restaurant.slug || slugify(restaurant.name),
  currency: restaurant.currency,
@@ -575,11 +582,11 @@ export function GeneralSettingsPage({
  <SubpageStickyBar onBack={onBack} onSave={save} canSave={canSave} />
  <div className="max-w-2xl mx-auto pt-5 md:pt-4">
  <div className="mb-5">
- <div className="text-xs text-muted-foreground">Settings</div>
- <h2 className="text-xl font-medium text-foreground mt-1">General</h2>
+ <div className="text-xs text-muted-foreground">{t("breadcrumb")}</div>
+ <h2 className="text-xl font-medium text-foreground mt-1">{tg("title")}</h2>
  </div>
  <div className="bg-card border border-border rounded-2xl p-5 md:p-6">
- <label htmlFor="gen-slug" className="block text-sm font-medium text-foreground mb-1.5">Menu link</label>
+ <label htmlFor="gen-slug" className="block text-sm font-medium text-foreground mb-1.5">{tg("menuLinkLabel")}</label>
  <div className="relative">
  <span className="absolute left-3 top-1/2 -translate-y-1/2 text-sm text-muted-foreground pointer-events-none">
  iq-rest.com/m/
@@ -589,7 +596,7 @@ export function GeneralSettingsPage({
  type="text"
  value={draft.slug}
  onChange={(e) => setDraft((d) => ({ ...d, slug: slugify(e.target.value) }))}
- placeholder="your-slug"
+ placeholder={tg("slugPlaceholder")}
  className={inputClass + " pr-10"}
  style={{ paddingLeft: "112px" }}
  />
@@ -597,22 +604,22 @@ export function GeneralSettingsPage({
  type="button"
  onClick={copyUrl}
  className="absolute right-1.5 top-1/2 -translate-y-1/2 w-8 h-8 flex items-center justify-center rounded-md text-muted-foreground transition-colors"
- aria-label="Copy URL"
- title="Copy URL"
+ aria-label={tg("copyUrl")}
+ title={tg("copyUrl")}
  >
  {copied ? <CheckIcon size={14} /> : <CopyIcon size={14} />}
  </button>
  </div>
  <p className="text-xs text-muted-foreground mt-1.5 leading-snug">
- Your unique URL where customers can view your menu.
+ {tg("menuLinkTip")}
  </p>
  {!validSlug && draft.slug.length > 0 ? (
- <p className="text-xs text-red-600 mt-1">Use 2–40 lowercase letters, digits, or hyphens.</p>
+ <p className="text-xs text-red-600 mt-1">{tg("slugError")}</p>
  ) : null}
 
  <Divider />
 
- <label htmlFor="gen-currency" className="block text-sm font-medium text-foreground mb-1.5">Currency</label>
+ <label htmlFor="gen-currency" className="block text-sm font-medium text-foreground mb-1.5">{tg("currencyLabel")}</label>
  <select
  id="gen-currency"
  value={draft.currency}
@@ -628,7 +635,7 @@ export function GeneralSettingsPage({
  </option>
  ))}
  </select>
- <p className="text-xs text-muted-foreground mt-1.5 leading-snug">Used for prices in your menu.</p>
+ <p className="text-xs text-muted-foreground mt-1.5 leading-snug">{tg("currencyTip")}</p>
  </div>
  </div>
  </div>
@@ -646,6 +653,8 @@ export function OrderSettingsPage({
  setRestaurant: React.Dispatch<React.SetStateAction<Restaurant>>;
  onBack: () => void;
 }) {
+ const t = useTranslations("dashboard.settings");
+ const to = useTranslations("dashboard.settings.orders");
  const [draft, setDraft] = useState(restaurant.orderSettings);
 
  useEffect(() => {
@@ -688,15 +697,15 @@ export function OrderSettingsPage({
  <SubpageStickyBar onBack={onBack} onSave={save} canSave={canSave} />
  <div className="max-w-2xl mx-auto pt-5 md:pt-4">
  <div className="mb-5">
- <div className="text-xs text-muted-foreground">Settings</div>
- <h2 className="text-xl font-medium text-foreground mt-1">Orders</h2>
+ <div className="text-xs text-muted-foreground">{t("breadcrumb")}</div>
+ <h2 className="text-xl font-medium text-foreground mt-1">{to("title")}</h2>
  </div>
  <div className="bg-card border border-border rounded-2xl p-5 md:p-6">
  <label className="flex items-center justify-between gap-3 cursor-pointer select-none">
  <div>
- <div className="text-sm font-medium text-foreground">Accept orders</div>
+ <div className="text-sm font-medium text-foreground">{to("acceptLabel")}</div>
  <div className="text-xs text-muted-foreground leading-snug mt-0.5">
- When off, guests can browse the menu but can&apos;t place orders.
+ {to("acceptTip")}
  </div>
  </div>
  <ToggleSwitch
@@ -711,12 +720,12 @@ export function OrderSettingsPage({
 
  <div className={"bg-card border border-border rounded-2xl p-5 md:p-6 mt-3 " + (disabled ? "opacity-50 pointer-events-none" : "")}>
  <div>
- <div className="text-sm font-medium text-foreground">Order mode</div>
+ <div className="text-sm font-medium text-foreground">{to("modeLabel")}</div>
  <p className="text-xs text-muted-foreground mb-4 mt-0.5">
- Internal orders are saved in the dashboard. WhatsApp orders are sent directly to your WhatsApp. You can enable both.
+ {to("modeTip")}
  </p>
  <label className="flex items-center justify-between gap-3 cursor-pointer select-none">
- <div className="text-sm text-foreground">Internal</div>
+ <div className="text-sm text-foreground">{to("internal")}</div>
  <ToggleSwitch
  checked={draft.modes.internal}
  onChange={() =>
@@ -726,7 +735,7 @@ export function OrderSettingsPage({
  </label>
  <div className="border-t border-border my-2.5" />
  <label className="flex items-center justify-between gap-3 cursor-pointer select-none">
- <div className="text-sm text-foreground">WhatsApp</div>
+ <div className="text-sm text-foreground">{to("whatsapp")}</div>
  <ToggleSwitch
  checked={draft.modes.whatsapp}
  onChange={() =>
@@ -734,22 +743,22 @@ export function OrderSettingsPage({
  }
  />
  </label>
- {!hasMode ? <p className="text-xs text-red-600 mt-2">Enable at least one mode.</p> : null}
+ {!hasMode ? <p className="text-xs text-red-600 mt-2">{to("modeError")}</p> : null}
  </div>
  </div>
 
  <div className={"bg-card border border-border rounded-2xl p-5 md:p-6 mt-3 " + (disabled ? "opacity-50 pointer-events-none" : "")}>
  <div>
- <div className="text-sm font-medium text-foreground">Required fields</div>
+ <div className="text-sm font-medium text-foreground">{to("requiredFieldsLabel")}</div>
  <p className="text-xs text-muted-foreground mb-4 mt-0.5">
- Enabled fields will be required for the customer to fill in when placing an order.
+ {to("requiredFieldsTip")}
  </p>
  {(["name", "phone", "address"] as const).map((key, idx) => (
  <div key={key}>
  {idx > 0 ? <div className="border-t border-border my-2.5" /> : null}
  <label className="flex items-center justify-between gap-3 cursor-pointer select-none">
  <div className="text-sm text-foreground">
- {key === "name" ? "Name" : key === "phone" ? "Phone" : "Address"}
+ {key === "name" ? to("fieldName") : key === "phone" ? to("fieldPhone") : to("fieldAddress")}
  </div>
  <ToggleSwitch
  checked={draft.requiredFields[key]}
@@ -781,6 +790,8 @@ export function BookingSettingsPage({
  setRestaurant: React.Dispatch<React.SetStateAction<Restaurant>>;
  onBack: () => void;
 }) {
+ const t = useTranslations("dashboard.settings");
+ const tb = useTranslations("dashboard.settings.bookings");
  const [draft, setDraft] = useState(restaurant.bookingSettings);
 
  useEffect(() => {
@@ -817,15 +828,15 @@ export function BookingSettingsPage({
  <SubpageStickyBar onBack={onBack} onSave={save} canSave={canSave} />
  <div className="max-w-2xl mx-auto pt-5 md:pt-4">
  <div className="mb-5">
- <div className="text-xs text-muted-foreground">Settings</div>
- <h2 className="text-xl font-medium text-foreground mt-1">Bookings</h2>
+ <div className="text-xs text-muted-foreground">{t("breadcrumb")}</div>
+ <h2 className="text-xl font-medium text-foreground mt-1">{tb("title")}</h2>
  </div>
  <div className="bg-card border border-border rounded-2xl p-5 md:p-6">
  <label className="flex items-center justify-between gap-3 cursor-pointer select-none">
  <div>
- <div className="text-sm font-medium text-foreground">Enable bookings</div>
+ <div className="text-sm font-medium text-foreground">{tb("enableLabel")}</div>
  <div className="text-xs text-muted-foreground leading-snug mt-0.5">
- When off, guests can browse the menu but can&apos;t reserve a table.
+ {tb("enableTip")}
  </div>
  </div>
  <ToggleSwitch
@@ -842,11 +853,9 @@ export function BookingSettingsPage({
  <div className={disabled ? "opacity-50 pointer-events-none" : ""}>
  <div className="flex items-center justify-between gap-3">
  <div>
- <div className="text-sm font-medium text-foreground">Confirmation mode</div>
+ <div className="text-sm font-medium text-foreground">{tb("modeLabel")}</div>
  <div className="text-xs text-muted-foreground leading-snug mt-0.5">
- {draft.approval === "auto"
- ? "Reservations are confirmed automatically."
- : "You will need to manually confirm each reservation."}
+ {draft.approval === "auto" ? tb("modeAutoTip") : tb("modeManualTip")}
  </div>
  </div>
  <select
@@ -857,8 +866,8 @@ export function BookingSettingsPage({
  }}
  className={inputClass + " w-32"}
  >
- <option value="auto">Automatic</option>
- <option value="manual">Manual</option>
+ <option value="auto">{tb("modeAuto")}</option>
+ <option value="manual">{tb("modeManual")}</option>
  </select>
  </div>
  </div>
@@ -868,9 +877,9 @@ export function BookingSettingsPage({
  <div className={disabled ? "opacity-50 pointer-events-none" : ""}>
  <div className="flex items-center justify-between gap-3">
  <div>
- <div className="text-sm font-medium text-foreground">Reservation duration</div>
+ <div className="text-sm font-medium text-foreground">{tb("durationLabel")}</div>
  <div className="text-xs text-muted-foreground leading-snug mt-0.5">
- How long a table is held per booking.
+ {tb("durationTip")}
  </div>
  </div>
  <select
@@ -880,7 +889,7 @@ export function BookingSettingsPage({
  >
  {DURATION_OPTIONS.map((min) => (
  <option key={min} value={min}>
- {min} min
+ {tb("durationMin", { min })}
  </option>
  ))}
  </select>
@@ -892,9 +901,9 @@ export function BookingSettingsPage({
  <div className={disabled ? "opacity-50 pointer-events-none" : ""}>
  <div className="flex items-center justify-between gap-3 flex-wrap">
  <div>
- <div className="text-sm font-medium text-foreground">Working hours</div>
+ <div className="text-sm font-medium text-foreground">{tb("hoursLabel")}</div>
  <div className="text-xs text-muted-foreground leading-snug mt-0.5">
- Reservations can be made within these hours.
+ {tb("hoursTip")}
  </div>
  </div>
  <div className="flex items-center gap-2">
@@ -905,9 +914,9 @@ export function BookingSettingsPage({
  }
  className={inputClass + " w-auto tabular-nums"}
  >
- {TIME_OPTIONS.map((t) => (
- <option key={t} value={t}>
- {t}
+ {TIME_OPTIONS.map((tm) => (
+ <option key={tm} value={tm}>
+ {tm}
  </option>
  ))}
  </select>
@@ -919,16 +928,16 @@ export function BookingSettingsPage({
  }
  className={inputClass + " w-auto tabular-nums"}
  >
- {TIME_OPTIONS.map((t) => (
- <option key={t} value={t}>
- {t}
+ {TIME_OPTIONS.map((tm) => (
+ <option key={tm} value={tm}>
+ {tm}
  </option>
  ))}
  </select>
  </div>
  </div>
  {!validHours ? (
- <p className="text-xs text-red-600 mt-2">&quot;From&quot; must be earlier than &quot;to&quot;.</p>
+ <p className="text-xs text-red-600 mt-2">{tb("hoursError")}</p>
  ) : null}
  </div>
  </div>
@@ -948,6 +957,9 @@ export function LanguagesSettingsPage({
  setRestaurant: React.Dispatch<React.SetStateAction<Restaurant>>;
  onBack: () => void;
 }) {
+ const t = useTranslations("dashboard.settings");
+ const tl = useTranslations("dashboard.settings.languages");
+ const tc = useTranslations("dashboard.common");
  const [draft, setDraft] = useState({
  languages: restaurant.languages,
  defaultLang: restaurant.defaultLang,
@@ -990,20 +1002,20 @@ export function LanguagesSettingsPage({
  <SubpageStickyBar onBack={onBack} onSave={save} canSave={canSave} />
  <div className="max-w-2xl mx-auto pt-5 md:pt-4">
  <div className="mb-5">
- <div className="text-xs text-muted-foreground">Settings</div>
- <h2 className="text-xl font-medium text-foreground mt-1">Languages</h2>
+ <div className="text-xs text-muted-foreground">{t("breadcrumb")}</div>
+ <h2 className="text-xl font-medium text-foreground mt-1">{tl("title")}</h2>
  </div>
  <div className="bg-card border border-border rounded-2xl p-5 md:p-6">
  <div className="flex items-baseline justify-between gap-3 mb-0.5">
- <div className="text-sm font-medium text-foreground">Available languages</div>
+ <div className="text-sm font-medium text-foreground">{tl("availableLabel")}</div>
  {draft.languages.length > 0 ? (
  <span className="text-[11px] font-medium text-muted-foreground tabular-nums">
- {draft.languages.length} selected
+ {draft.languages.length} {tc("selected")}
  </span>
  ) : null}
  </div>
  <p className="text-xs text-muted-foreground mb-3">
- Pick the languages you want for your menu. Tap to add or remove.
+ {tl("availableTip")}
  </p>
  <div className="flex flex-wrap gap-1.5">
  {AVAILABLE_LANGUAGES.map((l) => {
@@ -1027,12 +1039,12 @@ export function LanguagesSettingsPage({
  })}
  </div>
  {draft.languages.length === 0 ? (
- <p className="text-xs text-red-600 mt-2">Pick at least one language.</p>
+ <p className="text-xs text-red-600 mt-2">{tl("noneError")}</p>
  ) : null}
 
  <Divider />
 
- <label htmlFor="lang-default" className="block text-sm font-medium text-foreground mb-1.5">Default language</label>
+ <label htmlFor="lang-default" className="block text-sm font-medium text-foreground mb-1.5">{tl("defaultLabel")}</label>
  <select
  id="lang-default"
  value={draft.defaultLang}
@@ -1054,7 +1066,7 @@ export function LanguagesSettingsPage({
  })}
  </select>
  <p className="text-xs text-muted-foreground mt-1.5 leading-snug">
- The language you write your menu in first. Other languages are translations of this one.
+ {tl("defaultTip")}
  </p>
  </div>
  </div>
@@ -1073,6 +1085,8 @@ interface SubStatus {
 }
 
 export function BillingSettingsPage({ onBack }: { onBack: () => void }) {
+ const t = useTranslations("dashboard.settings");
+ const tb = useTranslations("dashboard.settings.billing");
  const [sub, setSub] = useState<SubStatus | null>(null);
  const [pendingPlan, setPendingPlan] = useState<{ plan: "BASIC" | "PRO"; cycle: "MONTHLY" | "YEARLY" } | null>(null);
 
@@ -1117,22 +1131,22 @@ export function BillingSettingsPage({ onBack }: { onBack: () => void }) {
  <SubpageStickyBar onBack={onBack} hideSave />
  <div className="max-w-2xl mx-auto pt-5 md:pt-4">
  <div className="mb-5">
- <div className="text-xs text-muted-foreground">Settings</div>
- <h2 className="text-xl font-medium text-foreground mt-1">Billing</h2>
+ <div className="text-xs text-muted-foreground">{t("breadcrumb")}</div>
+ <h2 className="text-xl font-medium text-foreground mt-1">{tb("title")}</h2>
  </div>
 
  {trialExpired ? (
  <div className="bg-red-50 border border-red-200 rounded-2xl p-4 mb-5">
- <div className="text-sm font-medium text-red-800">Menu unavailable for scanning</div>
+ <div className="text-sm font-medium text-red-800">{tb("menuUnavailable")}</div>
  <p className="text-xs text-red-700 mt-1 leading-snug">
- Your trial has expired and there is no active subscription. Customers cannot scan and view your menu until you choose a plan.
+ {tb("menuUnavailableTip")}
  </p>
  </div>
  ) : trialing && trialEndsAt ? (
  <div className="bg-card border border-border rounded-2xl p-4 mb-5">
- <div className="text-sm font-medium text-foreground">Trial active</div>
+ <div className="text-sm font-medium text-foreground">{tb("trialActive")}</div>
  <p className="text-xs text-muted-foreground mt-1 leading-snug">
- Trial ends on {trialEndsAt.toLocaleDateString([], { day: "numeric", month: "long", year: "numeric" })}. Choose a plan to keep your menu available.
+ {tb("trialEnds", { date: trialEndsAt.toLocaleDateString([], { day: "numeric", month: "long", year: "numeric" }) })}
  </p>
  </div>
  ) : null}
@@ -1141,23 +1155,22 @@ export function BillingSettingsPage({ onBack }: { onBack: () => void }) {
  <div className="bg-card border border-border rounded-2xl p-5 md:p-6 mb-5">
  <div className="flex items-start justify-between gap-3">
  <div>
- <div className="text-xs font-medium uppercase tracking-wide text-emerald-700">Active</div>
+ <div className="text-xs font-medium uppercase tracking-wide text-emerald-700">{tb("active")}</div>
  <div className="text-base font-medium text-foreground mt-0.5">
  {sub.plan} · {sub.billingCycle?.toLowerCase() || "—"}
  </div>
  {sub.currentPeriodEnd ? (
  <div className="text-xs text-muted-foreground mt-0.5">
- Renews on{" "}
- {new Date(sub.currentPeriodEnd).toLocaleDateString([], {
+ {tb("renewsOn", { date: new Date(sub.currentPeriodEnd).toLocaleDateString([], {
  day: "numeric",
  month: "long",
  year: "numeric",
- })}
+ }) })}
  </div>
  ) : null}
  </div>
  <button type="button" onClick={manage} className={secondaryBtn}>
- Manage
+ {tb("manage")}
  </button>
  </div>
  </div>
@@ -1169,8 +1182,8 @@ export function BillingSettingsPage({ onBack }: { onBack: () => void }) {
  `}</style>
  <div className="billing-plans">
  {[
- { plan: "BASIC" as const, cycle: "YEARLY" as const, label: "Yearly", priceMonthly: "6.90", periodLabel: "billed yearly", badge: "Save 30%", highlight: true },
- { plan: "BASIC" as const, cycle: "MONTHLY" as const, label: "Monthly", priceMonthly: "9.90", periodLabel: "billed monthly", badge: null, highlight: false },
+ { plan: "BASIC" as const, cycle: "YEARLY" as const, labelKey: "yearly" as const, priceMonthly: "6.90", periodKey: "billedYearly" as const, badgeKey: "save30" as const, highlight: true },
+ { plan: "BASIC" as const, cycle: "MONTHLY" as const, labelKey: "monthly" as const, priceMonthly: "9.90", periodKey: "billedMonthly" as const, badgeKey: null, highlight: false },
  ].map((p) => {
  const isCurrent = sub?.plan === p.plan && sub?.billingCycle === p.cycle && isActive;
  return (
@@ -1181,23 +1194,23 @@ export function BillingSettingsPage({ onBack }: { onBack: () => void }) {
  (isCurrent ? "border-emerald-300" : p.highlight ? "border-primary" : "border-border")
  }
  >
- {p.badge && !isCurrent ? (
+ {p.badgeKey && !isCurrent ? (
  <span className="absolute -top-2 left-5 inline-flex items-center h-5 px-2 text-[10px] font-medium text-primary-foreground bg-primary rounded-full">
- {p.badge}
+ {tb(p.badgeKey)}
  </span>
  ) : null}
  {isCurrent ? (
  <span className="absolute -top-2 left-5 inline-flex items-center h-5 px-2 text-[10px] font-medium text-white bg-emerald-600 rounded-full">
- Current
+ {tb("current")}
  </span>
  ) : null}
 
- <div className="text-sm font-medium text-foreground">{p.label}</div>
+ <div className="text-sm font-medium text-foreground">{tb(p.labelKey)}</div>
  <div className="mt-1 flex items-baseline gap-1">
  <span className="text-2xl font-medium text-foreground tabular-nums">€{p.priceMonthly}</span>
- <span className="text-xs text-muted-foreground">/mo</span>
+ <span className="text-xs text-muted-foreground">{tb("perMo")}</span>
  </div>
- <div className="text-xs text-muted-foreground mt-0.5">{p.periodLabel}</div>
+ <div className="text-xs text-muted-foreground mt-0.5">{tb(p.periodKey)}</div>
 
  <button
  type="button"
@@ -1212,7 +1225,7 @@ export function BillingSettingsPage({ onBack }: { onBack: () => void }) {
  : "text-foreground bg-card border border-input")
  }
  >
- {isCurrent ? "Current plan" : isActive ? "Switch" : "Subscribe"}
+ {isCurrent ? tb("currentPlan") : isActive ? tb("switch") : tb("subscribe")}
  </button>
  </div>
  );
@@ -1220,7 +1233,7 @@ export function BillingSettingsPage({ onBack }: { onBack: () => void }) {
  </div>
 
  <p className="text-xs text-muted-foreground mt-4 leading-snug">
- Cancel anytime via the customer portal. Yearly plans renew once per year.
+ {tb("cancelTip")}
  </p>
  </div>
  </div>
@@ -1230,6 +1243,8 @@ export function BillingSettingsPage({ onBack }: { onBack: () => void }) {
 // ── Support ──
 
 export function SupportPage({ onBack }: { onBack: () => void }) {
+ const t = useTranslations("dashboard.settings");
+ const ts = useTranslations("dashboard.settings.support");
  const [messages, setMessages] = useState<ApiSupportMessage[]>([]);
  const [input, setInput] = useState("");
  const [sending, setSending] = useState(false);
@@ -1315,8 +1330,8 @@ export function SupportPage({ onBack }: { onBack: () => void }) {
  <SubpageStickyBar onBack={onBack} hideSave />
  <div className="max-w-2xl mx-auto w-full pt-5 md:pt-4 flex-1 flex flex-col min-h-0">
  <div className="mb-3 shrink-0">
- <div className="text-xs text-muted-foreground">Settings</div>
- <h2 className="text-xl font-medium text-foreground mt-1">Support</h2>
+ <div className="text-xs text-muted-foreground">{t("breadcrumb")}</div>
+ <h2 className="text-xl font-medium text-foreground mt-1">{ts("title")}</h2>
  </div>
 
  <div
@@ -1325,7 +1340,7 @@ export function SupportPage({ onBack }: { onBack: () => void }) {
  >
  {messages.length === 0 ? (
  <div className="h-full flex items-center justify-center text-sm text-muted-foreground text-center px-4">
- No messages yet. Say hi!
+ {ts("noMessages")}
  </div>
  ) : (
  messages.map((m) => <SupportBubble key={m.id} message={m} />)
@@ -1341,7 +1356,7 @@ export function SupportPage({ onBack }: { onBack: () => void }) {
  autoresize(e.currentTarget);
  }}
  onKeyDown={onInputKeyDown}
- placeholder="Type a message..."
+ placeholder={ts("placeholder")}
  rows={1}
  className="flex-1 h-[40px] min-h-[40px] max-h-[70px] px-3 py-2 text-sm leading-5 text-foreground bg-card border border-input rounded-lg placeholder:text-muted-foreground focus:outline-none transition-colors resize-none box-border"
  />
@@ -1356,7 +1371,7 @@ export function SupportPage({ onBack }: { onBack: () => void }) {
  ) : (
  <SendIcon size={14} />
  )}
- Send message
+ {ts("send")}
  </button>
  </div>
  </div>

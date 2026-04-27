@@ -2515,5 +2515,895 @@
     },
     "back": "Back",
     "continue": "Halda áfram"
+  },
+  "onlineOrders": {
+    "seo": {
+      "title": "Netpantanir fyrir veitingastaði — QR Matseðill | IQ Rest",
+      "description": "Leyfðu viðskiptavinum að leggja inn pantanir beint úr QR matseðlinum þínum. Engin þóknun, verð í rauntíma og tafarlaus pantanastjórnun á stjórnborðinu þínu."
+    },
+    "hero": {
+      "badge": "Netpantanir",
+      "title": "Breyttu QR matseðlinum í netpantanakerfi",
+      "subtitle": "Viðskiptavinir skanna kóðann, skoða matseðilinn og leggja inn pöntun á nokkrum sekúndum. Engra forrita þörf, engin þóknun, ekkert flókið.",
+      "cta": "Búðu til matseðilinn þinn",
+      "ctaDemo": "Skoða sýnishorn",
+      "noCreditCard": "Engin kreditkort þörf. Ókeypis áætlun í boði."
+    },
+    "benefits": {
+      "title": "Af hverju veitingastaðir velja QR matseðilspantanir",
+      "subtitle": "Bein pantanaleið sem einfaldar hlutina fyrir þig og gesti þína.",
+      "items": [
+        {
+          "title": "Ekkert forrit þarf",
+          "description": "Gestir skanna einfaldlega QR kóðann — engar niðurhleðslur, engin nýskráning. Virkar strax í hvaða símasvafara sem er."
+        },
+        {
+          "title": "Verð í rauntíma",
+          "description": "Uppfærðu verð og framboð samstundis. Breytingar endurspeglast strax á QR matseðlinum."
+        },
+        {
+          "title": "Pöntun við borðið",
+          "description": "Hvert borð fær sinn eigin QR kóða. Gestir skanna, panta og þú sérð borðnúmerið á stjórnborðinu þínu."
+        },
+        {
+          "title": "Sérsniðin hönnun",
+          "description": "Samræmdu matseðilinn við vörumerkið þitt með sérsniðnum litum, bakgrunni og lógói."
+        }
+      ]
+    },
+    "features": {
+      "title": "Hvernig netpantanir virka",
+      "subtitle": "Tvö einföld skref tengja matseðilinn þinn við eldhúsið.",
+      "items": [
+        {
+          "title": "Gestir skoða og velja rétti",
+          "description": "Viðskiptavinir skanna QR kóðann þinn og sjá allan matseðilinn með myndum, lýsingum og verðum. Þeir bæta réttum við pöntunina með einu snertingu — engin nýskráning þörf."
+        },
+        {
+          "title": "Pantanir birtast á stjórnborðinu þínu",
+          "description": "Þegar gestir eru tilbúnir, ýta þeir á pantanahnappinn. Pöntunin birtist strax á stjórnborðinu þínu með upplýsingum um rétti, borðnúmer og athugasemdir. Samþykktu, byrjaðu að útbúa og merktu sem lokið."
+        }
+      ]
+    },
+    "faq": {
+      "title": "Algengar spurningar",
+      "subtitle": "Allt sem þú þarft að vita um netpantanir.",
+      "items": [
+        {
+          "question": "Þarf ég aukabúnað eða forrit?",
+          "answer": "Nei. Allt virkar í gegnum vafra. Gestir skanna QR kóðann með myndavél símans og þú stjórnar pöntunum frá IQ Rest stjórnborðinu á hvaða tæki sem er."
+        },
+        {
+          "question": "Er einhver þóknun eða gjald á hverja pöntun?",
+          "answer": "Alls ekki. IQ Rest tekur aldrei þóknun af pöntunum þínum. Þú borgar aðeins áskriftaráætlunina þína og allar tekjur af pöntunum verða hjá þér."
+        },
+        {
+          "question": "Geta viðskiptavinir sérsniðið pöntunina eða bætt við athugasemdum?",
+          "answer": "Já. Gestir geta valið rétti, tilgreint magn og bætt við sérstökum athugasemdum eða óskum. Þú getur einnig krafist nafns, símanúmers eða afhendingaraðseturs viðskiptavinar."
+        },
+        {
+          "question": "Virkar þetta fyrir borðhald, take-away og heimsendingu?",
+          "answer": "Já. Fyrir borðhald skanna gestir QR kóðann við borðið sitt. Fyrir take-away eða heimsendingu deilirðu beinum hlekk á matseðilinn þinn. Þú getur virkjað reitina fyrir nafn, símanúmer og heimilisfang eftir þörfum."
+        }
+      ]
+    },
+    "howItWorks": {
+      "title": "Hvernig það virkar",
+      "subtitle": "Frá uppsetningu til að fá fyrstu pöntunina þína í fimm einföldum skrefum.",
+      "steps": [
+        {
+          "title": "Virkja netpantanir",
+          "description": "Virkjaðu pantanir í hönnunarskilmálum þínum. Veldu þinn uppáhalds hátt: pantanir birtast á stjórnborðinu þínu, eru sendar á WhatsApp, eða bæði samtímis."
+        },
+        {
+          "title": "Stilltu pöntunarskjalið",
+          "description": "Veldu hvaða reitir viðskiptavinir þurfa að fylla út þegar þeir leggja inn pöntun. Nafn er alltaf nauðsynlegt, og þú getur valið að biðja um símanúmer og heimilisfang."
+        },
+        {
+          "title": "Prenta QR kóða fyrir borð",
+          "description": "Hvert borð á veitingastaðnum þínum fær sinn eigin einstaka QR kóða. Þegar gestir skanna hann, kemur pöntun þeirra sjálfkrafa með réttu borðnúmeri tengdu."
+        },
+        {
+          "title": "Viðskiptavinir leggja inn pantanir",
+          "description": "Gestir skanna QR kóðann, skoða matseðilinn þinn með myndum og verð, velja atriði, bæta við athugasemdum og senda inn pöntun sína. Engin app niðurhal eða reikningssköpun nauðsynleg."
+        },
+        {
+          "title": "Stjórna pöntunum á stjórnborðinu þínu",
+          "description": "Pantanir birtast strax á stjórnborðinu þínu. Uppfærðu stöðu hverrar pöntunar frá nýrri yfir í í vinnslu til lokið. Þú heldur 100% af tekjunum — engar þóknanir."
+        }
+      ]
+    }
+  },
+  "reservationsPage": {
+    "seo": {
+      "title": "Borðapöntunarkerfi fyrir veitingastaði — Bókun á netinu | IQ Rest",
+      "description": "Leyfðu gestum að panta borð beint af vefsíðunni þinni. Sjálfvirk eða handvirk staðfesting, tilkynningar í tölvupósti og full dagatalsstjórnun — allt innifalið."
+    },
+    "hero": {
+      "badge": "Borðapantanir",
+      "title": "Taktu á móti borðapöntunum allan sólarhringinn af vefsíðunni þinni",
+      "subtitle": "Gestir velja dagsetningu, tíma og fjölda í hóp — og bóka samstundis. Þú stjórnar öllu úr stjórnborðinu þínu, engin símtöl nauðsynleg.",
+      "cta": "Búðu til matseðilinn þinn",
+      "ctaDemo": "Skoða demo",
+      "noCreditCard": "Ekkert kreditkort nauðsynlegt. Ókeypis áskrift í boði."
+    },
+    "features": {
+      "title": "Hvernig borðapantanir virka",
+      "subtitle": "Tvö skref frá beiðni gests til staðfestrar pöntunar.",
+      "items": [
+        {
+          "title": "Gestir panta af vefsíðunni þinni",
+          "description": "Viðskiptavinir heimsækja síðu veitingastaðarins þíns, ýta á \\\"Panta borð\\\", velja dagsetningu og tíma, slá inn upplýsingarnar sínar og senda. Engin app nauðsynleg — virkar í hvaða vafra sem er á hvaða tæki sem er."
+        },
+        {
+          "title": "Þú stjórnar pöntunum í stjórnborðinu þínu",
+          "description": "Sérhver pöntun birtist í stjórnborðinu þínu með nafni gests, símanúmeri, fjölda í hóp, dagsetningu og athugasemdum. Staðfestu eða hafnaðu með einu ýti. Stilltu sjálfvirka staðfestingu eða yfirfarðu hverja pöntun handvirkt."
+        }
+      ]
+    },
+    "faq": {
+      "title": "Algengar spurningar",
+      "subtitle": "Allt sem þú þarft að vita um borðapantanir.",
+      "items": [
+        {
+          "question": "Þurfa viðskiptavinir að búa til reikning til að panta?",
+          "answer": "Nei. Gestir fylla einfaldlega út nafn, símanúmer, fjölda í hóp og æskilegan tíma. Enginn reikningur eða niðurhal á appi nauðsynlegt."
+        },
+        {
+          "question": "Get ég stillt tiltæk tímahólf og rými?",
+          "answer": "Já. Skilgreindu opnunartíma, lengd pöntunartímahólfa og borðarými. Kerfið sýnir gestum aðeins tiltæk tímahólf."
+        },
+        {
+          "question": "Fæ ég tilkynningu þegar einhver pantar?",
+          "answer": "Já. Þú færð tölvupóst fyrir hverja nýja pöntun. Gestir fá einnig staðfestingarpóst þegar þú samþykkir pöntunina."
+        },
+        {
+          "question": "Get ég notað bæði sjálfvirka og handvirka staðfestingu?",
+          "answer": "Já. Veldu sjálfvirka stillingu til að staðfesta pantanir samstundis miðað við framboð, eða handvirka stillingu til að yfirfara og samþykkja hverja beiðni sjálf/ur."
+        }
+      ]
+    },
+    "howItWorks": {
+      "title": "Hvernig það virkar",
+      "subtitle": "Settu upp netpantanir og byrjaðu að taka við bókunum í fimm skrefum.",
+      "steps": [
+        {
+          "title": "Virkja Pantanir",
+          "description": "Virkjaðu pantanir í stillingum veitingastaðarins þíns. Veldu á milli sjálfvirkrar staðfestingar, þar sem bókanir eru samþykktar strax miðað við framboð, eða handvirks mód þar sem þú skoðar hverja beiðni."
+        },
+        {
+          "title": "Bæta Við Borðum",
+          "description": "Búðu til borð með upplýsingum um getu og svæði — til dæmis, 'Borð 5, 4 gestir, Verönd'. Hvert borð verður bókanlegt, og kerfið kemur í veg fyrir tvöfaldar bókanir sjálfkrafa."
+        },
+        {
+          "title": "Setja Vinnustundir",
+          "description": "Skilgreindu tilboðnar stundir fyrir pantanir og veldu lengd tímabils — frá 15 mínútum til 8 klukkustunda. Aðeins tímabil innan vinnustunda þinna eru sýnd gestum."
+        },
+        {
+          "title": "Gestir Bóka á Netinu",
+          "description": "Kúnnar heimsækja síðu veitingastaðarins þíns, velja dagsetningu, tíma og fjölda fólks, slá inn nafn og símanúmer, og senda. Engin skráning eða app niðurhal nauðsynlegt — virkar í hvaða vafra sem er."
+        },
+        {
+          "title": "Stjórna Bókunum í Stjórnborði Þínu",
+          "description": "Skoðaðu allar pantanir í stjórnborði þínu. Staðfestu, aflýstu eða merktu bókanir sem lokið. Bæði þú og gesturinn fái tölvupóstsviðvaranir fyrir hverja uppfærslu á bókun."
+        }
+      ]
+    }
+  },
+  "colorSchemePage": {
+    "seo": {
+      "title": "Sérsniðinn QR matseðilshönnun og vörumerkjalitir — Vörumerki veitingastaðar | IQ Rest",
+      "description": "Samræmdu QR matseðilinn þinn við vörumerki veitingastaðarins. Veldu áhersluliti og búðu til samræmt útlit á öllu stafræna matseðlinum þínum."
+    },
+    "hero": {
+      "badge": "Sérsniðin hönnun",
+      "title": "Láttu QR matseðilinn þinn endurspegla vörumerki veitingastaðarins",
+      "subtitle": "Veldu vörumerkjalit og allur matseðillinn — hnappar, áherslur, tenglar — uppfærist samstundis.",
+      "cta": "Búðu til matseðilinn þinn",
+      "ctaDemo": "Skoða demo",
+      "noCreditCard": "Ekkert kreditkort nauðsynlegt. Ókeypis áskrift í boði."
+    },
+    "features": {
+      "title": "Hvernig sérsniðin vörumerking virkar",
+      "subtitle": "Þinn matseðill, þínir litir — samræmt á hverri síðu.",
+      "items": [
+        {
+          "title": "Veldu áherslulit",
+          "description": "Veldu úr 12 fyrirfram völdum litum eða sláðu inn nákvæman vörumerkjalit með hex kóða. Sérhver hnappur, tengill og áhersla á matseðlinum þínum aðlagast samstundis — engin hönnunarþekking nauðsynleg."
+        }
+      ]
+    },
+    "faq": {
+      "title": "Algengar spurningar",
+      "subtitle": "Allt sem þú þarft að vita um sérstillingu matseðils.",
+      "items": [
+        {
+          "question": "Get ég notað nákvæman vörumerkjalit minn?",
+          "answer": "Já. Sláðu inn hvaða hex litakóða sem er, eða veldu úr 12 vandlega völdum fyrirfram stillingum. Áhersluliturinn þinn gildir á öllum síðum matseðilsins."
+        },
+        {
+          "question": "Get ég breytt litum eftir birtingu?",
+          "answer": "Auðvitað. Breyttu áherslulitnum hvenær sem er úr stjórnborðinu þínu. Uppfærslur birtast samstundis á lifandi matseðlinum þínum — engin endurbirtingar nauðsynleg."
+        },
+        {
+          "question": "Mun QR kóðinn minn einnig samræmast vörumerkjalitunum?",
+          "answer": "QR kóðinn er búinn til sérstaklega og hægt er að sérsníða hann óháð öðru. Áhersluliturinn gildir um síður stafræna matseðilsins, leiðsögn og gagnvirka þætti."
+        }
+      ]
+    },
+    "howItWorks": {
+      "title": "Hvernig það virkar",
+      "subtitle": "Samsvaraðu matseðlinum þínum við vörumerkið þitt í þremur einföldum skrefum.",
+      "steps": [
+        {
+          "title": "Opnaðu hönnunarstillingar",
+          "description": "Fara á hönnunarsíðuna í stjórnborðinu þínu. Akcent litaval er í miðjunni — þú sérð allar tiltækar valkostir strax."
+        },
+        {
+          "title": "Veldu lit vörumerkisins þíns",
+          "description": "Veldu úr 12 sérvaldum litapresettingum sem eru hannaðar fyrir læsileika og aðgengi, eða sláðu inn nákvæma hex kóðann þinn fyrir fullkomna samsvörun við vörumerkið."
+        },
+        {
+          "title": "Sofandi forsýning",
+          "description": "Akcent liturinn þinn fer á hnappana, tenglana og áherslurnar um alla matseðilinn. Það virkar bæði í ljósum og dökkum þemum, og breytingar koma strax fram á lifandi matseðlinum þínum."
+        }
+      ]
+    }
+  },
+  "easyMenuPage": {
+    "seo": {
+      "title": "Búðu til QR matseðil fyrir veitingastaðinn þinn — Ókeypis matseðilsgerð | IQ Rest",
+      "description": "Búðu til stafrænan QR matseðil veitingastaðarins á nokkrum mínútum. Bættu við flokkum, réttum, myndum, verðum — og deildu skannanlegum QR kóða. Ókeypis til að byrja."
+    },
+    "hero": {
+      "badge": "Matseðilsgerð",
+      "title": "Búðu til stafrænan QR matseðil fyrir veitingastaðinn þinn á mínútum",
+      "subtitle": "Bættu við flokkum og réttum, stilltu verð, hladdu upp myndum — QR matseðillinn þinn er tilbúinn til deilingar. Breyttu hvenær sem er, breytingar birtast samstundis.",
+      "cta": "Búðu til matseðilinn þinn",
+      "ctaDemo": "Skoða demo",
+      "noCreditCard": "Ekkert kreditkort nauðsynlegt. Ókeypis áskrift í boði."
+    },
+    "features": {
+      "title": "Hvernig matseðilsritillinn virkar",
+      "subtitle": "Einföld verkfæri sem koma matseðlinum þínum á netið hratt.",
+      "items": [
+        {
+          "title": "Bættu við flokkum og réttum",
+          "description": "Búðu til flokka eins og Forréttir, Aðalréttir, Drykkir — bættu síðan við réttum með nöfnum, lýsingum, verðum og myndum. Dragðu og slepptu til að endurraða. Kveiktu eða slökktu á hlutum án þess að eyða þeim."
+        },
+        {
+          "title": "Breytingar birtast samstundis",
+          "description": "Sérhver breyting birtist á lifandi QR matseðlinum þínum innan sekúndna. Uppfærðu verð, bættu við dagsrétti eða feldu uppseldann rétt — viðskiptavinirnir þínir sjá alltaf nýjustu útgáfuna."
+        }
+      ]
+    },
+    "faq": {
+      "title": "Algengar spurningar",
+      "subtitle": "Allt sem þú þarft að vita um að búa til QR matseðilinn þinn.",
+      "items": [
+        {
+          "question": "Hvernig bý ég til QR matseðil fyrir veitingastaðinn minn?",
+          "answer": "Skráðu þig með tölvupóstfanginu þínu, nefndu veitingastaðinn og byrjaðu að bæta við flokkum og réttum. QR matseðillinn þinn er búinn til sjálfkrafa — prentaðu QR kóðann og settu hann á borðin."
+        },
+        {
+          "question": "Get ég bætt myndum við matseðilshlutina?",
+          "answer": "Já. Hladdu upp myndum beint úr símanum eða tölvunni. Myndir eru sjálfkrafa fínstilltar fyrir hraðvirka hleðslu á hvaða tæki sem er."
+        },
+        {
+          "question": "Hversu mörgum hlutum get ég bætt við?",
+          "answer": "Engin takmörk eru á flokkum eða matseðilshlutum. Bættu við eins mörgum réttum og þú þarft — matseðillinn þinn helst hraður og skipulagður."
+        },
+        {
+          "question": "Get ég falið rétt tímabundið sem er uppseldur?",
+          "answer": "Já. Slökktu á hvaða hlut sem er með einu ýti. Hann hverfur af opinbera matseðlinum en helst í stjórnborðinu þínu — kveiktu á honum aftur þegar þú ert tilbúin/n."
+        }
+      ]
+    },
+    "howItWorks": {
+      "title": "Hvernig það virkar",
+      "subtitle": "Byggðu og birtu matseðilinn þinn í fimm einföldum skrefum.",
+      "steps": [
+        {
+          "title": "Búa til flokka",
+          "description": "Bættu við flokkum eins og Forréttir, Aðalréttir, Eftirréttir og Drykki til að skipuleggja matseðilinn þinn. Þú getur búið til eins marga flokka og þú þarft og raðað þeim aftur með draga og sleppa."
+        },
+        {
+          "title": "Bæta við matseðilsatriðum",
+          "description": "Sláðu inn nafn réttarins, lýsingu og verð fyrir hvert atriði. Merktu ofnæmisvalda ef við á — gestir munu sjá ofnæmis tákn á matseðlinum sjálfkrafa."
+        },
+        {
+          "title": "Hlaða upp eða búa til myndir",
+          "description": "Hlaða upp eigin matarmyndum frá símanum þínum eða tölvunni, eða nota AI til að búa til faglega matarmynd úr nafninu á réttinum. Myndir eru sjálfkrafa hámarkaðar."
+        },
+        {
+          "title": "Skipuleggja með draga og sleppa",
+          "description": "Raðaðu flokkum og atriðum aftur með því að draga þau á sinn stað. Kveiktu á hvaða atriði sem er eða slökktu á því án þess að eyða því — fullkomið fyrir dagleg tilboð eða rétti sem eru uppseldir."
+        },
+        {
+          "title": "Birta matseðilinn þinn",
+          "description": "Breytingar birtast strax á lifandi QR matseðlinum þínum. Það er engin 'birta' takki — hver breyting fer í loftið í rauntíma. Prentaðu QR kóðann þinn og settu hann á borðin þín."
+        }
+      ]
+    }
+  },
+  "aiTranslationPage": {
+    "seo": {
+      "title": "AI matseðilsþýðing fyrir veitingastaði — Þýddu QR matseðilinn | IQ Rest",
+      "description": "Þýddu matseðil veitingastaðarins á 25+ tungumál með einum smelli. AI skilur matarsamhengi — réttaheiti, lýsingar og flokkar þýddir nákvæmlega."
+    },
+    "hero": {
+      "badge": "AI þýðing",
+      "title": "Þýddu matseðilinn þinn á 25+ tungumál með einum smelli",
+      "subtitle": "AI-kerfið okkar skilur matarsamhengi — það þýðir réttaheiti, lýsingar og flokka á náttúrulegan hátt, ekki orð fyrir orð. Náddu til allra ferðamanna og alþjóðlegra gesta.",
+      "cta": "Búðu til matseðilinn þinn",
+      "ctaDemo": "Skoða demo",
+      "noCreditCard": "Ekkert kreditkort nauðsynlegt. Ókeypis áskrift í boði."
+    },
+    "features": {
+      "title": "Hvernig AI þýðing virkar",
+      "subtitle": "Frá þínu tungumáli til heimsins á sekúndum.",
+      "items": [
+        {
+          "title": "Þýðing á öllum matseðlinum með einum smelli",
+          "description": "Veldu marktungumál, ýttu á þýða og allur matseðillinn — flokkar, réttaheiti, lýsingar — er þýddur samstundis. AI varðveitir matvinaorð og aðlagast náttúrulega fyrir hvert tungumál."
+        },
+        {
+          "title": "Breyttu og fínstilltu hvaða þýðingu sem er",
+          "description": "Sérhver AI þýðing er að fullu breytanleg. Farðu yfir niðurstöðuna, lagaðu orðalag og vistaðu. Breytingarnar þínar varðveitast jafnvel þótt þú þýðir aðra hluta matseðilsins síðar."
+        }
+      ]
+    },
+    "faq": {
+      "title": "Algengar spurningar",
+      "subtitle": "Allt sem þú þarft að vita um matseðilsþýðingu.",
+      "items": [
+        {
+          "question": "Hversu nákvæm er AI þýðingin fyrir matseðla veitingastaða?",
+          "answer": "AI-kerfið okkar er fínstillt fyrir efni veitingastaða. Það skilur að \\\"Beef Wellington\\\" eða \\\"Tiramisu\\\" eiga ekki að vera þýdd bókstaflega, og aðlagar lýsingar svo þær hljómi náttúrulega á hverju tungumáli."
+        },
+        {
+          "question": "Hvaða tungumál eru studd?",
+          "answer": "25+ tungumál þar á meðal enska, spænska, franska, þýska, ítalska, portúgalska, kínverska, japanska, kóreska, arabíska, rússneska og mörg fleiri evrópsk og asísk tungumál."
+        },
+        {
+          "question": "Get ég þýtt bara suma hluti, ekki allan matseðilinn?",
+          "answer": "Já. Þú getur þýtt einstaka hluti, heila flokka eða allan matseðilinn í einu. Þú hefur fulla stjórn á því hvað verður þýtt."
+        },
+        {
+          "question": "Kostar aukalega fyrir hverja þýðingu?",
+          "answer": "AI þýðing er innifalin í Growth og Pro áskriftum með rausnarlegum mánaðarlegum mörkum. Engin gjöld á orð eða á hlut — þýddu eins mikið og þú þarft."
+        }
+      ]
+    },
+    "howItWorks": {
+      "title": "Hvernig það virkar",
+      "subtitle": "Þýddu allt matseðilinn á mínútum, ekki klukkustundum.",
+      "steps": [
+        {
+          "title": "Bættu tungumálum við matseðilinn þinn",
+          "description": "Farðu á tungumálasíðuna í stjórnborðinu þínu og veldu hvaða tungumál matseðillinn þinn á að styðja. Veldu úr 35 tiltækum tungumálum, þar á meðal öllum helstu evrópskum, asískum og mið-austurlenskum tungumálum."
+        },
+        {
+          "title": "Smelltu á Þýða",
+          "description": "Einn takki þýðir allar flokkana þína, nafn á réttum og lýsingar í einu. Allur matseðillinn er unnin á sekúndum, sama hversu marga rétti þú hefur."
+        },
+        {
+          "title": "AI Skilur Matarsamhengi",
+          "description": "AI-ið þekkir matargerðarorðaforða á milli menningar. Það varðveitir nöfn rétta eins og 'Tiramisu' eða 'Pad Thai' á meðan það aðlagar lýsingar, innihaldslýsingar og flokkana náttúrulega."
+        },
+        {
+          "title": "Skoðaðu og Breyttu",
+          "description": "Hver þýðing er fullkomlega breytanleg. Breyttu hvaða orðalagi sem er til að passa við þinn stíl. Handvirkar breytingar þínar eru varðveittar jafnvel þegar þú þýðir aftur aðra hluta matseðilsins síðar."
+        },
+        {
+          "title": "Birta fjöltyngdan matseðil þinn",
+          "description": "Gestir sjá tungumálaskiptara á matseðlinum þínum og geta flett í sínu uppáhalds tungumáli. Hvert tungumál má kveikja eða slökkva á sjálfstætt frá stjórnborðinu þínu."
+        }
+      ]
+    }
+  },
+  "mobileManagementPage": {
+    "seo": {
+      "title": "Stjórnaðu matseðli veitingastaðar úr símanum — Farsímastjórnborð | IQ Rest",
+      "description": "Rektu QR matseðil veitingastaðarins algjörlega úr símanum þínum. Bættu við réttum, uppfærðu verð, hladdu upp myndum, skoðaðu greiningar — enginn tölvu þörf."
+    },
+    "hero": {
+      "badge": "Farsímastjórnborð",
+      "title": "Stjórnaðu öllum matseðli veitingastaðarins úr símanum",
+      "subtitle": "Bættu við réttum, breyttu verðum, hladdu upp myndum, skoðaðu pantanir — allt úr snjallsímanum þínum. Stjórnborðið er hannað fyrst fyrir farsíma, svo þú þarft aldrei tölvu.",
+      "cta": "Búðu til matseðilinn þinn",
+      "ctaDemo": "Skoða demo",
+      "noCreditCard": "Ekkert kreditkort nauðsynlegt. Ókeypis áskrift í boði."
+    },
+    "features": {
+      "title": "Hvernig farsímastjórnun virkar",
+      "subtitle": "Stjórnborð veitingastaðarins, alltaf í vasanum þínum.",
+      "items": [
+        {
+          "title": "Fullkomið stjórnborð á snjallsímanum þínum",
+          "description": "Sérhver eiginleiki virkar fullkomlega á skjá símans — bæta við hlutum, breyta flokkum, stjórna pöntunum, skoða greiningar. Viðmótið er hannað fyrir snertingu, ekki bara minnkað úr skjáborðsútgáfu."
+        },
+        {
+          "title": "Hladdu upp myndum beint úr myndavélinni",
+          "description": "Taktu mynd af nýjum rétti og hladdu henni upp á matseðilinn á sekúndum. Myndir eru sjálfkrafa fínstilltar. Uppfærðu dagsréttinn þinn meðan þú stendur í eldhúsinu."
+        }
+      ]
+    },
+    "faq": {
+      "title": "Algengar spurningar",
+      "subtitle": "Allt sem þú þarft að vita um farsímastjórnun matseðils.",
+      "items": [
+        {
+          "question": "Þarf ég að setja upp app?",
+          "answer": "Nei. Stjórnborðið virkar í vefvafra símans — Safari, Chrome eða öðrum. Skráðu þig bara inn og byrjaðu að stjórna matseðlinum þínum."
+        },
+        {
+          "question": "Get ég gert allt úr símanum sem ég get á tölvu?",
+          "answer": "Já. Allir eiginleikar eru tiltækir á farsíma — bæta við hlutum, hlaða upp myndum, stjórna flokkum, skoða greiningar, meðhöndla pantanir og bókanir."
+        },
+        {
+          "question": "Virkar þetta líka á spjaldtölvum?",
+          "answer": "Já. Stjórnborðið aðlagast hvaða skjástærð sem er — snjallsímar, spjaldtölvur og borðtölvur. Notaðu hvaða tæki sem hentar þér best."
+        },
+        {
+          "question": "Geta margir aðilar stjórnað matseðlinum?",
+          "answer": "Eins og er stjórnar einn reikningur veitingastaðnum. Þú getur skráð þig inn úr mörgum tækjum samtímis — símanum, spjaldtölvu eða tölvu."
+        }
+      ]
+    },
+    "howItWorks": {
+      "title": "Hvernig það virkar",
+      "subtitle": "Stjórnaðu veitingastaðnum þínum frá hvaða tæki sem er í fjórum skrefum.",
+      "steps": [
+        {
+          "title": "Opnaðu stjórnborð á símanum þínum",
+          "description": "Farðu á iq-rest.com og skráðu þig inn í vafranum á símanum þínum. Stjórnborðið aðlagast sjálfkrafa að skjástærð þinni — engin app til að hlaða niður eða setja upp."
+        },
+        {
+          "title": "Breyta matseðli hvar sem er",
+          "description": "Bættu við nýjum atriðum, uppfærðu verð, breyttu lýsingum og hlaðið upp myndum beint úr myndavél símans þíns. Allar aðgerðir sem eru í boði á skrifborði virka eins vel á farsíma."
+        },
+        {
+          "title": "Athugaðu pöntun og bókanir",
+          "description": "Skoðaðu innkomandi pöntun, stjórnaðu borðabókunum og svaraðu stuðningsskilaboðum — allt frá símanum þínum. Vertu á toppnum á veitingastaðnum þínum jafnvel þegar þú ert fjarverandi."
+        },
+        {
+          "title": "Breytingar fara strax í loftið",
+          "description": "Allar breytingar sem þú gerir frá símanum þínum birtast á QR matseðlinum þínum í rauntíma. Engin þörf á að samstilla, birta eða bíða — gestir þínir sjá alltaf nýjustu útgáfuna."
+        }
+      ]
+    }
+  },
+  "customDesignPage": {
+    "seo": {
+      "title": "Vefsíða veitingastaðar með myndbands- og ljósmyndabakgrunni — Vefsíðugerð | IQ Rest",
+      "description": "Búðu til glæsilega vefsíðu veitingastaðar með sérsniðnum myndbands- eða ljósmyndabakgrunni. Hladdu upp stemningarmyndbandi eða matarljósmyndum — heillaðu gesti frá fyrstu skönnun."
+    },
+    "hero": {
+      "badge": "Vefsíðuhönnun",
+      "title": "Búðu til glæsilega vefsíðu veitingastaðar með myndbandsbakgrunni",
+      "subtitle": "Hladdu upp stemningarmyndbandi veitingastaðarins eða fallegri matarmynd sem bakgrunni. Gestir sjá faglega, vörumerkta upplifun um leið og þeir skanna QR kóðann þinn.",
+      "cta": "Búðu til matseðilinn þinn",
+      "ctaDemo": "Skoða demo",
+      "noCreditCard": "Ekkert kreditkort nauðsynlegt. Ókeypis áskrift í boði."
+    },
+    "features": {
+      "title": "Hvernig sérsniðnir bakgrunnar virka",
+      "subtitle": "Skapaðu varanlegt fyrsta áhrif með myndefni sem passar vörumerkinu þínu.",
+      "items": [
+        {
+          "title": "Hladdu upp myndbands- eða ljósmyndabakgrunni",
+          "description": "Bættu við endurteknu myndbandi af stemningunni í veitingastaðnum, tímahraða úr eldhúsinu eða hágæða matarmynd. Bakgrunnurinn birtist á forsíðunni þinni — og skapar yfirgripsmikla upplifun fyrir gesti."
+        },
+        {
+          "title": "Fínstillt fyrir hraða á hvaða tæki sem er",
+          "description": "Myndbönd og myndir eru sjálfkrafa þjöppuð og hlaðin smám saman. Vefsíðan þín helst hröð jafnvel á hægum farsímatengingum — engin biðminni, engar tafir, bara slétt upplifun."
+        }
+      ]
+    },
+    "faq": {
+      "title": "Algengar spurningar",
+      "subtitle": "Allt sem þú þarft að vita um hönnun vefsíðu veitingastaðar.",
+      "items": [
+        {
+          "question": "Hvaða myndbandssnið eru studd?",
+          "answer": "MP4 og WebM snið virka best. Myndbönd eru sjálfkrafa þjöppuð fyrir hraðvirka hleðslu. Haltu myndböndum undir 30 sekúndum fyrir bestu farsímaupplifun."
+        },
+        {
+          "question": "Mun myndbandsbakgrunnur hægja á vefsíðunni minni?",
+          "answer": "Nei. Myndbönd eru þjöppuð, hlaðin smám saman og fínstillt sjálfkrafa. Á hægum tengingum víkur kerfið yfir í kyrrmynd til að halda upplifuninni sléttu."
+        },
+        {
+          "question": "Get ég notað ljósmynd í staðinn fyrir myndband?",
+          "answer": "Já. Hladdu upp hvaða mynd sem er — hún verður fínstillt og sýnd sem heilskjásbakgrunnur. Þú getur skipt á milli myndbands og ljósmyndar hvenær sem er."
+        },
+        {
+          "question": "Þarf ég hönnuð til að setja þetta upp?",
+          "answer": "Nei. Hladdu bara upp myndbandinu eða myndinni úr stjórnborðinu. Kerfið sér um stærðir, þjöppun og uppsetningu sjálfkrafa. Vefsíðan þín lítur fagleg út án nokkurrar hönnunarþekkingar."
+        }
+      ]
+    },
+    "howItWorks": {
+      "title": "Hvernig það virkar",
+      "subtitle": "Sérsníddu sjónræna auðkenni veitingastaðarins þíns í fjórum skrefum.",
+      "steps": [
+        {
+          "title": "Opna hönnunarstillingar",
+          "description": "Fara á hönnunarvefinn í stjórnborðinu þínu. Hér geturðu stjórnað sjónrænu útliti veitingastaðarins þíns — bakgrunni, áhersluflötum og uppsetningu heimasíðu."
+        },
+        {
+          "title": "Hlaða upp bakgrunni",
+          "description": "Veldu myndband (MP4, WebM) eða ljósmynd fyrir bakgrunn heimasíðu veitingastaðarins þíns. Myndbönd endurtaka sig sjálfkrafa, sem skapar áhrifamikla fyrstu skynjun fyrir hvern gest."
+        },
+        {
+          "title": "AI bakgrunnsgenerering",
+          "description": "Ertu ekki með myndband eða ljósmynd tilbúið? Leyfðu AI að búa til bakgrunnsmynd úr matseðlinum þínum sjálfkrafa. Það býr til faglegt útlit sem passar við stíl veitingastaðarins þíns."
+        },
+        {
+          "title": "Forskoða og vista",
+          "description": "Sjáðu breytingarnar í rauntíma áður en þú vistir. Myndbönd eru sjálfkrafa þjöppuð og hlaðin á skynsamlegan hátt, sem tryggir hraða frammistöðu á farsímum án þess að fórna sjónrænum gæðum."
+        }
+      ]
+    }
+  },
+  "multilingualPage": {
+    "seo": {
+      "title": "Fjöltyngd vefsíða veitingastaðar — Matseðill á 25+ tungumálum | IQ Rest",
+      "description": "Vefsíða veitingastaðarins og QR matseðill á 25+ tungumálum. Gestir skipta um tungumál með einu ýti — matseðill, tengiliðir og bókanir aðlagast samstundis."
+    },
+    "hero": {
+      "badge": "Fjöltyngt",
+      "title": "Vefsíða veitingastaðarins á 25+ tungumálum",
+      "subtitle": "Ferðamenn og alþjóðlegir gestir sjá matseðilinn þinn á sínu tungumáli. Eitt ýti til að skipta — allt aðlagast samstundis: réttir, lýsingar, tengiliðir, leiðsögn.",
+      "cta": "Búðu til matseðilinn þinn",
+      "ctaDemo": "Skoða demo",
+      "noCreditCard": "Ekkert kreditkort nauðsynlegt. Ókeypis áskrift í boði."
+    },
+    "features": {
+      "title": "Hvernig fjöltyngd stuðningur virkar",
+      "subtitle": "Talaðu tungumál viðskiptavinarins án aukavinnu.",
+      "items": [
+        {
+          "title": "Gestir velja tungumálið sitt",
+          "description": "Tungumálaval birtist á matseðlinum þínum. Gestir ýta á valið tungumál og öll vefsíðan — matseðill, lýsingar, tengiliðaupplýsingar, leiðsögn — breytist samstundis. Engin enduruppfærsla síðu nauðsynleg."
+        },
+        {
+          "title": "Bættu við tungumálum úr stjórnborðinu",
+          "description": "Virkjaðu ný tungumál með einum smelli. Notaðu AI þýðingu til að fylla inn efnið, eða sláðu inn þýðingar handvirkt. Hvert tungumál er hægt að kveikja eða slökkva á óháð öðrum."
+        }
+      ]
+    },
+    "faq": {
+      "title": "Algengar spurningar",
+      "subtitle": "Allt sem þú þarft að vita um fjöltyngda matseðla.",
+      "items": [
+        {
+          "question": "Hversu mörgum tungumálum get ég bætt á matseðilinn minn?",
+          "answer": "Allt að 25+ tungumálum þar á meðal öll helstu evrópsk tungumál, kínverska, japanska, kóreska, arabíska, persneska og fleira. Bættu við eins mörgum og gestirnir þurfa."
+        },
+        {
+          "question": "Þarf ég að þýða allt handvirkt?",
+          "answer": "Nei. Notaðu innbyggðu AI þýðinguna til að þýða allan matseðilinn með einum smelli. Þú getur líka breytt hvaða þýðingu sem er handvirkt fyrir fulla stjórn."
+        },
+        {
+          "question": "Vistast tungumálavalið?",
+          "answer": "Já. Þegar gestur velur tungumál er það munað fyrir næstu heimsókn. Hann þarf ekki að velja aftur þegar hann kemur aftur."
+        },
+        {
+          "question": "Er fjöltyngdur stuðningur í boði á ókeypis áskriftinni?",
+          "answer": "Ókeypis áskriftin inniheldur allt að 2 tungumál. Growth og Pro áskriftir bjóða ótakmörkuð tungumál með AI þýðingu innifalinni."
+        }
+      ]
+    },
+    "howItWorks": {
+      "title": "Hvernig það virkar",
+      "subtitle": "Gerðu matseðilinn þinn aðgengilegan á mörgum tungumálum í fjórum skrefum.",
+      "steps": [
+        {
+          "title": "Farðu í Tungumálastillingar",
+          "description": "Opnaðu Tungumálasíðuna í stjórnborðinu þínu. Þú munt sjá öll tiltæk tungumál og hvaða tungumál eru virk á matseðlinum þínum."
+        },
+        {
+          "title": "Bættu Tungumálum Við",
+          "description": "Veldu úr 35 tiltækum tungumálum. Ókeypis áætlunin inniheldur allt að 2 tungumál, á meðan Growth og Pro áætlanir bjóða upp á ótakmörkuð tungumál fyrir matseðilinn þinn."
+        },
+        {
+          "title": "Þýddu Efnið Þitt",
+          "description": "Notaðu AI-þýðingu með einu smelli til að þýða allan matseðilinn þinn strax, eða sláðu inn þýðingar handvirkt fyrir fulla stjórn. Þú getur líka sameinað báðar aðferðirnar."
+        },
+        {
+          "title": "Gestir Skipta Um Tungumál",
+          "description": "Tungumálaval kemur fram á matseðilsíðunni þinni. Þegar gestir velja tungumál sitt, skiptist allur matseðillinn strax. Val þeirra er vistað fyrir endurkomu."
+        }
+      ]
+    }
+  },
+  "instantSetupPage": {
+    "seo": {
+      "title": "Ókeypis vefsíðugerð fyrir veitingastaði — Búðu til á 5 mínútum | IQ Rest",
+      "description": "Fáðu faglega vefsíðu veitingastaðar með QR matseðli, tengiliðasíðu og korti — sláðu bara inn tölvupóstfangið þitt. Tilbúin á 5 mínútum, engin tæknilega þekking nauðsynleg."
+    },
+    "hero": {
+      "badge": "Ókeypis vefsíða",
+      "title": "Fáðu faglega vefsíðu veitingastaðar á 5 mínútum",
+      "subtitle": "Sláðu inn tölvupóstfangið, nefndu veitingastaðinn og þú færð samstundis fullkomna vefsíðu með QR matseðli, tengiliðasíðu með korti og nútímalega móttækilegri hönnun. Engin forritun, engir hönnuðir.",
+      "cta": "Búðu til matseðilinn þinn",
+      "ctaDemo": "Skoða demo",
+      "noCreditCard": "Ekkert kreditkort nauðsynlegt. Ókeypis áskrift í boði."
+    },
+    "features": {
+      "title": "Hvernig það virkar",
+      "subtitle": "Frá engu til lifandi vefsíðu veitingastaðar í þremur skrefum.",
+      "items": [
+        {
+          "title": "Skráðu þig bara með tölvupósti",
+          "description": "Engin flókin nýskráningareyðublöð. Sláðu inn tölvupóstfangið þitt, staðfestu með kóða og stjórnborð veitingastaðarins er tilbúið. Nefndu veitingastaðinn og vefsíðan þín fer í loftið samstundis."
+        },
+        {
+          "title": "Allt innifalið frá byrjun",
+          "description": "Vefsíðan þín kemur með QR matseðli, tengiliðasíðu með Google Maps, tungumálastuðningi, farsímavænni hönnun og þínu eigin einstöku URL. Bættu bara við réttum og byrjaðu að deila."
+        }
+      ]
+    },
+    "faq": {
+      "title": "Algengar spurningar",
+      "subtitle": "Allt sem þú þarft að vita um að búa til vefsíðu veitingastaðar.",
+      "items": [
+        {
+          "question": "Hvernig bý ég til ókeypis vefsíðu veitingastaðar?",
+          "answer": "Sláðu inn tölvupóstfangið á IQ Rest, staðfestu með kóða, nefndu veitingastaðinn — búið. Vefsíðan þín með QR matseðli er í loftinu á innan við 5 mínútum. Ekkert kreditkort nauðsynlegt."
+        },
+        {
+          "question": "Þarf ég tæknilega þekkingu?",
+          "answer": "Nei. Allt er hannað fyrir eigendur veitingastaða, ekki forritara. Bættu við réttum, hladdu upp myndum og stjórnaðu vefsíðunni þinni alfarið úr símanum."
+        },
+        {
+          "question": "Hvað er innifalið í ókeypis áskriftinni?",
+          "answer": "Full vefsíða veitingastaðar, QR matseðill, tengiliðasíða með korti, greiningar, sérsniðið litaþema og allt að 2 tungumál. Enginn reynslutími — þetta er ókeypis að eilífu."
+        },
+        {
+          "question": "Get ég notað mitt eigið lén?",
+          "answer": "Á ókeypis og Growth áskriftum er vefsíðan þín hýst á iq-rest.com/m/þitt-nafn. Pro áskriftin styður sérsniðin lén fyrir fulla vörumerkjastjórn."
+        }
+      ]
+    },
+    "howItWorks": {
+      "title": "Hvernig það virkar",
+      "subtitle": "Frá engu til lifandi veitingastaðarvefsíðu í fjórum skrefum.",
+      "steps": [
+        {
+          "title": "Sláðu inn tölvupóstinn þinn",
+          "description": "Engin lykilorð nauðsynleg. Bara sláðu inn tölvupóstfangið þitt og smelltu á Halda áfram. Engar langar skráningarform, engin kreditkort nauðsynleg, og engar skuldbindingar."
+        },
+        {
+          "title": "Staðfestu með kóða",
+          "description": "Athugaðu pósthólfið þitt fyrir 4-stafa staðfestingarkóða. Sláðu hann inn til að skrá þig inn á öruggan hátt. Þessi lykilorðslaus aðferð þýðir eitt minna að muna."
+        },
+        {
+          "title": "Nefndu veitingastaðinn þinn",
+          "description": "Gefðu veitingastaðnum þínum nafn. Það verður vefsíðu URL-ið þitt og titill matseðilsins. Þú getur alltaf breytt því síðar frá stillingum stjórnborðsins þíns."
+        },
+        {
+          "title": "Vefsíðan þín er tilbúin",
+          "description": "Fullkomin veitingastaðarvefsíða með QR matseðli, tengiliðasíðu með korti, og viðbragðsformi er lifandi strax á iq-rest.com/m/your-name. Bættu réttum þínum við og byrjaðu að deila."
+        }
+      ]
+    }
+  },
+  "analyticsPage": {
+    "seo": {
+      "title": "Greining Veitingastaða og Tölfræði QR Matseðla — Fylgstu Með Gestum | IQ Rest",
+      "description": "Fylgstu með QR matseðilsskönnunum, síðuflettingum, vinsælum tungumálum og þróun gesta. Greiningartafla í rauntíma fyrir vefsíðu veitingastaðarins þíns."
+    },
+    "hero": {
+      "badge": "Greining",
+      "title": "Sjáðu Nákvæmlega Hvernig Gestir Nota QR Matseðilinn Þinn",
+      "subtitle": "Fylgstu með daglegum skönnunum, síðuflettingum, vinsælum tungumálum, tölfræði tækja og þróun yfir tíma. Taktu ákvarðanir byggðar á gögnum til að hagræða matseðlinum og vaxa fyrirtækið þitt.",
+      "cta": "Búðu Til Matseðilinn Þinn",
+      "ctaDemo": "Skoða Kynningu",
+      "noCreditCard": "Ekkert kreditkort krafist. Ókeypis áskrift í boði."
+    },
+    "features": {
+      "title": "Hvað Geturðu Fylgst Með",
+      "subtitle": "Rauntíma innsýn í viðveru veitingastaðarins þíns á netinu.",
+      "items": [
+        {
+          "title": "Daglegar Flettingar, Skannanir og Þróun Gesta",
+          "description": "Sjáðu hversu margir skanna QR kóðann þinn og heimsækja matseðilinn á hverjum degi, viku og mánuði. Fylgstu með þróun yfir tíma til að skilja árstíðabundin mynstur og mæla áhrif kynningartilboða."
+        },
+        {
+          "title": "Sundurliðun Tungumáls og Tækis",
+          "description": "Veittu hvaða tungumál gestir þínir kjósa og hvaða tæki þeir nota. Þessi gögn hjálpa þér að forgangsraða þýðingum og tryggja að matseðillinn þinn líti fullkomlega út á vinsælustu tækjunum."
+        }
+      ]
+    },
+    "faq": {
+      "title": "Algengar Spurningar",
+      "subtitle": "Allt sem þú þarft að vita um greiningu veitingastaða.",
+      "items": [
+        {
+          "question": "Hvaða mælikvarða get ég fylgst með?",
+          "answer": "Daglegar, vikulegar og mánaðarlegar síðuflettingar. Einstakir gestir. Mest skoðaðar síður. Tungumálaval. Sundurliðun tækja og vafra. Allt uppfært í rauntíma."
+        },
+        {
+          "question": "Er greining innifalin í ókeypis áskriftinni?",
+          "answer": "Já. Grunngreining er í boði í hverri áskrift, þar á meðal ókeypis. Þú getur séð flettingar, gesti og tungumálatölfræði frá fyrsta degi."
+        },
+        {
+          "question": "Get ég séð hvaða síður eru vinsælastar?",
+          "answer": "Já. Stjórnborðið sýnir flettingar sundurliðaðar eftir síðu — forsíða, matseðill, tengiliðir, bókanir og tungumálaval. Sjáðu nákvæmlega hvar gestir eyða tímanum sínum."
+        },
+        {
+          "question": "Hversu langt aftur í tímann ná gögnin?",
+          "answer": "Greiningargögn eru geymd frá þeim degi sem þú stofnar veitingastaðinn þinn. Þú getur skoðað daglega, vikulega og mánaðarlega þróun fyrir alla sögu þína."
+        }
+      ]
+    },
+    "howItWorks": {
+      "title": "Hvernig það virkar",
+      "subtitle": "Byrjaðu að fylgjast með frammistöðu veitingastaðarins þíns í fjórum skrefum.",
+      "steps": [
+        {
+          "title": "Búðu til veitingastaðinn þinn",
+          "description": "Greiningar byrja að fylgjast með frá því augnabliki sem matseðillinn þinn fer í loftið. Það er ekkert að stilla — hver skoðun á síðu, QR skönnun og gestur er skráð sjálfkrafa."
+        },
+        {
+          "title": "Deildu QR kóðanum þínum",
+          "description": "Prentaðu QR kóðann þinn og settu hann á borð, við innganginn eða á umbúðir fyrir meðferð. Hver skönnun er skráð með tímastimpil, tungumáli, tæki og heimsóttri síðu."
+        },
+        {
+          "title": "Opnaðu greiningar stjórnborðið",
+          "description": "Sjáðu daglegar, vikulegar og mánaðarlegar tölfræði með skýrum grafík. Fylgdu heildarskoðunum, einstökum gestum og þróun yfir tíma frá einu stjórnborði."
+        },
+        {
+          "title": "Kannaðu ítarlegar sundurliðanir",
+          "description": "Skoðaðu tölfræði sundurliðaða eftir síðu (matseðill, tengiliðir, bókanir), valdu tungumál, tegund tækis og vafra. Notaðu þessar upplýsingar til að hámarka matseðilinn þinn og forgangsraða þýðingum."
+        }
+      ]
+    }
+  },
+  "aiImagesPage": {
+    "seo": {
+      "title": "Gervigreind Matarljósmyndagerð fyrir Matseðla — Myndir fyrir Matseðil Veitingastaðar | IQ Rest",
+      "description": "Búðu til fallegar matarljósmyndir fyrir matseðilinn þinn með gervigreind. Enginn ljósmyndari þörf — fáðu faglegar myndir af réttum á nokkrum sekúndum, fínstilltar fyrir QR matseðilinn þinn."
+    },
+    "hero": {
+      "badge": "Gervigreind Myndir",
+      "title": "Faglegar Matseðilsmyndir Án Ljósmyndara",
+      "subtitle": "Búðu til stórkostlegar myndir af réttum þínum með gervigreind. Sláðu bara inn heiti réttar og fáðu fallega, fínstillta ljósmynd tilbúna fyrir QR matseðilinn þinn — á nokkrum sekúndum.",
+      "cta": "Búðu Til Matseðilinn Þinn",
+      "ctaDemo": "Skoða Kynningu",
+      "noCreditCard": "Ekkert kreditkort krafist. Ókeypis áskrift í boði."
+    },
+    "features": {
+      "title": "Hvernig Gervigreind Myndagerð Virkar",
+      "subtitle": "Frá heiti réttar yfir í faglega ljósmynd með einum smelli.",
+      "items": [
+        {
+          "title": "Búðu Til Myndir úr Heitum Rétta",
+          "description": "Sláðu inn heiti réttar — 'Grillaður Lax með Sítrónu', 'Margherita Pítsa', 'Súkkulaði Hraunkaka' — og gervigreind býr til faglega matarljósmynd. Veldu úr mörgum stílum og bakgrunnum."
+        },
+        {
+          "title": "Fínstillt fyrir Hraða Hleðslu",
+          "description": "Sérhver mynduð mynd er sjálfkrafa þjöppuð og umbreytt í nútíma snið. Matseðillinn þinn helst leifturhraður á hvaða tæki sem er, jafnvel með myndum við hvern rétt."
+        }
+      ]
+    },
+    "faq": {
+      "title": "Algengar Spurningar",
+      "subtitle": "Allt sem þú þarft að vita um gervigreind myndir á matseðla.",
+      "items": [
+        {
+          "question": "Hvernig bý ég til matarljósmynd?",
+          "answer": "Opnaðu hvaða matseðilsatriði sem er á stjórnborðinu, pikkaðu á 'Búa til Mynd' og gervigreind býr til faglega matarljósmynd byggða á heiti og lýsingu réttar. Veldu þá sem þér líkar."
+        },
+        {
+          "question": "Get ég notað mínar eigin ljósmyndir í staðinn?",
+          "answer": "Auðvitað. Hladdu upp eigin ljósmyndum af símanum eða tölvunni. Gervigreind myndagerð er valfrjáls — notaðu hana þegar þú átt ekki ljósmynd tilbúna."
+        },
+        {
+          "question": "Hversu margar myndir get ég búið til?",
+          "answer": "Takmörk myndagerðar ráðast af áskriftinni þinni. Growth inniheldur mánaðarlegt framlag og Pro býður upp á hærri mörk. Þú getur alltaf hlaðið upp eigin ljósmyndum án takmarkana."
+        },
+        {
+          "question": "Eru myndaðar myndir einstakar fyrir veitingastaðinn minn?",
+          "answer": "Já. Hver mynd er búin til einstaklega fyrir þinn tiltekna rétt. Engar birgðamyndir — hver mynd er búin til frá grunni út frá matseðilsatriðinu þínu."
+        }
+      ]
+    },
+    "howItWorks": {
+      "title": "Hvernig það virkar",
+      "subtitle": "Fáðu faglegar matmyndir fyrir matseðilinn þinn í fjórum einföldum skrefum.",
+      "steps": [
+        {
+          "title": "Opnaðu hvaða matseðilspunkt sem er",
+          "description": "Fara í þann punkt sem þú vilt fá mynd af í stjórnborðinu þínu. Þú getur búið til myndir fyrir nýja rétti eða skipt út núverandi myndum á hvaða matseðilspunkt sem er."
+        },
+        {
+          "title": "Smelltu á Búa til mynd",
+          "description": "AI býr til faglega matmynd byggða á nafni réttarins og lýsingu. Ju meira sem þú veitir í lýsingunni, því nákvæmari verður niðurstaðan."
+        },
+        {
+          "title": "Skoðaðu niðurstöðuna",
+          "description": "Forskoðaðu myndina sem búin var til áður en þú beitir henni. Ef þú vilt að útlitið sé öðruvísi, endurgerðu til að fá nýja útgáfu. Hver gerð framleiðir einstaka mynd."
+        },
+        {
+          "title": "Notaðu í matseðilinn þinn",
+          "description": "Myndin er sjálfkrafa hámarkuð, þjappað í WebP sniði, og birtist strax á lifandi matseðli þínu. Gestir sjá faglegar matmyndir á hverjum rétti."
+        }
+      ]
+    }
+  },
+  "personalSupportPage": {
+    "seo": {
+      "title": "Persónuleg aðstoð fyrir vefsíðu veitingastaðarins þíns — Raunveruleg mannleg hjálp | IQ Rest",
+      "description": "Fáðu persónulega hjálp frá raunverulegum manneskjum, ekki spjallþjónum. Uppsetningaraðstoð, ráð um hagræðingu matseðils og fljótleg svör — í boði á öllum áskriftarleiðum, þar með talið ókeypis."
+    },
+    "hero": {
+      "badge": "Persónuleg aðstoð",
+      "title": "Raunverulegt fólk, raunveruleg hjálp — Ekki spjallþjónar",
+      "subtitle": "Ertu með spurningu? Þarftu hjálp við uppsetningu matseðilsins? Viltu leggja til nýjan eiginleika? Sendu okkur skilaboð beint og fáðu persónulegt svar frá einhverjum sem skilur veitingastaði.",
+      "cta": "Búðu til matseðilinn þinn",
+      "ctaDemo": "Skoða kynningu",
+      "noCreditCard": "Ekki þarf kreditkort. Ókeypis áskriftarleið í boði."
+    },
+    "features": {
+      "title": "Hvernig aðstoðin virkar",
+      "subtitle": "Hjálp þegar þú þarft á henni að halda, frá fólki sem kærir sig.",
+      "items": [
+        {
+          "title": "Sendu okkur skilaboð beint úr stjórnborðinu þínu",
+          "description": "Opnaðu aðstoðarspjallið í stjórnborðinu þínu og lýstu spurningunni þinni. Raunveruleg manneskja les skilaboðin þín og svarar — venjulega innan nokkurra klukkustunda á virkum dögum."
+        },
+        {
+          "title": "Hjálp við uppsetningu, hagræðingu og fleira",
+          "description": "Hvort sem þú þarft hjálp við að bæta við fyrsta réttinum, ráðleggingar um skipulag matseðilsins eða vilt leggja til nýjan eiginleika — við erum hér. Hver spurning skiptir máli, sama hversu lítil."
+        }
+      ]
+    },
+    "faq": {
+      "title": "Algengar spurningar",
+      "subtitle": "Allt sem þú þarft að vita um aðstoðina okkar.",
+      "items": [
+        {
+          "question": "Er aðstoð í boði á ókeypis áskriftarleiðinni?",
+          "answer": "Já. Persónuleg aðstoð er í boði á öllum áskriftarleiðum, þar með talið ókeypis. Við trúum að sérhver veitingastaður eigi skilið raunverulega hjálp, óháð áskrift."
+        },
+        {
+          "question": "Hversu fljótt svarið þið?",
+          "answer": "Venjulega innan nokkurra klukkustunda á virkum dögum. Við lesum öll skilaboð persónulega og leitumst við að leysa spurninguna þína í einu svari."
+        },
+        {
+          "question": "Getið þið hjálpað mér að setja upp matseðilinn minn?",
+          "answer": "Auðvitað. Ef þú þarft hjálp við að bæta við réttum, skipuleggja flokka, setja upp þýðingar eða stilla bókanir — bara spurðu. Okkur þykir gaman að leiðbeina þér í gegnum allt."
+        },
+        {
+          "question": "Get ég lagt til nýja eiginleika?",
+          "answer": "Já, og okkur finnst það frábært! Margir eiginleikar okkar byrjuðu sem tillögur notenda. Sendu okkur hugmyndina þína og við munum íhuga hana fyrir framtíðaruppfærslur."
+        }
+      ]
+    },
+    "howItWorks": {
+      "title": "Hvernig það virkar",
+      "subtitle": "Fáðu aðstoð frá raunverulegum manni í fjórum einföldum skrefum.",
+      "steps": [
+        {
+          "title": "Opna stuðningsspjall",
+          "description": "Farðu á stuðningssíðuna í stjórnborðinu þínu. Þú munt sjá einfalt spjallviðmót þar sem þú getur slegið inn skilaboðin þín beint — engin miðaform eða flokka til að velja úr."
+        },
+        {
+          "title": "Lýstu spurningunni þinni",
+          "description": "Slegðu inn skilaboðin þín. Spurðu um uppsetningu, eiginleika, matseðilshagræðingu, reikninga eða eitthvað annað. Það eru engar heimskulegar spurningar — við erum ánægð með að aðstoða við allt."
+        },
+        {
+          "title": "Fáðu persónulega svör",
+          "description": "Raunverulegur maður (ekki spjallbotn) les skilaboðin þín og svarar innan klukkustunda. Við skiljum ferla veitingastaða og veitum raunveruleg, framkvæmanleg svör."
+        },
+        {
+          "title": "Stöðug aðstoð",
+          "description": "Beindu aðstoð við eiginleika, fáðu ráð um matseðilshagræðingu, eða spurðu um uppsetningu hvenær sem er. Samtals saga þín er vistuð, svo við höfum alltaf samhengi frá fyrri spurningum."
+        }
+      ]
+    }
   }
 }

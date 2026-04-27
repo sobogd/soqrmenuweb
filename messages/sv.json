@@ -2515,5 +2515,895 @@
     },
     "back": "Back",
     "continue": "Fortsätt"
+  },
+  "onlineOrders": {
+    "seo": {
+      "title": "Onlinebeställning för restauranger — QR-meny | IQ Rest",
+      "description": "Låt kunder beställa direkt från din QR-meny. Inga provisioner, realtidspriser och omedelbar orderhantering i din instrumentpanel."
+    },
+    "hero": {
+      "badge": "Onlinebeställning",
+      "title": "Förvandla din QR-meny till ett onlinebeställningssystem",
+      "subtitle": "Kunder skannar, bläddrar i menyn och lägger sin beställning på sekunder. Inga appnedladdningar, inga provisioner, ingen komplexitet.",
+      "cta": "Skapa din meny",
+      "ctaDemo": "Visa demo",
+      "noCreditCard": "Inget kreditkort krävs. Gratis plan tillgänglig."
+    },
+    "benefits": {
+      "title": "Varför restauranger väljer QR-menybeställningar",
+      "subtitle": "En direkt beställningskanal som gör det enkelt för dig och dina gäster.",
+      "items": [
+        {
+          "title": "Ingen app krävs",
+          "description": "Gäster skannar bara en QR-kod — inga nedladdningar, inga registreringar. Fungerar direkt i vilken telefonwebbläsare som helst."
+        },
+        {
+          "title": "Realtidspriser",
+          "description": "Uppdatera priser och tillgänglighet direkt. Ändringar syns omedelbart i din QR-meny."
+        },
+        {
+          "title": "Beställning vid bordet",
+          "description": "Varje bord får sin egen QR-kod. Gäster skannar, beställer och du ser bordsnumret i din instrumentpanel."
+        },
+        {
+          "title": "Anpassad design",
+          "description": "Matcha din meny med ditt varumärke med egna färger, bakgrunder och logotyp."
+        }
+      ]
+    },
+    "features": {
+      "title": "Hur onlinebeställning fungerar",
+      "subtitle": "Två enkla steg kopplar din meny till ditt kök.",
+      "items": [
+        {
+          "title": "Gäster bläddrar och väljer rätter",
+          "description": "Kunder skannar din QR-kod och ser hela menyn med foton, beskrivningar och priser. De lägger till rätter i sin beställning med ett enda tryck — ingen registrering behövs."
+        },
+        {
+          "title": "Beställningar visas i din instrumentpanel",
+          "description": "När gästerna är redo trycker de på beställningsknappen. Beställningen visas omedelbart i din instrumentpanel med artikeldetaljer, bordsnummer och eventuella anteckningar. Acceptera, börja förbereda och markera som klar."
+        }
+      ]
+    },
+    "faq": {
+      "title": "Vanliga frågor",
+      "subtitle": "Allt du behöver veta om onlinebeställning.",
+      "items": [
+        {
+          "question": "Behöver jag någon extra utrustning eller appar?",
+          "answer": "Nej. Allt fungerar via en webbläsare. Gäster skannar QR-koden med sin telefonkamera, och du hanterar beställningar från IQ Rest-instrumentpanelen på vilken enhet som helst."
+        },
+        {
+          "question": "Finns det några provisioner eller avgifter per beställning?",
+          "answer": "Absolut inte. IQ Rest tar aldrig ut provisioner på dina beställningar. Du betalar bara din prenumerationsplan, och alla intäkter från beställningar stannar hos dig."
+        },
+        {
+          "question": "Kan kunder anpassa sin beställning eller lägga till anteckningar?",
+          "answer": "Ja. Gäster kan välja rätter, ange antal och lägga till speciella anteckningar eller önskemål. Du kan också kräva kundnamn, telefon eller leveransadress."
+        },
+        {
+          "question": "Fungerar det för servering på plats, avhämtning och leverans?",
+          "answer": "Ja. För servering på plats skannar gäster QR-koden vid sitt bord. För avhämtning eller leverans delar du en direktlänk till din meny. Du kan aktivera fält för namn, telefon och adress efter behov."
+        }
+      ]
+    },
+    "howItWorks": {
+      "title": "Hur Det Fungerar",
+      "subtitle": "Från installation till att ta emot din första beställning i fem enkla steg.",
+      "steps": [
+        {
+          "title": "Aktivera Onlinebeställningar",
+          "description": "Slå på beställningar i dina Designinställningar. Välj din föredragna metod: beställningar visas i din instrumentpanel, vidarebefordras till WhatsApp, eller båda samtidigt."
+        },
+        {
+          "title": "Konfigurera Beställningsformuläret",
+          "description": "Välj vilka fält kunderna måste fylla i när de gör en beställning. Namn är alltid obligatoriskt, och du kan valfritt be om telefonnummer och leveransadress."
+        },
+        {
+          "title": "Skriv Ut QR-koder för Bord",
+          "description": "Varje bord i din restaurang får sin egen unika QR-kod. När gästerna skannar den, kommer deras beställning automatiskt med rätt bordsnummer kopplat."
+        },
+        {
+          "title": "Kunder Lägger Beställningar",
+          "description": "Gästerna skannar QR-koden, bläddrar i din meny med bilder och priser, väljer rätter, lägger till anteckningar och skickar sin beställning. Ingen appnedladdning eller kontoskapande behövs."
+        },
+        {
+          "title": "Hantera Beställningar i Din Instrumentpanel",
+          "description": "Beställningar visas omedelbart i din instrumentpanel. Uppdatera varje beställningsstatus från ny till pågående till slutförd. Du behåller 100% av intäkterna — noll provisioner."
+        }
+      ]
+    }
+  },
+  "reservationsPage": {
+    "seo": {
+      "title": "Bordsreservationssystem for restauranger — Onlinebokning | IQ Rest",
+      "description": "Lat gaster boka bord direkt fran din webbplats. Automatisk eller manuell bekraftelse, e-postnotifieringar och full kalenderhantering — allt inkluderat."
+    },
+    "hero": {
+      "badge": "Bordsreservationer",
+      "title": "Ta emot bordsreservationer dygnet runt fran din webbplats",
+      "subtitle": "Gaster valjer datum, tid och sallskapsstorlek — och bokar direkt. Du hanterar allt fran din kontrollpanel, inga telefonsamtal behovs.",
+      "cta": "Skapa din meny",
+      "ctaDemo": "Visa demo",
+      "noCreditCard": "Inget kreditkort kravs. Gratis plan tillganglig."
+    },
+    "features": {
+      "title": "Hur bordsreservationer fungerar",
+      "subtitle": "Tva steg fran gastens forfragan till bekraftad bokning.",
+      "items": [
+        {
+          "title": "Gaster bokar fran din webbplats",
+          "description": "Kunder besoker din restaurangsida, trycker pa 'Reservera bord', valjer datum och tid, anger sina uppgifter och skickar. Ingen app behovs — fungerar i alla webblasare pa alla enheter."
+        },
+        {
+          "title": "Du hanterar bokningar i din kontrollpanel",
+          "description": "Varje reservation visas i din kontrollpanel med gastens namn, telefon, sallskapsstorlek, datum och anteckningar. Bekrafta eller avboj med ett tryck. Stall in automatisk bekraftelse eller granska varje bokning manuellt."
+        }
+      ]
+    },
+    "faq": {
+      "title": "Vanliga fragor",
+      "subtitle": "Allt du behover veta om bordsreservationer.",
+      "items": [
+        {
+          "question": "Behover kunder skapa ett konto for att boka?",
+          "answer": "Nej. Gaster fyller helt enkelt i sitt namn, telefonnummer, sallskapsstorlek och onskat tid. Inget konto eller appnedladdning kravs."
+        },
+        {
+          "question": "Kan jag stalla in tillgangliga tider och kapacitet?",
+          "answer": "Ja. Definiera dina oppettider, reservationsintervall och bordskapacitet. Systemet visar bara tillgangliga tider for gasterna."
+        },
+        {
+          "question": "Far jag besked nar nagon bokar?",
+          "answer": "Ja. Du far ett e-postmeddelande for varje ny reservation. Gaster far ocksa ett bekraftelsemail nar du godkanner bokningen."
+        },
+        {
+          "question": "Kan jag anvanda bade automatisk och manuell bekraftelse?",
+          "answer": "Ja. Valj automatiskt lage for att bekrafta bokningar direkt baserat pa tillganglighet, eller manuellt lage for att granska och godkanna varje forfragan sjalv."
+        }
+      ]
+    },
+    "howItWorks": {
+      "title": "Hur Det Fungerar",
+      "subtitle": "Ställ in onlinebokningar och börja ta emot bokningar i fem steg.",
+      "steps": [
+        {
+          "title": "Aktivera Bokningar",
+          "description": "Aktivera bokningar i dina restauranginställningar. Välj mellan automatisk bekräftelse, där bokningar godkänns omedelbart baserat på tillgänglighet, eller manuell läge där du granskar varje förfrågan."
+        },
+        {
+          "title": "Lägg Till Dina Bord",
+          "description": "Skapa bord med kapacitets- och zoninformation — till exempel, 'Bord 5, 4 gäster, Terrass'. Varje bord blir bokningsbart, och systemet förhindrar automatiskt dubbelbokningar."
+        },
+        {
+          "title": "Ställ In Arbetstider",
+          "description": "Definiera dina tillgängliga timmar för bokningar och välj tidslängd — från 15 minuter till 8 timmar. Endast tidsluckor inom dina arbetstider visas för gästerna."
+        },
+        {
+          "title": "Gäster Bokar Online",
+          "description": "Kunder besöker din restaurangsida, väljer datum, tid och antal personer, anger sitt namn och telefonnummer, och skickar in. Inget konto eller appnedladdning krävs — fungerar i alla webbläsare."
+        },
+        {
+          "title": "Hantera Bokningar i Din Instrumentpanel",
+          "description": "Se alla reservationer i din instrumentpanel. Bekräfta, avboka eller markera bokningar som slutförda. Både du och gästen får e-postmeddelanden för varje bokningsuppdatering."
+        }
+      ]
+    }
+  },
+  "colorSchemePage": {
+    "seo": {
+      "title": "Anpassad QR-menydesign och varumarkesfarger — Restaurangbranding | IQ Rest",
+      "description": "Matcha din QR-meny med ditt restaurangvarumarke. Valj accentfarger och skapa ett enhetligt utseende over hela din digitala meny."
+    },
+    "hero": {
+      "badge": "Anpassad design",
+      "title": "Lat din QR-meny matcha ditt restaurangvarumarke",
+      "subtitle": "Valj din varummarkesfarg, och hela din meny — knappar, markeringar, lankar — uppdateras direkt.",
+      "cta": "Skapa din meny",
+      "ctaDemo": "Visa demo",
+      "noCreditCard": "Inget kreditkort kravs. Gratis plan tillganglig."
+    },
+    "features": {
+      "title": "Hur anpassad branding fungerar",
+      "subtitle": "Din meny, dina farger — enhetligt pa varje sida.",
+      "items": [
+        {
+          "title": "Valj din accentfarg",
+          "description": "Valj bland 12 kurerade forval eller ange din exakta varumarkesfarg med en hexkod. Varje knapp, lank och markering pa din meny anpassas direkt — inga designkunskaper behovs."
+        }
+      ]
+    },
+    "faq": {
+      "title": "Vanliga fragor",
+      "subtitle": "Allt du behover veta om menyanpassning.",
+      "items": [
+        {
+          "question": "Kan jag anvanda min exakta varumarkesfarg?",
+          "answer": "Ja. Ange vilken hexfargkod som helst, eller valj bland 12 noggrant utvalda forval. Din accentfarg tillampas pa alla sidor i din meny."
+        },
+        {
+          "question": "Kan jag andra farger efter publicering?",
+          "answer": "Absolut. Andra din accentfarg nar som helst fran kontrollpanelen. Andringarna visas direkt pa din aktiva meny — ingen ompublicering behovs."
+        },
+        {
+          "question": "Kommer min QR-kod ocksa matcha varummarkesfargerna?",
+          "answer": "Din QR-kod genereras separat och kan anpassas oberoende. Accentfargen tillampas pa dina digitala menysidor, navigation och interaktiva element."
+        }
+      ]
+    },
+    "howItWorks": {
+      "title": "Hur Det Fungerar",
+      "subtitle": "Anpassa din meny till ditt varumärke i tre enkla steg.",
+      "steps": [
+        {
+          "title": "Öppna Designinställningar",
+          "description": "Navigera till Design-sidan i din instrumentpanel. Färgvalet för accentfärgen är i centrum — du ser alla tillgängliga alternativ direkt."
+        },
+        {
+          "title": "Välj Din Varumärkesfärg",
+          "description": "Välj bland 12 utvalda färginställningar som är designade för läsbarhet och tillgänglighet, eller ange din exakta hex-kod för en perfekt matchning med ditt varumärke."
+        },
+        {
+          "title": "Omedelbar Förhandsvisning",
+          "description": "Din accentfärg tillämpas på knappar, länkar och markeringar över hela menyn. Det fungerar i både ljusa och mörka teman, och ändringar visas omedelbart på din live-meny."
+        }
+      ]
+    }
+  },
+  "easyMenuPage": {
+    "seo": {
+      "title": "Skapa en QR-meny for din restaurang — Gratis menyskapare | IQ Rest",
+      "description": "Bygg din restaurangs digitala QR-meny pa nagra minuter. Lagg till kategorier, ratter, foton, priser — och dela en skanningsbar QR-kod. Gratis att borja."
+    },
+    "hero": {
+      "badge": "Menyskapare",
+      "title": "Skapa en digital QR-meny for din restaurang pa nagra minuter",
+      "subtitle": "Lagg till dina kategorier och ratter, satt priser, ladda upp foton — din QR-meny ar redo att dela. Redigera nar som helst, andringar visas direkt.",
+      "cta": "Skapa din meny",
+      "ctaDemo": "Visa demo",
+      "noCreditCard": "Inget kreditkort kravs. Gratis plan tillganglig."
+    },
+    "features": {
+      "title": "Hur menyredigeraren fungerar",
+      "subtitle": "Enkla verktyg som far din meny online snabbt.",
+      "items": [
+        {
+          "title": "Lagg till kategorier och ratter",
+          "description": "Skapa kategorier som Forratter, Huvudratter, Drycker — lagg sedan till ratter med namn, beskrivningar, priser och foton. Dra och slapp for att andra ordning. Sla pa eller av artiklar utan att radera dem."
+        },
+        {
+          "title": "Andringar publiceras direkt",
+          "description": "Varje redigering du gor visas pa din aktiva QR-meny inom sekunder. Uppdatera ett pris, lagg till en dagspecial eller dolj en utsald ratt — dina kunder ser alltid den senaste versionen."
+        }
+      ]
+    },
+    "faq": {
+      "title": "Vanliga fragor",
+      "subtitle": "Allt du behover veta om att skapa din QR-meny.",
+      "items": [
+        {
+          "question": "Hur skapar jag en QR-meny for min restaurang?",
+          "answer": "Registrera dig med din e-post, namnge din restaurang och borja lagga till kategorier och ratter. Din QR-meny genereras automatiskt — skriv ut QR-koden och placera den pa dina bord."
+        },
+        {
+          "question": "Kan jag lagga till foton till mina menyartiklar?",
+          "answer": "Ja. Ladda upp foton direkt fran din telefon eller dator. Bilder optimeras automatiskt for snabb laddning pa alla enheter."
+        },
+        {
+          "question": "Hur manga artiklar kan jag lagga till?",
+          "answer": "Det finns ingen grans for kategorier eller menyartiklar. Lagg till sa manga ratter du behover — din meny forblir snabb och organiserad."
+        },
+        {
+          "question": "Kan jag tillfalligt dolja en ratt som ar slutsald?",
+          "answer": "Ja. Sla av vilken artikel som helst med ett tryck. Den forsvinner fran den publika menyn men finns kvar i din kontrollpanel — sla pa den igen nar du ar redo."
+        }
+      ]
+    },
+    "howItWorks": {
+      "title": "Hur Det Fungerar",
+      "subtitle": "Bygg och publicera din restaurangmeny i fem enkla steg.",
+      "steps": [
+        {
+          "title": "Skapa Kategorier",
+          "description": "Lägg till kategorier som Förrätter, Huvudrätter, Desserter och Drycker för att organisera din meny. Du kan skapa så många kategorier du behöver och omordna dem med drag och släpp."
+        },
+        {
+          "title": "Lägg Till Menyobjekt",
+          "description": "Ange rätten namn, beskrivning och pris för varje objekt. Markera allergener om tillämpligt — gästerna kommer automatiskt att se allergenikoner på menyn."
+        },
+        {
+          "title": "Ladda Upp eller Generera Bilder",
+          "description": "Ladda upp dina egna matbilder från din telefon eller dator, eller använd AI för att generera en professionell matbild från rätten namn. Bilder optimeras automatiskt."
+        },
+        {
+          "title": "Organisera med Drag och Släpp",
+          "description": "Omordna kategorier och objekt genom att dra dem på plats. Växla vilket objekt som helst på eller av utan att ta bort det — perfekt för dagens specialiteter eller slutsålda rätter."
+        },
+        {
+          "title": "Publicera Din Meny",
+          "description": "Ändringar visas omedelbart på din aktiva QR-meny. Det finns ingen 'publicera'-knapp — varje redigering går live i realtid. Skriv ut din QR-kod och placera den på dina bord."
+        }
+      ]
+    }
+  },
+  "aiTranslationPage": {
+    "seo": {
+      "title": "AI-menyoversattning for restauranger — Oversatt QR-meny | IQ Rest",
+      "description": "Oversatt din restaurangmeny till over 25 sprak med ett klick. AI forstar kulinarisk kontext — rattnamn, beskrivningar och kategorier oversatts korrekt."
+    },
+    "hero": {
+      "badge": "AI-oversattning",
+      "title": "Oversatt din meny till over 25 sprak med ett klick",
+      "subtitle": "Var AI forstar matkontext — den oversatter rattnamn, beskrivningar och kategorier naturligt, inte ord for ord. Na varje turist och internationell gast.",
+      "cta": "Skapa din meny",
+      "ctaDemo": "Visa demo",
+      "noCreditCard": "Inget kreditkort kravs. Gratis plan tillganglig."
+    },
+    "features": {
+      "title": "Hur AI-oversattning fungerar",
+      "subtitle": "Fran ditt sprak till hela varlden pa sekunder.",
+      "items": [
+        {
+          "title": "Oversatt hela menyn med ett klick",
+          "description": "Valj malsprak, tryck oversatt, och hela din meny — kategorier, rattnamn, beskrivningar — oversatts direkt. AI bevarar kulinariska termer och anpassar sig naturligt for varje sprak."
+        },
+        {
+          "title": "Redigera och finjustera alla oversattningar",
+          "description": "Varje AI-oversattning ar fullt redigerbar. Granska resultatet, justera valfri formulering och spara. Dina andringar bevaras aven om du aterigen oversatter andra delar av menyn senare."
+        }
+      ]
+    },
+    "faq": {
+      "title": "Vanliga fragor",
+      "subtitle": "Allt du behover veta om menyoversattning.",
+      "items": [
+        {
+          "question": "Hur exakt ar AI-oversattningen for matmenyer?",
+          "answer": "Var AI ar optimerad for restauranginnehall. Den forstar att 'Beef Wellington' eller 'Tiramisu' inte ska oversattas bokstavligt, och anpassar beskrivningar sa de later naturliga pa varje sprak."
+        },
+        {
+          "question": "Vilka sprak stods?",
+          "answer": "Over 25 sprak inklusive engelska, spanska, franska, tyska, italienska, portugisiska, kinesiska, japanska, koreanska, arabiska, ryska och manga fler europeiska och asiatiska sprak."
+        },
+        {
+          "question": "Kan jag oversatta bara vissa artiklar, inte hela menyn?",
+          "answer": "Ja. Du kan oversatta enskilda artiklar, hela kategorier eller hela menyn pa en gang. Du har full kontroll over vad som oversatts."
+        },
+        {
+          "question": "Kostar det extra per oversattning?",
+          "answer": "AI-oversattning ingar i Growth- och Pro-planer med generosa manadsgrannser. Inga per-ord- eller per-artikel-avgifter — oversatt sa mycket du behover."
+        }
+      ]
+    },
+    "howItWorks": {
+      "title": "Hur Det Fungerar",
+      "subtitle": "Översätt hela din meny på minuter, inte timmar.",
+      "steps": [
+        {
+          "title": "Lägg till Språk till Din Meny",
+          "description": "Gå till sidan Språk i din instrumentpanel och välj vilka språk din meny ska stödja. Välj bland 35 tillgängliga språk inklusive alla större europeiska, asiatiska och mellanösternspråk."
+        },
+        {
+          "title": "Klicka på Översätt",
+          "description": "En knapp översätter alla dina kategorier, artikelnamn och beskrivningar på en gång. Hela menyn bearbetas på sekunder, oavsett hur många artiklar du har."
+        },
+        {
+          "title": "AI Förstår Matkontext",
+          "description": "AI:n känner till kulinarisk terminologi över kulturer. Den bevarar rätter som 'Tiramisu' eller 'Pad Thai' samtidigt som den naturligt anpassar beskrivningar, ingredienslistor och kategorinamn."
+        },
+        {
+          "title": "Granska och Redigera",
+          "description": "Varje översättning är helt redigerbar. Justera vilken formulering som helst för att matcha din stil. Dina manuella ändringar bevaras även när du översätter andra delar av menyn senare."
+        },
+        {
+          "title": "Publicera Din Flerspråkiga Meny",
+          "description": "Gäster ser en språkväxlare på din meny och kan bläddra på sitt föredragna språk. Varje språk kan slås på eller av oberoende från din instrumentpanel."
+        }
+      ]
+    }
+  },
+  "mobileManagementPage": {
+    "seo": {
+      "title": "Hantera din restaurangmeny fran telefonen — Mobil kontrollpanel | IQ Rest",
+      "description": "Kor din restaurangs QR-meny helt fran din telefon. Lagg till ratter, uppdatera priser, ladda upp foton, kolla statistik — ingen dator behovs."
+    },
+    "hero": {
+      "badge": "Mobil kontrollpanel",
+      "title": "Hantera hela din restaurangmeny fran telefonen",
+      "subtitle": "Lagg till ratter, andra priser, ladda upp foton, kolla ordrar — allt fran din smartphone. Kontrollpanelen ar byggd mobil-forst, sa du behover aldrig en dator.",
+      "cta": "Skapa din meny",
+      "ctaDemo": "Visa demo",
+      "noCreditCard": "Inget kreditkort kravs. Gratis plan tillganglig."
+    },
+    "features": {
+      "title": "Hur mobilhantering fungerar",
+      "subtitle": "Din restaurangs kontrollpanel, alltid i fickan.",
+      "items": [
+        {
+          "title": "Full kontrollpanel pa din smartphone",
+          "description": "Varje funktion fungerar perfekt pa din telefonskarm — lagga till artiklar, redigera kategorier, hantera ordrar, kolla statistik. Granssnittet ar designat for pekskarm, inte bara nedskalat fran dator."
+        },
+        {
+          "title": "Ladda upp foton direkt fran kameran",
+          "description": "Ta ett foto pa en ny ratt och ladda upp det till din meny pa sekunder. Bilder optimeras automatiskt. Uppdatera din dagspecial medan du star i koket."
+        }
+      ]
+    },
+    "faq": {
+      "title": "Vanliga fragor",
+      "subtitle": "Allt du behover veta om mobil menyhantering.",
+      "items": [
+        {
+          "question": "Behover jag installera en app?",
+          "answer": "Nej. Kontrollpanelen fungerar i din telefons webblasare — Safari, Chrome eller nagon annan. Logga bara in och borja hantera din meny."
+        },
+        {
+          "question": "Kan jag gora allt fran telefonen som jag kan pa en dator?",
+          "answer": "Ja. Varje funktion ar tillganglig pa mobil — lagga till artiklar, ladda upp foton, hantera kategorier, kolla statistik, hantera ordrar och reservationer."
+        },
+        {
+          "question": "Fungerar det pa surfplattor ocksa?",
+          "answer": "Ja. Kontrollpanelen anpassar sig till alla skarmstorlekar — telefoner, surfplattor och datorer. Anvand vilken enhet som ar bekvamast."
+        },
+        {
+          "question": "Kan flera personer hantera menyn?",
+          "answer": "For narvarande hanterar ett konto restaurangen. Du kan logga in fran flera enheter samtidigt — din telefon, surfplatta eller dator."
+        }
+      ]
+    },
+    "howItWorks": {
+      "title": "Hur Det Fungerar",
+      "subtitle": "Hantera din restaurang från vilken enhet som helst i fyra steg.",
+      "steps": [
+        {
+          "title": "Öppna Dashboard på Din Telefon",
+          "description": "Gå till iq-rest.com och logga in från din telefons webbläsare. Dashboarden anpassar sig automatiskt efter din skärmstorlek — ingen app att ladda ner eller installera."
+        },
+        {
+          "title": "Redigera Meny Var Som Helst",
+          "description": "Lägg till nya rätter, uppdatera priser, ändra beskrivningar och ladda upp foton direkt från din telefons kamera. Varje funktion som finns på dator fungerar lika bra på mobil."
+        },
+        {
+          "title": "Kontrollera Beställningar och Bokningar",
+          "description": "Se inkommande beställningar, hantera bordbokningar och svara på supportmeddelanden — allt från din telefon. Håll koll på din restaurang även när du är borta."
+        },
+        {
+          "title": "Ändringar Går Live Omedelbart",
+          "description": "Varje redigering du gör från din telefon visas på din QR-meny i realtid. Ingen anledning att synkronisera, publicera eller vänta — dina gäster ser alltid den senaste versionen."
+        }
+      ]
+    }
+  },
+  "customDesignPage": {
+    "seo": {
+      "title": "Restaurangwebbplats med video- och fotobakgrund — Webbplatsbyggare | IQ Rest",
+      "description": "Skapa en fantastisk restaurangwebbplats med anpassade video- eller fotobakgrunder. Ladda upp din atmosfarvideo eller matfotografering — imponera pa gasterna fran forsta skanningen."
+    },
+    "hero": {
+      "badge": "Webbplatsdesign",
+      "title": "Skapa en fantastisk restaurangwebbplats med videobakgrunder",
+      "subtitle": "Ladda upp din restaurangs atmosfarvideo eller ett vackert matfoto som bakgrund. Gasterna ser en professionell, varumarkesanpassad upplevelse i samma ogonblick de skannar din QR-kod.",
+      "cta": "Skapa din meny",
+      "ctaDemo": "Visa demo",
+      "noCreditCard": "Inget kreditkort kravs. Gratis plan tillganglig."
+    },
+    "features": {
+      "title": "Hur anpassade bakgrunder fungerar",
+      "subtitle": "Gor ett bestaaende forsta intryck med visuella element som matchar ditt varumarke.",
+      "items": [
+        {
+          "title": "Ladda upp video- eller fotobakgrunder",
+          "description": "Lagg till en loopande video av din restaurangatmosfar, en timelapse fran koket eller ett hogkvalitativt matfoto. Bakgrunden visas pa din startsida — och skapar en uppslukande upplevelse for gasterna."
+        },
+        {
+          "title": "Optimerad for hastighet pa alla enheter",
+          "description": "Videor och bilder komprimeras och lazy-laddas automatiskt. Din webbplats forblir snabb aven pa langsamma mobilanslutningar — ingen buffring, inga forseningar, bara en smidig upplevelse."
+        }
+      ]
+    },
+    "faq": {
+      "title": "Vanliga fragor",
+      "subtitle": "Allt du behover veta om restaurangwebbplatsdesign.",
+      "items": [
+        {
+          "question": "Vilka videoformat stods?",
+          "answer": "MP4- och WebM-format fungerar bast. Videor komprimeras automatiskt for snabb laddning. Hall videor under 30 sekunder for basta mobilupplevelse."
+        },
+        {
+          "question": "Kommer en videobakgrund sakta ner min webbplats?",
+          "answer": "Nej. Videor komprimeras, lazy-laddas och optimeras automatiskt. Vid langsamma anslutningar faller systemet tillbaka pa en statisk bild for att halla upplevelsen smidig."
+        },
+        {
+          "question": "Kan jag anvanda ett foto istallet for video?",
+          "answer": "Ja. Ladda upp valfritt foto — det optimeras och visas som en helskarmsbakgrund. Du kan vaxla mellan video och foto nar som helst."
+        },
+        {
+          "question": "Behover jag en designer for att stalla in detta?",
+          "answer": "Nej. Ladda bara upp din video eller ditt foto fran kontrollpanelen. Systemet hanterar storlek, komprimering och layout automatiskt. Din webbplats ser professionell ut utan nagra designkunskaper."
+        }
+      ]
+    },
+    "howItWorks": {
+      "title": "Hur Det Fungerar",
+      "subtitle": "Anpassa din restaurangs visuella identitet i fyra steg.",
+      "steps": [
+        {
+          "title": "Öppna Designinställningar",
+          "description": "Navigera till Design-sidan i din instrumentpanel. Här kan du kontrollera din restaurangs visuella utseende — bakgrund, accentfärg och layout på startsidan."
+        },
+        {
+          "title": "Ladda upp en Bakgrund",
+          "description": "Välj en video (MP4, WebM) eller foto för din restaurangs startsidesbakgrund. Videor loopas automatiskt, vilket skapar ett imponerande första intryck för varje besökare."
+        },
+        {
+          "title": "AI Bakgrundsgenerering",
+          "description": "Har du ingen video eller foto redo? Låt AI skapa en bakgrundsbild från dina menyobjekt automatiskt. Den genererar en professionell visuell som matchar din restaurangs stil."
+        },
+        {
+          "title": "Förhandsgranska och Spara",
+          "description": "Se dina ändringar i realtid innan du sparar. Videor komprimeras automatiskt och laddas in vid behov, vilket säkerställer snabb prestanda på mobila enheter utan att kompromissa med den visuella kvaliteten."
+        }
+      ]
+    }
+  },
+  "multilingualPage": {
+    "seo": {
+      "title": "Flersprakig restaurangwebbplats — Meny pa over 25 sprak | IQ Rest",
+      "description": "Din restaurangwebbplats och QR-meny pa over 25 sprak. Gaster byter sprak med ett tryck — meny, kontakter och reservationer anpassas direkt."
+    },
+    "hero": {
+      "badge": "Flersprakig",
+      "title": "Din restaurangwebbplats pa over 25 sprak",
+      "subtitle": "Turister och internationella gaster ser din meny pa sitt eget sprak. Ett tryck for att byta — allt anpassas direkt: ratter, beskrivningar, kontakter, navigation.",
+      "cta": "Skapa din meny",
+      "ctaDemo": "Visa demo",
+      "noCreditCard": "Inget kreditkort kravs. Gratis plan tillganglig."
+    },
+    "features": {
+      "title": "Hur flersprakigt stod fungerar",
+      "subtitle": "Tala dina kunders sprak utan extra arbete.",
+      "items": [
+        {
+          "title": "Gaster valjer sitt sprak",
+          "description": "En sprakvaljare visas pa din meny. Gaster trycker pa sitt foredagna sprak, och hela webbplatsen — meny, beskrivningar, kontaktinfo, navigation — byter direkt. Ingen omladdning behovs."
+        },
+        {
+          "title": "Lagg till sprak fran din kontrollpanel",
+          "description": "Aktivera nya sprak med ett klick. Anvand AI-oversattning for att fylla i innehallet, eller ange oversattningar manuellt. Varje sprak kan slas pa eller av oberoende."
+        }
+      ]
+    },
+    "faq": {
+      "title": "Vanliga fragor",
+      "subtitle": "Allt du behover veta om flersprakiga menyer.",
+      "items": [
+        {
+          "question": "Hur manga sprak kan jag lagga till i min meny?",
+          "answer": "Upp till over 25 sprak inklusive alla stora europeiska sprak, kinesiska, japanska, koreanska, arabiska, farsi och fler. Lagg till sa manga som dina gaster behover."
+        },
+        {
+          "question": "Behover jag oversatta allt manuellt?",
+          "answer": "Nej. Anvand den inbyggda AI-oversattningen for att oversatta hela din meny med ett klick. Du kan ocksa redigera vilken oversattning som helst manuellt for full kontroll."
+        },
+        {
+          "question": "Sparas sprakinstaIlningen?",
+          "answer": "Ja. Nar en gast valjer ett sprak sparas det till nasta besok. De behover inte valja igen nar de aterkomrner."
+        },
+        {
+          "question": "Ar flersprakigt stod tillgangligt pa gratisplanen?",
+          "answer": "Gratisplanen inkluderar upp till 2 sprak. Growth- och Pro-planer erbjuder obegransat antal sprak med AI-oversattning inkluderad."
+        }
+      ]
+    },
+    "howItWorks": {
+      "title": "Så här fungerar det",
+      "subtitle": "Gör din meny tillgänglig på flera språk i fyra steg.",
+      "steps": [
+        {
+          "title": "Gå till Språkinställningar",
+          "description": "Öppna sidan Språk i din instrumentpanel. Du kommer att se alla tillgängliga språk och vilka som för närvarande är aktiva på din meny."
+        },
+        {
+          "title": "Lägg till Språk",
+          "description": "Välj bland 35 tillgängliga språk. Den kostnadsfria planen inkluderar upp till 2 språk, medan Growth- och Pro-planerna erbjuder obegränsade språk för din meny."
+        },
+        {
+          "title": "Översätt Ditt Innehåll",
+          "description": "Använd AI-översättning med ett klick för att översätta hela din meny omedelbart, eller ange översättningar manuellt för full kontroll. Du kan också kombinera båda metoderna."
+        },
+        {
+          "title": "Gäster Växlar Språk",
+          "description": "En språkvalare visas på din menyside. När gäster väljer sitt språk växlar hela menyn omedelbart. Deras preferens sparas för framtida besök."
+        }
+      ]
+    }
+  },
+  "instantSetupPage": {
+    "seo": {
+      "title": "Gratis restaurangwebbplatsgenerator — Skapa pa 5 minuter | IQ Rest",
+      "description": "Fa en professionell restaurangwebbplats med QR-meny, kontaktsida och karta — ange bara din e-post. Redo pa 5 minuter, inga tekniska kunskaper behovs."
+    },
+    "hero": {
+      "badge": "Gratis webbplats",
+      "title": "Fa en professionell restaurangwebbplats pa 5 minuter",
+      "subtitle": "Ange din e-post, namnge din restaurang, och du far direkt en komplett webbplats med QR-meny, kontaktsida med karta och modern responsiv design. Ingen kodning, inga designers.",
+      "cta": "Skapa din meny",
+      "ctaDemo": "Visa demo",
+      "noCreditCard": "Inget kreditkort kravs. Gratis plan tillganglig."
+    },
+    "features": {
+      "title": "Hur det fungerar",
+      "subtitle": "Fran noll till en aktiv restaurangwebbplats i tre steg.",
+      "items": [
+        {
+          "title": "Registrera dig med bara din e-post",
+          "description": "Inga komplicerade registreringsformular. Ange din e-post, verifiera med en kod, och din restaurangs kontrollpanel ar redo. Namnge din restaurang och din webbplats gar live direkt."
+        },
+        {
+          "title": "Allt inkluderat fran start",
+          "description": "Din webbplats levereras med QR-meny, kontaktsida med Google Maps, sprakstod, mobilresponsiv design och din egen unika URL. Lagg bara till dina ratter och borja dela."
+        }
+      ]
+    },
+    "faq": {
+      "title": "Vanliga fragor",
+      "subtitle": "Allt du behover veta om att skapa din restaurangwebbplats.",
+      "items": [
+        {
+          "question": "Hur skapar jag en gratis restaurangwebbplats?",
+          "answer": "Ange din e-post pa IQ Rest, verifiera med en kod, namnge din restaurang — klart. Din webbplats med QR-meny ar live pa under 5 minuter. Inget kreditkort kravs."
+        },
+        {
+          "question": "Behover jag nagra tekniska kunskaper?",
+          "answer": "Nej. Allt ar designat for restaurangagare, inte utvecklare. Lagg till ratter, ladda upp foton och hantera din webbplats helt fran din telefon."
+        },
+        {
+          "question": "Vad ingar i gratisplanen?",
+          "answer": "En komplett restaurangwebbplats, QR-meny, kontaktsida med karta, statistik, anpassat fargschema och upp till 2 sprak. Ingen provperiod — det ar gratis for alltid."
+        },
+        {
+          "question": "Kan jag anvanda mitt eget domannamn?",
+          "answer": "Pa gratis- och Growth-planer hostas din webbplats pa iq-rest.com/m/ditt-namn. Pro-planen stodjer egna domannamn for full varumarkeskontroll."
+        }
+      ]
+    },
+    "howItWorks": {
+      "title": "Hur Det Fungerar",
+      "subtitle": "Från noll till en levande restaurangwebbplats i fyra steg.",
+      "steps": [
+        {
+          "title": "Ange Din E-post",
+          "description": "Inget lösenord behövs. Skriv bara din e-postadress och klicka på Fortsätt. Det finns inga långa registreringsformulär, inget kreditkort krävs och inga åtaganden."
+        },
+        {
+          "title": "Verifiera med en Kod",
+          "description": "Kontrollera din inkorg för en 4-siffrig verifieringskod. Ange den för att logga in säkert. Denna lösenordsfria metod innebär en sak mindre att komma ihåg."
+        },
+        {
+          "title": "Namnge Din Restaurang",
+          "description": "Ge din restaurang ett namn. Det blir din webbplats URL och menytitel. Du kan alltid ändra det senare från dina inställningar på instrumentpanelen."
+        },
+        {
+          "title": "Din Webbplats Är Klar",
+          "description": "En komplett restaurangwebbplats med QR-meny, kontaktsida med karta och responsiv design är live omedelbart på iq-rest.com/m/ditt-namn. Lägg till dina rätter och börja dela."
+        }
+      ]
+    }
+  },
+  "analyticsPage": {
+    "seo": {
+      "title": "Restauranganalys och QR-menystatistik — Spara besokare | IQ Rest",
+      "description": "Spara dina QR-menyskanningar, sidvisningar, populara sprak och besokstrender. Analysverktyg i realtid for din restaurangwebbplats."
+    },
+    "hero": {
+      "badge": "Analys",
+      "title": "Se exakt hur gaster anvander din QR-meny",
+      "subtitle": "Spara dagliga skanningar, sidvisningar, populara sprak, enhetsstatistik och trender over tid. Fatta datadrivna beslut for att optimera din meny och vaxa din verksamhet.",
+      "cta": "Skapa din meny",
+      "ctaDemo": "Visa demo",
+      "noCreditCard": "Inget kreditkort kravs. Gratis plan tillganglig."
+    },
+    "features": {
+      "title": "Vad du kan spara",
+      "subtitle": "Insikter i realtid om din restaurangs onlinenarvaro.",
+      "items": [
+        {
+          "title": "Dagliga visningar, skanningar och besokstrender",
+          "description": "Se hur manga som skannar din QR-kod och besoker din meny varje dag, vecka och manad. Folj trender over tid for att forsta sasongmonster och mata effekten av kampanjer."
+        },
+        {
+          "title": "Sprak- och enhetsfordelning",
+          "description": "Vet vilka sprak dina gaster foredrar och vilka enheter de anvander. Dessa data hjalper dig att prioritera oversattningar och sakerstalla att din meny ser perfekt ut pa de mest populara enheterna."
+        }
+      ]
+    },
+    "faq": {
+      "title": "Vanliga fragor",
+      "subtitle": "Allt du behover veta om restauranganalys.",
+      "items": [
+        {
+          "question": "Vilka matetal kan jag spara?",
+          "answer": "Dagliga, veckovisa och manadsvisa sidvisningar. Unika besokare. Mest visade sidor. Sprakinstaallningar. Enhets- och webblasarfordelning. Allt uppdaterat i realtid."
+        },
+        {
+          "question": "Ingar analys i gratisplanen?",
+          "answer": "Ja. Grundlaggande analys ar tillganglig pa alla planer, inklusive gratis. Du kan se visningar, besokare och sprakstatistik fran dag ett."
+        },
+        {
+          "question": "Kan jag se vilka sidor som ar mest populara?",
+          "answer": "Ja. Kontrollpanelen visar visningar uppdelade per sida — startsida, meny, kontakter, reservationer och sprakval. Se exakt var gasterna tillbringar sin tid."
+        },
+        {
+          "question": "Hur langt tillbaka gar datan?",
+          "answer": "Analysdata lagras fran den dag du skapar din restaurang. Du kan visa dagliga, veckovisa och manadsvisa trender for hela din historik."
+        }
+      ]
+    },
+    "howItWorks": {
+      "title": "Hur Det Fungerar",
+      "subtitle": "Börja spåra din restaurangs prestation i fyra steg.",
+      "steps": [
+        {
+          "title": "Skapa Din Restaurang",
+          "description": "Analys börjar spåra från det ögonblick din meny går live. Det finns inget att konfigurera — varje sidvisning, QR-skanning och besökare registreras automatiskt."
+        },
+        {
+          "title": "Dela Din QR-kod",
+          "description": "Skriv ut din QR-kod och placera den på borden, vid ingången eller på take-away förpackningar. Varje skanning registreras med tidsstämpel, språk, enhet och besökt sida."
+        },
+        {
+          "title": "Öppna Analysdashboarden",
+          "description": "Se dagliga, veckovisa och månatliga statistik med tydliga diagram. Spåra totala visningar, unika besökare och trender över tid från en enda dashboardskärm."
+        },
+        {
+          "title": "Utforska Detaljerade Uppdelningar",
+          "description": "Visa statistik uppdelad efter sida (meny, kontakter, reservationer), föredraget språk, enhetstyp och webbläsare. Använd dessa data för att optimera din meny och prioritera översättningar."
+        }
+      ]
+    }
+  },
+  "aiImagesPage": {
+    "seo": {
+      "title": "AI-genererade matfoton for menyer — Restaurangmenybilder | IQ Rest",
+      "description": "Generera vackra matfoton for din meny med AI. Ingen fotograf behovs — fa professionella rattbilder pa sekunder, optimerade for din QR-meny."
+    },
+    "hero": {
+      "badge": "AI-bilder",
+      "title": "Professionella menyfoton utan fotograf",
+      "subtitle": "Generera fantastiska matbilder for dina ratter med AI. Ange bara rattnamnet och fa ett vackert, optimerat foto redo for din QR-meny — pa sekunder.",
+      "cta": "Skapa din meny",
+      "ctaDemo": "Visa demo",
+      "noCreditCard": "Inget kreditkort kravs. Gratis plan tillganglig."
+    },
+    "features": {
+      "title": "Hur AI-bildgenerering fungerar",
+      "subtitle": "Fran rattnamn till professionellt foto med ett klick.",
+      "items": [
+        {
+          "title": "Generera bilder fran rattnamn",
+          "description": "Skriv in rattnamnet — 'Grillad lax med citron', 'Margherita-pizza', 'Chokladlavakaka' — och AI genererar ett professionellt matfoto. Valj bland flera stilar och bakgrunder."
+        },
+        {
+          "title": "Optimerade for snabb laddning",
+          "description": "Varje genererad bild komprimeras automatiskt och konverteras till moderna format. Din meny forblir blixtsnabb pa alla enheter, aven med foton pa varje ratt."
+        }
+      ]
+    },
+    "faq": {
+      "title": "Vanliga fragor",
+      "subtitle": "Allt du behover veta om AI-menybilder.",
+      "items": [
+        {
+          "question": "Hur genererar jag ett matfoto?",
+          "answer": "Oppna valfri menyartikel i din kontrollpanel, tryck 'Generera bild', och AI skapar ett professionellt matfoto baserat pa rattens namn och beskrivning. Valj den du gillar."
+        },
+        {
+          "question": "Kan jag anvanda mina egna foton istallet?",
+          "answer": "Absolut. Ladda upp dina egna foton fran din telefon eller dator. AI-generering ar valfritt — anvand det nar du inte har ett foto redo."
+        },
+        {
+          "question": "Hur manga bilder kan jag generera?",
+          "answer": "Bildgenereringsgranser beror pa din plan. Growth inkluderar en manadskvot, och Pro erbjuder en hogre grans. Du kan alltid ladda upp egna foton utan begransningar."
+        },
+        {
+          "question": "Ar genererade bilder unika for min restaurang?",
+          "answer": "Ja. Varje bild genereras unikt for din specifika ratt. Inga stockfoton — varje bild skapas fran grunden baserat pa din menyartikel."
+        }
+      ]
+    },
+    "howItWorks": {
+      "title": "Så här fungerar det",
+      "subtitle": "Få professionella matbilder till din meny i fyra enkla steg.",
+      "steps": [
+        {
+          "title": "Öppna valfri menyartikel",
+          "description": "Navigera till den artikel du vill ha en bild på i din instrumentpanel. Du kan generera bilder för nya rätter eller ersätta befintliga foton på valfri menyartikel."
+        },
+        {
+          "title": "Klicka på Generera bild",
+          "description": "AI skapar en professionell matbild baserat på rätten namn och beskrivning. Ju mer detaljer du anger i beskrivningen, desto mer exakt blir resultatet."
+        },
+        {
+          "title": "Granska resultatet",
+          "description": "Förhandsgranska den genererade bilden innan du tillämpar den. Om du vill ha ett annat utseende, regenerera för att få en ny variation. Varje generation producerar en unik bild."
+        },
+        {
+          "title": "Använd i din meny",
+          "description": "Bilden optimeras automatiskt, komprimeras till WebP-format och visas på din live-meny omedelbart. Gästerna ser professionella matbilder på varje rätt."
+        }
+      ]
+    }
+  },
+  "personalSupportPage": {
+    "seo": {
+      "title": "Personlig support for din restaurangwebbplats — Riktig manniskohjalp | IQ Rest",
+      "description": "Fa personlig hjalp fran riktiga manniskor, inte chatbotar. Installationshjalp, menyoptimeringstips och snabba svar — tillgangligt pa alla planer inklusive gratis."
+    },
+    "hero": {
+      "badge": "Personlig support",
+      "title": "Riktiga manniskor, riktig hjalp — inte chatbotar",
+      "subtitle": "Har du en fraga? Behover hjalp med att stalla in din meny? Vill foresla en funktion? Skriv till oss direkt och fa ett personligt svar fran nagon som forstar restauranger.",
+      "cta": "Skapa din meny",
+      "ctaDemo": "Visa demo",
+      "noCreditCard": "Inget kreditkort kravs. Gratis plan tillganglig."
+    },
+    "features": {
+      "title": "Hur support fungerar",
+      "subtitle": "Hjalp nar du behover det, fran manniskor som bryr sig.",
+      "items": [
+        {
+          "title": "Skriv till oss direkt fran din kontrollpanel",
+          "description": "Oppna supportchatten i din kontrollpanel och beskriv din fraga. En riktig manniska laser ditt meddelande och svarar — vanligtvis inom nagra timmar pa vardagar."
+        },
+        {
+          "title": "Hjalp med installation, optimering och mer",
+          "description": "Oavsett om du behover hjalp med att lagga till din forsta ratt, rad om att organisera din meny eller vill foresla en ny funktion — vi finns har. Varje fraga spelar roll, oavsett hur liten."
+        }
+      ]
+    },
+    "faq": {
+      "title": "Vanliga fragor",
+      "subtitle": "Allt du behover veta om var support.",
+      "items": [
+        {
+          "question": "Ar support tillganglig pa gratisplanen?",
+          "answer": "Ja. Personlig support ar tillganglig for alla planer, inklusive gratis. Vi tror att varje restaurang fortjanar riktig hjalp, oavsett prenumeration."
+        },
+        {
+          "question": "Hur snabbt svarar ni?",
+          "answer": "Vanligtvis inom nagra timmar pa vardagar. Vi laser varje meddelande personligen och siktar pa att losa din fraga i ett svar."
+        },
+        {
+          "question": "Kan ni hjalpa mig stalla in min meny?",
+          "answer": "Absolut. Om du behover hjalp med att lagga till ratter, organisera kategorier, stalla in oversattningar eller konfigurera reservationer — fraga bara. Vi hjalper garma dig genom det."
+        },
+        {
+          "question": "Kan jag foresla nya funktioner?",
+          "answer": "Ja, och vi alskar det! Manga av vara funktioner borjade som anvandarforslag. Skriv till oss med din ide sa overrager vi den for framtida uppdateringar."
+        }
+      ]
+    },
+    "howItWorks": {
+      "title": "Hur Det Fungerar",
+      "subtitle": "Få hjälp av en riktig person i fyra enkla steg.",
+      "steps": [
+        {
+          "title": "Öppna Supportchatt",
+          "description": "Gå till supportsidan i din instrumentpanel. Du kommer att se ett enkelt chattgränssnitt där du kan skriva ditt meddelande direkt — inga biljettformulär eller kategorier att välja mellan."
+        },
+        {
+          "title": "Beskriv Din Fråga",
+          "description": "Skriv ditt meddelande. Fråga om installation, funktioner, menyoptimering, fakturering eller något annat. Det finns inga dumma frågor — vi hjälper gärna till med allt."
+        },
+        {
+          "title": "Få Ett Personligt Svar",
+          "description": "En riktig person (inte en chatbot) läser ditt meddelande och svarar inom några timmar. Vi förstår restaurangarbetsflöden och ger praktiska, handlingsbara svar."
+        },
+        {
+          "title": "Löpande Hjälp",
+          "description": "Begär funktionsförslag, få tips om menyoptimering, eller be om installationshjälp när som helst. Din konversationshistorik sparas, så vi har alltid kontext från tidigare frågor."
+        }
+      ]
+    }
   }
 }

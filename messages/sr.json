@@ -2515,5 +2515,895 @@
     },
     "back": "Back",
     "continue": "Nastavi"
+  },
+  "onlineOrders": {
+    "seo": {
+      "title": "Online naručivanje za restorane — QR Meni | IQ Rest",
+      "description": "Omogućite gostima da naručuju direktno iz QR menija. Bez provizija, cene u realnom vremenu i trenutno upravljanje narudžbinama na kontrolnoj tabli."
+    },
+    "hero": {
+      "badge": "Online Naručivanje",
+      "title": "Pretvorite QR meni u sistem za online naručivanje",
+      "subtitle": "Gosti skeniraju kod, pregledaju meni i naruče za nekoliko sekundi. Bez preuzimanja aplikacija, bez provizija, bez komplikacija.",
+      "cta": "Napravite svoj meni",
+      "ctaDemo": "Pogledajte demo",
+      "noCreditCard": "Kreditna kartica nije potrebna. Dostupan besplatni plan."
+    },
+    "benefits": {
+      "title": "Zašto restorani biraju naručivanje putem QR menija",
+      "subtitle": "Direktan kanal naručivanja koji pojednostavljuje stvari za vas i vaše goste.",
+      "items": [
+        {
+          "title": "Bez aplikacije",
+          "description": "Gosti samo skeniraju QR kod — bez preuzimanja, bez registracije. Radi trenutno u bilo kom pretraživaču na telefonu."
+        },
+        {
+          "title": "Cene u realnom vremenu",
+          "description": "Ažurirajte cene i dostupnost trenutno. Promene se odmah prikazuju na vašem QR meniju."
+        },
+        {
+          "title": "Naručivanje za stolom",
+          "description": "Svaki sto dobija svoj QR kod. Gosti skeniraju, naruče, a vi vidite broj stola na kontrolnoj tabli."
+        },
+        {
+          "title": "Prilagođen dizajn",
+          "description": "Uskladite meni sa vašim brendom koristeći prilagođene boje, pozadine i logo."
+        }
+      ]
+    },
+    "features": {
+      "title": "Kako funkcioniše online naručivanje",
+      "subtitle": "Dva jednostavna koraka povezuju vaš meni sa kuhinjom.",
+      "items": [
+        {
+          "title": "Gosti pregledaju i biraju jela",
+          "description": "Gosti skeniraju vaš QR kod i vide kompletan meni sa fotografijama, opisima i cenama. Dodaju jela u narudžbinu jednim dodirom — bez registracije."
+        },
+        {
+          "title": "Narudžbine se pojavljuju na kontrolnoj tabli",
+          "description": "Kada su gosti spremni, dodirnu dugme za narudžbinu. Narudžbina se odmah pojavljuje na vašoj kontrolnoj tabli sa detaljima jela, brojem stola i napomenama. Prihvatite, počnite sa pripremom i označite kao završeno."
+        }
+      ]
+    },
+    "faq": {
+      "title": "Često postavljana pitanja",
+      "subtitle": "Sve što trebate znati o online naručivanju.",
+      "items": [
+        {
+          "question": "Da li mi je potreban dodatni hardver ili aplikacije?",
+          "answer": "Ne. Sve funkcioniše kroz web pretraživač. Gosti skeniraju QR kod kamerom telefona, a vi upravljate narudžbinama sa IQ Rest kontrolne table na bilo kom uređaju."
+        },
+        {
+          "question": "Da li postoje provizije ili naknade po narudžbini?",
+          "answer": "Apsolutno ne. IQ Rest nikada ne naplaćuje provizije na vaše narudžbine. Plaćate samo svoju pretplatu, a sav prihod od narudžbina ostaje vama."
+        },
+        {
+          "question": "Mogu li gosti prilagoditi narudžbinu ili dodati napomene?",
+          "answer": "Da. Gosti mogu birati jela, odrediti količine i dodati posebne napomene ili zahteve. Takođe možete zahtevati ime gosta, telefon ili adresu za dostavu."
+        },
+        {
+          "question": "Da li funkcioniše za jelo u restoranu, poneti i dostavu?",
+          "answer": "Da. Za jelo u restoranu gosti skeniraju QR kod za svojim stolom. Za poneti ili dostavu podelite direktan link ka vašem meniju. Po potrebi možete omogućiti polja za ime, telefon i adresu."
+        }
+      ]
+    },
+    "howItWorks": {
+      "title": "Kako funkcioniše",
+      "subtitle": "Od postavljanja do primanja vaše prve narudžbine u pet jednostavnih koraka.",
+      "steps": [
+        {
+          "title": "Omogućite online naručivanje",
+          "description": "Uključite narudžbine u vašim postavkama dizajna. Izaberite svoj omiljeni način: narudžbine se pojavljuju na vašem kontrolnom panelu, prosleđuju se na WhatsApp, ili oboje istovremeno."
+        },
+        {
+          "title": "Konfigurišite obrazac za narudžbinu",
+          "description": "Izaberite koja polja kupci moraju popuniti prilikom naručivanja. Ime je uvek obavezno, a opcionalno možete tražiti broj telefona i adresu za dostavu."
+        },
+        {
+          "title": "Odštampajte QR kodove za stolove",
+          "description": "Svaki sto u vašem restoranu dobija svoj jedinstveni QR kod. Kada gosti skeniraju kod, njihova narudžbina automatski dolazi sa pravim brojem stola."
+        },
+        {
+          "title": "Kupci postavljaju narudžbine",
+          "description": "Gosti skeniraju QR kod, pregledaju vaš meni sa fotografijama i cenama, biraju stavke, dodaju beleške i šalju svoju narudžbinu. Nema potrebe za preuzimanjem aplikacije ili kreiranjem naloga."
+        },
+        {
+          "title": "Upravljajte narudžbinama na vašem kontrolnom panelu",
+          "description": "Narudžbine se odmah pojavljuju na vašem kontrolnom panelu. Ažurirajte status svake narudžbine od nove do u obradi do završene. Zadržavate 100% prihoda — nula provizija."
+        }
+      ]
+    }
+  },
+  "reservationsPage": {
+    "seo": {
+      "title": "Sistem za rezervaciju stolova za restorane — Online rezervacija | IQ Rest",
+      "description": "Omogućite gostima da rezervišu stolove direktno sa vašeg sajta. Automatska ili ručna potvrda, obaveštenja putem e-pošte i potpuno upravljanje kalendarom — sve uključeno."
+    },
+    "hero": {
+      "badge": "Rezervacije stolova",
+      "title": "Primajte rezervacije stolova 24/7 sa svog sajta",
+      "subtitle": "Gosti biraju datum, vreme i broj osoba — i rezervišu odmah. Vi upravljate svime iz svog kontrolnog panela, telefonski pozivi nisu potrebni.",
+      "cta": "Kreirajte svoj meni",
+      "ctaDemo": "Pogledajte demo",
+      "noCreditCard": "Kreditna kartica nije potrebna. Besplatan plan dostupan."
+    },
+    "features": {
+      "title": "Kako funkcionišu rezervacije stolova",
+      "subtitle": "Dva koraka od zahteva gosta do potvrđene rezervacije.",
+      "items": [
+        {
+          "title": "Gosti rezervišu sa vašeg sajta",
+          "description": "Klijenti posećuju stranicu vašeg restorana, tapnu 'Rezerviši sto', biraju datum i vreme, unose svoje podatke i šalju zahtev. Aplikacija nije potrebna — radi u svakom pretraživaču na svakom uređaju."
+        },
+        {
+          "title": "Upravljate rezervacijama u svom kontrolnom panelu",
+          "description": "Svaka rezervacija se pojavljuje u vašem kontrolnom panelu sa imenom gosta, telefonom, brojem osoba, datumom i napomenama. Potvrdite ili odbijte jednim tapom. Podesite automatsku potvrdu ili pregledajte svaku rezervaciju ručno."
+        }
+      ]
+    },
+    "faq": {
+      "title": "Često postavljana pitanja",
+      "subtitle": "Sve što treba da znate o rezervacijama stolova.",
+      "items": [
+        {
+          "question": "Da li klijenti treba da naprave nalog za rezervaciju?",
+          "answer": "Ne. Gosti jednostavno popune svoje ime, broj telefona, broj osoba i željeno vreme. Nalog ili preuzimanje aplikacije nisu potrebni."
+        },
+        {
+          "question": "Mogu li da podesim dostupne vremenske termine i kapacitet?",
+          "answer": "Da. Definišite radno vreme, trajanje termina za rezervaciju i kapacitet stola. Sistem gostima prikazuje samo dostupne termine."
+        },
+        {
+          "question": "Hoću li dobiti obaveštenje kada neko rezerviše?",
+          "answer": "Da. Dobijate e-poruku za svaku novu rezervaciju. Gosti takođe dobijaju e-poruku sa potvrdom kada odobrite rezervaciju."
+        },
+        {
+          "question": "Mogu li da koristim i automatsku i ručnu potvrdu?",
+          "answer": "Da. Izaberite automatski režim za trenutnu potvrdu rezervacija na osnovu dostupnosti, ili ručni režim za pregled i odobravanje svakog zahteva lično."
+        }
+      ]
+    },
+    "howItWorks": {
+      "title": "Kako funkcioniše",
+      "subtitle": "Postavite online rezervacije i počnite da prihvatate rezervacije u pet koraka.",
+      "steps": [
+        {
+          "title": "Omogućite rezervacije",
+          "description": "Uključite rezervacije u podešavanjima vašeg restorana. Izaberite između automatske potvrde, gde se rezervacije odmah odobravaju na osnovu dostupnosti, ili ručnog režima gde pregledate svaku zahtev."
+        },
+        {
+          "title": "Dodajte svoje stolove",
+          "description": "Kreirajte stolove sa informacijama o kapacitetu i zoni — na primer, 'Sto 5, 4 gosta, Terasa'. Svaki sto postaje rezervabilan, a sistem automatski sprečava dvostruke rezervacije."
+        },
+        {
+          "title": "Postavite radno vreme",
+          "description": "Definišite svoje dostupne sate za rezervacije i izaberite trajanje termina — od 15 minuta do 8 sati. Samo vremenski termini unutar vašeg radnog vremena se prikazuju gostima."
+        },
+        {
+          "title": "Gosti rezervišu online",
+          "description": "Kupci posete vašu stranicu restorana, izaberu datum, vreme i broj osoba, unesu svoje ime i telefon, i pošalju. Nije potrebna registracija ili preuzimanje aplikacije — funkcioniše u bilo kom pretraživaču."
+        },
+        {
+          "title": "Upravljajte rezervacijama na vašem kontrolnom panelu",
+          "description": "Pregledajte sve rezervacije na vašem kontrolnom panelu. Potvrdite, otkažite ili označite rezervacije kao završene. I vi i gost dobijate email obaveštenja za svaku promenu rezervacije."
+        }
+      ]
+    }
+  },
+  "colorSchemePage": {
+    "seo": {
+      "title": "Prilagođen dizajn QR menija i boje brenda — Brendiranje restorana | IQ Rest",
+      "description": "Uskladite QR meni sa brendom vašeg restorana. Izaberite akcentne boje i stvorite konzistentan izgled celokupnog digitalnog menija."
+    },
+    "hero": {
+      "badge": "Prilagođen dizajn",
+      "title": "Uskladite QR meni sa brendom vašeg restorana",
+      "subtitle": "Izaberite boju vašeg brenda i ceo meni — dugmad, isticanja, linkovi — se ažurira odmah.",
+      "cta": "Kreirajte svoj meni",
+      "ctaDemo": "Pogledajte demo",
+      "noCreditCard": "Kreditna kartica nije potrebna. Besplatan plan dostupan."
+    },
+    "features": {
+      "title": "Kako funkcioniše prilagođeno brendiranje",
+      "subtitle": "Vaš meni, vaše boje — konzistentno na svakoj stranici.",
+      "items": [
+        {
+          "title": "Izaberite svoju akcentnu boju",
+          "description": "Izaberite iz 12 pažljivo odabranih predefinisanih opcija ili unesite tačnu boju brenda sa hex kodom. Svako dugme, link i isticanje na vašem meniju se prilagođava odmah — dizajnerske veštine nisu potrebne."
+        }
+      ]
+    },
+    "faq": {
+      "title": "Često postavljana pitanja",
+      "subtitle": "Sve što treba da znate o prilagođavanju menija.",
+      "items": [
+        {
+          "question": "Mogu li da koristim tačnu boju svog brenda?",
+          "answer": "Da. Unesite bilo koji hex kod boje ili izaberite iz 12 pažljivo odabranih predefinisanih opcija. Vaša akcentna boja se primenjuje na svim stranicama menija."
+        },
+        {
+          "question": "Mogu li da promenim boje nakon objavljivanja?",
+          "answer": "Naravno. Promenite akcentnu boju u bilo kom trenutku iz kontrolnog panela. Ažuriranja se odmah pojavljuju na vašem javnom meniju — ponovno objavljivanje nije potrebno."
+        },
+        {
+          "question": "Da li će moj QR kod takođe odgovarati bojama brenda?",
+          "answer": "Vaš QR kod se generiše zasebno i može se prilagoditi nezavisno. Akcentna boja se primenjuje na stranice digitalnog menija, navigaciju i interaktivne elemente."
+        }
+      ]
+    },
+    "howItWorks": {
+      "title": "Kako to funkcioniše",
+      "subtitle": "Usaglasite svoj meni sa svojom markom u tri jednostavna koraka.",
+      "steps": [
+        {
+          "title": "Otvorite Podešavanja Dizajna",
+          "description": "Idite na stranicu Dizajn u vašem kontrolnom panelu. Biranje akcentne boje je na sredini — odmah ćete videti sve dostupne opcije."
+        },
+        {
+          "title": "Izaberite Boju Vaše Marke",
+          "description": "Izaberite između 12 unapred odabranih boja koje su dizajnirane za čitljivost i pristupačnost, ili unesite tačan hex kod za savršeno usklađivanje sa vašom markom."
+        },
+        {
+          "title": "Instant Pregled",
+          "description": "Vaša akcentna boja se primenjuje na dugmadi, linkovima i naglascima širom celog menija. Radi u svetlim i tamnim temama, a promene se odmah pojavljuju na vašem aktivnom meniju."
+        }
+      ]
+    }
+  },
+  "easyMenuPage": {
+    "seo": {
+      "title": "Kreirajte QR meni za vaš restoran — Besplatan kreator menija | IQ Rest",
+      "description": "Napravite digitalni QR meni za vaš restoran za nekoliko minuta. Dodajte kategorije, jela, fotografije, cene — i podelite QR kod koji se skenira. Besplatno za početak."
+    },
+    "hero": {
+      "badge": "Kreator menija",
+      "title": "Kreirajte digitalni QR meni za vaš restoran za nekoliko minuta",
+      "subtitle": "Dodajte kategorije i jela, postavite cene, otpremite fotografije — vaš QR meni je spreman za deljenje. Menjajte kad god želite, promene se pojavljuju odmah.",
+      "cta": "Kreirajte svoj meni",
+      "ctaDemo": "Pogledajte demo",
+      "noCreditCard": "Kreditna kartica nije potrebna. Besplatan plan dostupan."
+    },
+    "features": {
+      "title": "Kako funkcioniše editor menija",
+      "subtitle": "Jednostavni alati koji brzo stavljaju vaš meni na internet.",
+      "items": [
+        {
+          "title": "Dodajte kategorije i jela",
+          "description": "Kreirajte kategorije poput Predjela, Glavna jela, Pića — zatim dodajte jela sa nazivima, opisima, cenama i fotografijama. Prevucite i otpustite za preuređivanje. Uključite ili isključite stavke bez brisanja."
+        },
+        {
+          "title": "Promene stupaju na snagu odmah",
+          "description": "Svaka promena koju napravite pojavljuje se na vašem javnom QR meniju za nekoliko sekundi. Ažurirajte cenu, dodajte dnevnu ponudu ili sakrijte rasprodato jelo — vaši klijenti uvek vide najnoviju verziju."
+        }
+      ]
+    },
+    "faq": {
+      "title": "Često postavljana pitanja",
+      "subtitle": "Sve što treba da znate o kreiranju QR menija.",
+      "items": [
+        {
+          "question": "Kako da kreiram QR meni za svoj restoran?",
+          "answer": "Registrujte se sa e-poštom, imenujte restoran i počnite da dodajete kategorije i jela. Vaš QR meni se generiše automatski — odštampajte QR kod i postavite ga na stolove."
+        },
+        {
+          "question": "Mogu li da dodam fotografije stavkama menija?",
+          "answer": "Da. Otpremite fotografije direktno sa telefona ili računara. Slike se automatski optimizuju za brzo učitavanje na svakom uređaju."
+        },
+        {
+          "question": "Koliko stavki mogu da dodam?",
+          "answer": "Nema ograničenja na kategorije ili stavke menija. Dodajte onoliko jela koliko vam treba — vaš meni ostaje brz i organizovan."
+        },
+        {
+          "question": "Mogu li privremeno da sakrijem rasprodato jelo?",
+          "answer": "Da. Isključite bilo koju stavku jednim tapom. Nestaje sa javnog menija ali ostaje u vašem kontrolnom panelu — uključite je nazad kada budete spremni."
+        }
+      ]
+    },
+    "howItWorks": {
+      "title": "Kako funkcioniše",
+      "subtitle": "Kreirajte i objavite meni vašeg restorana u pet jednostavnih koraka.",
+      "steps": [
+        {
+          "title": "Kreirajte kategorije",
+          "description": "Dodajte kategorije kao što su Predjela, Glavna jela, Dezerti i Pića kako biste organizovali vaš meni. Možete kreirati onoliko kategorija koliko vam je potrebno i preurediti ih prevlačenjem."
+        },
+        {
+          "title": "Dodajte stavke menija",
+          "description": "Unesite naziv jela, opis i cenu za svaku stavku. Označite alergene ako je primenljivo — gosti će automatski videti ikone alergena na meniju."
+        },
+        {
+          "title": "Otpremite ili generišite fotografije",
+          "description": "Otpremite svoje fotografije hrane sa telefona ili računara, ili koristite AI za generisanje profesionalne slike hrane na osnovu naziva jela. Slike se automatski optimizuju."
+        },
+        {
+          "title": "Organizujte prevlačenjem",
+          "description": "Preuređujte kategorije i stavke prevlačenjem na željeno mesto. Uključite ili isključite bilo koju stavku bez brisanja — savršeno za dnevne specijalitete ili jela koja su rasprodata."
+        },
+        {
+          "title": "Objavite svoj meni",
+          "description": "Izmene se odmah pojavljuju na vašem aktivnom QR meniju. Nema dugmeta 'objavi' — svaka izmena se odmah prikazuje u realnom vremenu. Ispišite svoj QR kod i postavite ga na stolove."
+        }
+      ]
+    }
+  },
+  "aiTranslationPage": {
+    "seo": {
+      "title": "AI prevod menija za restorane — Prevedite QR meni | IQ Rest",
+      "description": "Prevedite meni vašeg restorana na 25+ jezika jednim klikom. AI razume kulinarski kontekst — nazivi jela, opisi i kategorije se prevode precizno."
+    },
+    "hero": {
+      "badge": "AI prevod",
+      "title": "Prevedite svoj meni na 25+ jezika jednim klikom",
+      "subtitle": "Naš AI razume kontekst hrane — prevodi nazive jela, opise i kategorije prirodno, ne reč po reč. Doseite svakog turistu i međunarodnog gosta.",
+      "cta": "Kreirajte svoj meni",
+      "ctaDemo": "Pogledajte demo",
+      "noCreditCard": "Kreditna kartica nije potrebna. Besplatan plan dostupan."
+    },
+    "features": {
+      "title": "Kako funkcioniše AI prevod",
+      "subtitle": "Od vašeg jezika do sveta za nekoliko sekundi.",
+      "items": [
+        {
+          "title": "Prevod celog menija jednim klikom",
+          "description": "Izaberite ciljni jezik, tapnite prevedi i ceo meni — kategorije, nazivi jela, opisi — se prevodi odmah. AI čuva kulinarske termine i prirodno se prilagođava za svaki jezik."
+        },
+        {
+          "title": "Izmenite i fino podesite svaki prevod",
+          "description": "Svaki AI prevod je potpuno izmenjiv. Pregledajte rezultat, prilagodite formulaciju i sačuvajte. Vaše izmene se čuvaju čak i ako kasnije ponovo prevedete druge delove menija."
+        }
+      ]
+    },
+    "faq": {
+      "title": "Često postavljana pitanja",
+      "subtitle": "Sve što treba da znate o prevodu menija.",
+      "items": [
+        {
+          "question": "Koliko je precizan AI prevod za menije hrane?",
+          "answer": "Naš AI je optimizovan za sadržaj restorana. Razume da 'Beef Wellington' ili 'Tiramisu' ne treba bukvalno prevoditi i prilagođava opise da zvuče prirodno na svakom jeziku."
+        },
+        {
+          "question": "Koji jezici su podržani?",
+          "answer": "25+ jezika uključujući engleski, španski, francuski, nemački, italijanski, portugalski, kineski, japanski, korejski, arapski, ruski i mnoge druge evropske i azijske jezike."
+        },
+        {
+          "question": "Mogu li da prevedem samo neke stavke, ne ceo meni?",
+          "answer": "Da. Možete prevoditi pojedinačne stavke, cele kategorije ili ceo meni odjednom. Imate potpunu kontrolu nad time šta se prevodi."
+        },
+        {
+          "question": "Da li prevod košta dodatno?",
+          "answer": "AI prevod je uključen u Growth i Pro planove sa velikodušnim mesečnim limitima. Nema naplate po reči ili stavci — prevodite koliko god vam treba."
+        }
+      ]
+    },
+    "howItWorks": {
+      "title": "Kako to funkcioniše",
+      "subtitle": "Prevedite ceo svoj meni za nekoliko minuta, a ne sati.",
+      "steps": [
+        {
+          "title": "Dodajte jezike u svoj meni",
+          "description": "Idite na stranicu jezika u svom kontrolnom panelu i odaberite koje jezike vaš meni treba da podržava. Izaberite između 35 dostupnih jezika, uključujući sve glavne evropske, azijske i bliskoistočne jezike."
+        },
+        {
+          "title": "Kliknite na Prevedi",
+          "description": "Jedan dugme prevodi sve vaše kategorije, nazive stavki i opise odjednom. Ceo meni se obrađuje za nekoliko sekundi, bez obzira na to koliko stavki imate."
+        },
+        {
+          "title": "AI razume kontekst hrane",
+          "description": "AI poznaje kulinarsku terminologiju širom kultura. Održava nazive jela poput 'Tiramisu' ili 'Pad Thai', dok prirodno prilagođava opise, liste sastojaka i nazive kategorija."
+        },
+        {
+          "title": "Pregledajte i izmenite",
+          "description": "Svaki prevod je potpuno izmenljiv. Prilagodite bilo koju reč kako bi odgovarala vašem stilu. Vaše ručne izmene se čuvaju čak i kada kasnije ponovo prevodite druge delove menija."
+        },
+        {
+          "title": "Objavite svoj višejezični meni",
+          "description": "Gosti vide prekidač jezika na vašem meniju i mogu da pretražuju na svom omiljenom jeziku. Svaki jezik može biti uključен ili isključen nezavisno od vašeg kontrolnog panela."
+        }
+      ]
+    }
+  },
+  "mobileManagementPage": {
+    "seo": {
+      "title": "Upravljajte menijem restorana sa telefona — Mobilni kontrolni panel | IQ Rest",
+      "description": "Upravljajte QR menijem vašeg restorana potpuno sa telefona. Dodajte jela, ažurirajte cene, otpremite fotografije, proverite analitiku — računar nije potreban."
+    },
+    "hero": {
+      "badge": "Mobilni kontrolni panel",
+      "title": "Upravljajte celim menijem restorana sa svog telefona",
+      "subtitle": "Dodajte jela, menjajte cene, otpremite fotografije, proverite narudžbine — sve sa svog pametnog telefona. Kontrolni panel je napravljen za mobilne uređaje, tako da vam računar nikada nije potreban.",
+      "cta": "Kreirajte svoj meni",
+      "ctaDemo": "Pogledajte demo",
+      "noCreditCard": "Kreditna kartica nije potrebna. Besplatan plan dostupan."
+    },
+    "features": {
+      "title": "Kako funkcioniše mobilno upravljanje",
+      "subtitle": "Kontrolni panel vašeg restorana uvek u džepu.",
+      "items": [
+        {
+          "title": "Potpun kontrolni panel na vašem pametnom telefonu",
+          "description": "Svaka funkcija radi savršeno na ekranu vašeg telefona — dodajte stavke, menjajte kategorije, upravljajte narudžbinama, proverite analitiku. Interfejs je dizajniran za dodir, ne samo smanjen sa desktopa."
+        },
+        {
+          "title": "Otpremite fotografije direktno sa kamere",
+          "description": "Fotografišite novo jelo i otpremite ga u svoj meni za nekoliko sekundi. Slike se automatski optimizuju. Ažurirajte dnevnu ponudu dok stojite u kuhinji."
+        }
+      ]
+    },
+    "faq": {
+      "title": "Često postavljana pitanja",
+      "subtitle": "Sve što treba da znate o mobilnom upravljanju menijem.",
+      "items": [
+        {
+          "question": "Da li treba da instaliram aplikaciju?",
+          "answer": "Ne. Kontrolni panel radi u veb pretraživaču vašeg telefona — Safari, Chrome ili bilo kom drugom. Samo se prijavite i počnite da upravljate svojim menijem."
+        },
+        {
+          "question": "Mogu li sa telefona da uradim sve što mogu sa računara?",
+          "answer": "Da. Svaka funkcija je dostupna na mobilnom — dodavanje stavki, otpremanje fotografija, upravljanje kategorijama, provera analitike, obrada narudžbina i rezervacija."
+        },
+        {
+          "question": "Da li radi i na tabletima?",
+          "answer": "Da. Kontrolni panel se prilagođava svakoj veličini ekrana — telefoni, tableti i desktop računari. Koristite onaj uređaj koji vam je najpogodniji."
+        },
+        {
+          "question": "Mogu li više osoba da upravlja menijem?",
+          "answer": "Trenutno jedan nalog upravlja restoranom. Možete se prijaviti sa više uređaja istovremeno — telefon, tablet ili računar."
+        }
+      ]
+    },
+    "howItWorks": {
+      "title": "Kako funkcioniše",
+      "subtitle": "Upravljajte svojim restoranom sa bilo kog uređaja u četiri koraka.",
+      "steps": [
+        {
+          "title": "Otvorite kontrolnu tablu na svom telefonu",
+          "description": "Idite na iq-rest.com i prijavite se putem pregledača na svom telefonu. Kontrolna tabla se automatski prilagođava veličini vašeg ekrana — nema aplikacije koju treba preuzeti ili instalirati."
+        },
+        {
+          "title": "Uredite meni bilo gde",
+          "description": "Dodajte nove stavke, ažurirajte cene, menjajte opise i postavljajte fotografije direktno sa kamere vašeg telefona. Sve funkcije dostupne na desktopu rade jednako dobro i na mobilnom."
+        },
+        {
+          "title": "Proverite narudžbine i rezervacije",
+          "description": "Pogledajte dolazne narudžbine, upravljajte rezervacijama stolova i odgovarajte na poruke podrške — sve sa svog telefona. Budite u toku sa svojim restoranom čak i kada niste prisutni."
+        },
+        {
+          "title": "Promene se odmah primenjuju",
+          "description": "Svaka izmena koju napravite sa svog telefona pojavljuje se na vašem QR meniju u realnom vremenu. Nema potrebe za sinhronizacijom, objavljivanjem ili čekanjem — vaši gosti uvek vide najnoviju verziju."
+        }
+      ]
+    }
+  },
+  "customDesignPage": {
+    "seo": {
+      "title": "Sajt restorana sa video i foto pozadinom — Kreator sajtova | IQ Rest",
+      "description": "Napravite zadivljujući sajt restorana sa prilagođenim video ili foto pozadinama. Otpremite video atmosfere ili fotografiju hrane — impresionirajte goste od prvog skeniranja."
+    },
+    "hero": {
+      "badge": "Dizajn sajta",
+      "title": "Kreirajte zadivljujući sajt restorana sa video pozadinama",
+      "subtitle": "Otpremite video atmosfere vašeg restorana ili lepu fotografiju hrane kao pozadinu. Gosti vide profesionalno, brendirano iskustvo čim skeniraju vaš QR kod.",
+      "cta": "Kreirajte svoj meni",
+      "ctaDemo": "Pogledajte demo",
+      "noCreditCard": "Kreditna kartica nije potrebna. Besplatan plan dostupan."
+    },
+    "features": {
+      "title": "Kako funkcionišu prilagođene pozadine",
+      "subtitle": "Ostavite trajan prvi utisak vizuelnim materijalima koji odgovaraju vašem brendu.",
+      "items": [
+        {
+          "title": "Otpremite video ili foto pozadine",
+          "description": "Dodajte video u petlji sa atmosferom restorana, ubrzani snimak kuhinje ili visokokvalitetnu fotografiju hrane. Pozadina se pojavljuje na početnoj stranici — stvarajući impresivno iskustvo za goste."
+        },
+        {
+          "title": "Optimizovano za brzinu na svakom uređaju",
+          "description": "Video snimci i slike se automatski kompresuju i učitavaju sa odloženim učitavanjem. Vaš sajt ostaje brz čak i na sporim mobilnim vezama — bez baferovanja, bez kašnjenja, samo glatko iskustvo."
+        }
+      ]
+    },
+    "faq": {
+      "title": "Često postavljana pitanja",
+      "subtitle": "Sve što treba da znate o dizajnu sajta restorana.",
+      "items": [
+        {
+          "question": "Koji video formati su podržani?",
+          "answer": "MP4 i WebM formati najbolje funkcionišu. Video snimci se automatski kompresuju za brzo učitavanje. Držite video kraćim od 30 sekundi za najbolje mobilno iskustvo."
+        },
+        {
+          "question": "Da li će video pozadina usporiti moj sajt?",
+          "answer": "Ne. Video snimci se kompresuju, učitavaju sa odloženim učitavanjem i automatski optimizuju. Na sporim vezama, sistem prelazi na statičnu sliku kako bi iskustvo bilo glatko."
+        },
+        {
+          "question": "Mogu li da koristim fotografiju umesto videa?",
+          "answer": "Da. Otpremite bilo koju fotografiju — biće optimizovana i prikazana kao pozadina na celom ekranu. Možete u svakom trenutku prebaciti između videa i fotografije."
+        },
+        {
+          "question": "Da li mi treba dizajner da ovo podesim?",
+          "answer": "Ne. Samo otpremite video ili fotografiju iz kontrolnog panela. Sistem automatski upravlja dimenzionisanjem, kompresijom i rasporedom. Vaš sajt izgleda profesionalno bez ikakvih dizajnerskih veština."
+        }
+      ]
+    },
+    "howItWorks": {
+      "title": "Kako to funkcioniše",
+      "subtitle": "Prilagodite vizuelni identitet vašeg restorana u četiri koraka.",
+      "steps": [
+        {
+          "title": "Otvorite podešavanja dizajna",
+          "description": "Idite na stranicu za dizajn u vašem kontrolnom panelu. Ovde možete kontrolisati vizuelni izgled vašeg restorana — pozadinu, akcentnu boju i raspored početne stranice."
+        },
+        {
+          "title": "Otpremite pozadinu",
+          "description": "Izaberite video (MP4, WebM) ili fotografiju za pozadinu početne stranice vašeg restorana. Video snimci se automatski ponavljaju, stvarajući impresivan prvi utisak za svakog posetioca."
+        },
+        {
+          "title": "Generisanje pozadine pomoću AI",
+          "description": "Nemate spreman video ili fotografiju? Neka AI automatski kreira sliku pozadine od stavki iz vašeg menija. Generiše profesionalnu vizuelnu sliku koja odgovara stilu vašeg restorana."
+        },
+        {
+          "title": "Pregled i sačuvaj",
+          "description": "Pogledajte svoje promene u realnom vremenu pre nego što sačuvate. Video snimci se automatski kompresuju i učitavaju lenjo, obezbeđujući brzu performansu na mobilnim uređajima bez žrtvovanja vizuelnog kvaliteta."
+        }
+      ]
+    }
+  },
+  "multilingualPage": {
+    "seo": {
+      "title": "Višejezički sajt restorana — Meni na 25+ jezika | IQ Rest",
+      "description": "Sajt vašeg restorana i QR meni na 25+ jezika. Gosti menjaju jezik jednim tapom — meni, kontakti i rezervacije se prilagođavaju odmah."
+    },
+    "hero": {
+      "badge": "Višejezički",
+      "title": "Sajt vašeg restorana na 25+ jezika",
+      "subtitle": "Turisti i međunarodni gosti vide vaš meni na svom jeziku. Jedan tap za prebacivanje — sve se prilagođava odmah: jela, opisi, kontakti, navigacija.",
+      "cta": "Kreirajte svoj meni",
+      "ctaDemo": "Pogledajte demo",
+      "noCreditCard": "Kreditna kartica nije potrebna. Besplatan plan dostupan."
+    },
+    "features": {
+      "title": "Kako funkcioniše višejezička podrška",
+      "subtitle": "Govorite jezikom svog klijenta bez dodatnog posla.",
+      "items": [
+        {
+          "title": "Gosti biraju svoj jezik",
+          "description": "Na vašem meniju se pojavljuje birač jezika. Gosti tapnu svoj željeni jezik i ceo sajt — meni, opisi, kontakt informacije, navigacija — se prebacuje odmah. Ponovno učitavanje stranice nije potrebno."
+        },
+        {
+          "title": "Dodajte jezike iz kontrolnog panela",
+          "description": "Omogućite nove jezike jednim klikom. Koristite AI prevod za popunjavanje sadržaja ili unesite prevode ručno. Svaki jezik se može nezavisno uključiti ili isključiti."
+        }
+      ]
+    },
+    "faq": {
+      "title": "Često postavljana pitanja",
+      "subtitle": "Sve što treba da znate o višejezičkim menijima.",
+      "items": [
+        {
+          "question": "Koliko jezika mogu da dodam svom meniju?",
+          "answer": "Do 25+ jezika uključujući sve glavne evropske jezike, kineski, japanski, korejski, arapski, persijski i više. Dodajte onoliko koliko vaši gosti trebaju."
+        },
+        {
+          "question": "Da li moram sve da prevedem ručno?",
+          "answer": "Ne. Koristite ugrađeni AI prevod da prevedete ceo meni jednim klikom. Takođe možete ručno urediti bilo koji prevod za potpunu kontrolu."
+        },
+        {
+          "question": "Da li se jezička preferencija čuva?",
+          "answer": "Da. Kada gost izabere jezik, pamti se za sledeću posetu. Ne moraju ponovo da biraju kada se vrate."
+        },
+        {
+          "question": "Da li je višejezička podrška dostupna na besplatnom planu?",
+          "answer": "Besplatan plan uključuje do 2 jezika. Growth i Pro planovi nude neograničen broj jezika sa uključenim AI prevodom."
+        }
+      ]
+    },
+    "howItWorks": {
+      "title": "Kako to funkcioniše",
+      "subtitle": "Učinite svoj meni dostupnim na više jezika u četiri koraka.",
+      "steps": [
+        {
+          "title": "Idite na Podešavanja jezika",
+          "description": "Otvorite stranicu Jezici na vašem kontrolnom panelu. Videćete sve dostupne jezike i koji su trenutno aktivni na vašem meniju."
+        },
+        {
+          "title": "Dodajte jezike",
+          "description": "Izaberite između 35 dostupnih jezika. Besplatan plan uključuje do 2 jezika, dok Growth i Pro planovi nude neograničene jezike za vaš meni."
+        },
+        {
+          "title": "Prevedite svoj sadržaj",
+          "description": "Koristite AI prevod jednim klikom da odmah prevedete ceo svoj meni, ili unesite prevode ručno za potpunu kontrolu. Takođe možete kombinovati oba pristupa."
+        },
+        {
+          "title": "Gosti menjaju jezike",
+          "description": "Selector jezika se pojavljuje na stranici vašeg menija. Kada gosti izaberu svoj jezik, ceo meni se odmah menja. Njihova preferencija se čuva za povratne posete."
+        }
+      ]
+    }
+  },
+  "instantSetupPage": {
+    "seo": {
+      "title": "Besplatan generator sajta za restorane — Kreirajte za 5 minuta | IQ Rest",
+      "description": "Dobijte profesionalan sajt restorana sa QR menijem, stranicom kontakata i mapom — samo unesite e-poštu. Spreman za 5 minuta, tehničke veštine nisu potrebne."
+    },
+    "hero": {
+      "badge": "Besplatan sajt",
+      "title": "Dobijte profesionalan sajt restorana za 5 minuta",
+      "subtitle": "Unesite e-poštu, imenujte restoran i odmah dobijate kompletan sajt sa QR menijem, stranicom kontakata sa mapom i modernim responzivnim dizajnom. Bez kodiranja, bez dizajnera.",
+      "cta": "Kreirajte svoj meni",
+      "ctaDemo": "Pogledajte demo",
+      "noCreditCard": "Kreditna kartica nije potrebna. Besplatan plan dostupan."
+    },
+    "features": {
+      "title": "Kako funkcioniše",
+      "subtitle": "Od nule do aktivnog sajta restorana u tri koraka.",
+      "items": [
+        {
+          "title": "Registrujte se samo sa e-poštom",
+          "description": "Bez komplikovanih formulara za registraciju. Unesite e-poštu, potvrdite kodom i vaš kontrolni panel restorana je spreman. Imenujte restoran i sajt odmah postaje aktivan."
+        },
+        {
+          "title": "Sve uključeno od samog početka",
+          "description": "Vaš sajt dolazi sa QR menijem, stranicom kontakata sa Google Mapama, jezičkom podrškom, responzivnim dizajnom za mobilne uređaje i vašim jedinstvenim URL-om. Samo dodajte jela i počnite da delite."
+        }
+      ]
+    },
+    "faq": {
+      "title": "Često postavljana pitanja",
+      "subtitle": "Sve što treba da znate o kreiranju sajta restorana.",
+      "items": [
+        {
+          "question": "Kako da kreiram besplatan sajt restorana?",
+          "answer": "Unesite e-poštu na IQ Rest, potvrdite kodom, imenujte restoran — gotovo. Vaš sajt sa QR menijem je aktivan za manje od 5 minuta. Kreditna kartica nije potrebna."
+        },
+        {
+          "question": "Da li su mi potrebne tehničke veštine?",
+          "answer": "Ne. Sve je dizajnirano za vlasnike restorana, ne za programere. Dodajte jela, otpremite fotografije i upravljajte sajtom potpuno sa telefona."
+        },
+        {
+          "question": "Šta je uključeno u besplatan plan?",
+          "answer": "Kompletan sajt restorana, QR meni, stranica kontakata sa mapom, analitika, prilagođena šema boja i do 2 jezika. Bez probnog perioda — besplatno je zauvek."
+        },
+        {
+          "question": "Mogu li da koristim sopstveni naziv domena?",
+          "answer": "Na besplatnom i Growth planu, vaš sajt je hostovan na iq-rest.com/m/vaše-ime. Pro plan podržava prilagođene nazive domena za potpunu kontrolu brenda."
+        }
+      ]
+    },
+    "howItWorks": {
+      "title": "Kako to funkcioniše",
+      "subtitle": "Od nule do aktivnog restoranskog veb sajta u četiri koraka.",
+      "steps": [
+        {
+          "title": "Unesite svoju email adresu",
+          "description": "Nema potrebe za lozinkom. Samo unesite svoju email adresu i kliknite na Nastavi. Nema dugih obrazaca za registraciju, nema potrebe za kreditnom karticom i nema obaveza."
+        },
+        {
+          "title": "Verifikujte sa kodom",
+          "description": "Proverite svoj inbox za 4-cifreni verifikacioni kod. Unesite ga da se prijavite bezbedno. Ovaj pristup bez lozinke znači da imate jednu stvar manje da pamtite."
+        },
+        {
+          "title": "Imenujte svoj restoran",
+          "description": "Dajte svom restoranu ime. To postaje vaša URL adresa veb sajta i naslov menija. Uvek ga možete promeniti kasnije iz podešavanja na svom kontrolnom panelu."
+        },
+        {
+          "title": "Vaš veb sajt je spreman",
+          "description": "Potpuno restoranski veb sajt sa QR menijem, stranicom za kontakt sa mapom i responzivnim dizajnom je odmah aktivan na iq-rest.com/m/vaše-ime. Dodajte svoja jela i počnite da delite."
+        }
+      ]
+    }
+  },
+  "analyticsPage": {
+    "seo": {
+      "title": "Analitika restorana i statistika QR menija — Pratite posetioce | IQ Rest",
+      "description": "Pratite skeniranja QR menija, preglede stranica, popularne jezike i trendove posetilaca. Kontrolni panel analitike u realnom vremenu za sajt vašeg restorana."
+    },
+    "hero": {
+      "badge": "Analitika",
+      "title": "Vidite tačno kako gosti koriste vaš QR meni",
+      "subtitle": "Pratite dnevna skeniranja, preglede stranica, popularne jezike, statistiku uređaja i trendove tokom vremena. Donosite odluke zasnovane na podacima za optimizaciju menija i rast poslovanja.",
+      "cta": "Kreirajte svoj meni",
+      "ctaDemo": "Pogledajte demo",
+      "noCreditCard": "Kreditna kartica nije potrebna. Besplatan plan dostupan."
+    },
+    "features": {
+      "title": "Šta možete pratiti",
+      "subtitle": "Uvidi u realnom vremenu o prisustvu vašeg restorana na internetu.",
+      "items": [
+        {
+          "title": "Dnevni pregledi, skeniranja i trendovi posetilaca",
+          "description": "Vidite koliko ljudi skenira vaš QR kod i posećuje meni svaki dan, svake nedelje i svakog meseca. Pratite trendove tokom vremena da razumete sezonske obrasce i merite uticaj promocija."
+        },
+        {
+          "title": "Raspodela po jezicima i uređajima",
+          "description": "Znate koje jezike vaši gosti preferiraju i koje uređaje koriste. Ovi podaci pomažu da prioritizujete prevode i osigurate da vaš meni izgleda savršeno na najpopularnijim uređajima."
+        }
+      ]
+    },
+    "faq": {
+      "title": "Često postavljana pitanja",
+      "subtitle": "Sve što treba da znate o analitici restorana.",
+      "items": [
+        {
+          "question": "Koje metrike mogu da pratim?",
+          "answer": "Dnevne, nedeljne i mesečne preglede stranica. Jedinstvene posetioce. Najgledanije stranice. Jezičke preferencije. Raspodelu po uređajima i pretraživačima. Sve se ažurira u realnom vremenu."
+        },
+        {
+          "question": "Da li je analitika uključena u besplatan plan?",
+          "answer": "Da. Osnovna analitika je dostupna na svakom planu, uključujući besplatan. Možete videti preglede, posetioce i jezičku statistiku od prvog dana."
+        },
+        {
+          "question": "Mogu li da vidim koje stranice su najpopularnije?",
+          "answer": "Da. Kontrolni panel prikazuje preglede po stranicama — početna, meni, kontakti, rezervacije i izbor jezika. Vidite tačno gde gosti provode vreme."
+        },
+        {
+          "question": "Koliko daleko u prošlost sežu podaci?",
+          "answer": "Podaci analitike se čuvaju od dana kreiranja restorana. Možete pregledati dnevne, nedeljne i mesečne trendove za celokupnu istoriju."
+        }
+      ]
+    },
+    "howItWorks": {
+      "title": "Kako to funkcioniše",
+      "subtitle": "Počnite da pratite performanse vašeg restorana u četiri koraka.",
+      "steps": [
+        {
+          "title": "Kreirajte svoj restoran",
+          "description": "Analitika počinje da prati od trenutka kada vaš meni postane aktivan. Nema potrebe za konfiguracijom — svaki pregled stranice, QR skeniranje i posetilac se automatski beleže."
+        },
+        {
+          "title": "Podelite svoj QR kod",
+          "description": "Ispišite svoj QR kod i postavite ga na stolove, na ulazu ili na ambalažu za hranu za poneti. Svako skeniranje se beleži sa vremenskim pečatom, jezikom, uređajem i posetjenom stranicom."
+        },
+        {
+          "title": "Otvorite analitičku kontrolnu tablu",
+          "description": "Pogledajte dnevne, nedeljne i mesečne statistike sa jasnim grafikonima. Pratite ukupne preglede, jedinstvene posetioce i trendove tokom vremena sa jedne kontrolne table."
+        },
+        {
+          "title": "Istražite detaljne analize",
+          "description": "Pogledajte statistiku razdvojenu po stranicama (meni, kontakti, rezervacije), preferiranom jeziku, tipu uređaja i pretraživaču. Iskoristite ove podatke da optimizujete svoj meni i prioritizujete prevode."
+        }
+      ]
+    }
+  },
+  "aiImagesPage": {
+    "seo": {
+      "title": "AI generisanje fotografija hrane za menije — Slike za meni restorana | IQ Rest",
+      "description": "Generišite lepe fotografije hrane za svoj meni pomoću AI. Fotograf nije potreban — dobijte profesionalne slike jela za nekoliko sekundi, optimizovane za vaš QR meni."
+    },
+    "hero": {
+      "badge": "AI slike",
+      "title": "Profesionalne fotografije za meni bez fotografa",
+      "subtitle": "Generišite zapanjujuće slike hrane za svoja jela pomoću AI. Samo unesite naziv jela i dobijte lepu, optimizovanu fotografiju spremnu za vaš QR meni — za nekoliko sekundi.",
+      "cta": "Kreirajte svoj meni",
+      "ctaDemo": "Pogledajte demo",
+      "noCreditCard": "Kreditna kartica nije potrebna. Besplatan plan dostupan."
+    },
+    "features": {
+      "title": "Kako funkcioniše AI generisanje slika",
+      "subtitle": "Od naziva jela do profesionalne fotografije jednim klikom.",
+      "items": [
+        {
+          "title": "Generišite slike iz naziva jela",
+          "description": "Unesite naziv jela — 'Grilovani losos sa limunom', 'Margherita pica', 'Čokoladni lava kolač' — i AI generiše profesionalnu fotografiju hrane. Birajte između različitih stilova i pozadina."
+        },
+        {
+          "title": "Optimizovano za brzo učitavanje",
+          "description": "Svaka generisana slika se automatski kompresuje i konvertuje u moderne formate. Vaš meni ostaje munjevito brz na svakom uređaju, čak i sa fotografijama uz svako jelo."
+        }
+      ]
+    },
+    "faq": {
+      "title": "Često postavljana pitanja",
+      "subtitle": "Sve što treba da znate o AI slikama za meni.",
+      "items": [
+        {
+          "question": "Kako da generišem fotografiju hrane?",
+          "answer": "Otvorite bilo koju stavku menija u kontrolnom panelu, tapnite 'Generiši sliku' i AI kreira profesionalnu fotografiju hrane na osnovu naziva jela i opisa. Izaberite onu koja vam se sviđa."
+        },
+        {
+          "question": "Mogu li umesto toga da koristim sopstvene fotografije?",
+          "answer": "Naravno. Otpremite sopstvene fotografije sa telefona ili računara. AI generisanje je opciono — koristite ga kada nemate fotografiju pri ruci."
+        },
+        {
+          "question": "Koliko slika mogu da generišem?",
+          "answer": "Limiti generisanja slika zavise od vašeg plana. Growth uključuje mesečnu kvotu, a Pro nudi veći limit. Sopstvene fotografije uvek možete otpremiti bez ograničenja."
+        },
+        {
+          "question": "Da li su generisane slike jedinstvene za moj restoran?",
+          "answer": "Da. Svaka slika se jedinstveno generiše za vaše konkretno jelo. Nema stock fotografija — svaka slika se kreira ispočetka na osnovu vaše stavke menija."
+        }
+      ]
+    },
+    "howItWorks": {
+      "title": "Kako to funkcioniše",
+      "subtitle": "Dobijte profesionalne fotografije hrane za vaš meni u četiri jednostavna koraka.",
+      "steps": [
+        {
+          "title": "Otvorite bilo koju stavku u meniju",
+          "description": "Navigirajte do stavke za koju želite fotografiju na vašem kontrolnom panelu. Možete generisati slike za nova jela ili zameniti postojeće fotografije na bilo kojoj stavci u meniju."
+        },
+        {
+          "title": "Kliknite na Generiši sliku",
+          "description": "AI kreira profesionalnu fotografiju hrane na osnovu imena jela i opisa. Što više detalja pružite u opisu, to će rezultat biti tačniji."
+        },
+        {
+          "title": "Pregledajte rezultat",
+          "description": "Pogledajte generisanu sliku pre nego što je primenite. Ako želite drugačiji izgled, regenerišite da dobijete novu varijaciju. Svaka generacija proizvodi jedinstvenu sliku."
+        },
+        {
+          "title": "Koristite u vašem meniju",
+          "description": "Slika je automatski optimizovana, kompresovana u WebP format i odmah se pojavljuje na vašem aktivnom meniju. Gosti vide profesionalne fotografije hrane za svako jelo."
+        }
+      ]
+    }
+  },
+  "personalSupportPage": {
+    "seo": {
+      "title": "Lična podrška za sajt vašeg restorana — Pomoć od pravih ljudi | IQ Rest",
+      "description": "Dobijte ličnu pomoć od pravih ljudi, ne od čet-botova. Pomoć pri podešavanju, saveti za optimizaciju menija i brzi odgovori — dostupno na svakom planu uključujući besplatan."
+    },
+    "hero": {
+      "badge": "Lična podrška",
+      "title": "Pravi ljudi, prava pomoć — ne čet-botovi",
+      "subtitle": "Imate pitanje? Potrebna vam je pomoć pri podešavanju menija? Želite da predložite funkciju? Pišite nam direktno i dobijte lični odgovor od nekoga ko razume restorane.",
+      "cta": "Kreirajte svoj meni",
+      "ctaDemo": "Pogledajte demo",
+      "noCreditCard": "Kreditna kartica nije potrebna. Besplatan plan dostupan."
+    },
+    "features": {
+      "title": "Kako funkcioniše podrška",
+      "subtitle": "Pomoć kada vam treba, od ljudi kojima je stalo.",
+      "items": [
+        {
+          "title": "Pišite nam direktno iz kontrolnog panela",
+          "description": "Otvorite čet za podršku u kontrolnom panelu i opišite svoje pitanje. Prava osoba čita vašu poruku i odgovara — obično u roku od nekoliko sati tokom radnih dana."
+        },
+        {
+          "title": "Pomoć pri podešavanju, optimizaciji i još mnogo toga",
+          "description": "Bilo da vam treba pomoć pri dodavanju prvog jela, savet o organizaciji menija ili želite da predložite novu funkciju — mi smo tu. Svako pitanje je važno, bez obzira koliko je malo."
+        }
+      ]
+    },
+    "faq": {
+      "title": "Često postavljana pitanja",
+      "subtitle": "Sve što treba da znate o našoj podršci.",
+      "items": [
+        {
+          "question": "Da li je podrška dostupna na besplatnom planu?",
+          "answer": "Da. Lična podrška je dostupna za svaki plan, uključujući besplatan. Verujemo da svaki restoran zaslužuje pravu pomoć, bez obzira na pretplatu."
+        },
+        {
+          "question": "Koliko brzo odgovarate?",
+          "answer": "Obično u roku od nekoliko sati tokom radnih dana. Svaku poruku čitamo lično i trudimo se da rešimo vaše pitanje u jednom odgovoru."
+        },
+        {
+          "question": "Možete li da mi pomognete da podesim meni?",
+          "answer": "Naravno. Ako vam treba pomoć pri dodavanju jela, organizaciji kategorija, podešavanju prevoda ili konfigurisanju rezervacija — samo pitajte. Rado ćemo vas provesti korak po korak."
+        },
+        {
+          "question": "Mogu li da predložim nove funkcije?",
+          "answer": "Da, i to volimo! Mnoge naše funkcije su počele kao predlozi korisnika. Pišite nam sa svojom idejom i razmotriićemo je za buduća ažuriranja."
+        }
+      ]
+    },
+    "howItWorks": {
+      "title": "Kako to funkcioniše",
+      "subtitle": "Dobijte pomoć od stvarne osobe u četiri jednostavna koraka.",
+      "steps": [
+        {
+          "title": "Otvorite Chat za Podršku",
+          "description": "Idite na stranicu za podršku na vašem kontrolnom panelu. Videćete jednostavno chat sučelje gde možete direktno napisati svoju poruku — bez obrazaca za tikete ili kategorija za izbor."
+        },
+        {
+          "title": "Opišite Vaše Pitanje",
+          "description": "Napišite svoju poruku. Pitajte o postavljanju, funkcijama, optimizaciji menija, naplatama ili bilo čemu drugom. Nema glupih pitanja — rado ćemo pomoći sa svime."
+        },
+        {
+          "title": "Dobijte Lični Odgovor",
+          "description": "Stvarna osoba (ne chatbot) čita vašu poruku i odgovara u roku od nekoliko sati. Razumemo radne tokove restorana i dajemo praktične, primenljive odgovore."
+        },
+        {
+          "title": "Kontinuirana Pomoć",
+          "description": "Zatražite predloge za funkcije, dobijte savete za optimizaciju menija ili tražite pomoć pri postavljanju u bilo kojem trenutku. Vaša istorija razgovora se čuva, tako da uvek imamo kontekst iz prethodnih pitanja."
+        }
+      ]
+    }
   }
 }

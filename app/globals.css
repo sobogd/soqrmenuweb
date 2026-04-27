@@ -179,11 +179,45 @@ html {
   select:-webkit-autofill:hover,
   select:-webkit-autofill:focus,
   select:-webkit-autofill:active {
-    -webkit-box-shadow: 0 0 0 1000px transparent inset !important;
-    -webkit-text-fill-color: hsl(var(--foreground)) !important;
-    caret-color: hsl(var(--foreground)) !important;
-    background-color: transparent !important;
-    transition: background-color 5000s ease-in-out 0s, -webkit-box-shadow 5000s ease-in-out 0s;
+    -webkit-text-fill-color: #171717 !important;
+    color: #171717 !important;
+    caret-color: #171717 !important;
+    -webkit-box-shadow: 0 0 0 1000px #ffffff inset !important;
+    box-shadow: 0 0 0 1000px #ffffff inset !important;
+    background-image: none !important;
+    transition: background-color 5000s ease-in-out 0s, color 5000s ease-in-out 0s;
+  }
+
+  .dark input:-webkit-autofill,
+  .dark input:-webkit-autofill:hover,
+  .dark input:-webkit-autofill:focus,
+  .dark input:-webkit-autofill:active,
+  .dark textarea:-webkit-autofill,
+  .dark textarea:-webkit-autofill:hover,
+  .dark textarea:-webkit-autofill:focus,
+  .dark textarea:-webkit-autofill:active,
+  .dark select:-webkit-autofill,
+  .dark select:-webkit-autofill:hover,
+  .dark select:-webkit-autofill:focus,
+  .dark select:-webkit-autofill:active {
+    -webkit-text-fill-color: #fafafa !important;
+    color: #fafafa !important;
+    caret-color: #fafafa !important;
+    -webkit-box-shadow: 0 0 0 1000px #1c1c1c inset !important;
+    box-shadow: 0 0 0 1000px #1c1c1c inset !important;
+  }
+
+  /* Kill default browser styles on text inputs / textareas / selects */
+  input,
+  textarea,
+  select {
+    color: inherit;
+    background-color: transparent;
+  }
+  input:focus,
+  textarea:focus,
+  select:focus {
+    outline: none;
   }
 }
 

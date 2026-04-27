@@ -40,15 +40,15 @@ type Screen = "email" | "verify";
 // ─── Theme-adaptive classes ──────────────────────────────────────────────────
 
 const inputClass =
-  "w-full h-10 px-3 text-sm text-neutral-900 bg-white border border-neutral-300 rounded-lg placeholder:text-neutral-400 focus:outline-none focus:border-neutral-900 focus:ring-2 focus:ring-neutral-900/5 transition-colors";
+  "w-full h-10 px-3 text-sm text-foreground bg-card border border-input rounded-lg placeholder:text-muted-foreground focus:outline-none focus:border-foreground focus:ring-2 focus:ring-foreground/5 transition-colors";
 
-const labelClass = "block text-xs font-medium text-neutral-900 mb-1.5 tracking-tight";
+const labelClass = "block text-xs font-medium text-foreground mb-1.5 tracking-tight";
 
 const primaryButtonClass =
-  "w-full h-10 text-sm font-medium text-white bg-neutral-900 rounded-lg hover:bg-neutral-800 active:scale-[0.99] transition-all tracking-tight disabled:bg-neutral-300 disabled:text-neutral-500 disabled:cursor-not-allowed disabled:active:scale-100 flex items-center justify-center gap-2";
+  "w-full h-10 text-sm font-medium text-background bg-foreground rounded-lg hover:bg-foreground/90 active:scale-[0.99] transition-all tracking-tight disabled:bg-input disabled:text-muted-foreground disabled:cursor-not-allowed disabled:active:scale-100 flex items-center justify-center gap-2";
 
 const secondaryButtonClass =
-  "w-full h-10 text-sm font-medium text-neutral-900 bg-white border border-neutral-300 rounded-lg hover:border-neutral-900 active:scale-[0.99] transition-all tracking-tight flex items-center justify-center gap-2";
+  "w-full h-10 text-sm font-medium text-foreground bg-card border border-input rounded-lg hover:border-foreground active:scale-[0.99] transition-all tracking-tight flex items-center justify-center gap-2";
 
 // ─── Google "G" icon (official colors) ──────────────────────────────────────
 
@@ -88,15 +88,15 @@ function EmailScreen({
 
   return (
     <>
-      <h1 className="text-xl font-medium text-neutral-900 tracking-tight mb-1.5">
+      <h1 className="text-xl font-medium text-foreground tracking-tight mb-1.5">
         {t("title")} {t("titleAccent")}
       </h1>
-      <p className="text-xs text-neutral-500 leading-snug mb-5">
+      <p className="text-xs text-muted-foreground leading-snug mb-5">
         {t("subtitle")}
       </p>
 
       {status === "error" && errorMessage && (
-        <div className="mb-4 p-3 bg-red-50 border border-red-200 rounded-lg text-red-600 text-xs leading-snug">
+        <div className="mb-4 p-3 bg-red-50 dark:bg-red-950/40 border border-red-200 dark:border-red-900/50 rounded-lg text-red-600 dark:text-red-400 text-xs leading-snug">
           {errorMessage}
         </div>
       )}
@@ -133,15 +133,15 @@ function EmailScreen({
       {GOOGLE_CLIENT_ID && (
         <>
           <div className="flex items-center gap-3 my-5">
-            <div className="flex-1 h-px bg-neutral-200" />
-            <span className="text-[11px] text-neutral-400 tracking-tight">{t("or")}</span>
-            <div className="flex-1 h-px bg-neutral-200" />
+            <div className="flex-1 h-px bg-border" />
+            <span className="text-[11px] text-muted-foreground tracking-tight">{t("or")}</span>
+            <div className="flex-1 h-px bg-border" />
           </div>
 
           <div className="relative h-10">
             {/* Skeleton shown while SDK loads — reserves space, no layout shift */}
             {!googleReady && (
-              <div className="w-full h-10 rounded-lg bg-neutral-200 animate-pulse" />
+              <div className="w-full h-10 rounded-lg bg-border animate-pulse" />
             )}
             {/* Custom button visible once SDK is ready */}
             <button
@@ -161,18 +161,18 @@ function EmailScreen({
         </>
       )}
 
-      <p className="text-xs text-neutral-400 leading-snug text-center mt-6">
+      <p className="text-xs text-muted-foreground leading-snug text-center mt-6">
         {t("consent.text")}{" "}
         <Link
           href="/terms"
-          className="text-neutral-600 hover:text-neutral-900 underline underline-offset-2 transition-colors"
+          className="text-foreground/70 hover:text-foreground underline underline-offset-2 transition-colors"
         >
           {t("consent.terms")}
         </Link>{" "}
         {t("consent.and")}{" "}
         <Link
           href="/privacy"
-          className="text-neutral-600 hover:text-neutral-900 underline underline-offset-2 transition-colors"
+          className="text-foreground/70 hover:text-foreground underline underline-offset-2 transition-colors"
         >
           {t("consent.privacy")}
         </Link>
@@ -264,15 +264,15 @@ function VerifyScreen({
 
   return (
     <>
-      <h1 className="text-xl font-medium text-neutral-900 tracking-tight mb-1.5">
+      <h1 className="text-xl font-medium text-foreground tracking-tight mb-1.5">
         {t("verifyTitle")}
       </h1>
-      <p className="text-[13px] text-neutral-500 leading-snug mb-5">
+      <p className="text-[13px] text-muted-foreground leading-snug mb-5">
         {t("verifySubtitle", { email }).split(email).map((part, i, arr) =>
           i < arr.length - 1 ? (
             <span key={i}>
               {part}
-              <span className="text-neutral-900 font-medium">{email}</span>
+              <span className="text-foreground font-medium">{email}</span>
             </span>
           ) : (
             <span key={i}>{part}</span>
@@ -281,7 +281,7 @@ function VerifyScreen({
       </p>
 
       {status === "error" && errorMessage && (
-        <div className="mb-4 p-3 bg-red-50 border border-red-200 rounded-lg text-red-600 text-xs leading-snug">
+        <div className="mb-4 p-3 bg-red-50 dark:bg-red-950/40 border border-red-200 dark:border-red-900/50 rounded-lg text-red-600 dark:text-red-400 text-xs leading-snug">
           {errorMessage}
         </div>
       )}
@@ -302,12 +302,12 @@ function VerifyScreen({
             onFocus={(e) => e.target.select()}
             autoFocus={idx === 0}
             disabled={status === "loading"}
-            className="flex-1 min-w-0 h-12 text-center text-lg font-medium text-neutral-900 bg-white border border-neutral-300 rounded-lg focus:outline-none focus:border-neutral-900 focus:ring-2 focus:ring-neutral-900/5 transition-colors tabular-nums disabled:opacity-50"
+            className="flex-1 min-w-0 h-12 text-center text-lg font-medium text-foreground bg-card border border-input rounded-lg focus:outline-none focus:border-foreground focus:ring-2 focus:ring-foreground/5 transition-colors tabular-nums disabled:opacity-50"
           />
         ))}
       </div>
 
-      <p className="text-xs text-neutral-400 mt-3">{t("checkSpam")}</p>
+      <p className="text-xs text-muted-foreground mt-3">{t("checkSpam")}</p>
 
       <button
         type="button"
@@ -324,7 +324,7 @@ function VerifyScreen({
           type="button"
           onClick={onResend}
           disabled={cooldown > 0 || resendStatus === "loading"}
-          className="text-xs font-medium text-neutral-900 hover:text-neutral-600 tracking-tight transition-colors disabled:text-neutral-400 disabled:cursor-not-allowed"
+          className="text-xs font-medium text-foreground hover:text-foreground/70 tracking-tight transition-colors disabled:text-muted-foreground disabled:cursor-not-allowed"
         >
           {resendStatus === "loading" ? (
             <Loader2 className="h-3 w-3 animate-spin" />
@@ -340,7 +340,7 @@ function VerifyScreen({
         <button
           type="button"
           onClick={onBack}
-          className="text-xs font-medium text-neutral-400 hover:text-neutral-700 tracking-tight transition-colors flex items-center gap-1"
+          className="text-xs font-medium text-muted-foreground hover:text-foreground tracking-tight transition-colors flex items-center gap-1"
         >
           <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="shrink-0">
             <line x1="19" y1="12" x2="5" y2="12" />
@@ -561,8 +561,8 @@ export function AuthPage() {
   };
 
   return (
-    <div className="min-h-screen bg-neutral-100 flex items-center justify-center px-4 py-8 antialiased tracking-tight">
-      <div className="w-[360px] max-w-full bg-white border border-neutral-200 rounded-2xl p-6 pb-7">
+    <div className="min-h-[100dvh] bg-secondary flex items-center justify-center px-4 py-4 antialiased tracking-tight">
+      <div className="w-[360px] max-w-full bg-card border border-border rounded-2xl p-6 pb-7">
         {screen === "email" ? (
           <EmailScreen
             email={email}

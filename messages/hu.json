@@ -2515,5 +2515,895 @@
     },
     "back": "Back",
     "continue": "Folytatás"
+  },
+  "onlineOrders": {
+    "seo": {
+      "title": "Online Rendelés Éttermeknek — QR Menü | IQ Rest",
+      "description": "Engedje meg vendégeinek, hogy közvetlenül a QR menüből rendeljenek. Nulla jutalék, valós idejű árak és azonnali rendeléskezelés a vezérlőpulton."
+    },
+    "hero": {
+      "badge": "Online Rendelés",
+      "title": "Alakítsa QR Menüjét Online Rendelési Rendszerré",
+      "subtitle": "A vendégek beolvassák, böngészik a menüt, és másodpercek alatt leadják rendelésüket. Nincs alkalmazásletöltés, nincs jutalék, nincs bonyodalom.",
+      "cta": "Menü Létrehozása",
+      "ctaDemo": "Demó Megtekintése",
+      "noCreditCard": "Nem szükséges bankkártya. Ingyenes csomag elérhető."
+    },
+    "benefits": {
+      "title": "Miért Választják az Éttermek a QR Menü Rendelést",
+      "subtitle": "Közvetlen rendelési csatorna, amely egyszerű marad Önnek és vendégeinek egyaránt.",
+      "items": [
+        {
+          "title": "Nem Szükséges Alkalmazás",
+          "description": "A vendégek egyszerűen beolvassák a QR kódot — nincs letöltés, nincs regisztráció. Azonnal működik bármely telefon böngészőjében."
+        },
+        {
+          "title": "Valós Idejű Árak",
+          "description": "Azonnal frissítse az árakat és az elérhetőséget. A változtatások azonnal megjelennek a QR menüben."
+        },
+        {
+          "title": "Asztali Rendelés",
+          "description": "Minden asztal saját QR kódot kap. A vendégek beolvassák, rendelnek, és Ön a vezérlőpulton látja az asztal számát."
+        },
+        {
+          "title": "Egyedi Design",
+          "description": "Igazítsa a menüt márkájához egyedi színekkel, háttérképekkel és logóval."
+        }
+      ]
+    },
+    "features": {
+      "title": "Hogyan Működik az Online Rendelés",
+      "subtitle": "Két egyszerű lépés összeköti a menüt a konyhájával.",
+      "items": [
+        {
+          "title": "A Vendégek Böngészik és Kiválasztják a Tételeket",
+          "description": "A vendégek beolvassák a QR kódot, és megtekintik a teljes menüt fotókkal, leírásokkal és árakkal. Egyetlen érintéssel adják hozzá a tételeket a rendelésükhöz — regisztráció nem szükséges."
+        },
+        {
+          "title": "A Rendelések Megjelennek a Vezérlőpulton",
+          "description": "Amikor a vendég kész, megnyomja a rendelés gombot. A rendelés azonnal megjelenik a vezérlőpulton a tételek részleteivel, asztalszámmal és megjegyzésekkel. Fogadja el, kezdje el az elkészítést, és jelölje késznek."
+        }
+      ]
+    },
+    "faq": {
+      "title": "Gyakran Ismételt Kérdések",
+      "subtitle": "Minden, amit az online rendelésről tudni kell.",
+      "items": [
+        {
+          "question": "Szükségem van extra hardverre vagy alkalmazásra?",
+          "answer": "Nem. Minden a böngészőn keresztül működik. A vendégek a telefon kamerájukkal olvassák be a QR kódot, Ön pedig bármilyen eszközről kezeli a rendeléseket az IQ Rest vezérlőpulton."
+        },
+        {
+          "question": "Vannak jutalékok vagy rendelésenkénti díjak?",
+          "answer": "Egyáltalán nem. Az IQ Rest soha nem számít fel jutalékot a rendelésekre. Csak az előfizetési csomagját fizeti, és a rendelésekből származó összes bevétel Önnél marad."
+        },
+        {
+          "question": "Testreszabhatják a vendégek a rendelésüket vagy megjegyzést fűzhetnek hozzá?",
+          "answer": "Igen. A vendégek kiválaszthatják a tételeket, megadhatják a mennyiségeket, és különleges megjegyzéseket vagy kéréseket adhatnak hozzá. Kötelezővé teheti a vendég nevét, telefonszámát vagy szállítási címét is."
+        },
+        {
+          "question": "Működik helyben fogyasztásra, elvitelre és házhozszállításra is?",
+          "answer": "Igen. Helyben fogyasztásnál a vendégek az asztalnál olvassák be a QR kódot. Elvitelre vagy házhozszállításra osszon meg egy közvetlen linket a menühöz. Szükség szerint engedélyezheti a név, telefon és cím mezőket."
+        }
+      ]
+    },
+    "howItWorks": {
+      "title": "Hogyan Működik",
+      "subtitle": "Öt egyszerű lépésben a beállítástól az első rendelésed megérkezéséig.",
+      "steps": [
+        {
+          "title": "Engedélyezd az Online Rendelést",
+          "description": "Kapcsold be a rendeléseket a Tervezési beállításaidban. Válaszd ki a preferált módot: a rendelések megjelennek a vezérlőpultodon, továbbítódnak a WhatsApp-ra, vagy mindkettő egyszerre."
+        },
+        {
+          "title": "Állítsd Be a Rendelési Űrlapot",
+          "description": "Válaszd ki, hogy mely mezőket kell kitölteniük a vásárlóknak a rendelés leadásakor. A név mindig kötelező, és opcionálisan kérheted a telefonszámot és a szállítási címet."
+        },
+        {
+          "title": "Nyomtasd Ki a QR Kódokat az Asztalokhoz",
+          "description": "Minden asztal a vendéglődből egyedi QR kódot kap. Amikor a vendégek beolvassák, a rendelésük automatikusan megérkezik a megfelelő asztalszámmal."
+        },
+        {
+          "title": "A Vásárlók Rendeléseket Adnak Le",
+          "description": "A vendégek beolvassák a QR kódot, böngészik a menüdet fényképekkel és árakkal, kiválasztják a tételeket, hozzáadnak megjegyzéseket, és leadják a rendelésüket. Nincs szükség alkalmazás letöltésére vagy fiók létrehozására."
+        },
+        {
+          "title": "Kezeled a Rendeléseket a Vezérlőpultról",
+          "description": "A rendelések azonnal megjelennek a vezérlőpultodon. Frissítsd minden rendelés státuszát újról folyamatban lévőre, majd teljesítettre. Te megtartod a bevétel 100%-át — nulla jutalék."
+        }
+      ]
+    }
+  },
+  "reservationsPage": {
+    "seo": {
+      "title": "Asztalfoglalási Rendszer Éttermeknek — Online Foglalás | IQ Rest",
+      "description": "Hagyja, hogy vendégei közvetlenül a weboldaláról foglaljanak asztalt. Automatikus vagy manuális visszaigazolás, e-mail értesítések és teljes naptárkezelés — mindennel együtt."
+    },
+    "hero": {
+      "badge": "Asztalfoglalás",
+      "title": "Fogadjon Asztalfoglalásokat 0-24 a Weboldaláról",
+      "subtitle": "A vendégek kiválasztják a dátumot, időpontot és a létszámot — és azonnal foglalnak. Mindent a vezérlőpultjáról kezel, nincs szükség telefonhívásokra.",
+      "cta": "Hozza Létre Étlapját",
+      "ctaDemo": "Demó Megtekintése",
+      "noCreditCard": "Nem szükséges bankkártya. Ingyenes csomag elérhető."
+    },
+    "features": {
+      "title": "Hogyan Működik az Asztalfoglalás",
+      "subtitle": "Két lépés a vendég kérésétől a visszaigazolt foglalásig.",
+      "items": [
+        {
+          "title": "Vendégek a Weboldaláról Foglalnak",
+          "description": "A vendégek meglátogatják az étterem oldalát, megérintik az 'Asztalfoglalás' gombot, kiválasztják a dátumot és időpontot, megadják adataikat és elküldik. Nincs szükség alkalmazásra — bármely böngészőben, bármely eszközön működik."
+        },
+        {
+          "title": "Kezelje a Foglalásokat a Vezérlőpultról",
+          "description": "Minden foglalás megjelenik a vezérlőpulton a vendég nevével, telefonszámával, létszámával, dátumával és megjegyzéseivel. Egy érintéssel visszaigazolhat vagy elutasíthat. Állítson be automatikus visszaigazolást, vagy tekintsen át minden foglalást manuálisan."
+        }
+      ]
+    },
+    "faq": {
+      "title": "Gyakran Ismételt Kérdések",
+      "subtitle": "Minden, amit az asztalfoglalásról tudni kell.",
+      "items": [
+        {
+          "question": "Kell a vendégeknek fiókot létrehozniuk a foglaláshoz?",
+          "answer": "Nem. A vendégek egyszerűen megadják a nevüket, telefonszámukat, a létszámot és a kívánt időpontot. Nincs szükség fiókra vagy alkalmazás letöltésére."
+        },
+        {
+          "question": "Beállíthatom az elérhető időpontokat és a kapacitást?",
+          "answer": "Igen. Határozza meg a nyitvatartási időt, a foglalási időszak hosszát és az asztalkapacitást. A rendszer csak az elérhető időpontokat jeleníti meg a vendégeknek."
+        },
+        {
+          "question": "Kapok értesítést, ha valaki foglal?",
+          "answer": "Igen. Minden új foglalásról e-mailt kap. A vendégek is kapnak visszaigazoló e-mailt, miután jóváhagyja a foglalást."
+        },
+        {
+          "question": "Használhatok automatikus és manuális visszaigazolást is?",
+          "answer": "Igen. Válassza az automatikus módot a foglalások azonnali visszaigazolásához az elérhetőség alapján, vagy a manuális módot, hogy minden kérést személyesen tekintsen át és hagyjon jóvá."
+        }
+      ]
+    },
+    "howItWorks": {
+      "title": "Hogyan Működik",
+      "subtitle": "Állítson be online foglalásokat, és kezdje el a foglalások elfogadását öt lépésben.",
+      "steps": [
+        {
+          "title": "Foglalások Engedélyezése",
+          "description": "Kapcsolja be a foglalásokat az étterem beállításaiban. Válasszon az automatikus megerősítés, ahol a foglalások azonnal jóváhagyásra kerülnek a rendelkezésre állás alapján, vagy a manuális mód között, ahol minden kérést áttekint."
+        },
+        {
+          "title": "Asztalok Hozzáadása",
+          "description": "Hozzon létre asztalokat kapacitás és zóna információkkal — például: '5. asztal, 4 vendég, Terasz'. Minden asztal foglalhatóvá válik, és a rendszer automatikusan megakadályozza a túlfoglalásokat."
+        },
+        {
+          "title": "Munkaidő Beállítása",
+          "description": "Határozza meg a foglalásokhoz elérhető órákat, és válassza ki az időtartamot — 15 perctől 8 óráig. Csak a munkaidőn belüli időpontok jelennek meg a vendégek számára."
+        },
+        {
+          "title": "Vendégek Online Foglalnak",
+          "description": "Az ügyfelek meglátogatják az étterem oldalát, kiválasztják a dátumot, időpontot és a létszámot, megadják a nevüket és telefonszámukat, majd elküldik. Nincs szükség fiókra vagy alkalmazás letöltésére — bármely böngészőben működik."
+        },
+        {
+          "title": "Foglalások Kezelése a Vezérlőpultján",
+          "description": "Tekintse meg az összes foglalást a vezérlőpultján. Erősítse meg, törölje, vagy jelölje meg a foglalásokat teljesítettnek. Ön és a vendég is e-mail értesítéseket kap minden foglalás frissítéséről."
+        }
+      ]
+    }
+  },
+  "colorSchemePage": {
+    "seo": {
+      "title": "Egyedi QR Menü Dizájn és Márka Színek — Étterem Arculat | IQ Rest",
+      "description": "Illessze a QR menüt az étterme arculatához. Válasszon kiemelő színeket, és hozzon létre egységes megjelenést a teljes digitális menüben."
+    },
+    "hero": {
+      "badge": "Egyedi Dizájn",
+      "title": "Illessze a QR Menüt az Étterme Arculatához",
+      "subtitle": "Válassza ki a márka színét, és az egész menü — gombok, kiemelések, linkek — azonnal frissül.",
+      "cta": "Hozza Létre Étlapját",
+      "ctaDemo": "Demó Megtekintése",
+      "noCreditCard": "Nem szükséges bankkártya. Ingyenes csomag elérhető."
+    },
+    "features": {
+      "title": "Hogyan Működik az Egyedi Arculat",
+      "subtitle": "Az Ön menüje, az Ön színei — következetesen minden oldalon.",
+      "items": [
+        {
+          "title": "Válassza Ki a Kiemelő Színt",
+          "description": "Válasszon 12 gondosan összeállított előbeállítás közül, vagy adja meg pontos márka színét hex kóddal. Minden gomb, link és kiemelés a menüben azonnal alkalmazkodik — nincs szükség dizájn tudásra."
+        }
+      ]
+    },
+    "faq": {
+      "title": "Gyakran Ismételt Kérdések",
+      "subtitle": "Minden, amit a menü testreszabásáról tudni kell.",
+      "items": [
+        {
+          "question": "Használhatom a pontos márka színemet?",
+          "answer": "Igen. Adjon meg bármilyen hex színkódot, vagy válasszon a 12 gondosan kiválasztott előbeállítás közül. A kiemelő szín a menü összes oldalára érvényes."
+        },
+        {
+          "question": "Megváltoztathatom a színeket a közzététel után?",
+          "answer": "Természetesen. Bármikor módosítsa a kiemelő színt a vezérlőpulton. A frissítések azonnal megjelennek az élő menüben — nincs szükség újrapublikálásra."
+        },
+        {
+          "question": "A QR kódom is a márka színekhez igazodik?",
+          "answer": "A QR kód külön generálódik és önállóan testreszabható. A kiemelő szín a digitális menü oldalaira, a navigációra és az interaktív elemekre vonatkozik."
+        }
+      ]
+    },
+    "howItWorks": {
+      "title": "Hogyan működik",
+      "subtitle": "Illeszd a menüdet a márkádhoz három egyszerű lépésben.",
+      "steps": [
+        {
+          "title": "Nyisd meg a Tervezési Beállításokat",
+          "description": "Navigálj a Tervezés oldalra a műszerfaladon. A hangsúlyos színválasztó középen található — azonnal látni fogod az összes elérhető lehetőséget."
+        },
+        {
+          "title": "Válaszd ki a Márkád Színét",
+          "description": "Válassz 12 előre összeállított színbeállítás közül, amelyek az olvashatóságra és hozzáférhetőségre lettek tervezve, vagy írd be a pontos hex kódodat a tökéletes márkakép érdekében."
+        },
+        {
+          "title": "Azonnali Előnézet",
+          "description": "A hangsúlyos színed a gombokra, linkekre és kiemelésekre vonatkozik az egész menüben. Mind világos, mind sötét témákban működik, és a változások azonnal megjelennek az élő menüden."
+        }
+      ]
+    }
+  },
+  "easyMenuPage": {
+    "seo": {
+      "title": "QR Menü Készítése Éttermének — Ingyenes Menü Készítő | IQ Rest",
+      "description": "Készítse el étterme digitális QR menüjét percek alatt. Adjon hozzá kategóriákat, ételeket, fényképeket, árakat — és osszon meg egy beolvasható QR kódot. Ingyenesen indulhat."
+    },
+    "hero": {
+      "badge": "Menü Készítő",
+      "title": "Készítsen Digitális QR Menüt Éttermének Percek Alatt",
+      "subtitle": "Adja hozzá a kategóriáit és ételeit, állítsa be az árakat, töltsön fel fényképeket — a QR menüje kész a megosztásra. Bármikor szerkeszthető, a változások azonnal megjelennek.",
+      "cta": "Hozza Létre Étlapját",
+      "ctaDemo": "Demó Megtekintése",
+      "noCreditCard": "Nem szükséges bankkártya. Ingyenes csomag elérhető."
+    },
+    "features": {
+      "title": "Hogyan Működik a Menüszerkesztő",
+      "subtitle": "Egyszerű eszközök, amelyekkel gyorsan online lesz a menüje.",
+      "items": [
+        {
+          "title": "Kategóriák és Ételek Hozzáadása",
+          "description": "Hozzon létre kategóriákat, mint Előételek, Főételek, Italok — majd adjon hozzá ételeket névvel, leírással, árakkal és fényképekkel. Húzza és ejtse az átrendezéshez. Kapcsoljon ki vagy be tételeket törlés nélkül."
+        },
+        {
+          "title": "A Változások Azonnal Érvénybe Lépnek",
+          "description": "Minden szerkesztés másodperceken belül megjelenik az élő QR menüben. Frissítsen egy árat, adjon hozzá napi ajánlatot, vagy rejtsen el egy elfogyott ételt — vendégei mindig a legfrissebb verziót látják."
+        }
+      ]
+    },
+    "faq": {
+      "title": "Gyakran Ismételt Kérdések",
+      "subtitle": "Minden, amit a QR menü készítéséről tudni kell.",
+      "items": [
+        {
+          "question": "Hogyan készítek QR menüt az éttermemnek?",
+          "answer": "Regisztráljon e-mail címével, nevezze el éttermét, és kezdje el hozzáadni a kategóriákat és ételeket. A QR menü automatikusan létrejön — nyomtassa ki a QR kódot és helyezze el az asztalokon."
+        },
+        {
+          "question": "Hozzáadhatok fényképeket az étlaphoz?",
+          "answer": "Igen. Töltsön fel fényképeket közvetlenül telefonjáról vagy számítógépéről. A képek automatikusan optimalizálódnak a gyors betöltéshez bármely eszközön."
+        },
+        {
+          "question": "Hány tételt adhatok hozzá?",
+          "answer": "Nincs korlát a kategóriák vagy menütételek számában. Adjon hozzá annyi ételt, amennyire szüksége van — a menü gyors és rendezett marad."
+        },
+        {
+          "question": "Ideiglenesen elrejthetek egy elfogyott ételt?",
+          "answer": "Igen. Egyetlen érintéssel kapcsoljon ki bármely tételt. Eltűnik a nyilvános menüből, de megmarad a vezérlőpulton — kapcsolja vissza, amikor kész."
+        }
+      ]
+    },
+    "howItWorks": {
+      "title": "Hogyan működik",
+      "subtitle": "Építsd fel és publikáld éttermed menüjét öt egyszerű lépésben.",
+      "steps": [
+        {
+          "title": "Kategóriák létrehozása",
+          "description": "Adj hozzá kategóriákat, mint például Előételek, Főételek, Desszertek és Italok, hogy rendszerezd a menüdet. Annyi kategóriát hozhatsz létre, amennyire szükséged van, és átrendezheted őket húzással és ejtéssel."
+        },
+        {
+          "title": "Menüelemek hozzáadása",
+          "description": "Add meg az étel nevét, leírását és árát minden egyes tételhez. Jelöld meg az allergéneket, ha szükséges — a vendégek automatikusan látni fogják az allergén ikonokat a menüben."
+        },
+        {
+          "title": "Fotók feltöltése vagy generálása",
+          "description": "Töltsd fel saját ételfotóidat a telefonodról vagy számítógépedről, vagy használd az AI-t, hogy professzionális ételfotót generálj az étel nevéből. A képek automatikusan optimalizálva vannak."
+        },
+        {
+          "title": "Rendezés húzással és ejtéssel",
+          "description": "Rendezd át a kategóriákat és tételeket úgy, hogy a helyükre húzod őket. Bármely tételt ki- vagy bekapcsolhatsz anélkül, hogy törölnéd — tökéletes napi ajánlatokhoz vagy elfogyott ételekhez."
+        },
+        {
+          "title": "Publikáld a menüdet",
+          "description": "A változások azonnal megjelennek az élő QR menüden. Nincs 'publikálás' gomb — minden szerkesztés valós időben élővé válik. Nyomtasd ki a QR kódodat, és helyezd el az asztalaidon."
+        }
+      ]
+    }
+  },
+  "aiTranslationPage": {
+    "seo": {
+      "title": "AI Menüfordítás Éttermeknek — QR Menü Fordítás | IQ Rest",
+      "description": "Fordítsa le étterme menüjét 25+ nyelvre egyetlen kattintással. Az AI érti a kulináris kontextust — ételnevek, leírások és kategóriák pontosan lefordítva."
+    },
+    "hero": {
+      "badge": "AI Fordítás",
+      "title": "Fordítsa Le Menüjét 25+ Nyelvre Egyetlen Kattintással",
+      "subtitle": "AI-nk érti az ételek kontextusát — az ételneveket, leírásokat és kategóriákat természetesen fordítja, nem szóról szóra. Érjen el minden turistát és nemzetközi vendéget.",
+      "cta": "Hozza Létre Étlapját",
+      "ctaDemo": "Demó Megtekintése",
+      "noCreditCard": "Nem szükséges bankkártya. Ingyenes csomag elérhető."
+    },
+    "features": {
+      "title": "Hogyan Működik az AI Fordítás",
+      "subtitle": "Az Ön nyelvéből a világ nyelvére másodpercek alatt.",
+      "items": [
+        {
+          "title": "Egyetlen Kattintással Fordítás a Teljes Menühöz",
+          "description": "Válassza ki a célnyelvet, érintse meg a fordítást, és a teljes menü — kategóriák, ételnevek, leírások — azonnal lefordítódik. Az AI megőrzi a kulináris kifejezéseket és természetesen adaptál minden nyelvhez."
+        },
+        {
+          "title": "Szerkessze és Finomítsa Bármely Fordítást",
+          "description": "Minden AI fordítás teljes mértékben szerkeszthető. Tekintse át az eredményt, módosítsa bármelyik megfogalmazást és mentse. A változtatásai megmaradnak, még ha a menü más részeit később újra lefordítja is."
+        }
+      ]
+    },
+    "faq": {
+      "title": "Gyakran Ismételt Kérdések",
+      "subtitle": "Minden, amit a menüfordításról tudni kell.",
+      "items": [
+        {
+          "question": "Mennyire pontos az AI fordítás étlapok esetében?",
+          "answer": "AI-nk éttermi tartalomra van optimalizálva. Megérti, hogy a 'Beef Wellington' vagy a 'Tiramisu' nem fordítható szó szerint, és a leírásokat minden nyelven természetesre adaptálja."
+        },
+        {
+          "question": "Milyen nyelvek támogatottak?",
+          "answer": "25+ nyelv, beleértve az angolt, spanyolt, franciát, németet, olaszt, portugált, kínait, japánt, koreait, arabot, oroszt és sok más európai és ázsiai nyelvet."
+        },
+        {
+          "question": "Lefordíthatok csak néhány tételt az egész menü helyett?",
+          "answer": "Igen. Fordíthat egyedi tételeket, teljes kategóriákat vagy az egész menüt egyszerre. Teljes mértékben Ön irányítja, mit fordít le."
+        },
+        {
+          "question": "Külön költségbe kerül fordításonként?",
+          "answer": "Az AI fordítás a Growth és Pro csomagokba nagylelkű havi keretekkel van beépítve. Nincs szavankénti vagy tételenkénti díj — fordítson annyit, amennyire szüksége van."
+        }
+      ]
+    },
+    "howItWorks": {
+      "title": "Hogyan működik",
+      "subtitle": "Fordítsa le az egész menüjét percek alatt, ne órák alatt.",
+      "steps": [
+        {
+          "title": "Nyelvek hozzáadása a menüjéhez",
+          "description": "Lépjen a Nyelvek oldalra a műszerfalán, és válassza ki, hogy mely nyelveket támogassa a menüje. Válasszon 35 elérhető nyelv közül, beleértve az összes főbb európai, ázsiai és közel-keleti nyelvet."
+        },
+        {
+          "title": "Kattintson a Fordításra",
+          "description": "Egy gomb megnyomásával egyszerre fordítja le az összes kategóriát, tétel nevét és leírását. Az egész menü másodpercek alatt feldolgozásra kerül, függetlenül attól, hogy hány tétel van."
+        },
+        {
+          "title": "Az AI érti az ételek kontextusát",
+          "description": "Az AI ismeri a kulináris terminológiát a különböző kultúrákban. Megőrzi az ételneveket, mint például 'Tiramisu' vagy 'Pad Thai', miközben természetesen alkalmazza a leírásokat, az összetevők listáját és a kategória neveket."
+        },
+        {
+          "title": "Felülvizsgálat és szerkesztés",
+          "description": "Minden fordítás teljes mértékben szerkeszthető. Igazítsa a megfogalmazást a stílusához. A manuális változtatásai megmaradnak, még akkor is, ha később újra lefordít más részeket a menüből."
+        },
+        {
+          "title": "Publikálja többnyelvű menüjét",
+          "description": "A vendégek nyelvválasztót látnak a menüjén, és a preferált nyelvükön böngészhetnek. Minden nyelv függetlenül be- vagy kikapcsolható a műszerfaláról."
+        }
+      ]
+    }
+  },
+  "mobileManagementPage": {
+    "seo": {
+      "title": "Kezelje Étterme Menüjét Telefonról — Mobil Vezérlőpult | IQ Rest",
+      "description": "Kezelje étterme QR menüjét teljes egészében telefonjáról. Adjon hozzá ételeket, frissítse az árakat, töltsön fel fényképeket, ellenőrizze az elemzéseket — számítógép nem szükséges."
+    },
+    "hero": {
+      "badge": "Mobil Vezérlőpult",
+      "title": "Kezelje Teljes Éttermi Menüjét a Telefonjáról",
+      "subtitle": "Adjon hozzá ételeket, változtasson árakat, töltsön fel fényképeket, ellenőrizze a rendeléseket — mindezt okostelefonjáról. A vezérlőpult mobil-első szemlélettel készült, soha nem kell számítógép.",
+      "cta": "Hozza Létre Étlapját",
+      "ctaDemo": "Demó Megtekintése",
+      "noCreditCard": "Nem szükséges bankkártya. Ingyenes csomag elérhető."
+    },
+    "features": {
+      "title": "Hogyan Működik a Mobil Kezelés",
+      "subtitle": "Az étterme vezérlőpultja mindig a zsebében.",
+      "items": [
+        {
+          "title": "Teljes Vezérlőpult az Okostelefonon",
+          "description": "Minden funkció tökéletesen működik a telefon képernyőjén — tételek hozzáadása, kategóriák szerkesztése, rendelések kezelése, elemzések ellenőrzése. A felület érintésre tervezett, nem csak átméretezve az asztalról."
+        },
+        {
+          "title": "Fényképek Feltöltése Közvetlenül a Kameráról",
+          "description": "Fényképezzen egy új ételt és töltse fel a menübe másodpercek alatt. A képek automatikusan optimalizálódnak. Frissítse a napi ajánlatot a konyhában állva."
+        }
+      ]
+    },
+    "faq": {
+      "title": "Gyakran Ismételt Kérdések",
+      "subtitle": "Minden, amit a mobil menükezelésről tudni kell.",
+      "items": [
+        {
+          "question": "Kell alkalmazást telepítenem?",
+          "answer": "Nem. A vezérlőpult a telefon böngészőjében működik — Safari, Chrome vagy bármely más. Jelentkezzen be és kezdje el a menü kezelését."
+        },
+        {
+          "question": "Mindent meg tudok csinálni a telefonomról, amit számítógépen?",
+          "answer": "Igen. Minden funkció elérhető mobilon — tételek hozzáadása, fényképek feltöltése, kategóriák kezelése, elemzések ellenőrzése, rendelések és foglalások kezelése."
+        },
+        {
+          "question": "Táblagépen is működik?",
+          "answer": "Igen. A vezérlőpult minden képernyőmérethez alkalmazkodik — telefonok, táblagépek és asztali számítógépek. Használja azt az eszközt, amelyik a legkényelmesebb."
+        },
+        {
+          "question": "Többen is kezelhetik a menüt?",
+          "answer": "Jelenleg egy fiók kezeli az éttermet. Egyszerre több eszközről is bejelentkezhet — telefonjáról, táblagépéről vagy számítógépéről."
+        }
+      ]
+    },
+    "howItWorks": {
+      "title": "Hogyan Működik",
+      "subtitle": "Kezelje éttermét bármilyen eszközről négy lépésben.",
+      "steps": [
+        {
+          "title": "Nyissa Meg a Munkafelületet a Telefonján",
+          "description": "Lépjen a iq-rest.com oldalra, és jelentkezzen be a telefonja böngészőjéből. A munkafelület automatikusan alkalmazkodik a képernyőméretéhez — nincs szükség alkalmazás letöltésére vagy telepítésére."
+        },
+        {
+          "title": "Szerkessze a Menüt Bárhol",
+          "description": "Adjon hozzá új tételeket, frissítse az árakat, változtassa meg a leírásokat, és töltsön fel fényképeket közvetlenül a telefonja kamerájából. Minden funkció, amely elérhető asztali gépen, ugyanolyan jól működik mobilon is."
+        },
+        {
+          "title": "Ellenőrizze a Rendelések és Foglalások Állapotát",
+          "description": "Nézze meg a beérkező rendeléseket, kezelje az asztalfoglalásokat, és válaszoljon a támogatási üzenetekre — mindezt a telefonjáról. Maradjon naprakész éttermével, még akkor is, ha távol van."
+        },
+        {
+          "title": "A Változtatások Azonnal Érvénybe lépnek",
+          "description": "Minden szerkesztés, amelyet a telefonján végez, valós időben megjelenik a QR menüjén. Nincs szükség szinkronizálásra, közzétételre vagy várakozásra — vendégei mindig a legfrissebb verziót látják."
+        }
+      ]
+    }
+  },
+  "customDesignPage": {
+    "seo": {
+      "title": "Éttermi Weboldal Videó és Fotó Háttérrel — Weboldal Készítő | IQ Rest",
+      "description": "Készítsen lenyűgöző éttermi weboldalt egyedi videó vagy fotó háttérrel. Töltse fel a hangulatos videóját vagy ételfotóját — lenyűgözi a vendégeket az első beolvasástól."
+    },
+    "hero": {
+      "badge": "Weboldal Dizájn",
+      "title": "Készítsen Lenyűgöző Éttermi Weboldalt Videó Háttérrel",
+      "subtitle": "Töltse fel az étterme hangulatos videóját vagy egy gyönyörű ételfotót háttérként. A vendégek professzionális, márkás élményt látnak, amint beolvassák a QR kódját.",
+      "cta": "Hozza Létre Étlapját",
+      "ctaDemo": "Demó Megtekintése",
+      "noCreditCard": "Nem szükséges bankkártya. Ingyenes csomag elérhető."
+    },
+    "features": {
+      "title": "Hogyan Működnek az Egyedi Hátterek",
+      "subtitle": "Maradandó első benyomás a márkájához illő vizuális elemekkel.",
+      "items": [
+        {
+          "title": "Videó vagy Fotó Hátterek Feltöltése",
+          "description": "Adjon hozzá egy ismétlődő videót az étterme hangulatáról, egy time-lapse-t a konyhájáról, vagy egy kiváló minőségű ételfotót. A háttér a főoldalon jelenik meg — magával ragadó élményt teremtve a vendégeknek."
+        },
+        {
+          "title": "Sebességre Optimalizálva Minden Eszközön",
+          "description": "A videók és képek automatikusan tömörítődnek és késleltetetten töltődnek. Weboldala még lassú mobil kapcsolatokon is gyors marad — nincs pufferelés, nincs késés, csak zökkenőmentes élmény."
+        }
+      ]
+    },
+    "faq": {
+      "title": "Gyakran Ismételt Kérdések",
+      "subtitle": "Minden, amit az éttermi weboldal dizájnról tudni kell.",
+      "items": [
+        {
+          "question": "Milyen videóformátumok támogatottak?",
+          "answer": "Az MP4 és WebM formátumok működnek a legjobban. A videók automatikusan tömörítődnek a gyors betöltéshez. A legjobb mobil élmény érdekében tartsa a videókat 30 másodperc alatt."
+        },
+        {
+          "question": "A videó háttér lelassítja a weboldalamat?",
+          "answer": "Nem. A videók tömörítettek, késleltetetten töltődnek és automatikusan optimalizáltak. Lassú kapcsolatokon a rendszer statikus képre vált a zökkenőmentes élmény érdekében."
+        },
+        {
+          "question": "Használhatok fotót videó helyett?",
+          "answer": "Igen. Töltsön fel bármilyen fotót — optimalizálódik és teljes képernyős háttérként jelenik meg. Bármikor válthat videó és fotó között."
+        },
+        {
+          "question": "Szükségem van dizájnerre a beállításhoz?",
+          "answer": "Nem. Csak töltse fel a videóját vagy fotóját a vezérlőpultról. A rendszer automatikusan kezeli a méretezést, tömörítést és elrendezést. Weboldala nulla dizájn tudással is professzionálisan néz ki."
+        }
+      ]
+    },
+    "howItWorks": {
+      "title": "Hogyan működik",
+      "subtitle": "Testreszabhatja étterme vizuális identitását négy lépésben.",
+      "steps": [
+        {
+          "title": "Nyissa meg a Tervezési Beállításokat",
+          "description": "Navigáljon a Tervezés oldalra a vezérlőpultján. Itt irányíthatja étterme vizuális megjelenését — háttér, kiemelő szín és kezdőlap elrendezés."
+        },
+        {
+          "title": "Töltsön fel egy Háttérképet",
+          "description": "Válasszon egy videót (MP4, WebM) vagy fényképet étterme kezdőlapjának háttérképeként. A videók automatikusan ismétlődnek, így lenyűgöző első benyomást keltenek minden látogató számára."
+        },
+        {
+          "title": "AI Háttérgenerálás",
+          "description": "Nincs kész videója vagy fényképe? Hagyja, hogy az AI automatikusan készítsen háttérképet az étlapján található ételekből. Professzionális vizuális megjelenést generál, amely illeszkedik étterme stílusához."
+        },
+        {
+          "title": "Előnézet és Mentés",
+          "description": "Nézze meg a változtatásait valós időben a mentés előtt. A videók automatikusan tömörítve vannak és késleltetve töltődnek be, biztosítva a gyors teljesítményt mobil eszközökön anélkül, hogy feláldoznák a vizuális minőséget."
+        }
+      ]
+    }
+  },
+  "multilingualPage": {
+    "seo": {
+      "title": "Többnyelvű Éttermi Weboldal — Menü 25+ Nyelven | IQ Rest",
+      "description": "Az étterme weboldala és QR menüje 25+ nyelven. A vendégek egyetlen érintéssel váltanak nyelvet — a menü, a kapcsolatok és a foglalások azonnal alkalmazkodnak."
+    },
+    "hero": {
+      "badge": "Többnyelvű",
+      "title": "Az Étterme Weboldala 25+ Nyelven",
+      "subtitle": "A turisták és nemzetközi vendégek a saját nyelvükön látják a menüt. Egyetlen érintéssel váltás — minden azonnal alkalmazkodik: ételek, leírások, kapcsolatok, navigáció.",
+      "cta": "Hozza Létre Étlapját",
+      "ctaDemo": "Demó Megtekintése",
+      "noCreditCard": "Nem szükséges bankkártya. Ingyenes csomag elérhető."
+    },
+    "features": {
+      "title": "Hogyan Működik a Többnyelvű Támogatás",
+      "subtitle": "Beszélje ügyfele nyelvét extra munka nélkül.",
+      "items": [
+        {
+          "title": "A Vendégek Kiválasztják a Nyelvüket",
+          "description": "Egy nyelvválasztó jelenik meg a menüben. A vendégek megérintik a kívánt nyelvet, és az egész weboldal — menü, leírások, kapcsolati információk, navigáció — azonnal vált. Nincs szükség oldal újratöltésre."
+        },
+        {
+          "title": "Nyelvek Hozzáadása a Vezérlőpultról",
+          "description": "Új nyelvek engedélyezése egyetlen kattintással. Használja az AI fordítást a tartalom kitöltéséhez, vagy adja meg a fordításokat manuálisan. Minden nyelv önállóan ki- és bekapcsolható."
+        }
+      ]
+    },
+    "faq": {
+      "title": "Gyakran Ismételt Kérdések",
+      "subtitle": "Minden, amit a többnyelvű menükről tudni kell.",
+      "items": [
+        {
+          "question": "Hány nyelvet adhatok a menühöz?",
+          "answer": "25+ nyelv, beleértve az összes fő európai nyelvet, kínait, japánt, koreait, arabot, fársit és még sok mást. Adjon hozzá annyit, amennyire vendégeinek szüksége van."
+        },
+        {
+          "question": "Mindent manuálisan kell lefordítanom?",
+          "answer": "Nem. Használja a beépített AI fordítást a teljes menü lefordításához egyetlen kattintással. Bármely fordítást manuálisan is szerkesztheti a teljes kontroll érdekében."
+        },
+        {
+          "question": "Mentésre kerül a nyelvi preferencia?",
+          "answer": "Igen. Amikor egy vendég nyelvet választ, az megjegyzésre kerül a következő látogatásra. Nem kell újra választaniuk, amikor visszatérnek."
+        },
+        {
+          "question": "Elérhető a többnyelvű támogatás az ingyenes csomagon?",
+          "answer": "Az ingyenes csomag legfeljebb 2 nyelvet tartalmaz. A Growth és Pro csomagok korlátlan nyelvet kínálnak AI fordítással együtt."
+        }
+      ]
+    },
+    "howItWorks": {
+      "title": "Hogyan működik",
+      "subtitle": "Tedd elérhetővé az étlapodat több nyelven négy lépésben.",
+      "steps": [
+        {
+          "title": "Menj a Nyelvi Beállításokhoz",
+          "description": "Nyisd meg a Nyelvek oldalt a műszerfaladon. Látni fogod az összes elérhető nyelvet, és hogy melyek aktívak jelenleg az étlapodon."
+        },
+        {
+          "title": "Nyelvek hozzáadása",
+          "description": "Válassz az elérhető 35 nyelvből. A ingyenes csomag legfeljebb 2 nyelvet tartalmaz, míg az Alap és Prémium csomagok korlátlan nyelvet kínálnak az étlapodhoz."
+        },
+        {
+          "title": "Tartalom Fordítása",
+          "description": "Használj egygombos AI fordítást az egész étlapod azonnali lefordításához, vagy írd be a fordításokat manuálisan a teljes ellenőrzés érdekében. A két megközelítést is kombinálhatod."
+        },
+        {
+          "title": "A Vendégek Nyelvet Válthatnak",
+          "description": "Egy nyelvválasztó jelenik meg az étlapodon. Amikor a vendégek kiválasztják a nyelvüket, az egész étlap azonnal átvált. Az ő preferenciájuk elmentésre kerül a visszatérő látogatásokhoz."
+        }
+      ]
+    }
+  },
+  "instantSetupPage": {
+    "seo": {
+      "title": "Ingyenes Éttermi Weboldal Készítő — Készítse El 5 Perc Alatt | IQ Rest",
+      "description": "Szerezzen professzionális éttermi weboldalt QR menüvel, kapcsolat oldallal és térképpel — csak adja meg e-mail címét. 5 perc alatt kész, technikai tudás nem szükséges."
+    },
+    "hero": {
+      "badge": "Ingyenes Weboldal",
+      "title": "Szerezzen Professzionális Éttermi Weboldalt 5 Perc Alatt",
+      "subtitle": "Adja meg e-mail címét, nevezze el éttermét, és azonnal kap egy komplett weboldalt QR menüvel, térképes kapcsolat oldallal és modern reszponzív dizájnnal. Kódolás és dizájner nélkül.",
+      "cta": "Hozza Létre Étlapját",
+      "ctaDemo": "Demó Megtekintése",
+      "noCreditCard": "Nem szükséges bankkártya. Ingyenes csomag elérhető."
+    },
+    "features": {
+      "title": "Hogyan Működik",
+      "subtitle": "A nulláról az élő éttermi weboldalig három lépésben.",
+      "items": [
+        {
+          "title": "Regisztráljon Csak E-mail Címével",
+          "description": "Nincs bonyolult regisztrációs űrlap. Adja meg e-mail címét, igazolja kóddal, és az étterme vezérlőpultja kész. Nevezze el éttermét, és weboldala azonnal elindul."
+        },
+        {
+          "title": "Minden Benne Van Alapból",
+          "description": "Weboldala tartalmazza a QR menüt, Google Térképes kapcsolat oldalt, nyelvi támogatást, mobilra optimalizált dizájnt és saját egyedi URL-t. Csak adja hozzá az ételeit és kezdje el a megosztást."
+        }
+      ]
+    },
+    "faq": {
+      "title": "Gyakran Ismételt Kérdések",
+      "subtitle": "Minden, amit az éttermi weboldal készítéséről tudni kell.",
+      "items": [
+        {
+          "question": "Hogyan hozzak létre ingyenes éttermi weboldalt?",
+          "answer": "Adja meg e-mail címét az IQ Rest-en, igazolja kóddal, nevezze el éttermét — kész. QR menüs weboldala 5 percen belül él. Bankkártya nem szükséges."
+        },
+        {
+          "question": "Szükségem van technikai tudásra?",
+          "answer": "Nem. Minden étteremtulajdonosoknak készült, nem fejlesztőknek. Adjon hozzá ételeket, töltsön fel fényképeket, és kezelje oldalát teljesen a telefonjáról."
+        },
+        {
+          "question": "Mit tartalmaz az ingyenes csomag?",
+          "answer": "Teljes éttermi weboldal, QR menü, térképes kapcsolat oldal, elemzések, egyedi színséma és legfeljebb 2 nyelv. Nincs próbaidőszak — örökre ingyenes."
+        },
+        {
+          "question": "Használhatok saját domain nevet?",
+          "answer": "Az ingyenes és Growth csomagon az oldala az iq-rest.com/m/az-on-neve címen van. A Pro csomag egyedi domain neveket támogat a teljes márka kontroll érdekében."
+        }
+      ]
+    },
+    "howItWorks": {
+      "title": "Hogyan Működik",
+      "subtitle": "Négy lépésben egy élő étterem weboldalához.",
+      "steps": [
+        {
+          "title": "Add meg az Email címed",
+          "description": "Nincs szükség jelszóra. Csak írd be az email címed és kattints a Tovább gombra. Nincsenek hosszú regisztrációs űrlapok, nincs szükség bankkártyára, és nincsenek kötelezettségek."
+        },
+        {
+          "title": "Ellenőrizd a Kódot",
+          "description": "Nézd meg a beérkező leveleid között a 4 számjegyű ellenőrző kódot. Írd be, hogy biztonságosan bejelentkezhess. Ez a jelszó nélküli megközelítés egy dologgal kevesebb, amire emlékezned kell."
+        },
+        {
+          "title": "Nevezd el az Éttermed",
+          "description": "Adj nevet az éttermednek. Ez lesz a weboldalad URL-je és a menü címe. Később bármikor megváltoztathatod a vezérlőpult beállításaiból."
+        },
+        {
+          "title": "A Weboldalad Készen Áll",
+          "description": "Egy teljes étterem weboldal QR menüvel, térképes kapcsolat oldallal és reszponzív dizájnnal azonnal elérhető az iq-rest.com/m/your-name címen. Add hozzá az ételeidet és kezdd el megosztani."
+        }
+      ]
+    }
+  },
+  "analyticsPage": {
+    "seo": {
+      "title": "Éttermi Analitika és QR Menü Statisztikák — Kövesse Nyomon a Látogatókat | IQ Rest",
+      "description": "Kövesse nyomon QR menüje beolvasásait, oldalmegtekintéseit, népszerű nyelveit és látogatói trendjeit. Valós idejű analitikai vezérlőpult éttermi weboldalához."
+    },
+    "hero": {
+      "badge": "Analitika",
+      "title": "Pontosan Lássa, Hogyan Használják Vendégei a QR Menüt",
+      "subtitle": "Kövesse nyomon a napi beolvasásokat, oldalmegtekintéseket, népszerű nyelveket, eszközstatisztikákat és trendeket az idő múlásával. Hozzon adatvezérelt döntéseket menüje optimalizálásához és vállalkozása növeléséhez.",
+      "cta": "Készítse El Menüjét",
+      "ctaDemo": "Demó Megtekintése",
+      "noCreditCard": "Nincs szükség bankkártyára. Ingyenes csomag elérhető."
+    },
+    "features": {
+      "title": "Mit Követhet Nyomon",
+      "subtitle": "Valós idejű betekintés étterme online jelenlétébe.",
+      "items": [
+        {
+          "title": "Napi Megtekintések, Beolvasások és Látogatói Trendek",
+          "description": "Lássa, hány ember olvassa be QR kódját és látogatja meg menüjét minden nap, héten és hónapban. Kövesse nyomon a trendeket az idő múlásával, hogy megértse a szezonális mintákat és mérje a promóciók hatását."
+        },
+        {
+          "title": "Nyelvi és Eszköz Bontás",
+          "description": "Tudja meg, milyen nyelveket preferálnak vendégei és milyen eszközöket használnak. Ezek az adatok segítenek prioritást adni a fordításoknak, és biztosítani, hogy menüje tökéletesen nézzen ki a legnépszerűbb eszközökön."
+        }
+      ]
+    },
+    "faq": {
+      "title": "Gyakran Ismételt Kérdések",
+      "subtitle": "Minden, amit az éttermi analitikáról tudni kell.",
+      "items": [
+        {
+          "question": "Milyen mutatókat követhetek nyomon?",
+          "answer": "Napi, heti és havi oldalmegtekintések. Egyedi látogatók. Legtöbbet megtekintett oldalak. Nyelvi preferenciák. Eszköz- és böngészőbontás. Minden valós időben frissül."
+        },
+        {
+          "question": "Az analitika benne van az ingyenes csomagban?",
+          "answer": "Igen. Az alapvető analitika minden csomagban elérhető, beleértve az ingyenest is. Az első naptól láthatja a megtekintéseket, látogatókat és nyelvi statisztikákat."
+        },
+        {
+          "question": "Láthatom, melyek a legnépszerűbb oldalak?",
+          "answer": "Igen. A vezérlőpult oldalankénti bontásban mutatja a megtekintéseket — főoldal, menü, kapcsolat, foglalások és nyelvválasztás. Pontosan lássa, hol töltik vendégei az idejüket."
+        },
+        {
+          "question": "Milyen messzire nyúlnak vissza az adatok?",
+          "answer": "Az analitikai adatok az étterme létrehozásának napjától vannak tárolva. Napi, heti és havi trendeket tekinthet meg a teljes előzményeire vonatkozóan."
+        }
+      ]
+    },
+    "howItWorks": {
+      "title": "Hogyan Működik",
+      "subtitle": "Kezdje el nyomon követni étterme teljesítményét négy lépésben.",
+      "steps": [
+        {
+          "title": "Hozza Létre Éttermét",
+          "description": "Az elemzések attól a pillanattól kezdve nyomon követik a teljesítményt, amikor az étlapja élővé válik. Nincs mit konfigurálni — minden oldalmegtekintés, QR-szkennelés és látogató automatikusan rögzítésre kerül."
+        },
+        {
+          "title": "Ossza Meg QR Kódját",
+          "description": "Nyomtassa ki QR kódját, és helyezze el az asztalokon, a bejáratnál vagy a házhoz szállító csomagoláson. Minden szkennelés rögzítésre kerül időbélyeggel, nyelvvel, eszközzel és meglátogatott oldallal."
+        },
+        {
+          "title": "Nyissa Meg az Elemzési Műszerfalat",
+          "description": "Nézze meg a napi, heti és havi statisztikákat világos diagramokkal. Kövesse nyomon a teljes megtekintéseket, egyedi látogatókat és az időbeli trendeket egyetlen műszerfal képernyőről."
+        },
+        {
+          "title": "Fedezze Fel a Részletes Elemzéseket",
+          "description": "Tekintse meg a statisztikákat oldalonként (étlap, kapcsolatok, foglalások), preferált nyelv, eszköztípus és böngésző szerint. Használja ezeket az adatokat az étlap optimalizálására és a fordítások priorizálására."
+        }
+      ]
+    }
+  },
+  "aiImagesPage": {
+    "seo": {
+      "title": "MI Ételfotó Generálás Menükhöz — Éttermi Menü Képek | IQ Rest",
+      "description": "Generáljon gyönyörű ételfotókat menüjéhez MI segítségével. Nincs szükség fotósra — másodpercek alatt kapjon professzionális ételképeket, QR menüjéhez optimalizálva."
+    },
+    "hero": {
+      "badge": "MI Képek",
+      "title": "Professzionális Menüfotók Fotós Nélkül",
+      "subtitle": "Generáljon lenyűgöző ételképeket MI segítségével. Csak adja meg az étel nevét, és kapjon egy gyönyörű, optimalizált fotót QR menüjéhez — másodpercek alatt.",
+      "cta": "Készítse El Menüjét",
+      "ctaDemo": "Demó Megtekintése",
+      "noCreditCard": "Nincs szükség bankkártyára. Ingyenes csomag elérhető."
+    },
+    "features": {
+      "title": "Hogyan Működik az MI Képgenerálás",
+      "subtitle": "Az étel nevétől a professzionális fotóig egyetlen kattintással.",
+      "items": [
+        {
+          "title": "Képek Generálása Ételnevekből",
+          "description": "Írja be az étel nevét — 'Grillezett Lazac Citrommal', 'Margherita Pizza', 'Csokoládé Láva Torta' — és az MI professzionális ételfotót generál. Válasszon több stílus és háttér közül."
+        },
+        {
+          "title": "Gyors Betöltésre Optimalizálva",
+          "description": "Minden generált kép automatikusan tömörítve és modern formátumba konvertálva lesz. Menüje villámgyorsan töltődik be bármely eszközön, még akkor is, ha minden ételnél van fotó."
+        }
+      ]
+    },
+    "faq": {
+      "title": "Gyakran Ismételt Kérdések",
+      "subtitle": "Minden, amit az MI menüképekről tudni kell.",
+      "items": [
+        {
+          "question": "Hogyan generálok ételfotót?",
+          "answer": "Nyissa meg bármelyik menüelemet a vezérlőpulton, érintse meg a 'Kép Generálása' gombot, és az MI professzionális ételfotót készít az étel neve és leírása alapján. Válassza ki a tetszőt."
+        },
+        {
+          "question": "Használhatom a saját fotóimat helyette?",
+          "answer": "Természetesen. Töltse fel saját fotóit telefonjáról vagy számítógépéről. Az MI generálás opcionális — használja, amikor nincs kész fotója."
+        },
+        {
+          "question": "Hány képet generálhatok?",
+          "answer": "A képgenerálási korlátok a csomagjától függenek. A Growth havi keretet tartalmaz, a Pro pedig magasabb limitet kínál. Saját fotóit mindig korlátlanul feltöltheti."
+        },
+        {
+          "question": "A generált képek egyediek az éttermem számára?",
+          "answer": "Igen. Minden kép egyedileg generálódik az adott ételéhez. Nincsenek stock fotók — minden kép frissen készül a menüelem alapján."
+        }
+      ]
+    },
+    "howItWorks": {
+      "title": "Hogyan működik",
+      "subtitle": "Szerezz professzionális ételfotókat az étlapodhoz négy egyszerű lépésben.",
+      "steps": [
+        {
+          "title": "Nyisd meg bármelyik étlap elemet",
+          "description": "Navigálj ahhoz az elemhez, amelyhez fotót szeretnél a műszerfaladon. Képes vagy új ételekhez képeket generálni, vagy meglévő fotókat cserélni bármelyik étlap elemen."
+        },
+        {
+          "title": "Kattints a Kép Generálása gombra",
+          "description": "Az AI egy professzionális ételfotót készít az étel neve és leírása alapján. Minél részletesebb információt adsz meg a leírásban, annál pontosabb lesz az eredmény."
+        },
+        {
+          "title": "Ellenőrizd az eredményt",
+          "description": "Tekintsd meg a generált képet, mielőtt alkalmaznád. Ha más megjelenést szeretnél, regenerálj, hogy új változatot kapj. Minden generálás egyedi képet eredményez."
+        },
+        {
+          "title": "Használj az étlapodon",
+          "description": "A kép automatikusan optimalizálva van, WebP formátumba tömörítve, és azonnal megjelenik az élő étlapodon. A vendégek professzionális ételfotókat látnak minden ételen."
+        }
+      ]
+    }
+  },
+  "personalSupportPage": {
+    "seo": {
+      "title": "Személyes Támogatás az Éttermi Weboldaladhoz — Valódi Emberi Segítség | IQ Rest",
+      "description": "Kapj személyes segítséget valódi emberektől, nem chatbotoktól. Beállítási segítség, menü optimalizálási tippek és gyors válaszok — minden csomagban elérhető, beleértve az ingyenest is."
+    },
+    "hero": {
+      "badge": "Személyes Támogatás",
+      "title": "Valódi emberek, valódi segítség — nem chatbotok",
+      "subtitle": "Van kérdésed? Segítségre van szükséged a menü beállításához? Szeretnél egy új funkciót javasolni? Írj nekünk közvetlenül, és kapj személyes választ valakitől, aki érti az éttermeket.",
+      "cta": "Hozd létre a menüdet",
+      "ctaDemo": "Demó megtekintése",
+      "noCreditCard": "Bankkártya nem szükséges. Ingyenes csomag elérhető."
+    },
+    "features": {
+      "title": "Hogyan működik a támogatás",
+      "subtitle": "Segítség, amikor szükséged van rá, emberektől, akik törődnek.",
+      "items": [
+        {
+          "title": "Írj nekünk közvetlenül a vezérlőpultodból",
+          "description": "Nyisd meg a támogatási csevegést a vezérlőpultodon, és írd le a kérdésedet. Egy valódi ember olvassa el az üzenetedet és válaszol — általában néhány órán belül munkanapokon."
+        },
+        {
+          "title": "Segítség a beállításhoz, optimalizáláshoz és még tovább",
+          "description": "Akár az első étel hozzáadásához kell segítség, akár tanácsot szeretnél a menü szervezéséhez, akár egy új funkciót szeretnél javasolni — itt vagyunk. Minden kérdés számít, bármilyen kicsi is."
+        }
+      ]
+    },
+    "faq": {
+      "title": "Gyakran Ismételt Kérdések",
+      "subtitle": "Minden, amit a támogatásunkról tudnod kell.",
+      "items": [
+        {
+          "question": "Elérhető a támogatás az ingyenes csomagban?",
+          "answer": "Igen. A személyes támogatás minden csomagban elérhető, beleértve az ingyenest is. Hisszük, hogy minden étterem megérdemli a valódi segítséget, előfizetéstől függetlenül."
+        },
+        {
+          "question": "Milyen gyorsan válaszoltok?",
+          "answer": "Általában néhány órán belül munkanapokon. Minden üzenetet személyesen olvasunk el, és arra törekszünk, hogy a kérdésedet egyetlen válaszban megoldjuk."
+        },
+        {
+          "question": "Tudtok segíteni a menüm beállításában?",
+          "answer": "Természetesen. Ha segítségre van szükséged ételek hozzáadásához, kategóriák szervezéséhez, fordítások beállításához vagy foglalások konfigurálásához — csak kérdezz. Szívesen végigvezetünk mindenen."
+        },
+        {
+          "question": "Javasolhatok új funkciókat?",
+          "answer": "Igen, és imádjuk! Sok funkciónk felhasználói javaslatokból indult el. Írd meg nekünk az ötletedet, és figyelembe vesszük a jövőbeli frissítéseknél."
+        }
+      ]
+    },
+    "howItWorks": {
+      "title": "Hogyan Működik",
+      "subtitle": "Segítséget kérhetsz egy valós személytől négy egyszerű lépésben.",
+      "steps": [
+        {
+          "title": "Nyisd meg a Támogatási Csevegést",
+          "description": "Lépj a Támogatás oldalra a vezérlőpultodon. Egy egyszerű csevegőfelületet látsz, ahol közvetlenül beírhatod az üzenetedet — nincsenek jegyformák vagy kategóriák, amik közül választhatsz."
+        },
+        {
+          "title": "Írd le a Kérdésed",
+          "description": "Írd be az üzenetedet. Kérdezz a beállításról, funkciókról, menüoptimalizálásról, számlázásról vagy bármi másról. Nincsenek buta kérdések — szívesen segítünk mindenben."
+        },
+        {
+          "title": "Kapj Személyre Szabott Választ",
+          "description": "Egy valós személy (nem chatbot) elolvassa az üzenetedet és órákon belül válaszol. Értjük az étterem munkafolyamatait, és gyakorlati, végrehajtható válaszokat adunk."
+        },
+        {
+          "title": "Folyamatos Segítség",
+          "description": "Kérj funkciójavaslatokat, szerezz menüoptimalizálási tippeket, vagy kérj segítséget a beállításokhoz bármikor. A beszélgetésed története el van mentve, így mindig van kontextus a korábbi kérdésekből."
+        }
+      ]
+    }
   }
 }
