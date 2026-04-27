@@ -44,16 +44,17 @@ export async function POST(request: NextRequest) {
     }
 
     const body = await request.json();
-    const { name, description, categoryName, accentColor, sourceImageUrl } = body as {
-      name: string;
+    const { name, description, categoryName, accentColor, sourceImageUrl, prompt: userPrompt } = body as {
+      name?: string;
       description?: string;
       categoryName?: string;
       accentColor?: string;
       sourceImageUrl?: string;
+      prompt?: string;
     };
 
-    if (!name?.trim()) {
-      return NextResponse.json({ error: "Name is required" }, { status: 400 });
+    if (!userPrompt?.trim() && !name?.trim()) {
+      return NextResponse.json({ error: "Name or prompt is required" }, { status: 400 });
     }
 
     const categoryLine = categoryName?.trim() ? `Category: ${categoryName.trim()}.` : "";
@@ -134,18 +135,29 @@ export async function POST(request: NextRequest) {
       // Generate from scratch
       const colorLine = accentColor ? `Accent color ${accentColor} subtly in plate rim or garnish.` : "";
 
-      const prompt = [
-        `Professional food photograph of "${name.trim()}".`,
-        categoryLine,
-        descLine,
-        "Top-down 45-degree angle on a clean minimalist surface.",
-        colorLine,
-        "Leave generous padding around the dish and plate — neither the food nor the plate should touch or be cropped by the edges of the image.",
-        "Soft diffused studio lighting. No text, no watermarks, no hands.",
-        "High-end restaurant menu style, appetizing presentation.",
-      ]
-        .filter(Boolean)
-        .join("\n");
+      const prompt = userPrompt?.trim()
+        ? [
+            userPrompt.trim(),
+            "Top-down 45-degree angle on a clean minimalist surface.",
+            colorLine,
+            "Leave generous padding around the dish and plate — neither the food nor the plate should touch or be cropped by the edges of the image.",
+            "Soft diffused studio lighting. No text, no watermarks, no hands.",
+            "High-end restaurant menu style, appetizing presentation.",
+          ]
+            .filter(Boolean)
+            .join("\n")
+        : [
+            `Professional food photograph of "${name!.trim()}".`,
+            categoryLine,
+            descLine,
+            "Top-down 45-degree angle on a clean minimalist surface.",
+            colorLine,
+            "Leave generous padding around the dish and plate — neither the food nor the plate should touch or be cropped by the edges of the image.",
+            "Soft diffused studio lighting. No text, no watermarks, no hands.",
+            "High-end restaurant menu style, appetizing presentation.",
+          ]
+            .filter(Boolean)
+            .join("\n");
 
       const geminiRes = await fetch(
         `https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-image-preview:generateContent`,

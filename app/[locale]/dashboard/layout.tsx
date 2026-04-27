@@ -16,77 +16,77 @@ import type { ApiRestaurant } from "./_v2/api";
 // (top + bottom nav, restaurant context) around child routes.
 
 export default async function DashboardLayout({
-  children,
+ children,
 }: {
-  children: React.ReactNode;
+ children: React.ReactNode;
 }) {
-  const auth = await getUserWithCompany();
+ const auth = await getUserWithCompany();
 
-  if (!auth) {
-    const locale = await getLocale();
-    redirect(`/${locale}/login`);
-  }
+ if (!auth) {
+ const locale = await getLocale();
+ redirect(`/${locale}/login`);
+ }
 
-  const companyId = auth.companyId;
+ const companyId = auth.companyId;
 
-  let restaurant = await prisma.restaurant.findFirst({ where: { companyId } });
+ let restaurant = await prisma.restaurant.findFirst({ where: { companyId } });
 
-  if (!restaurant) {
-    const cookieStore = await cookies();
-    const currentEmailForCheck = cookieStore.get("user_email")?.value;
-    const isAnonCheck = currentEmailForCheck ? isAnonymousEmail(currentEmailForCheck) : false;
+ if (!restaurant) {
+ const cookieStore = await cookies();
+ const currentEmailForCheck = cookieStore.get("user_email")?.value;
+ const isAnonCheck = currentEmailForCheck ? isAnonymousEmail(currentEmailForCheck) : false;
 
-    const company = await prisma.company.findUnique({
-      where: { id: companyId },
-      select: { onboardingStep: true },
-    });
+ const company = await prisma.company.findUnique({
+ where: { id: companyId },
+ select: { onboardingStep: true },
+ });
 
-    if (!isAnonCheck && company && company.onboardingStep < 3) {
-      const locale = await getLocale();
-      redirect(`/${locale}/onboarding`);
-    }
+ if (!isAnonCheck && company && company.onboardingStep < 3) {
+ const locale = await getLocale();
+ redirect(`/${locale}/onboarding`);
+ }
 
-    const userLocale = (await getLocale()) as Locale;
-    const currency = cookieStore.get("currency")?.value || "EUR";
-    const geoCountry = cookieStore.get("geo_country")?.value || null;
-    const countryCoords = getCoordinatesByCountry(geoCountry);
-    const center = countryCoords || COUNTRY_CENTERS[userLocale];
-    const slug = await generateUniqueSlug(Math.random().toString(36).substring(2, 10));
-    const initialBackground = getPublicUrl(s3Key("background_initial.webp"));
+ const userLocale = (await getLocale()) as Locale;
+ const currency = cookieStore.get("currency")?.value || "EUR";
+ const geoCountry = cookieStore.get("geo_country")?.value || null;
+ const countryCoords = getCoordinatesByCountry(geoCountry);
+ const center = countryCoords || COUNTRY_CENTERS[userLocale];
+ const slug = await generateUniqueSlug(Math.random().toString(36).substring(2, 10));
+ const initialBackground = getPublicUrl(s3Key("background_initial.webp"));
 
-    restaurant = await prisma.$transaction(async (tx) => {
-      const created = await tx.restaurant.create({
-        data: {
-          title: "",
-          slug,
-          currency,
-          source: initialBackground,
-          accentColor: "#000000",
-          languages: [userLocale],
-          defaultLanguage: userLocale,
-          x: center?.lng?.toString() || null,
-          y: center?.lat?.toString() || null,
-          companyId,
-          startedFromScratch: true,
-        },
-      });
-      await tx.category.create({
-        data: {
-          name: "General",
-          sortOrder: 0,
-          companyId,
-        },
-      });
-      return created;
-    });
-  }
+ restaurant = await prisma.$transaction(async (tx) => {
+ const created = await tx.restaurant.create({
+ data: {
+ title: "",
+ slug,
+ currency,
+ source: initialBackground,
+ accentColor: "#000000",
+ languages: [userLocale],
+ defaultLanguage: userLocale,
+ x: center?.lng?.toString() || null,
+ y: center?.lat?.toString() || null,
+ companyId,
+ startedFromScratch: true,
+ },
+ });
+ await tx.category.create({
+ data: {
+ name: "General",
+ sortOrder: 0,
+ companyId,
+ },
+ });
+ return created;
+ });
+ }
 
-  // Serialize Decimal/Date for the client boundary.
-  const apiRestaurant: ApiRestaurant = {
-    ...restaurant,
-    languages: restaurant.languages,
-  };
-  const uiRestaurant = apiRestaurantToRestaurant(apiRestaurant);
+ // Serialize Decimal/Date for the client boundary.
+ const apiRestaurant: ApiRestaurant = {
+ ...restaurant,
+ languages: restaurant.languages,
+ };
+ const uiRestaurant = apiRestaurantToRestaurant(apiRestaurant);
 
-  return <DashboardChrome restaurant={uiRestaurant}>{children}</DashboardChrome>;
+ return <DashboardChrome restaurant={uiRestaurant}>{children}</DashboardChrome>;
 }

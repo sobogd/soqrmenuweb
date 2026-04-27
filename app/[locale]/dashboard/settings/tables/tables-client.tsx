@@ -7,29 +7,29 @@ import { useRestaurant } from "../../_v2/restaurant-context";
 import type { Booking, Order, TableEntity } from "../../_v2/types";
 
 export function TablesSettingsClient({
-  initialTables,
-  initialBookings,
-  initialOrders,
+ initialTables,
+ initialBookings,
+ initialOrders,
 }: {
-  initialTables: TableEntity[];
-  initialBookings: Booking[];
-  initialOrders: Order[];
+ initialTables: TableEntity[];
+ initialBookings: Booking[];
+ initialOrders: Order[];
 }) {
-  const router = useRouter();
-  const restaurant = useRestaurant();
-  const [tables, setTables] = useState<TableEntity[]>(initialTables);
+ const router = useRouter();
+ const restaurant = useRestaurant();
+ const [tables, setTables] = useState<TableEntity[]>(initialTables);
 
-  return (
-    <TablesPage
-      tables={tables}
-      setTables={setTables}
-      orders={initialOrders}
-      bookings={initialBookings}
-      menuUrl={restaurant.menuUrl}
-      onBack={() => {
-        router.push("/dashboard/settings");
-        router.refresh();
-      }}
-    />
-  );
+ return (
+ <TablesPage
+ tables={tables}
+ setTables={setTables}
+ orders={initialOrders}
+ bookings={initialBookings}
+ menuUrl={restaurant.menuUrl}
+ onBack={() => {
+ router.push("/dashboard/settings");
+ router.refresh();
+ }}
+ />
+ );
 }

@@ -1,0 +1,272 @@
+"use client";
+
+import { useEffect, useState } from "react";
+import { EmptyState, PageHeader } from "../_v2/ui";
+import { DashboardEvent, track } from "@/lib/dashboard-events";
+
+interface Stats {
+ period: string;
+ totalScans: number;
+ totalViews: number;
+ avgPagesPerSession: number;
+ returningScans: number;
+ byDay: { day: string; views: number; scans: number }[];
+ byLanguage: { language: string; scans: number; views: number }[];
+ byPage: { page: string; views: number; sessions: number }[];
+ monthlyScans: number;
+ plan: string | null;
+ scanLimit: number | null;
+}
+
+const PERIODS: { id: string; label: string }[] = [
+ { id: "today", label: "Today" },
+ { id: "7d", label: "7 days" },
+ { id: "30d", label: "30 days" },
+ { id: "90d", label: "90 days" },
+];
+
+const PAGE_LABELS: Record<string, string> = {
+ home: "Home",
+ language: "Language picker",
+ contacts: "Contacts",
+ menu: "Menu",
+};
+
+export function AnalyticsClient() {
+ const [period, setPeriod] = useState("7d");
+ const [stats, setStats] = useState<Stats | null>(null);
+ const [loading, setLoading] = useState(true);
+
+ useEffect(() => {
+ track(DashboardEvent.SHOWED_ANALYTICS);
+ }, []);
+
+ useEffect(() => {
+ let cancelled = false;
+ setLoading(true);
+ fetch(`/api/analytics/stats?period=${period}`, { cache: "no-store" })
+ .then((r) => (r.ok ? r.json() : null))
+ .then((data) => {
+ if (!cancelled) {
+ setStats(data);
+ setLoading(false);
+ }
+ })
+ .catch(() => {
+ track(DashboardEvent.ERROR_FETCH);
+ if (!cancelled) setLoading(false);
+ });
+ return () => {
+ cancelled = true;
+ };
+ }, [period]);
+
+ return (
+ <div className="max-w-2xl mx-auto">
+ <PageHeader
+ title="Analytics"
+ subtitle="Scans, views, and language usage."
+ />
+
+ <div className="flex flex-wrap gap-1.5 mb-5">
+ {PERIODS.map((p) => (
+ <button
+ key={p.id}
+ type="button"
+ onClick={() => {
+ track(DashboardEvent.CHANGED_ANALYTICS_PERIOD, { period: p.id });
+ setPeriod(p.id);
+ }}
+ className={
+ "h-8 px-3 text-xs font-medium rounded-full transition-colors " +
+ (period === p.id
+ ? "bg-foreground text-background"
+ : "bg-secondary text-foreground")
+ }
+ >
+ {p.label}
+ </button>
+ ))}
+ </div>
+
+ {loading && !stats ? (
+ <SkeletonGrid />
+ ) : !stats || stats.totalViews === 0 ? (
+ <EmptyState
+ title="No data yet"
+ subtitle="Once guests scan your menu, traffic and engagement metrics will appear here."
+ />
+ ) : (
+ <div className="space-y-4">
+ <KpiGrid stats={stats} />
+ <DayChart byDay={stats.byDay} />
+ <LanguageBreakdown byLanguage={stats.byLanguage} />
+ <PageBreakdown byPage={stats.byPage} />
+ {stats.scanLimit !== null ? <LimitCard stats={stats} /> : null}
+ </div>
+ )}
+ </div>
+ );
+}
+
+function KpiGrid({ stats }: { stats: Stats }) {
+ const items = [
+ { label: "Scans", value: stats.totalScans },
+ { label: "Page views", value: stats.totalViews },
+ { label: "Pages / scan", value: stats.avgPagesPerSession.toFixed(1) },
+ { label: "Returning", value: stats.returningScans },
+ ];
+ return (
+ <div className="grid grid-cols-2 md:grid-cols-4 gap-2.5">
+ {items.map((i) => (
+ <div
+ key={i.label}
+ className="bg-card border border-border rounded-2xl p-4"
+ >
+ <div className="text-xs text-muted-foreground">{i.label}</div>
+ <div className="text-2xl font-medium text-foreground tabular-nums mt-1">
+ {i.value}
+ </div>
+ </div>
+ ))}
+ </div>
+ );
+}
+
+function DayChart({ byDay }: { byDay: Stats["byDay"] }) {
+ if (byDay.length === 0) return null;
+ const max = Math.max(...byDay.map((d) => d.scans), 1);
+ return (
+ <div className="bg-card border border-border rounded-2xl p-4 md:p-5">
+ <div className="text-sm font-medium text-foreground mb-3">Scans per day</div>
+ <div className="flex items-end gap-1 h-32">
+ {byDay.map((d) => {
+ const h = Math.round((d.scans / max) * 100);
+ return (
+ <div key={d.day} className="flex-1 flex flex-col items-center gap-1.5 min-w-0">
+ <div
+ className="w-full bg-primary/80 rounded-sm relative group"
+ style={{ height: `${Math.max(h, 2)}%`, minHeight: "2px" }}
+ title={`${d.day} · ${d.scans} scans · ${d.views} views`}
+ />
+ <div className="text-[9px] text-muted-foreground tabular-nums truncate w-full text-center">
+ {formatDayShort(d.day)}
+ </div>
+ </div>
+ );
+ })}
+ </div>
+ </div>
+ );
+}
+
+function formatDayShort(iso: string): string {
+ const d = new Date(iso + "T00:00:00Z");
+ return d.toLocaleDateString([], { day: "numeric", month: "short" });
+}
+
+function LanguageBreakdown({ byLanguage }: { byLanguage: Stats["byLanguage"] }) {
+ if (byLanguage.length === 0) return null;
+ const max = Math.max(...byLanguage.map((l) => l.scans), 1);
+ return (
+ <div className="bg-card border border-border rounded-2xl p-4 md:p-5">
+ <div className="text-sm font-medium text-foreground mb-3">Languages</div>
+ <div className="space-y-2">
+ {byLanguage.map((l) => {
+ const pct = Math.round((l.scans / max) * 100);
+ return (
+ <div key={l.language} className="flex items-center gap-3">
+ <div className="text-xs text-foreground uppercase tabular-nums w-8 shrink-0">
+ {l.language}
+ </div>
+ <div className="flex-1 h-2 bg-secondary rounded-full overflow-hidden">
+ <div
+ className="h-full bg-primary/80 rounded-full"
+ style={{ width: `${pct}%` }}
+ />
+ </div>
+ <div className="text-xs text-muted-foreground tabular-nums w-12 text-right shrink-0">
+ {l.scans}
+ </div>
+ </div>
+ );
+ })}
+ </div>
+ </div>
+ );
+}
+
+function PageBreakdown({ byPage }: { byPage: Stats["byPage"] }) {
+ if (byPage.length === 0) return null;
+ const max = Math.max(...byPage.map((p) => p.views), 1);
+ return (
+ <div className="bg-card border border-border rounded-2xl p-4 md:p-5">
+ <div className="text-sm font-medium text-foreground mb-3">Pages</div>
+ <div className="space-y-2">
+ {byPage.map((p) => {
+ const pct = Math.round((p.views / max) * 100);
+ const label = PAGE_LABELS[p.page] || p.page;
+ return (
+ <div key={p.page} className="flex items-center gap-3">
+ <div className="text-xs text-foreground w-28 truncate shrink-0">
+ {label}
+ </div>
+ <div className="flex-1 h-2 bg-secondary rounded-full overflow-hidden">
+ <div
+ className="h-full bg-primary/80 rounded-full"
+ style={{ width: `${pct}%` }}
+ />
+ </div>
+ <div className="text-xs text-muted-foreground tabular-nums w-12 text-right shrink-0">
+ {p.views}
+ </div>
+ </div>
+ );
+ })}
+ </div>
+ </div>
+ );
+}
+
+function LimitCard({ stats }: { stats: Stats }) {
+ const limit = stats.scanLimit ?? 0;
+ const used = stats.monthlyScans;
+ const pct = limit > 0 ? Math.min(100, Math.round((used / limit) * 100)) : 0;
+ return (
+ <div className="bg-card border border-border rounded-2xl p-4 md:p-5">
+ <div className="flex items-center justify-between gap-3 mb-2">
+ <div>
+ <div className="text-sm font-medium text-foreground">Free plan usage</div>
+ <div className="text-xs text-muted-foreground mt-0.5">
+ Scans this calendar month
+ </div>
+ </div>
+ <div className="text-sm font-medium text-foreground tabular-nums">
+ {used} / {limit}
+ </div>
+ </div>
+ <div className="h-2 bg-secondary rounded-full overflow-hidden">
+ <div
+ className={
+ "h-full rounded-full " + (pct >= 100 ? "bg-red-500" : "bg-primary/80")
+ }
+ style={{ width: `${pct}%` }}
+ />
+ </div>
+ </div>
+ );
+}
+
+function SkeletonGrid() {
+ return (
+ <div className="space-y-4">
+ <div className="grid grid-cols-2 md:grid-cols-4 gap-2.5">
+ {Array.from({ length: 4 }).map((_, i) => (
+ <div key={i} className="bg-card border border-border rounded-2xl p-4 h-20 animate-pulse" />
+ ))}
+ </div>
+ <div className="bg-card border border-border rounded-2xl p-4 h-44 animate-pulse" />
+ <div className="bg-card border border-border rounded-2xl p-4 h-32 animate-pulse" />
+ </div>
+ );
+}

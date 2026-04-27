@@ -32,5 +32,6 @@ export async function GET() {
     subscriptionStatus: company.subscriptionStatus,
     currentPeriodEnd: company.currentPeriodEnd?.toISOString() ?? null,
     paymentProcessing: company.paymentProcessing,
+    trialEndsAt: company.trialEndsAt?.toISOString() ?? null,
   });
 }

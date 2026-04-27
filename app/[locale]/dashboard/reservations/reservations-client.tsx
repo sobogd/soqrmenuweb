@@ -7,22 +7,22 @@ import { apiReservationToBooking } from "../_v2/mappers";
 import type { Booking, TableEntity } from "../_v2/types";
 
 export function ReservationsClient({
-  initialBookings,
-  initialTables,
+ initialBookings,
+ initialTables,
 }: {
-  initialBookings: Booking[];
-  initialTables: TableEntity[];
+ initialBookings: Booking[];
+ initialTables: TableEntity[];
 }) {
-  const [bookings, setBookings] = useState<Booking[]>(initialBookings);
+ const [bookings, setBookings] = useState<Booking[]>(initialBookings);
 
-  // Live refresh every 30s — pending bookings can come in.
-  useEffect(() => {
-    const id = setInterval(async () => {
-      const rs = await fetchReservations();
-      setBookings(rs.map(apiReservationToBooking));
-    }, 30000);
-    return () => clearInterval(id);
-  }, []);
+ // Live refresh every 30s — pending bookings can come in.
+ useEffect(() => {
+ const id = setInterval(async () => {
+ const rs = await fetchReservations();
+ setBookings(rs.map(apiReservationToBooking));
+ }, 30000);
+ return () => clearInterval(id);
+ }, []);
 
-  return <ReservationsPage bookings={bookings} setBookings={setBookings} tables={initialTables} />;
+ return <ReservationsPage bookings={bookings} setBookings={setBookings} tables={initialTables} />;
 }

@@ -1,4 +1,4 @@
-import { NextResponse } from "next/server";
+import { NextRequest, NextResponse } from "next/server";
 import { prisma } from "@/lib/prisma";
 import { getUserCompanyId } from "@/lib/auth";
 import { s3Client, s3Key, getPublicUrl } from "@/lib/s3";
@@ -9,7 +9,7 @@ import sharp from "sharp";
 
 const GEMINI_API_KEY = process.env.GEMINI_API_KEY;
 
-export async function POST() {
+export async function POST(request: NextRequest) {
   try {
     const companyId = await getUserCompanyId();
     if (!companyId) {
@@ -47,31 +47,51 @@ export async function POST() {
       return NextResponse.json({ error: "Gemini API key not configured" }, { status: 500 });
     }
 
-    // Get menu items for the prompt
-    const items = await prisma.item.findMany({
-      where: { companyId, isActive: true },
-      select: { name: true },
-      take: 6,
-    });
-
-    if (items.length === 0) {
-      return NextResponse.json({ error: "No menu items to generate background from" }, { status: 400 });
+    let userPrompt: string | undefined;
+    try {
+      const body = await request.json();
+      userPrompt = typeof body?.prompt === "string" ? body.prompt.trim() : undefined;
+    } catch {
+      userPrompt = undefined;
     }
 
-    const sampleItems = items.map((i) => i.name).join(", ");
+    let prompt: string;
 
-    const prompt = [
-      "Top-down flat lay photograph on an elegant dark dining table.",
-      `ONLY these items are on the table, nothing else: ${sampleItems}.`,
-      "Style: restaurant cuisine. Each item in its own plate/glass/bowl, beautifully arranged.",
-      "Bird's eye view, looking straight down at the table.",
-      "Spread across the table with space between them. Elegant plating.",
-      "Soft, warm, slightly dim lighting. Rich but muted tones.",
-      "Dark moody atmosphere — the table surface should be dark so white text is readable on top.",
-      "Do NOT add any items that are not in the list above. No extra food, no desserts, no drinks unless listed.",
-      "No people, no hands, no text, no words, no letters, no numbers, no logos, no watermarks, no labels, no signs.",
-      "Professional food photography. Vertical portrait (9:16).",
-    ].join("\n");
+    if (userPrompt) {
+      prompt = [
+        userPrompt,
+        "Vertical portrait composition (9:16), suitable as a mobile background.",
+        "Dark moody atmosphere — the surface should be dark so white text is readable on top.",
+        "Soft, warm, slightly dim lighting. Rich but muted tones.",
+        "No people, no hands, no text, no words, no letters, no numbers, no logos, no watermarks, no labels, no signs.",
+        "Professional photography.",
+      ].join("\n");
+    } else {
+      const items = await prisma.item.findMany({
+        where: { companyId, isActive: true },
+        select: { name: true },
+        take: 6,
+      });
+
+      if (items.length === 0) {
+        return NextResponse.json({ error: "No menu items to generate background from" }, { status: 400 });
+      }
+
+      const sampleItems = items.map((i) => i.name).join(", ");
+
+      prompt = [
+        "Top-down flat lay photograph on an elegant dark dining table.",
+        `ONLY these items are on the table, nothing else: ${sampleItems}.`,
+        "Style: restaurant cuisine. Each item in its own plate/glass/bowl, beautifully arranged.",
+        "Bird's eye view, looking straight down at the table.",
+        "Spread across the table with space between them. Elegant plating.",
+        "Soft, warm, slightly dim lighting. Rich but muted tones.",
+        "Dark moody atmosphere — the table surface should be dark so white text is readable on top.",
+        "Do NOT add any items that are not in the list above. No extra food, no desserts, no drinks unless listed.",
+        "No people, no hands, no text, no words, no letters, no numbers, no logos, no watermarks, no labels, no signs.",
+        "Professional food photography. Vertical portrait (9:16).",
+      ].join("\n");
+    }
 
     const controller = new AbortController();
     const timeout = setTimeout(() => controller.abort(), 50_000);
