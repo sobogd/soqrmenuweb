@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import Link from "next/link";
 import { ChevronRightIcon } from "../_v2/icons";
 import { PageHeader } from "../_v2/ui";
@@ -21,8 +21,14 @@ const CARDS: { href: string; title: string; desc: string }[] = [
 ];
 
 export default function SettingsHubPage() {
+ const [isAdmin, setIsAdmin] = useState(false);
+
  useEffect(() => {
  track(DashboardEvent.SHOWED_SETTINGS);
+ fetch("/api/auth/check")
+ .then((r) => (r.ok ? r.json() : null))
+ .then((data) => setIsAdmin(!!data?.isAdmin))
+ .catch(() => {});
  }, []);
 
  return (
@@ -43,6 +49,36 @@ export default function SettingsHubPage() {
  <ChevronRightIcon size={16} className="text-muted-foreground shrink-0" />
  </Link>
  ))}
+ {isAdmin ? (
+ <>
+ <Link
+ href="/dashboard/settings/admin/companies"
+ onClick={() => track(DashboardEvent.CLICKED_SETTINGS_ROW, { row: "/dashboard/settings/admin/companies" })}
+ className="w-full text-left p-4 bg-card border border-border rounded-xl transition-colors flex items-center justify-between gap-3"
+ >
+ <div className="min-w-0">
+ <div className="text-sm font-medium text-foreground">Companies</div>
+ <div className="text-xs text-muted-foreground leading-snug mt-0.5">
+ All companies, plans, and chats.
+ </div>
+ </div>
+ <ChevronRightIcon size={16} className="text-muted-foreground shrink-0" />
+ </Link>
+ <Link
+ href="/dashboard/settings/admin/sessions"
+ onClick={() => track(DashboardEvent.CLICKED_SETTINGS_ROW, { row: "/dashboard/settings/admin/sessions" })}
+ className="w-full text-left p-4 bg-card border border-border rounded-xl transition-colors flex items-center justify-between gap-3"
+ >
+ <div className="min-w-0">
+ <div className="text-sm font-medium text-foreground">Sessions</div>
+ <div className="text-xs text-muted-foreground leading-snug mt-0.5">
+ User sessions, events, and conversions.
+ </div>
+ </div>
+ <ChevronRightIcon size={16} className="text-muted-foreground shrink-0" />
+ </Link>
+ </>
+ ) : null}
  <LogoutLink />
  </div>
  </div>

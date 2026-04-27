@@ -9,6 +9,7 @@ import { getPublicUrl, s3Key } from "@/lib/s3";
 import { getCoordinatesByCountry, COUNTRY_CENTERS } from "@/lib/country-centers";
 import type { Locale } from "@/i18n/routing";
 import { DashboardChrome } from "./_v2/chrome";
+import { ImpersonationBanner } from "./_v2/impersonation-banner";
 import { apiRestaurantToRestaurant } from "./_v2/mappers";
 import type { ApiRestaurant } from "./_v2/api";
 
@@ -88,5 +89,16 @@ export default async function DashboardLayout({
  };
  const uiRestaurant = apiRestaurantToRestaurant(apiRestaurant);
 
- return <DashboardChrome restaurant={uiRestaurant}>{children}</DashboardChrome>;
+ const impersonationCookieStore = await cookies();
+ const adminOriginalEmail = impersonationCookieStore.get("admin_original_email")?.value;
+ const currentEmail = impersonationCookieStore.get("user_email")?.value;
+ const isImpersonating =
+ !!adminOriginalEmail && !!currentEmail && adminOriginalEmail !== currentEmail;
+
+ return (
+ <>
+ {isImpersonating ? <ImpersonationBanner currentEmail={currentEmail!} /> : null}
+ <DashboardChrome restaurant={uiRestaurant}>{children}</DashboardChrome>
+ </>
+ );
 }

@@ -1,687 +1,578 @@
 "use client";
 
 import { useEffect, useState, useRef, useCallback } from "react";
-import {
- Trash2,
- Loader2,
- Send,
- Mail,
- RefreshCw,
- ExternalLink,
- Eye,
- LogIn,
- Check,
-} from "lucide-react";
-import { Button } from "@/components/ui/button";
-import { Textarea } from "@/components/ui/textarea";
-import {
- Tabs,
- TabsContent,
- TabsList,
- TabsTrigger,
-} from "@/components/ui/tabs";
-import {
- AlertDialog,
- AlertDialogAction,
- AlertDialogCancel,
- AlertDialogContent,
- AlertDialogDescription,
- AlertDialogFooter,
- AlertDialogHeader,
- AlertDialogTitle,
-} from "@/components/ui/alert-dialog";
-import {
- Dialog,
- DialogContent,
- DialogHeader,
- DialogTitle,
-} from "@/components/ui/dialog";
-import { toast } from "sonner";
-import { useRouter } from "@/i18n/routing";
-import { useSearchParams } from "next/navigation";
-import { PageLoader } from "../_ui/page-loader";
-import { PageHeader } from "../_ui/page-header";
+import { useRouter, useSearchParams } from "next/navigation";
+import { ConfirmDialog, SubpageStickyBar } from "../_v2/ui";
+import { SendIcon } from "../_v2/icons";
 import { MenuPreviewModal } from "@/components/menu-preview-modal";
-import { DashboardContent } from "../_ui/dashboard-content";
 
 interface User {
- id: string;
- email: string;
- createdAt: string;
- role: string;
+  id: string;
+  email: string;
+  createdAt: string;
+  role: string;
 }
 
 interface Restaurant {
- id: string;
- title: string;
- description: string | null;
- slug: string | null;
- accentColor: string;
- createdAt: string;
- address: string | null;
- phone: string | null;
- instagram: string | null;
- whatsapp: string | null;
- reservationsEnabled: boolean;
- defaultLanguage: string | null;
- languages: string[];
- url: string | null;
+  id: string;
+  title: string;
+  description: string | null;
+  slug: string | null;
+  accentColor: string;
+  createdAt: string;
+  address: string | null;
+  phone: string | null;
+  instagram: string | null;
+  whatsapp: string | null;
+  reservationsEnabled: boolean;
+  defaultLanguage: string | null;
+  languages: string[];
+  url: string | null;
 }
 
 interface Company {
- id: string;
- name: string;
- createdAt: string;
- plan: string;
- subscriptionStatus: string;
- billingCycle: string | null;
- currentPeriodEnd: string | null;
- stripeCustomerId: string | null;
- stripeSubscriptionId: string | null;
- emailsSent: Record<string, string> | null;
- categoriesCount: number;
- itemsCount: number;
- messagesCount: number;
- monthlyViews: number;
- scanLimit: number;
- sessionId: string | null;
- users: User[];
- restaurants: Restaurant[];
+  id: string;
+  name: string;
+  createdAt: string;
+  plan: string;
+  subscriptionStatus: string;
+  billingCycle: string | null;
+  currentPeriodEnd: string | null;
+  stripeCustomerId: string | null;
+  stripeSubscriptionId: string | null;
+  categoriesCount: number;
+  itemsCount: number;
+  messagesCount: number;
+  monthlyViews: number;
+  scanLimit: number;
+  sessionId: string | null;
+  users: User[];
+  restaurants: Restaurant[];
 }
 
 interface Message {
- id: string;
- message: string;
- isAdmin: boolean;
- createdAt: string;
- user: { email: string };
+  id: string;
+  message: string;
+  isAdmin: boolean;
+  createdAt: string;
+  user: { email: string };
 }
 
-interface AdminCompanyPageProps {
- companyId: string;
+type Tab = "info" | "messages";
+
+interface Props {
+  companyId: string;
 }
 
-export function AdminCompanyPage({ companyId }: AdminCompanyPageProps) {
- const router = useRouter();
- const searchParams = useSearchParams();
- const backHref = searchParams.get("back") || "/dashboard/admin";
- const [company, setCompany] = useState<Company | null>(null);
- const [loading, setLoading] = useState(true);
- const [error, setError] = useState<string | null>(null);
+function formatDate(iso: string, withTime = false): string {
+  const d = new Date(iso);
+  if (withTime) {
+    return d.toLocaleString("en-GB", {
+      day: "numeric",
+      month: "short",
+      year: "numeric",
+      hour: "2-digit",
+      minute: "2-digit",
+    });
+  }
+  return d.toLocaleDateString("en-GB", {
+    day: "numeric",
+    month: "short",
+    year: "numeric",
+  });
+}
 
- const [showDeleteDialog, setShowDeleteDialog] = useState(false);
- const [deleting, setDeleting] = useState(false);
- const [showEmailDialog, setShowEmailDialog] = useState(false);
- const [sendingEmailType, setSendingEmailType] = useState<string | null>(null);
- const [impersonating, setImpersonating] = useState(false);
- const [showMenuPreview, setShowMenuPreview] = useState(false);
+export function AdminCompanyPage({ companyId }: Props) {
+  const router = useRouter();
+  const searchParams = useSearchParams();
+  const backHref = searchParams.get("back") || "/dashboard/settings/admin/companies";
 
- const [messages, setMessages] = useState<Message[]>([]);
- const [loadingMessages, setLoadingMessages] = useState(false);
- const [newMessage, setNewMessage] = useState("");
- const [isSending, setIsSending] = useState(false);
- const messagesEndRef = useRef<HTMLDivElement>(null);
- const textareaRef = useRef<HTMLTextAreaElement>(null);
+  const [tab, setTab] = useState<Tab>("info");
+  const [company, setCompany] = useState<Company | null>(null);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
 
- const fetchCompany = useCallback(async () => {
- try {
- const res = await fetch(`/api/admin/companies/${companyId}`);
- if (!res.ok) {
- if (res.status === 403) setError("Access denied");
- else if (res.status === 404) setError("Company not found");
- else setError("Failed to load data");
- return;
- }
- const data = await res.json();
- setCompany(data);
- setError(null);
- } catch {
- setError("Failed to load data");
- } finally {
- setLoading(false);
- }
- }, [companyId]);
+  const [confirmDelete, setConfirmDelete] = useState(false);
+  const [deleting, setDeleting] = useState(false);
+  const [impersonating, setImpersonating] = useState(false);
+  const [previewOpen, setPreviewOpen] = useState(false);
+  const [alert, setAlert] = useState<{ title: string; message: string } | null>(null);
 
- useEffect(() => {
- fetchCompany();
- }, [fetchCompany]);
+  const [messages, setMessages] = useState<Message[]>([]);
+  const [loadingMessages, setLoadingMessages] = useState(false);
+  const [newMessage, setNewMessage] = useState("");
+  const [sending, setSending] = useState(false);
+  const scrollRef = useRef<HTMLDivElement | null>(null);
+  const lastIdRef = useRef<string | null>(null);
+  const taRef = useRef<HTMLTextAreaElement>(null);
 
- const fetchMessages = useCallback(async () => {
- setLoadingMessages(true);
- try {
- const res = await fetch(`/api/admin/companies/${companyId}/messages`);
- if (res.ok) {
- const data = await res.json();
- setMessages(data);
- }
- } catch (error) {
- console.error("Failed to fetch messages:", error);
- } finally {
- setLoadingMessages(false);
- }
- }, [companyId]);
+  const fetchCompany = useCallback(async () => {
+    try {
+      const res = await fetch(`/api/admin/companies/${companyId}`);
+      if (!res.ok) {
+        if (res.status === 403) setError("Access denied");
+        else if (res.status === 404) setError("Company not found");
+        else setError("Failed to load");
+        return;
+      }
+      const data = await res.json();
+      setCompany(data);
+      setError(null);
+    } catch {
+      setError("Failed to load");
+    } finally {
+      setLoading(false);
+    }
+  }, [companyId]);
 
- useEffect(() => {
- messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
- }, [messages]);
+  useEffect(() => {
+    fetchCompany();
+  }, [fetchCompany]);
 
- async function handleSendEmail(type: string) {
- if (!company || sendingEmailType) return;
+  const fetchMessages = useCallback(async (silent = false) => {
+    if (!silent) setLoadingMessages(true);
+    try {
+      const res = await fetch(`/api/admin/companies/${companyId}/messages`);
+      if (res.ok) {
+        const data = (await res.json()) as Message[];
+        setMessages((prev) => {
+          const lastNew = data[data.length - 1];
+          const lastPrev = prev[prev.length - 1];
+          if (lastNew && lastPrev && lastNew.id === lastPrev.id && data.length === prev.length) {
+            return prev;
+          }
+          return data;
+        });
+      }
+    } finally {
+      if (!silent) setLoadingMessages(false);
+    }
+  }, [companyId]);
 
- setSendingEmailType(type);
- try {
- const res = await fetch(`/api/admin/companies/${company.id}/remind`, {
- method: "POST",
- headers: { "Content-Type": "application/json" },
- body: JSON.stringify({ type }),
- });
+  useEffect(() => {
+    if (tab === "messages" && messages.length === 0) {
+      fetchMessages();
+    }
+  }, [tab, messages.length, fetchMessages]);
 
- if (res.ok) {
- const data = await res.json();
- const emailsSent = { ...(company.emailsSent || {}), [type]: new Date().toISOString() };
- setCompany({ ...company, emailsSent });
- toast.success(`Email sent to ${data.sentTo}`);
- } else {
- const data = await res.json();
- toast.error(data.error || "Failed to send email");
- }
- } catch {
- toast.error("Failed to send email");
- } finally {
- setSendingEmailType(null);
- }
- }
+  useEffect(() => {
+    if (tab !== "messages") return;
+    const id = setInterval(() => {
+      fetchMessages(true);
+    }, 15000);
+    return () => clearInterval(id);
+  }, [tab, fetchMessages]);
 
- const EMAIL_OPTIONS = [
- { type: "reminder_onboarded", label: "Menu almost ready", description: "For users who completed onboarding — nudge to finish editing menu" },
- { type: "reminder_not_onboarded", label: "Menu waiting for you", description: "For users who haven't started onboarding yet" },
- { type: "reminder_scanner", label: "Need help with menu?", description: "For scanner users — offer to set up menu from photo/PDF" },
- { type: "reminder_orders", label: "Online orders available", description: "Announce new ordering feature — WhatsApp or built-in orders from the menu" },
- { type: "welcome_personal", label: "Personal welcome", description: "Personal intro from Bogdan — offer help with setup, translated to client's language" },
- ];
+  useEffect(() => {
+    const lastMsg = messages[messages.length - 1];
+    if (lastMsg && lastMsg.id !== lastIdRef.current) {
+      lastIdRef.current = lastMsg.id;
+      if (scrollRef.current) {
+        scrollRef.current.scrollTop = scrollRef.current.scrollHeight;
+      }
+    }
+  }, [messages]);
 
- async function handleDelete() {
- if (!company) return;
+  async function handleDelete() {
+    if (!company) return;
+    setDeleting(true);
+    try {
+      const res = await fetch(`/api/admin/companies/${company.id}`, { method: "DELETE" });
+      if (res.ok) {
+        router.push(backHref);
+      } else {
+        const data = await res.json().catch(() => ({}));
+        setAlert({ title: "Delete failed", message: data.error || "Could not delete company." });
+      }
+    } catch {
+      setAlert({ title: "Delete failed", message: "Network error" });
+    } finally {
+      setDeleting(false);
+      setConfirmDelete(false);
+    }
+  }
 
- setDeleting(true);
- try {
- const res = await fetch(`/api/admin/companies/${company.id}`, {
- method: "DELETE",
- });
+  async function handleImpersonate() {
+    if (!company || impersonating) return;
+    const user = company.users[0];
+    if (!user) return;
+    setImpersonating(true);
+    try {
+      const res = await fetch("/api/admin/impersonate", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ userId: user.id }),
+      });
+      if (res.ok) {
+        router.push("/dashboard");
+      } else {
+        const data = await res.json().catch(() => ({}));
+        setAlert({ title: "Login failed", message: data.error || "Could not impersonate user." });
+        setImpersonating(false);
+      }
+    } catch {
+      setAlert({ title: "Login failed", message: "Network error" });
+      setImpersonating(false);
+    }
+  }
 
- if (res.ok) {
- toast.success(`Company "${company.name}" deleted`);
- router.push(backHref);
- } else {
- const data = await res.json();
- toast.error(data.error || "Failed to delete");
- }
- } catch {
- toast.error("Failed to delete");
- } finally {
- setDeleting(false);
- setShowDeleteDialog(false);
- }
- }
+  async function sendMessage() {
+    const text = newMessage.trim();
+    if (!text || sending) return;
+    setSending(true);
+    try {
+      const res = await fetch(`/api/admin/companies/${companyId}/messages`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ message: text }),
+      });
+      if (res.ok) {
+        const sent = await res.json();
+        setMessages((prev) => [...prev, sent]);
+        setNewMessage("");
+        if (taRef.current) taRef.current.style.height = "";
+        taRef.current?.focus();
+      } else {
+        setAlert({ title: "Send failed", message: "Could not send message." });
+      }
+    } catch {
+      setAlert({ title: "Send failed", message: "Network error" });
+    } finally {
+      setSending(false);
+    }
+  }
 
- async function handleImpersonate() {
- if (!company || impersonating) return;
- const user = company.users[0];
- if (!user) return;
+  function handleKey(e: React.KeyboardEvent<HTMLTextAreaElement>) {
+    if (e.key === "Enter" && !e.shiftKey) {
+      e.preventDefault();
+      sendMessage();
+    }
+  }
 
- setImpersonating(true);
- try {
- const res = await fetch("/api/admin/impersonate", {
- method: "POST",
- headers: { "Content-Type": "application/json" },
- body: JSON.stringify({ userId: user.id }),
- });
+  function autoresize(el: HTMLTextAreaElement) {
+    el.style.height = "auto";
+    const next = Math.min(Math.max(el.scrollHeight, 40), 70);
+    el.style.height = next + "px";
+  }
 
- if (res.ok) {
- router.push("/dashboard");
- } else {
- const data = await res.json();
- toast.error(data.error || "Failed to impersonate");
- setImpersonating(false);
- }
- } catch {
- toast.error("Failed to impersonate");
- setImpersonating(false);
- }
- }
+  if (loading && !company) {
+    return (
+      <div>
+        <SubpageStickyBar onBack={() => router.push(backHref)} hideSave />
+        <div className="max-w-2xl mx-auto pt-5 md:pt-4">
+          <div className="mb-5">
+            <div className="text-xs text-muted-foreground">Settings / Companies</div>
+            <h2 className="text-xl font-medium text-foreground mt-1">Company</h2>
+          </div>
+          <div className="bg-card border border-border rounded-2xl p-8 text-center text-sm text-muted-foreground">
+            Loading…
+          </div>
+        </div>
+      </div>
+    );
+  }
 
- const handleSend = async () => {
- if (!newMessage.trim() || isSending) return;
+  if (error || !company) {
+    return (
+      <div>
+        <SubpageStickyBar onBack={() => router.push(backHref)} hideSave />
+        <div className="max-w-2xl mx-auto pt-5 md:pt-4">
+          <div className="mb-5">
+            <div className="text-xs text-muted-foreground">Settings / Companies</div>
+            <h2 className="text-xl font-medium text-foreground mt-1">Company</h2>
+          </div>
+          <div className="bg-card border border-border rounded-2xl p-8 text-center text-sm text-muted-foreground">
+            {error || "Not found"}
+          </div>
+        </div>
+      </div>
+    );
+  }
 
- setIsSending(true);
- try {
- const response = await fetch(
- `/api/admin/companies/${companyId}/messages`,
- {
- method: "POST",
- headers: { "Content-Type": "application/json" },
- body: JSON.stringify({ message: newMessage.trim() }),
- }
- );
+  const restaurant = company.restaurants[0];
+  const title = restaurant?.title || company.name || "No name";
 
- if (response.ok) {
- const sentMessage = await response.json();
- setMessages((prev) => [...prev, sentMessage]);
- setNewMessage("");
- textareaRef.current?.focus();
- }
- } catch (error) {
- console.error("Failed to send message:", error);
- toast.error("Failed to send message");
- } finally {
- setIsSending(false);
- }
- };
+  const companyRows: { label: string; value: string }[] = [
+    { label: "Plan", value: `${company.plan}${company.subscriptionStatus === "ACTIVE" ? " (Active)" : ""}` },
+    { label: "Created", value: formatDate(company.createdAt, true) },
+    { label: "Categories", value: String(company.categoriesCount) },
+    { label: "Items", value: String(company.itemsCount) },
+    {
+      label: "Monthly Views",
+      value: `${company.monthlyViews} / ${company.plan === "FREE" ? String(company.scanLimit) : "∞"}`,
+    },
+    { label: "Restaurants", value: String(company.restaurants.length) },
+  ];
 
- const handleKeyDown = (e: React.KeyboardEvent) => {
- if (e.key === "Enter" && !e.shiftKey) {
- e.preventDefault();
- handleSend();
- }
- };
+  if (company.plan !== "FREE") {
+    if (company.billingCycle) companyRows.push({ label: "Billing", value: company.billingCycle });
+    if (company.currentPeriodEnd) companyRows.push({ label: "Period Ends", value: formatDate(company.currentPeriodEnd) });
+    if (company.stripeCustomerId) companyRows.push({ label: "Stripe Customer", value: company.stripeCustomerId });
+  }
 
- const formatDate = (dateString: string, withTime = false) => {
- const date = new Date(dateString);
- if (withTime) {
- return date.toLocaleString("en-GB", {
- day: "numeric",
- month: "short",
- year: "numeric",
- hour: "2-digit",
- minute: "2-digit",
- });
- }
- return date.toLocaleDateString("en-GB", {
- day: "numeric",
- month: "short",
- year: "numeric",
- });
- };
+  const restaurantRows: { label: string; value: string }[] = [];
+  if (restaurant) {
+    if (restaurant.url) restaurantRows.push({ label: "URL", value: restaurant.url });
+    if (restaurant.description) restaurantRows.push({ label: "Description", value: restaurant.description });
+    if (restaurant.address) restaurantRows.push({ label: "Address", value: restaurant.address });
+    if (restaurant.phone) restaurantRows.push({ label: "Phone", value: restaurant.phone });
+    if (restaurant.instagram) restaurantRows.push({ label: "Instagram", value: `@${restaurant.instagram}` });
+    if (restaurant.whatsapp) restaurantRows.push({ label: "WhatsApp", value: restaurant.whatsapp });
+    if (restaurant.languages.length > 0) restaurantRows.push({ label: "Languages", value: restaurant.languages.join(", ") });
+    if (restaurant.reservationsEnabled) restaurantRows.push({ label: "Reservations", value: "Enabled" });
+  }
 
- const formatDateTime = (dateString: string) => {
- return new Date(dateString).toLocaleString("en-GB", {
- day: "numeric",
- month: "short",
- hour: "2-digit",
- minute: "2-digit",
- });
- };
+  const menuLink = restaurant?.slug ? `/m/${restaurant.slug}` : null;
 
- if (loading) return <PageLoader />;
+  function openSession() {
+    if (!company?.sessionId) return;
+    const isFromSession = backHref.startsWith("/dashboard/settings/admin/sessions/");
+    if (isFromSession) {
+      const qIndex = backHref.indexOf("?");
+      const nestedParams = qIndex >= 0 ? new URLSearchParams(backHref.slice(qIndex + 1)) : null;
+      const sessionsListUrl = nestedParams?.get("back");
+      const url = sessionsListUrl
+        ? `/dashboard/settings/admin/sessions/${company.sessionId}?back=${encodeURIComponent(sessionsListUrl)}`
+        : `/dashboard/settings/admin/sessions/${company.sessionId}`;
+      router.push(url);
+    } else {
+      const currentUrl = `/dashboard/settings/admin/companies/${companyId}${
+        backHref !== "/dashboard/settings/admin/companies" ? `?back=${encodeURIComponent(backHref)}` : ""
+      }`;
+      router.push(`/dashboard/settings/admin/sessions/${company.sessionId}?back=${encodeURIComponent(currentUrl)}`);
+    }
+  }
 
- if (error || !company) {
- return (
- <div className="flex flex-col h-full">
- <PageHeader title="Company" backHref={backHref} />
- <div className="flex items-center justify-center h-full">
- <p className="text-muted-foreground">{error || "Not found"}</p>
- </div>
- </div>
- );
- }
+  return (
+    <div className={tab === "messages" ? "flex flex-col h-[calc(100dvh-var(--topbar-h,0px)-116px)] md:h-[calc(100dvh-var(--topbar-h,0px)-56px)]" : ""}>
+      <SubpageStickyBar onBack={() => router.push(backHref)} hideSave>
+        <div className="inline-flex items-center gap-0.5 p-0.5 bg-secondary rounded-lg">
+          <button
+            type="button"
+            onClick={() => setTab("info")}
+            className={
+              "h-7 px-2.5 text-[11px] font-medium rounded-md transition-colors " +
+              (tab === "info" ? "bg-card text-foreground shadow-sm" : "text-muted-foreground")
+            }
+          >
+            Info
+          </button>
+          <button
+            type="button"
+            onClick={() => setTab("messages")}
+            className={
+              "h-7 px-2.5 text-[11px] font-medium rounded-md transition-colors " +
+              (tab === "messages" ? "bg-card text-foreground shadow-sm" : "text-muted-foreground")
+            }
+          >
+            Messages
+            {company.messagesCount > 0 ? (
+              <span className="ml-1 opacity-70">({company.messagesCount})</span>
+            ) : null}
+          </button>
+        </div>
+      </SubpageStickyBar>
+      <div
+        className={
+          "max-w-2xl mx-auto w-full pt-5 md:pt-4 " +
+          (tab === "messages" ? "flex-1 flex flex-col min-h-0" : "")
+        }
+      >
+        <div className={tab === "messages" ? "mb-3 shrink-0" : "mb-5"}>
+          <div className="text-xs text-muted-foreground">Settings / Companies</div>
+          <h2 className="text-xl font-medium text-foreground mt-1">{title}</h2>
+        </div>
 
- const restaurant = company.restaurants[0];
- const title = restaurant?.title || "No name";
+      {tab === "info" ? (
+        <div className="space-y-4">
+          {/* Company info */}
+          <div className="bg-card border border-border rounded-xl overflow-hidden divide-y divide-border">
+            {companyRows.map((row) => (
+              <div key={row.label} className="flex items-center justify-between px-4 py-2.5">
+                <span className="text-xs text-muted-foreground">{row.label}</span>
+                <span className="text-xs font-mono text-right break-all max-w-[60%] text-foreground">
+                  {row.value}
+                </span>
+              </div>
+            ))}
+          </div>
 
- // Build info rows
- const companyRows: { label: string; value: string }[] = [
- { label: "Plan", value: `${company.plan}${company.subscriptionStatus === "ACTIVE" ? " (Active)" : ""}` },
- { label: "Created", value: formatDate(company.createdAt, true) },
- { label: "Categories", value: String(company.categoriesCount) },
- { label: "Items", value: String(company.itemsCount) },
- { label: "Monthly Views", value: `${company.monthlyViews} / ${company.plan === "FREE" ? String(company.scanLimit) : "\u221e"}` },
- { label: "Restaurants", value: String(company.restaurants.length) },
- ];
+          {/* Users */}
+          {company.users.length > 0 ? (
+            <div className="bg-card border border-border rounded-xl overflow-hidden divide-y divide-border">
+              {company.users.map((user) => (
+                <div key={user.id} className="flex items-center justify-between px-4 py-2.5">
+                  <span className="text-xs break-all text-foreground">{user.email}</span>
+                  <span className="text-xs text-muted-foreground font-mono shrink-0 ml-3 tabular-nums">
+                    {user.role} · {formatDate(user.createdAt)}
+                  </span>
+                </div>
+              ))}
+            </div>
+          ) : null}
 
- if (company.plan !== "FREE") {
- if (company.billingCycle) companyRows.push({ label: "Billing", value: company.billingCycle });
- if (company.currentPeriodEnd) companyRows.push({ label: "Period Ends", value: formatDate(company.currentPeriodEnd) });
- if (company.stripeCustomerId) companyRows.push({ label: "Stripe Customer", value: company.stripeCustomerId });
- }
+          {/* Restaurant */}
+          {restaurantRows.length > 0 ? (
+            <div className="bg-card border border-border rounded-xl overflow-hidden divide-y divide-border">
+              {restaurantRows.map((row) => (
+                <div key={row.label} className="flex items-center justify-between px-4 py-2.5">
+                  <span className="text-xs text-muted-foreground">{row.label}</span>
+                  <span className="text-xs font-mono text-right break-all max-w-[60%] text-foreground">
+                    {row.value}
+                  </span>
+                </div>
+              ))}
+            </div>
+          ) : null}
 
- if (company.emailsSent) {
- for (const [key, date] of Object.entries(company.emailsSent)) {
- companyRows.push({ label: `Email: ${key}`, value: formatDate(date, true) });
- }
- }
+          {/* Action buttons */}
+          <div className="space-y-2">
+            {company.sessionId ? (
+              <button
+                type="button"
+                onClick={openSession}
+                className="w-full h-10 px-4 text-sm font-medium text-foreground bg-card border border-border rounded-lg transition-colors"
+              >
+                View Session
+              </button>
+            ) : null}
 
- // Restaurant rows
- const restaurantRows: { label: string; value: string }[] = [];
- if (restaurant) {
- if (restaurant.url) restaurantRows.push({ label: "URL", value: restaurant.url });
- if (restaurant.description) restaurantRows.push({ label: "Description", value: restaurant.description });
- if (restaurant.address) restaurantRows.push({ label: "Address", value: restaurant.address });
- if (restaurant.phone) restaurantRows.push({ label: "Phone", value: restaurant.phone });
- if (restaurant.instagram) restaurantRows.push({ label: "Instagram", value: `@${restaurant.instagram}` });
- if (restaurant.whatsapp) restaurantRows.push({ label: "WhatsApp", value: restaurant.whatsapp });
- if (restaurant.languages.length > 0) restaurantRows.push({ label: "Languages", value: restaurant.languages.join(", ") });
- if (restaurant.reservationsEnabled) restaurantRows.push({ label: "Reservations", value: "Enabled" });
- }
+            {menuLink ? (
+              <button
+                type="button"
+                onClick={() => setPreviewOpen(true)}
+                className="w-full h-10 px-4 text-sm font-medium text-foreground bg-card border border-border rounded-lg transition-colors flex items-center justify-center"
+              >
+                View Menu
+              </button>
+            ) : null}
 
- return (
- <div className="flex flex-col h-full">
- <PageHeader title={title} backHref={backHref}>
- <Button variant="ghost" size="icon" onClick={fetchCompany}>
- <RefreshCw className="h-4 w-4" />
- </Button>
- </PageHeader>
+            {company.users[0] ? (
+              <button
+                type="button"
+                onClick={handleImpersonate}
+                disabled={impersonating}
+                className="w-full h-10 px-4 text-sm font-medium text-foreground bg-card border border-border rounded-lg transition-colors disabled:opacity-60"
+              >
+                {impersonating ? "Logging in…" : `Login as ${company.users[0].email.split("@")[0]}`}
+              </button>
+            ) : null}
 
- <div className="flex-1 overflow-auto px-6 pt-4 pb-6">
- <DashboardContent>
- <Tabs
- defaultValue="info"
- onValueChange={(v) => {
- if (v === "messages" && messages.length === 0) {
- fetchMessages();
- }
- }}
- >
- <TabsList className="w-full">
- <TabsTrigger value="info" className="flex-1">
- Info
- </TabsTrigger>
- <TabsTrigger value="messages" className="flex-1">
- Messages
- {company.messagesCount > 0 && (
- <span className="ml-1.5 text-xs opacity-70">
- ({company.messagesCount})
- </span>
- )}
- </TabsTrigger>
- </TabsList>
+            <button
+              type="button"
+              onClick={() => setConfirmDelete(true)}
+              className="w-full h-10 px-4 text-sm font-medium text-white bg-red-600 rounded-lg transition-colors"
+            >
+              Delete company
+            </button>
+          </div>
+        </div>
+      ) : (
+        <>
+          <div
+            ref={scrollRef}
+            className="bg-card border border-border rounded-2xl overflow-y-auto p-4 space-y-3 flex-1 min-h-0"
+          >
+            {loadingMessages && messages.length === 0 ? (
+              <div className="h-full flex items-center justify-center text-sm text-muted-foreground text-center px-4">
+                Loading…
+              </div>
+            ) : messages.length === 0 ? (
+              <div className="h-full flex items-center justify-center text-sm text-muted-foreground text-center px-4">
+                No messages yet
+              </div>
+            ) : (
+              messages.map((msg) => <MessageBubble key={msg.id} message={msg} />)
+            )}
+          </div>
 
- {/* Info Tab */}
- <TabsContent value="info" className="space-y-4 mt-4">
- {/* Company info card */}
- <div className="rounded-md border border-border bg-muted/50 overflow-hidden">
- {companyRows.map((row, i) => (
- <div
- key={row.label}
- className={`flex items-center justify-between px-4 py-2.5 ${
- i > 0 ? "border-t border-foreground/5" : ""
- }`}
- >
- <span className="text-xs text-muted-foreground">{row.label}</span>
- <span className="text-xs font-mono text-right break-all max-w-[60%]">
- {row.value}
- </span>
- </div>
- ))}
- </div>
+          <div className="mt-3 shrink-0 flex items-start gap-2 h-[70px]">
+            <textarea
+              ref={taRef}
+              value={newMessage}
+              onChange={(e) => {
+                setNewMessage(e.target.value);
+                autoresize(e.currentTarget);
+              }}
+              onKeyDown={handleKey}
+              placeholder="Type a message..."
+              rows={1}
+              className="flex-1 h-[40px] min-h-[40px] max-h-[70px] px-3 py-2 text-sm leading-5 text-foreground bg-card border border-input rounded-lg placeholder:text-muted-foreground focus:outline-none transition-colors resize-none box-border"
+            />
+            <button
+              type="button"
+              onClick={sendMessage}
+              disabled={!newMessage.trim() || sending}
+              className="shrink-0 flex h-10 px-4 text-sm font-medium text-primary-foreground bg-primary rounded-lg transition-colors items-center justify-center gap-2"
+            >
+              {sending ? (
+                <span className="w-3.5 h-3.5 border-2 border-white/40 border-t-white rounded-full animate-spin" />
+              ) : (
+                <SendIcon size={14} />
+              )}
+              Send message
+            </button>
+          </div>
+        </>
+      )}
 
- {/* Users card */}
- <div className="rounded-md border border-border bg-muted/50 overflow-hidden">
- {company.users.map((user, i) => (
- <div
- key={user.id}
- className={`flex items-center justify-between px-4 py-2.5 ${
- i > 0 ? "border-t border-foreground/5" : ""
- }`}
- >
- <span className="text-xs break-all">{user.email}</span>
- <span className="text-xs text-muted-foreground font-mono shrink-0 ml-3">
- {user.role} · {formatDate(user.createdAt)}
- </span>
- </div>
- ))}
- </div>
+      <ConfirmDialog
+        open={confirmDelete}
+        title="Delete company?"
+        message={
+          `This permanently deletes ${company.restaurants.length} restaurant(s), ` +
+          `${company.categoriesCount} categories, ${company.itemsCount} items, ` +
+          `${company.users.length} user(s), and all related data. Cannot be undone.`
+        }
+        confirmLabel="Delete"
+        onCancel={() => (deleting ? null : setConfirmDelete(false))}
+        onConfirm={handleDelete}
+      />
 
- {/* Restaurant card */}
- {restaurantRows.length > 0 && (
- <div className="rounded-md border border-border bg-muted/50 overflow-hidden">
- {restaurantRows.map((row, i) => (
- <div
- key={row.label}
- className={`flex items-center justify-between px-4 py-2.5 ${
- i > 0 ? "border-t border-foreground/5" : ""
- }`}
- >
- <span className="text-xs text-muted-foreground">{row.label}</span>
- <span className="text-xs font-mono text-right break-all max-w-[60%]">
- {row.value}
- </span>
- </div>
- ))}
- </div>
- )}
- {/* Action buttons */}
- <div className="space-y-2">
- {company.sessionId && (
- <Button
- variant="outline"
- className="w-full"
- onClick={() => {
- // Build current company URL with its back param so the chain is preserved:
- // company list → company (back=list) → session (back=company?back=list) → back → company → back → list
- // sessions list → session (back=list) → company (back=session?back=list) → View Session:
- // extract nested back to skip company: session (back=list) → back → list
- const isFromSession = backHref.startsWith("/dashboard/sessions/");
- if (isFromSession) {
- // Came from session → extract sessions list URL to avoid loop
- const qIndex = backHref.indexOf("?");
- const nestedParams = qIndex >= 0 ? new URLSearchParams(backHref.slice(qIndex + 1)) : null;
- const sessionsListUrl = nestedParams?.get("back");
- const url = sessionsListUrl
- ? `/dashboard/sessions/${company.sessionId}?back=${encodeURIComponent(sessionsListUrl)}`
- : `/dashboard/sessions/${company.sessionId}`;
- router.push(url);
- } else {
- // Came from company list → session should return here
- const currentUrl = `/dashboard/admin/companies/${companyId}${backHref !== "/dashboard/admin" ? `?back=${encodeURIComponent(backHref)}` : ""}`;
- router.push(`/dashboard/sessions/${company.sessionId}?back=${encodeURIComponent(currentUrl)}`);
- }
- }}
- >
- <ExternalLink className="h-4 w-4 mr-2" />
- View Session
- </Button>
- )}
- {restaurant?.slug && (
- <Button
- variant="outline"
- className="w-full"
- onClick={() => setShowMenuPreview(true)}
- >
- <Eye className="h-4 w-4 mr-2" />
- View Menu
- </Button>
- )}
- <Button
- variant="outline"
- className="w-full"
- onClick={() => setShowEmailDialog(true)}
- >
- <Mail className="h-4 w-4 mr-2" />
- Send Email
- </Button>
- {company.users[0] && (
- <Button
- variant="outline"
- className="w-full"
- onClick={handleImpersonate}
- disabled={impersonating}
- >
- <LogIn className="h-4 w-4 mr-2" />
- Login as {company.users[0].email.split("@")[0]}
- </Button>
- )}
- <Button
- variant="destructive"
- className="w-full"
- onClick={() => setShowDeleteDialog(true)}
- >
- <Trash2 className="h-4 w-4 mr-2" />
- Delete Company
- </Button>
- </div>
- </TabsContent>
+      <ConfirmDialog
+        open={alert !== null}
+        singleButton
+        title={alert?.title}
+        message={alert?.message}
+        onCancel={() => setAlert(null)}
+      />
 
- {/* Messages Tab */}
- <TabsContent value="messages" className="mt-4">
- <div
- className="flex flex-col"
- style={{ height: "calc(100dvh - 220px)" }}
- >
- <div className="flex-1 overflow-auto space-y-3 pr-1">
- {loadingMessages ? (
- <div className="flex items-center justify-center py-12">
- <Loader2 className="h-6 w-6 animate-spin text-muted-foreground" />
- </div>
- ) : messages.length === 0 ? (
- <div className="flex items-center justify-center py-12 text-sm text-muted-foreground">
- No messages yet
- </div>
- ) : (
- messages.map((msg) => (
- <div
- key={msg.id}
- className={`flex ${msg.isAdmin ? "justify-end" : "justify-start"}`}
- >
- <div
- className={`max-w-[80%] rounded-md px-4 py-3 ${
- msg.isAdmin
- ? "bg-primary text-primary-foreground"
- : "bg-muted/50 text-foreground"
- }`}
- >
- {!msg.isAdmin && (
- <div className="text-xs font-medium mb-1 opacity-70">
- {msg.user.email}
- </div>
- )}
- <p className="text-sm whitespace-pre-wrap break-words">
- {msg.message}
- </p>
- <div
- className={`text-xs mt-1 ${
- msg.isAdmin
- ? "opacity-70"
- : "text-muted-foreground"
- }`}
- >
- {formatDateTime(msg.createdAt)}
- </div>
- </div>
- </div>
- ))
- )}
- <div ref={messagesEndRef} />
- </div>
+      {menuLink ? (
+        <MenuPreviewModal menuUrl={menuLink} open={previewOpen} onOpenChange={setPreviewOpen} />
+      ) : null}
+      </div>
+    </div>
+  );
+}
 
- <div className="border-t pt-4 mt-4 shrink-0">
- <div className="flex gap-2">
- <Textarea
- ref={textareaRef}
- value={newMessage}
- onChange={(e) => setNewMessage(e.target.value)}
- onKeyDown={handleKeyDown}
- placeholder="Type a message..."
- className="min-h-[60px] resize-none flex-1"
- rows={2}
- />
- <Button
- onClick={handleSend}
- disabled={!newMessage.trim() || isSending}
- size="icon"
- className="shrink-0 h-[60px] w-[60px]"
- >
- {isSending ? (
- <Loader2 className="h-4 w-4 animate-spin" />
- ) : (
- <Send className="h-4 w-4" />
- )}
- </Button>
- </div>
- </div>
- </div>
- </TabsContent>
- </Tabs>
- </DashboardContent>
- </div>
+function MessageBubble({ message }: { message: Message }) {
+  const isAdmin = message.isAdmin;
+  const time = new Date(message.createdAt).toLocaleTimeString([], {
+    hour: "2-digit",
+    minute: "2-digit",
+    hour12: false,
+  });
+  const cls = isAdmin
+    ? "bg-primary text-primary-foreground rounded-tr-sm"
+    : "bg-secondary text-foreground rounded-tl-sm";
 
- {restaurant?.slug && (
- <MenuPreviewModal
- menuUrl={`/m/${restaurant.slug}`}
- open={showMenuPreview}
- onOpenChange={setShowMenuPreview}
- />
- )}
-
- <Dialog open={showEmailDialog} onOpenChange={setShowEmailDialog}>
- <DialogContent className="max-w-sm">
- <DialogHeader>
- <DialogTitle>Send Email</DialogTitle>
- </DialogHeader>
- <div className="flex flex-col gap-2 pt-2">
- {EMAIL_OPTIONS.map((opt) => {
- const sentAt = company.emailsSent?.[opt.type];
- const isSending = sendingEmailType === opt.type;
- return (
- <button
- key={opt.type}
- onClick={() => handleSendEmail(opt.type)}
- disabled={!!sendingEmailType}
- className="flex items-start gap-3 rounded-md border border-border p-3 text-left transition-colors disabled:opacity-50"
- >
- <div className="flex-1 min-w-0">
- <p className="text-sm font-medium">{opt.label}</p>
- <p className="text-xs text-muted-foreground mt-0.5">{opt.description}</p>
- {sentAt && (
- <p className="text-xs text-success mt-1 flex items-center gap-1">
- <Check className="h-3 w-3" />
- Sent {formatDate(sentAt, true)}
- </p>
- )}
- </div>
- {isSending && <Loader2 className="h-4 w-4 animate-spin shrink-0 mt-0.5" />}
- </button>
- );
- })}
- </div>
- </DialogContent>
- </Dialog>
-
- <AlertDialog open={showDeleteDialog} onOpenChange={setShowDeleteDialog}>
- <AlertDialogContent>
- <AlertDialogHeader>
- <AlertDialogTitle>Delete Company</AlertDialogTitle>
- <AlertDialogDescription>
- Are you sure you want to delete{" "}
- <strong>{company.name}</strong>?
- <br />
- <br />
- This will permanently delete:
- <ul className="list-disc list-inside mt-2 space-y-1">
- <li>{company.restaurants.length || 0} restaurant(s)</li>
- <li>{company.categoriesCount || 0} categories</li>
- <li>{company.itemsCount || 0} items</li>
- <li>{company.users.length || 0} user(s)</li>
- <li>All reservations, tables, and analytics data</li>
- </ul>
- </AlertDialogDescription>
- </AlertDialogHeader>
- <AlertDialogFooter>
- <AlertDialogCancel disabled={deleting}>Cancel</AlertDialogCancel>
- <AlertDialogAction
- onClick={handleDelete}
- disabled={deleting}
- className="bg-destructive text-destructive-foreground"
- >
- {deleting ? (
- <Loader2 className="h-4 w-4 animate-spin mr-2" />
- ) : (
- <Trash2 className="h-4 w-4 mr-2" />
- )}
- Delete
- </AlertDialogAction>
- </AlertDialogFooter>
- </AlertDialogContent>
- </AlertDialog>
- </div>
- );
+  return (
+    <div className={"flex " + (isAdmin ? "justify-end" : "justify-start")}>
+      <div className="max-w-[75%]">
+        <div
+          className={
+            "px-3.5 py-2 rounded-2xl text-sm leading-relaxed whitespace-pre-wrap break-words " + cls
+          }
+        >
+          {!isAdmin ? (
+            <div className="text-[10px] font-medium mb-1 opacity-70">{message.user.email}</div>
+          ) : null}
+          {message.message}
+        </div>
+        <div className={"text-[10px] text-muted-foreground mt-1 px-1 " + (isAdmin ? "text-right" : "text-left")}>
+          {time}
+        </div>
+      </div>
+    </div>
+  );
 }

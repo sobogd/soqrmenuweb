@@ -1,505 +1,460 @@
 "use client";
 
 import { useEffect, useState, useCallback } from "react";
-import { RefreshCw, Send } from "lucide-react";
-import { Button } from "@/components/ui/button";
-import { PageLoader } from "../_ui/page-loader";
-import { PageHeader } from "../_ui/page-header";
-import { useRouter } from "@/i18n/routing";
-import { useSearchParams } from "next/navigation";
+import { useRouter, useSearchParams } from "next/navigation";
+import { ConfirmDialog, SubpageStickyBar } from "../_v2/ui";
 import { EVENT_LABELS } from "@/lib/dashboard-events";
-import { toast } from "sonner";
-import { DashboardContent } from "../_ui/dashboard-content";
+import {
+  COUNTRY_TZ,
+  countryToFlag,
+  formatDateFull,
+  formatEventName,
+  formatTime,
+  formatTimeDiff,
+} from "./_admin-helpers";
 
 interface SessionData {
- id: string;
- companyId: string | null;
- country: string | null;
- city: string | null;
- landingPage: string | null;
- gclid: string | null;
- keyword: string | null;
- userAgent: string | null;
- browser: string | null;
- device: string | null;
- ip: string | null;
- restaurantName: string | null;
- wasRegistered: boolean;
- namedRestaurant: boolean;
- selectedType: boolean;
- modifiedMenu: boolean;
- modifiedContacts: boolean;
- modifiedDesign: boolean;
- reached50Views: boolean;
- paidSubscription: boolean;
- conversionSent: boolean;
- conversionViewsSent: boolean;
- conversionSubscriptionSent: boolean;
- lastSeenAt: string | null;
- createdAt: string;
- updatedAt: string;
+  id: string;
+  companyId: string | null;
+  country: string | null;
+  city: string | null;
+  landingPage: string | null;
+  gclid: string | null;
+  keyword: string | null;
+  userAgent: string | null;
+  browser: string | null;
+  device: string | null;
+  ip: string | null;
+  restaurantName: string | null;
+  wasRegistered: boolean;
+  namedRestaurant: boolean;
+  selectedType: boolean;
+  modifiedMenu: boolean;
+  modifiedContacts: boolean;
+  modifiedDesign: boolean;
+  reached50Views: boolean;
+  paidSubscription: boolean;
+  conversionSent: boolean;
+  conversionViewsSent: boolean;
+  conversionSubscriptionSent: boolean;
+  lastSeenAt: string | null;
+  createdAt: string;
+  updatedAt: string;
 }
 
 interface AnalyticsEvent {
- id: string;
- event: string;
- sessionId: string;
- meta?: Record<string, string> | null;
- createdAt: string;
+  id: string;
+  event: string;
+  sessionId: string;
+  meta?: Record<string, string> | null;
+  createdAt: string;
 }
 
-function formatTimeDiff(date1: string, date2: string): string {
- const diff = Math.abs(new Date(date1).getTime() - new Date(date2).getTime()) / 1000;
- if (diff < 1) return "0s";
- if (diff < 60) return `${Math.round(diff)}s`;
- if (diff < 3600) {
- const mins = Math.floor(diff / 60);
- const secs = Math.round(diff % 60);
- return secs > 0 ? `${mins}m ${secs}s` : `${mins}m`;
- }
- if (diff < 86400) {
- const hours = Math.floor(diff / 3600);
- const mins = Math.round((diff % 3600) / 60);
- return mins > 0 ? `${hours}h ${mins}m` : `${hours}h`;
- }
- const days = Math.floor(diff / 86400);
- const hours = Math.round((diff % 86400) / 3600);
- return hours > 0 ? `${days}d ${hours}h` : `${days}d`;
-}
-
-function formatEventName(event: string): string {
- if (EVENT_LABELS[event]) return EVENT_LABELS[event];
- const legacyNames: Record<string, string> = {
- page_view_home: "Visited Home",
- page_view_pricing: "Visited Pricing",
- page_view_faq: "Visited FAQ",
- page_view_contacts: "Visited Contacts",
- page_view_changelog: "Visited Changelog",
- page_view_terms: "Visited Terms",
- page_view_privacy: "Visited Privacy",
- page_view_cookies: "Visited Cookies",
- page_view_languages: "Visited Languages",
- demo_open: "Opened Demo",
- demo_close: "Closed Demo",
- demo_scroll_arrow: "Scrolled to Demo",
- demo_interact: "Touched Demo",
- header_cta_click: "Clicked Header CTA",
- hero_images_click: "Clicked Hero Images",
- pricing_cta_click: "Clicked Pricing CTA",
- scanner_upload: "Scanner: Upload",
- scanner_success: "Scanner: Success",
- scanner_error: "Scanner: Error",
- scanner_cta_click: "Scanner: CTA Click",
- scanner_preview_shown: "Scanner: Preview Shown",
- scanner_preview_returning: "Scanner: Preview Returning",
- scanner_conversion: "Scanner: Conversion",
- };
- if (legacyNames[event]) return legacyNames[event];
- if (event.startsWith("section_view_")) {
- const section = event.replace("section_view_", "").replace(/_/g, " ");
- return `Section: ${section.charAt(0).toUpperCase() + section.slice(1)}`;
- }
- return event.replace(/_/g, " ").replace(/\b\w/g, (c) => c.toUpperCase());
-}
-
-function countryToFlag(countryCode: string): string {
- const code = countryCode.toUpperCase();
- if (code.length !== 2) return "";
- const offset = 0x1f1e6 - 65;
- return String.fromCodePoint(
- code.charCodeAt(0) + offset,
- code.charCodeAt(1) + offset
- );
-}
-
-const COUNTRY_TZ: Record<string, string> = {
- US: "America/New_York", CA: "America/Toronto", MX: "America/Mexico_City",
- BR: "America/Sao_Paulo", AR: "America/Buenos_Aires", CO: "America/Bogota",
- CL: "America/Santiago", PE: "America/Lima", VE: "America/Caracas",
- GB: "Europe/London", IE: "Europe/Dublin", IS: "Atlantic/Reykjavik",
- DE: "Europe/Berlin", FR: "Europe/Paris", ES: "Europe/Madrid",
- IT: "Europe/Rome", PT: "Europe/Lisbon", NL: "Europe/Amsterdam",
- BE: "Europe/Brussels", AT: "Europe/Vienna", CH: "Europe/Zurich",
- PL: "Europe/Warsaw", CZ: "Europe/Prague", SK: "Europe/Bratislava",
- HU: "Europe/Budapest", RO: "Europe/Bucharest", BG: "Europe/Sofia",
- HR: "Europe/Zagreb", SI: "Europe/Ljubljana", RS: "Europe/Belgrade",
- UA: "Europe/Kyiv", RU: "Europe/Moscow", BY: "Europe/Minsk",
- SE: "Europe/Stockholm", NO: "Europe/Oslo", DK: "Europe/Copenhagen",
- FI: "Europe/Helsinki", EE: "Europe/Tallinn", LV: "Europe/Riga",
- LT: "Europe/Vilnius", GR: "Europe/Athens", TR: "Europe/Istanbul",
- GE: "Asia/Tbilisi", AM: "Asia/Yerevan", AZ: "Asia/Baku",
- KZ: "Asia/Almaty", UZ: "Asia/Tashkent",
- IL: "Asia/Jerusalem", SA: "Asia/Riyadh", AE: "Asia/Dubai",
- IR: "Asia/Tehran", IQ: "Asia/Baghdad", JO: "Asia/Amman",
- IN: "Asia/Kolkata", PK: "Asia/Karachi", BD: "Asia/Dhaka",
- JP: "Asia/Tokyo", KR: "Asia/Seoul", CN: "Asia/Shanghai",
- TW: "Asia/Taipei", HK: "Asia/Hong_Kong", SG: "Asia/Singapore",
- MY: "Asia/Kuala_Lumpur", TH: "Asia/Bangkok", VN: "Asia/Ho_Chi_Minh",
- ID: "Asia/Jakarta", PH: "Asia/Manila",
- AU: "Australia/Sydney", NZ: "Pacific/Auckland",
- EG: "Africa/Cairo", ZA: "Africa/Johannesburg", NG: "Africa/Lagos",
- KE: "Africa/Nairobi", MA: "Africa/Casablanca",
+const FLAG_LABELS: Record<string, string> = {
+  wasRegistered: "Registered",
+  namedRestaurant: "Named restaurant",
+  selectedType: "Selected type",
+  modifiedMenu: "Modified menu",
+  modifiedContacts: "Modified contacts",
+  modifiedDesign: "Modified design",
+  reached50Views: "Reached 20 views",
+  paidSubscription: "Paid subscription",
+  conversionSent: "Conv: type selected",
+  conversionViewsSent: "Conv: 20 views",
+  conversionSubscriptionSent: "Conv: subscription",
 };
-
-function formatTime(dateString: string, tz?: string) {
- return new Date(dateString).toLocaleString("en-GB", {
- day: "numeric",
- month: "short",
- hour: "2-digit",
- minute: "2-digit",
- second: "2-digit",
- ...(tz && { timeZone: tz }),
- });
-}
-
-function formatDateFull(dateString: string) {
- return new Date(dateString).toLocaleString("en-GB", {
- day: "numeric",
- month: "short",
- year: "numeric",
- hour: "2-digit",
- minute: "2-digit",
- second: "2-digit",
- });
-}
 
 const TWO_HOURS_MS = 2 * 60 * 60 * 1000;
 
 function groupEventsByGap(events: AnalyticsEvent[]): AnalyticsEvent[][] {
- const sorted = [...events].reverse();
- const groups: AnalyticsEvent[][] = [];
- let current: AnalyticsEvent[] = [];
+  const sorted = [...events].reverse();
+  const groups: AnalyticsEvent[][] = [];
+  let current: AnalyticsEvent[] = [];
 
- for (let i = 0; i < sorted.length; i++) {
- if (i === 0) {
- current.push(sorted[i]);
- continue;
- }
- const gap = new Date(sorted[i - 1].createdAt).getTime() - new Date(sorted[i].createdAt).getTime();
- if (gap > TWO_HOURS_MS) {
- groups.push(current);
- current = [];
- }
- current.push(sorted[i]);
- }
- if (current.length > 0) groups.push(current);
- return groups;
+  for (let i = 0; i < sorted.length; i++) {
+    if (i === 0) {
+      current.push(sorted[i]);
+      continue;
+    }
+    const gap =
+      new Date(sorted[i - 1].createdAt).getTime() - new Date(sorted[i].createdAt).getTime();
+    if (gap > TWO_HOURS_MS) {
+      groups.push(current);
+      current = [];
+    }
+    current.push(sorted[i]);
+  }
+  if (current.length > 0) groups.push(current);
+  return groups;
 }
 
-const FLAG_LABELS: Record<string, string> = {
- wasRegistered: "Registered",
- namedRestaurant: "Named restaurant",
- selectedType: "Selected type",
- modifiedMenu: "Modified menu",
- modifiedContacts: "Modified contacts",
- modifiedDesign: "Modified design",
- reached50Views: "Reached 20 views",
- paidSubscription: "Paid subscription",
- conversionSent: "Conv: type selected",
- conversionViewsSent: "Conv: 20 views",
- conversionSubscriptionSent: "Conv: subscription",
-};
+interface SessionDetailPageProps {
+  sessionId: string;
+}
 
-export function SessionDetailPage({ sessionId }: { sessionId: string }) {
- const router = useRouter();
- const searchParams = useSearchParams();
- const backHref = searchParams.get("back") || "/dashboard/sessions";
- const [session, setSession] = useState<SessionData | null>(null);
- const [events, setEvents] = useState<AnalyticsEvent[]>([]);
- const [loading, setLoading] = useState(true);
- const [deleting, setDeleting] = useState(false);
- const [sendingConversion, setSendingConversion] = useState<string | null>(null);
+export function SessionDetailPage({ sessionId }: SessionDetailPageProps) {
+  const router = useRouter();
+  const searchParams = useSearchParams();
+  const backHref = searchParams.get("back") || "/dashboard/settings/admin/sessions";
 
- const fetchData = useCallback(async () => {
- setLoading(true);
- try {
- const params = new URLSearchParams({ sessionId });
- const res = await fetch(`/api/admin/analytics/sessions?${params}`);
- if (res.ok) {
- const data = await res.json();
- setSession(data.session || null);
- setEvents(data.events || []);
- }
- } catch {
- console.error("Failed to fetch session");
- } finally {
- setLoading(false);
- }
- }, [sessionId]);
+  const [session, setSession] = useState<SessionData | null>(null);
+  const [events, setEvents] = useState<AnalyticsEvent[]>([]);
+  const [loading, setLoading] = useState(true);
+  const [confirmDelete, setConfirmDelete] = useState(false);
+  const [deleting, setDeleting] = useState(false);
+  const [pendingConv, setPendingConv] = useState<string | null>(null);
+  const [alert, setAlert] = useState<{ title: string; message: string } | null>(null);
+  const [convPrompt, setConvPrompt] = useState<string | null>(null);
 
- useEffect(() => {
- fetchData();
- }, [fetchData]);
+  const fetchData = useCallback(async () => {
+    setLoading(true);
+    try {
+      const params = new URLSearchParams({ sessionId });
+      const res = await fetch(`/api/admin/analytics/sessions?${params}`);
+      if (res.ok) {
+        const data = await res.json();
+        setSession(data.session || null);
+        setEvents(data.events || []);
+      }
+    } finally {
+      setLoading(false);
+    }
+  }, [sessionId]);
 
- const handleDelete = async () => {
- if (!confirm("Delete this session and all its events?")) return;
- setDeleting(true);
- try {
- const res = await fetch("/api/admin/analytics/sessions", {
- method: "DELETE",
- headers: { "Content-Type": "application/json" },
- body: JSON.stringify({ sessionId }),
- });
- if (res.ok) {
- router.push(backHref);
- }
- } catch {
- console.error("Failed to delete session");
- } finally {
- setDeleting(false);
- }
- };
+  useEffect(() => {
+    fetchData();
+  }, [fetchData]);
 
- const handleSendConversion = async (eventType: string) => {
- if (!session?.gclid) return;
- if (!confirm(`Send conversion "${eventType}" for gclid ${session.gclid}?`)) return;
- setSendingConversion(eventType);
- try {
- const res = await fetch("/api/admin/analytics/send-conversion", {
- method: "POST",
- headers: { "Content-Type": "application/json" },
- body: JSON.stringify({
- gclid: session.gclid,
- conversionDateTime: new Date().toISOString(),
- eventType,
- }),
- });
- const data = await res.json();
- if (data.success) {
- toast.success(`Conversion "${eventType}" sent`);
- fetchData();
- } else {
- toast.error(data.error || "Failed to send conversion");
- }
- } catch {
- toast.error("Failed to send conversion");
- } finally {
- setSendingConversion(null);
- }
- };
+  async function handleDelete() {
+    setDeleting(true);
+    try {
+      const res = await fetch("/api/admin/analytics/sessions", {
+        method: "DELETE",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ sessionId }),
+      });
+      if (res.ok) router.push(backHref);
+      else setAlert({ title: "Delete failed", message: "Could not delete session." });
+    } catch {
+      setAlert({ title: "Delete failed", message: "Could not delete session." });
+    } finally {
+      setDeleting(false);
+      setConfirmDelete(false);
+    }
+  }
 
- const handleCopy = (value: string) => {
- navigator.clipboard.writeText(value);
- toast.success("Copied");
- };
+  async function sendConversion(eventType: string) {
+    if (!session?.gclid) return;
+    setPendingConv(eventType);
+    setConvPrompt(null);
+    try {
+      const res = await fetch("/api/admin/analytics/send-conversion", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          gclid: session.gclid,
+          conversionDateTime: new Date().toISOString(),
+          eventType,
+        }),
+      });
+      const data = await res.json();
+      if (data.success) {
+        setAlert({ title: "Conversion sent", message: `"${eventType}" delivered.` });
+        fetchData();
+      } else {
+        setAlert({ title: "Send failed", message: data.error || "Failed to send conversion" });
+      }
+    } catch {
+      setAlert({ title: "Send failed", message: "Network error" });
+    } finally {
+      setPendingConv(null);
+    }
+  }
 
- if (loading) {
- return <PageLoader />;
- }
+  if (loading && !session) {
+    return (
+      <div>
+        <SubpageStickyBar onBack={() => router.push(backHref)} hideSave />
+        <div className="max-w-2xl mx-auto pt-5 md:pt-4">
+          <div className="mb-5">
+            <div className="text-xs text-muted-foreground">Settings / Sessions</div>
+            <h2 className="text-xl font-medium text-foreground mt-1">Session</h2>
+          </div>
+          <div className="bg-card border border-border rounded-2xl p-8 text-center text-sm text-muted-foreground">
+            Loading…
+          </div>
+        </div>
+      </div>
+    );
+  }
 
- // Session info rows
- const countryTz = session?.country ? COUNTRY_TZ[session.country] : undefined;
- const infoRows: { label: string; value: string; subValue?: string; copyable?: boolean; onClick?: () => void; valueClassName?: string }[] = [];
- if (session) {
- // Online status
- const isOnline = session.lastSeenAt && (Date.now() - new Date(session.lastSeenAt).getTime()) < 30_000;
- if (isOnline) {
- infoRows.push({ label: "Status", value: "Online", valueClassName: "text-green-500 font-medium" });
- }
- if (session.country) infoRows.push({ label: "Country", value: `${countryToFlag(session.country)} ${session.country}${session.city ? `, ${session.city}` : ""}` });
- if (session.landingPage) infoRows.push({ label: "Landing", value: session.landingPage });
- if (session.ip) infoRows.push({ label: "IP", value: session.ip, copyable: true });
- if (session.browser) infoRows.push({ label: "Browser", value: session.browser });
- if (session.device) infoRows.push({ label: "Device", value: session.device });
- infoRows.push({ label: "Source", value: session.gclid ? "Google Ads" : "Direct" });
- if (session.gclid) infoRows.push({ label: "GCLID", value: session.gclid, copyable: true });
- if (session.keyword) infoRows.push({ label: "Keyword", value: session.keyword, copyable: true });
- if (session.companyId) infoRows.push({
- label: "Restaurant",
- value: session.restaurantName || "No name",
- onClick: () => {
- const isFromCompany = backHref.startsWith("/dashboard/admin/companies/");
- if (isFromCompany) {
- // Came from company (which came from company list) → extract company list URL
- const qIndex = backHref.indexOf("?");
- const nestedParams = qIndex >= 0 ? new URLSearchParams(backHref.slice(qIndex + 1)) : null;
- const companyListUrl = nestedParams?.get("back") || "/dashboard/admin";
- router.push(`/dashboard/admin/companies/${session.companyId}?back=${encodeURIComponent(companyListUrl)}`);
- } else {
- // Came from sessions list → company back should return to this session
- const currentUrl = `/dashboard/sessions/${sessionId}${backHref !== "/dashboard/sessions" ? `?back=${encodeURIComponent(backHref)}` : ""}`;
- router.push(`/dashboard/admin/companies/${session.companyId}?back=${encodeURIComponent(currentUrl)}`);
- }
- },
- });
- infoRows.push({
- label: "Created",
- value: formatDateFull(session.createdAt),
- subValue: countryTz ? formatTime(session.createdAt, countryTz) : undefined,
- });
- infoRows.push({
- label: "Updated",
- value: formatDateFull(session.updatedAt),
- subValue: countryTz ? formatTime(session.updatedAt, countryTz) : undefined,
- });
- if (session.lastSeenAt && !isOnline) {
- infoRows.push({
- label: "Last seen",
- value: formatDateFull(session.lastSeenAt),
- subValue: countryTz ? formatTime(session.lastSeenAt, countryTz) : undefined,
- });
- }
- }
+  if (!session) {
+    return (
+      <div>
+        <SubpageStickyBar onBack={() => router.push(backHref)} hideSave />
+        <div className="max-w-2xl mx-auto pt-5 md:pt-4">
+          <div className="mb-5">
+            <div className="text-xs text-muted-foreground">Settings / Sessions</div>
+            <h2 className="text-xl font-medium text-foreground mt-1">Session</h2>
+          </div>
+          <div className="bg-card border border-border rounded-2xl p-8 text-center text-sm text-muted-foreground">
+            Not found
+          </div>
+        </div>
+      </div>
+    );
+  }
 
- // Active flags
- const activeFlags = session
- ? Object.entries(FLAG_LABELS).filter(([key]) => session[key as keyof SessionData] === true)
- : [];
+  const isOnline = session.lastSeenAt && Date.now() - new Date(session.lastSeenAt).getTime() < 30_000;
+  const countryTz = session.country ? COUNTRY_TZ[session.country] : undefined;
+  const activeFlags = Object.entries(FLAG_LABELS).filter(
+    ([key]) => session[key as keyof SessionData] === true,
+  );
 
- return (
- <div className="flex flex-col h-full">
- <PageHeader title="Session" backHref={backHref}>
- <Button variant="ghost" size="icon" onClick={fetchData}>
- <RefreshCw className="h-4 w-4" />
- </Button>
- </PageHeader>
- <div className="flex-1 overflow-auto px-6 pt-4 pb-6">
- <DashboardContent innerClassName="space-y-4">
- {/* Session info card */}
- {session && (
- <div className="rounded-md border border-border bg-muted/50 overflow-hidden">
- {infoRows.map((row, i) => (
- <button
- key={row.label}
- type="button"
- disabled={!row.copyable && !row.onClick}
- onClick={() => {
- if (row.copyable) handleCopy(row.value);
- else if (row.onClick) row.onClick();
- }}
- className={`flex items-center justify-between w-full px-4 py-2.5 text-left ${
- i > 0 ? "border-t border-foreground/5" : ""
- } ${row.copyable || row.onClick ? " active:bg-muted/50 transition-colors" : ""}`}
- >
- <span className="text-xs text-muted-foreground">{row.label}</span>
- <span className={`text-xs font-mono text-right break-all max-w-[60%] ${
- row.valueClassName ? row.valueClassName : row.onClick ? "text-blue-500" : ""
- }`}>
- {row.value}
- {row.subValue && (
- <span className="block text-muted-foreground">{row.subValue} {session?.country && countryToFlag(session.country)}</span>
- )}
- </span>
- </button>
- ))}
+  function openCompany() {
+    if (!session?.companyId) return;
+    const isFromCompany = backHref.startsWith("/dashboard/settings/admin/companies/");
+    if (isFromCompany) {
+      const qIndex = backHref.indexOf("?");
+      const nestedParams = qIndex >= 0 ? new URLSearchParams(backHref.slice(qIndex + 1)) : null;
+      const companyListUrl = nestedParams?.get("back") || "/dashboard/settings/admin/companies";
+      router.push(`/dashboard/settings/admin/companies/${session.companyId}?back=${encodeURIComponent(companyListUrl)}`);
+    } else {
+      const currentUrl = `/dashboard/settings/admin/sessions/${sessionId}${
+        backHref !== "/dashboard/settings/admin/sessions" ? `?back=${encodeURIComponent(backHref)}` : ""
+      }`;
+      router.push(`/dashboard/settings/admin/companies/${session.companyId}?back=${encodeURIComponent(currentUrl)}`);
+    }
+  }
 
- {/* Conversion flags */}
- {activeFlags.length > 0 && (
- <div className="border-t border-foreground/5 px-4 py-2.5">
- <div className="flex flex-wrap gap-1.5">
- {activeFlags.map(([, label]) => (
- <span
- key={label}
- className="text-[10px] font-medium px-2 py-0.5 rounded-full bg-success/10 text-success"
- >
- {label}
- </span>
- ))}
- </div>
- </div>
- )}
+  function copy(value: string) {
+    if (navigator.clipboard?.writeText) {
+      navigator.clipboard.writeText(value).then(() => {
+        setAlert({ title: "Copied", message: value });
+      }).catch(() => {});
+    }
+  }
 
- {/* UA */}
- {session.userAgent && (
- <div className="border-t border-foreground/5 px-4 py-2.5">
- <p className="text-[10px] text-muted-foreground break-all">{session.userAgent}</p>
- </div>
- )}
- </div>
- )}
+  const infoRows: { label: string; value: string; sub?: string; copyable?: boolean; onClick?: () => void; valueCls?: string }[] = [];
+  if (isOnline) infoRows.push({ label: "Status", value: "Online", valueCls: "text-emerald-600 font-medium" });
+  if (session.country)
+    infoRows.push({
+      label: "Country",
+      value: `${countryToFlag(session.country)} ${session.country}${session.city ? `, ${session.city}` : ""}`,
+    });
+  if (session.landingPage) infoRows.push({ label: "Landing", value: session.landingPage });
+  if (session.ip) infoRows.push({ label: "IP", value: session.ip, copyable: true });
+  if (session.browser) infoRows.push({ label: "Browser", value: session.browser });
+  if (session.device) infoRows.push({ label: "Device", value: session.device });
+  infoRows.push({ label: "Source", value: session.gclid ? "Google Ads" : "Direct" });
+  if (session.gclid) infoRows.push({ label: "GCLID", value: session.gclid, copyable: true });
+  if (session.keyword) infoRows.push({ label: "Keyword", value: session.keyword, copyable: true });
+  if (session.companyId)
+    infoRows.push({
+      label: "Restaurant",
+      value: session.restaurantName || "No name",
+      onClick: openCompany,
+      valueCls: "text-blue-500",
+    });
+  infoRows.push({
+    label: "Created",
+    value: formatDateFull(session.createdAt),
+    sub: countryTz ? formatTime(session.createdAt, countryTz) : undefined,
+  });
+  infoRows.push({
+    label: "Updated",
+    value: formatDateFull(session.updatedAt),
+    sub: countryTz ? formatTime(session.updatedAt, countryTz) : undefined,
+  });
+  if (session.lastSeenAt && !isOnline) {
+    infoRows.push({
+      label: "Last seen",
+      value: formatDateFull(session.lastSeenAt),
+      sub: countryTz ? formatTime(session.lastSeenAt, countryTz) : undefined,
+    });
+  }
 
- {/* Manual conversion buttons */}
- {session?.gclid && (
- <div className="space-y-2">
- {!session.conversionSent && (
- <Button
- variant="outline"
- className="w-full justify-start gap-2"
- onClick={() => handleSendConversion("type_selected")}
- disabled={sendingConversion !== null}
- >
- <Send className="h-4 w-4" />
- {sendingConversion === "type_selected" ? "Sending..." : "Send conversion: type selected"}
- </Button>
- )}
- {!session.conversionViewsSent && (
- <Button
- variant="outline"
- className="w-full justify-start gap-2"
- onClick={() => handleSendConversion("views_reached")}
- disabled={sendingConversion !== null}
- >
- <Send className="h-4 w-4" />
- {sendingConversion === "views_reached" ? "Sending..." : "Send conversion: 20 views"}
- </Button>
- )}
- {!session.conversionSubscriptionSent && (
- <Button
- variant="outline"
- className="w-full justify-start gap-2"
- onClick={() => handleSendConversion("subscription")}
- disabled={sendingConversion !== null}
- >
- <Send className="h-4 w-4" />
- {sendingConversion === "subscription" ? "Sending..." : "Send conversion: subscription"}
- </Button>
- )}
- </div>
- )}
+  return (
+    <div>
+      <SubpageStickyBar onBack={() => router.push(backHref)} hideSave>
+        <button
+          type="button"
+          onClick={fetchData}
+          className="h-8 px-3 text-xs font-medium text-muted-foreground rounded-lg transition-colors"
+        >
+          Refresh
+        </button>
+      </SubpageStickyBar>
+      <div className="max-w-2xl mx-auto pt-5 md:pt-4">
+        <div className="mb-5">
+          <div className="text-xs text-muted-foreground">Settings / Sessions</div>
+          <h2 className="text-xl font-medium text-foreground mt-1">Session</h2>
+        </div>
 
- {/* Events list */}
- {events.length === 0 ? (
- <p className="text-sm text-muted-foreground text-center py-8">No events found</p>
- ) : (
- <div className="space-y-3">
- {groupEventsByGap(events).map((group, gi) => (
- <div key={gi} className="rounded-md border border-border bg-muted/50 overflow-hidden">
- {group.map((event, index) => {
- const nextEvent = index < group.length - 1 ? group[index + 1] : null;
- const timeDiff = nextEvent ? formatTimeDiff(nextEvent.createdAt, event.createdAt) : null;
+        {/* Info card */}
+      <div className="bg-card border border-border rounded-xl overflow-hidden">
+        <div className="divide-y divide-border">
+          {infoRows.map((row) => (
+            <button
+              key={row.label}
+              type="button"
+              disabled={!row.copyable && !row.onClick}
+              onClick={() => {
+                if (row.copyable) copy(row.value);
+                else if (row.onClick) row.onClick();
+              }}
+              className="flex items-center justify-between w-full px-4 py-2.5 text-left"
+            >
+              <span className="text-xs text-muted-foreground shrink-0">{row.label}</span>
+              <span
+                className={
+                  "text-xs font-mono text-right break-all max-w-[60%] " +
+                  (row.valueCls || (row.onClick ? "text-blue-500" : "text-foreground"))
+                }
+              >
+                {row.value}
+                {row.sub ? <span className="block text-muted-foreground">{row.sub}</span> : null}
+              </span>
+            </button>
+          ))}
+        </div>
 
- return (
- <div
- key={event.id}
- className={`px-4 py-2.5 ${
- index > 0 ? "border-t border-foreground/5" : ""
- }`}
- >
- <p className="text-sm truncate">
- {formatEventName(event.event)}
- {event.meta && (
- <span className="text-muted-foreground ml-1">
- ({Object.values(event.meta as Record<string, string>).join(" / ")})
- </span>
- )}
- </p>
- <div className="flex items-center justify-between mt-0.5">
- <span className="text-[10px] text-muted-foreground">
- {formatTime(event.createdAt)}
- </span>
- <span className="text-[10px] font-mono text-muted-foreground">
- {timeDiff ? `+${timeDiff}` : ""}
- </span>
- </div>
- </div>
- );
- })}
- </div>
- ))}
- </div>
- )}
+        {activeFlags.length > 0 ? (
+          <div className="border-t border-border px-4 py-2.5">
+            <div className="flex flex-wrap gap-1.5">
+              {activeFlags.map(([, label]) => (
+                <span
+                  key={label}
+                  className="text-[10px] font-medium px-2 py-0.5 rounded-full bg-emerald-50 text-emerald-700 border border-emerald-200"
+                >
+                  {label}
+                </span>
+              ))}
+            </div>
+          </div>
+        ) : null}
 
- {/* Delete button */}
- <Button
- variant="destructive"
- className="w-full"
- onClick={handleDelete}
- disabled={deleting}
- >
- {deleting ? "Deleting..." : "Delete session"}
- </Button>
- </DashboardContent>
- </div>
- </div>
- );
+        {session.userAgent ? (
+          <div className="border-t border-border px-4 py-2.5">
+            <p className="text-[10px] text-muted-foreground break-all font-mono">{session.userAgent}</p>
+          </div>
+        ) : null}
+      </div>
+
+      {/* Conversion buttons */}
+      {session.gclid ? (
+        <div className="space-y-2 mt-4">
+          {!session.conversionSent ? (
+            <button
+              type="button"
+              onClick={() => setConvPrompt("type_selected")}
+              disabled={pendingConv !== null}
+              className="w-full h-10 px-4 text-sm font-medium text-foreground bg-card border border-border rounded-lg transition-colors disabled:opacity-60"
+            >
+              {pendingConv === "type_selected" ? "Sending…" : "Send conversion: type selected"}
+            </button>
+          ) : null}
+          {!session.conversionViewsSent ? (
+            <button
+              type="button"
+              onClick={() => setConvPrompt("views_reached")}
+              disabled={pendingConv !== null}
+              className="w-full h-10 px-4 text-sm font-medium text-foreground bg-card border border-border rounded-lg transition-colors disabled:opacity-60"
+            >
+              {pendingConv === "views_reached" ? "Sending…" : "Send conversion: 20 views"}
+            </button>
+          ) : null}
+          {!session.conversionSubscriptionSent ? (
+            <button
+              type="button"
+              onClick={() => setConvPrompt("subscription")}
+              disabled={pendingConv !== null}
+              className="w-full h-10 px-4 text-sm font-medium text-foreground bg-card border border-border rounded-lg transition-colors disabled:opacity-60"
+            >
+              {pendingConv === "subscription" ? "Sending…" : "Send conversion: subscription"}
+            </button>
+          ) : null}
+        </div>
+      ) : null}
+
+      {/* Events */}
+      <div className="mt-4">
+        <h3 className="text-sm font-medium text-foreground mb-2">Events</h3>
+        {events.length === 0 ? (
+          <div className="bg-card border border-border rounded-2xl p-6 text-center text-sm text-muted-foreground">
+            No events
+          </div>
+        ) : (
+          <div className="space-y-3">
+            {groupEventsByGap(events).map((group, gi) => (
+              <div key={gi} className="bg-card border border-border rounded-xl overflow-hidden divide-y divide-border">
+                {group.map((event, index) => {
+                  const next = index < group.length - 1 ? group[index + 1] : null;
+                  const diff = next ? formatTimeDiff(next.createdAt, event.createdAt) : null;
+                  return (
+                    <div key={event.id} className="px-4 py-2.5">
+                      <p className="text-sm text-foreground truncate">
+                        {formatEventName(event.event, EVENT_LABELS)}
+                        {event.meta ? (
+                          <span className="text-muted-foreground ml-1">
+                            ({Object.values(event.meta).join(" / ")})
+                          </span>
+                        ) : null}
+                      </p>
+                      <div className="flex items-center justify-between mt-0.5">
+                        <span className="text-[10px] text-muted-foreground tabular-nums">
+                          {formatTime(event.createdAt)}
+                        </span>
+                        <span className="text-[10px] font-mono text-muted-foreground tabular-nums">
+                          {diff ? `+${diff}` : ""}
+                        </span>
+                      </div>
+                    </div>
+                  );
+                })}
+              </div>
+            ))}
+          </div>
+        )}
+      </div>
+
+      <div className="mt-6 flex justify-center">
+        <button
+          type="button"
+          onClick={() => setConfirmDelete(true)}
+          className="inline-flex items-center gap-1.5 h-9 px-3 text-xs font-medium text-red-600 rounded-lg transition-colors"
+        >
+          Delete session
+        </button>
+      </div>
+
+      <ConfirmDialog
+        open={confirmDelete}
+        title="Delete session?"
+        message="This will permanently remove the session and all its events."
+        confirmLabel="Delete"
+        onCancel={() => (deleting ? null : setConfirmDelete(false))}
+        onConfirm={handleDelete}
+      />
+
+      <ConfirmDialog
+        open={convPrompt !== null}
+        title="Send conversion?"
+        message={`Send "${convPrompt}" for gclid ${session.gclid}.`}
+        confirmLabel="Send"
+        confirmStyle="primary"
+        onCancel={() => setConvPrompt(null)}
+        onConfirm={() => convPrompt && sendConversion(convPrompt)}
+      />
+
+      <ConfirmDialog
+        open={alert !== null}
+        singleButton
+        title={alert?.title}
+        message={alert?.message}
+        onCancel={() => setAlert(null)}
+      />
+      </div>
+    </div>
+  );
 }

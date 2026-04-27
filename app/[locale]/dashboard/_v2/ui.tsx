@@ -14,6 +14,7 @@ import {
 import { inputClass, labelClass, primaryBtn, secondaryBtn } from "./tokens";
 import { getMl, setMl, translateText } from "./i18n";
 import type { Ml } from "./types";
+import { MenuPreviewModal } from "@/components/menu-preview-modal";
 
 // Modal — Escape closes, body scroll lock while open.
 
@@ -629,17 +630,20 @@ export function EditPageHeader({
 // PreviewButton + ShareButton (used on Menu page sticky bar).
 
 export function PreviewButton({ url }: { url: string }) {
+ const [open, setOpen] = useState(false);
  const fullUrl = url.startsWith("http") ? url : "https://" + url;
  return (
- <a
- href={fullUrl}
- target="_blank"
- rel="noreferrer noopener"
+ <>
+ <button
+ type="button"
+ onClick={() => setOpen(true)}
  className="inline-flex items-center gap-1.5 h-7 px-2.5 text-xs font-medium text-muted-foreground bg-secondary rounded-full transition-colors"
  >
  <EyeIcon size={12} />
  Preview
- </a>
+ </button>
+ <MenuPreviewModal menuUrl={fullUrl} open={open} onOpenChange={setOpen} />
+ </>
  );
 }
 
