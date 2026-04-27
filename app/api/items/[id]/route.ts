@@ -58,7 +58,7 @@ export async function PUT(
       return NextResponse.json({ error: "Item not found" }, { status: 404 });
     }
 
-    const { name, description, price, imageUrl, categoryId, sortOrder, isActive, translations, allergens } =
+    const { name, description, price, imageUrl, categoryId, sortOrder, isActive, translations, allergens, options } =
       await request.json();
 
     if (!name || typeof name !== "string" || name.trim().length === 0) {
@@ -100,6 +100,7 @@ export async function PUT(
         price: Number(price),
         imageUrl: finalImageUrl,
         allergens: allergens !== undefined ? allergens : existingItem.allergens,
+        options: options !== undefined ? options : existingItem.options,
         categoryId: categoryId ?? existingItem.categoryId,
         sortOrder: sortOrder ?? existingItem.sortOrder,
         isActive: isActive ?? existingItem.isActive,

@@ -96,10 +96,13 @@ enum SubscriptionStatus {
 model Restaurant {
   id              String   @id @default(cuid())
   title           String
+  subtitle        String?
   description     String?
   slug            String?
   currency        String   @default("EUR")
   source          String?
+  // "image" | "video"; null when source is unset
+  backgroundType  String?
   accentColor     String   @default("#ED3A3A")
   address         String?
   x               String?
@@ -162,6 +165,9 @@ model Table {
   zone         String?
   translations Json?    // { "en": { "zone": "..." }, "es": {...} }
   imageUrl     String?
+  // Floor-map position in percent (0-100); null = unplaced
+  x            Float?
+  y            Float?
   isActive     Boolean  @default(true)
   sortOrder    Int      @default(0)
   createdAt    DateTime @default(now())
@@ -227,6 +233,8 @@ model Item {
   price        Decimal  @db.Decimal(10, 2)
   imageUrl     String?
   allergens    String[] @default([]) // Array of allergen codes: gluten, dairy, eggs, etc.
+  // Variant groups: [{ id, name, translations, type: "single"|"multi", required, variants: [{ id, name, translations, priceDelta }] }]
+  options      Json?
   sortOrder    Int      @default(0)
   isActive     Boolean  @default(true)
   categoryId   String

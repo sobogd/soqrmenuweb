@@ -81,6 +81,8 @@ export async function POST(request: NextRequest) {
         zone: data.zone || null,
         translations: data.translations || null,
         imageUrl: data.imageUrl || null,
+        x: typeof data.x === "number" ? data.x : null,
+        y: typeof data.y === "number" ? data.y : null,
         isActive: data.isActive ?? true,
         sortOrder: (maxSort._max.sortOrder || 0) + 1,
       },

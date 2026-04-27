@@ -1,30 +1,21 @@
 import { requireAuth } from "./_lib/require-auth";
-import { getItems, getCategories, getRestaurant, checkIsAdmin } from "./_lib/queries";
-import { MenuPage } from "./_pages/menu";
+import { getCategories, getItems, getRestaurant } from "./_lib/queries";
+import { MenuList } from "./_v2/menu-list";
+import { buildCategories } from "./_v2/mappers";
+import type { ApiCategory, ApiItem } from "./_v2/api";
 
-export default async function Page() {
+export default async function MenuPage() {
   const companyId = await requireAuth();
-
-  const [items, categories, restaurant, isAdmin] = await Promise.all([
-    getItems(companyId),
-    getCategories(companyId),
+  const [restaurant, categories, items] = await Promise.all([
     getRestaurant(companyId),
-    checkIsAdmin(),
+    getCategories(companyId),
+    getItems(companyId),
   ]);
-
-  return (
-    <MenuPage
-      initialItems={items}
-      initialCategories={categories}
-      initialCurrency={restaurant?.currency ?? "EUR"}
-      restaurantName={restaurant?.title ?? ""}
-      slug={restaurant?.slug ?? null}
-      isAdmin={isAdmin}
-      restaurantLanguages={{
-        languages: restaurant?.languages ?? ["en"],
-        defaultLanguage: restaurant?.defaultLanguage ?? "en",
-        accentColor: restaurant?.accentColor ?? null,
-      }}
-    />
+  const defaultLang = restaurant?.defaultLanguage || "en";
+  const built = buildCategories(
+    categories as unknown as ApiCategory[],
+    items as unknown as ApiItem[],
+    defaultLang,
   );
+  return <MenuList initialCategories={built} />;
 }

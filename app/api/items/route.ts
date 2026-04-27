@@ -53,7 +53,7 @@ export async function POST(request: NextRequest) {
       return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
     }
 
-    const { name, description, price, imageUrl, categoryId, isActive, translations, allergens } =
+    const { name, description, price, imageUrl, categoryId, isActive, translations, allergens, options } =
       await request.json();
 
     if (!name || typeof name !== "string" || name.trim().length === 0) {
@@ -105,6 +105,7 @@ export async function POST(request: NextRequest) {
         price: Number(price),
         imageUrl: finalImageUrl,
         allergens: allergens || [],
+        options: options ?? null,
         sortOrder,
         isActive: isActive ?? true,
         categoryId,

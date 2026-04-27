@@ -89,10 +89,12 @@ export async function POST(request: NextRequest) {
         where: { id: existing.id },
         data: {
           title: data.title ?? existing.title,
+          subtitle: data.subtitle !== undefined ? (data.subtitle || null) : existing.subtitle,
           description: data.description !== undefined ? (data.description || null) : existing.description,
           slug: data.slug !== undefined ? (data.slug || null) : existing.slug,
           currency: data.currency ?? existing.currency,
           source: finalSource !== undefined ? finalSource : existing.source,
+          backgroundType: data.backgroundType !== undefined ? (data.backgroundType || null) : existing.backgroundType,
           accentColor: data.accentColor ?? existing.accentColor,
           address: data.address !== undefined ? (data.address || null) : existing.address,
           x: data.x !== undefined ? (data.x || null) : existing.x,
@@ -174,10 +176,12 @@ export async function POST(request: NextRequest) {
       const restaurant = await prisma.restaurant.create({
         data: {
           title: finalTitle,
+          subtitle: data.subtitle || null,
           description: data.description || null,
           slug,
           currency: data.currency || "EUR",
           source: finalSource ?? initialBackground,
+          backgroundType: data.backgroundType || null,
           accentColor: data.accentColor || "#000000",
           address: data.address || null,
           x: data.x || center?.lng?.toString() || null,

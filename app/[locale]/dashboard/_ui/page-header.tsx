@@ -3,7 +3,8 @@
 import { useEffect, useRef } from "react";
 import { ArrowLeft } from "lucide-react";
 import { useRouter } from "@/i18n/routing";
-import { DashboardNavHeader } from "../_components/dashboard-nav";
+// DashboardNavHeader was removed with the legacy shell; admin pages no longer render it.
+const DashboardNavHeader = () => null;
 
 interface PageHeaderProps {
   title: string;

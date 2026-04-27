@@ -1,6 +1,7 @@
 "use client";
 
-import { DashboardNavSidebar } from "../_components/dashboard-nav";
+// DashboardNavSidebar was removed with the legacy shell.
+const DashboardNavSidebar = () => null;
 
 interface DashboardContentProps {
   children: React.ReactNode;

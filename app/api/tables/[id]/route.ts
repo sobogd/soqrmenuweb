@@ -93,7 +93,9 @@ export async function PUT(
         capacity: data.capacity,
         zone: data.zone || null,
         translations: data.translations !== undefined ? data.translations : existingTable.translations,
-        imageUrl: data.imageUrl || null,
+        imageUrl: data.imageUrl !== undefined ? (data.imageUrl || null) : existingTable.imageUrl,
+        x: data.x !== undefined ? (typeof data.x === "number" ? data.x : null) : existingTable.x,
+        y: data.y !== undefined ? (typeof data.y === "number" ? data.y : null) : existingTable.y,
         isActive: data.isActive ?? existingTable.isActive,
       },
     });
@@ -138,10 +140,19 @@ export async function PATCH(
     }
 
     const data = await request.json();
-    const updateData: { isActive?: boolean } = {};
+    const updateData: { isActive?: boolean; x?: number | null; y?: number | null; imageUrl?: string | null } = {};
 
     if (data.isActive !== undefined) {
       updateData.isActive = Boolean(data.isActive);
+    }
+    if (data.x !== undefined) {
+      updateData.x = typeof data.x === "number" ? data.x : null;
+    }
+    if (data.y !== undefined) {
+      updateData.y = typeof data.y === "number" ? data.y : null;
+    }
+    if (data.imageUrl !== undefined) {
+      updateData.imageUrl = data.imageUrl || null;
     }
 
     const table = await prisma.table.update({

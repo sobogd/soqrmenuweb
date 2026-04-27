@@ -1,11 +1,16 @@
 import { NextRequest, NextResponse } from "next/server";
 import { prisma } from "@/lib/prisma";
 import { getUserCompanyId } from "@/lib/auth";
+import { Prisma } from "@prisma/client";
 
 /**
  * PATCH /api/orders/[id]
- * Update order status.
- * Body: { status: "new" | "in_progress" | "completed" }
+ * Update order status, items array, and/or total.
+ * Body: { status?: string; items?: unknown[]; total?: number }
+ *
+ * Items are stored as JSON; the dashboard extends each entry with a per-item kitchen
+ * status (`pending` | `cooking` | `ready` | `served`). The API doesn't validate the
+ * shape of items beyond it being an array — that's a client-side concern.
  */
 export async function PATCH(
   request: NextRequest,
@@ -18,14 +23,8 @@ export async function PATCH(
     }
 
     const { id } = await params;
-    const { status } = await request.json();
+    const body = await request.json();
 
-    const validStatuses = ["new", "in_progress", "completed", "cancelled"];
-    if (!validStatuses.includes(status)) {
-      return NextResponse.json({ error: "Invalid status" }, { status: 400 });
-    }
-
-    // Verify order belongs to this company
     const order = await prisma.order.findFirst({
       where: { id, companyId },
     });
@@ -34,9 +33,34 @@ export async function PATCH(
       return NextResponse.json({ error: "Order not found" }, { status: 404 });
     }
 
+    const data: Prisma.OrderUpdateInput = {};
+
+    if (body.status !== undefined) {
+      const validStatuses = ["new", "in_progress", "completed", "cancelled"];
+      if (!validStatuses.includes(body.status)) {
+        return NextResponse.json({ error: "Invalid status" }, { status: 400 });
+      }
+      data.status = body.status;
+    }
+
+    if (body.items !== undefined) {
+      if (!Array.isArray(body.items)) {
+        return NextResponse.json({ error: "items must be an array" }, { status: 400 });
+      }
+      data.items = body.items as Prisma.InputJsonValue;
+    }
+
+    if (body.total !== undefined) {
+      const t = Number(body.total);
+      if (isNaN(t)) {
+        return NextResponse.json({ error: "Invalid total" }, { status: 400 });
+      }
+      data.total = t;
+    }
+
     const updated = await prisma.order.update({
       where: { id },
-      data: { status },
+      data,
     });
 
     return NextResponse.json({

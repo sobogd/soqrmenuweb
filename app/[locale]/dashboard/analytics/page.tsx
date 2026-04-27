@@ -1,17 +1,13 @@
-import { cookies } from "next/headers";
-import { requireAuth } from "../_lib/require-auth";
-import { getDashboardAnalytics } from "../_lib/queries";
-import { AnalyticsPage } from "../_pages/analytics";
-import { getTimezoneForCountry } from "@/lib/country-timezone-map";
+import { EmptyState, PageHeader } from "../_v2/ui";
 
-export default async function Page() {
-  const companyId = await requireAuth();
-
-  const cookieStore = await cookies();
-  const country = cookieStore.get("geo_country")?.value || "";
-  const tz = getTimezoneForCountry(country);
-
-  const data = await getDashboardAnalytics(companyId, tz);
-
-  return <AnalyticsPage initialData={data} />;
+export default function AnalyticsPageRoute() {
+  return (
+    <div className="max-w-2xl mx-auto">
+      <PageHeader title="Analytics" subtitle="Views, conversions, and top dishes will appear here." />
+      <EmptyState
+        title="No data yet"
+        subtitle="Once guests start scanning your menu, you'll see traffic and engagement metrics here."
+      />
+    </div>
+  );
 }
