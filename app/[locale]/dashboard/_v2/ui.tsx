@@ -54,21 +54,21 @@ export function Modal({
     size === "sm" ? "max-w-sm" : size === "lg" ? "max-w-2xl" : "max-w-lg";
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center px-4 py-4 bg-neutral-900/40 backdrop-blur-sm">
+    <div className="fixed inset-0 z-50 flex items-center justify-center px-4 py-4 bg-foreground/40 backdrop-blur-sm">
       <div className="absolute inset-0" onClick={onClose} aria-hidden="true" />
       <div
         className={
           "relative w-full " +
           widthCls +
-          " bg-white border border-neutral-200 rounded-2xl max-h-[92vh] flex flex-col"
+          " bg-card border border-border rounded-2xl max-h-[92vh] flex flex-col"
         }
       >
-        <div className="flex items-center justify-between gap-3 px-5 py-3.5 border-b border-neutral-200">
-          <h3 className="text-base font-medium text-neutral-900 truncate">{title}</h3>
+        <div className="flex items-center justify-between gap-3 px-5 py-3.5 border-b border-border">
+          <h3 className="text-base font-medium text-foreground truncate">{title}</h3>
           <button
             type="button"
             onClick={onClose}
-            className="w-8 h-8 -mr-2 flex items-center justify-center rounded-md text-neutral-500 hover:text-neutral-900 hover:bg-neutral-100 transition-colors"
+            className="w-8 h-8 -mr-2 flex items-center justify-center rounded-md text-muted-foreground hover:text-foreground hover:bg-secondary transition-colors"
             aria-label="Close"
           >
             <CloseIcon size={16} />
@@ -105,11 +105,11 @@ export function ConfirmDialog({
   const isDanger = !singleButton && (!confirmStyle || confirmStyle === "danger");
   const confirmCls = isDanger
     ? "h-10 px-4 text-sm font-medium text-white bg-red-600 rounded-lg hover:bg-red-700 transition-colors"
-    : "h-10 px-4 text-sm font-medium text-white bg-neutral-900 rounded-lg hover:bg-neutral-800 transition-colors";
+    : "h-10 px-4 text-sm font-medium text-primary-foreground bg-primary rounded-lg hover:bg-primary/90 transition-colors";
 
   return (
     <Modal open={open} onClose={onCancel} title={title || "Confirm"} size="sm">
-      <p className="text-sm text-neutral-600 leading-snug mb-5">{message}</p>
+      <p className="text-sm text-muted-foreground leading-snug mb-5">{message}</p>
       <div className="flex gap-2.5 justify-end">
         {!singleButton ? (
           <button type="button" onClick={onCancel} className={secondaryBtn}>
@@ -145,11 +145,12 @@ export function ToggleSwitch({
       onClick={onChange}
       className={
         "shrink-0 relative inline-flex h-6 w-11 items-center rounded-full transition-colors " +
-        (checked ? "bg-neutral-900" : "bg-neutral-300")
+        (checked ? "bg-primary" : "bg-input")
       }
     >
       <span
         className={
+          // Knob stays white in both themes for contrast against the primary on-state.
           "inline-block h-4 w-4 transform rounded-full bg-white transition-transform " +
           (checked ? "translate-x-6" : "translate-x-1")
         }
@@ -177,12 +178,12 @@ export function LanguageSwitcher({
 }) {
   if (languages.length <= 1) return null;
   return (
-    <div className="inline-flex items-center gap-0.5 p-0.5 bg-neutral-100 rounded-lg">
+    <div className="inline-flex items-center gap-0.5 p-0.5 bg-secondary rounded-lg">
       {languages.map((l) => {
         const isActive = lang === l.code;
         const cls = isActive
-          ? "bg-white text-neutral-900 shadow-sm"
-          : "text-neutral-500 hover:text-neutral-900";
+          ? "bg-card text-foreground shadow-sm"
+          : "text-muted-foreground hover:text-foreground";
         return (
           <button
             key={l.code}
@@ -258,9 +259,9 @@ function AiTranslateButton({
   }
 
   const inlineCls =
-    "flex items-center justify-center w-9 h-10 rounded-lg text-neutral-500 hover:text-neutral-900 hover:bg-neutral-100 transition-colors disabled:text-neutral-300 disabled:hover:bg-transparent disabled:cursor-not-allowed shrink-0";
+    "flex items-center justify-center w-9 h-10 rounded-lg text-muted-foreground hover:text-foreground hover:bg-secondary transition-colors disabled:text-muted-foreground/50 disabled:hover:bg-transparent disabled:cursor-not-allowed shrink-0";
   const linkCls =
-    "inline-flex items-center gap-1 text-[11px] font-medium text-neutral-500 hover:text-neutral-900 transition-colors disabled:text-neutral-300 disabled:cursor-not-allowed";
+    "inline-flex items-center gap-1 text-[11px] font-medium text-muted-foreground hover:text-foreground transition-colors disabled:text-muted-foreground/50 disabled:cursor-not-allowed";
 
   return (
     <>
@@ -273,7 +274,7 @@ function AiTranslateButton({
         title={inline && translating ? "Translating..." : (inline ? "Translate with AI" : undefined)}
       >
         {translating ? (
-          <div className="w-3 h-3 border-2 border-neutral-300 border-t-neutral-900 rounded-full animate-spin" />
+          <div className="w-3 h-3 border-2 border-input border-t-neutral-900 rounded-full animate-spin" />
         ) : (
           <SparklesIcon size={inline ? 14 : 11} />
         )}
@@ -345,7 +346,7 @@ export function TranslatedInput({
       {(label || showTranslate) ? (
         <div className="flex items-center justify-between gap-2 mb-1.5">
           {label ? (
-            <label htmlFor={id} className="block text-sm font-medium text-neutral-900">
+            <label htmlFor={id} className="block text-sm font-medium text-foreground">
               {label}
             </label>
           ) : (
@@ -371,7 +372,7 @@ export function TranslatedInput({
           inputMode={type === "decimal" ? "decimal" : undefined}
         />
       )}
-      {hint ? <p className="text-[11px] text-neutral-400 mt-1">{hint}</p> : null}
+      {hint ? <p className="text-[11px] text-muted-foreground mt-1">{hint}</p> : null}
     </div>
   );
 }
@@ -390,9 +391,9 @@ export function PageHeader({
   return (
     <div className="mb-5 flex items-start justify-between gap-3">
       <div className="min-w-0">
-        <h2 className="text-xl font-medium text-neutral-900">{title}</h2>
+        <h2 className="text-xl font-medium text-foreground">{title}</h2>
         {subtitle ? (
-          <p className="text-[13px] text-neutral-500 leading-snug mt-1">{subtitle}</p>
+          <p className="text-[13px] text-muted-foreground leading-snug mt-1">{subtitle}</p>
         ) : null}
       </div>
       {action}
@@ -412,10 +413,10 @@ export function EmptyState({
   action?: ReactNode;
 }) {
   return (
-    <div className="bg-white border border-neutral-200 rounded-xl p-8 md:p-12 flex flex-col items-center text-center">
-      <h3 className="text-base font-medium text-neutral-900">{title}</h3>
+    <div className="bg-card border border-border rounded-xl p-8 md:p-12 flex flex-col items-center text-center">
+      <h3 className="text-base font-medium text-foreground">{title}</h3>
       {subtitle ? (
-        <p className="text-sm text-neutral-500 leading-snug mt-1.5 max-w-sm">{subtitle}</p>
+        <p className="text-sm text-muted-foreground leading-snug mt-1.5 max-w-sm">{subtitle}</p>
       ) : null}
       {action ? <div className="mt-5 w-full max-w-xs">{action}</div> : null}
     </div>
@@ -436,12 +437,12 @@ export function Section({
   className?: string;
 }) {
   return (
-    <section className={"bg-white border border-neutral-200 rounded-xl p-4 md:p-5 " + className}>
+    <section className={"bg-card border border-border rounded-xl p-4 md:p-5 " + className}>
       {title || description ? (
         <div className="mb-4">
-          {title ? <h3 className="text-sm font-medium text-neutral-900">{title}</h3> : null}
+          {title ? <h3 className="text-sm font-medium text-foreground">{title}</h3> : null}
           {description ? (
-            <p className="text-xs text-neutral-500 leading-snug mt-0.5">{description}</p>
+            <p className="text-xs text-muted-foreground leading-snug mt-0.5">{description}</p>
           ) : null}
         </div>
       ) : null}
@@ -467,14 +468,14 @@ export function SubpageStickyBar({
 }) {
   return (
     <div
-      className="sticky z-10 -mx-4 md:-mx-6 -mt-5 md:-mt-8 px-4 md:px-6 py-2 bg-white/90 backdrop-blur-md border-b border-neutral-200"
+      className="sticky z-10 -mx-4 md:-mx-6 -mt-5 md:-mt-8 px-4 md:px-6 py-2 bg-card/90 backdrop-blur-md border-b border-border"
       style={{ top: "var(--topbar-h, 0px)" }}
     >
       <div className="max-w-2xl mx-auto flex items-center justify-between gap-3">
         <button
           type="button"
           onClick={onBack}
-          className="inline-flex items-center gap-1 h-8 -ml-1 pl-1 pr-2 text-xs font-medium text-neutral-500 hover:text-neutral-900 hover:bg-neutral-100 rounded-md transition-colors"
+          className="inline-flex items-center gap-1 h-8 -ml-1 pl-1 pr-2 text-xs font-medium text-muted-foreground hover:text-foreground hover:bg-secondary rounded-md transition-colors"
         >
           <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polyline points="15 18 9 12 15 6" /></svg>
           Back
@@ -486,7 +487,7 @@ export function SubpageStickyBar({
               type="button"
               onClick={onSave}
               disabled={!canSave}
-              className="h-8 px-3 text-xs font-medium text-white bg-neutral-900 rounded-lg hover:bg-neutral-800 transition-colors disabled:bg-neutral-300 disabled:cursor-not-allowed"
+              className="h-8 px-3 text-xs font-medium text-primary-foreground bg-primary rounded-lg hover:bg-primary/90 transition-colors disabled:bg-muted disabled:cursor-not-allowed"
             >
               Save
             </button>
@@ -523,14 +524,14 @@ export function EditPageHeader({
   return (
     <>
       <div
-        className="sticky z-10 -mx-4 md:-mx-6 -mt-5 md:-mt-8 px-4 md:px-6 py-2 bg-white/90 backdrop-blur-md border-b border-neutral-200"
+        className="sticky z-10 -mx-4 md:-mx-6 -mt-5 md:-mt-8 px-4 md:px-6 py-2 bg-card/90 backdrop-blur-md border-b border-border"
         style={{ top: "var(--topbar-h, 0px)" }}
       >
         <div className="max-w-2xl mx-auto flex items-center justify-between gap-3">
           <button
             type="button"
             onClick={onBack}
-            className="inline-flex items-center gap-1 h-8 -ml-1 pl-1 pr-2 text-xs font-medium text-neutral-500 hover:text-neutral-900 hover:bg-neutral-100 rounded-md transition-colors"
+            className="inline-flex items-center gap-1 h-8 -ml-1 pl-1 pr-2 text-xs font-medium text-muted-foreground hover:text-foreground hover:bg-secondary rounded-md transition-colors"
           >
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polyline points="15 18 9 12 15 6" /></svg>
             Back
@@ -544,7 +545,7 @@ export function EditPageHeader({
                 type="button"
                 onClick={onSave}
                 disabled={!canSave}
-                className="h-8 px-3 text-xs font-medium text-white bg-neutral-900 rounded-lg hover:bg-neutral-800 transition-colors disabled:bg-neutral-300 disabled:cursor-not-allowed inline-flex items-center gap-1.5"
+                className="h-8 px-3 text-xs font-medium text-primary-foreground bg-primary rounded-lg hover:bg-primary/90 transition-colors disabled:bg-muted disabled:cursor-not-allowed inline-flex items-center gap-1.5"
               >
                 {saving ? (
                   <span className="w-3 h-3 border-2 border-white/40 border-t-white rounded-full animate-spin" />
@@ -557,8 +558,8 @@ export function EditPageHeader({
       </div>
 
       <div className="max-w-2xl mx-auto pt-5 md:pt-8 pb-5">
-        {breadcrumb ? <div className="text-xs text-neutral-500 truncate">{breadcrumb}</div> : null}
-        <h2 className="text-xl font-medium text-neutral-900 truncate mt-1">{title}</h2>
+        {breadcrumb ? <div className="text-xs text-muted-foreground truncate">{breadcrumb}</div> : null}
+        <h2 className="text-xl font-medium text-foreground truncate mt-1">{title}</h2>
       </div>
     </>
   );
@@ -573,7 +574,7 @@ export function PreviewButton({ url }: { url: string }) {
       href={fullUrl}
       target="_blank"
       rel="noreferrer noopener"
-      className="inline-flex items-center gap-1.5 h-7 px-2.5 text-xs font-medium text-neutral-700 bg-neutral-100 hover:bg-neutral-200 hover:text-neutral-900 rounded-full transition-colors"
+      className="inline-flex items-center gap-1.5 h-7 px-2.5 text-xs font-medium text-foreground bg-secondary hover:bg-secondary hover:text-foreground rounded-full transition-colors"
     >
       <EyeIcon size={12} />
       Preview
@@ -586,7 +587,7 @@ export function ShareButton({ onClick }: { onClick: () => void }) {
     <button
       type="button"
       onClick={onClick}
-      className="inline-flex items-center gap-1.5 h-7 px-2.5 text-xs font-medium text-neutral-700 bg-neutral-100 hover:bg-neutral-200 hover:text-neutral-900 rounded-full transition-colors"
+      className="inline-flex items-center gap-1.5 h-7 px-2.5 text-xs font-medium text-foreground bg-secondary hover:bg-secondary hover:text-foreground rounded-full transition-colors"
     >
       <ShareIcon size={12} />
       Share
@@ -648,11 +649,11 @@ export function ShareModal({
   return (
     <Modal open={open} onClose={onClose} title={"Share " + (restaurantName || "your menu")}>
       <div className="flex justify-center">
-        <div className="p-3 bg-white border border-neutral-200 rounded-xl">
+        <div className="p-3 bg-card border border-border rounded-xl">
           <img src={qrSrc} alt="QR code" width="192" height="192" className="block w-48 h-48" />
         </div>
       </div>
-      <p className="text-xs text-neutral-500 text-center mt-3">
+      <p className="text-xs text-muted-foreground text-center mt-3">
         Print and place on tables, or share online.
       </p>
       <div className="mt-5">
@@ -672,7 +673,7 @@ export function ShareModal({
               "shrink-0 h-10 px-3 text-sm font-medium rounded-lg transition-colors flex items-center gap-1.5 " +
               (copied
                 ? "text-emerald-700 bg-emerald-50 border border-emerald-200"
-                : "text-neutral-900 bg-white border border-neutral-300 hover:border-neutral-900")
+                : "text-foreground bg-card border border-input hover:border-primary")
             }
           >
             {copied ? <CheckIcon size={14} /> : <CopyIcon size={14} />}
@@ -684,7 +685,7 @@ export function ShareModal({
         <button
           type="button"
           onClick={downloadQr}
-          className="h-10 px-3 text-sm font-medium text-neutral-900 bg-white border border-neutral-300 hover:border-neutral-900 rounded-lg transition-colors flex items-center justify-center gap-1.5"
+          className="h-10 px-3 text-sm font-medium text-foreground bg-card border border-input hover:border-primary rounded-lg transition-colors flex items-center justify-center gap-1.5"
         >
           <DownloadIcon size={14} />
           Download QR
@@ -692,7 +693,7 @@ export function ShareModal({
         <button
           type="button"
           onClick={openInNewTab}
-          className="h-10 px-3 text-sm font-medium text-neutral-900 bg-white border border-neutral-300 hover:border-neutral-900 rounded-lg transition-colors flex items-center justify-center gap-1.5"
+          className="h-10 px-3 text-sm font-medium text-foreground bg-card border border-input hover:border-primary rounded-lg transition-colors flex items-center justify-center gap-1.5"
         >
           <ExternalLinkIcon size={14} />
           Open menu
@@ -755,11 +756,11 @@ export function TableQrModal({
   return (
     <Modal open={open} onClose={onClose} title={"Table " + tableNumber + (tableLabel ? " · " + tableLabel : "")}>
       <div className="flex justify-center">
-        <div className="p-3 bg-white border border-neutral-200 rounded-xl">
+        <div className="p-3 bg-card border border-border rounded-xl">
           <img src={qrSrc} alt={"QR for table " + tableNumber} width="192" height="192" className="block w-48 h-48" />
         </div>
       </div>
-      <p className="text-xs text-neutral-500 text-center mt-3">
+      <p className="text-xs text-muted-foreground text-center mt-3">
         Print and place on this table. Scanning opens the menu with this table preselected.
       </p>
       <div className="mt-5">
@@ -779,7 +780,7 @@ export function TableQrModal({
               "shrink-0 h-10 px-3 text-sm font-medium rounded-lg transition-colors flex items-center gap-1.5 " +
               (copied
                 ? "text-emerald-700 bg-emerald-50 border border-emerald-200"
-                : "text-neutral-900 bg-white border border-neutral-300 hover:border-neutral-900")
+                : "text-foreground bg-card border border-input hover:border-primary")
             }
           >
             {copied ? <CheckIcon size={14} /> : <CopyIcon size={14} />}
@@ -867,11 +868,11 @@ export function PhotoPicker({
     <>
       {onAiClick ? (
         <div className="flex items-center justify-between gap-2 mb-1.5">
-          <label className="block text-sm font-medium text-neutral-900">Photo</label>
+          <label className="block text-sm font-medium text-foreground">Photo</label>
           <button
             type="button"
             onClick={onAiClick}
-            className="inline-flex items-center gap-1 text-[11px] font-medium text-neutral-500 hover:text-neutral-900 transition-colors"
+            className="inline-flex items-center gap-1 text-[11px] font-medium text-muted-foreground hover:text-foreground transition-colors"
           >
             <SparklesIcon size={11} />
             Generate
@@ -884,12 +885,12 @@ export function PhotoPicker({
           "relative flex items-center justify-center gap-1.5 " + width + " " + height +
           " px-3 border border-dashed rounded-lg cursor-pointer transition-all overflow-hidden " +
           (url
-            ? "border-neutral-900 p-0"
-            : "border-neutral-300 bg-neutral-50 text-neutral-500 hover:border-neutral-900 hover:text-neutral-900 hover:bg-white")
+            ? "border-primary p-0"
+            : "border-input bg-secondary text-muted-foreground hover:border-primary hover:text-foreground hover:bg-card")
         }
       >
         {uploading ? (
-          <div className="w-4 h-4 border-2 border-neutral-300 border-t-neutral-900 rounded-full animate-spin" />
+          <div className="w-4 h-4 border-2 border-input border-t-neutral-900 rounded-full animate-spin" />
         ) : url ? (
           <>
             <img src={url} alt="" className="w-full h-full object-cover" />

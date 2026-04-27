@@ -38,8 +38,8 @@ export function FloorMap({
           position: relative;
           width: 100%;
           aspect-ratio: 1 / 1;
-          background-color: rgb(245 245 245);
-          border: 1px solid rgb(229 229 229);
+          background-color: hsl(var(--secondary));
+          border: 1px solid hsl(var(--border));
           border-radius: 0.75rem;
           overflow: hidden;
         }
@@ -64,10 +64,10 @@ export function FloorMap({
           const x = t.x ?? 50;
           const y = t.y ?? 50;
           const stateCls = isSelected
-            ? "bg-neutral-900 text-white ring-4 ring-neutral-900/20 z-10"
+            ? "bg-primary text-primary-foreground ring-4 ring-primary/20 z-10"
             : isOccupied
               ? "bg-amber-100 text-amber-900 border border-amber-400 hover:border-amber-600"
-              : "bg-white text-neutral-900 border border-neutral-300 hover:border-neutral-900";
+              : "bg-card text-foreground border border-input hover:border-primary";
           return (
             <button
               key={t.id}
@@ -249,7 +249,7 @@ export function TablesPage({
         <button
           type="button"
           onClick={addTable}
-          className="inline-flex items-center gap-1 h-8 px-2.5 text-xs font-medium text-neutral-600 hover:text-neutral-900 hover:bg-neutral-100 rounded-md transition-colors"
+          className="inline-flex items-center gap-1 h-8 px-2.5 text-xs font-medium text-muted-foreground hover:text-foreground hover:bg-secondary rounded-md transition-colors"
         >
           <PlusIcon size={13} />
           Table
@@ -258,8 +258,8 @@ export function TablesPage({
 
       <div className="max-w-2xl mx-auto pt-5 md:pt-8">
         <div className="mb-5">
-          <div className="text-xs text-neutral-500">Settings</div>
-          <h2 className="text-xl font-medium text-neutral-900 mt-1">Tables</h2>
+          <div className="text-xs text-muted-foreground">Settings</div>
+          <h2 className="text-xl font-medium text-foreground mt-1">Tables</h2>
         </div>
 
         <style>{`
@@ -288,7 +288,7 @@ export function TablesPage({
                   <button
                     type="button"
                     onClick={() => setQrTable(selected)}
-                    className="inline-flex items-center gap-1.5 h-9 px-3 text-xs font-medium text-neutral-600 hover:text-neutral-900 hover:bg-neutral-100 rounded-lg transition-colors"
+                    className="inline-flex items-center gap-1.5 h-9 px-3 text-xs font-medium text-muted-foreground hover:text-foreground hover:bg-secondary rounded-lg transition-colors"
                   >
                     <QrIcon size={13} />
                     Show QR code
@@ -304,7 +304,7 @@ export function TablesPage({
                 </div>
               </>
             ) : (
-              <p className="text-xs text-neutral-500 text-center py-4">Tap a table on the map to edit it.</p>
+              <p className="text-xs text-muted-foreground text-center py-4">Tap a table on the map to edit it.</p>
             )}
           </div>
         </div>
@@ -338,11 +338,11 @@ function TableSettings({
   onChange: (patch: Partial<TableEntity>) => void;
 }) {
   return (
-    <div className="bg-white border border-neutral-200 rounded-xl p-4 space-y-3">
+    <div className="bg-card border border-border rounded-xl p-4 space-y-3">
       <div>
         <div className="flex items-center justify-between gap-2 mb-1.5">
-          <label className="block text-sm font-medium text-neutral-900">Position X</label>
-          <span className="text-[11px] text-neutral-500 tabular-nums">{Math.round(table.x ?? 50)}%</span>
+          <label className="block text-sm font-medium text-foreground">Position X</label>
+          <span className="text-[11px] text-muted-foreground tabular-nums">{Math.round(table.x ?? 50)}%</span>
         </div>
         <input
           type="range"
@@ -356,8 +356,8 @@ function TableSettings({
       </div>
       <div>
         <div className="flex items-center justify-between gap-2 mb-1.5">
-          <label className="block text-sm font-medium text-neutral-900">Position Y</label>
-          <span className="text-[11px] text-neutral-500 tabular-nums">{Math.round(table.y ?? 50)}%</span>
+          <label className="block text-sm font-medium text-foreground">Position Y</label>
+          <span className="text-[11px] text-muted-foreground tabular-nums">{Math.round(table.y ?? 50)}%</span>
         </div>
         <input
           type="range"
@@ -371,7 +371,7 @@ function TableSettings({
       </div>
 
       <div>
-        <label className="block text-sm font-medium text-neutral-900 mb-1.5">Name</label>
+        <label className="block text-sm font-medium text-foreground mb-1.5">Name</label>
         <input
           type="text"
           value={table.name}
@@ -383,7 +383,7 @@ function TableSettings({
 
       <div className="flex gap-3">
         <div className="flex-1 min-w-0">
-          <label className="block text-sm font-medium text-neutral-900 mb-1.5">Number</label>
+          <label className="block text-sm font-medium text-foreground mb-1.5">Number</label>
           <input
             type="number"
             min="1"
@@ -393,7 +393,7 @@ function TableSettings({
           />
         </div>
         <div className="flex-1 min-w-0">
-          <label className="block text-sm font-medium text-neutral-900 mb-1.5">Seats</label>
+          <label className="block text-sm font-medium text-foreground mb-1.5">Seats</label>
           <input
             type="number"
             min="1"
@@ -406,7 +406,7 @@ function TableSettings({
       </div>
 
       <div>
-        <label className="block text-sm font-medium text-neutral-900 mb-1.5">Photo</label>
+        <label className="block text-sm font-medium text-foreground mb-1.5">Photo</label>
         <PhotoPicker
           url={table.photoUrl}
           onChange={(url) => onChange({ photoUrl: url })}

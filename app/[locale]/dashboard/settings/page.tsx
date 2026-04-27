@@ -25,13 +25,13 @@ export default function SettingsHubPage() {
           <Link
             key={card.href}
             href={card.href}
-            className="w-full text-left p-4 bg-white border border-neutral-200 rounded-xl hover:border-neutral-300 transition-colors flex items-center justify-between gap-3"
+            className="w-full text-left p-4 bg-card border border-border rounded-xl hover:border-input transition-colors flex items-center justify-between gap-3"
           >
             <div className="min-w-0">
-              <div className="text-sm font-medium text-neutral-900">{card.title}</div>
-              <div className="text-xs text-neutral-500 leading-snug mt-0.5">{card.desc}</div>
+              <div className="text-sm font-medium text-foreground">{card.title}</div>
+              <div className="text-xs text-muted-foreground leading-snug mt-0.5">{card.desc}</div>
             </div>
-            <ChevronRightIcon size={16} className="text-neutral-400 shrink-0" />
+            <ChevronRightIcon size={16} className="text-muted-foreground shrink-0" />
           </Link>
         ))}
         <LogoutLink />

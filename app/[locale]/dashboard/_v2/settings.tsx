@@ -69,7 +69,7 @@ type SettingsView =
   | { name: "billing" }
   | { name: "support" };
 
-const Divider = () => <div className="border-t border-neutral-200 my-5" />;
+const Divider = () => <div className="border-t border-border my-5" />;
 
 // ── About ──
 
@@ -119,11 +119,11 @@ export function AboutSettingsPage({
       <SubpageStickyBar onBack={onBack} onSave={save} canSave={canSave} />
       <div className="max-w-2xl mx-auto pt-5 md:pt-8">
         <div className="mb-5">
-          <div className="text-xs text-neutral-500">Settings</div>
-          <h2 className="text-xl font-medium text-neutral-900 mt-1">About</h2>
+          <div className="text-xs text-muted-foreground">Settings</div>
+          <h2 className="text-xl font-medium text-foreground mt-1">About</h2>
         </div>
-        <div className="bg-white border border-neutral-200 rounded-2xl p-5 md:p-6">
-          <label htmlFor="about-title" className="block text-sm font-medium text-neutral-900 mb-1.5">Title</label>
+        <div className="bg-card border border-border rounded-2xl p-5 md:p-6">
+          <label htmlFor="about-title" className="block text-sm font-medium text-foreground mb-1.5">Title</label>
           <input
             id="about-title"
             type="text"
@@ -133,7 +133,7 @@ export function AboutSettingsPage({
             className={inputClass}
           />
           <Divider />
-          <label htmlFor="about-subtitle" className="block text-sm font-medium text-neutral-900 mb-1.5">Subtitle</label>
+          <label htmlFor="about-subtitle" className="block text-sm font-medium text-foreground mb-1.5">Subtitle</label>
           <input
             id="about-subtitle"
             type="text"
@@ -145,8 +145,8 @@ export function AboutSettingsPage({
           <Divider />
           <label className="flex items-center justify-between gap-3 cursor-pointer select-none">
             <div>
-              <div className="text-sm font-medium text-neutral-900">Show title on homepage</div>
-              <div className="text-xs text-neutral-500 leading-snug mt-0.5">
+              <div className="text-sm font-medium text-foreground">Show title on homepage</div>
+              <div className="text-xs text-muted-foreground leading-snug mt-0.5">
                 Displayed on the homepage of your public website.
               </div>
             </div>
@@ -215,17 +215,17 @@ export function ContactsSettingsPage({
       <SubpageStickyBar onBack={onBack} onSave={save} canSave />
       <div className="max-w-2xl mx-auto pt-5 md:pt-8">
         <div className="mb-5">
-          <div className="text-xs text-neutral-500">Settings</div>
-          <h2 className="text-xl font-medium text-neutral-900 mt-1">Contacts & location</h2>
+          <div className="text-xs text-muted-foreground">Settings</div>
+          <h2 className="text-xl font-medium text-foreground mt-1">Contacts & location</h2>
         </div>
         {/* Contacts card */}
-        <div className="bg-white border border-neutral-200 rounded-2xl p-5 md:p-6">
-          <div className="text-sm font-medium text-neutral-900">Contacts</div>
-          <p className="text-xs text-neutral-500 mb-4 mt-0.5 leading-snug">
+        <div className="bg-card border border-border rounded-2xl p-5 md:p-6">
+          <div className="text-sm font-medium text-foreground">Contacts</div>
+          <p className="text-xs text-muted-foreground mb-4 mt-0.5 leading-snug">
             Shown on the contacts page of your public menu.
           </p>
 
-          <label htmlFor="con-phone" className="block text-sm font-medium text-neutral-900 mb-1.5">Phone</label>
+          <label htmlFor="con-phone" className="block text-sm font-medium text-foreground mb-1.5">Phone</label>
           <input
             id="con-phone"
             type="tel"
@@ -235,9 +235,9 @@ export function ContactsSettingsPage({
             className={inputClass}
           />
 
-          <label htmlFor="con-ig" className="block text-sm font-medium text-neutral-900 mb-1.5 mt-3">Instagram</label>
+          <label htmlFor="con-ig" className="block text-sm font-medium text-foreground mb-1.5 mt-3">Instagram</label>
           <div className="relative">
-            <span className="absolute left-3 top-1/2 -translate-y-1/2 text-sm text-neutral-400 pointer-events-none">@</span>
+            <span className="absolute left-3 top-1/2 -translate-y-1/2 text-sm text-muted-foreground pointer-events-none">@</span>
             <input
               id="con-ig"
               type="text"
@@ -253,7 +253,7 @@ export function ContactsSettingsPage({
             />
           </div>
 
-          <label htmlFor="con-wa" className="block text-sm font-medium text-neutral-900 mb-1.5 mt-3">WhatsApp</label>
+          <label htmlFor="con-wa" className="block text-sm font-medium text-foreground mb-1.5 mt-3">WhatsApp</label>
           <input
             id="con-wa"
             type="tel"
@@ -265,13 +265,13 @@ export function ContactsSettingsPage({
         </div>
 
         {/* Location card */}
-        <div className="bg-white border border-neutral-200 rounded-2xl p-5 md:p-6 mt-3">
-          <div className="text-sm font-medium text-neutral-900">Location</div>
-          <p className="text-xs text-neutral-500 mb-4 mt-0.5 leading-snug">
+        <div className="bg-card border border-border rounded-2xl p-5 md:p-6 mt-3">
+          <div className="text-sm font-medium text-foreground">Location</div>
+          <p className="text-xs text-muted-foreground mb-4 mt-0.5 leading-snug">
             Address and map shown on your public contacts page. Search or tap the map to set the pin.
           </p>
 
-          <div className="rounded-lg overflow-hidden border border-neutral-200">
+          <div className="rounded-lg overflow-hidden border border-border">
             <MapPicker
               lat={draft.location.lat ?? undefined}
               lng={draft.location.lng ?? undefined}
@@ -368,16 +368,16 @@ export function BrandingSettingsPage({
       <SubpageStickyBar onBack={onBack} onSave={save} canSave />
       <div className="max-w-2xl mx-auto pt-5 md:pt-8">
         <div className="mb-5">
-          <div className="text-xs text-neutral-500">Settings</div>
-          <h2 className="text-xl font-medium text-neutral-900 mt-1">Branding</h2>
+          <div className="text-xs text-muted-foreground">Settings</div>
+          <h2 className="text-xl font-medium text-foreground mt-1">Branding</h2>
         </div>
-        <div className="bg-white border border-neutral-200 rounded-2xl p-5 md:p-6">
+        <div className="bg-card border border-border rounded-2xl p-5 md:p-6">
           <div className="flex items-center justify-between gap-3 mb-2.5">
-            <div className="text-sm font-medium text-neutral-900">Background</div>
+            <div className="text-sm font-medium text-foreground">Background</div>
             <button
               type="button"
               onClick={generateAiBackground}
-              className="inline-flex items-center gap-1 text-[11px] font-medium text-neutral-500 hover:text-neutral-900 transition-colors"
+              className="inline-flex items-center gap-1 text-[11px] font-medium text-muted-foreground hover:text-foreground transition-colors"
             >
               <SparklesIcon size={11} />
               Generate with AI
@@ -388,12 +388,12 @@ export function BrandingSettingsPage({
             className={
               "relative flex items-center justify-center gap-1.5 w-full h-32 border border-dashed rounded-lg cursor-pointer transition-all overflow-hidden " +
               (draft.backgroundUrl
-                ? "border-neutral-900 p-0"
-                : "border-neutral-300 bg-neutral-50 text-neutral-500 hover:border-neutral-900 hover:text-neutral-900 hover:bg-white")
+                ? "border-primary p-0"
+                : "border-input bg-secondary text-muted-foreground hover:border-primary hover:text-foreground hover:bg-card")
             }
           >
             {uploading ? (
-              <div className="w-5 h-5 border-2 border-neutral-300 border-t-neutral-900 rounded-full animate-spin" />
+              <div className="w-5 h-5 border-2 border-input border-t-neutral-900 rounded-full animate-spin" />
             ) : draft.backgroundUrl ? (
               <>
                 {draft.backgroundType === "video" ? (
@@ -437,14 +437,14 @@ export function BrandingSettingsPage({
               onChange={handleBackground}
             />
           </label>
-          <p className="text-xs text-neutral-500 mt-1.5 leading-snug">
+          <p className="text-xs text-muted-foreground mt-1.5 leading-snug">
             Shown as the homepage background of your public website.
           </p>
 
           <Divider />
 
-          <div className="text-sm font-medium text-neutral-900">Accent color</div>
-          <p className="text-xs text-neutral-500 mb-3 mt-0.5 leading-snug">
+          <div className="text-sm font-medium text-foreground">Accent color</div>
+          <p className="text-xs text-muted-foreground mb-3 mt-0.5 leading-snug">
             Main color for buttons and highlights.
           </p>
           <style>{`
@@ -461,7 +461,7 @@ export function BrandingSettingsPage({
                   onClick={() => setDraft((d) => ({ ...d, accentColor: c }))}
                   className={
                     "w-full aspect-square rounded-full transition-all " +
-                    (isSelected ? "ring-2 ring-offset-2 ring-neutral-900" : "hover:scale-110")
+                    (isSelected ? "ring-2 ring-offset-2 ring-primary" : "hover:scale-110")
                   }
                   style={{ backgroundColor: c }}
                   aria-label={"Color " + c}
@@ -474,7 +474,7 @@ export function BrandingSettingsPage({
               className={
                 "w-full aspect-square rounded-full transition-all " +
                 (!ACCENT_COLORS.some((c) => c.toLowerCase() === draft.accentColor.toLowerCase())
-                  ? "ring-2 ring-offset-2 ring-neutral-900"
+                  ? "ring-2 ring-offset-2 ring-primary"
                   : "hover:scale-110")
               }
               style={{
@@ -556,13 +556,13 @@ export function GeneralSettingsPage({
       <SubpageStickyBar onBack={onBack} onSave={save} canSave={canSave} />
       <div className="max-w-2xl mx-auto pt-5 md:pt-8">
         <div className="mb-5">
-          <div className="text-xs text-neutral-500">Settings</div>
-          <h2 className="text-xl font-medium text-neutral-900 mt-1">General</h2>
+          <div className="text-xs text-muted-foreground">Settings</div>
+          <h2 className="text-xl font-medium text-foreground mt-1">General</h2>
         </div>
-        <div className="bg-white border border-neutral-200 rounded-2xl p-5 md:p-6">
-          <label htmlFor="gen-slug" className="block text-sm font-medium text-neutral-900 mb-1.5">Menu link</label>
+        <div className="bg-card border border-border rounded-2xl p-5 md:p-6">
+          <label htmlFor="gen-slug" className="block text-sm font-medium text-foreground mb-1.5">Menu link</label>
           <div className="relative">
-            <span className="absolute left-3 top-1/2 -translate-y-1/2 text-sm text-neutral-400 pointer-events-none">
+            <span className="absolute left-3 top-1/2 -translate-y-1/2 text-sm text-muted-foreground pointer-events-none">
               iq-rest.com/m/
             </span>
             <input
@@ -577,14 +577,14 @@ export function GeneralSettingsPage({
             <button
               type="button"
               onClick={copyUrl}
-              className="absolute right-1.5 top-1/2 -translate-y-1/2 w-8 h-8 flex items-center justify-center rounded-md text-neutral-500 hover:text-neutral-900 hover:bg-neutral-100 transition-colors"
+              className="absolute right-1.5 top-1/2 -translate-y-1/2 w-8 h-8 flex items-center justify-center rounded-md text-muted-foreground hover:text-foreground hover:bg-secondary transition-colors"
               aria-label="Copy URL"
               title="Copy URL"
             >
               {copied ? <CheckIcon size={14} /> : <CopyIcon size={14} />}
             </button>
           </div>
-          <p className="text-xs text-neutral-500 mt-1.5 leading-snug">
+          <p className="text-xs text-muted-foreground mt-1.5 leading-snug">
             Your unique URL where customers can view your menu.
           </p>
           {!validSlug && draft.slug.length > 0 ? (
@@ -593,7 +593,7 @@ export function GeneralSettingsPage({
 
           <Divider />
 
-          <label htmlFor="gen-currency" className="block text-sm font-medium text-neutral-900 mb-1.5">Currency</label>
+          <label htmlFor="gen-currency" className="block text-sm font-medium text-foreground mb-1.5">Currency</label>
           <select
             id="gen-currency"
             value={draft.currency}
@@ -606,7 +606,7 @@ export function GeneralSettingsPage({
               </option>
             ))}
           </select>
-          <p className="text-xs text-neutral-500 mt-1.5 leading-snug">Used for prices in your menu.</p>
+          <p className="text-xs text-muted-foreground mt-1.5 leading-snug">Used for prices in your menu.</p>
         </div>
       </div>
     </div>
@@ -663,14 +663,14 @@ export function OrderSettingsPage({
       <SubpageStickyBar onBack={onBack} onSave={save} canSave={canSave} />
       <div className="max-w-2xl mx-auto pt-5 md:pt-8">
         <div className="mb-5">
-          <div className="text-xs text-neutral-500">Settings</div>
-          <h2 className="text-xl font-medium text-neutral-900 mt-1">Orders</h2>
+          <div className="text-xs text-muted-foreground">Settings</div>
+          <h2 className="text-xl font-medium text-foreground mt-1">Orders</h2>
         </div>
-        <div className="bg-white border border-neutral-200 rounded-2xl p-5 md:p-6">
+        <div className="bg-card border border-border rounded-2xl p-5 md:p-6">
           <label className="flex items-center justify-between gap-3 cursor-pointer select-none">
             <div>
-              <div className="text-sm font-medium text-neutral-900">Accept orders</div>
-              <div className="text-xs text-neutral-500 leading-snug mt-0.5">
+              <div className="text-sm font-medium text-foreground">Accept orders</div>
+              <div className="text-xs text-muted-foreground leading-snug mt-0.5">
                 When off, guests can browse the menu but can&apos;t place orders.
               </div>
             </div>
@@ -683,13 +683,13 @@ export function OrderSettingsPage({
           <Divider />
 
           <div className={disabled ? "opacity-50 pointer-events-none" : ""}>
-            <div className="text-sm font-medium text-neutral-900">Order mode</div>
-            <p className="text-xs text-neutral-500 mb-4 mt-0.5">
+            <div className="text-sm font-medium text-foreground">Order mode</div>
+            <p className="text-xs text-muted-foreground mb-4 mt-0.5">
               Internal orders are saved in the dashboard. WhatsApp orders are sent directly to your WhatsApp. You can enable both.
             </p>
             <div className="space-y-2.5">
               <label className="flex items-center justify-between gap-3 cursor-pointer select-none">
-                <div className="text-sm text-neutral-900">Internal</div>
+                <div className="text-sm text-foreground">Internal</div>
                 <ToggleSwitch
                   checked={draft.modes.internal}
                   onChange={() =>
@@ -698,7 +698,7 @@ export function OrderSettingsPage({
                 />
               </label>
               <label className="flex items-center justify-between gap-3 cursor-pointer select-none">
-                <div className="text-sm text-neutral-900">WhatsApp</div>
+                <div className="text-sm text-foreground">WhatsApp</div>
                 <ToggleSwitch
                   checked={draft.modes.whatsapp}
                   onChange={() =>
@@ -713,14 +713,14 @@ export function OrderSettingsPage({
           <Divider />
 
           <div className={disabled ? "opacity-50 pointer-events-none" : ""}>
-            <div className="text-sm font-medium text-neutral-900">Required fields</div>
-            <p className="text-xs text-neutral-500 mb-4 mt-0.5">
+            <div className="text-sm font-medium text-foreground">Required fields</div>
+            <p className="text-xs text-muted-foreground mb-4 mt-0.5">
               Enabled fields will be required for the customer to fill in when placing an order.
             </p>
             <div className="space-y-2.5">
               {(["name", "phone", "address"] as const).map((key) => (
                 <label key={key} className="flex items-center justify-between gap-3 cursor-pointer select-none">
-                  <div className="text-sm text-neutral-900">
+                  <div className="text-sm text-foreground">
                     {key === "name" ? "Name" : key === "phone" ? "Phone" : "Address"}
                   </div>
                   <ToggleSwitch
@@ -786,14 +786,14 @@ export function BookingSettingsPage({
       <SubpageStickyBar onBack={onBack} onSave={save} canSave={canSave} />
       <div className="max-w-2xl mx-auto pt-5 md:pt-8">
         <div className="mb-5">
-          <div className="text-xs text-neutral-500">Settings</div>
-          <h2 className="text-xl font-medium text-neutral-900 mt-1">Bookings</h2>
+          <div className="text-xs text-muted-foreground">Settings</div>
+          <h2 className="text-xl font-medium text-foreground mt-1">Bookings</h2>
         </div>
-        <div className="bg-white border border-neutral-200 rounded-2xl p-5 md:p-6">
+        <div className="bg-card border border-border rounded-2xl p-5 md:p-6">
           <label className="flex items-center justify-between gap-3 cursor-pointer select-none">
             <div>
-              <div className="text-sm font-medium text-neutral-900">Enable bookings</div>
-              <div className="text-xs text-neutral-500 leading-snug mt-0.5">
+              <div className="text-sm font-medium text-foreground">Enable bookings</div>
+              <div className="text-xs text-muted-foreground leading-snug mt-0.5">
                 When off, guests can browse the menu but can&apos;t reserve a table.
               </div>
             </div>
@@ -806,22 +806,22 @@ export function BookingSettingsPage({
           <Divider />
 
           <div className={disabled ? "opacity-50 pointer-events-none" : ""}>
-            <div className="text-sm font-medium text-neutral-900">Confirmation mode</div>
-            <p className="text-xs text-neutral-500 mb-4 mt-0.5">
+            <div className="text-sm font-medium text-foreground">Confirmation mode</div>
+            <p className="text-xs text-muted-foreground mb-4 mt-0.5">
               {draft.approval === "auto"
                 ? "Reservations are confirmed automatically."
                 : "You will need to manually confirm each reservation."}
             </p>
             <div className="space-y-2.5">
               <label className="flex items-center justify-between gap-3 cursor-pointer select-none">
-                <div className="text-sm text-neutral-900">Automatic</div>
+                <div className="text-sm text-foreground">Automatic</div>
                 <ToggleSwitch
                   checked={draft.approval === "auto"}
                   onChange={() => setDraft((d) => ({ ...d, approval: "auto" }))}
                 />
               </label>
               <label className="flex items-center justify-between gap-3 cursor-pointer select-none">
-                <div className="text-sm text-neutral-900">Manual</div>
+                <div className="text-sm text-foreground">Manual</div>
                 <ToggleSwitch
                   checked={draft.approval === "manual"}
                   onChange={() => setDraft((d) => ({ ...d, approval: "manual" }))}
@@ -835,8 +835,8 @@ export function BookingSettingsPage({
           <div className={disabled ? "opacity-50 pointer-events-none" : ""}>
             <div className="flex items-center justify-between gap-3">
               <div>
-                <div className="text-sm font-medium text-neutral-900">Reservation duration</div>
-                <div className="text-xs text-neutral-500 leading-snug mt-0.5">
+                <div className="text-sm font-medium text-foreground">Reservation duration</div>
+                <div className="text-xs text-muted-foreground leading-snug mt-0.5">
                   How long a table is held per booking.
                 </div>
               </div>
@@ -859,8 +859,8 @@ export function BookingSettingsPage({
           <div className={disabled ? "opacity-50 pointer-events-none" : ""}>
             <div className="flex items-center justify-between gap-3 flex-wrap">
               <div>
-                <div className="text-sm font-medium text-neutral-900">Working hours</div>
-                <div className="text-xs text-neutral-500 leading-snug mt-0.5">
+                <div className="text-sm font-medium text-foreground">Working hours</div>
+                <div className="text-xs text-muted-foreground leading-snug mt-0.5">
                   Reservations can be made within these hours.
                 </div>
               </div>
@@ -878,7 +878,7 @@ export function BookingSettingsPage({
                     </option>
                   ))}
                 </select>
-                <span className="text-neutral-400">—</span>
+                <span className="text-muted-foreground">—</span>
                 <select
                   value={draft.workingHours.to}
                   onChange={(e) =>
@@ -956,24 +956,24 @@ export function LanguagesSettingsPage({
     <div>
       <SubpageStickyBar onBack={onBack} onSave={save} canSave={canSave}>
         {saving ? (
-          <span className="w-3 h-3 border-2 border-neutral-300 border-t-neutral-900 rounded-full animate-spin" />
+          <span className="w-3 h-3 border-2 border-input border-t-neutral-900 rounded-full animate-spin" />
         ) : null}
       </SubpageStickyBar>
       <div className="max-w-2xl mx-auto pt-5 md:pt-8">
         <div className="mb-5">
-          <div className="text-xs text-neutral-500">Settings</div>
-          <h2 className="text-xl font-medium text-neutral-900 mt-1">Languages</h2>
+          <div className="text-xs text-muted-foreground">Settings</div>
+          <h2 className="text-xl font-medium text-foreground mt-1">Languages</h2>
         </div>
-        <div className="bg-white border border-neutral-200 rounded-2xl p-5 md:p-6">
+        <div className="bg-card border border-border rounded-2xl p-5 md:p-6">
           <div className="flex items-baseline justify-between gap-3 mb-0.5">
-            <div className="text-sm font-medium text-neutral-900">Available languages</div>
+            <div className="text-sm font-medium text-foreground">Available languages</div>
             {draft.languages.length > 0 ? (
-              <span className="text-[11px] font-medium text-neutral-500 tabular-nums">
+              <span className="text-[11px] font-medium text-muted-foreground tabular-nums">
                 {draft.languages.length} selected
               </span>
             ) : null}
           </div>
-          <p className="text-xs text-neutral-500 mb-3">
+          <p className="text-xs text-muted-foreground mb-3">
             Pick the languages you want for your menu. Tap to add or remove.
           </p>
           <div className="flex flex-wrap gap-1.5">
@@ -987,8 +987,8 @@ export function LanguagesSettingsPage({
                   className={
                     "inline-flex items-center gap-1.5 h-8 px-3 rounded-full text-xs font-medium transition-colors " +
                     (isSelected
-                      ? "bg-neutral-900 text-white"
-                      : "bg-white text-neutral-700 border border-neutral-200 hover:border-neutral-400")
+                      ? "bg-primary text-primary-foreground"
+                      : "bg-card text-foreground border border-border hover:border-input")
                   }
                 >
                   <span className="text-sm leading-none">{l.flag}</span>
@@ -1003,13 +1003,13 @@ export function LanguagesSettingsPage({
 
           <Divider />
 
-          <label htmlFor="lang-default" className="block text-sm font-medium text-neutral-900 mb-1.5">Default language</label>
+          <label htmlFor="lang-default" className="block text-sm font-medium text-foreground mb-1.5">Default language</label>
           <select
             id="lang-default"
             value={draft.defaultLang}
             onChange={(e) => setDraft((d) => ({ ...d, defaultLang: e.target.value }))}
             disabled={draft.languages.length === 0}
-            className={inputClass + " disabled:bg-neutral-50 disabled:text-neutral-400"}
+            className={inputClass + " disabled:bg-secondary disabled:text-muted-foreground"}
           >
             {draft.languages.map((code) => {
               const l = AVAILABLE_LANGUAGES.find((x) => x.code === code);
@@ -1021,7 +1021,7 @@ export function LanguagesSettingsPage({
               );
             })}
           </select>
-          <p className="text-xs text-neutral-500 mt-1.5 leading-snug">
+          <p className="text-xs text-muted-foreground mt-1.5 leading-snug">
             The language you write your menu in first. Other languages are translations of this one.
           </p>
         </div>
@@ -1070,20 +1070,20 @@ export function BillingSettingsPage({ onBack }: { onBack: () => void }) {
       <SubpageStickyBar onBack={onBack} hideSave />
       <div className="max-w-2xl mx-auto pt-5 md:pt-8">
         <div className="mb-5">
-          <div className="text-xs text-neutral-500">Settings</div>
-          <h2 className="text-xl font-medium text-neutral-900 mt-1">Billing</h2>
+          <div className="text-xs text-muted-foreground">Settings</div>
+          <h2 className="text-xl font-medium text-foreground mt-1">Billing</h2>
         </div>
 
         {isActive && sub ? (
-          <div className="bg-white border border-neutral-200 rounded-2xl p-5 md:p-6 mb-5">
+          <div className="bg-card border border-border rounded-2xl p-5 md:p-6 mb-5">
             <div className="flex items-start justify-between gap-3">
               <div>
                 <div className="text-xs font-medium uppercase tracking-wide text-emerald-700">Active</div>
-                <div className="text-base font-medium text-neutral-900 mt-0.5">
+                <div className="text-base font-medium text-foreground mt-0.5">
                   {sub.plan} · {sub.billingCycle?.toLowerCase() || "—"}
                 </div>
                 {sub.currentPeriodEnd ? (
-                  <div className="text-xs text-neutral-500 mt-0.5">
+                  <div className="text-xs text-muted-foreground mt-0.5">
                     Renews on{" "}
                     {new Date(sub.currentPeriodEnd).toLocaleDateString([], {
                       day: "numeric",
@@ -1100,7 +1100,7 @@ export function BillingSettingsPage({ onBack }: { onBack: () => void }) {
           </div>
         ) : null}
 
-        <div className="text-sm font-medium text-neutral-900 mb-3">
+        <div className="text-sm font-medium text-foreground mb-3">
           {isActive ? "Switch plan" : "Choose your plan"}
         </div>
 
@@ -1118,12 +1118,12 @@ export function BillingSettingsPage({ onBack }: { onBack: () => void }) {
               <div
                 key={p.plan + p.cycle}
                 className={
-                  "relative bg-white border rounded-2xl p-5 flex flex-col " +
-                  (isCurrent ? "border-emerald-300" : p.highlight ? "border-neutral-900" : "border-neutral-200")
+                  "relative bg-card border rounded-2xl p-5 flex flex-col " +
+                  (isCurrent ? "border-emerald-300" : p.highlight ? "border-primary" : "border-border")
                 }
               >
                 {p.badge && !isCurrent ? (
-                  <span className="absolute -top-2 left-5 inline-flex items-center h-5 px-2 text-[10px] font-medium text-white bg-neutral-900 rounded-full">
+                  <span className="absolute -top-2 left-5 inline-flex items-center h-5 px-2 text-[10px] font-medium text-primary-foreground bg-primary rounded-full">
                     {p.badge}
                   </span>
                 ) : null}
@@ -1133,12 +1133,12 @@ export function BillingSettingsPage({ onBack }: { onBack: () => void }) {
                   </span>
                 ) : null}
 
-                <div className="text-sm font-medium text-neutral-900">{p.label}</div>
+                <div className="text-sm font-medium text-foreground">{p.label}</div>
                 <div className="mt-1 flex items-baseline gap-1">
-                  <span className="text-2xl font-medium text-neutral-900 tabular-nums">€{p.priceMonthly}</span>
-                  <span className="text-xs text-neutral-500">/mo</span>
+                  <span className="text-2xl font-medium text-foreground tabular-nums">€{p.priceMonthly}</span>
+                  <span className="text-xs text-muted-foreground">/mo</span>
                 </div>
-                <div className="text-xs text-neutral-500 mt-0.5">{p.periodLabel}</div>
+                <div className="text-xs text-muted-foreground mt-0.5">{p.periodLabel}</div>
 
                 <button
                   type="button"
@@ -1147,10 +1147,10 @@ export function BillingSettingsPage({ onBack }: { onBack: () => void }) {
                   className={
                     "mt-4 h-10 text-sm font-medium rounded-lg transition-colors " +
                     (isCurrent
-                      ? "bg-neutral-100 text-neutral-400 cursor-not-allowed"
+                      ? "bg-secondary text-muted-foreground cursor-not-allowed"
                       : p.highlight
-                        ? "text-white bg-neutral-900 hover:bg-neutral-800"
-                        : "text-neutral-900 bg-white border border-neutral-300 hover:border-neutral-900")
+                        ? "text-primary-foreground bg-primary hover:bg-primary/90"
+                        : "text-foreground bg-card border border-input hover:border-primary")
                   }
                 >
                   {isCurrent ? "Current plan" : isActive ? "Switch" : "Subscribe"}
@@ -1160,7 +1160,7 @@ export function BillingSettingsPage({ onBack }: { onBack: () => void }) {
           })}
         </div>
 
-        <p className="text-xs text-neutral-500 mt-4 leading-snug">
+        <p className="text-xs text-muted-foreground mt-4 leading-snug">
           Cancel anytime via the customer portal. Yearly plans renew once per year.
         </p>
       </div>
@@ -1240,20 +1240,20 @@ export function SupportPage({ onBack }: { onBack: () => void }) {
       <SubpageStickyBar onBack={onBack} hideSave />
       <div className="max-w-2xl mx-auto pt-5 md:pt-8">
         <div className="mb-5">
-          <div className="text-xs text-neutral-500">Settings</div>
-          <h2 className="text-xl font-medium text-neutral-900 mt-1">Support</h2>
-          <p className="text-sm text-neutral-500 mt-1">
+          <div className="text-xs text-muted-foreground">Settings</div>
+          <h2 className="text-xl font-medium text-foreground mt-1">Support</h2>
+          <p className="text-sm text-muted-foreground mt-1">
             Chat with our team. We usually reply within a few hours.
           </p>
         </div>
 
         <div
-          className="bg-white border border-neutral-200 rounded-2xl flex flex-col"
+          className="bg-card border border-border rounded-2xl flex flex-col"
           style={{ height: "min(70vh, 600px)" }}
         >
           <div ref={scrollRef} className="flex-1 overflow-y-auto p-4 space-y-3">
             {messages.length === 0 ? (
-              <div className="h-full flex items-center justify-center text-sm text-neutral-500 text-center px-4">
+              <div className="h-full flex items-center justify-center text-sm text-muted-foreground text-center px-4">
                 No messages yet. Say hi!
               </div>
             ) : (
@@ -1261,7 +1261,7 @@ export function SupportPage({ onBack }: { onBack: () => void }) {
             )}
           </div>
 
-          <div className="border-t border-neutral-200 p-3 flex items-end gap-2">
+          <div className="border-t border-border p-3 flex items-end gap-2">
             <textarea
               value={input}
               onChange={(e) => setInput(e.target.value)}
@@ -1275,7 +1275,7 @@ export function SupportPage({ onBack }: { onBack: () => void }) {
               type="button"
               onClick={send}
               disabled={!input.trim() || sending}
-              className="shrink-0 w-10 h-10 flex items-center justify-center rounded-lg text-white bg-neutral-900 hover:bg-neutral-800 transition-colors disabled:bg-neutral-300 disabled:cursor-not-allowed"
+              className="shrink-0 w-10 h-10 flex items-center justify-center rounded-lg text-primary-foreground bg-primary hover:bg-primary/90 transition-colors disabled:bg-muted disabled:cursor-not-allowed"
               aria-label="Send"
             >
               {sending ? (
@@ -1299,8 +1299,8 @@ function SupportBubble({ message }: { message: ApiSupportMessage }) {
     hour12: false,
   });
   const cls = isUser
-    ? "bg-neutral-900 text-white rounded-tr-sm"
-    : "bg-neutral-100 text-neutral-900 rounded-tl-sm";
+    ? "bg-primary text-primary-foreground rounded-tr-sm"
+    : "bg-secondary text-foreground rounded-tl-sm";
 
   return (
     <div className={"flex " + (isUser ? "justify-end" : "justify-start")}>
@@ -1312,7 +1312,7 @@ function SupportBubble({ message }: { message: ApiSupportMessage }) {
         >
           {message.message}
         </div>
-        <div className={"text-[10px] text-neutral-400 mt-1 px-1 " + (isUser ? "text-right" : "text-left")}>
+        <div className={"text-[10px] text-muted-foreground mt-1 px-1 " + (isUser ? "text-right" : "text-left")}>
           {time}
         </div>
       </div>

@@ -64,7 +64,7 @@ export function DashboardChrome({
 
   return (
     <RestaurantProvider restaurant={restaurant}>
-      <div className="min-h-screen bg-neutral-50">
+      <div className="min-h-screen bg-secondary">
         <TopBar restaurant={restaurant} activeTab={activeTab} />
         <main className="px-4 md:px-6 py-5 md:py-8 pb-24 md:pb-10">{children}</main>
         <BottomNav activeTab={activeTab} />
@@ -100,19 +100,19 @@ function TopBar({ restaurant, activeTab }: { restaurant: Restaurant; activeTab: 
   return (
     <header
       ref={headerRef}
-      className="hidden md:block sticky top-0 z-20 bg-white/90 backdrop-blur-md border-b border-neutral-200"
+      className="hidden md:block sticky top-0 z-20 bg-card/90 backdrop-blur-md border-b border-border"
     >
       <div className="max-w-5xl mx-auto px-4 md:px-6">
         <div className="flex items-center justify-between gap-3 py-4">
-          <h1 className="min-w-0 text-lg font-medium text-neutral-900 truncate">
+          <h1 className="min-w-0 text-lg font-medium text-foreground truncate">
             {restaurant.name || "Untitled restaurant"}
           </h1>
           <nav className="flex items-center gap-1 shrink-0">
             {NAV_TABS.map((tab) => {
               const isActive = activeTab === tab.id;
               const cls = isActive
-                ? "bg-neutral-900 text-white"
-                : "text-neutral-600 hover:text-neutral-900 hover:bg-neutral-100";
+                ? "bg-primary text-primary-foreground"
+                : "text-muted-foreground hover:text-foreground hover:bg-secondary";
               return (
                 <Link
                   key={tab.id}
@@ -132,12 +132,12 @@ function TopBar({ restaurant, activeTab }: { restaurant: Restaurant; activeTab: 
 
 function BottomNav({ activeTab }: { activeTab: TabId }) {
   return (
-    <nav className="md:hidden fixed bottom-0 left-0 right-0 z-20 bg-white/95 backdrop-blur-md border-t border-neutral-200">
+    <nav className="md:hidden fixed bottom-0 left-0 right-0 z-20 bg-card/95 backdrop-blur-md border-t border-border">
       <div className="flex items-stretch">
         {NAV_TABS.map((tab) => {
           const isActive = activeTab === tab.id;
           const TabIcon = tab.icon;
-          const cls = isActive ? "text-neutral-900" : "text-neutral-400 hover:text-neutral-700";
+          const cls = isActive ? "text-foreground" : "text-muted-foreground hover:text-foreground";
           return (
             <Link
               key={tab.id}

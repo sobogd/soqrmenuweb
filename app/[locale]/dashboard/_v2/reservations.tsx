@@ -10,8 +10,8 @@ import type { Booking, TableEntity } from "./types";
 const BOOKING_STATUSES: Record<Booking["status"], { label: string; cls: string }> = {
   pending: { label: "Pending", cls: "bg-amber-50 text-amber-700 border-amber-200" },
   confirmed: { label: "Confirmed", cls: "bg-emerald-50 text-emerald-700 border-emerald-200" },
-  cancelled: { label: "Cancelled", cls: "bg-neutral-100 text-neutral-500 border-neutral-200" },
-  completed: { label: "Completed", cls: "bg-neutral-100 text-neutral-500 border-neutral-200" },
+  cancelled: { label: "Cancelled", cls: "bg-secondary text-muted-foreground border-border" },
+  completed: { label: "Completed", cls: "bg-secondary text-muted-foreground border-border" },
   "no-show": { label: "No-show", cls: "bg-red-50 text-red-700 border-red-200" },
 };
 
@@ -91,8 +91,8 @@ export function ReservationsPage({
               />
             ) : (
               <div>
-                <div className="text-sm font-medium text-neutral-900 mb-2">Today</div>
-                <div className="text-xs text-neutral-500 text-center py-6 px-3 bg-white border border-neutral-200 rounded-xl">
+                <div className="text-sm font-medium text-foreground mb-2">Today</div>
+                <div className="text-xs text-muted-foreground text-center py-6 px-3 bg-card border border-border rounded-xl">
                   No bookings for today.
                 </div>
               </div>
@@ -138,13 +138,13 @@ function BookingGroup({
   return (
     <div>
       <div className="flex items-baseline gap-2 mb-2">
-        <div className="text-sm font-medium text-neutral-900">{formatDayLabel(date)}</div>
+        <div className="text-sm font-medium text-foreground">{formatDayLabel(date)}</div>
         {!isToday ? (
-          <div className="text-xs text-neutral-400">
+          <div className="text-xs text-muted-foreground">
             {date.toLocaleDateString([], { day: "numeric", month: "short" })}
           </div>
         ) : null}
-        <div className="ml-auto text-xs text-neutral-500 tabular-nums">
+        <div className="ml-auto text-xs text-muted-foreground tabular-nums">
           {items.length} {items.length === 1 ? "booking" : "bookings"}
         </div>
       </div>
@@ -171,10 +171,10 @@ function BookingCard({
   const table = tables.find((t) => t.id === booking.tableId);
 
   return (
-    <div className="bg-white border border-neutral-200 rounded-xl p-3.5">
+    <div className="bg-card border border-border rounded-xl p-3.5">
       <div className="mb-2">
         <div className="flex items-center gap-2 flex-wrap">
-          <div className="text-sm font-medium text-neutral-900 tabular-nums">{time}</div>
+          <div className="text-sm font-medium text-foreground tabular-nums">{time}</div>
           <span
             className={
               "inline-flex items-center h-5 px-2 text-[10px] font-medium border rounded-full " +
@@ -184,11 +184,11 @@ function BookingCard({
             {status.label}
           </span>
         </div>
-        <div className="text-sm text-neutral-900 mt-1 truncate">{booking.guestName}</div>
-        <div className="text-xs text-neutral-500 truncate">{booking.guestEmail}</div>
+        <div className="text-sm text-foreground mt-1 truncate">{booking.guestName}</div>
+        <div className="text-xs text-muted-foreground truncate">{booking.guestEmail}</div>
       </div>
 
-      <div className="flex items-center gap-3 text-xs text-neutral-500">
+      <div className="flex items-center gap-3 text-xs text-muted-foreground">
         <div className="inline-flex items-center gap-1">
           <UsersIcon size={12} />
           <span>
@@ -204,13 +204,13 @@ function BookingCard({
       </div>
 
       {booking.notes ? (
-        <div className="text-xs text-neutral-600 mt-2 px-2 py-1.5 bg-neutral-50 rounded-md">
+        <div className="text-xs text-muted-foreground mt-2 px-2 py-1.5 bg-secondary rounded-md">
           {booking.notes}
         </div>
       ) : null}
 
       {booking.status === "pending" ? (
-        <div className="flex items-center gap-1.5 mt-3 pt-3 border-t border-neutral-100">
+        <div className="flex items-center gap-1.5 mt-3 pt-3 border-t border-border">
           <button
             type="button"
             onClick={() => onStatusChange(booking.id, "cancelled")}

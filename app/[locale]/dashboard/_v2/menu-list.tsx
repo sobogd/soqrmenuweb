@@ -133,7 +133,7 @@ export function MenuList({ initialCategories }: { initialCategories: Category[] 
   return (
     <>
       <div
-        className="sticky z-10 -mx-4 md:-mx-6 -mt-5 md:-mt-8 px-4 md:px-6 py-2 bg-white/90 backdrop-blur-md border-b border-neutral-200"
+        className="sticky z-10 -mx-4 md:-mx-6 -mt-5 md:-mt-8 px-4 md:px-6 py-2 bg-card/90 backdrop-blur-md border-b border-border"
         style={{ top: "var(--topbar-h, 0px)" }}
       >
         <div className="max-w-2xl mx-auto flex items-center justify-between gap-3">
@@ -145,7 +145,7 @@ export function MenuList({ initialCategories }: { initialCategories: Category[] 
             <button
               type="button"
               onClick={allOpen ? collapseAll : expandAll}
-              className="inline-flex items-center gap-1.5 h-8 px-2.5 text-xs font-medium text-neutral-600 hover:text-neutral-900 hover:bg-neutral-100 rounded-lg transition-colors shrink-0"
+              className="inline-flex items-center gap-1.5 h-8 px-2.5 text-xs font-medium text-muted-foreground hover:text-foreground hover:bg-secondary rounded-lg transition-colors shrink-0"
             >
               {allOpen ? <CollapseIcon size={14} /> : <ExpandIcon size={14} />}
               {allOpen ? "Collapse" : "Expand"}
@@ -193,7 +193,7 @@ export function MenuList({ initialCategories }: { initialCategories: Category[] 
 
             <Link
               href="/dashboard/categories/new"
-              className="w-full mt-2.5 h-11 text-sm font-medium text-neutral-500 hover:text-neutral-900 hover:bg-white hover:border-neutral-300 border border-dashed border-neutral-300 rounded-xl flex items-center justify-center gap-2 transition-colors"
+              className="w-full mt-2.5 h-11 text-sm font-medium text-muted-foreground hover:text-foreground hover:bg-card hover:border-input border border-dashed border-input rounded-xl flex items-center justify-center gap-2 transition-colors"
             >
               <PlusIcon size={14} />
               Add category
@@ -238,12 +238,12 @@ function CategoryAccordion({
   onToggleDishVisible: (categoryId: string, dishId: string) => void;
 }) {
   return (
-    <div className="bg-white border border-neutral-200 rounded-xl overflow-hidden">
+    <div className="bg-card border border-border rounded-xl overflow-hidden">
       <div className="flex items-center gap-1 px-3 py-2.5">
         <button
           type="button"
           onClick={onToggle}
-          className="w-8 h-8 flex items-center justify-center rounded-md text-neutral-400 hover:text-neutral-900 hover:bg-neutral-100 transition-colors shrink-0"
+          className="w-8 h-8 flex items-center justify-center rounded-md text-muted-foreground hover:text-foreground hover:bg-secondary transition-colors shrink-0"
           aria-expanded={isOpen}
           aria-label={isOpen ? "Collapse category" : "Expand category"}
         >
@@ -258,7 +258,7 @@ function CategoryAccordion({
           href={`/dashboard/categories/${category.id}`}
           className="flex-1 min-w-0 text-left"
         >
-          <span className="text-base font-medium text-neutral-900 truncate block">
+          <span className="text-base font-medium text-foreground truncate block">
             {getMlWithFallback(category.name, defaultLang, defaultLang)}
           </span>
         </Link>
@@ -277,9 +277,9 @@ function CategoryAccordion({
       </div>
 
       {isOpen ? (
-        <div className="border-t border-neutral-100">
+        <div className="border-t border-border">
           {category.dishes.length === 0 ? (
-            <p className="text-sm text-neutral-400 h-12 flex items-center justify-center">
+            <p className="text-sm text-muted-foreground h-12 flex items-center justify-center">
               No dishes yet.
             </p>
           ) : (
@@ -302,7 +302,7 @@ function CategoryAccordion({
 
           <Link
             href={`/dashboard/items/new?categoryId=${category.id}`}
-            className="w-full flex items-center gap-2 px-3 py-2 text-sm text-neutral-400 hover:text-neutral-900 hover:bg-neutral-50 transition-colors border-t border-neutral-100"
+            className="w-full flex items-center gap-2 px-3 py-2 text-sm text-muted-foreground hover:text-foreground hover:bg-secondary transition-colors border-t border-border"
           >
             <span className="w-8 h-8 flex items-center justify-center shrink-0">
               <PlusIcon size={14} />
@@ -335,7 +335,7 @@ function DishRow({
   onToggleVisible: () => void;
 }) {
   const rowCls =
-    "flex items-center gap-2 px-3 py-2 hover:bg-neutral-50 transition-colors " +
+    "flex items-center gap-2 px-3 py-2 hover:bg-secondary transition-colors " +
     (dish.visible ? "" : "opacity-50");
   return (
     <div className={rowCls}>
@@ -350,11 +350,11 @@ function DishRow({
 
       <Link href={`/dashboard/items/${dish.id}`} className="flex-1 min-w-0 text-left flex items-center gap-3">
         <div className="min-w-0 flex-1">
-          <div className="text-sm font-medium text-neutral-900 truncate">
+          <div className="text-sm font-medium text-foreground truncate">
             {getMlWithFallback(dish.name, defaultLang, defaultLang)}
           </div>
         </div>
-        <div className="text-sm text-neutral-600 tabular-nums shrink-0">{currencySymbol + dish.price}</div>
+        <div className="text-sm text-muted-foreground tabular-nums shrink-0">{currencySymbol + dish.price}</div>
       </Link>
 
       <div className="flex items-center gap-0.5 shrink-0 pl-1">

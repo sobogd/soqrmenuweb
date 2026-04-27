@@ -138,7 +138,7 @@ export function CategoryForm({
         saving={saving}
       />
 
-      <div className="max-w-2xl mx-auto bg-white border border-neutral-200 rounded-2xl p-5 md:p-6">
+      <div className="max-w-2xl mx-auto bg-card border border-border rounded-2xl p-5 md:p-6">
         <TranslatedInput
           id="cat-name"
           label="Name"
@@ -379,7 +379,7 @@ export function DishForm({
   const titleText = isNew
     ? "New dish"
     : (getMlWithFallback(form.name, lang, defaultLang) || "Untitled");
-  const divider = <div className="border-t border-neutral-200 my-5" />;
+  const divider = <div className="border-t border-border my-5" />;
 
   return (
     <div>
@@ -395,7 +395,7 @@ export function DishForm({
         saving={saving}
       />
 
-      <div className="max-w-2xl mx-auto bg-white border border-neutral-200 rounded-2xl p-5 md:p-6">
+      <div className="max-w-2xl mx-auto bg-card border border-border rounded-2xl p-5 md:p-6">
         <TranslatedInput
           id="dish-name"
           label="Name"
@@ -425,11 +425,11 @@ export function DishForm({
 
         <div className="flex gap-3 items-start">
           <div className="flex-1 min-w-0">
-            <label htmlFor="dish-price" className="block text-sm font-medium text-neutral-900 mb-1.5">
+            <label htmlFor="dish-price" className="block text-sm font-medium text-foreground mb-1.5">
               Price
             </label>
             <div className="relative">
-              <span className="absolute left-3 top-1/2 -translate-y-1/2 text-sm text-neutral-400 pointer-events-none">
+              <span className="absolute left-3 top-1/2 -translate-y-1/2 text-sm text-muted-foreground pointer-events-none">
                 {currencySymbol}
               </span>
               <input
@@ -445,7 +445,7 @@ export function DishForm({
           </div>
 
           <div className="flex-shrink-0">
-            <label className="block text-sm font-medium text-neutral-900 mb-1.5">Photo</label>
+            <label className="block text-sm font-medium text-foreground mb-1.5">Photo</label>
             <PhotoPicker
               url={form.photoUrl}
               onChange={(url) => setForm((f) => ({ ...f, photoUrl: url }))}
@@ -457,14 +457,14 @@ export function DishForm({
         {divider}
 
         <div className="flex items-baseline justify-between gap-3 mb-0.5">
-          <div className="text-sm font-medium text-neutral-900">Allergens</div>
+          <div className="text-sm font-medium text-foreground">Allergens</div>
           {form.allergens.length > 0 ? (
-            <span className="text-[11px] font-medium text-neutral-500 tabular-nums">
+            <span className="text-[11px] font-medium text-muted-foreground tabular-nums">
               {form.allergens.length} selected
             </span>
           ) : null}
         </div>
-        <p className="text-xs text-neutral-400 mb-2.5">Tap to toggle.</p>
+        <p className="text-xs text-muted-foreground mb-2.5">Tap to toggle.</p>
         <div className="flex flex-wrap gap-1.5">
           {ALLERGENS.map((a) => {
             const checked = form.allergens.includes(a.code);
@@ -476,8 +476,8 @@ export function DishForm({
                 className={
                   "h-7 px-2.5 text-xs font-medium rounded-full transition-colors " +
                   (checked
-                    ? "bg-neutral-900 text-white hover:bg-neutral-800"
-                    : "bg-neutral-100 text-neutral-700 hover:bg-neutral-200")
+                    ? "bg-primary text-primary-foreground hover:bg-primary/90"
+                    : "bg-secondary text-foreground hover:bg-secondary")
                 }
               >
                 {a.label}
@@ -491,8 +491,8 @@ export function DishForm({
         {/* Options section — add/edit navigates to dedicated routes. The form auto-saves
             the current draft before navigating so name/desc/price edits are preserved. */}
         <div>
-          <div className="text-sm font-medium text-neutral-900">Options</div>
-          <p className="text-xs text-neutral-500 mb-2.5 mt-0.5">
+          <div className="text-sm font-medium text-foreground">Options</div>
+          <p className="text-xs text-muted-foreground mb-2.5 mt-0.5">
             Variants like sizes, extras, or add-ons.
           </p>
 
@@ -509,7 +509,7 @@ export function DishForm({
               type="button"
               onClick={handleAddOption}
               disabled={saving}
-              className="w-full h-10 text-sm font-medium text-neutral-600 hover:text-neutral-900 bg-white border border-dashed border-neutral-300 hover:border-neutral-900 rounded-lg flex items-center justify-center gap-1.5 transition-colors disabled:opacity-60 disabled:cursor-not-allowed"
+              className="w-full h-10 text-sm font-medium text-muted-foreground hover:text-foreground bg-card border border-dashed border-input hover:border-primary rounded-lg flex items-center justify-center gap-1.5 transition-colors disabled:opacity-60 disabled:cursor-not-allowed"
             >
               <PlusIcon size={14} />
               Add option
@@ -521,8 +521,8 @@ export function DishForm({
 
         <label className="flex items-center justify-between gap-3 cursor-pointer select-none">
           <div>
-            <div className="text-sm font-medium text-neutral-900">Visible to guests</div>
-            <div className="text-xs text-neutral-500 leading-snug mt-0.5">
+            <div className="text-sm font-medium text-foreground">Visible to guests</div>
+            <div className="text-xs text-muted-foreground leading-snug mt-0.5">
               Hidden dishes don&apos;t appear in the menu.
             </div>
           </div>
@@ -632,7 +632,7 @@ function DishOptionsInline({
   return (
     <>
       {options.length > 0 ? (
-        <div className="border border-neutral-200 rounded-lg overflow-hidden divide-y divide-neutral-100">
+        <div className="border border-border rounded-lg overflow-hidden divide-y divide-neutral-100">
           {options.map((opt, idx) => (
             <OptionRow
               key={opt.id}
@@ -653,7 +653,7 @@ function DishOptionsInline({
         onClick={handleAdd}
         disabled={busy || disabled}
         className={
-          "w-full h-10 text-sm font-medium text-neutral-600 hover:text-neutral-900 bg-white border border-dashed border-neutral-300 hover:border-neutral-900 rounded-lg flex items-center justify-center gap-1.5 transition-colors disabled:opacity-60 disabled:cursor-not-allowed " +
+          "w-full h-10 text-sm font-medium text-muted-foreground hover:text-foreground bg-card border border-dashed border-input hover:border-primary rounded-lg flex items-center justify-center gap-1.5 transition-colors disabled:opacity-60 disabled:cursor-not-allowed " +
           (options.length > 0 ? "mt-2" : "")
         }
       >
@@ -685,7 +685,7 @@ function OptionRow({
   const reqLabel = option.required ? "Required" : "Optional";
   const variantsCount = option.variants?.length || 0;
   return (
-    <div className="flex items-center gap-2 px-3 py-2 hover:bg-neutral-50 transition-colors">
+    <div className="flex items-center gap-2 px-3 py-2 hover:bg-secondary transition-colors">
       <div className="flex items-center gap-0.5 shrink-0">
         <button type="button" onClick={onMoveUp} disabled={isFirst} className={iconBtn} aria-label="Move up">
           <ArrowUpIcon size={14} />
@@ -695,14 +695,14 @@ function OptionRow({
         </button>
       </div>
       <button type="button" onClick={onEdit} className="flex-1 min-w-0 text-left">
-        <div className="text-sm font-medium text-neutral-900 truncate">
+        <div className="text-sm font-medium text-foreground truncate">
           {getMlWithFallback(option.name, defaultLang, defaultLang) || "Untitled option"}
         </div>
-        <div className="text-xs text-neutral-500 truncate mt-0.5">
+        <div className="text-xs text-muted-foreground truncate mt-0.5">
           {typeLabel}  ·  {reqLabel}  ·  {variantsCount} {variantsCount === 1 ? "variant" : "variants"}
         </div>
       </button>
-      <ChevronRightIcon size={14} className="text-neutral-400 shrink-0" />
+      <ChevronRightIcon size={14} className="text-muted-foreground shrink-0" />
     </div>
   );
 }
@@ -895,7 +895,7 @@ export function OptionForm({
   const titleText = isNew
     ? "New option"
     : (getMlWithFallback(form.name, lang, defaultLang) || "Untitled option");
-  const divider = <div className="border-t border-neutral-200 my-5" />;
+  const divider = <div className="border-t border-border my-5" />;
   const dishName = getMlWithFallback(dish.name, defaultLang, defaultLang);
 
   return (
@@ -912,7 +912,7 @@ export function OptionForm({
         saving={saving}
       />
 
-      <div className="max-w-2xl mx-auto bg-white border border-neutral-200 rounded-2xl p-5 md:p-6">
+      <div className="max-w-2xl mx-auto bg-card border border-border rounded-2xl p-5 md:p-6">
         <TranslatedInput
           id="opt-name"
           label="Name"
@@ -928,8 +928,8 @@ export function OptionForm({
 
         <label className="flex items-center justify-between gap-3 cursor-pointer select-none">
           <div>
-            <div className="text-sm font-medium text-neutral-900">Allow multiple choices</div>
-            <div className="text-xs text-neutral-500 leading-snug mt-0.5">
+            <div className="text-sm font-medium text-foreground">Allow multiple choices</div>
+            <div className="text-xs text-muted-foreground leading-snug mt-0.5">
               Off — guest picks one. On — guest picks any number.
             </div>
           </div>
@@ -945,8 +945,8 @@ export function OptionForm({
 
         <label className="flex items-center justify-between gap-3 cursor-pointer select-none">
           <div>
-            <div className="text-sm font-medium text-neutral-900">Required</div>
-            <div className="text-xs text-neutral-500 leading-snug mt-0.5">
+            <div className="text-sm font-medium text-foreground">Required</div>
+            <div className="text-xs text-muted-foreground leading-snug mt-0.5">
               Guest can&apos;t add to cart without choosing.
             </div>
           </div>
@@ -959,19 +959,19 @@ export function OptionForm({
         {divider}
 
         <div className="flex items-center justify-between gap-2 mb-0.5">
-          <div className="text-sm font-medium text-neutral-900">Variants</div>
+          <div className="text-sm font-medium text-foreground">Variants</div>
           {lang !== defaultLang && translatableVariantsCount > 0 ? (
             <button
               type="button"
               onClick={translateAllVariants}
               disabled={translatingAll}
-              className="inline-flex items-center gap-1 text-[11px] font-medium text-neutral-500 hover:text-neutral-900 transition-colors disabled:text-neutral-300 disabled:cursor-not-allowed"
+              className="inline-flex items-center gap-1 text-[11px] font-medium text-muted-foreground hover:text-foreground transition-colors disabled:text-muted-foreground/50 disabled:cursor-not-allowed"
             >
               {translatingAll ? "Translating..." : "Translate all"}
             </button>
           ) : null}
         </div>
-        <p className="text-xs text-neutral-500 mb-2.5">
+        <p className="text-xs text-muted-foreground mb-2.5">
           Each variant has a name and an optional price modifier.
         </p>
         <div className="space-y-2">
@@ -996,7 +996,7 @@ export function OptionForm({
         <button
           type="button"
           onClick={addVariant}
-          className="w-full mt-3 h-10 text-sm font-medium text-neutral-600 hover:text-neutral-900 bg-white border border-dashed border-neutral-300 hover:border-neutral-900 rounded-lg flex items-center justify-center gap-1.5 transition-colors"
+          className="w-full mt-3 h-10 text-sm font-medium text-muted-foreground hover:text-foreground bg-card border border-dashed border-input hover:border-primary rounded-lg flex items-center justify-center gap-1.5 transition-colors"
         >
           <PlusIcon size={14} />
           Add variant
@@ -1084,7 +1084,7 @@ function VariantRow({
         />
       </div>
       <div className="w-16 md:w-20 shrink-0 relative">
-        <span className="absolute left-2 top-1/2 -translate-y-1/2 text-xs text-neutral-400 pointer-events-none">
+        <span className="absolute left-2 top-1/2 -translate-y-1/2 text-xs text-muted-foreground pointer-events-none">
           {currencySymbol}
         </span>
         <input

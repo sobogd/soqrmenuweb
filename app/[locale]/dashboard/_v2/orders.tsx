@@ -21,10 +21,10 @@ import type {
 } from "./types";
 
 const ITEM_STATUSES: Record<OrderItemStatus, { label: string; cls: string }> = {
-  pending: { label: "Pending", cls: "bg-neutral-100 text-neutral-600 border-neutral-200" },
+  pending: { label: "Pending", cls: "bg-secondary text-muted-foreground border-border" },
   cooking: { label: "Cooking", cls: "bg-amber-50 text-amber-700 border-amber-200" },
   ready: { label: "Ready", cls: "bg-emerald-50 text-emerald-700 border-emerald-200" },
-  served: { label: "Served", cls: "bg-neutral-100 text-neutral-500 border-neutral-200" },
+  served: { label: "Served", cls: "bg-secondary text-muted-foreground border-border" },
 };
 
 function calcItemPrice(item: OrderItem): number {
@@ -217,13 +217,13 @@ export function OrdersPage({
             onSelectTable={setSelectedTableId}
             occupiedIds={occupiedIds}
           />
-          <div className="flex items-center gap-3 mt-2 text-[11px] text-neutral-500">
+          <div className="flex items-center gap-3 mt-2 text-[11px] text-muted-foreground">
             <div className="inline-flex items-center gap-1.5">
               <span className="w-2.5 h-2.5 rounded-full bg-amber-100 border border-amber-400" />
               Active
             </div>
             <div className="inline-flex items-center gap-1.5">
-              <span className="w-2.5 h-2.5 rounded-full bg-white border border-neutral-300" />
+              <span className="w-2.5 h-2.5 rounded-full bg-card border border-input" />
               Free
             </div>
           </div>
@@ -237,21 +237,21 @@ export function OrdersPage({
                 subtitle="Tap a free table on the map to start an order, or wait for guests to place one via the QR menu."
               />
             ) : (
-              <div className="text-center py-10 px-4 bg-white border border-neutral-200 rounded-xl">
-                <p className="text-sm text-neutral-500">Tap a table on the map to see or start an order.</p>
+              <div className="text-center py-10 px-4 bg-card border border-border rounded-xl">
+                <p className="text-sm text-muted-foreground">Tap a table on the map to see or start an order.</p>
               </div>
             )
           ) : (
             <div>
               <div className="flex items-baseline justify-between gap-3 mb-2.5">
                 <div>
-                  <div className="text-sm font-medium text-neutral-900">
+                  <div className="text-sm font-medium text-foreground">
                     Table {selectedTable.number}
                     {selectedTable.name ? (
-                      <span className="text-neutral-400 font-normal"> · {selectedTable.name}</span>
+                      <span className="text-muted-foreground font-normal"> · {selectedTable.name}</span>
                     ) : null}
                   </div>
-                  <div className="text-xs text-neutral-500 mt-0.5">
+                  <div className="text-xs text-muted-foreground mt-0.5">
                     {selectedTableOrders.length === 0
                       ? "No active orders"
                       : selectedTableOrders.length +
@@ -279,10 +279,10 @@ export function OrdersPage({
                 type="button"
                 onClick={() => startOrderForTable(selectedTable.id)}
                 disabled={creating}
-                className="w-full h-11 text-sm font-medium text-neutral-500 hover:text-neutral-900 hover:bg-white hover:border-neutral-300 border border-dashed border-neutral-300 rounded-xl flex items-center justify-center gap-2 transition-colors disabled:opacity-60 disabled:cursor-not-allowed"
+                className="w-full h-11 text-sm font-medium text-muted-foreground hover:text-foreground hover:bg-card hover:border-input border border-dashed border-input rounded-xl flex items-center justify-center gap-2 transition-colors disabled:opacity-60 disabled:cursor-not-allowed"
               >
                 {creating ? (
-                  <span className="w-4 h-4 border-2 border-neutral-300 border-t-neutral-900 rounded-full animate-spin" />
+                  <span className="w-4 h-4 border-2 border-input border-t-neutral-900 rounded-full animate-spin" />
                 ) : (
                   <PlusIcon size={14} />
                 )}
@@ -317,11 +317,11 @@ function OrderListCard({
     <button
       type="button"
       onClick={onClick}
-      className="w-full text-left bg-white border border-neutral-200 hover:border-neutral-300 rounded-xl p-3.5 transition-colors"
+      className="w-full text-left bg-card border border-border hover:border-input rounded-xl p-3.5 transition-colors"
     >
       <div className="flex items-center justify-between gap-3 mb-1.5">
         <div className="flex items-center gap-2 min-w-0">
-          <div className="text-sm font-medium text-neutral-900 truncate">
+          <div className="text-sm font-medium text-foreground truncate">
             {hideTable
               ? formatTimeShort(order.createdAt)
               : "Table " + (order.tableNumber ?? "?")}
@@ -336,11 +336,11 @@ function OrderListCard({
             </span>
           ) : null}
         </div>
-        <div className="text-sm font-medium text-neutral-900 tabular-nums shrink-0">
+        <div className="text-sm font-medium text-foreground tabular-nums shrink-0">
           {formatPrice(total, currencySymbol)}
         </div>
       </div>
-      <div className="flex items-center gap-3 text-xs text-neutral-500">
+      <div className="flex items-center gap-3 text-xs text-muted-foreground">
         {!hideTable ? (
           <div className="inline-flex items-center gap-1">
             <ClockIcon size={11} />
@@ -390,14 +390,14 @@ function OrderDetailPage({
   return (
     <div>
       <div
-        className="sticky z-10 -mx-4 md:-mx-6 -mt-5 md:-mt-8 px-4 md:px-6 py-2 bg-white/90 backdrop-blur-md border-b border-neutral-200"
+        className="sticky z-10 -mx-4 md:-mx-6 -mt-5 md:-mt-8 px-4 md:px-6 py-2 bg-card/90 backdrop-blur-md border-b border-border"
         style={{ top: "var(--topbar-h, 0px)" }}
       >
         <div className="max-w-2xl mx-auto flex items-center justify-between gap-3">
           <button
             type="button"
             onClick={onBack}
-            className="inline-flex items-center gap-1 h-8 -ml-1 pl-1 pr-2 text-xs font-medium text-neutral-500 hover:text-neutral-900 hover:bg-neutral-100 rounded-md transition-colors"
+            className="inline-flex items-center gap-1 h-8 -ml-1 pl-1 pr-2 text-xs font-medium text-muted-foreground hover:text-foreground hover:bg-secondary rounded-md transition-colors"
           >
             <ChevronLeftIcon size={14} />
             Back
@@ -406,7 +406,7 @@ function OrderDetailPage({
             type="button"
             onClick={onComplete}
             disabled={order.items.length === 0}
-            className="h-8 px-3 text-xs font-medium text-white bg-neutral-900 rounded-lg hover:bg-neutral-800 transition-colors disabled:bg-neutral-300 disabled:cursor-not-allowed"
+            className="h-8 px-3 text-xs font-medium text-primary-foreground bg-primary rounded-lg hover:bg-primary/90 transition-colors disabled:bg-muted disabled:cursor-not-allowed"
           >
             Complete order
           </button>
@@ -415,19 +415,19 @@ function OrderDetailPage({
 
       <div className="max-w-2xl mx-auto pt-5 md:pt-8">
         <div className="mb-5">
-          <div className="text-xs text-neutral-500">Orders</div>
-          <h2 className="text-xl font-medium text-neutral-900 mt-1">
+          <div className="text-xs text-muted-foreground">Orders</div>
+          <h2 className="text-xl font-medium text-foreground mt-1">
             Table {table ? table.number : order.tableNumber ?? "?"}
-            {table && table.name ? <span className="text-neutral-400 font-normal"> · {table.name}</span> : null}
+            {table && table.name ? <span className="text-muted-foreground font-normal"> · {table.name}</span> : null}
           </h2>
-          <div className="text-xs text-neutral-500 mt-1">
+          <div className="text-xs text-muted-foreground mt-1">
             Started at {formatTimeShort(order.createdAt)} · {minutesSince(order.createdAt)} min ago
           </div>
         </div>
 
         {order.items.length === 0 ? (
-          <div className="text-center py-8 bg-white border border-neutral-200 rounded-xl mb-3">
-            <p className="text-sm text-neutral-500">No items yet.</p>
+          <div className="text-center py-8 bg-card border border-border rounded-xl mb-3">
+            <p className="text-sm text-muted-foreground">No items yet.</p>
           </div>
         ) : (
           <div className="space-y-2 mb-3">
@@ -447,16 +447,16 @@ function OrderDetailPage({
         <button
           type="button"
           onClick={onAddItem}
-          className="w-full h-11 text-sm font-medium text-neutral-500 hover:text-neutral-900 hover:bg-white hover:border-neutral-300 border border-dashed border-neutral-300 rounded-xl flex items-center justify-center gap-2 transition-colors"
+          className="w-full h-11 text-sm font-medium text-muted-foreground hover:text-foreground hover:bg-card hover:border-input border border-dashed border-input rounded-xl flex items-center justify-center gap-2 transition-colors"
         >
           <PlusIcon size={14} />
           Add item
         </button>
 
         {order.items.length > 0 ? (
-          <div className="mt-5 pt-4 border-t border-neutral-200 flex items-center justify-between">
-            <div className="text-sm font-medium text-neutral-900">Total</div>
-            <div className="text-lg font-medium text-neutral-900 tabular-nums">
+          <div className="mt-5 pt-4 border-t border-border flex items-center justify-between">
+            <div className="text-sm font-medium text-foreground">Total</div>
+            <div className="text-lg font-medium text-foreground tabular-nums">
               {formatPrice(total, currencySymbol)}
             </div>
           </div>
@@ -493,14 +493,14 @@ function OrderItemCard({
   };
 
   return (
-    <div className="bg-white border border-neutral-200 rounded-xl p-3.5">
+    <div className="bg-card border border-border rounded-xl p-3.5">
       <div className="flex items-start justify-between gap-3 mb-1.5">
         <div className="min-w-0 flex-1">
-          <div className="text-sm font-medium text-neutral-900">
+          <div className="text-sm font-medium text-foreground">
             {getMlWithFallback(item.dishNameSnapshot, defaultLang, defaultLang)}
           </div>
           {item.options.length > 0 ? (
-            <div className="text-xs text-neutral-500 mt-0.5">
+            <div className="text-xs text-muted-foreground mt-0.5">
               {item.options.map((o, i) => (
                 <span key={i}>
                   {i > 0 ? " · " : ""}
@@ -510,19 +510,19 @@ function OrderItemCard({
             </div>
           ) : null}
         </div>
-        <div className="text-sm text-neutral-700 tabular-nums shrink-0">
+        <div className="text-sm text-foreground tabular-nums shrink-0">
           {formatPrice(price, currencySymbol)}
         </div>
       </div>
 
       {item.notes ? (
-        <div className="inline-flex items-start gap-1 text-xs text-neutral-600 mt-1 px-2 py-1 bg-neutral-50 rounded-md">
+        <div className="inline-flex items-start gap-1 text-xs text-muted-foreground mt-1 px-2 py-1 bg-secondary rounded-md">
           <MessageIcon size={11} className="mt-0.5 shrink-0" />
           <span>{item.notes}</span>
         </div>
       ) : null}
 
-      <div className="flex items-center gap-2 mt-3 pt-3 border-t border-neutral-100">
+      <div className="flex items-center gap-2 mt-3 pt-3 border-t border-border">
         <button
           type="button"
           onClick={() => onStatusChange(nextStatus[item.status])}
@@ -538,7 +538,7 @@ function OrderItemCard({
         <button
           type="button"
           onClick={onRemove}
-          className="w-7 h-7 flex items-center justify-center rounded-md text-neutral-400 hover:text-red-600 hover:bg-red-50 transition-colors"
+          className="w-7 h-7 flex items-center justify-center rounded-md text-muted-foreground hover:text-red-600 hover:bg-red-50 transition-colors"
           aria-label="Remove item"
           title="Remove item"
         >
@@ -631,7 +631,7 @@ function AddItemFlow({
         onCancel={onCancel}
       >
         {visibleDishes.length === 0 ? (
-          <p className="text-sm text-neutral-500 text-center py-6">No dishes in this category.</p>
+          <p className="text-sm text-muted-foreground text-center py-6">No dishes in this category.</p>
         ) : (
           <div className="space-y-1">
             {visibleDishes.map((d) => (
@@ -639,12 +639,12 @@ function AddItemFlow({
                 key={d.id}
                 type="button"
                 onClick={() => goConfigure(cat.id, d.id)}
-                className="w-full text-left flex items-center justify-between gap-3 p-3 rounded-lg hover:bg-neutral-50 transition-colors"
+                className="w-full text-left flex items-center justify-between gap-3 p-3 rounded-lg hover:bg-secondary transition-colors"
               >
-                <span className="text-sm text-neutral-900 truncate">
+                <span className="text-sm text-foreground truncate">
                   {getMlWithFallback(d.name, defaultLang, defaultLang)}
                 </span>
-                <span className="text-sm text-neutral-500 tabular-nums shrink-0">
+                <span className="text-sm text-muted-foreground tabular-nums shrink-0">
                   {currencySymbol + d.price}
                 </span>
               </button>
@@ -669,12 +669,12 @@ function AddItemFlow({
             key={c.id}
             type="button"
             onClick={() => goDish(c.id)}
-            className="w-full text-left flex items-center justify-between gap-3 p-3 rounded-lg hover:bg-neutral-50 transition-colors"
+            className="w-full text-left flex items-center justify-between gap-3 p-3 rounded-lg hover:bg-secondary transition-colors"
           >
-            <span className="text-sm font-medium text-neutral-900 truncate">
+            <span className="text-sm font-medium text-foreground truncate">
               {getMlWithFallback(c.name, defaultLang, defaultLang)}
             </span>
-            <span className="text-xs text-neutral-400 tabular-nums shrink-0">{c.dishes.length}</span>
+            <span className="text-xs text-muted-foreground tabular-nums shrink-0">{c.dishes.length}</span>
           </button>
         ))}
       </div>
@@ -703,14 +703,14 @@ function PickerStep({
   return (
     <div>
       <div
-        className="sticky z-10 -mx-4 md:-mx-6 -mt-5 md:-mt-8 px-4 md:px-6 py-2 bg-white/90 backdrop-blur-md border-b border-neutral-200"
+        className="sticky z-10 -mx-4 md:-mx-6 -mt-5 md:-mt-8 px-4 md:px-6 py-2 bg-card/90 backdrop-blur-md border-b border-border"
         style={{ top: "var(--topbar-h, 0px)" }}
       >
         <div className="max-w-2xl mx-auto flex items-center justify-between gap-3">
           <button
             type="button"
             onClick={onBack}
-            className="inline-flex items-center gap-1 h-8 -ml-1 pl-1 pr-2 text-xs font-medium text-neutral-500 hover:text-neutral-900 hover:bg-neutral-100 rounded-md transition-colors"
+            className="inline-flex items-center gap-1 h-8 -ml-1 pl-1 pr-2 text-xs font-medium text-muted-foreground hover:text-foreground hover:bg-secondary rounded-md transition-colors"
           >
             <ChevronLeftIcon size={14} />
             Back
@@ -719,7 +719,7 @@ function PickerStep({
             <button
               type="button"
               onClick={onCancel}
-              className="text-xs font-medium text-neutral-500 hover:text-neutral-900 transition-colors"
+              className="text-xs font-medium text-muted-foreground hover:text-foreground transition-colors"
             >
               Cancel
             </button>
@@ -729,10 +729,10 @@ function PickerStep({
 
       <div className="max-w-2xl mx-auto pt-5 md:pt-8">
         <div className="mb-5">
-          {breadcrumb ? <div className="text-xs text-neutral-500">{breadcrumb}</div> : null}
-          <h2 className="text-xl font-medium text-neutral-900 mt-1">{title}</h2>
+          {breadcrumb ? <div className="text-xs text-muted-foreground">{breadcrumb}</div> : null}
+          <h2 className="text-xl font-medium text-foreground mt-1">{title}</h2>
         </div>
-        <div className="bg-white border border-neutral-200 rounded-xl p-2">{children}</div>
+        <div className="bg-card border border-border rounded-xl p-2">{children}</div>
       </div>
     </div>
   );
@@ -835,14 +835,14 @@ function ConfigureItemStep({
   return (
     <div>
       <div
-        className="sticky z-10 -mx-4 md:-mx-6 -mt-5 md:-mt-8 px-4 md:px-6 py-2 bg-white/90 backdrop-blur-md border-b border-neutral-200"
+        className="sticky z-10 -mx-4 md:-mx-6 -mt-5 md:-mt-8 px-4 md:px-6 py-2 bg-card/90 backdrop-blur-md border-b border-border"
         style={{ top: "var(--topbar-h, 0px)" }}
       >
         <div className="max-w-2xl mx-auto flex items-center justify-between gap-3">
           <button
             type="button"
             onClick={onBack}
-            className="inline-flex items-center gap-1 h-8 -ml-1 pl-1 pr-2 text-xs font-medium text-neutral-500 hover:text-neutral-900 hover:bg-neutral-100 rounded-md transition-colors"
+            className="inline-flex items-center gap-1 h-8 -ml-1 pl-1 pr-2 text-xs font-medium text-muted-foreground hover:text-foreground hover:bg-secondary rounded-md transition-colors"
           >
             <ChevronLeftIcon size={14} />
             Back
@@ -851,7 +851,7 @@ function ConfigureItemStep({
             <button
               type="button"
               onClick={onCancel}
-              className="text-xs font-medium text-neutral-500 hover:text-neutral-900 transition-colors"
+              className="text-xs font-medium text-muted-foreground hover:text-foreground transition-colors"
             >
               Cancel
             </button>
@@ -859,7 +859,7 @@ function ConfigureItemStep({
               type="button"
               onClick={handleAdd}
               disabled={!canAdd}
-              className="h-8 px-3 text-xs font-medium text-white bg-neutral-900 rounded-lg hover:bg-neutral-800 transition-colors disabled:bg-neutral-300 disabled:cursor-not-allowed"
+              className="h-8 px-3 text-xs font-medium text-primary-foreground bg-primary rounded-lg hover:bg-primary/90 transition-colors disabled:bg-muted disabled:cursor-not-allowed"
             >
               Add · {formatPrice(totalPrice, currencySymbol)}
             </button>
@@ -869,25 +869,25 @@ function ConfigureItemStep({
 
       <div className="max-w-2xl mx-auto pt-5 md:pt-8">
         <div className="mb-5">
-          {breadcrumb ? <div className="text-xs text-neutral-500">{breadcrumb}</div> : null}
-          <h2 className="text-xl font-medium text-neutral-900 mt-1">
+          {breadcrumb ? <div className="text-xs text-muted-foreground">{breadcrumb}</div> : null}
+          <h2 className="text-xl font-medium text-foreground mt-1">
             {getMlWithFallback(dish.name, defaultLang, defaultLang)}
           </h2>
           {getMlWithFallback(dish.description, defaultLang, defaultLang) ? (
-            <p className="text-sm text-neutral-500 mt-1">
+            <p className="text-sm text-muted-foreground mt-1">
               {getMlWithFallback(dish.description, defaultLang, defaultLang)}
             </p>
           ) : null}
         </div>
 
-        <div className="bg-white border border-neutral-200 rounded-2xl p-5 md:p-6">
+        <div className="bg-card border border-border rounded-2xl p-5 md:p-6">
           {(dish.options || []).map((opt, idx) => (
-            <div key={opt.id} className={idx > 0 ? "border-t border-neutral-200 mt-5 pt-5" : ""}>
+            <div key={opt.id} className={idx > 0 ? "border-t border-border mt-5 pt-5" : ""}>
               <div className="flex items-center justify-between gap-2 mb-2.5">
-                <div className="text-sm font-medium text-neutral-900">
+                <div className="text-sm font-medium text-foreground">
                   {getMlWithFallback(opt.name, defaultLang, defaultLang)}
                 </div>
-                <div className="text-[11px] text-neutral-500">
+                <div className="text-[11px] text-muted-foreground">
                   {opt.required ? "Required" : "Optional"}
                   {opt.type === "multi" ? " · multiple" : ""}
                 </div>
@@ -908,15 +908,15 @@ function ConfigureItemStep({
                       className={
                         "w-full flex items-center justify-between gap-3 px-3 h-10 rounded-lg border transition-colors " +
                         (isSelected
-                          ? "border-neutral-900 bg-neutral-900 text-white"
-                          : "border-neutral-200 bg-white text-neutral-900 hover:border-neutral-400")
+                          ? "border-primary bg-primary text-primary-foreground"
+                          : "border-border bg-card text-foreground hover:border-input")
                       }
                     >
                       <span className="text-sm truncate">
                         {getMlWithFallback(v.name, defaultLang, defaultLang)}
                       </span>
                       {delta > 0 ? (
-                        <span className={"text-xs tabular-nums " + (isSelected ? "text-white/80" : "text-neutral-500")}>
+                        <span className={"text-xs tabular-nums " + (isSelected ? "text-white/80" : "text-muted-foreground")}>
                           +{delta.toFixed(2)}
                         </span>
                       ) : null}
@@ -927,9 +927,9 @@ function ConfigureItemStep({
             </div>
           ))}
 
-          {(dish.options || []).length > 0 ? <div className="border-t border-neutral-200 mt-5 pt-5" /> : null}
+          {(dish.options || []).length > 0 ? <div className="border-t border-border mt-5 pt-5" /> : null}
 
-          <label htmlFor="item-notes" className="block text-sm font-medium text-neutral-900 mb-1.5">Notes</label>
+          <label htmlFor="item-notes" className="block text-sm font-medium text-foreground mb-1.5">Notes</label>
           <textarea
             id="item-notes"
             rows={2}
@@ -1015,8 +1015,8 @@ export function KitchenPage({
   ];
 
   const pillBase = "shrink-0 inline-flex items-center h-7 px-3 rounded-full text-xs font-medium transition-colors";
-  const pillOn = "bg-neutral-900 text-white";
-  const pillOff = "bg-white text-neutral-700 border border-neutral-200 hover:border-neutral-400";
+  const pillOn = "bg-primary text-primary-foreground";
+  const pillOff = "bg-card text-foreground border border-border hover:border-input";
 
   return (
     <div>
@@ -1026,7 +1026,7 @@ export function KitchenPage({
       `}</style>
 
       <div
-        className="sticky z-10 -mx-4 md:-mx-6 -mt-5 md:-mt-8 bg-white/90 backdrop-blur-md border-b border-neutral-200"
+        className="sticky z-10 -mx-4 md:-mx-6 -mt-5 md:-mt-8 bg-card/90 backdrop-blur-md border-b border-border"
         style={{ top: "var(--topbar-h, 0px)" }}
       >
         <div className="flex items-center gap-1.5 overflow-x-auto px-4 md:px-6 py-2 no-scrollbar">
@@ -1045,7 +1045,7 @@ export function KitchenPage({
           })}
 
           {categories.length > 0 ? (
-            <div className="shrink-0 self-stretch w-px bg-neutral-200 mx-1" />
+            <div className="shrink-0 self-stretch w-px bg-secondary mx-1" />
           ) : null}
 
           {categories.map((cat) => {
@@ -1109,20 +1109,20 @@ function KitchenOrderCard({
   const items = filteredItems || order.items.filter((it) => it.status !== "served");
   const allReady = items.length > 0 && items.every((it) => it.status === "ready");
   const elapsed = minutesSince(order.createdAt);
-  const cardCls = allReady ? "bg-emerald-50 border-emerald-300" : "bg-white border-neutral-200";
+  const cardCls = allReady ? "bg-emerald-50 border-emerald-300" : "bg-card border-border";
 
   return (
     <div className={"w-72 shrink-0 rounded-xl border " + cardCls + " flex flex-col"}>
-      <div className="px-3.5 py-3 border-b border-neutral-200/60">
+      <div className="px-3.5 py-3 border-b border-border/60">
         <div className="flex items-center justify-between gap-2">
-          <div className="text-base font-medium text-neutral-900">
+          <div className="text-base font-medium text-foreground">
             Table {table ? table.number : order.tableNumber ?? "?"}
           </div>
-          <div className="text-xs text-neutral-500 tabular-nums">
+          <div className="text-xs text-muted-foreground tabular-nums">
             {formatTimeShort(order.createdAt)} · {elapsed} min
           </div>
         </div>
-        {table?.name ? <div className="text-xs text-neutral-500 mt-0.5">{table.name}</div> : null}
+        {table?.name ? <div className="text-xs text-muted-foreground mt-0.5">{table.name}</div> : null}
       </div>
 
       <div className="flex-1 p-2 space-y-1.5">
@@ -1160,10 +1160,10 @@ function KitchenItem({
     <button
       type="button"
       onClick={() => onStatusChange(nextStatus[item.status])}
-      className="w-full text-left p-2.5 rounded-lg bg-white border border-neutral-200 hover:border-neutral-300 transition-colors"
+      className="w-full text-left p-2.5 rounded-lg bg-card border border-border hover:border-input transition-colors"
     >
       <div className="flex items-start justify-between gap-2 mb-1.5">
-        <div className="text-sm font-medium text-neutral-900 leading-tight">
+        <div className="text-sm font-medium text-foreground leading-tight">
           {getMlWithFallback(item.dishNameSnapshot, defaultLang, defaultLang)}
         </div>
         <span
@@ -1177,7 +1177,7 @@ function KitchenItem({
       </div>
 
       {item.options.length > 0 ? (
-        <div className="text-xs text-neutral-600">
+        <div className="text-xs text-muted-foreground">
           {item.options.map((o, i) => (
             <span key={i}>
               {i > 0 ? " · " : ""}
